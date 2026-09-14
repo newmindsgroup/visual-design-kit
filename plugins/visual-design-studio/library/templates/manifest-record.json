@@ -1,0 +1,20 @@
+{
+  "Version-Timestamp": "2026-09-07 09:16:31 AST",
+  "schema_version": "1.0-proposed",
+  "record_id": "REQUIRED",
+  "requested_use": "internal",
+  "toolchain": {
+    "medium": "static",
+    "renderer": "unselected",
+    "status": "unverified"
+  },
+  "files": [
+    {
+      "id": "REQUIRED",
+      "path": "REQUIRED",
+      "sha256": "REQUIRED",
+      "role": "REQUIRED",
+      "allowed_uses": []
+    }
+  ]
+}

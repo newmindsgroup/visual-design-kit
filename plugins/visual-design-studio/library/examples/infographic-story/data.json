@@ -1,0 +1,20 @@
+{
+  "Version-Timestamp": "2026-09-10 12:41:38 AST",
+  "source": "examples/knowledge-lab/content.json",
+  "status": "synthetic",
+  "counts": [
+    {
+      "label": "Buttons",
+      "value": 12
+    },
+    {
+      "label": "Seams",
+      "value": 8
+    },
+    {
+      "label": "Patches",
+      "value": 4
+    }
+  ],
+  "total": 24
+}

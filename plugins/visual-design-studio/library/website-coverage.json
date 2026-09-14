@@ -1,0 +1,194 @@
+{
+  "Version-Timestamp": "2026-09-11T20:48:53-04:00",
+  "status": "authored-not-runtime-certified",
+  "topics": [
+    {
+      "topic": "Website discovery and scope",
+      "owner": "web-discovery"
+    },
+    {
+      "topic": "Website requirements and prioritization",
+      "owner": "web-discovery"
+    },
+    {
+      "topic": "Existing website audit",
+      "owner": "web-audit"
+    },
+    {
+      "topic": "Website content strategy",
+      "owner": "web-content-strategy"
+    },
+    {
+      "topic": "Website editorial governance",
+      "owner": "web-content-strategy"
+    },
+    {
+      "topic": "Website redesign and migration planning",
+      "owner": "web-migration"
+    },
+    {
+      "topic": "Sitemap development and validation",
+      "owner": "web-information-architecture"
+    },
+    {
+      "topic": "Website navigation design",
+      "owner": "web-information-architecture"
+    },
+    {
+      "topic": "Page content architecture",
+      "owner": "web-page-architecture"
+    },
+    {
+      "topic": "Website wireframing",
+      "owner": "web-page-architecture"
+    },
+    {
+      "topic": "Page-template architecture",
+      "owner": "web-page-templates"
+    },
+    {
+      "topic": "Internal search and discovery",
+      "owner": "web-search"
+    },
+    {
+      "topic": "Website art-direction application",
+      "owner": "web-art-direction"
+    },
+    {
+      "topic": "Hero and opening-section design",
+      "owner": "web-art-direction"
+    },
+    {
+      "topic": "Section composition and page rhythm",
+      "owner": "web-art-direction"
+    },
+    {
+      "topic": "Responsive art direction",
+      "owner": "web-responsive"
+    },
+    {
+      "topic": "Website imagery and asset direction",
+      "owner": "web-media"
+    },
+    {
+      "topic": "Website component composition",
+      "owner": "web-system-assembly"
+    },
+    {
+      "topic": "Website design-system assembly",
+      "owner": "web-system-assembly"
+    },
+    {
+      "topic": "Full-page visual critique",
+      "owner": "web-visual-review"
+    },
+    {
+      "topic": "Landing-page design",
+      "owner": "web-conversion"
+    },
+    {
+      "topic": "Website conversion-path design",
+      "owner": "web-conversion"
+    },
+    {
+      "topic": "Trust and proof presentation",
+      "owner": "web-conversion"
+    },
+    {
+      "topic": "Forms and lead-capture experience",
+      "owner": "web-forms"
+    },
+    {
+      "topic": "Content-to-layout integration",
+      "owner": "web-copy-fit"
+    },
+    {
+      "topic": "Design-to-code fidelity",
+      "owner": "web-fidelity"
+    },
+    {
+      "topic": "Semantic frontend implementation",
+      "owner": "web-frontend"
+    },
+    {
+      "topic": "CMS content modeling",
+      "owner": "web-cms"
+    },
+    {
+      "topic": "CMS template implementation",
+      "owner": "web-cms"
+    },
+    {
+      "topic": "Platform-specific implementation adapters",
+      "owner": "web-platform-adapters"
+    },
+    {
+      "topic": "Integration experience design",
+      "owner": "web-integrations"
+    },
+    {
+      "topic": "Website accessibility testing",
+      "owner": "web-accessibility"
+    },
+    {
+      "topic": "Website performance optimization",
+      "owner": "web-performance"
+    },
+    {
+      "topic": "Technical SEO implementation",
+      "owner": "web-seo"
+    },
+    {
+      "topic": "Cross-browser and responsive QA",
+      "owner": "web-browser-qa"
+    },
+    {
+      "topic": "Website privacy and consent integration",
+      "owner": "web-privacy"
+    },
+    {
+      "topic": "Analytics and measurement planning",
+      "owner": "web-analytics"
+    },
+    {
+      "topic": "Launch and rollback verification",
+      "owner": "web-release"
+    },
+    {
+      "topic": "Website maintenance and regression testing",
+      "owner": "web-maintenance"
+    },
+    {
+      "topic": "Post-launch improvement",
+      "owner": "web-maintenance"
+    },
+    {
+      "topic": "E-commerce",
+      "owner": "web-commerce"
+    },
+    {
+      "topic": "Membership or account websites",
+      "owner": "web-accounts"
+    },
+    {
+      "topic": "Multilingual websites",
+      "owner": "web-localization"
+    },
+    {
+      "topic": "Directories and marketplaces",
+      "owner": "web-directory"
+    },
+    {
+      "topic": "Editorial and resource websites",
+      "owner": "web-editorial"
+    },
+    {
+      "topic": "Booking and appointment websites",
+      "owner": "web-booking"
+    },
+    {
+      "topic": "Interactive storytelling",
+      "owner": "web-storytelling"
+    }
+  ]
+}

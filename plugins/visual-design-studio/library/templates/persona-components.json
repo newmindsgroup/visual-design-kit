@@ -1,0 +1,181 @@
+{
+  "Version-Timestamp": "2026-09-07 09:16:31 AST",
+  "schema_version": "1.0-proposed",
+  "components": [
+    {
+      "id": "W01",
+      "label": "Header / Detalle de Persona",
+      "data_selector": "`id`, `name`, `shortName`, `image`, `priority`, `demographics.role`, `demographics.company`, `quote`"
+    },
+    {
+      "id": "W02",
+      "label": "Six tabs / Resumen, Psicografía, Viaje de Compra, Preferencias de Contenido, Objeciones, Escenarios",
+      "data_selector": "Inventory groups overview, psychographics, journey, content, objections, scenarios"
+    },
+    {
+      "id": "W03",
+      "label": "Jobs to be Done / Trabajos por Hacer",
+      "data_selector": "`jtbd`"
+    },
+    {
+      "id": "W04",
+      "label": "Goals / Objetivos and Frustrations / Frustraciones",
+      "data_selector": "`goals[]`, `frustrations[]`"
+    },
+    {
+      "id": "W05",
+      "label": "Key Behaviors / Comportamientos Clave",
+      "data_selector": "`behaviors[]`"
+    },
+    {
+      "id": "W06",
+      "label": "Detailed Pain Points / Puntos de Dolor Detallados",
+      "data_selector": "`painPoints[].pain`, `.urgency`, `.impact`, `.currentWorkaround`, `.desiredSolution`"
+    },
+    {
+      "id": "W07",
+      "label": "Values, Personality, Lifestyle, Attitudes / Valores Fundamentales, Personalidad, Estilo de Vida, Actitudes",
+      "data_selector": "`psychographics.values[]`, `.personality`, `.lifestyle`, `.attitudes`"
+    },
+    {
+      "id": "W08",
+      "label": "Motivations, Fears / Motivaciones, Miedos",
+      "data_selector": "`psychographics.motivations[]`, `.fears[]`"
+    },
+    {
+      "id": "W09",
+      "label": "Day in the Life / Un Día en la Vida",
+      "data_selector": "`dayInTheLife.*`"
+    },
+    {
+      "id": "W10",
+      "label": "Emotional Journey / Viaje Emocional",
+      "data_selector": "`emotionalJourney.beforeEngagement.*`, `.duringConsideration.*`, `.atDecision.*`, `.afterPurchase.*`"
+    },
+    {
+      "id": "W11",
+      "label": "Awareness / Etapa de Conocimiento",
+      "data_selector": "`buyingJourney.awareness.*`"
+    },
+    {
+      "id": "W12",
+      "label": "Consideration / Etapa de Consideración",
+      "data_selector": "`buyingJourney.consideration.*`"
+    },
+    {
+      "id": "W13",
+      "label": "Decision / Etapa de Decisión",
+      "data_selector": "`buyingJourney.decision.*`"
+    },
+    {
+      "id": "W14",
+      "label": "Influences / Influencias",
+      "data_selector": "`influences.*`"
+    },
+    {
+      "id": "W15",
+      "label": "Decision Criteria / Criterios de Decisión",
+      "data_selector": "`decisionCriteria.*`"
+    },
+    {
+      "id": "W16",
+      "label": "Formats, Channels, Tone / Formatos Preferidos, Canales Preferidos, Tono y Estilo",
+      "data_selector": "`contentPreferences.formats[]`, `.channels[]`, `.tone`, `.readingLevel`, `.length`, `.frequency`"
+    },
+    {
+      "id": "W17",
+      "label": "Topic Interests / Intereses de Temas",
+      "data_selector": "`contentPreferences.topics[]`, `.avoidTopics[]`"
+    },
+    {
+      "id": "W18",
+      "label": "Communication Style / Estilo de Comunicación",
+      "data_selector": "`communicationStyle.*`"
+    },
+    {
+      "id": "W19",
+      "label": "Content by Stage / Recomendaciones de Contenido por Etapa",
+      "data_selector": "`contentMapping.awareness[]`, `.consideration[]`, `.decision[]`, `.retention[]`"
+    },
+    {
+      "id": "W20",
+      "label": "Objections and Responses / Objeciones y Respuestas",
+      "data_selector": "`objections[].objection`, `.category`, `.response`, `.proofNeeded`"
+    },
+    {
+      "id": "W21",
+      "label": "Competitive Context / Contexto Competitivo",
+      "data_selector": "`competitiveContext.alternatives[]`, `.currentSolutions[]`, `.switchingBarriers[]`, `.competitorPerceptions[]`"
+    },
+    {
+      "id": "W22",
+      "label": "Scenarios / Escenarios de Uso",
+      "data_selector": "`scenarios[].name`, `.description`, `.trigger`, `.outcome`"
+    },
+    {
+      "id": "W23",
+      "label": "Success Metrics / Métricas de Éxito",
+      "data_selector": "`successMetrics.winDefinition`, `.personalSuccess[]`, `.professionalSuccess[]`, `.kpis[]`"
+    },
+    {
+      "id": "W24",
+      "label": "Demographics / Demografía",
+      "data_selector": "`demographics.*`"
+    },
+    {
+      "id": "W25",
+      "label": "Technology / Tecnología",
+      "data_selector": "`demographics.techSavviness`, `technologyUsage.*`"
+    },
+    {
+      "id": "W26",
+      "label": "Content Summary / Resumen de Contenido",
+      "data_selector": "`contentPreferences.readingLevel`, `.length`, `.frequency`"
+    },
+    {
+      "id": "W27",
+      "label": "Other Personas / Otras Personas",
+      "data_selector": "Collection of persona IDs, images, shortNames, roles"
+    },
+    {
+      "id": "W28",
+      "label": "Language selection / Seleccionar idioma",
+      "data_selector": "`ai_extensions.localization` plus same field IDs"
+    },
+    {
+      "id": "W29",
+      "label": "Loading/error/empty/fallback states",
+      "data_selector": "Component status and reason; failed source reference"
+    },
+    {
+      "id": "W30",
+      "label": "Compare Personas / Comparar Personas",
+      "data_selector": "Collection view over canonical fields"
+    },
+    {
+      "id": "W31",
+      "label": "Export PDF / Exportar PDF",
+      "data_selector": "Comparison view, print/export status"
+    },
+    {
+      "id": "W32",
+      "label": "Mapping summaries",
+      "data_selector": "`targeting.pages`, persona collection"
+    },
+    {
+      "id": "W33",
+      "label": "Mapping table and legend",
+      "data_selector": "`targeting.pages[pageId].primary[]`, `.secondary[]`, `.tertiary[]`, `.weights`, `.buyingStage`; page label/path"
+    },
+    {
+      "id": "W34",
+      "label": "Section Targeting Strategies",
+      "data_selector": "`targeting.sections[sectionType].targetingStrategy`, `.personaUsage[]`, `.notes`"
+    },
+    {
+      "id": "W35",
+      "label": "App navigation and quick navigation",
+      "data_selector": "Navigation manifest, no persona content"
+    }
+  ]
+}

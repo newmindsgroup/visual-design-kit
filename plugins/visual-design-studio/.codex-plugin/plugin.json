@@ -1,0 +1,21 @@
+{
+  "name": "visual-design-studio",
+  "version": "0.1.0",
+  "description": "Start separate brand and design projects using a versioned, selectively loaded design library.",
+  "author": {
+    "name": "New Minds Group"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Visual Design Studio",
+    "shortDescription": "Use Visual Design Studio in Codex.",
+    "longDescription": "One project entry skill with 130 reference capabilities. Local review candidate. Tools and production outputs require project-specific verification.",
+    "developerName": "New Minds Group",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Start an existing-brand project.",
+      "Start a new-brand project."
+    ],
+    "capabilities": []
+  }
+}

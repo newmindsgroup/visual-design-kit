@@ -1,0 +1,51 @@
+{
+  "Version-Timestamp": "2026-09-11T19:32:14-04:00",
+  "title": "Clear ideas. Considered details.",
+  "text": "Make room for better ideas.",
+  "palettes": [
+    {
+      "id": "ink",
+      "tokens": {
+        "ink": "#202722",
+        "paper": "#f4f1e9",
+        "accent": "#94512f"
+      },
+      "pairs": [
+        {
+          "id": "body",
+          "fg": "ink",
+          "bg": "paper",
+          "minimum": 4.5
+        },
+        {
+          "id": "accent",
+          "fg": "accent",
+          "bg": "paper",
+          "minimum": 4.5
+        }
+      ]
+    },
+    {
+      "id": "slate",
+      "tokens": {
+        "ink": "#183949",
+        "paper": "#edf4f5",
+        "accent": "#547883"
+      },
+      "pairs": [
+        {
+          "id": "body",
+          "fg": "ink",
+          "bg": "paper",
+          "minimum": 4.5
+        },
+        {
+          "id": "accent",
+          "fg": "accent",
+          "bg": "paper",
+          "minimum": 4.5
+        }
+      ]
+    }
+  ]
+}

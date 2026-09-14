@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0-proposed",
+  "Version-Timestamp": "2026-09-07 11:07:54 AST",
+  "baseline_id": "fictional-locked-system",
+  "locked": {
+    "color.brand": "#145AC8",
+    "component.radius": 4,
+    "logo.asset": "approved-mark.svg"
+  }
+}

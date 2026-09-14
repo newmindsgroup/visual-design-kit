@@ -1,0 +1,129 @@
+{
+  "Version-Timestamp": "2026-09-07 14:55:19 AST",
+  "record_id": "COMP-SPEC-SOURCES-01",
+  "scope": "reference-only",
+  "authority": "Exact locators and verification for these original examples; inventory_source_id resolves to inventory/master.json when present. No changes to canonical inventory source authority. A null inventory_source_id means no equivalent exact source in the master: its MAT record is Material Design guidance, not Android Developers Compose API guidance; APG is not a WAI tutorial or WHATWG standard. Parent mapping was checked directly against all 16 canonical source records on 2026-09-07; no null-parent locator had an exact URL match.",
+  "sources": [
+    {
+      "id": "WCAG",
+      "inventory_source_id": "WCAG",
+      "url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "version": "W3C Recommendation 12 December 2024",
+      "basis": "normative web standard",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Selected criteria referenced in work-record.md, including reflow/contrast/target-size sections; not a full conformance audit.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-BUTTON",
+      "inventory_source_id": "APG",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "version": "Living APG checked 2026-09-07",
+      "basis": "informative web pattern",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Name, action versus link and keyboard/focus behavior; no example code copied.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-DIALOG",
+      "inventory_source_id": "APG",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "version": "Living APG checked 2026-09-07",
+      "basis": "informative web pattern",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Initial/contained/return focus, dismissal and actual modality; not native sheet guidance.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-TABLE",
+      "inventory_source_id": "APG",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+      "version": "Living APG checked 2026-09-07",
+      "basis": "informative web pattern",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Table versus grid and table/header relationships.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-TABLE-HEADERS",
+      "inventory_source_id": null,
+      "url": "https://www.w3.org/WAI/tutorials/tables/two-headers/",
+      "version": "WAI tutorial checked 2026-09-07",
+      "basis": "informative web tutorial",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Column headers plus Name row headers; matching the two-headers tutorial. No implementation tested.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-FORMS",
+      "inventory_source_id": null,
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "version": "WAI tutorial checked 2026-09-07",
+      "basis": "informative web tutorial",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Validation feedback and association; chosen timing/data rules are original teaching decisions.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-HTML-BUTTON",
+      "inventory_source_id": null,
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+      "version": "HTML living standard checked 2026-09-07",
+      "basis": "normative web standard",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Button type and disabled semantics; no browser implementation tested.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-HTML-INPUT",
+      "inventory_source_id": null,
+      "url": "https://html.spec.whatwg.org/multipage/input.html#the-input-element",
+      "version": "HTML living standard checked 2026-09-07",
+      "basis": "normative web standard",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Text input editing, readonly versus disabled and validation distinction.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-HTML-DIALOG",
+      "inventory_source_id": null,
+      "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+      "version": "HTML living standard checked 2026-09-07",
+      "basis": "normative web standard",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "Native web dialog element and modal lifecycle; no chosen framework/browser support guarantee.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-ANDROID-SHEET",
+      "inventory_source_id": null,
+      "url": "https://developer.android.com/develop/ui/compose/components/bottom-sheets",
+      "version": "Page reports last updated 2026-08-14 UTC; inspected 2026-09-07",
+      "basis": "platform implementation guidance",
+      "checked_at": "2026-09-07",
+      "verification": "checked-current",
+      "locator_and_limits": "SheetState/show/hide/lifecycle read; no Compose selection or native adaptation completed.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    },
+    {
+      "id": "SRC-APPLE-SHEET",
+      "inventory_source_id": "APPLE",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "version": "Version not established; requested 2026-09-07",
+      "basis": "platform guidance",
+      "checked_at": "2026-09-07",
+      "verification": "body-unverified",
+      "locator_and_limits": "Text fetch returned JavaScript requirement only. No detailed sheet behavior treated as verified; native adoption remains pending.",
+      "rights": "Reference and original synthesis only; no third-party code or assets copied."
+    }
+  ]
+}

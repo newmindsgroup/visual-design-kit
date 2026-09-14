@@ -1,0 +1,934 @@
+{
+  "Version-Timestamp": "2026-09-12T11:33:18-04:00",
+  "schema_version": "1.0-proposed",
+  "mode": "instruction-dependencies-only",
+  "capabilities": [
+    {
+      "id": "research",
+      "entry": "draft-skills/design-evidence-research/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "id": "persona",
+      "entry": "draft-skills/design-persona-build/SKILL.md",
+      "depends_on": [
+        "research"
+      ]
+    },
+    {
+      "id": "handoff",
+      "entry": "draft-skills/design-stage-handoff/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "id": "reference-direction",
+      "entry": "draft-skills/design-reference-direction/SKILL.md",
+      "depends_on": [
+        "research"
+      ]
+    },
+    {
+      "id": "brand-strategy",
+      "entry": "draft-skills/design-brand-strategy/SKILL.md",
+      "depends_on": [
+        "research",
+        "persona"
+      ]
+    },
+    {
+      "id": "identity",
+      "entry": "draft-skills/design-identity-system/SKILL.md",
+      "depends_on": [
+        "brand-strategy"
+      ]
+    },
+    {
+      "id": "ux",
+      "entry": "draft-skills/design-ux-architecture/SKILL.md",
+      "depends_on": [
+        "research",
+        "persona"
+      ]
+    },
+    {
+      "id": "prototype",
+      "entry": "draft-skills/design-prototype-evaluation/SKILL.md",
+      "depends_on": [
+        "ux"
+      ]
+    },
+    {
+      "id": "ui",
+      "entry": "draft-skills/design-ui-system/SKILL.md",
+      "depends_on": [
+        "ux",
+        "identity"
+      ]
+    },
+    {
+      "id": "production",
+      "entry": "draft-skills/design-production-interface/SKILL.md",
+      "depends_on": [
+        "handoff"
+      ]
+    },
+    {
+      "id": "delivery",
+      "entry": "draft-skills/design-quality-delivery/SKILL.md",
+      "depends_on": [
+        "production"
+      ]
+    },
+    {
+      "id": "content",
+      "entry": "draft-skills/design-content-writing/SKILL.md",
+      "depends_on": [
+        "research",
+        "handoff"
+      ]
+    },
+    {
+      "id": "infographics",
+      "entry": "draft-skills/design-infographics/SKILL.md",
+      "depends_on": [
+        "content",
+        "production"
+      ]
+    },
+    {
+      "id": "higgsfield-cli",
+      "entry": "draft-skills/design-higgsfield-cli/SKILL.md",
+      "depends_on": [
+        "production",
+        "media-route-selection"
+      ]
+    },
+    {
+      "id": "openart-cli",
+      "entry": "draft-skills/design-openart-cli/SKILL.md",
+      "depends_on": [
+        "production",
+        "media-route-selection"
+      ]
+    },
+    {
+      "id": "foundations",
+      "entry": "draft-skills/design-foundations/SKILL.md",
+      "depends_on": [
+        "reference-direction",
+        "handoff"
+      ]
+    },
+    {
+      "id": "typography",
+      "entry": "draft-skills/design-typography/SKILL.md",
+      "depends_on": [
+        "foundations"
+      ]
+    },
+    {
+      "id": "color",
+      "entry": "draft-skills/design-color-system/SKILL.md",
+      "depends_on": [
+        "foundations"
+      ]
+    },
+    {
+      "id": "motion",
+      "entry": "draft-skills/design-motion-effects/SKILL.md",
+      "depends_on": [
+        "foundations",
+        "production"
+      ]
+    },
+    {
+      "id": "display-discovery",
+      "entry": "draft-skills/design-display-discovery/SKILL.md",
+      "depends_on": [
+        "research",
+        "handoff"
+      ]
+    },
+    {
+      "id": "display-art-direction",
+      "entry": "draft-skills/design-display-art-direction/SKILL.md",
+      "depends_on": [
+        "display-discovery",
+        "reference-direction"
+      ]
+    },
+    {
+      "id": "display-content",
+      "entry": "draft-skills/design-display-content/SKILL.md",
+      "depends_on": [
+        "display-discovery",
+        "content"
+      ]
+    },
+    {
+      "id": "display-campaigns",
+      "entry": "draft-skills/design-display-campaigns/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "touchscreen-design",
+      "entry": "draft-skills/design-touchscreen-design/SKILL.md",
+      "depends_on": [
+        "display-discovery",
+        "ux"
+      ]
+    },
+    {
+      "id": "display-production",
+      "entry": "draft-skills/design-display-production/SKILL.md",
+      "depends_on": [
+        "display-discovery",
+        "production"
+      ]
+    },
+    {
+      "id": "display-evaluation",
+      "entry": "draft-skills/design-display-evaluation/SKILL.md",
+      "depends_on": [
+        "display-discovery",
+        "delivery"
+      ]
+    },
+    {
+      "id": "brand-naming",
+      "entry": "draft-skills/design-brand-naming/SKILL.md",
+      "depends_on": [
+        "brand-strategy"
+      ]
+    },
+    {
+      "id": "logo-concepts",
+      "entry": "draft-skills/design-logo-concepts/SKILL.md",
+      "depends_on": [
+        "identity"
+      ]
+    },
+    {
+      "id": "logo-refinement",
+      "entry": "draft-skills/design-logo-refinement/SKILL.md",
+      "depends_on": [
+        "logo-concepts",
+        "typography"
+      ]
+    },
+    {
+      "id": "logo-variants",
+      "entry": "draft-skills/design-logo-variants/SKILL.md",
+      "depends_on": [
+        "logo-refinement"
+      ]
+    },
+    {
+      "id": "logo-evaluation",
+      "entry": "draft-skills/design-logo-evaluation/SKILL.md",
+      "depends_on": [
+        "identity",
+        "delivery"
+      ]
+    },
+    {
+      "id": "identity-refresh",
+      "entry": "draft-skills/design-identity-refresh/SKILL.md",
+      "depends_on": [
+        "identity"
+      ]
+    },
+    {
+      "id": "brand-guidelines",
+      "entry": "draft-skills/design-brand-guidelines/SKILL.md",
+      "depends_on": [
+        "identity"
+      ]
+    },
+    {
+      "id": "identity-delivery",
+      "entry": "draft-skills/design-identity-delivery/SKILL.md",
+      "depends_on": [
+        "production",
+        "identity"
+      ]
+    },
+    {
+      "id": "design-taste",
+      "entry": "draft-skills/design-taste/SKILL.md",
+      "depends_on": [
+        "reference-direction"
+      ]
+    },
+    {
+      "id": "screen-assets",
+      "entry": "draft-skills/design-screen-assets/SKILL.md",
+      "depends_on": [
+        "display-discovery"
+      ]
+    },
+    {
+      "id": "screen-compositing",
+      "entry": "draft-skills/design-screen-compositing/SKILL.md",
+      "depends_on": [
+        "screen-assets"
+      ]
+    },
+    {
+      "id": "screen-original-assets",
+      "entry": "draft-skills/design-screen-original-assets/SKILL.md",
+      "depends_on": [
+        "display-art-direction"
+      ]
+    },
+    {
+      "id": "screen-reconstruction",
+      "entry": "draft-skills/design-screen-reconstruction/SKILL.md",
+      "depends_on": [
+        "screen-assets"
+      ]
+    },
+    {
+      "id": "screen-dimensional",
+      "entry": "draft-skills/design-screen-dimensional/SKILL.md",
+      "depends_on": [
+        "screen-assets"
+      ]
+    },
+    {
+      "id": "screen-adaptation",
+      "entry": "draft-skills/design-screen-adaptation/SKILL.md",
+      "depends_on": [
+        "display-art-direction"
+      ]
+    },
+    {
+      "id": "screen-formats",
+      "entry": "draft-skills/design-screen-formats/SKILL.md",
+      "depends_on": [
+        "display-discovery"
+      ]
+    },
+    {
+      "id": "screen-storyboard",
+      "entry": "draft-skills/design-screen-storyboard/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "screen-animation",
+      "entry": "draft-skills/design-screen-animation/SKILL.md",
+      "depends_on": [
+        "screen-storyboard"
+      ]
+    },
+    {
+      "id": "screen-kinetic-type",
+      "entry": "draft-skills/design-screen-kinetic-type/SKILL.md",
+      "depends_on": [
+        "screen-storyboard"
+      ]
+    },
+    {
+      "id": "screen-video",
+      "entry": "draft-skills/design-screen-video/SKILL.md",
+      "depends_on": [
+        "screen-assets"
+      ]
+    },
+    {
+      "id": "screen-effects",
+      "entry": "draft-skills/design-screen-effects/SKILL.md",
+      "depends_on": [
+        "screen-storyboard"
+      ]
+    },
+    {
+      "id": "screen-loops",
+      "entry": "draft-skills/design-screen-loops/SKILL.md",
+      "depends_on": [
+        "screen-storyboard"
+      ]
+    },
+    {
+      "id": "screen-multiscreen",
+      "entry": "draft-skills/design-screen-multiscreen/SKILL.md",
+      "depends_on": [
+        "display-discovery"
+      ]
+    },
+    {
+      "id": "screen-revisions",
+      "entry": "draft-skills/design-screen-revisions/SKILL.md",
+      "depends_on": [
+        "handoff"
+      ]
+    },
+    {
+      "id": "screen-localization",
+      "entry": "draft-skills/design-screen-localization/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "screen-templates",
+      "entry": "draft-skills/design-screen-templates/SKILL.md",
+      "depends_on": [
+        "display-campaigns"
+      ]
+    },
+    {
+      "id": "touch-product-discovery",
+      "entry": "draft-skills/design-touch-product-discovery/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-states-copy",
+      "entry": "draft-skills/design-touch-states-copy/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-media",
+      "entry": "draft-skills/design-touch-media/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-handoffs",
+      "entry": "draft-skills/design-touch-handoffs/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-device-validation",
+      "entry": "draft-skills/design-touch-device-validation/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-information-architecture",
+      "entry": "draft-skills/design-touch-information-architecture/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-interaction-patterns",
+      "entry": "draft-skills/design-touch-interaction-patterns/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-configurators",
+      "entry": "draft-skills/design-touch-configurators/SKILL.md",
+      "depends_on": [
+        "touch-product-discovery"
+      ]
+    },
+    {
+      "id": "touch-forms",
+      "entry": "draft-skills/design-touch-forms/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-product-education",
+      "entry": "draft-skills/design-touch-product-education/SKILL.md",
+      "depends_on": [
+        "touch-product-discovery"
+      ]
+    },
+    {
+      "id": "touch-offline",
+      "entry": "draft-skills/design-touch-offline/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-action-reliability",
+      "entry": "draft-skills/design-touch-action-reliability/SKILL.md",
+      "depends_on": [
+        "touchscreen-design"
+      ]
+    },
+    {
+      "id": "touch-usability-testing",
+      "entry": "draft-skills/design-touch-usability-testing/SKILL.md",
+      "depends_on": [
+        "touch-device-validation"
+      ]
+    },
+    {
+      "id": "screen-attention",
+      "entry": "draft-skills/design-screen-attention/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "screen-assortment",
+      "entry": "draft-skills/design-screen-assortment/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "screen-offers",
+      "entry": "draft-skills/design-screen-offers/SKILL.md",
+      "depends_on": [
+        "display-content"
+      ]
+    },
+    {
+      "id": "screen-data-content",
+      "entry": "draft-skills/design-screen-data-content/SKILL.md",
+      "depends_on": [
+        "display-campaigns"
+      ]
+    },
+    {
+      "id": "screen-playlists",
+      "entry": "draft-skills/design-screen-playlists/SKILL.md",
+      "depends_on": [
+        "screen-loops"
+      ]
+    },
+    {
+      "id": "screen-shelf-edge",
+      "entry": "draft-skills/design-screen-shelf-edge/SKILL.md",
+      "depends_on": [
+        "screen-formats"
+      ]
+    },
+    {
+      "id": "screen-still-motion",
+      "entry": "draft-skills/design-screen-still-motion/SKILL.md",
+      "depends_on": [
+        "screen-reconstruction"
+      ]
+    },
+    {
+      "id": "screen-finishing",
+      "entry": "draft-skills/design-screen-finishing/SKILL.md",
+      "depends_on": [
+        "display-production"
+      ]
+    },
+    {
+      "id": "screen-performance-learning",
+      "entry": "draft-skills/design-screen-performance-learning/SKILL.md",
+      "depends_on": [
+        "display-evaluation"
+      ]
+    },
+    {
+      "id": "screen-acceptance-records",
+      "entry": "draft-skills/design-screen-acceptance-records/SKILL.md",
+      "depends_on": [
+        "handoff"
+      ]
+    },
+    {
+      "id": "screen-executable-tests",
+      "entry": "draft-skills/design-screen-executable-tests/SKILL.md",
+      "depends_on": [
+        "display-evaluation"
+      ]
+    },
+    {
+      "id": "screen-evaluation-examples",
+      "entry": "draft-skills/design-screen-evaluation-examples/SKILL.md",
+      "depends_on": [
+        "display-evaluation"
+      ]
+    },
+    {
+      "id": "screen-html-development",
+      "entry": "draft-skills/design-screen-html-development/SKILL.md",
+      "depends_on": [
+        "screen-data-content"
+      ]
+    },
+    {
+      "id": "screen-playback-performance",
+      "entry": "draft-skills/design-screen-playback-performance/SKILL.md",
+      "depends_on": [
+        "display-production"
+      ]
+    },
+    {
+      "id": "screen-cms-integration",
+      "entry": "draft-skills/design-screen-cms-integration/SKILL.md",
+      "depends_on": [
+        "display-production"
+      ]
+    },
+    {
+      "id": "screen-batch-rendering",
+      "entry": "draft-skills/design-screen-batch-rendering/SKILL.md",
+      "depends_on": [
+        "screen-templates"
+      ]
+    },
+    {
+      "id": "screen-native-projects",
+      "entry": "draft-skills/design-screen-native-projects/SKILL.md",
+      "depends_on": [
+        "display-production"
+      ]
+    },
+    {
+      "id": "screen-product-fidelity",
+      "entry": "draft-skills/design-screen-product-fidelity/SKILL.md",
+      "depends_on": [
+        "screen-compositing"
+      ]
+    },
+    {
+      "id": "screen-release-verification",
+      "entry": "draft-skills/design-screen-release-verification/SKILL.md",
+      "depends_on": [
+        "screen-acceptance-records"
+      ]
+    },
+    {
+      "id": "screen-troubleshooting",
+      "entry": "draft-skills/design-screen-troubleshooting/SKILL.md",
+      "depends_on": [
+        "display-evaluation"
+      ]
+    },
+    {
+      "id": "screen-audio-captions",
+      "entry": "draft-skills/design-screen-audio-captions/SKILL.md",
+      "depends_on": [
+        "screen-video"
+      ]
+    },
+    {
+      "id": "screen-event-content",
+      "entry": "draft-skills/design-screen-event-content/SKILL.md",
+      "depends_on": [
+        "screen-playlists"
+      ]
+    },
+    {
+      "id": "web-discovery",
+      "entry": "draft-skills/design-web-discovery/SKILL.md",
+      "depends_on": [
+        "research"
+      ]
+    },
+    {
+      "id": "web-audit",
+      "entry": "draft-skills/design-web-audit/SKILL.md",
+      "depends_on": [
+        "research"
+      ]
+    },
+    {
+      "id": "web-content-strategy",
+      "entry": "draft-skills/design-web-content-strategy/SKILL.md",
+      "depends_on": [
+        "content"
+      ]
+    },
+    {
+      "id": "web-migration",
+      "entry": "draft-skills/design-web-migration/SKILL.md",
+      "depends_on": [
+        "web-audit"
+      ]
+    },
+    {
+      "id": "web-information-architecture",
+      "entry": "draft-skills/design-web-information-architecture/SKILL.md",
+      "depends_on": [
+        "ux"
+      ]
+    },
+    {
+      "id": "web-page-architecture",
+      "entry": "draft-skills/design-web-page-architecture/SKILL.md",
+      "depends_on": [
+        "ux"
+      ]
+    },
+    {
+      "id": "web-page-templates",
+      "entry": "draft-skills/design-web-page-templates/SKILL.md",
+      "depends_on": [
+        "web-page-architecture"
+      ]
+    },
+    {
+      "id": "web-search",
+      "entry": "draft-skills/design-web-search/SKILL.md",
+      "depends_on": [
+        "web-information-architecture"
+      ]
+    },
+    {
+      "id": "web-art-direction",
+      "entry": "draft-skills/design-web-art-direction/SKILL.md",
+      "depends_on": [
+        "reference-direction"
+      ]
+    },
+    {
+      "id": "web-responsive",
+      "entry": "draft-skills/design-web-responsive/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "web-media",
+      "entry": "draft-skills/design-web-media/SKILL.md",
+      "depends_on": [
+        "reference-direction"
+      ]
+    },
+    {
+      "id": "web-system-assembly",
+      "entry": "draft-skills/design-web-system-assembly/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "web-visual-review",
+      "entry": "draft-skills/design-web-visual-review/SKILL.md",
+      "depends_on": [
+        "design-taste"
+      ]
+    },
+    {
+      "id": "web-conversion",
+      "entry": "draft-skills/design-web-conversion/SKILL.md",
+      "depends_on": [
+        "content"
+      ]
+    },
+    {
+      "id": "web-forms",
+      "entry": "draft-skills/design-web-forms/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "web-copy-fit",
+      "entry": "draft-skills/design-web-copy-fit/SKILL.md",
+      "depends_on": [
+        "typography"
+      ]
+    },
+    {
+      "id": "web-fidelity",
+      "entry": "draft-skills/design-web-fidelity/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "web-frontend",
+      "entry": "draft-skills/design-web-frontend/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "web-cms",
+      "entry": "draft-skills/design-web-cms/SKILL.md",
+      "depends_on": [
+        "web-page-templates"
+      ]
+    },
+    {
+      "id": "web-platform-adapters",
+      "entry": "draft-skills/design-web-platform-adapters/SKILL.md",
+      "depends_on": [
+        "production"
+      ]
+    },
+    {
+      "id": "web-integrations",
+      "entry": "draft-skills/design-web-integrations/SKILL.md",
+      "depends_on": [
+        "web-forms"
+      ]
+    },
+    {
+      "id": "web-accessibility",
+      "entry": "draft-skills/design-web-accessibility/SKILL.md",
+      "depends_on": [
+        "prototype"
+      ]
+    },
+    {
+      "id": "web-performance",
+      "entry": "draft-skills/design-web-performance/SKILL.md",
+      "depends_on": [
+        "web-frontend"
+      ]
+    },
+    {
+      "id": "web-seo",
+      "entry": "draft-skills/design-web-seo/SKILL.md",
+      "depends_on": [
+        "web-information-architecture"
+      ]
+    },
+    {
+      "id": "web-browser-qa",
+      "entry": "draft-skills/design-web-browser-qa/SKILL.md",
+      "depends_on": [
+        "prototype"
+      ]
+    },
+    {
+      "id": "web-privacy",
+      "entry": "draft-skills/design-web-privacy/SKILL.md",
+      "depends_on": [
+        "web-discovery"
+      ]
+    },
+    {
+      "id": "web-analytics",
+      "entry": "draft-skills/design-web-analytics/SKILL.md",
+      "depends_on": [
+        "web-discovery"
+      ]
+    },
+    {
+      "id": "web-release",
+      "entry": "draft-skills/design-web-release/SKILL.md",
+      "depends_on": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "web-maintenance",
+      "entry": "draft-skills/design-web-maintenance/SKILL.md",
+      "depends_on": [
+        "web-audit"
+      ]
+    },
+    {
+      "id": "web-commerce",
+      "entry": "draft-skills/design-web-commerce/SKILL.md",
+      "depends_on": [
+        "web-page-templates"
+      ]
+    },
+    {
+      "id": "web-accounts",
+      "entry": "draft-skills/design-web-accounts/SKILL.md",
+      "depends_on": [
+        "web-forms"
+      ]
+    },
+    {
+      "id": "web-localization",
+      "entry": "draft-skills/design-web-localization/SKILL.md",
+      "depends_on": [
+        "content"
+      ]
+    },
+    {
+      "id": "web-directory",
+      "entry": "draft-skills/design-web-directory/SKILL.md",
+      "depends_on": [
+        "web-search"
+      ]
+    },
+    {
+      "id": "web-editorial",
+      "entry": "draft-skills/design-web-editorial/SKILL.md",
+      "depends_on": [
+        "web-content-strategy"
+      ]
+    },
+    {
+      "id": "web-booking",
+      "entry": "draft-skills/design-web-booking/SKILL.md",
+      "depends_on": [
+        "web-integrations"
+      ]
+    },
+    {
+      "id": "web-storytelling",
+      "entry": "draft-skills/design-web-storytelling/SKILL.md",
+      "depends_on": [
+        "motion"
+      ]
+    },
+    {
+      "id": "media-art-direction",
+      "entry": "draft-skills/design-media-art-direction/SKILL.md",
+      "depends_on": [
+        "reference-direction",
+        "production"
+      ]
+    },
+    {
+      "id": "chatgpt-images",
+      "entry": "draft-skills/design-chatgpt-images/SKILL.md",
+      "depends_on": [
+        "production",
+        "media-route-selection"
+      ]
+    },
+    {
+      "id": "media-route-selection",
+      "entry": "draft-skills/design-media-route-selection/SKILL.md",
+      "depends_on": [
+        "media-reference-control"
+      ]
+    },
+    {
+      "id": "media-reference-control",
+      "entry": "draft-skills/design-media-reference-control/SKILL.md",
+      "depends_on": [
+        "media-art-direction"
+      ]
+    },
+    {
+      "id": "media-image-repair",
+      "entry": "draft-skills/design-media-image-repair/SKILL.md",
+      "depends_on": [
+        "media-reference-control",
+        "production"
+      ]
+    },
+    {
+      "id": "media-quality-evaluation",
+      "entry": "draft-skills/design-media-quality-evaluation/SKILL.md",
+      "depends_on": [
+        "media-art-direction"
+      ]
+    },
+    {
+      "id": "media-production-recipes",
+      "entry": "draft-skills/design-media-production-recipes/SKILL.md",
+      "depends_on": [
+        "media-quality-evaluation"
+      ]
+    }
+  ]
+}

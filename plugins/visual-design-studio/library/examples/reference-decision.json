@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0-proposed",
+  "Version-Timestamp": "2026-09-07 11:07:54 AST",
+  "record_id": "fictional-reference-01",
+  "synthetic": true,
+  "context": "existing-brand",
+  "task": "Explore reports typography while preserving the approved system.",
+  "owner": "Fictional design owner",
+  "requested_action": "review",
+  "readiness": "held",
+  "baseline": {
+    "status": "locked",
+    "reason": "Approved values are immutable for this proposal.",
+    "reference": {
+      "path": "examples/reference-baseline.json",
+      "sha256": "4ca1d1e9b363db88af33a8580dada552e13f99b7c93c4f0065ffed34276a0346"
+    },
+    "approval_evidence_id": "E1"
+  },
+  "values": {
+    "color.brand": "#145AC8",
+    "component.radius": 4,
+    "logo.asset": "approved-mark.svg"
+  },
+  "derivations": [],
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "synthetic",
+      "location": "fictional:brief-01",
+      "publisher": "Synthetic fixture author",
+      "checked_at": "2026-09-07",
+      "version": "1",
+      "section": "Constraints",
+      "limitations": "Fictional assumptions only."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "source_ids": [
+        "S1"
+      ],
+      "status": "synthetic",
+      "claim": "Fictional owner supplied locked tokens and licensed stills; local static rendering incurs zero extra service charges.",
+      "supports": [
+        "rights",
+        "cost:asset-production",
+        "cost:playback",
+        "baseline-approval"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C1",
+      "source_ids": [
+        "S1"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "disposition": "complement",
+      "reason": "Change typography hierarchy only within the existing system.",
+      "rights": {
+        "status": "documented",
+        "scope": "Fictional supplied assets, this internal exercise only.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      "operations": [
+        {
+          "kind": "asset-production",
+          "cost": "zero-extra",
+          "evidence_ids": [
+            "E1"
+          ],
+          "reason": "Use existing licensed stills and local layout tools."
+        },
+        {
+          "kind": "playback",
+          "cost": "zero-extra",
+          "evidence_ids": [
+            "E1"
+          ],
+          "reason": "Existing local browser, no remote service."
+        }
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "id": "V1",
+      "kind": "human-design",
+      "status": "pending",
+      "candidate_ids": [
+        "C1"
+      ],
+      "evidence_ids": [],
+      "owner": "Fictional reviewer",
+      "next_action": "Review hierarchy against the brief."
+    },
+    {
+      "id": "V2",
+      "kind": "accessibility",
+      "status": "pending",
+      "candidate_ids": [
+        "C1"
+      ],
+      "evidence_ids": [],
+      "owner": "Fictional tester",
+      "next_action": "Check rendered contrast, focus and reduced motion."
+    }
+  ],
+  "budget": "zero-extra"
+}

@@ -1,0 +1,12 @@
+{
+  "Version-Timestamp": "2026-09-07 09:16:31 AST",
+  "schema_version": "1.0-proposed",
+  "record_id": "REQUIRED",
+  "scenario": "no-kit",
+  "requested_use": "internal",
+  "readiness": "provisional",
+  "sources": [],
+  "findings": [],
+  "conflicts": [],
+  "asset_uses": []
+}

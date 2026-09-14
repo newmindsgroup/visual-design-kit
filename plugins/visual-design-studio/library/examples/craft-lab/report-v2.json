@@ -1,0 +1,35 @@
+{
+  "Version-Timestamp": "2026-09-11T19:34:00-04:00",
+  "scope": "Opaque sRGB pair arithmetic only. No font, composition, gradient, alpha, print or accessibility certification.",
+  "pairs": [
+    {
+      "id": "ink/body",
+      "ratio": 13.533924395747242,
+      "minimum": 4.5,
+      "passes": true,
+      "signature": "bda6fa36fdb02ca5010a333e5c581acf3b1d3aac9bd3a63cdb866e26236b7547"
+    },
+    {
+      "id": "ink/accent",
+      "ratio": 5.350679291761387,
+      "minimum": 4.5,
+      "passes": true,
+      "signature": "0a7fc6910a7ee93a9c4bd7068f4f714b0ea7ec3be39161bd4f619b7bf0fed69d"
+    },
+    {
+      "id": "slate/body",
+      "ratio": 10.963045637672625,
+      "minimum": 4.5,
+      "passes": true,
+      "signature": "5cccc4f609564bf82e24bd423c9b1d47de1efd4b07bc50e36c9386af71308844"
+    },
+    {
+      "id": "slate/accent",
+      "ratio": 4.294794989609952,
+      "minimum": 4.5,
+      "passes": false,
+      "signature": "5d30d1794e2c8ca7d9497bbd66b9ccfa239bc6cd795c773177e7bfcfb79c7074"
+    }
+  ],
+  "affected_pairs": []
+}

@@ -1,0 +1,1070 @@
+{
+  "Version-Timestamp": "2026-09-07 09:16:31 AST",
+  "schema_version": "1.0-proposed",
+  "canonical_reference": "persona-field-inventory.md",
+  "status": "canonical client-agnostic structural contract; field representation proposed",
+  "fields": [
+    {
+      "id": "F001",
+      "path": "id",
+      "type": "string",
+      "group": "header",
+      "label_en": "Id",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F002",
+      "path": "name",
+      "type": "string",
+      "group": "header",
+      "label_en": "Name",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F003",
+      "path": "shortName",
+      "type": "string",
+      "group": "header",
+      "label_en": "Short name",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F004",
+      "path": "image",
+      "type": "string",
+      "group": "header",
+      "label_en": "Image",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F005",
+      "path": "priority",
+      "type": "string",
+      "group": "header",
+      "label_en": "Priority",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F006",
+      "path": "demographics.age",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Age",
+      "label_es": "Edad",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F007",
+      "path": "demographics.role",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Role",
+      "label_es": "Rol",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F008",
+      "path": "demographics.company",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Company",
+      "label_es": "Empresa",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F009",
+      "path": "demographics.industry",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Industry",
+      "label_es": "Industria",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F010",
+      "path": "demographics.experience",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Experience",
+      "label_es": "Experiencia",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F011",
+      "path": "demographics.education",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Education",
+      "label_es": "Educación",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F012",
+      "path": "demographics.techSavviness",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Tech Savviness",
+      "label_es": "Dominio Tecnológico",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F013",
+      "path": "demographics.income",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Income",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F014",
+      "path": "demographics.location",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Location",
+      "label_es": "Ubicación",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F015",
+      "path": "demographics.teamSize",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Team Size",
+      "label_es": "Tamaño del Equipo",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F016",
+      "path": "demographics.reportingTo",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Reports To",
+      "label_es": "Reporta a",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F017",
+      "path": "psychographics.values[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Core Values",
+      "label_es": "Valores Fundamentales",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F018",
+      "path": "psychographics.personality",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Personality",
+      "label_es": "Personalidad",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F019",
+      "path": "psychographics.lifestyle",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Lifestyle",
+      "label_es": "Estilo de Vida",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F020",
+      "path": "psychographics.attitudes",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Attitudes",
+      "label_es": "Actitudes",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F021",
+      "path": "psychographics.motivations[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Motivations",
+      "label_es": "Motivaciones",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F022",
+      "path": "psychographics.fears[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Fears",
+      "label_es": "Miedos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F023",
+      "path": "jtbd",
+      "type": "string",
+      "group": "overview",
+      "label_en": "Jobs to be Done",
+      "label_es": "Trabajos por Hacer",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F024",
+      "path": "goals[]",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Goals",
+      "label_es": "Objetivos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F025",
+      "path": "frustrations[]",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Frustrations",
+      "label_es": "Frustraciones",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F026",
+      "path": "painPoints[].pain",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Detailed Pain Points",
+      "label_es": "Puntos de Dolor Detallados",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F027",
+      "path": "painPoints[].urgency",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "urgency",
+      "label_es": "urgencia",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F028",
+      "path": "painPoints[].impact",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "impact",
+      "label_es": "impacto",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F029",
+      "path": "painPoints[].currentWorkaround",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Current",
+      "label_es": "Actual",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F030",
+      "path": "painPoints[].desiredSolution",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Desired",
+      "label_es": "Deseado",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F031",
+      "path": "behaviors[]",
+      "type": "string item",
+      "group": "overview",
+      "label_en": "Key Behaviors",
+      "label_es": "Comportamientos Clave",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F032",
+      "path": "quote",
+      "type": "string",
+      "group": "header",
+      "label_en": "Quote",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F033",
+      "path": "scenarios[].name",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Name",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F034",
+      "path": "scenarios[].description",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Description",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F035",
+      "path": "scenarios[].trigger",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Trigger",
+      "label_es": "Disparador",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F036",
+      "path": "scenarios[].outcome",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Outcome",
+      "label_es": "Resultado",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F037",
+      "path": "influences.sources[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Information Sources",
+      "label_es": "Fuentes de Información",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F038",
+      "path": "influences.decisionFactors[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Decision Factors",
+      "label_es": "Factores de Decisión",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F039",
+      "path": "influences.influencers[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Influencers",
+      "label_es": "Influenciadores",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F040",
+      "path": "influences.peerInfluence",
+      "type": "string",
+      "group": "journey",
+      "label_en": "Peer Influence",
+      "label_es": "Influencia de Pares",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F041",
+      "path": "buyingJourney.awareness.triggers[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Triggers",
+      "label_es": "Disparadores",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F042",
+      "path": "buyingJourney.awareness.questions[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Questions They Ask",
+      "label_es": "Preguntas que Hacen",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F043",
+      "path": "buyingJourney.consideration.evaluationCriteria[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Evaluation Criteria",
+      "label_es": "Criterios de Evaluación",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F044",
+      "path": "buyingJourney.consideration.objections[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Objections",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F045",
+      "path": "buyingJourney.decision.finalTriggers[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Final triggers",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F046",
+      "path": "buyingJourney.decision.barriers[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Barriers",
+      "label_es": "Barreras",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F047",
+      "path": "contentPreferences.formats[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Preferred Formats",
+      "label_es": "Formatos Preferidos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F048",
+      "path": "contentPreferences.channels[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Preferred Channels",
+      "label_es": "Canales Preferidos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F049",
+      "path": "contentPreferences.tone",
+      "type": "string",
+      "group": "content",
+      "label_en": "Tone & Style",
+      "label_es": "Tono y Estilo",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F050",
+      "path": "contentPreferences.topics[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Interested In",
+      "label_es": "Interesado En",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F051",
+      "path": "communicationStyle.persuasionStyle",
+      "type": "string",
+      "group": "content",
+      "label_en": "Persuasion Style",
+      "label_es": "Estilo de Persuasión",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F052",
+      "path": "communicationStyle.proofPoints[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Proof Points That Work",
+      "label_es": "Puntos de Prueba que Funcionan",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F053",
+      "path": "communicationStyle.keyPhrases[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Key Phrases That Resonate",
+      "label_es": "Frases Clave que Resuenan",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F054",
+      "path": "successMetrics.winDefinition",
+      "type": "string",
+      "group": "scenarios",
+      "label_en": "Win Definition",
+      "label_es": "Definición de Éxito",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F055",
+      "path": "successMetrics.personalSuccess[]",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Personal Success",
+      "label_es": "Éxito Personal",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F056",
+      "path": "successMetrics.professionalSuccess[]",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Professional Success",
+      "label_es": "Éxito Profesional",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F057",
+      "path": "successMetrics.kpis[]",
+      "type": "string item",
+      "group": "scenarios",
+      "label_en": "Kpis",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F058",
+      "path": "objections[].objection",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Objections & Responses",
+      "label_es": "Objeciones y Respuestas",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F059",
+      "path": "objections[].response",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Recommended Response",
+      "label_es": "Respuesta Recomendada",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F060",
+      "path": "objections[].proofNeeded",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Proof Needed",
+      "label_es": "Prueba Necesaria",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F061",
+      "path": "technologyUsage.devices[]",
+      "type": "string item",
+      "group": "sidebar",
+      "label_en": "Devices",
+      "label_es": "Dispositivos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F062",
+      "path": "technologyUsage.mobileVsDesktop",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Device Preference",
+      "label_es": "Preferencia de Dispositivo",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F063",
+      "path": "technologyUsage.preferredApps[]",
+      "type": "string item",
+      "group": "sidebar",
+      "label_en": "Preferred apps",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F064",
+      "path": "technologyUsage.digitalBehavior",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Digital behavior",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F065",
+      "path": "decisionCriteria.mustHaves[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Must Haves",
+      "label_es": "Imprescindibles",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F066",
+      "path": "decisionCriteria.niceToHaves[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Nice to Haves",
+      "label_es": "Deseables",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F067",
+      "path": "decisionCriteria.dealBreakers[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Deal Breakers",
+      "label_es": "Factores de Rechazo",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F068",
+      "path": "competitiveContext.currentSolutions[]",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Current Solutions",
+      "label_es": "Soluciones Actuales",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F069",
+      "path": "competitiveContext.switchingBarriers[]",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Switching Barriers",
+      "label_es": "Barreras de Cambio",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F070",
+      "path": "competitiveContext.competitorPerceptions[].competitor",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Competitor",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F071",
+      "path": "competitiveContext.competitorPerceptions[].perception",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Perception",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F072",
+      "path": "emotionalJourney.beforeEngagement.mindset",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Mindset",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F073",
+      "path": "emotionalJourney.beforeEngagement.emotions[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Emotions",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F074",
+      "path": "emotionalJourney.beforeEngagement.needs[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F075",
+      "path": "emotionalJourney.duringConsideration.mindset",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Mindset",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F076",
+      "path": "emotionalJourney.duringConsideration.emotions[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Emotions",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F077",
+      "path": "emotionalJourney.duringConsideration.needs[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F078",
+      "path": "emotionalJourney.atDecision.mindset",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Mindset",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F079",
+      "path": "emotionalJourney.atDecision.emotions[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Emotions",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F080",
+      "path": "emotionalJourney.atDecision.needs[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F081",
+      "path": "emotionalJourney.afterPurchase.mindset",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Mindset",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F082",
+      "path": "emotionalJourney.afterPurchase.emotions[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Emotions",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F083",
+      "path": "emotionalJourney.afterPurchase.needs[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F084",
+      "path": "dayInTheLife.morningRoutine",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "Morning",
+      "label_es": "Mañana",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F085",
+      "path": "dayInTheLife.workActivities[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Work Activities",
+      "label_es": "Actividades de Trabajo",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F086",
+      "path": "dayInTheLife.challenges[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Daily Challenges",
+      "label_es": "Desafíos Diarios",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F087",
+      "path": "dayInTheLife.endOfDay",
+      "type": "string",
+      "group": "psychographics",
+      "label_en": "End of Day",
+      "label_es": "Fin del Día",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F088",
+      "path": "dayInTheLife.interactionPoints[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Interaction points",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F089",
+      "path": "contentMapping.awareness[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Awareness",
+      "label_es": "Conocimiento",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F090",
+      "path": "contentMapping.consideration[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Consideration",
+      "label_es": "Consideración",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F091",
+      "path": "contentMapping.decision[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Decision",
+      "label_es": "Decisión",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F092",
+      "path": "contentMapping.retention[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Retention",
+      "label_es": "Retención",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F093",
+      "path": "influences.brands[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Trusted Brands",
+      "label_es": "Marcas de Confianza",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F094",
+      "path": "buyingJourney.awareness.channels[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Preferred Channels",
+      "label_es": "Canales Preferidos",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F095",
+      "path": "buyingJourney.awareness.contentNeeds[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Content needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F096",
+      "path": "buyingJourney.consideration.criteria[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Criteria",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F097",
+      "path": "buyingJourney.consideration.comparisons[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Compares Against",
+      "label_es": "Compara Con",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F098",
+      "path": "buyingJourney.consideration.contentNeeds[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Content needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F099",
+      "path": "buyingJourney.decision.factors[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Decision Factors",
+      "label_es": "Factores de Decisión",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F100",
+      "path": "buyingJourney.decision.stakeholders[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Stakeholders",
+      "label_es": "Partes Interesadas",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F101",
+      "path": "buyingJourney.decision.timeline",
+      "type": "string",
+      "group": "journey",
+      "label_en": "Timeline",
+      "label_es": "Cronograma",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F102",
+      "path": "buyingJourney.decision.contentNeeds[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Content needs",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F103",
+      "path": "contentPreferences.readingLevel",
+      "type": "string",
+      "group": "content",
+      "label_en": "Reading Level",
+      "label_es": "Nivel de Lectura",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F104",
+      "path": "contentPreferences.length",
+      "type": "string",
+      "group": "content",
+      "label_en": "Preferred Length",
+      "label_es": "Longitud Preferida",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F105",
+      "path": "contentPreferences.frequency",
+      "type": "string",
+      "group": "content",
+      "label_en": "Frequency",
+      "label_es": "Frecuencia",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F106",
+      "path": "contentPreferences.avoidTopics[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Avoid",
+      "label_es": "Evitar",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F107",
+      "path": "communicationStyle.languageLevel",
+      "type": "string",
+      "group": "content",
+      "label_en": "Language Level",
+      "label_es": "Nivel de Lenguaje",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F108",
+      "path": "communicationStyle.formality",
+      "type": "string",
+      "group": "content",
+      "label_en": "Formality",
+      "label_es": "Formalidad",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F109",
+      "path": "communicationStyle.avoidPhrases[]",
+      "type": "string item",
+      "group": "content",
+      "label_en": "Phrases to AVOID",
+      "label_es": "Frases a EVITAR",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F110",
+      "path": "objections[].category",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Category",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F111",
+      "path": "technologyUsage.platforms[]",
+      "type": "string item",
+      "group": "sidebar",
+      "label_en": "Platforms",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F112",
+      "path": "technologyUsage.socialMedia[]",
+      "type": "string item",
+      "group": "sidebar",
+      "label_en": "Social Media",
+      "label_es": "Redes Sociales",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F113",
+      "path": "technologyUsage.adoptionStyle",
+      "type": "string",
+      "group": "sidebar",
+      "label_en": "Adoption Style",
+      "label_es": "Estilo de Adopción",
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F114",
+      "path": "decisionCriteria.priorityOrder[]",
+      "type": "string item",
+      "group": "journey",
+      "label_en": "Priority order",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F115",
+      "path": "competitiveContext.alternatives[]",
+      "type": "string item",
+      "group": "objections",
+      "label_en": "Alternatives",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F116",
+      "path": "emotionalJourney.duringConsideration.concerns[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Concerns",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F117",
+      "path": "emotionalJourney.afterPurchase.desiredEmotions[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Desired emotions",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    },
+    {
+      "id": "F118",
+      "path": "emotionalJourney.afterPurchase.successIndicators[]",
+      "type": "string item",
+      "group": "psychographics",
+      "label_en": "Success indicators",
+      "label_es": null,
+      "presence": "required; value may be unknown or justified not_applicable"
+    }
+  ]
+}

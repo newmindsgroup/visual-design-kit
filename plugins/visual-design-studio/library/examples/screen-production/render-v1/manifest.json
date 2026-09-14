@@ -1,0 +1,11 @@
+{
+  "Version-Timestamp": "2026-09-11T20:20:00-04:00",
+  "id": "rill-v1",
+  "status": "candidate",
+  "files": {
+    "wide.svg": "e1deb6426a818ac5d0e4c84be4621d51c67e1784f715cd13094de03da3b65b0a",
+    "portrait.svg": "b45d23881f8a43e2b7d790a17fc1a7c0f72d71645e623e590c4109b9394921de",
+    "strip.svg": "6e4ff6dc2050aec91868ed5fe00955804349c5223663a9e4043ef15394a2e1bc",
+    "campaign.json": "24a0fa1ae2416fb9a4b86edb8565218c435636359c0c380d55b30de4c87e9e29"
+  }
+}

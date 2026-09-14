@@ -1,0 +1,58 @@
+{
+  "Version-Timestamp": "2026-09-08 08:57:40 AST",
+  "schema_version": "1.0-proposed",
+  "subject_type": "bounded_actor",
+  "record_id": "REQUIRED",
+  "scope": "phase-only",
+  "readiness": "provisional",
+  "requested_action": "review",
+  "stage": "design",
+  "owner": "REQUIRED",
+  "next_action": "REQUIRED",
+  "completion": "partial",
+  "inputs": [],
+  "outputs": [],
+  "candidate": {
+    "approval": {
+      "status": "none"
+    }
+  },
+  "registry": {
+    "actors": [
+      {
+        "id": "A-1",
+        "role": "REQUIRED",
+        "goal": "REQUIRED",
+        "context": "REQUIRED",
+        "evidence_class": "proposed"
+      }
+    ],
+    "use_cases": [
+      "U-1"
+    ],
+    "requirements": [
+      "R-1"
+    ],
+    "decisions": [
+      "D-1"
+    ],
+    "criteria": [
+      "C-1"
+    ]
+  },
+  "traceability": [
+    {
+      "actor": "A-1",
+      "use_case": "U-1",
+      "requirement": "R-1",
+      "decision": "D-1",
+      "criterion": "C-1"
+    }
+  ],
+  "checks": [
+    {
+      "criterion": "C-1",
+      "status": "pending"
+    }
+  ]
+}

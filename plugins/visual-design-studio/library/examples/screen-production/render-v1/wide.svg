@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="480" viewBox="0 0 1920 480" role="img" aria-labelledby="title">
+<title id="title">RILL fictional screen study, wide</title>
+<!-- Version-Timestamp: 2026-09-11T20:20:00-04:00 -->
+<rect width="1920" height="480" fill="#102D32"/>
+<text x="80" y="90" fill="#F5F1E7" font-family="Arial, sans-serif" font-size="34" letter-spacing="7">RILL</text>
+<text x="80" y="207" fill="#F5F1E7" font-family="Georgia, serif" font-size="94" letter-spacing="0">A little</text>
+<text x="80" y="306" fill="#F5F1E7" font-family="Georgia, serif" font-size="94" letter-spacing="0">refreshment.</text>
+<text x="80" y="403" fill="#F5F1E7" font-family="Arial, sans-serif" font-size="18" letter-spacing="2">STILL WATER / FICTIONAL STUDY</text>
+<g transform="translate(1390 52) scale(0.93)"><rect x="25" y="0" width="110" height="34" rx="8" fill="#D3EA85"/><path d="M30 34H130V80Q160 100 160 130V342Q160 372 130 372H30Q0 372 0 342V130Q0 100 30 80Z" fill="#F5F1E7"/><path d="M12 146H148V283H12Z" fill="#D3EA85"/>
+<text x="29" y="207" fill="#102D32" font-family="Arial, sans-serif" font-size="28" letter-spacing="2">RILL</text>
+<text x="29" y="244" fill="#102D32" font-family="Arial, sans-serif" font-size="10" letter-spacing="1">STILL WATER</text>
+</g>
+<circle cx="1790" cy="92" r="20" fill="#D3EA85"/>
+</svg>

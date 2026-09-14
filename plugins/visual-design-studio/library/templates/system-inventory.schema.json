@@ -1,0 +1,509 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original system inventory",
+  "description": "Version-Timestamp: 2026-09-07 13:34:15 AST. Required starter dependencies are transitive; selections are recommendations, not approved project scope. Inventory-only statuses do not establish completed specs, implementation or tests.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0-proposed"
+    },
+    "Version-Timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "const": "reference-only"
+    },
+    "spec_template": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "brand",
+              "website",
+              "web-app",
+              "native-phone",
+              "native-tablet",
+              "marketing-sales",
+              "display",
+              "touch"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "web",
+                "ios",
+                "android",
+                "print",
+                "display",
+                "touch"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "purpose",
+          "platforms"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 8,
+      "uniqueItems": false
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "foundations",
+              "ui",
+              "patterns",
+              "templates",
+              "assets",
+              "governance"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 6,
+      "uniqueItems": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string"
+          },
+          "checked_at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "checked-current",
+              "checked-earlier-today",
+              "original-synthesis"
+            ]
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitations": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rights": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "url",
+          "checked_at",
+          "verification",
+          "locator",
+          "limitations",
+          "rights"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": false
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "foundations",
+              "ui",
+              "patterns",
+              "templates",
+              "assets",
+              "governance"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interaction": {
+            "type": "string",
+            "enum": [
+              "none",
+              "action",
+              "input",
+              "selection",
+              "disclosure",
+              "overlay",
+              "data",
+              "flow",
+              "media",
+              "physical"
+            ]
+          },
+          "states": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "behavior": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "accessibility": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "content_data": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "platform_variants": {
+            "type": "object",
+            "properties": {
+              "web": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ios": {
+                "type": "string",
+                "minLength": 1
+              },
+              "android": {
+                "type": "string",
+                "minLength": 1
+              },
+              "print": {
+                "type": "string",
+                "minLength": 1
+              },
+              "display": {
+                "type": "string",
+                "minLength": 1
+              },
+              "touch": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "web",
+              "ios",
+              "android",
+              "print",
+              "display",
+              "touch"
+            ],
+            "additionalProperties": false
+          },
+          "decision_prompts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "name",
+          "purpose",
+          "interaction",
+          "states",
+          "behavior",
+          "accessibility",
+          "content_data",
+          "platform_variants",
+          "decision_prompts"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": false
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "foundations",
+              "ui",
+              "patterns",
+              "templates",
+              "assets",
+              "governance"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "foundation",
+              "token",
+              "primitive",
+              "component",
+              "pattern",
+              "template",
+              "asset",
+              "requirement"
+            ]
+          },
+          "family": {
+            "type": "string",
+            "minLength": 1
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "profiles": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "selection": {
+                  "type": "string",
+                  "enum": [
+                    "required",
+                    "optional",
+                    "not-applicable",
+                    "needs-discovery"
+                  ]
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "selection",
+                "rationale"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "token_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "related": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "evidence_note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "inventory": {
+                "const": "listed"
+              },
+              "specification": {
+                "const": "template-available"
+              },
+              "implementation": {
+                "const": "not-provided"
+              },
+              "testing": {
+                "const": "not-performed"
+              }
+            },
+            "required": [
+              "inventory",
+              "specification",
+              "implementation",
+              "testing"
+            ],
+            "additionalProperties": false
+          },
+          "state_notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "definition",
+          "category",
+          "kind",
+          "family",
+          "variants",
+          "profiles",
+          "token_ids",
+          "depends_on",
+          "related",
+          "source_ids",
+          "evidence_note",
+          "decisions",
+          "status",
+          "state_notes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 6,
+      "uniqueItems": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "Version-Timestamp",
+    "record_id",
+    "scope",
+    "spec_template",
+    "profiles",
+    "categories",
+    "sources",
+    "families",
+    "entries"
+  ],
+  "additionalProperties": false
+}

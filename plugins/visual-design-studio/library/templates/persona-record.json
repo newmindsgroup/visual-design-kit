@@ -1,0 +1,1099 @@
+{
+  "Version-Timestamp": "2026-09-07 09:16:31 AST",
+  "schema_version": "1.0-proposed",
+  "record_id": "REQUIRED",
+  "persona_status": "proto-persona",
+  "owner": "REQUIRED",
+  "scope": "REQUIRED",
+  "fields": {
+    "id": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "name": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "shortName": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "image": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "priority": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.age": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.role": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.company": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.industry": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.experience": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.education": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.techSavviness": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.income": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.location": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.teamSize": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "demographics.reportingTo": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.values[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.personality": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.lifestyle": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.attitudes": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.motivations[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "psychographics.fears[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "jtbd": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "goals[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "frustrations[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "painPoints[].pain": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "painPoints[].urgency": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "painPoints[].impact": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "painPoints[].currentWorkaround": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "painPoints[].desiredSolution": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "behaviors[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "quote": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "scenarios[].name": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "scenarios[].description": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "scenarios[].trigger": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "scenarios[].outcome": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "influences.sources[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "influences.decisionFactors[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "influences.influencers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "influences.peerInfluence": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.awareness.triggers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.awareness.questions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.consideration.evaluationCriteria[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.consideration.objections[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.finalTriggers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.barriers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.formats[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.channels[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.tone": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.topics[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.persuasionStyle": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.proofPoints[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.keyPhrases[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "successMetrics.winDefinition": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "successMetrics.personalSuccess[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "successMetrics.professionalSuccess[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "successMetrics.kpis[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "objections[].objection": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "objections[].response": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "objections[].proofNeeded": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.devices[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.mobileVsDesktop": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.preferredApps[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.digitalBehavior": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "decisionCriteria.mustHaves[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "decisionCriteria.niceToHaves[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "decisionCriteria.dealBreakers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "competitiveContext.currentSolutions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "competitiveContext.switchingBarriers[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "competitiveContext.competitorPerceptions[].competitor": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "competitiveContext.competitorPerceptions[].perception": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.beforeEngagement.mindset": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.beforeEngagement.emotions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.beforeEngagement.needs[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.duringConsideration.mindset": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.duringConsideration.emotions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.duringConsideration.needs[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.atDecision.mindset": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.atDecision.emotions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.atDecision.needs[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.afterPurchase.mindset": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.afterPurchase.emotions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.afterPurchase.needs[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "dayInTheLife.morningRoutine": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "dayInTheLife.workActivities[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "dayInTheLife.challenges[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "dayInTheLife.endOfDay": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "dayInTheLife.interactionPoints[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentMapping.awareness[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentMapping.consideration[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentMapping.decision[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentMapping.retention[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "influences.brands[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.awareness.channels[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.awareness.contentNeeds[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.consideration.criteria[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.consideration.comparisons[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.consideration.contentNeeds[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.factors[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.stakeholders[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.timeline": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "buyingJourney.decision.contentNeeds[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.readingLevel": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.length": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.frequency": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "contentPreferences.avoidTopics[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.languageLevel": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.formality": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "communicationStyle.avoidPhrases[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "objections[].category": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.platforms[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.socialMedia[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "technologyUsage.adoptionStyle": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "decisionCriteria.priorityOrder[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "competitiveContext.alternatives[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.duringConsideration.concerns[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.afterPurchase.desiredEmotions[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    },
+    "emotionalJourney.afterPurchase.successIndicators[]": {
+      "value": null,
+      "status": "unknown",
+      "evidence": [],
+      "confidence": "unknown",
+      "reason": "Research needed; specify decision relevance and next action"
+    }
+  },
+  "ai_extensions": {
+    "role_type": "REQUIRED",
+    "use_scope": "REQUIRED",
+    "language_market": "unknown",
+    "functional_access_needs": "unknown",
+    "constraints": "unknown",
+    "traceability": [],
+    "conflicts": [],
+    "validation_plan": "REQUIRED",
+    "refresh_owner": "REQUIRED",
+    "refresh_trigger": "REQUIRED",
+    "approval": "none",
+    "baseline": "none",
+    "localization": {
+      "source_locale": "REQUIRED",
+      "requested_locales": [],
+      "translation_status": "not requested"
+    },
+    "knowledge_literacy": "unknown",
+    "information_needs": "unknown",
+    "needs_pains_barriers": "unknown",
+    "physical_environment_device": "unknown",
+    "journey_touchpoints": "unknown",
+    "brand_relationship": "unknown",
+    "success_failure_recovery": "unknown",
+    "organization_buying_group": "unknown",
+    "excluded_segments": "none inferred",
+    "contradictions_gaps": "unknown",
+    "revision_history": "initial",
+    "validation_reviewer": "unassigned",
+    "field_evidence_policy": "Every finding retains source/status/confidence; null only with explicit reason"
+  },
+  "components": {
+    "W01": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W01",
+      "presentation": "not rendered; contract only"
+    },
+    "W02": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W02",
+      "presentation": "not rendered; contract only"
+    },
+    "W03": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W03",
+      "presentation": "not rendered; contract only"
+    },
+    "W04": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W04",
+      "presentation": "not rendered; contract only"
+    },
+    "W05": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W05",
+      "presentation": "not rendered; contract only"
+    },
+    "W06": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W06",
+      "presentation": "not rendered; contract only"
+    },
+    "W07": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W07",
+      "presentation": "not rendered; contract only"
+    },
+    "W08": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W08",
+      "presentation": "not rendered; contract only"
+    },
+    "W09": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W09",
+      "presentation": "not rendered; contract only"
+    },
+    "W10": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W10",
+      "presentation": "not rendered; contract only"
+    },
+    "W11": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W11",
+      "presentation": "not rendered; contract only"
+    },
+    "W12": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W12",
+      "presentation": "not rendered; contract only"
+    },
+    "W13": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W13",
+      "presentation": "not rendered; contract only"
+    },
+    "W14": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W14",
+      "presentation": "not rendered; contract only"
+    },
+    "W15": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W15",
+      "presentation": "not rendered; contract only"
+    },
+    "W16": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W16",
+      "presentation": "not rendered; contract only"
+    },
+    "W17": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W17",
+      "presentation": "not rendered; contract only"
+    },
+    "W18": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W18",
+      "presentation": "not rendered; contract only"
+    },
+    "W19": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W19",
+      "presentation": "not rendered; contract only"
+    },
+    "W20": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W20",
+      "presentation": "not rendered; contract only"
+    },
+    "W21": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W21",
+      "presentation": "not rendered; contract only"
+    },
+    "W22": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W22",
+      "presentation": "not rendered; contract only"
+    },
+    "W23": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W23",
+      "presentation": "not rendered; contract only"
+    },
+    "W24": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W24",
+      "presentation": "not rendered; contract only"
+    },
+    "W25": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W25",
+      "presentation": "not rendered; contract only"
+    },
+    "W26": {
+      "status": "represented",
+      "data_reference": "templates/persona-components.json#W26",
+      "presentation": "not rendered; contract only"
+    },
+    "W27": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W27",
+      "presentation": "not rendered; contract only"
+    },
+    "W28": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W28",
+      "presentation": "not rendered; contract only"
+    },
+    "W29": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W29",
+      "presentation": "not rendered; contract only"
+    },
+    "W30": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W30",
+      "presentation": "not rendered; contract only"
+    },
+    "W31": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W31",
+      "presentation": "not rendered; contract only"
+    },
+    "W32": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W32",
+      "presentation": "not rendered; contract only"
+    },
+    "W33": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W33",
+      "presentation": "not rendered; contract only"
+    },
+    "W34": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W34",
+      "presentation": "not rendered; contract only"
+    },
+    "W35": {
+      "status": "unknown",
+      "data_reference": "templates/persona-components.json#W35",
+      "presentation": "not rendered; contract only"
+    }
+  },
+  "collection_context": {
+    "status": "unknown",
+    "reason": "Complete applicable project-level view or explain not applicable",
+    "comparison": {
+      "selected_persona_ids": [],
+      "minimum": 2,
+      "maximum": 3,
+      "insufficient_selection_state": "show explicit instruction; no stale comparison",
+      "export_status": "not run"
+    },
+    "targeting": {
+      "pages": [],
+      "page_item_contract": {
+        "page_id": "required",
+        "label": "required",
+        "path": "required",
+        "primary_ids": [],
+        "secondary_ids": [],
+        "tertiary_ids": [],
+        "weights_by_persona": {},
+        "buying_stage": "unknown",
+        "rationale": "required",
+        "owner": "required"
+      },
+      "sections": [],
+      "section_item_contract": {
+        "section_type": "required",
+        "strategy": "unknown",
+        "persona_usage": [],
+        "guidance": "unknown"
+      },
+      "summary": {
+        "mapped_pages": null,
+        "active_personas": null,
+        "counts_by_priority": {},
+        "coverage_by_persona": {},
+        "counts_by_journey_stage": {},
+        "status": "not computed"
+      },
+      "legend": {
+        "ranges_by_priority": {},
+        "status": "project-defined, no universal thresholds"
+      },
+      "bar_contract": "positive weight / displayed positive sum; raw labels and persona/weight title; disclose normalization"
+    },
+    "navigation": {
+      "detail": "required project route",
+      "comparison": "required or not applicable",
+      "mapping": "required or not applicable",
+      "other_personas": "derive excluding active ID",
+      "quick_navigation": "shared project control; not persona fact"
+    },
+    "presentation_status": "not rendered"
+  }
+}

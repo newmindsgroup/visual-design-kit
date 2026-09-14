@@ -1,0 +1,156 @@
+{
+  "Version-Timestamp": "2026-09-11T21:30:44-04:00",
+  "mode": "instruction-stage-selections-not-execution",
+  "scenarios": {
+    "still": [
+      {
+        "stage": "prepare",
+        "select": [
+          "media-route-selection",
+          "screen-attention"
+        ]
+      },
+      {
+        "stage": "generate-candidate",
+        "select": [
+          "chatgpt-images"
+        ]
+      },
+      {
+        "stage": "review-source",
+        "select": [
+          "media-quality-evaluation"
+        ]
+      },
+      {
+        "stage": "compose",
+        "select": [
+          "screen-compositing",
+          "screen-formats",
+          "screen-templates"
+        ]
+      },
+      {
+        "stage": "finish-and-fallback",
+        "select": [
+          "screen-finishing",
+          "display-production"
+        ]
+      },
+      {
+        "stage": "review-campaign",
+        "select": [
+          "media-quality-evaluation",
+          "display-evaluation"
+        ]
+      }
+    ],
+    "motion": [
+      {
+        "stage": "prepare",
+        "select": [
+          "media-route-selection",
+          "screen-attention"
+        ]
+      },
+      {
+        "stage": "generate-candidate",
+        "select": [
+          "chatgpt-images"
+        ]
+      },
+      {
+        "stage": "review-source",
+        "select": [
+          "media-quality-evaluation"
+        ]
+      },
+      {
+        "stage": "compose",
+        "select": [
+          "screen-compositing",
+          "screen-formats",
+          "screen-templates"
+        ]
+      },
+      {
+        "stage": "animate",
+        "select": [
+          "screen-animation",
+          "screen-loops"
+        ]
+      },
+      {
+        "stage": "finish-and-fallback",
+        "select": [
+          "screen-finishing",
+          "display-production"
+        ]
+      },
+      {
+        "stage": "review-campaign",
+        "select": [
+          "media-quality-evaluation",
+          "display-evaluation"
+        ]
+      }
+    ],
+    "touch": [
+      {
+        "stage": "prepare",
+        "select": [
+          "media-route-selection",
+          "screen-attention"
+        ]
+      },
+      {
+        "stage": "generate-candidate",
+        "select": [
+          "chatgpt-images"
+        ]
+      },
+      {
+        "stage": "review-source",
+        "select": [
+          "media-quality-evaluation"
+        ]
+      },
+      {
+        "stage": "compose",
+        "select": [
+          "screen-compositing",
+          "screen-formats",
+          "screen-templates"
+        ]
+      },
+      {
+        "stage": "interaction",
+        "select": [
+          "touch-information-architecture",
+          "touch-media",
+          "touch-states-copy"
+        ]
+      },
+      {
+        "stage": "finish-and-fallback",
+        "select": [
+          "screen-finishing",
+          "display-production"
+        ]
+      },
+      {
+        "stage": "review-campaign",
+        "select": [
+          "media-quality-evaluation",
+          "display-evaluation"
+        ]
+      },
+      {
+        "stage": "device",
+        "select": [
+          "touch-device-validation"
+        ]
+      }
+    ]
+  }
+}

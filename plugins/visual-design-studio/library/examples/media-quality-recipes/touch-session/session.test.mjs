@@ -1,0 +1,10 @@
+// Version-Timestamp: 2026-09-11T23:42:59-04:00
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initial,transition} from './session.mjs';
+test('first tap dismisses only and rapid second tap cannot reenter',()=>{const s=transition(initial(),{type:'enter'});assert.equal(s.phase,'active');assert.deepEqual(s.choices,[]);assert.deepEqual(transition(s,{type:'enter'}),s)});
+test('old session media cannot replace fresh shopper content',()=>{let s=transition(initial(),{type:'enter'});const old=s.session;s=transition(s,{type:'select',value:'chair'});s=transition(s,{type:'reset'});s=transition(s,{type:'enter'});assert.deepEqual(transition(s,{type:'media-ready',session:old}),s);assert.deepEqual(s.choices,[])});
+test('warning extension preserves choices and rejects stale timeout',()=>{let s=transition(initial(),{type:'enter'});s=transition(s,{type:'select',value:'chair'});s=transition(s,{type:'warn',session:s.session,epoch:s.epoch});const timeout={type:'expire',session:s.session,epoch:s.epoch};s=transition(s,{type:'extend'});assert.equal(s.phase,'active');assert.deepEqual(s.choices,['chair']);assert.deepEqual(transition(s,timeout),s)});
+test('media failure exposes fallback without exiting task',()=>{let s=transition(initial(),{type:'enter'});s=transition(s,{type:'media-failed',session:s.session});assert.equal(s.phase,'active');assert.equal(s.media,'fallback');s=transition(s,{type:'select',value:'table'});assert.deepEqual(s.choices,['table'])});
+test('valid expiry clears selections and returns attract',()=>{let s=transition(initial(),{type:'enter'});s=transition(s,{type:'select',value:'chair'});s=transition(s,{type:'warn',session:s.session,epoch:s.epoch});s=transition(s,{type:'expire',session:s.session,epoch:s.epoch});assert.equal(s.phase,'attract');assert.deepEqual(s.choices,[]);assert.equal(s.media,'idle')});
+test('inactive and unknown events cannot mutate choices',()=>{const s=initial();assert.deepEqual(transition(s,{type:'select',value:'chair'}),s);assert.deepEqual(transition(s,{type:'nonsense'}),s)});

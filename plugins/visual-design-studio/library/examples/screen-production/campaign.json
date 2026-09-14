@@ -1,0 +1,18 @@
+{
+  "Version-Timestamp": "2026-09-11T20:20:00-04:00",
+  "id": "rill-v1",
+  "brand": "RILL",
+  "headline": [
+    "A little",
+    "refreshment."
+  ],
+  "subtitle": "STILL WATER / FICTIONAL STUDY",
+  "background": "#102D32",
+  "foreground": "#F5F1E7",
+  "accent": "#D3EA85",
+  "variants": [
+    "wide",
+    "portrait",
+    "strip"
+  ]
+}
