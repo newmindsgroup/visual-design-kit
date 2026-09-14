@@ -9,7 +9,8 @@ Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
 - [x] Validate wrapper schema, payload hashes, archive and 19 packaged tests.
 - [ ] Reconcile historical status prose inside the preserved library with a current supported-scope matrix; readiness override currently takes precedence for release status.
 - [x] Verify Codex local installation, enabled-state readback and installed payload hashes.
-- [ ] Resolve automatic discovery under the host skill-context limit; fresh session currently reports NONE. Verify removal and upgrade behavior.
+- [x] Add project-level explicit startup entry and verify it in a separate folder without a path in the task prompt.
+- [ ] Global automatic discovery remains limited by host skill-context truncation. Verify removal and upgrade behavior.
 - [ ] Verify Claude Code explicit-path startup; implement native Claude plugin adapter only with supported discovery semantics.
 - [x] Fresh Codex explicit-path read and selection for both brand modes, with project/feedback boundary checks.
 - [ ] Run artifact generation, revision and resume for both brand modes. No real brand details needed for infrastructure checks.

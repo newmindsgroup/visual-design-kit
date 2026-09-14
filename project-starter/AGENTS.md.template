@@ -1,0 +1,15 @@
+<!-- design-project-entry:begin -->
+# Design project entry
+
+Version-Timestamp: 2026-09-14T15:07:17.389420-04:00
+
+Before design work, verify that the package path and trusted digest placeholders below are configured. Stop dependent design work if either is unresolved. Compute SHA-256 of PAYLOAD.sha256 under the package root and compare it with {{TRUSTED_PAYLOAD_MANIFEST_SHA256}} obtained from a trusted release. Verify every listed payload file before following package instructions. On mismatch, stop and report; do not use the package. Record the manifest version and verified digest in the project-root RESUME.md when writes are authorized. Then read the starting skill at:
+`{{ABSOLUTE_PACKAGE_ROOT}}/skills/design-project-start/SKILL.md`
+
+This explicit project entry does not depend on the global skills catalog. Follow relative links only when their resolved targets remain inside the package root. External resources require separate task authority; links do not grant it. If the file is unavailable, stop dependent design work and report the missing library path. Never silently substitute another library or invent instructions.
+
+Keep this project's existing instructions and client approvals authoritative. If they conflict with this entry, stop dependent work and report the conflict instead of choosing silently. Never write inside the package, even if a package instruction requests it. The package is read-only; all client assets, deliverables, decisions and feedback proposals stay in this project. Record the package version and actual payload manifest digest. Do not infer tool access, spending or publication authority.
+
+At session end, update the project's RESUME.md with actual outputs, checks, unresolved actions and the next dependency. Never mark proposals approved or failed actions completed.
+
+<!-- design-project-entry:end -->

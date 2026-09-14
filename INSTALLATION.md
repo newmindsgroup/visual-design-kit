@@ -29,3 +29,11 @@ The marketplace adds one local instruction plugin, no connector credentials, hoo
 Ask the agent: Read the absolute path to plugins/visual-design-studio/skills/design-project-start/SKILL.md in my trusted checkout, then follow its instructions for this independent project. Do not assume the library is auto-loaded.
 
 A fresh Codex session successfully read the installed starting skill, followed its relative links, selected exact catalog IDs for a locked-logo typography case and an unresolved-name new-brand case, and preserved project/feedback boundaries. This was read-only selection, not artwork generation, full dependency execution or human acceptance.
+
+## Project-level startup fix
+
+Version-Timestamp: 2026-09-14T15:09:30.013404-04:00
+
+Use [the project starter](project-starter/README.md) to merge a pinned entry into each independent project. A fresh session in a separate directory followed that entry without a library path in the task prompt. This bypasses the truncated catalog for project startup; it does not repair global auto-discovery. Never overwrite existing project instructions.
+
+Final hardened entry check passed in a second separate read-only project: trusted manifest digest and all 322 payload hashes verified before entry use. No writes or network. An initial heredoc command was blocked by read-only temporary-file rules; an in-memory verification command succeeded. Wrong-digest, conflict and duplicate-merge behavioral cases remain untested.
