@@ -43,3 +43,11 @@ The read-only verification and citation-search utility is implemented with six p
 No extra plugin or dependency is required. Installer integration, source recovery, full synthesis, visual review, actual recipient download, and IDE acceptance remain pending. Independent review has not been completed, so this is not a final release.
 
 Recovery follow-up: all 11 outstanding originals exceeded a four-second read probe. This means availability is unverified, not that the files are corrupt. Probe results are retained privately. No repeated blocking reads were launched. The independent CLI review also failed with exit 2; no retry or model substitution was used. Local implementation is retained for review, not declared a reviewed release.
+
+## Source-guide milestone
+
+Created 269 linked source notes in the Drive bundle. These include 212 existing sampled local-model reviews and 57 records without established sampled review. All 212 reviewed source hashes match their portable originals. Evidence revalidation found 324 entries matching their cited extracted text and 15 requiring locator or text review. No full-book reading is claimed.
+
+A candidate map connects recorded subject labels to 15 existing capability IDs. This is a retrieval aid, not approval to promote every interpretation into skill rules. Source notes, the library home and capability map have no broken local links. All 718 manifest entries verified after adding the guides.
+
+Added a platform-neutral reference workflow and linked it from project startup and local setup. These instructions remain pending independent review and actual IDE acceptance. Cloud download verification, the 11 unreadable originals, native document exports, full synthesis, visual review and deeper capability mapping remain unfinished.

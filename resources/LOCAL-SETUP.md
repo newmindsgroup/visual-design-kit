@@ -18,3 +18,5 @@ Give Codex, Claude Code or Cursor the absolute library path in the project task.
 A .pointer.json source preserves Google document link metadata only. It is not the document body. Missing extraction, OCR and visual-review flags remain meaningful. A matching checksum establishes file integrity, not book quality, permission for other redistribution, full synthesis or completed cloud synchronization.
 
 [Implementation status](LIBRARY-IMPLEMENTATION.md) | [Reference library overview](README.md)
+
+For the ordered AI retrieval process, follow [Reference workflow](REFERENCE-WORKFLOW.md). The downloaded library now includes LIBRARY.md, individual notes and CAPABILITY-SOURCES.md.

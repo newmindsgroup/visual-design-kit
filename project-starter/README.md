@@ -11,3 +11,7 @@ Use a pinned package checkout or release directory rather than a mutable install
 This avoids relying on an oversized global skill catalog. It does not reduce that catalog or establish automatic skill discovery. The first independent project still supplies its brand brief and deliverable.
 
 Replace the trusted-digest placeholder with the independently trusted SHA-256 of PAYLOAD.sha256. Use exactly one marked entry block. On updates, replace only that block after reviewing the new pin; never append duplicate blocks or change unrelated project instructions. Check unresolved placeholders before starting.
+
+## Optional downloaded book library
+
+Use [local reference setup](../resources/LOCAL-SETUP.md) and [the reference workflow](../resources/REFERENCE-WORKFLOW.md) from this trusted kit checkout. The book folder is separate from the pinned plugin payload and each client project. Supply its local path when starting the project. This optional workflow does not change the pinned package or install book content into the plugin.
