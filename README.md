@@ -248,3 +248,7 @@ node --test examples/screen-production/player.test.mjs examples/media-quality-re
 ```
 
 Expected: 8 Python tests and 11 JavaScript tests. Check `git status --short` in the library checkout after project work to detect unexpected changes; the read-only instruction is an agent-followed rule, not filesystem enforcement. Only authorized team members may access this private repo. Do not copy the kit into client repositories or redistribute it without permission.
+
+## Optional books and additional IDEs
+
+See [portable reference-library requirements](resources/README.md) and [Codex, Cursor and Claude Code setup](docs/IDE-COMPATIBILITY.md). Full source books are not bundled. Transfer preparation and runtime acceptance remain explicit tasks; sharing a Drive folder does not establish source permissions or completeness.

@@ -46,3 +46,13 @@ Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
 - [ ] PowerPoint: explicitly deferred.
 
 Do not add arbitrary skills or repeat successful tests merely to extend this list. Prioritize observed failures and usable project outcomes. Authentication, generation, technical validation, visual approval, installation and release are separate states.
+
+## Reference portability and IDE follow-up
+
+- [ ] Owner supplies exact Drive destination and eligible sharing rights.
+- [ ] Build portable relative-path catalog and rights-reviewed transfer allowlist.
+- [ ] Resolve uncopied/restricted/unsupported references and inspect outstanding OCR/visual gaps where useful.
+- [ ] Verify transfer hashes and source/page retrieval on a receiving machine.
+- [ ] Execute Cursor startup, artifact/revision and recovery acceptance.
+- [ ] Execute Claude Code wrapper startup, artifact/revision and recovery acceptance.
+- [ ] Keep optional reference access separate from kit installation; no blanket 100-percent knowledge claim.
