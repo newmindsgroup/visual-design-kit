@@ -8,9 +8,11 @@ Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
 - [x] Add independent existing-brand/new-brand launch and sanitized feedback instructions.
 - [x] Validate wrapper schema, payload hashes, archive and 19 packaged tests.
 - [ ] Reconcile historical status prose inside the preserved library with a current supported-scope matrix; readiness override currently takes precedence for release status.
-- [ ] Verify Codex installation, exactly one registered entry skill, removal and upgrade behavior.
+- [x] Verify Codex local installation, enabled-state readback and installed payload hashes.
+- [ ] Resolve automatic discovery under the host skill-context limit; fresh session currently reports NONE. Verify removal and upgrade behavior.
 - [ ] Verify Claude Code explicit-path startup; implement native Claude plugin adapter only with supported discovery semantics.
-- [ ] Run clean independent-project startup, artifact generation, revision and resume for both brand modes. No real brand details needed for infrastructure checks.
+- [x] Fresh Codex explicit-path read and selection for both brand modes, with project/feedback boundary checks.
+- [ ] Run artifact generation, revision and resume for both brand modes. No real brand details needed for infrastructure checks.
 - [ ] Resolve known local-model revision-fidelity and touchscreen-recovery failures using a qualified execution route. Do not route these autonomously to the failed local model.
 - [ ] Validate dependency selection and exclusions during actual production, beyond planning fixtures.
 - [ ] Finish independent release review and resolve findings on the final bytes.

@@ -11,3 +11,9 @@ This is a curated first GitHub snapshot, not the full local research workspace o
 The library lives inside plugins/visual-design-studio/library. Preserve paths when editing. PAYLOAD.sha256 covers raw payload bytes, excluding itself; update it deliberately after approved changes. Keep release versions immutable and pin a reviewed version in each adopting project. Improvements enter through reviewed, sanitized proposals rather than client-data synchronization.
 
 Checks: plugin and skill schema validation, 322 payload hashes and ZIP byte roundtrip passed locally. Eight packaged Python tests and eleven JavaScript tests passed. These are bounded structural/behavior checks, not all-skill or creative acceptance.
+
+## Installation checkpoint
+
+Version-Timestamp: 2026-09-14T15:03:31.772234-04:00
+
+Codex local installation and enabled-state readback now pass for 0.1.0; all installed payload hashes match. See [installation instructions](INSTALLATION.md). Automatic discovery failed under the host skill-context budget; explicit-path reading and bounded selection passed. Full project execution remains pending. Earlier uninstalled wording describes the initial snapshot.
