@@ -49,10 +49,11 @@ Do not add arbitrary skills or repeat successful tests merely to extend this lis
 
 ## Reference portability and IDE follow-up
 
-- [ ] Owner supplies exact Drive destination and eligible sharing rights.
-- [ ] Build portable relative-path catalog and rights-reviewed transfer allowlist.
+- [x] Owner confirmed Google Drive distribution and recipient local use; bundle staged in a dedicated Drive sync folder. Cloud sharing and download still need verification.
+- [x] Built relative-path catalog, permission records and checksum manifest for the selected sources.
 - [ ] Resolve uncopied/restricted/unsupported references and inspect outstanding OCR/visual gaps where useful.
-- [ ] Verify transfer hashes and source/page retrieval on a receiving machine.
+- [x] Verified staged bundle hashes and source/page retrieval from a separate local project folder.
+- [ ] Verify cloud synchronization and a download on an independent receiving machine.
 - [ ] Execute Cursor startup, artifact/revision and recovery acceptance.
 - [ ] Execute Claude Code wrapper startup, artifact/revision and recovery acceptance.
 - [ ] Keep optional reference access separate from kit installation; no blanket 100-percent knowledge claim.

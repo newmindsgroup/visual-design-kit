@@ -51,3 +51,17 @@ Created 269 linked source notes in the Drive bundle. These include 212 existing 
 A candidate map connects recorded subject labels to 15 existing capability IDs. This is a retrieval aid, not approval to promote every interpretation into skill rules. Source notes, the library home and capability map have no broken local links. All 718 manifest entries verified after adding the guides.
 
 Added a platform-neutral reference workflow and linked it from project startup and local setup. These instructions remain pending independent review and actual IDE acceptance. Cloud download verification, the 11 unreadable originals, native document exports, full synthesis, visual review and deeper capability mapping remain unfinished.
+
+## Citation reconciliation and separate-folder check
+
+Version-Timestamp: 2026-09-14T22:05:44.099560-04:00
+
+All 15 previously flagged citations were outline references. Thirteen match unique catalog outline headings and now carry navigation pages with an explicit discovery-only status. Two truncated fragments remain excluded from design evidence. The 324 existing body-text matches remain separate from these outline references.
+
+A fictional touchscreen reference decision was created outside the kit checkout using body text from four PDF pages. It separates the source principle, proposed application and future user-testing criteria. The external-folder verifier checks the same downloaded bundle. This is local file-level integration, not an independent IDE session or design acceptance. Independent review and the previously recorded source recovery limits remain pending.
+
+## Original-page check
+
+Version-Timestamp: 2026-09-14T22:13:40.927785-04:00
+
+Visually inspected two original pages for the fictional touchscreen decision and recorded their limits in the private source guide. The evidence supports the existing touchscreen capability's visible-controls rule. No additional skill was created, and the pinned payload was not altered. Whole-book visual review, contemporary accessibility verification and actual user testing remain separate.
