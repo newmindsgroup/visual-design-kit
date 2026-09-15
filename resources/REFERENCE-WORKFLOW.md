@@ -41,3 +41,5 @@ Assumption: the project already selected its design capability and has a trusted
 Version-Timestamp: 2026-09-14T22:46:50.220319-04:00
 
 When a retrieved unit is marked OCR, use it to locate relevant pages. Check exact numbers, chart labels, formulas, quotations and multi-column reading order against the original before relying on them. Keep PDF page position distinct from the printed page number. OCR completion does not constitute content review. An empty storyboard worksheet can be a valid visual resource without searchable prose.
+
+For the existing infographic capability, see [small-multiple comparison guidance](INFOGRAPHIC-COMPARISON.md).

@@ -93,3 +93,9 @@ Recovered 36 UI roadmap pages with local Apple Vision OCR, producing 29,240 char
 Version-Timestamp: 2026-09-14T22:49:49.134003-04:00
 
 Completed local Apple Vision OCR for all 197 pages of one unique infographic reference, yielding 253,304 characters. Two duplicate catalog records reuse the extraction. Original and prior empty extraction preserved. Compared PDF page 15 with OCR; footnotes and multi-column order remain unreliable without original review. Added OCR evidence requirements to the shared workflow. This is searchable recovery, not full synthesis or chart-data validation. Independent review remains pending.
+
+## Infographic technique connection
+
+Version-Timestamp: 2026-09-15T06:49:26.770300-04:00
+
+Read and visually inspected the small-multiples example on PDF page 166, printed page 170. Added source-linked supplemental comparison guidance to resources and linked both duplicate source guides to infographics. The existing layout repertoire already covers small multiples; no duplicate skill or pinned-payload change was made. Rendered application testing and independent review remain pending.
