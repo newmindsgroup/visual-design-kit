@@ -43,3 +43,5 @@ A separate local library already contains original copies, catalog/relevance rec
 The owner has now confirmed Google Drive distribution permission. See [the implementation plan](LIBRARY-IMPLEMENTATION.md) for the staged package, verified checks and remaining work. Earlier audit statements above describe the pre-authorization snapshot.
 
 [Connect your downloaded library](LOCAL-SETUP.md).
+
+[Current team-readiness checklist](TEAM-READINESS.md) supersedes historical snapshot counts above.

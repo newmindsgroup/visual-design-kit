@@ -99,3 +99,9 @@ Completed local Apple Vision OCR for all 197 pages of one unique infographic ref
 Version-Timestamp: 2026-09-15T06:49:26.770300-04:00
 
 Read and visually inspected the small-multiples example on PDF page 166, printed page 170. Added source-linked supplemental comparison guidance to resources and linked both duplicate source guides to infographics. The existing layout repertoire already covers small multiples; no duplicate skill or pinned-payload change was made. Rendered application testing and independent review remain pending.
+
+## Team-readiness reconciliation
+
+Version-Timestamp: 2026-09-15T08:49:02.899446-04:00
+
+Added TEAM-READINESS.md with current counts, sequence and scope. Current collection: 216 substantial-text records, 10 insufficient-text records, 43 without extraction. Six utility tests passed again. Fresh Claude auth and preflight reported ready; the second same-ID milestone review nevertheless failed with exit 2. Both milestone attempts are consumed. No model substitution or public release was performed.
