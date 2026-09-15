@@ -65,3 +65,31 @@ A fictional touchscreen reference decision was created outside the kit checkout 
 Version-Timestamp: 2026-09-14T22:13:40.927785-04:00
 
 Visually inspected two original pages for the fictional touchscreen decision and recorded their limits in the private source guide. The evidence supports the existing touchscreen capability's visible-controls rule. No additional skill was created, and the pinned payload was not altered. Whole-book visual review, contemporary accessibility verification and actual user testing remain separate.
+
+## Recovered extraction and ordered queue
+
+Version-Timestamp: 2026-09-14T22:16:24.450293-04:00
+
+Extracted the recovered original into 357 page-addressed text units (650,090 characters). Seventeen pages have fewer than 80 extracted characters and require context/visual checks; this is not proof of OCR failure. Content relevance remains unreviewed.
+
+The portable review queue assigns all 269 records one next-action bucket: 32 core depth reviews, 77 supporting depth reviews, 14 available texts awaiting relevance review, 11 source recoveries, 16 extraction/format reviews, 16 native-document exports and 103 lower-priority references. These are records, not unique books, and the prior relevance classifications remain provisional. The queue is linked from the library home.
+
+## Text-readiness correction
+
+Version-Timestamp: 2026-09-14T22:18:26.751941-04:00
+
+A full record-level character audit found 213 records with substantial text, 13 with insufficient text and 43 without extraction. The previous 14-item available-text queue was based on path presence and was incorrect: only one has substantial text. The portable queue now carries this correction and links to TEXT-READINESS.md.
+
+Completed a bounded first text assessment of the recovered brand-identity source, covering front matter and selected process/identity/color spreads. It is provisionally core and supports existing workflows. Full reading, figure review and specialized typography guidance remain pending. No local-model review was fabricated or claimed for this new Codex assessment.
+
+## Local OCR milestone
+
+Version-Timestamp: 2026-09-14T22:24:30.341151-04:00
+
+Recovered 36 UI roadmap pages with local Apple Vision OCR, producing 29,240 characters. Preserved the original and prior extraction. Page 5 sample inspection caught UI/Ul confusion; OCR remains provisional. Visually inspected the complete one-page storyboard and classified it as a blank six-frame worksheet, not failed text extraction. Current record totals: 214 substantial text, 12 insufficient and 43 absent. One insufficient record intentionally contains no text. Independent review and broader content/visual assessment remain pending.
+
+## Infographic OCR milestone
+
+Version-Timestamp: 2026-09-14T22:49:49.134003-04:00
+
+Completed local Apple Vision OCR for all 197 pages of one unique infographic reference, yielding 253,304 characters. Two duplicate catalog records reuse the extraction. Original and prior empty extraction preserved. Compared PDF page 15 with OCR; footnotes and multi-column order remain unreliable without original review. Added OCR evidence requirements to the shared workflow. This is searchable recovery, not full synthesis or chart-data validation. Independent review remains pending.

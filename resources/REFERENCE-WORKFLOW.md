@@ -35,3 +35,9 @@ From an existing project, ask the AI to follow this file from the trusted kit ch
 Assumption: the project already selected its design capability and has a trusted kit checkout. The reference library is a separate local download. No model switch or external data permission is implied.
 
 [Local setup](LOCAL-SETUP.md) | [Implementation status](LIBRARY-IMPLEMENTATION.md)
+
+## OCR evidence gate
+
+Version-Timestamp: 2026-09-14T22:46:50.220319-04:00
+
+When a retrieved unit is marked OCR, use it to locate relevant pages. Check exact numbers, chart labels, formulas, quotations and multi-column reading order against the original before relying on them. Keep PDF page position distinct from the printed page number. OCR completion does not constitute content review. An empty storyboard worksheet can be a valid visual resource without searchable prose.
