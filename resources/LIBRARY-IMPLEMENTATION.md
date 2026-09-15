@@ -105,3 +105,9 @@ Read and visually inspected the small-multiples example on PDF page 166, printed
 Version-Timestamp: 2026-09-15T08:49:02.899446-04:00
 
 Added TEAM-READINESS.md with current counts, sequence and scope. Current collection: 216 substantial-text records, 10 insufficient-text records, 43 without extraction. Six utility tests passed again. Fresh Claude auth and preflight reported ready; the second same-ID milestone review nevertheless failed with exit 2. Both milestone attempts are consumed. No model substitution or public release was performed.
+
+## Larger readiness batch
+
+Version-Timestamp: 2026-09-15T10:16:40.586832-04:00
+
+Published the six pending commits to a review branch and opened draft PR #1. Reconfirmed six tests. Verified Drive anyone-reader metadata and byte-identical cloud/local manifest. Diagnosed a review evidence-argument issue and prepared a single combined packet; actual reviewer failure cause remains unavailable because the helper suppresses child output. No review retry, billing change, merge or release was performed.

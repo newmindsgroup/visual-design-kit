@@ -31,3 +31,11 @@ A receiving computer or teammate is needed for independent download acceptance. 
 This does not establish complete design knowledge, every skill's production quality, provider entitlement, hardware playback, accessibility conformance, full-book review or a tested plugin upgrade. Those remain distinct acceptance gates in the main backlog.
 
 [Local setup](LOCAL-SETUP.md) | [Reference workflow](REFERENCE-WORKFLOW.md) | [Detailed implementation record](LIBRARY-IMPLEMENTATION.md) | [Main backlog](../BACKLOG.md)
+
+## Verified cloud and GitHub status
+
+Version-Timestamp: 2026-09-15T10:16:40.586832-04:00
+
+The saved reference work is published in draft PR #1 on review/reference-library-readiness. Main is unchanged. Drive folder metadata confirms an anyone-reader permission. A raw download of the cloud manifest matched the local 132,227-byte manifest exactly. Direct folder listing was required because search omitted the JSON file. This establishes cloud manifest synchronization, not complete recipient-download integrity.
+
+The review helper accepts one evidence-file argument; repeated arguments replace the earlier value. A combined evidence packet is prepared locally for an authorized review recovery. Failed review output was discarded by the helper, so the underlying execution cause cannot be established from retained logs. Do not reset the review ledger or bypass the exhausted milestone budget.
