@@ -4,6 +4,8 @@ Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
 
 ## First usable release
 
+The [design quality audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) adds an ordered pre-use improvement plan, including a reproduced handoff-check conflict, selection validation, continuity/link fixes and executed craft benchmarks. Its findings are recommendations, not completed implementations. Version-Timestamp: 2026-09-16 17:22:38 AST.
+
 - [x] Assemble 130-capability library and single-entry Codex plugin candidate.
 - [x] Add independent existing-brand/new-brand launch and sanitized feedback instructions.
 - [x] Validate wrapper schema, payload hashes, archive and 19 packaged tests.

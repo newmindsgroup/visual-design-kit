@@ -234,6 +234,8 @@ This GitHub repository is the curated reusable snapshot. The original local rese
 
 ## What comes next
 
+The [September 16 quality audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) identifies concrete reliability fixes and the next creative-quality work batches. It distinguishes existing methods from missing execution evidence. The pinned plugin has not been changed by the audit. Version-Timestamp: 2026-09-16 17:22:38 AST.
+
 Finish artifact creation, revision, and resume tests in independent projects; verify Claude startup; test upgrades/removal and negative startup cases; reconcile preserved status text; complete release review and publish a versioned release. Then use the two actual brand projects with human review and return the useful lessons.
 
 You can begin a **supervised project now through the pinned project starter**, starting with the brief and selected work. Do not interpret that as an assurance that every deliverable, provider, or device is already qualified. The [full backlog](BACKLOG.md) remains the completion checklist.
