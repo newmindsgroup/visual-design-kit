@@ -1,8 +1,18 @@
-# JSON handoff subjects and migration
+# JSON handoff subjects, current results and migration
 
-Version-Timestamp: 2026-09-10 19:59:06 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
-The handoff format remains `schema_version: "1.0-proposed"`. An additive reserved `subject_type` discriminator selects `persona` or `bounded_actor`. Explicit null, nontext values and any other strings are invalid; only omission chooses the default. Omission preserves the existing persona route. Other validation kinds and supported versions are unchanged. The new capability requires the updated validator even though the format remains 1.0-proposed; older validators reject the bounded-actor route. Pin the package edition and validator source hash or commit in the work record before preparing handoffs. Run both persona and bounded-actor regression cases with that validator. An older validator may reject the actor route; do not remove actor metadata or weaken the contract to obtain a pass. Previously ignored mixed actor metadata is now intentionally rejected, so compatibility means preserving valid persona records, not every formerly tolerated malformed shape.
+New handoffs use `schema_version: "2.0"`. This format records the exact candidate artifact paths and lowercase SHA-256 hashes, then binds every current criterion result to that full candidate set. The validator recomputes every declared hash from exact file bytes. A missing file, stale hash, unsafe path, or incomplete candidate binding fails validation. Pin the package edition and validator source hash or commit in the work record before preparing handoffs. Run both persona and bounded-actor regression cases with that validator. A structural pass does not create factual, creative, legal, user, device, or approval evidence.
+
+`subject_type` selects `persona` or `bounded_actor`. Explicit null, nontext values and any other strings are invalid; only omission chooses the persona default. Other validation kinds retain their existing versions.
+
+## Candidate-bound current results
+
+`candidate.artifacts` is a nonempty list of local `{ "path", "sha256" }` records. Paths must stay inside the declared workspace and hashes must be lowercase SHA-256 over exact bytes. Every `current_checks` row has one registered `criterion`, a `status`, and a `candidate_artifacts` list that exactly matches the declared candidate set, including both paths and hashes.
+
+There is exactly one current result for every registered criterion. `current_checks` is the only collection used to evaluate a current completion or readiness claim. For `completion: "complete"` or `readiness: "ready"`, every current result must be `passed` and include a locally hash-bound `evidence` record. A failed, pending, not-applicable, missing, or duplicate current result keeps the claim invalid. Complete handoffs also require actual output files.
+
+`historical_checks` is an explicit separate list. It preserves prior passed, failed, pending, or not-applicable results and can include a nonempty `superseded_by` reference. Historical checks are structurally validated but never satisfy, invalidate, replace, or add to current criterion coverage. Record a repair as a historical failure plus the single repaired current result. Do not relabel old evidence as current for a new candidate.
 
 ## Persona route
 
@@ -30,10 +40,12 @@ Each trace row uses `actor`, `use_case`, `requirement`, `decision` and `criterio
 
 Validation can stop after an invalid subject mode or malformed registry rather than accumulating every later error. This is a fail-closed structural check, not a promise to enumerate all faults. IDs are matched exactly; authors must preserve their spelling and whitespace rather than relying on normalization.
 
-Keep the existing `inputs`, `outputs`, file hashes, scope, readiness, baseline approval, completion and check rules. A complete handoff still needs actual outputs and passed evidence for every registered criterion. A partial specification handoff can honestly use `completion: "partial"` and checks with `status: "pending"`. Readable “not run” maps to JSON `pending`; “not applicable” maps to `not_applicable`. Readiness and approval remain separate.
+Keep the existing `inputs`, `outputs`, file hashes, scope, readiness and baseline approval rules. A partial specification handoff can honestly use `completion: "partial"`, `readiness: "provisional"`, and current checks with `status: "pending"`. Readable “not run” maps to JSON `pending`; “not applicable” maps to `not_applicable`. Readiness and approval remain separate.
 
 ## Migration and evidence preservation
 
-Existing valid persona records need no edits. To author a new bounded-actor record, add the explicit mode, replace the persona registry with actual actor definitions, and change trace subject fields to `actor`. Do not merely rename a full persona or remove required audience evidence. Mixed actor/persona handoffs are outside this minimal contract; split the selected scope into explicit records when needed.
+Schema `1.0-proposed` records remain readable only when they are partial and draft, provisional, or blocked. The validator returns a `handoff_schema_migration` warning for these legacy records. A legacy record cannot claim `completion: "complete"` or `readiness: "ready"`; it must migrate explicitly to schema 2.0. No implicit conversion can invent candidate bindings.
 
-Preserve earlier input records and their checks when migrating. Current hashes belong to the new packet; old results must not be relabeled as current. The package test manifest must verify both persona and bounded-actor routes before claiming compatibility. No renderer, user study, production permission or downstream execution follows from a structural pass.
+To migrate, preserve prior `checks` as `historical_checks`, declare the current candidate artifacts and their exact hashes, then author one new `current_checks` row for every criterion. To author a bounded-actor record, also add the explicit mode, replace the persona registry with actual actor definitions, and change trace subject fields to `actor`. Do not merely rename a full persona or remove required audience evidence. Mixed actor/persona handoffs are outside this minimal contract; split the selected scope into explicit records when needed.
+
+The package test manifest must verify both persona and bounded-actor routes before claiming compatibility. No renderer, user study, production permission or downstream execution follows from a structural pass.

@@ -1,6 +1,6 @@
 # Completion backlog
 
-Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 ## First usable release
 
@@ -59,3 +59,9 @@ Do not add arbitrary skills or repeat successful tests merely to extend this lis
 - [ ] Execute Cursor startup, artifact/revision and recovery acceptance.
 - [ ] Execute Claude Code wrapper startup, artifact/revision and recovery acceptance.
 - [ ] Keep optional reference access separate from kit installation; no blanket 100-percent knowledge claim.
+
+## 0.2.0 quality implementation
+
+The September 16 audit now has a [linked implementation and evidence record](docs/QUALITY-020-RELEASE.md). Track actual remaining gates there and in [RESUME](RESUME.md); do not re-open repaired gaps solely because this historical backlog lists them. Human preference, real project use and device tests remain distinct from kit implementation.
+
+The eleven September 16 audit implementation items are complete in edition 0.2.0; [final evidence](docs/QUALITY-020-RELEASE.md) and [review disposition](docs/QUALITY-020-REVIEW.md) supersede their pending implementation status. Next acceptance is a separately scoped real project and its actual user/device review. Avoid creating another broad catalog expansion before observing a concrete unmet need.

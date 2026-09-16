@@ -1,8 +1,8 @@
 # Start an independent design project
 
-Version-Timestamp: 2026-09-14T11:03:01.247577-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
-Create one separate project directory or repository for each brand. Open that project in Codex or Claude Code. Supply the absolute package-root path; a repository URL alone does not ensure files are accessible. Until plugin discovery is verified, ask the agent to read skills/design-project-start/SKILL.md by its actual absolute path.
+Create one separate project directory or repository for each brand. Open that project in Codex or Claude Code. Supply the absolute package-root path; a repository URL alone does not ensure files are accessible. Use the installed starting skill when discoverable. An explicit absolute path to skills/design-project-start/SKILL.md remains the portable route for Codex, Claude Code and Cursor; verify this edition on the receiving host.
 
 ## Initial request
 
@@ -12,8 +12,8 @@ Use the Visual Design Studio package at [absolute local package path] as a read-
 
 1. library-version.json: plugin name/version, SHA-256 of PAYLOAD.sha256, source locator, acquisition date and verification result. Compute the digest from actual bytes. Verify every listed file with the system checksum tool before executing bundled code. The digest's trust comes from the supplied source or an independently confirmed sender, not from a checksum distributed alongside an unknown archive.
 2. PROJECT.md: brand mode, objective, audience, first deliverable, inputs and authority, constraints, unknowns, acceptance owner and permitted actions.
-3. SELECTED-CAPABILITIES.json: exact catalog IDs, entry paths, hashes, prerequisites, exclusions and reasons. Follow library/USAGE.md; never guess IDs.
-4. DECISIONS.md and RESUME.md: accepted baseline, proposed changes, actual artifacts/checks, partial external actions, and next dependency. Reuse the library/templates/ files under the package root rather than replacing their schemas.
+3. SELECTED-CAPABILITIES.json: exact catalog IDs, entry paths, hashes, prerequisites, exclusions and reasons. Follow [the selection contract](library/SELECTION-CONTRACT.md) and validate the completed record with `python3 -m design_system validate selection FILE --root PROJECT --library-root LIBRARY` from the library root; never guess IDs.
+4. DECISIONS.md and RESUME.md: accepted baseline, proposed changes, actual artifacts/checks, partial external actions, and next dependency. Use [the template adopter](library/RESUME-CONTRACT.md) for Markdown; preserve structured template schemas. `CURRENT.md` may only point to canonical `RESUME.md`.
 
 ## Existing brand path
 
@@ -28,3 +28,7 @@ Establish the offer, audience and positioning, then naming status and research n
 Keep the pinned library unchanged during a project. Propose upgrades with changed capabilities, impact and affected checks. Adopt explicitly in the project, preserve the previous pin, and rerun affected work before replacing approved outputs.
 
 Use [feedback](FEEDBACK.md) after meaningful observations. There is no unattended reporting service.
+
+## Before visible work
+
+Apply [conditional craft selection](library/CRAFT-SELECTION.md), then inspect actual output. Use [the calibration collection](library/examples/quality-benchmark/README.md) to distinguish correct but generic work from a specific visual idea. For completed handoffs, use [schema 2.0](library/HANDOFF-CONTRACT.md) with current candidate-bound checks. Old checks cannot approve changed files.

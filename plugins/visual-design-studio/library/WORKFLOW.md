@@ -1,6 +1,6 @@
 # Session and baseline routines
 
-Version-Timestamp: 2026-09-10 19:59:06 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Apply these continuity routines in the adopting project. Keep this reference package read-only; write project state and outputs in the declared project workspace.
 
@@ -21,15 +21,30 @@ For milestones, steps, and iterations, retain only useful hierarchy: parent obje
 
 ## Checkpoint and resume
 
-At a meaningful milestone or before stopping, update CURRENT.md with completed work, exact files/references, checks actually run, open gaps, current approved baseline, and one next action. Add or amend a decision only when its status changes; preserve rationale and alternatives. Update source confidence when new evidence changes a claim.
+Use project-root `RESUME.md` as the canonical state authority. Adopt [the resume record](templates/resume.md) with the template adopter when needed. At a meaningful milestone or before stopping, update it with completed work, exact files/references, checks actually run, open gaps, current approved baseline, active candidate and one next action. A rejected revision remains a comparison record and cannot promote itself to the approved baseline. `CURRENT.md` is a legacy pointer only: it may point to `RESUME.md`, but it cannot carry competing state. Add or amend a decision only when its status changes; preserve rationale and alternatives. Update source confidence when new evidence changes a claim.
 
 Durable artifacts include a real Version-Timestamp. Future commits must include the required Co-Authored-By and Agent-Attribution trailers using actual environment values. Commit only within the adopting project authorization and preserve attribution.
 
-Use a short resume packet in CURRENT.md: objective; scope; baseline reference; decision IDs; relevant sources; completed evidence; next action; blockers. Chat history supplements these files but does not replace them. Do not update any agent's global memory without a separate user request.
+Use a short resume packet in `RESUME.md`: objective; scope; baseline reference; candidate status; decision IDs; relevant sources; completed evidence; next action; blockers. Chat history supplements these files but does not replace them. Do not update any agent's global memory without a separate user request.
+
+## Adopt a portable template
+
+Copy a selected Markdown template into an independent project only through the packaged adopter. It defaults to a dry run, requires `--apply` to write, refuses an existing destination, and rejects parent traversal or symlink escape. It keeps project placeholders unchanged and rewrites bundled instruction links to the installed library's absolute pinned files.
+
+```sh
+python3 /absolute/path/to/library/scripts/adopt_template.py stage-execution.md \
+  --project-root /absolute/path/to/project \
+  --destination records/stage-execution.md
+python3 /absolute/path/to/library/scripts/adopt_template.py stage-execution.md \
+  --project-root /absolute/path/to/project \
+  --destination records/stage-execution.md --apply
+```
+
+Do not copy the whole library into the project. The output record belongs to the project. The library remains read-only.
 
 Before staging anything, inspect `git status --short --untracked-files=all` and `git check-ignore -v <path>`. Review actual file contents and rights. Do not force-add private material. Git exclusions do not prevent cloud sync, user sharing, or confidential prose being pasted into a tracked document.
 
-For book/reference work, inventory the authorized source folder and preserve source, extract and original method layers separately. Load targeted catalog records and cited page/section samples locally. Do not put full book content into project memory. Keep method synthesis independently written, source-linked, and unapproved until tested.
+For book/reference work, inventory the authorized source folder and preserve source, extract and original method layers separately. Load targeted catalog records and cited page/section samples locally. Do not put full book content into project memory. Keep method synthesis independently written, source-linked, and unapproved until tested. Book use is optional. When an adopting project has an ignored `private/reference-library.local.json` record, resolve its `reference_library_root` first, then its optional `reference_library_tool`; otherwise use the packaged `library/scripts/reference_library.py`. An absent configuration means no book reference is used and does not block ordinary work. After the coordinator packages the utility, its supported commands are `--root PATH verify` and `--root PATH search QUERY --limit 1..100`; verify before search. Books never belong in the plugin or adopting project.
 
 ## AI execution packets
 

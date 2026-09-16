@@ -1,0 +1,50 @@
+{
+  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
+  "duration": 12,
+  "fps": 24,
+  "size": [
+    1280,
+    720
+  ],
+  "audio": "none",
+  "purpose": "Invite newcomers, reveal shared activity, hold one message",
+  "phases": [
+    {
+      "id": "invite",
+      "start": 0,
+      "end": 3,
+      "hold": [
+        0.5,
+        2.5
+      ],
+      "message": "A shared morning."
+    },
+    {
+      "id": "reveal",
+      "start": 2.5,
+      "end": 8,
+      "hold": [
+        3.2,
+        7.3
+      ],
+      "message": "A little saltwater. A fresh perspective."
+    },
+    {
+      "id": "resolve",
+      "start": 7.5,
+      "end": 12,
+      "hold": [
+        8.2,
+        11.4
+      ],
+      "message": "Find your people. Take the plunge."
+    }
+  ],
+  "invariants": [
+    "unchanged source photograph",
+    "unchanged TIDAL wordmark",
+    "no unsupported safety or event claims"
+  ],
+  "delivery": "Web motion specimen only; target player/hardware unverified",
+  "loop": "Returns to opening blue field, inspect transition before acceptance"
+}

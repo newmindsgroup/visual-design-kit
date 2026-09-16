@@ -1,0 +1,3 @@
+# Version-Timestamp: 2026-09-16T18:46:03.716475-04:00
+# Preserve upstream license bytes exactly, including their whitespace.
+plugins/visual-design-studio/library/examples/quality-benchmark/assets/*.license -whitespace

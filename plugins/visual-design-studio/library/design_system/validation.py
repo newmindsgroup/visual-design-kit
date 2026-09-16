@@ -1,5 +1,5 @@
 """Validate structure and local evidence, never creative or factual truth."""
-# Version-Timestamp: 2026-09-08 09:03:36 AST
+# Version-Timestamp: 2026-09-16 18:38:00 AST
 import hashlib
 import json
 import re
@@ -64,8 +64,17 @@ class Check:
             self.error('reference', path, 'File reference requires a relative path')
             return
         rel = Path(entry['path'])
-        candidate = (self.root / rel).resolve()
-        if rel.is_absolute() or not rel.parts or '..' in rel.parts or not candidate.is_relative_to(self.root):
+        if rel.is_absolute() or not rel.parts or '..' in rel.parts:
+            self.error('unsafe_path', path, 'Reference must resolve inside the declared workspace')
+            return
+        candidate = self.root
+        for part in rel.parts:
+            candidate /= part
+            if candidate.is_symlink():
+                self.error('unsafe_path', path, 'Reference cannot contain a symlinked path component')
+                return
+        candidate = candidate.resolve()
+        if not candidate.is_relative_to(self.root):
             self.error('unsafe_path', path, 'Reference must resolve inside the declared workspace')
             return
         if not candidate.is_file():
@@ -307,11 +316,12 @@ def handoff(c, data):
     c.texts(data, ['record_id', 'scope', 'stage', 'readiness', 'requested_action', 'owner', 'next_action'])
     if data.get('scope') not in {'whole-project','phase-only','precise-change'}:
         c.error('scope', 'scope', 'Unsupported work scope')
-    if data.get('readiness') not in {'ready','provisional','blocked'} or data.get('requested_action') not in {'prepare','execute','review'}:
+    readinesses = {'ready','provisional','blocked'} | ({'draft'} if data.get('schema_version') == '1.0-proposed' else set())
+    if data.get('readiness') not in readinesses or data.get('requested_action') not in {'prepare','execute','review'}:
         c.error('status', 'readiness', 'Unsupported readiness or action')
     if (data.get('scope') == 'precise-change' or 'requires_approved_baseline' in data) and not isinstance(data.get('requires_approved_baseline'), bool):
         c.error('boolean_type', 'requires_approved_baseline', 'Expected boolean')
-    for group in ['inputs','outputs','checks']:
+    for group in ['inputs','outputs']:
         if not isinstance(data.get(group), list):
             c.error('list_type', group, 'Explicit list required'); return
     for group in ['inputs', 'outputs']:
@@ -395,25 +405,97 @@ def handoff(c, data):
                 covered_ids = {row[field] for row in rows if isinstance(row, dict) and isinstance(row.get(field), str)}
                 if set(ids) - covered_ids:
                     c.error('trace_coverage', 'registry.'+group, 'Every registered actor-route item must appear in a trace row')
+    if data.get('schema_version') == '1.0-proposed':
+        legacy_handoff_checks(c, data, registry)
+    else:
+        current_handoff_checks(c, data, registry)
+
+
+def validate_check(c, check, path, criteria, candidate_artifacts=None):
+    if not isinstance(check, dict):
+        c.error('check', path, 'Expected check record'); return None
+    if check.get('status') not in {'passed','failed','pending','not_applicable'}:
+        c.error('status', path+'.status', 'Unsupported check status')
+    if not isinstance(check.get('criterion'), str) or check.get('criterion') not in criteria:
+        c.error('trace_reference', path+'.criterion', 'Check criterion must resolve in registry')
+    if check.get('status') == 'passed' and not isinstance(check.get('evidence'), dict):
+        c.error('check_evidence', path+'.evidence', 'Passed check needs evidence reference')
+    if isinstance(check.get('evidence'), dict):
+        c.ref(check['evidence'], path+'.evidence', require_hash=True)
+    if candidate_artifacts is not None:
+        artifacts = check.get('candidate_artifacts')
+        if not isinstance(artifacts, list) or not artifacts:
+            c.error('candidate_binding', path+'.candidate_artifacts', 'Current check requires candidate artifacts')
+        else:
+            bindings = artifact_identities(c, artifacts, path+'.candidate_artifacts')
+            if bindings is not None and bindings != candidate_artifacts:
+                c.error('candidate_binding', path+'.candidate_artifacts', 'Check must bind exactly to the declared candidate artifacts')
+    return check
+
+
+def artifact_identities(c, artifacts, path):
+    if not isinstance(artifacts, list) or not artifacts:
+        c.error('candidate_artifacts', path, 'At least one candidate artifact is required')
+        return None
+    identities = []
+    for i, artifact in enumerate(artifacts):
+        c.ref(artifact, f'{path}.{i}', require_hash=True)
+        if isinstance(artifact, dict) and isinstance(artifact.get('path'), str) and isinstance(artifact.get('sha256'), str):
+            identities.append((artifact['path'], artifact['sha256']))
+    if len(identities) != len(artifacts):
+        return None
+    if len(identities) != len(set(identities)):
+        c.error('candidate_artifacts', path, 'Candidate artifact path and hash pairs must be unique')
+        return None
+    return frozenset(identities)
+
+
+def legacy_handoff_checks(c, data, registry):
+    c.warnings.append({'code':'handoff_schema_migration', 'path':'schema_version', 'message':'Legacy 1.0-proposed handoff is readable only; migrate to schema 2.0 for candidate-bound current checks'})
     if data.get('completion', 'partial') not in {'partial', 'complete'}:
         c.error('status', 'completion', 'Unsupported completion state')
-    if data.get('completion') == 'complete':
-        if not data.get('outputs'):
+    if data.get('completion') == 'complete' or data.get('readiness') == 'ready':
+        c.error('handoff_schema_migration', 'schema_version', 'Legacy handoffs cannot claim complete or ready; migrate explicitly to schema 2.0')
+    checks = data.get('checks')
+    if not isinstance(checks, list):
+        c.error('list_type', 'checks', 'Explicit list required'); return
+    for i, check in enumerate(checks):
+        validate_check(c, check, f'checks.{i}', registry.get('criteria', []))
+
+
+def current_handoff_checks(c, data, registry):
+    if data.get('completion', 'partial') not in {'partial', 'complete'}:
+        c.error('status', 'completion', 'Unsupported completion state')
+    candidate = data.get('candidate')
+    candidate_artifacts = artifact_identities(c, candidate.get('artifacts') if isinstance(candidate, dict) else None, 'candidate.artifacts')
+    checks = data.get('current_checks')
+    if not isinstance(checks, list):
+        c.error('list_type', 'current_checks', 'Explicit current-check list required')
+        checks = []
+    criteria = registry.get('criteria', [])
+    by_criterion = {}
+    for i, check in enumerate(checks):
+        validate_check(c, check, f'current_checks.{i}', criteria, candidate_artifacts)
+        if isinstance(check, dict) and isinstance(check.get('criterion'), str) and check['criterion'] in criteria:
+            by_criterion.setdefault(check['criterion'], []).append(check)
+    if isinstance(criteria, list):
+        for criterion in criteria:
+            if len(by_criterion.get(criterion, [])) != 1:
+                c.error('current_check_count', 'current_checks', 'Each required criterion requires exactly one current result')
+    historical = data.get('historical_checks')
+    if not isinstance(historical, list):
+        c.error('list_type', 'historical_checks', 'Explicit historical-check list required')
+    else:
+        for i, check in enumerate(historical):
+            validate_check(c, check, f'historical_checks.{i}', criteria)
+            if isinstance(check, dict) and 'superseded_by' in check and (not isinstance(check['superseded_by'], str) or not check['superseded_by'].strip()):
+                c.error('historical_reference', f'historical_checks.{i}.superseded_by', 'Historical supersession reference must be nonempty text')
+    if data.get('completion') == 'complete' or data.get('readiness') == 'ready':
+        if data.get('completion') == 'complete' and not data.get('outputs'):
             c.error('completion_outputs', 'outputs', 'Completed handoff requires actual output files')
-        covered = {x.get('criterion') for x in data.get('checks', []) if isinstance(x, dict) and x.get('status') == 'passed' and isinstance(x.get('evidence'), dict)}
-        if not registry.get('criteria') or not set(registry.get('criteria', [])) <= covered:
-            c.error('completion_checks', 'checks', 'Each criterion requires a passed check with local evidence')
-    for i, check in enumerate(data.get('checks', [])):
-        if not isinstance(check, dict):
-            c.error('check', f'checks.{i}', 'Expected check record'); continue
-        if check.get('status') not in {'passed','failed','pending','not_applicable'}:
-            c.error('status', f'checks.{i}.status', 'Unsupported check status')
-        if not isinstance(check.get('criterion'), str) or check.get('criterion') not in registry.get('criteria', []):
-            c.error('trace_reference', f'checks.{i}.criterion', 'Check criterion must resolve in registry')
-        if check.get('status') == 'passed' and not isinstance(check.get('evidence'), dict):
-            c.error('check_evidence', f'checks.{i}.evidence', 'Passed check needs evidence reference')
-        if isinstance(check.get('evidence'), dict):
-            c.ref(check['evidence'], f'checks.{i}.evidence', require_hash=True)
+        unresolved = [criterion for criterion in criteria if len(by_criterion.get(criterion, [])) != 1 or by_criterion[criterion][0].get('status') != 'passed' or not isinstance(by_criterion[criterion][0].get('evidence'), dict)]
+        if unresolved:
+            c.error('completion_checks', 'current_checks', 'Complete or ready handoff requires one passed current check with local evidence for every criterion')
 
 
 def manifest(c, data):
@@ -464,7 +546,7 @@ def validate(kind, data, root, as_of=None):
         return report()
     if not isinstance(data, dict):
         c.error('record_type', '', 'Top-level record must be an object'); return report()
-    if data.get('schema_version') != VERSION:
+    if (kind == 'handoff' and data.get('schema_version') not in {'1.0-proposed', '2.0'}) or (kind != 'handoff' and data.get('schema_version') != VERSION):
         c.error('schema_version', 'schema_version', 'Unsupported contract version; explicit migration required')
     from .reference_decision import reference_decision
     from .system_inventory import system_inventory

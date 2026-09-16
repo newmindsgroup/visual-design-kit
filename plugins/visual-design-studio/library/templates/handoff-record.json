@@ -1,6 +1,6 @@
 {
-  "Version-Timestamp": "2026-09-08 08:57:40 AST",
-  "schema_version": "1.0-proposed",
+  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
+  "schema_version": "2.0",
   "record_id": "REQUIRED",
   "scope": "precise-change",
   "readiness": "provisional",
@@ -19,6 +19,12 @@
     }
   },
   "candidate": {
+    "artifacts": [
+      {
+        "path": "REQUIRED",
+        "sha256": "REQUIRED"
+      }
+    ],
     "approval": {
       "status": "none"
     }
@@ -56,6 +62,18 @@
       "criterion": "C-1"
     }
   ],
-  "checks": [],
+  "current_checks": [
+    {
+      "criterion": "C-1",
+      "status": "pending",
+      "candidate_artifacts": [
+        {
+          "path": "REQUIRED",
+          "sha256": "REQUIRED"
+        }
+      ]
+    }
+  ],
+  "historical_checks": [],
   "subject_type": "persona"
 }

@@ -1,6 +1,6 @@
 # Website workflow and skill coverage
 
-Version-Timestamp: 2026-09-11T20:48:53-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Parent: Brain (source-repository evidence, not bundled or inherited). All entries: [vault index](SKILLS-VAULT-INDEX.md). Evidence: website checks (source-repository evidence, not bundled or inherited). Coverage data: [47-topic map](website-coverage.json).
 
@@ -90,3 +90,9 @@ References inspected for this addition. Platform-specific adapters must consult 
 Version-Timestamp: 2026-09-11T23:23:36-04:00
 
 Historical descriptions above describe source-library authoring only. On a receiving computer, begin with tool and execution status unverified. Run the selected scenario and retain its actual artifacts before claiming local verification. Structural source checks do not establish provider, device or user acceptance. The candidate manifest identifies exact source and adapter hashes; earlier results do not transfer to changed bytes.
+
+## Conditional craft selection
+
+Version-Timestamp: 2026-09-16 18:05:00 AST
+
+Apply [the compact craft selection](CRAFT-SELECTION.md) before new composition or visible revision. Record selected, reused or not-applicable decisions in the current stage packet. This makes specialist depth explicit without redoing accepted foundations.

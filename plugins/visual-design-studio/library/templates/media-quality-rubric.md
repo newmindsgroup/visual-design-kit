@@ -8,7 +8,7 @@ Incorrect product geometry, labels or required facts; unauthorized source use; c
 
 ## Evidence-based comparison
 
-Score each dimension 1 to 5: 1 has a named major failure; 3 meets the brief with specific repairs remaining; 5 meets the brief with no observed defect in the inspected scope. Scores 2 and 4 are intermediate and need reasons. Attach image region/frame references; no overall score overrides a failed hard requirement.
+Score each dimension 1 to 5: 1 has a named major failure; 3 meets the brief with specific repairs remaining; 5 meets the brief with no observed defect and demonstrates a specific, coherent visual idea through named compositional, typographic or material decisions. Scores 2 and 4 are intermediate and need reasons. Attach image region/frame references; no overall score overrides a failed hard requirement.
 
 | Dimension | Inspect |
 | --- | --- |
@@ -40,4 +40,13 @@ The project owner declares required criteria and human approval stages in the pr
 
 A hard-requirement failure is always reject regardless of numeric score. On other required dimensions, a score of 1 means reject; 2 or 3 means repair. A 4 or 5 alone cannot establish acceptance: named outstanding repairs must be resolved and required evidence present. Missing approved product references means held, not a fabricated factual rejection. Pure vector information graphics need a photographic-scope N/A reason, not permission to use vector artwork.
 
-Version-Timestamp: 2026-09-13T12:22:45-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+
+
+## Comparative craft decision
+
+Version-Timestamp: 2026-09-16 18:05:00 AST
+
+Technical correctness is a prerequisite, not the definition of excellent design. Separately assess concept specificity, hierarchy, optical care, emotional fit and useful restraint. For each, point to a visible decision and its consequence for the brief. Compare equal-sized candidates without provider or candidate-class labels during the first review; reveal provenance afterward. Do not average the dimensions into a winner or confuse model agreement with audience evidence.
+
+Use the same [fictional benchmark](../examples/quality-benchmark/README.md) as typography, revision and motion checks. Preserve correct-but-generic and attractive-but-wrong controls for teaching, excluded from ordinary production reference retrieval. Record recommendation, strongest competing option, tradeoff and next repair. Human acceptance remains separate.

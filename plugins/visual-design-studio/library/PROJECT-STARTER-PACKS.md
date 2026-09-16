@@ -1,6 +1,6 @@
 # Project starter packs
 
-Version-Timestamp: 2026-09-10 20:37:05 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 These are original manual starting recipes built from the existing [catalog](capabilities.json), [inventory profiles](inventory/profiles.md) and [UX deliverable contracts](UX-DELIVERABLES.md). They are not installed bundles, new skills or executable orchestration. No client, stack, hardware vendor or final plugin architecture is selected. Use one pack or combine complementary packs; reconcile shared inputs and conflicting requirements once.
 
@@ -176,3 +176,9 @@ Version-Timestamp: 2026-09-09 10:35:51 AST
 
 Before a selected stage, apply [AI context readiness](AI-DESIGN-CONTEXT.md) within the existing packet. For continuity evidence, select relevant cases from [the controlled exercise](templates/creative-continuity-exercise.md).
 
+
+## Conditional craft selection
+
+Version-Timestamp: 2026-09-16 18:05:00 AST
+
+Apply [the compact craft selection](CRAFT-SELECTION.md) before new composition or visible revision. Record selected, reused or not-applicable decisions in the current stage packet. This makes specialist depth explicit without redoing accepted foundations.

@@ -1,6 +1,6 @@
 # Calibrated critique and revision
 
-Version-Timestamp: 2026-09-10 20:21:06 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Agent-Attribution: computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.149.1; timestamp=2026-09-08 22:17:00 AST
 
@@ -18,3 +18,9 @@ Use the existing [design-work record](../../../templates/design-work.md) and [st
 ## Automated findings and house style
 
 Treat a pattern detector as a lead with its source snippet and known limits. Separate measured requirement failures from aesthetic preferences and verify each finding in context. A named color, gradient, symmetrical layout or font genre is not inherently defective; approved brand intent governs unless a real requirement fails. Maintain explicit exceptions with rationale rather than letting a generic style ban override the brand. Reopen missing evidence instead of treating an absence of lint findings as proof of quality. See Open Design assessment (optional provenance in the pinned source version; not bundled).
+
+## Shared rendered calibration
+
+Version-Timestamp: 2026-09-16 18:05:00 AST
+
+Use the [shared benchmark](../../../examples/quality-benchmark/README.md) and [positive craft criteria](../../../templates/media-quality-rubric.md#comparative-craft-decision). Judge the actual pixels against the brief before revealing candidate class. A clean layout is not automatically distinctive; visual novelty cannot excuse false facts or an unsuitable brand voice.

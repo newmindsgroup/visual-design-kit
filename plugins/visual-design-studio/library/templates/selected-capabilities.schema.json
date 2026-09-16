@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual Design Studio selected capabilities",
+  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "catalog", "selected", "patterns", "excluded", "prerequisites", "provenance"],
+  "properties": {
+    "Version-Timestamp": {"type": "string"},
+    "schema_version": {"const": "1.0"},
+    "catalog": {"$ref": "#/$defs/catalog"},
+    "selected": {"type": "array", "items": {"$ref": "#/$defs/capability"}},
+    "patterns": {"type": "array", "items": {"$ref": "#/$defs/pattern"}},
+    "excluded": {"type": "array", "items": {"oneOf": [{"type": "object", "additionalProperties": false, "required": ["id"], "properties": {"id": {"type": "string"}}}, {"type": "object", "additionalProperties": false, "required": ["pattern"], "properties": {"pattern": {"type": "string"}}}]}},
+    "prerequisites": {"type": "array", "items": {"$ref": "#/$defs/prerequisite"}},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "catalog": {"type": "object", "additionalProperties": false, "required": ["path", "schema_version", "sha256"], "properties": {"path": {"const": "capabilities.json"}, "schema_version": {"type": "string"}, "sha256": {"$ref": "#/$defs/hash"}}},
+    "capability": {"type": "object", "additionalProperties": false, "required": ["id", "entry", "sha256"], "properties": {"id": {"type": "string"}, "entry": {"type": "string"}, "sha256": {"$ref": "#/$defs/hash"}}},
+    "pattern": {"type": "object", "additionalProperties": false, "required": ["pattern", "entries"], "properties": {"pattern": {"type": "string"}, "entries": {"type": "array", "items": {"$ref": "#/$defs/capability"}}}},
+    "prerequisite": {"type": "object", "additionalProperties": false, "required": ["id", "disposition", "reason", "evidence"], "properties": {"id": {"type": "string"}, "disposition": {"enum": ["reuse", "create", "provisional", "not_applicable"]}, "reason": {"type": "string"}, "evidence": {"type": "string"}}},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["original_input", "resolution_basis", "repair_actor", "catalog_sha256"], "properties": {"original_input": {"type": "string"}, "resolution_basis": {"type": "string"}, "repair_actor": {"type": "string"}, "catalog_sha256": {"$ref": "#/$defs/hash"}}}
+  }
+}
