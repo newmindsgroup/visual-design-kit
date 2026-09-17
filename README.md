@@ -6,7 +6,7 @@
 
 > **Current status: supervised evaluation. No tagged release exists yet.** Codex installation and project-level startup have been checked on the authoring Mac. The library contains 130 reference capabilities. The 0.2.0 candidate adds rendered fictional brand examples, revision and recovery checks, stronger validators and portable templates. Final edition-specific evidence is recorded below. This is usable for a supervised first project, not a claim that every tool or deliverable is production-tested.
 
-Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+Version-Timestamp: 2026-09-16T22:24:18.944807-04:00
 
 [Installation record](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Remaining work](BACKLOG.md)
 
@@ -264,4 +264,4 @@ This edition strengthens the existing capabilities instead of adding another ove
 
 Run the collection locally from the library directory with `python3 -m http.server 17672 --bind 127.0.0.1`, then open `http://127.0.0.1:17672/examples/quality-benchmark/`. This binds only to your computer. It does not publish client work.
 
-Version 0.2.0 is now installed and hash-verified on the authoring Mac. Its independent review, 74 code tests, 20 browser cases and export checks are recorded in the edition evidence above. The source remains a supervised candidate on the review branch until deliberately merged; clone or pin the intended commit rather than assuming the default branch includes it. A real project still supplies its own brief, evidence and approval.
+Version 0.2.0 is now installed and hash-verified on the authoring Mac. Its independent review, 74 code tests, 20 browser cases and export checks are recorded in the edition evidence above. Use the default `main` branch for team sharing, then pin the chosen commit in each project. The package remains a supervised evaluation candidate; publishing on `main` does not imply that every tool or real-world deliverable has been tested. A real project still supplies its own brief, evidence and approval.
