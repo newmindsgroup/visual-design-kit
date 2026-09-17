@@ -5,7 +5,7 @@ description: Specify or implement reusable interface components, tokens and resp
 
 # UI design system
 
-Version-Timestamp: 2026-09-12T11:35:16-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Agent-Attribution: computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.149.1; timestamp=2026-09-08 22:17:00 AST
 
@@ -60,3 +60,9 @@ For import/export or an actual adapter, use [system portability and token eviden
 Version-Timestamp: 2026-09-11T20:48:53-04:00
 
 Select relevant [website methods](../../WEBSITE-WORKFLOW.md) for scoped website work. Reuse accepted foundation records and preserve this capability as their owner.
+
+## Conditional craft selection
+
+Version-Timestamp: 2026-09-16 18:05:00 AST
+
+Apply [the compact craft selection](../../CRAFT-SELECTION.md) before new composition or visible revision. Record selected, reused or not-applicable decisions in the current stage packet. This makes specialist depth explicit without redoing accepted foundations.

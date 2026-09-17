@@ -1,0 +1,334 @@
+{
+  "Version-Timestamp": "2026-09-16T18:41:20.875389-04:00",
+  "scope": "Actual rendered DOM and source asset identity comparisons. Position/pixel invariants and human approval are not claimed.",
+  "cases": [
+    {
+      "brand": "form",
+      "width": 390,
+      "baseline_variant": "candidate",
+      "candidate_variant": "revised",
+      "delta_paths": [
+        "copy.headline",
+        "typography.headline_size"
+      ],
+      "invariants": [
+        "copy.other",
+        "typography.family",
+        "typography.weight",
+        "typography.color",
+        "brand",
+        "image"
+      ],
+      "before": {
+        "copy": {
+          "headline": "A quieter kind of presence.",
+          "other": [
+            "Green glass. Warm stone. An everyday object, considered from every angle.",
+            "Explore the object",
+            "FORM / Original synthetic product study",
+            "The warm neutral ground and considered serif give the object room. The photograph carries the material detail; restrained type carries the message. Bottle shape, label and color remain fixed across revisions.",
+            "Let the material do the talking."
+          ]
+        },
+        "typography": {
+          "headline_size": "42.9px",
+          "family": "Newsreader, Georgia, serif",
+          "weight": "400",
+          "color": "rgb(34, 53, 41)"
+        },
+        "brand": {
+          "wordmark": "FORM",
+          "ground": "rgb(243, 240, 232)"
+        },
+        "image": {
+          "path": "assets/form.png",
+          "crop": "68% 50%",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        }
+      },
+      "after": {
+        "copy": {
+          "headline": "An everyday object, quietly considered.",
+          "other": [
+            "Green glass. Warm stone. An everyday object, considered from every angle.",
+            "Explore the object",
+            "FORM / Original synthetic product study",
+            "The warm neutral ground and considered serif give the object room. The photograph carries the material detail; restrained type carries the message. Bottle shape, label and color remain fixed across revisions.",
+            "Let the material do the talking."
+          ]
+        },
+        "typography": {
+          "headline_size": "38.2363px",
+          "family": "Newsreader, Georgia, serif",
+          "weight": "400",
+          "color": "rgb(34, 53, 41)"
+        },
+        "brand": {
+          "wordmark": "FORM",
+          "ground": "rgb(243, 240, 232)"
+        },
+        "image": {
+          "path": "assets/form.png",
+          "crop": "68% 50%",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        }
+      },
+      "comparison": {
+        "valid": true,
+        "errors": [],
+        "changed_paths": [
+          "copy.headline",
+          "typography.headline_size"
+        ],
+        "assurance": "Exact JSON properties only; no visual or factual acceptance"
+      },
+      "approval": "none"
+    },
+    {
+      "brand": "form",
+      "width": 1440,
+      "baseline_variant": "candidate",
+      "candidate_variant": "revised",
+      "delta_paths": [
+        "copy.headline",
+        "typography.headline_size"
+      ],
+      "invariants": [
+        "copy.other",
+        "typography.family",
+        "typography.weight",
+        "typography.color",
+        "brand",
+        "image"
+      ],
+      "before": {
+        "copy": {
+          "headline": "A quieter kind of presence.",
+          "other": [
+            "Green glass. Warm stone. An everyday object, considered from every angle.",
+            "Explore the object",
+            "FORM / Original synthetic product study",
+            "The warm neutral ground and considered serif give the object room. The photograph carries the material detail; restrained type carries the message. Bottle shape, label and color remain fixed across revisions.",
+            "Let the material do the talking."
+          ]
+        },
+        "typography": {
+          "headline_size": "76.32px",
+          "family": "Newsreader, Georgia, serif",
+          "weight": "400",
+          "color": "rgb(34, 53, 41)"
+        },
+        "brand": {
+          "wordmark": "FORM",
+          "ground": "rgb(243, 240, 232)"
+        },
+        "image": {
+          "path": "assets/form.png",
+          "crop": "68% 50%",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        }
+      },
+      "after": {
+        "copy": {
+          "headline": "An everyday object, quietly considered.",
+          "other": [
+            "Green glass. Warm stone. An everyday object, considered from every angle.",
+            "Explore the object",
+            "FORM / Original synthetic product study",
+            "The warm neutral ground and considered serif give the object room. The photograph carries the material detail; restrained type carries the message. Bottle shape, label and color remain fixed across revisions.",
+            "Let the material do the talking."
+          ]
+        },
+        "typography": {
+          "headline_size": "55.7656px",
+          "family": "Newsreader, Georgia, serif",
+          "weight": "400",
+          "color": "rgb(34, 53, 41)"
+        },
+        "brand": {
+          "wordmark": "FORM",
+          "ground": "rgb(243, 240, 232)"
+        },
+        "image": {
+          "path": "assets/form.png",
+          "crop": "68% 50%",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        }
+      },
+      "comparison": {
+        "valid": true,
+        "errors": [],
+        "changed_paths": [
+          "copy.headline",
+          "typography.headline_size"
+        ],
+        "assurance": "Exact JSON properties only; no visual or factual acceptance"
+      },
+      "approval": "none"
+    },
+    {
+      "brand": "tidal",
+      "width": 390,
+      "baseline_variant": "candidate",
+      "candidate_variant": "revised",
+      "delta_paths": [
+        "copy.headline",
+        "typography.headline_size"
+      ],
+      "invariants": [
+        "copy.other",
+        "typography.family",
+        "typography.weight",
+        "typography.color",
+        "brand",
+        "image"
+      ],
+      "before": {
+        "copy": {
+          "headline": "Find your people. Take the plunge.",
+          "other": [
+            "A little saltwater. A shared morning. Discover a different way to start your weekend.",
+            "Meet the club",
+            "TIDAL / Synthetic coastal concept, not a real event",
+            "A condensed sporting voice meets an unposed coastal scene. Cobalt links the caps, sea and identity. The welcoming copy leads with companionship rather than performance or invented safety promises.",
+            "More saltwater. More shared mornings."
+          ]
+        },
+        "typography": {
+          "headline_size": "46px",
+          "family": "Barlow, \"Arial Narrow\", sans-serif",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        "brand": {
+          "wordmark": "TIDAL",
+          "ground": "rgb(239, 238, 230)"
+        },
+        "image": {
+          "path": "assets/tidal.png",
+          "crop": "69% 50%",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        }
+      },
+      "after": {
+        "copy": {
+          "headline": "A shared morning. A fresh perspective.",
+          "other": [
+            "A little saltwater. A shared morning. Discover a different way to start your weekend.",
+            "Meet the club",
+            "TIDAL / Synthetic coastal concept, not a real event",
+            "A condensed sporting voice meets an unposed coastal scene. Cobalt links the caps, sea and identity. The welcoming copy leads with companionship rather than performance or invented safety promises.",
+            "More saltwater. More shared mornings."
+          ]
+        },
+        "typography": {
+          "headline_size": "32px",
+          "family": "Barlow, \"Arial Narrow\", sans-serif",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        "brand": {
+          "wordmark": "TIDAL",
+          "ground": "rgb(239, 238, 230)"
+        },
+        "image": {
+          "path": "assets/tidal.png",
+          "crop": "69% 50%",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        }
+      },
+      "comparison": {
+        "valid": true,
+        "errors": [],
+        "changed_paths": [
+          "copy.headline",
+          "typography.headline_size"
+        ],
+        "assurance": "Exact JSON properties only; no visual or factual acceptance"
+      },
+      "approval": "none"
+    },
+    {
+      "brand": "tidal",
+      "width": 1440,
+      "baseline_variant": "candidate",
+      "candidate_variant": "revised",
+      "delta_paths": [
+        "copy.headline",
+        "typography.headline_size"
+      ],
+      "invariants": [
+        "copy.other",
+        "typography.family",
+        "typography.weight",
+        "typography.color",
+        "brand",
+        "image"
+      ],
+      "before": {
+        "copy": {
+          "headline": "Find your people. Take the plunge.",
+          "other": [
+            "A little saltwater. A shared morning. Discover a different way to start your weekend.",
+            "Meet the club",
+            "TIDAL / Synthetic coastal concept, not a real event",
+            "A condensed sporting voice meets an unposed coastal scene. Cobalt links the caps, sea and identity. The welcoming copy leads with companionship rather than performance or invented safety promises.",
+            "More saltwater. More shared mornings."
+          ]
+        },
+        "typography": {
+          "headline_size": "93.6px",
+          "family": "Barlow, \"Arial Narrow\", sans-serif",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        "brand": {
+          "wordmark": "TIDAL",
+          "ground": "rgb(239, 238, 230)"
+        },
+        "image": {
+          "path": "assets/tidal.png",
+          "crop": "50% 58%",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        }
+      },
+      "after": {
+        "copy": {
+          "headline": "A shared morning. A fresh perspective.",
+          "other": [
+            "A little saltwater. A shared morning. Discover a different way to start your weekend.",
+            "Meet the club",
+            "TIDAL / Synthetic coastal concept, not a real event",
+            "A condensed sporting voice meets an unposed coastal scene. Cobalt links the caps, sea and identity. The welcoming copy leads with companionship rather than performance or invented safety promises.",
+            "More saltwater. More shared mornings."
+          ]
+        },
+        "typography": {
+          "headline_size": "60.8265px",
+          "family": "Barlow, \"Arial Narrow\", sans-serif",
+          "weight": "600",
+          "color": "rgb(255, 255, 255)"
+        },
+        "brand": {
+          "wordmark": "TIDAL",
+          "ground": "rgb(239, 238, 230)"
+        },
+        "image": {
+          "path": "assets/tidal.png",
+          "crop": "50% 58%",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        }
+      },
+      "comparison": {
+        "valid": true,
+        "errors": [],
+        "changed_paths": [
+          "copy.headline",
+          "typography.headline_size"
+        ],
+        "assurance": "Exact JSON properties only; no visual or factual acceptance"
+      },
+      "approval": "none"
+    }
+  ]
+}

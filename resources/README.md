@@ -37,3 +37,11 @@ Resolve destination and permissions; classify sharing rights per item; materiali
 ## What earlier ingestion actually produced
 
 A separate local library already contains original copies, catalog/relevance records, duplicate mappings, extracted text and a local search tool. All 225 recorded extraction paths exist in the current check, including records that are not marked successfully extracted. This is existence evidence only. Selected sampled findings informed reusable methods; no full-book synthesis or model training is claimed. The complete local library has not been made portable or published to a shared Drive destination. The original Drive source folders were preserved.
+
+## Active implementation
+
+The owner has now confirmed Google Drive distribution permission. See [the implementation plan](LIBRARY-IMPLEMENTATION.md) for the staged package, verified checks and remaining work. Earlier audit statements above describe the pre-authorization snapshot.
+
+[Connect your downloaded library](LOCAL-SETUP.md).
+
+[Current team-readiness checklist](TEAM-READINESS.md) supersedes historical snapshot counts above.

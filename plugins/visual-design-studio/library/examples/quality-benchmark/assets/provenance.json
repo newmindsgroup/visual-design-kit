@@ -1,0 +1,21 @@
+{
+  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
+  "status": "fictional candidates; human review pending",
+  "sources": {
+    "form.png": "Original built-in image generation edit, 2026-09-13 photographic-correction-03; fictional packaging; no real product proof",
+    "tidal.png": "Original built-in image generation, 2026-09-16; synthetic club photograph, no real event",
+    "newsreader.ttf": "Google Fonts Newsreader, SIL OFL1.1; prior craft specimen",
+    "archivo.ttf": "Google Fonts Archivo, SIL OFL1.1; prior craft specimen",
+    "barlow-condensed.ttf": "https://github.com/google/fonts/tree/main/ofl/barlowcondensed; SIL OFL1.1"
+  },
+  "files": {
+    "archivo-OFL.license": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
+    "archivo.ttf": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
+    "newsreader-OFL.license": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
+    "tidal.png": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd",
+    "barlow-condensed.ttf": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
+    "form.png": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01",
+    "newsreader.ttf": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+    "barlow-OFL.license": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+  }
+}

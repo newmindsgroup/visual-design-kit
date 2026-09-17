@@ -1,0 +1,10 @@
+{
+  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
+  "schema_version": "1.0",
+  "catalog": {"path": "capabilities.json", "schema_version": "1.0-proposed", "sha256": "REQUIRED"},
+  "selected": [],
+  "patterns": [],
+  "excluded": [],
+  "prerequisites": [],
+  "provenance": {"original_input": "REQUIRED", "resolution_basis": "REQUIRED", "repair_actor": "REQUIRED", "catalog_sha256": "REQUIRED"}
+}

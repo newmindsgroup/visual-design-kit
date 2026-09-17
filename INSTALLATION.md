@@ -37,3 +37,15 @@ Version-Timestamp: 2026-09-14T15:09:30.013404-04:00
 Use [the project starter](project-starter/README.md) to merge a pinned entry into each independent project. A fresh session in a separate directory followed that entry without a library path in the task prompt. This bypasses the truncated catalog for project startup; it does not repair global auto-discovery. Never overwrite existing project instructions.
 
 Final hardened entry check passed in a second separate read-only project: trusted manifest digest and all 322 payload hashes verified before entry use. No writes or network. An initial heredoc command was blocked by read-only temporary-file rules; an in-memory verification command succeeded. Wrong-digest, conflict and duplicate-merge behavioral cases remain untested.
+
+## Verified 0.2.0 update
+
+Version-Timestamp: 2026-09-16T18:44:50.670908-04:00
+
+The authoring Mac installed and enabled 0.2.0 using `codex plugin add visual-design-studio@visual-design-team --json`. All 364 installed PAYLOAD.sha256 entries matched. The manifest digest is `43bde9afa9b57d8fd9264fea7645451d345b4ac2ad8c2d273d8787131f79f9d3`. Installed handoff and selection examples validate successfully. The optional reference helper matches its canonical repository source.
+
+The native updater removed the 0.1.0 cache directory. Do not rely on the cache to preserve project pins. The old 322-entry payload is recoverable from commit `412e628bed1af9ae41bcad14784f1ebd8bdd3116`, and a verified separate recovery copy is retained in the author's ignored `private/quality-020/recovery-0.1.0`. Do not manually patch Codex's cache. For rollback, use a separate checkout of that trusted commit, verify its recorded digest and all payload files, then deliberately repoint the affected project's entry. Installation rollback would additionally require restoring the old marketplace source through the supported plugin command; that action has not been executed.
+
+Existing project pins were not rewritten. If a historical project points at the removed cache, deliberately adopt the recovered fixed checkout or reviewed new version before continuing. New projects should use a pinned checkout or release directory as described in [the project starter](project-starter/README.md).
+
+A new native Codex session's automatic discovery has not been proven for 0.2.0. Explicit-path navigation is verified; no claim that the current thread hot-reloaded the installed skill is made. Claude Code and Cursor native-session acceptance remain separate. [Edition evidence](docs/QUALITY-020-RELEASE.md).

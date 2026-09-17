@@ -5,7 +5,7 @@ description: Select and specify display motion graphics, kinetic typography, UI 
 
 # Motion and effect design
 
-Version-Timestamp: 2026-09-10 20:28:53 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Status: authored instructions; effect recipes are unverified until implemented and tested.
 
@@ -49,3 +49,9 @@ Choose applicable 2D/3D, masking, compositing, product-image movement, character
 For loops allow entry midway, maintain message anchors and inspect seam continuity, repeated exposure and silent comprehension. Separate sound design from essential meaning, provide captions where needed, and verify venue audio restrictions and rights. Coordinate multiscreen timelines, seam-safe elements and loss-of-sync fallbacks. Touch attraction yields immediately to active interaction. Export static/reduced alternatives when appropriate, and hand assets and specification to display production for actual player checks; evaluation consolidates readiness.
 
 For every rendered display loop, including passive video and LED walls, specify and evaluate flash frequency, affected area, luminance change and saturated-red transitions using an applicable recognized flash-analysis method. Record method, thresholds, tested file and results; do not infer safety from frame rate or a casual preview. Unchecked flashes or strobes hold playback acceptance; prefer a nonflashing alternative. Motion owns specification and animation assets; production owns technical exports/player checks and evaluation owns acceptance.
+
+## Rendered calibration
+
+Version-Timestamp: 2026-09-16T18:06:33.096655-04:00
+
+Use the [shared fictional collection](../../examples/quality-benchmark/README.md) for comparative quality, rendered typography, precise revision and motion evidence. Inspect its recorded limits; do not inherit its fonts, style or agent review as approval for another brand.

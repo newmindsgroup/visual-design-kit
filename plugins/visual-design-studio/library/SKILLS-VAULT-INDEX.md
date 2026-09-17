@@ -1,5 +1,7 @@
 # Portable skill index
 
+Version-Timestamp: 2026-09-16T18:30:24.953632-04:00
+
 Select the smallest relevant set. Dependencies describe required information, not mandatory regeneration. No account or tool readiness is inherited.
 
 | research | [research](draft-skills/design-evidence-research/SKILL.md) |  |
@@ -133,3 +135,11 @@ Select the smallest relevant set. Dependencies describe required information, no
 | media-quality-evaluation | [media-quality-evaluation](draft-skills/design-media-quality-evaluation/SKILL.md) | media-art-direction |
 | media-production-recipes | [media-production-recipes](draft-skills/design-media-production-recipes/SKILL.md) | media-quality-evaluation |
 Version-Timestamp: 2026-09-11T23:27:03-04:00
+
+## Shared execution and craft records
+
+- [Workflow](WORKFLOW.md) and [canonical resume contract](RESUME-CONTRACT.md) connect project progress to its current candidate.
+- [Capability selection contract](SELECTION-CONTRACT.md) makes the chosen subset explicit; [handoff contract](HANDOFF-CONTRACT.md) keeps historical failures separate from current checks.
+- [Craft selection](CRAFT-SELECTION.md) connects typography, color, art direction, imagery, copy, motion and critique to the work that needs them.
+- [Two-brand comparison collection](examples/quality-benchmark/README.md), [execution evidence](examples/quality-benchmark/EVIDENCE.md) and [revision continuity](examples/quality-benchmark/CONTINUITY.md) show the methods in use.
+- [Safe template adoption](scripts/adopt_template.py) copies selected records into a separate project while preserving links to this library.

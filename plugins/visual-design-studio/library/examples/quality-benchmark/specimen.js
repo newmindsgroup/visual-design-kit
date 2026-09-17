@@ -1,0 +1,15 @@
+// Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+const q=new URLSearchParams(location.search);const brand=q.get('brand')==='tidal'?'tidal':'form';const variant=['generic','wrong','revised'].includes(q.get('variant'))?q.get('variant'):'candidate';
+const data={form:{wordmark:'FORM',descriptor:'Object studies / No. 01',eyebrow:'Material, light, intention.',headline:'A quieter kind of presence.',intro:'Green glass. Warm stone. An everyday object, considered from every angle.',cta:'Explore the object',photo:'assets/form.png',alt:'Synthetic still life of a green FORM bottle on warm stone.',caption:'FORM / Original synthetic product study',sectionTitle:'Let the material do the talking.',rationale:'The warm neutral ground and considered serif give the object room. The photograph carries the material detail; restrained type carries the message. Bottle shape, label and color remain fixed across revisions.'},tidal:{wordmark:'TIDAL',descriptor:'Open water / Shared mornings',eyebrow:'Good mornings start outside.',headline:'Find your people. Take the plunge.',intro:'A little saltwater. A shared morning. Discover a different way to start your weekend.',cta:'Meet the club',photo:'assets/tidal.png',alt:'Synthetic documentary photograph of four adult swimmers entering calm coastal water.',caption:'TIDAL / Synthetic coastal concept, not a real event',sectionTitle:'More saltwater. More shared mornings.',rationale:'A condensed sporting voice meets an unposed coastal scene. Cobalt links the caps, sea and identity. The welcoming copy leads with companionship rather than performance or invented safety promises.'}};
+const d={...data[brand]};if(variant==='revised')d.headline=brand==='form'?'An everyday object, quietly considered.':'A shared morning. A fresh perspective.';
+if(variant==='wrong'){if(brand==='form'){d.intro='Green glass. Warm stone. Clinically proven to improve your sleep.';}else{d.headline='An exclusive escape, reserved for a few.';d.intro='A private coastal ritual for those who demand something extraordinary.';}}
+document.body.className=brand+' '+variant;document.title=d.wordmark+' | Fictional composition';
+for(const [id,key] of [['wordmark','wordmark'],['descriptor','descriptor'],['eyebrow','eyebrow'],['headline','headline'],['intro','intro'],['cta','cta'],['caption','caption'],['section-title','sectionTitle'],['rationale','rationale']])document.getElementById(id).textContent=d[key];
+const image=document.getElementById('photo');image.src=d.photo;image.alt=d.alt;document.getElementById('state').textContent='Visual Design Kit / Review specimen';
+window.specimen={brand,variant,headline:d.headline,product:d.photo,wordmark:d.wordmark};
+
+// Keep the revised invitation's two phrases together without locking a no-wrap box.
+if(brand==='tidal'&&variant==='revised'){
+ const heading=document.getElementById('headline');heading.replaceChildren();
+ for(const text of ['A shared morning. ','A fresh perspective.']){const phrase=document.createElement('span');phrase.style.display='block';phrase.textContent=text;heading.append(phrase);}
+}

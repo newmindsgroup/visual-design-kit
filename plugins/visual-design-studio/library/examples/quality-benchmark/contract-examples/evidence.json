@@ -1,0 +1,106 @@
+{
+  "Version-Timestamp": "2026-09-16 18:27:39 AST",
+  "asset_uses": [],
+  "conflicts": [],
+  "findings": [
+    {
+      "claim": "FORM uses the exact fictional source photograph and bound PDF export.",
+      "id": "F-FORM",
+      "reason": "Local bytes identify the teaching artifact only.",
+      "source_ids": [
+        "SRC-FORM",
+        "SRC-FORM-EXPORT"
+      ],
+      "status": "observed"
+    },
+    {
+      "claim": "TIDAL uses the exact fictional source photograph and bound PDF and motion exports.",
+      "id": "F-TIDAL",
+      "reason": "Local bytes identify the teaching artifact only.",
+      "source_ids": [
+        "SRC-TIDAL",
+        "SRC-TIDAL-EXPORT",
+        "SRC-TIDAL-MOTION"
+      ],
+      "status": "observed"
+    },
+    {
+      "claim": "Supplied technical observation: browser-release reported 20 combinations passing; v4 motion playback ended at 12 seconds with 287 decoded callbacks and minimum 2539 sampled brand pixels.",
+      "id": "F-TECHNICAL",
+      "reason": "Raw proof stays repository-private and is not human, hardware, accessibility, or aesthetic acceptance.",
+      "source_ids": [
+        "SRC-FORM-EXPORT",
+        "SRC-TIDAL-EXPORT",
+        "SRC-TIDAL-MOTION"
+      ],
+      "status": "observed"
+    }
+  ],
+  "readiness": "provisional",
+  "record_id": "QB-EVIDENCE-001",
+  "requested_use": "internal fictional quality benchmark",
+  "scenario": "new-brand",
+  "schema_version": "1.0-proposed",
+  "sources": [
+    {
+      "allowed_uses": [
+        "internal-fictional-review"
+      ],
+      "authority": "original fictional exercise asset",
+      "id": "SRC-FORM",
+      "path": "examples/quality-benchmark/assets/form.png",
+      "retrieved_at": "2026-09-16",
+      "rights": "fictional-exercise-authorized",
+      "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01",
+      "status": "current"
+    },
+    {
+      "allowed_uses": [
+        "internal-fictional-review"
+      ],
+      "authority": "original fictional exercise asset",
+      "id": "SRC-TIDAL",
+      "path": "examples/quality-benchmark/assets/tidal.png",
+      "retrieved_at": "2026-09-16",
+      "rights": "fictional-exercise-authorized",
+      "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd",
+      "status": "current"
+    },
+    {
+      "allowed_uses": [
+        "internal-fictional-review"
+      ],
+      "authority": "local fictional exercise export",
+      "id": "SRC-FORM-EXPORT",
+      "path": "examples/quality-benchmark/exports/form-review.pdf",
+      "retrieved_at": "2026-09-16",
+      "rights": "fictional-exercise-authorized",
+      "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6",
+      "status": "current"
+    },
+    {
+      "allowed_uses": [
+        "internal-fictional-review"
+      ],
+      "authority": "local fictional exercise export",
+      "id": "SRC-TIDAL-EXPORT",
+      "path": "examples/quality-benchmark/exports/tidal-review.pdf",
+      "retrieved_at": "2026-09-16",
+      "rights": "fictional-exercise-authorized",
+      "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb",
+      "status": "current"
+    },
+    {
+      "allowed_uses": [
+        "internal-fictional-review"
+      ],
+      "authority": "local fictional exercise export",
+      "id": "SRC-TIDAL-MOTION",
+      "path": "examples/quality-benchmark/exports/tidal-motion.webm",
+      "retrieved_at": "2026-09-16",
+      "rights": "fictional-exercise-authorized",
+      "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19",
+      "status": "current"
+    }
+  ]
+}

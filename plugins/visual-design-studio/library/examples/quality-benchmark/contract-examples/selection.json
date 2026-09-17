@@ -1,0 +1,56 @@
+{
+  "Version-Timestamp": "2026-09-16 18:27:39 AST",
+  "catalog": {
+    "path": "capabilities.json",
+    "schema_version": "1.0-proposed",
+    "sha256": "dd6a01f7869f74cf4e76e5584ab49239f0c7d8285e087b520b24f090b416a560"
+  },
+  "excluded": [],
+  "patterns": [],
+  "prerequisites": [
+    {
+      "disposition": "reuse",
+      "evidence": "examples/quality-benchmark/README.md and assets/provenance.json",
+      "id": "research",
+      "reason": "The frozen fictional briefs and local asset provenance already bound the audience and claim limits for this heading-only exercise."
+    },
+    {
+      "disposition": "reuse",
+      "evidence": "examples/quality-benchmark/README.md",
+      "id": "reference-direction",
+      "reason": "FORM and TIDAL direction remains frozen while only the headings are revised."
+    },
+    {
+      "disposition": "create",
+      "evidence": "examples/quality-benchmark/contract-examples/handoff.json",
+      "id": "handoff",
+      "reason": "The receiving reviewer needs an exact candidate, checks and unresolved human-review hold."
+    },
+    {
+      "disposition": "reuse",
+      "evidence": "examples/quality-benchmark/README.md",
+      "id": "foundations",
+      "reason": "The teaching collection keeps the approved fictional composition and comparison-control rules."
+    },
+    {
+      "disposition": "create",
+      "evidence": "examples/quality-benchmark/EVIDENCE.md",
+      "id": "typography",
+      "reason": "The longer revised headings required a local fit recheck without changing the brand type system."
+    }
+  ],
+  "provenance": {
+    "catalog_sha256": "dd6a01f7869f74cf4e76e5584ab49239f0c7d8285e087b520b24f090b416a560",
+    "original_input": "Two original fictional FORM and TIDAL compositions with a heading-only revised variant.",
+    "repair_actor": "benchmark exercise maintainer",
+    "resolution_basis": "The frozen brief limits the revision to headline fit and preserves photograph, wordmark, copy and tokens."
+  },
+  "schema_version": "1.0",
+  "selected": [
+    {
+      "entry": "draft-skills/design-web-copy-fit/SKILL.md",
+      "id": "web-copy-fit",
+      "sha256": "3ffc8ff5bcb673ff9c57694e88aa530cb2ccc0e4db97c4faa66d7fa04e96b57a"
+    }
+  ]
+}

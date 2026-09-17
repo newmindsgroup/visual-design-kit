@@ -1,11 +1,15 @@
 # Visual Design Studio
 
-Version-Timestamp: 2026-09-14T11:03:01.247577-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
-A local plugin candidate with one starting skill and 130 selectively loaded design capabilities. Begin with [readiness](READINESS.md) and [independent project setup](PROJECT-LAUNCH.md). Use [feedback](FEEDBACK.md) to propose reusable improvements.
+One starting skill selects from 130 design capabilities. This 0.2.0 candidate improves completion checks, scoped capability selection, project continuity, optional book access and demonstrated design craft. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
 
-The library is separate from client projects. No client information is required to prepare this package. Codex manifest exists; installation and fresh-session discovery remain unverified. Claude Code use through the explicit starting-skill file path is intended but not yet verified; native Claude plugin packaging is not claimed.
+The 0.1.0 installation and Codex startup have historical evidence. They do not automatically validate this edition. This candidate's installation, source checks and reviews are recorded in the repository release evidence. Native Claude plugin packaging is not claimed; Claude Code and Cursor can read the exact entry file in their project. Capability files are selectively read references, not 130 globally registered commands.
 
-PAYLOAD.sha256 pins raw file bytes with SHA-256, sorted relative POSIX paths, no content normalization, excluding only itself. Its independently supplied digest pins the complete listed payload. Version upgrades produce a new candidate rather than changing an active project's library.
+Use the library read-only. Keep each brand in its own project with a pinned library version, exact [selection record](library/SELECTION-CONTRACT.md) and canonical [RESUME.md](library/RESUME-CONTRACT.md). `CURRENT.md` is only a legacy pointer. Use `library/scripts/adopt_template.py` to copy Markdown templates without breaking instruction links; dry-run first, then `--apply` within the authorized project. Existing files are not overwritten.
 
-The required interface capabilities array is empty: the 130 design capabilities are reference workflows, not registered connector actions.
+Optional book access uses an owner-supplied local path and the packaged read-only helper. Full books, credentials and client assets never ship in this plugin. Follow [local retrieval](library/draft-skills/design-reference-direction/references/reference-retrieval.md). No source corpus is required to use the core workflow.
+
+`PAYLOAD.sha256` pins exact raw bytes with sorted relative POSIX paths, excluding itself. Its digest must come from a trusted source. New editions get new pins; installing one does not change existing projects. [Feedback](FEEDBACK.md) proposes scoped, tested improvements; no unattended reporting or model training is implied.
+
+The manifest interface capabilities array is empty because the reference workflows are not connector actions.

@@ -4,9 +4,9 @@
 
 **A reusable design workflow for humans working with Codex.** The Claude Code route is documented but its fresh wrapper execution remains unverified. Research the brief, choose a direction, create the work, verify the output, and carry accepted decisions into the next step.
 
-> **Current status: supervised evaluation. No tagged release exists yet.** Codex installation and project-level startup have been checked on the authoring Mac. The library contains 130 reference capabilities, but end-to-end artwork production, revisions, and recovery across both brand scenarios are still pending. This is usable for a supervised first project, not a claim that every tool or deliverable is production-tested.
+> **Current status: supervised evaluation. No tagged release exists yet.** Codex installation and project-level startup have been checked on the authoring Mac. The library contains 130 reference capabilities. The 0.2.0 candidate adds rendered fictional brand examples, revision and recovery checks, stronger validators and portable templates. Final edition-specific evidence is recorded below. This is usable for a supervised first project, not a claim that every tool or deliverable is production-tested.
 
-Version-Timestamp: 2026-09-14T15:21:22.686262-04:00
+Version-Timestamp: 2026-09-16T22:24:18.944807-04:00
 
 [Installation record](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Remaining work](BACKLOG.md)
 
@@ -226,13 +226,15 @@ visual-design-kit/
     library/                        Reference skills, templates and checks
     PROJECT-LAUNCH.md                Independent project contract
     FEEDBACK.md                     Reviewed improvement process
-    READINESS.md                    Historical candidate boundaries
+    READINESS.md                    Edition scope and verification limits
     PAYLOAD.sha256                  File integrity manifest
 ```
 
 This GitHub repository is the curated reusable snapshot. The original local research workspace and its history were not uploaded wholesale. The [backlog](BACKLOG.md) includes completing a repeatable, reviewed source-to-release update process. Private books, client sources, generated experiments, and provider receipts are excluded.
 
 ## What comes next
+
+The [September 16 quality audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) identifies concrete reliability fixes and the next creative-quality work batches. It distinguishes existing methods from missing execution evidence. The pinned plugin has not been changed by the audit. Version-Timestamp: 2026-09-16 17:22:38 AST.
 
 Finish artifact creation, revision, and resume tests in independent projects; verify Claude startup; test upgrades/removal and negative startup cases; reconcile preserved status text; complete release review and publish a versioned release. Then use the two actual brand projects with human review and return the useful lessons.
 
@@ -252,3 +254,14 @@ Expected: 8 Python tests and 11 JavaScript tests. Check `git status --short` in 
 ## Optional books and additional IDEs
 
 See [portable reference-library requirements](resources/README.md) and [Codex, Cursor and Claude Code setup](docs/IDE-COMPATIBILITY.md). Full source books are not bundled. Transfer preparation and runtime acceptance remain explicit tasks; sharing a Drive folder does not establish source permissions or completeness.
+
+
+## Quality edition 0.2.0
+
+[What changed and what was tested](docs/QUALITY-020-RELEASE.md) · [Resume the work](RESUME.md) · [Implementation plan](docs/QUALITY-IMPLEMENTATION-020.md) · [Visual calibration collection](plugins/visual-design-studio/library/examples/quality-benchmark/README.md)
+
+This edition strengthens the existing capabilities instead of adding another overlapping design agent. A shared set of fictional examples teaches the difference between technical correctness, distinctive craft and a polished design that violates the brief. It includes precise revisions, motion, PDF proofs and intentional failure controls. Human acceptance stays separate from automated checks.
+
+Run the collection locally from the library directory with `python3 -m http.server 17672 --bind 127.0.0.1`, then open `http://127.0.0.1:17672/examples/quality-benchmark/`. This binds only to your computer. It does not publish client work.
+
+Version 0.2.0 is now installed and hash-verified on the authoring Mac. Its independent review, 74 code tests, 20 browser cases and export checks are recorded in the edition evidence above. Use the default `main` branch for team sharing, then pin the chosen commit in each project. The package remains a supervised evaluation candidate; publishing on `main` does not imply that every tool or real-world deliverable has been tested. A real project still supplies its own brief, evidence and approval.

@@ -1,8 +1,10 @@
 # Completion backlog
 
-Version-Timestamp: 2026-09-14T11:33:51.300274-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 ## First usable release
+
+The [design quality audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) adds an ordered pre-use improvement plan, including a reproduced handoff-check conflict, selection validation, continuity/link fixes and executed craft benchmarks. Its findings are recommendations, not completed implementations. Version-Timestamp: 2026-09-16 17:22:38 AST.
 
 - [x] Assemble 130-capability library and single-entry Codex plugin candidate.
 - [x] Add independent existing-brand/new-brand launch and sanitized feedback instructions.
@@ -49,10 +51,17 @@ Do not add arbitrary skills or repeat successful tests merely to extend this lis
 
 ## Reference portability and IDE follow-up
 
-- [ ] Owner supplies exact Drive destination and eligible sharing rights.
-- [ ] Build portable relative-path catalog and rights-reviewed transfer allowlist.
+- [x] Owner confirmed Google Drive distribution and recipient local use; bundle staged in a dedicated Drive sync folder. Cloud sharing and download still need verification.
+- [x] Built relative-path catalog, permission records and checksum manifest for the selected sources.
 - [ ] Resolve uncopied/restricted/unsupported references and inspect outstanding OCR/visual gaps where useful.
-- [ ] Verify transfer hashes and source/page retrieval on a receiving machine.
+- [x] Verified staged bundle hashes and source/page retrieval from a separate local project folder.
+- [ ] Verify cloud synchronization and a download on an independent receiving machine.
 - [ ] Execute Cursor startup, artifact/revision and recovery acceptance.
 - [ ] Execute Claude Code wrapper startup, artifact/revision and recovery acceptance.
 - [ ] Keep optional reference access separate from kit installation; no blanket 100-percent knowledge claim.
+
+## 0.2.0 quality implementation
+
+The September 16 audit now has a [linked implementation and evidence record](docs/QUALITY-020-RELEASE.md). Track actual remaining gates there and in [RESUME](RESUME.md); do not re-open repaired gaps solely because this historical backlog lists them. Human preference, real project use and device tests remain distinct from kit implementation.
+
+The eleven September 16 audit implementation items are complete in edition 0.2.0; [final evidence](docs/QUALITY-020-RELEASE.md) and [review disposition](docs/QUALITY-020-REVIEW.md) supersede their pending implementation status. Next acceptance is a separately scoped real project and its actual user/device review. Avoid creating another broad catalog expansion before observing a concrete unmet need.

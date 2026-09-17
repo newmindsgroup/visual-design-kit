@@ -1,0 +1,102 @@
+{
+  "Version-Timestamp": "2026-09-16T18:41:55.000007-04:00",
+  "browser": {
+    "passed": true,
+    "candidate_revision_viewports": 20,
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "screenshots": 23,
+    "console_errors": [],
+    "native_browser_zoom": "not_run",
+    "checks": [
+      "loaded fonts",
+      "wrap candidates",
+      "overflow",
+      "user text spacing",
+      "blocked font fallback",
+      "keyboard",
+      "revision invariant comparisons",
+      "injected wordmark/photo/palette faults",
+      "motion loop",
+      "reduced motion",
+      "timeline load failure"
+    ],
+    "proof_run": "browser-reviewed"
+  },
+  "motion": {
+    "duration": 12,
+    "width": 1280,
+    "height": 720,
+    "ended": true,
+    "decodedCallbacks": 286,
+    "brandPixelsMin": 2539,
+    "brandPixelsMax": 2556,
+    "served_sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19",
+    "Version-Timestamp": "2026-09-16T18:40:21.076452-04:00",
+    "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19",
+    "scope": "Full clock playback and sampled decoded-frame brand region; no hardware or aesthetic acceptance",
+    "wordmark_region": {
+      "x": 64,
+      "y": 43,
+      "width": 130,
+      "height": 66,
+      "channel_threshold_exclusive": 230,
+      "minimum_pixels": 2000
+    },
+    "expected_source_frames": 288,
+    "callback_limit": "requestVideoFrameCallback may omit frames including the initial frame; callback count is observations, not an all-decoded-frames claim."
+  },
+  "exports": {
+    "form-review.pdf": {
+      "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6",
+      "bytes": 2336560
+    },
+    "tidal-motion.webm": {
+      "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19",
+      "bytes": 3549749
+    },
+    "tidal-review.pdf": {
+      "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb",
+      "bytes": 1553729
+    }
+  },
+  "limits": [
+    "Fictional teaching examples, not client or human aesthetic acceptance",
+    "Source stills are raster originals; type, layout and motion are editable",
+    "Whitespace-based wrap checker is not universal multilingual typography validation",
+    "User text spacing prioritizes preserved content over designed line shape",
+    "Target hardware, assistive technology and native browser zoom remain untested"
+  ],
+  "measured_color_pairs": [
+    {
+      "foreground": "#ffffff",
+      "background": "#14251f",
+      "contrast": 15.98
+    },
+    {
+      "foreground": "#073ccf",
+      "background": "#efeee6",
+      "contrast": 7.06
+    },
+    {
+      "foreground": "#ffffff",
+      "background": "#073ccf",
+      "contrast": 8.21
+    },
+    {
+      "foreground": "#334155",
+      "background": "#f1f2f3",
+      "contrast": 9.24
+    },
+    {
+      "foreground": "#133900",
+      "background": "#e7ff86",
+      "contrast": 11.81
+    }
+  ]
+}

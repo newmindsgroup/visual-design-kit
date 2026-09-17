@@ -32,4 +32,10 @@ Return separate decisions for photographic appearance, factual product fidelity,
 
 Apply the scope, evidence and decision-combination rules in the [shared rubric](../../templates/media-quality-rubric.md).
 
-Version-Timestamp: 2026-09-13T12:22:45-04:00
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+
+## Rendered calibration
+
+Version-Timestamp: 2026-09-16T18:06:33.096655-04:00
+
+Use the [shared fictional collection](../../examples/quality-benchmark/README.md) for comparative quality, rendered typography, precise revision and motion evidence. Inspect its recorded limits; do not inherit its fonts, style or agent review as approval for another brand.

@@ -5,7 +5,7 @@ description: Select, pair, typeset and verify project-specific typography, inclu
 
 # Typography selection and use
 
-Version-Timestamp: 2026-09-08 22:17:00 AST
+Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
 Agent-Attribution: computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.149.1; timestamp=2026-09-08 22:17:00 AST
 
@@ -74,3 +74,9 @@ Use the [craft laboratory](../../CRAFT-LAB.md) for specimens and bounded checks.
 Version-Timestamp: 2026-09-11T19:51:13-04:00
 
 Inspect native-size and context previews for orphan words, density and hierarchy. Recompose width or type size without sacrificing required readability. Use the [specialist workflow](../../SCREEN-CONTENT-SKILLS.md) for the relevant detailed methods.
+
+## Rendered calibration
+
+Version-Timestamp: 2026-09-16T18:06:33.096655-04:00
+
+Use the [shared fictional collection](../../examples/quality-benchmark/README.md) for comparative quality, rendered typography, precise revision and motion evidence. Inspect its recorded limits; do not inherit its fonts, style or agent review as approval for another brand.

@@ -1,0 +1,265 @@
+{
+  "Version-Timestamp": "2026-09-16 18:27:39 AST",
+  "candidate": {
+    "approval": {
+      "status": "none"
+    },
+    "artifacts": [
+      {
+        "path": "examples/quality-benchmark/specimen.html",
+        "sha256": "234469669d09f010b29a62b20ff75b2eba3e985c51f525f49a1330d7b2825b6f"
+      },
+      {
+        "path": "examples/quality-benchmark/specimen.css",
+        "sha256": "e4f1594f9c75bb9b65bf259d1b3dab6b01f47060a35d893ecb03fca68a307101"
+      },
+      {
+        "path": "examples/quality-benchmark/specimen.js",
+        "sha256": "cd126bfc26704bde382e2d6d2d1de3c72095dc62c7dd2b0cc8ff6b0c5f2131ec"
+      },
+      {
+        "path": "examples/quality-benchmark/motion.html",
+        "sha256": "afa0f77a1c1cb545d2e008de158b961a13142fc1d34e702a90e8fdf1a3084821"
+      },
+      {
+        "path": "examples/quality-benchmark/motion.js",
+        "sha256": "d3b23498894744f5fdaf0beaacca6958aaf903036f7d5320e436887c11c0c0e2"
+      },
+      {
+        "path": "examples/quality-benchmark/timeline.json",
+        "sha256": "da8d44755557264c5940c67edad27e751631e90cd7c33e02eca9c9ccc9fb937f"
+      },
+      {
+        "path": "examples/quality-benchmark/assets/form.png",
+        "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+      },
+      {
+        "path": "examples/quality-benchmark/assets/tidal.png",
+        "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+      },
+      {
+        "path": "examples/quality-benchmark/assets/newsreader.ttf",
+        "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+      },
+      {
+        "path": "examples/quality-benchmark/assets/archivo.ttf",
+        "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+      },
+      {
+        "path": "examples/quality-benchmark/assets/barlow-condensed.ttf",
+        "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"
+      },
+      {
+        "path": "examples/quality-benchmark/exports/form-review.pdf",
+        "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6"
+      },
+      {
+        "path": "examples/quality-benchmark/exports/tidal-review.pdf",
+        "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb"
+      },
+      {
+        "path": "examples/quality-benchmark/exports/tidal-motion.webm",
+        "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19"
+      }
+    ]
+  },
+  "completion": "partial",
+  "current_checks": [
+    {
+      "candidate_artifacts": [
+        {
+          "path": "examples/quality-benchmark/specimen.html",
+          "sha256": "234469669d09f010b29a62b20ff75b2eba3e985c51f525f49a1330d7b2825b6f"
+        },
+        {
+          "path": "examples/quality-benchmark/specimen.css",
+          "sha256": "e4f1594f9c75bb9b65bf259d1b3dab6b01f47060a35d893ecb03fca68a307101"
+        },
+        {
+          "path": "examples/quality-benchmark/specimen.js",
+          "sha256": "cd126bfc26704bde382e2d6d2d1de3c72095dc62c7dd2b0cc8ff6b0c5f2131ec"
+        },
+        {
+          "path": "examples/quality-benchmark/motion.html",
+          "sha256": "afa0f77a1c1cb545d2e008de158b961a13142fc1d34e702a90e8fdf1a3084821"
+        },
+        {
+          "path": "examples/quality-benchmark/motion.js",
+          "sha256": "d3b23498894744f5fdaf0beaacca6958aaf903036f7d5320e436887c11c0c0e2"
+        },
+        {
+          "path": "examples/quality-benchmark/timeline.json",
+          "sha256": "da8d44755557264c5940c67edad27e751631e90cd7c33e02eca9c9ccc9fb937f"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/form.png",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/tidal.png",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/newsreader.ttf",
+          "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/archivo.ttf",
+          "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/barlow-condensed.ttf",
+          "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/form-review.pdf",
+          "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/tidal-review.pdf",
+          "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/tidal-motion.webm",
+          "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19"
+        }
+      ],
+      "criterion": "C-TECHNICAL-OBSERVATION",
+      "evidence": {
+        "path": "examples/quality-benchmark/contract-examples/evidence.json",
+        "sha256": "54c7943f1e92d0f4aba03550c073221e6b48ffc61092f9a57dcf07f61be8a853"
+      },
+      "status": "passed"
+    },
+    {
+      "candidate_artifacts": [
+        {
+          "path": "examples/quality-benchmark/specimen.html",
+          "sha256": "234469669d09f010b29a62b20ff75b2eba3e985c51f525f49a1330d7b2825b6f"
+        },
+        {
+          "path": "examples/quality-benchmark/specimen.css",
+          "sha256": "e4f1594f9c75bb9b65bf259d1b3dab6b01f47060a35d893ecb03fca68a307101"
+        },
+        {
+          "path": "examples/quality-benchmark/specimen.js",
+          "sha256": "cd126bfc26704bde382e2d6d2d1de3c72095dc62c7dd2b0cc8ff6b0c5f2131ec"
+        },
+        {
+          "path": "examples/quality-benchmark/motion.html",
+          "sha256": "afa0f77a1c1cb545d2e008de158b961a13142fc1d34e702a90e8fdf1a3084821"
+        },
+        {
+          "path": "examples/quality-benchmark/motion.js",
+          "sha256": "d3b23498894744f5fdaf0beaacca6958aaf903036f7d5320e436887c11c0c0e2"
+        },
+        {
+          "path": "examples/quality-benchmark/timeline.json",
+          "sha256": "da8d44755557264c5940c67edad27e751631e90cd7c33e02eca9c9ccc9fb937f"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/form.png",
+          "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/tidal.png",
+          "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/newsreader.ttf",
+          "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/archivo.ttf",
+          "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+        },
+        {
+          "path": "examples/quality-benchmark/assets/barlow-condensed.ttf",
+          "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/form-review.pdf",
+          "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/tidal-review.pdf",
+          "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb"
+        },
+        {
+          "path": "examples/quality-benchmark/exports/tidal-motion.webm",
+          "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19"
+        }
+      ],
+      "criterion": "C-HUMAN-REVIEW",
+      "status": "pending"
+    }
+  ],
+  "historical_checks": [],
+  "inputs": [
+    {
+      "path": "examples/quality-benchmark/README.md",
+      "sha256": "76891eeb6f6d17e22a543b3d971f395801eefdb3421e01e8768767b36512ffe3"
+    },
+    {
+      "path": "examples/quality-benchmark/assets/provenance.json",
+      "sha256": "90acefe28a93228b2da2f97c506f067a40cfd792e435245bd093fdd3b252434c"
+    }
+  ],
+  "next_action": "Human design reviewer records a brief-specific comparative judgment or keeps the collection provisional.",
+  "outputs": [
+    {
+      "path": "examples/quality-benchmark/exports/form-review.pdf",
+      "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6"
+    },
+    {
+      "path": "examples/quality-benchmark/exports/tidal-review.pdf",
+      "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb"
+    },
+    {
+      "path": "examples/quality-benchmark/exports/tidal-motion.webm",
+      "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19"
+    }
+  ],
+  "owner": "benchmark exercise maintainer",
+  "readiness": "provisional",
+  "record_id": "QB-HANDOFF-001",
+  "registry": {
+    "criteria": [
+      "C-TECHNICAL-OBSERVATION",
+      "C-HUMAN-REVIEW"
+    ],
+    "decisions": [
+      "D-REVISED-HEADLINE-ONLY"
+    ],
+    "personas": [
+      "P-FICTIONAL-REVIEWER"
+    ],
+    "requirements": [
+      "R-FICTIONAL-SCOPE"
+    ],
+    "use_cases": [
+      "U-HEADLINE-REVISION"
+    ]
+  },
+  "requested_action": "review",
+  "schema_version": "2.0",
+  "scope": "phase-only",
+  "stage": "quality-benchmark-review",
+  "subject_type": "persona",
+  "traceability": [
+    {
+      "criterion": "C-TECHNICAL-OBSERVATION",
+      "decision": "D-REVISED-HEADLINE-ONLY",
+      "persona": "P-FICTIONAL-REVIEWER",
+      "requirement": "R-FICTIONAL-SCOPE",
+      "use_case": "U-HEADLINE-REVISION"
+    },
+    {
+      "criterion": "C-HUMAN-REVIEW",
+      "decision": "D-REVISED-HEADLINE-ONLY",
+      "persona": "P-FICTIONAL-REVIEWER",
+      "requirement": "R-FICTIONAL-SCOPE",
+      "use_case": "U-HEADLINE-REVISION"
+    }
+  ]
+}
