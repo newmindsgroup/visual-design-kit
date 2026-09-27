@@ -6,7 +6,7 @@
 
 > **Current status: supervised evaluation.** The library contains 130 reference capabilities. Version 0.2.1 corrects public onboarding and package documentation. The [0.2.0 evidence](docs/QUALITY-020-RELEASE.md) covers the existing fictional examples, validators and bounded authoring-machine checks. A public repository or a matching checksum does not establish production readiness. Each project still needs human review and checks of its actual outputs.
 
-Version-Timestamp: 2026-09-27 13:45:10 AST
+Version-Timestamp: 2026-09-27T14:05:22-04:00
 
 [Installation](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Development checks](docs/DEVELOPMENT.md)
 
@@ -89,6 +89,7 @@ Clone the repository into a dedicated library directory:
 ```sh
 git clone https://github.com/newmindsgroup/visual-design-kit.git
 cd visual-design-kit
+git checkout --detach v0.2.1
 ```
 
 Choose a reviewed commit for the project and record `git rev-parse HEAD`. Keep that checkout unchanged during the project. See the [current package pin](docs/VERIFIED-PIN.md) and [verification commands](INSTALLATION.md#verify-the-package). A changing `main` branch is not a fixed project version.

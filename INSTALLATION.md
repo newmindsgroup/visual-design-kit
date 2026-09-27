@@ -1,6 +1,6 @@
 # Install for an independent project
 
-Version-Timestamp: 2026-09-27 13:45:10 AST
+Version-Timestamp: 2026-09-27T14:05:22-04:00
 
 Keep one trusted kit checkout separate from each brand project. The kit supplies instructions and local helpers. Your AI host, design apps, accounts and provider permissions are separate.
 
@@ -20,6 +20,7 @@ The shell examples use macOS or Linux syntax. Authoring-machine evidence is from
 ```sh
 git clone https://github.com/newmindsgroup/visual-design-kit.git
 cd visual-design-kit
+git checkout --detach v0.2.1
 git rev-parse HEAD
 ```
 

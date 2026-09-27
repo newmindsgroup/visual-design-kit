@@ -2,7 +2,7 @@
 
 Version-Timestamp: 2026-09-27 13:45:10 AST
 
-Package version: 0.2.1. Status: supervised evaluation.
+Package version: 0.2.1. Release tag: `v0.2.1`. Status: public, supervised evaluation.
 
 SHA-256 of `plugins/visual-design-studio/PAYLOAD.sha256`:
 

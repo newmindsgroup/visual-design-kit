@@ -1,10 +1,14 @@
 # Resume Visual Design Kit
 
-Version-Timestamp: 2026-09-27T13:51:02-04:00
+Version-Timestamp: 2026-09-27T14:05:22-04:00
 
-Current package: 0.2.1 public distribution preparation. User approved making the dedicated repository public and MIT for original work. Start with [public release evidence](docs/PUBLIC-RELEASE-021.md), [installation](INSTALLATION.md) and [current pin](docs/VERIFIED-PIN.md). Verify remote visibility and branch state before stating publication is complete. Private books and client work remain outside this repository.
+Current package: 0.2.1, published publicly from main through PR 2. Original work uses MIT; third-party assets retain their notices. The release tag is `v0.2.1`. See [public release evidence](docs/PUBLIC-RELEASE-021.md), [installation](INSTALLATION.md) and [current pin](docs/VERIFIED-PIN.md).
 
-This patch repairs public onboarding and license boundaries. Its checks do not upgrade host, provider, visual or client acceptance. Prior installed-cache evidence below is 0.2.0 only; no new installation or project-pin migration is implied.
+Anonymous API access, README retrieval and HTTPS cloning were verified at merge commit `1a0c79d`. All 366 downloaded payload files matched. The anonymous checkout passed the 13 root tests and a bounded UI-plan startup. GitHub secret scanning, push protection, private vulnerability reporting and Dependabot alerts are enabled. No secret-scanning alerts were returned at verification time. Private books and client work remain outside the repository.
+
+Claude Fable 5.1 completed the approach and first milestone reviews. The implementing agent resolved the first milestone's checks and reran affected validation. An optional second confirmation timed out after 300 seconds and remains unconfirmed; both milestone attempts are consumed. Do not retry under a new ID or claim a second successful review. The successful first review and actual checks are the release evidence.
+
+Next: share the README/installation guide and use a pinned checkout in a separate brand project. No 0.2.1 native installation or existing project-pin migration is claimed. Native host, provider, visual, client and device acceptance remain scoped to that project. Prior 0.2.0 installation evidence below is historical.
 
 ## Prior 0.2.0 checkpoint
 

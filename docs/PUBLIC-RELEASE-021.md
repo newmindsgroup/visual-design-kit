@@ -1,4 +1,4 @@
-# Public edition preparation
+# Public edition release record
 
 Version-Timestamp: 2026-09-27T13:51:02-04:00
 
@@ -37,3 +37,13 @@ The next functional acceptance belongs in separate real projects: native host st
 The first milestone review returned Claude Fable 5.1 for candidate `cf6924e`. The reviewer had no tools and used the supplied public candidate and audit evidence. Its persona concern was resolved by reading every bilingual field label and all 35 component definitions: these are generic labels and selectors, without client names, filled values, product names or project identifiers. The public column heading now says English / Spanish label, and provenance explicitly describes that scope. An unnecessary private audit record identifier was removed.
 
 The ignored audit directory is matched by `.gitignore` and has no tracked files. Targeted reads of the maintainer checkpoint, backlog, historical audit/implementation records and asset provenance found no client identifiers or provider account/job IDs. A repository search found no old manifest-status consumers; the only `distribution_ready` mention is the regression assertion that it is absent. The test now also requires nonempty manifest entries. README links expose license exceptions, contribution guidance and security reporting, and installation explains checksum coverage. The actual returned review model identifier is `claude-fable-5-1`; no reviewer tool execution is claimed.
+
+## Publication receipt
+
+Version-Timestamp: 2026-09-27T14:05:22-04:00
+
+PR 2 merged to main at `1a0c79dfe67ea501f44c4131f0ddbc5748c0cabf`; its tree exactly matched checked candidate `2f4ab3b`. The repository visibility is public and GitHub recognizes MIT. An unauthenticated API request, README download and HTTPS clone succeeded. The anonymous clone matched that main commit, all 366 payload hashes passed, and its 13 root tests and bounded UI-plan startup passed. The host Python TLS-store probe failed before download; system curl with normal certificate validation completed the anonymous HTTP checks. No TLS verification was disabled.
+
+Secret scanning, push protection, private vulnerability reporting and Dependabot alerts were enabled and read back successfully. The secret-scanning endpoint returned no alerts at verification time; this is not a guarantee against future findings. No paid security plan or automatic dependency-fix workflow was enabled.
+
+The optional second same-milestone Claude confirmation timed out after 300 seconds with no review result. It remains unconfirmed and exhausted the two-attempt milestone budget. No review was retried under another ID. Publication relies on the successful first milestone review, implementing-agent resolution of its required checks, and the actual validation recorded above. The final receipt and tag instructions are documentation-only updates; packaged bytes retain digest `302a32f31d8861b99016e7c9936abdad42d882847c70dc00345ab10d2d887716`.
