@@ -1,47 +1,44 @@
-# Visual design library team preview
+# Visual design library
 
-Version-Timestamp: 2026-09-12T11:38:16-04:00
+Version-Timestamp: 2026-09-27 13:45:10 AST
 
-Candidate 11. This folder contains 130 selectable design capabilities. It is a review candidate, not an installed plugin or an automatic agent. Focused onboarding and motion reviews have returned. Whole-library release and full production acceptance remain pending. Use it with supervision.
+This library contains 130 selectable design capabilities, templates and local validators. It is part of the Visual Design Studio package. Use it with human supervision and inspect the requested outputs. The capability count describes reference coverage, not 130 completed production workflows.
 
-## Start in Codex
+## Start a project
 
-Claude Code has bounded staged-write and read-only recovery evidence against candidate09. Its initial capability IDs needed explicit repair, so clean end-to-end acceptance remains open.
+Keep the complete package in a trusted local checkout. Create a separate project directory for each brand's assets, decisions and deliverables. The AI host needs access to both locations. A repository URL alone does not load the files.
 
-Extract the complete folder to a local location the agent can read. Keep the library unchanged and create a separate project directory for client assets, decisions and outputs. Open a task with access to both directories. A pasted repository URL does not load the files automatically. Do not copy all skills into the conversation or install every provider.
+Use the package's [starting skill](../skills/design-project-start/SKILL.md) and [project launch contract](../PROJECT-LAUNCH.md). The entry selects only the relevant capabilities from `capabilities.json`. Read [usage](USAGE.md) for validator commands and [package readiness](../READINESS.md) for the current scope. Dated candidate records elsewhere in this folder remain historical evidence.
 
-Give the agent this instruction, replacing the bracketed paths and task:
+The repository's project starter supports an explicit entry in Codex or Cursor `AGENTS.md`, or Claude Code `CLAUDE.md`. Existing instructions and approvals remain authoritative. Cursor and Claude Code native-session acceptance is unverified. Each host must demonstrate which package it reads and where it writes.
 
-```text
-Use the design library at [absolute library path]. Read its README.md and USAGE.md, then select only the relevant capabilities from capabilities.json.
-Work in [absolute project path]. My task is [deliverable, audience, channel and purpose]. Existing assets and approved baseline are [paths or none]. Preserve accepted inputs and record missing facts honestly. Follow the selected workflow, inspect actual outputs and keep a handoff record in the project. Do not infer provider access, spending, publication or approval from this instruction.
-```
+## Requirements
 
-Use [usage](USAGE.md) and [readiness](TEAM-READINESS.md). Python 3 is needed for the supplied CLI, Node for JavaScript examples, and a browser for previews. Other tools are conditional and must be discovered on the adopting computer. No credentials or subscriptions are included. These instructions are manually followed in either agent; automatic discovery and installation have not been certified. A bounded fresh Codex planning and recovery exercise passed against candidate 03. Clean end-to-end Claude Code and final team acceptance remain pending; see RELEASE-NOTES.md for version-specific evidence.
+Python 3.9 or newer is required for the bundled command-line helpers; they use the standard library. A browser is needed for rendered examples, and Node.js for the JavaScript tests. Design apps, authenticated provider accounts and export tools are selected for the actual deliverable. No account, media credit or subscription is included.
+
+Book retrieval is optional and needs an authorized compatible local collection. Full books and a public reference download are not bundled. Continue without book evidence when the selected capability's required inputs are otherwise available, and record that limitation.
 
 ## Verify before use
 
-Keep PACKAGE-MANIFEST.json and SHA256SUMS with the folder. Complete the download-verification procedure below before running library commands. Verify the payload hashes and use `python3 -m design_system plan ui` from the library root as a bounded startup check. This checks selection only. The [media exercises](examples/media-quality-recipes/README.md) distinguish prepared, logic-tested and visual fixtures.
-
-## Updates and rollback
-
-Install a newer candidate into a separate folder. Compare its manifest and release scope before changing a project's library path. Keep the prior folder and record which version/hash the project uses. Never silently replace accepted project assets during a library update. Report defects with the selected skill ID, version, sanitized brief, actual result and expected result; keep client data in the project.
-
-Do not share this candidate externally until its final privacy, dependency and independent review gates are resolved. PowerPoint and backup setup remain deferred.
-
-
-## Verify the download without running library code
-
-Obtain the expected SHA-256 of the ZIP from the release owner through a separately trusted channel. A checksum delivered only inside the same download does not authenticate its source. On macOS, run the system command below against the downloaded archive and compare all 64 characters:
+Obtain the expected SHA-256 of the package's `PAYLOAD.sha256` from the trusted current pin record. From this `library` directory on macOS:
 
 ```sh
-shasum -a 256 /absolute/path/candidate-11-review.zip
+shasum -a 256 ../PAYLOAD.sha256
 ```
 
-Only extract after that value matches. In the extracted folder, use the system utility to check the manifest-listed bytes:
+Compare it with the expected digest. Then run the full package check from its parent directory:
 
 ```sh
-shasum -a 256 -c SHA256SUMS
+cd ..
+shasum -a 256 -c PAYLOAD.sha256
 ```
 
-SHA256SUMS covers all payloads and PACKAGE-MANIFEST.json. It does not hash itself; the separately verified archive hash covers the checksum file too. The extracted tree must contain exactly the manifest destinations plus PACKAGE-MANIFEST.json and SHA256SUMS: 316 files total. Reject extras, missing files and symlinks. Hash matching establishes identical bytes, not safe code, licensing or release approval. This candidate remains internal review only until the release owner resolves its open gates.
+On Linux, use `sha256sum` and `sha256sum -c PAYLOAD.sha256`. Stop on an unavailable expected digest, a mismatch, a missing file or unexplained checkout modifications. The checksum verifies listed bytes; it does not authenticate an unknown source or approve the content.
+
+`PACKAGE-MANIFEST.json` inventories the library. `CHECKSUMS.sha256` contains the library's internal checksums; the outer `PAYLOAD.sha256` covers the complete plugin. Keep all three files with the package. After verification, `python3 -m design_system plan ui` from the library directory is a bounded selection check. It does not generate or approve artwork.
+
+## Updates and feedback
+
+Review a newer edition in a separate checkout. Preserve the prior version and project pin, then deliberately adopt the new one and rerun affected checks. Keep the shared library read-only during project work. Report improvements through [the feedback contract](../FEEDBACK.md), using sanitized examples and actual results.
+
+Final delivery still requires the requested editable files, exports, output inspection and a truthful project handoff. Human approval, accessibility, provider behavior and target-device tests remain specific to the project. PowerPoint and backup setup are outside the currently verified scope.

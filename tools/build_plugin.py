@@ -1,5 +1,5 @@
 """Build or verify deterministic Visual Design Studio package metadata."""
-# Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+# Version-Timestamp: 2026-09-27T13:48:12-04:00
 import argparse
 import hashlib
 import json
@@ -134,16 +134,18 @@ def expected_files(plugin_root, source_root, version, timestamp):
             "destination": destination,
             "sha256": digest(library[destination]),
             "source": source_path,
-            "status": "candidate-input-not-release-approved",
+            "status": "versioned-evaluation-input",
         })
     manifest = {
         "Version-Timestamp": timestamp,
         "canonical_source": {"path": "curated-plugin-source", "version": version, "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper is copied from tools/reference_library.py."},
         "candidate": version,
-        "distribution_ready": False,
+        "distribution_scope": "public",
+        "publication_review_required": True,
+        "production_accepted": False,
         "files": manifest_files,
         "historical_source": HISTORICAL_SOURCE,
-        "status": "internal-review-only",
+        "status": "public-supervised-evaluation",
     }
     current["library/PACKAGE-MANIFEST.json"] = json_bytes(manifest)
     library_with_manifest = {path.removeprefix("library/"): content for path, content in current.items() if path.startswith("library/") and path != "library/CHECKSUMS.sha256"}

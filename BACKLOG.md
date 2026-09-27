@@ -2,7 +2,13 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
-## First usable release
+## Current public distribution milestone
+
+Version-Timestamp: 2026-09-27T13:51:02-04:00
+
+The [0.2.1 public preparation](docs/PUBLIC-RELEASE-021.md) supersedes older distribution and installation instructions below. Use [INSTALLATION](INSTALLATION.md) and [VERIFIED-PIN](docs/VERIFIED-PIN.md) for current setup. Native host acceptance, real-project output and target-device validation remain separate work. The collection-specific reference milestones below describe an author-only historical corpus, not a public download promise.
+
+## Historical first usable release backlog
 
 The [design quality audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) adds an ordered pre-use improvement plan, including a reproduced handoff-check conflict, selection validation, continuity/link fixes and executed craft benchmarks. Its findings are recommendations, not completed implementations. Version-Timestamp: 2026-09-16 17:22:38 AST.
 
