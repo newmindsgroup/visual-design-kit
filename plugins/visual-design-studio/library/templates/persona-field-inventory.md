@@ -4,9 +4,9 @@ Version-Timestamp: 2026-09-27 13:45:58 AST
 
 Every field is required structurally. Values may be unknown or justified not applicable. Field keys remain stable across languages. See [component definitions](persona-components.json).
 
-Provenance: the user selected a supplied historical persona example to inform this reusable field taxonomy and component accounting. Generic field paths and bilingual labels preserve that structural reference. The source's rendered pages, visual styling, persona claims and values, client data, images and implementation code are not included. The separate historical audit records the comparison; it is not required to use this template and does not supply a third-party license grant. Structural parity does not establish research quality or permission to reuse another project's content.
+Provenance: the user selected a supplied historical persona example to inform this reusable field taxonomy and component accounting. Field paths and bilingual labels use generic persona vocabulary, such as age, goals, motivations and decision criteria; they contain no client names, filled persona values or branded phrasing. The source's rendered pages, visual styling, persona claims and values, client data, images and implementation code are not included. The separate historical audit records the comparison; it is not required to use this template and does not supply a third-party license grant. Structural parity does not establish research quality or permission to reuse another project's content.
 
-| ID | Canonical field path | Group | English / original Spanish label | Type  |
+| ID | Canonical field path | Group | English / Spanish label | Type  |
 | --- | --- | --- | --- | ---  |
 | F001 | `id` | header | Id / No separate UI label verified | string  |
 | F002 | `name` | header | Name / No separate UI label verified | string  |

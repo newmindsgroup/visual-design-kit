@@ -42,6 +42,8 @@ shasum -a 256 -c PAYLOAD.sha256
 
 On Linux, use `sha256sum` for the first command and `sha256sum -c PAYLOAD.sha256` for the second. Stop if the expected digest is unavailable, any file check fails, or the checkout contains unexplained modifications. `git status --short` helps identify changed or extra files in a Git checkout. The manifest checks listed files; it does not itself reject extra files or authenticate an unknown publisher.
 
+`PAYLOAD.sha256` covers all packaged files, including `library/PACKAGE-MANIFEST.json` and `library/CHECKSUMS.sha256`; it excludes itself. Its own expected digest lives in the pin record outside the package. Repository-level docs, tooling and starter files are pinned by the Git commit.
+
 Use the verified SHA-256 of `PAYLOAD.sha256` for the starter's trusted-digest field. Use the absolute path to `plugins/visual-design-studio` for its package-root field. Run no bundled scripts until verification succeeds.
 
 ## Configure the project entry

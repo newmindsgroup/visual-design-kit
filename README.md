@@ -207,6 +207,10 @@ A maintainer reviews overlap, improves an existing skill or creates a distinct r
 8. Inspect actual outputs. A valid JSON record or successful export does not prove good design.
 9. Save a truthful project handoff and sanitized improvement proposals when useful.
 
+## License and contributions
+
+Original code, skills and documentation use the [MIT license](LICENSE). [Notices and asset provenance](NOTICE.md) explain the separately licensed fonts, generated fictional examples and excluded private reference material. Start with [contribution guidance](CONTRIBUTING.md), [security reporting](SECURITY.md), and the [public release audit](docs/PUBLIC-RELEASE-021.md).
+
 ## Repository map
 
 ```text
@@ -214,6 +218,14 @@ visual-design-kit/
   README.md                         Human and AI overview
   INSTALLATION.md                    Setup, verification and host limits
   BACKLOG.md                         Remaining work
+  RESUME.md                          Maintainer checkpoint
+  LICENSE                            MIT terms for original work
+  NOTICE.md                          Third-party and asset terms
+  CONTRIBUTING.md                    Contribution guidance
+  SECURITY.md                        Private security reporting
+  resources/                         Optional local reference setup
+  tools/                             Packaging and verification helpers
+  tests/                             Repository tests
   docs/
     CAPABILITIES.md                  Every catalog ID and dependency
     DEVELOPMENT.md                   Local tests and optional QA tools

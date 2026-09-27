@@ -7,7 +7,7 @@ Package version: 0.2.1. Status: supervised evaluation.
 SHA-256 of `plugins/visual-design-studio/PAYLOAD.sha256`:
 
 ```text
-dab4329f327fdcd1316bc83a9f15c8453fafd19bf11da1d3a666971325cf709f
+302a32f31d8861b99016e7c9936abdad42d882847c70dc00345ab10d2d887716
 ```
 
 All 366 listed payload hashes were verified during the release checks.

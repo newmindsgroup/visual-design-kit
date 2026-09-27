@@ -67,6 +67,7 @@ class BuildPluginTests(unittest.TestCase):
         self.assertTrue(manifest["publication_review_required"])
         self.assertEqual(manifest["status"], "public-supervised-evaluation")
         self.assertFalse(manifest["production_accepted"])
+        self.assertTrue(manifest["files"])
         self.assertTrue(all(item["status"] == "versioned-evaluation-input"
                             for item in manifest["files"]))
 

@@ -1,5 +1,5 @@
 {
-  "Version-Timestamp": "2026-09-27T13:52:12-04:00",
+  "Version-Timestamp": "2026-09-27T13:56:35-04:00",
   "candidate": "0.2.1",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper is copied from tools/reference_library.py.",
@@ -118,7 +118,7 @@
     },
     {
       "destination": "INVENTORY-SOURCES.md",
-      "sha256": "8a66dd5f9c73bfa091758b83e0f4ac985c967b11bfc23f82cde54b669546e739",
+      "sha256": "ff9463b8ed5a51120e8666a11c9d86a72e827c2c5122b3ec60a01787a47caaa8",
       "source": "curated-plugin-source/INVENTORY-SOURCES.md",
       "status": "versioned-evaluation-input"
     },
@@ -1990,7 +1990,7 @@
     },
     {
       "destination": "templates/persona-field-inventory.md",
-      "sha256": "3798aeff7fda0e70b482f3f01c45d196428bfa22cac96a1413b4fbad69f2df85",
+      "sha256": "04d3e008450ca3f75b09a5a683903e4f5f676e3f4b2fa23f740dedb9cd622139",
       "source": "curated-plugin-source/templates/persona-field-inventory.md",
       "status": "versioned-evaluation-input"
     },

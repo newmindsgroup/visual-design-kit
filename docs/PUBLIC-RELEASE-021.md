@@ -31,3 +31,9 @@ Final independent review and final package validation precede publication. Read 
 Keep prior project pins unchanged until deliberately upgraded. Public copies cannot be recalled by making the repository private again. If sensitive content is discovered later, address the underlying access or credential exposure and request appropriate history/cache remediation. Do not treat removal from the current branch as erasure of history.
 
 The next functional acceptance belongs in separate real projects: native host startup, actual output/revision/resume, provider access when needed, and relevant human/device review. These are reported limitations, not reasons to include private client data in this kit.
+
+## Final review disposition
+
+The first milestone review returned Claude Fable 5.1 for candidate `cf6924e`. The reviewer had no tools and used the supplied public candidate and audit evidence. Its persona concern was resolved by reading every bilingual field label and all 35 component definitions: these are generic labels and selectors, without client names, filled values, product names or project identifiers. The public column heading now says English / Spanish label, and provenance explicitly describes that scope. An unnecessary private audit record identifier was removed.
+
+The ignored audit directory is matched by `.gitignore` and has no tracked files. Targeted reads of the maintainer checkpoint, backlog, historical audit/implementation records and asset provenance found no client identifiers or provider account/job IDs. A repository search found no old manifest-status consumers; the only `distribution_ready` mention is the regression assertion that it is absent. The test now also requires nonempty manifest entries. README links expose license exceptions, contribution guidance and security reporting, and installation explains checksum coverage. The actual returned review model identifier is `claude-fable-5-1`; no reviewer tool execution is claimed.
