@@ -44,3 +44,9 @@ Native Cursor/Claude Code production, actual artwork quality, provider access, s
 ## Follow-up from review
 
 One pre-existing, non-blocking search issue remains: a case-folded match position can shift when Unicode case folding changes the character count. This can offset the excerpt window for some multilingual terms; source locators and original files remain available for confirmation. Track that bounded repair separately from this release. No review or test result proves that every book has complete extraction, that figures were understood, or that future designs meet human quality expectations.
+
+## Public distribution check
+
+Version-Timestamp: 2026-09-27T14:54:28-04:00
+
+PR 3 merged into public main at `86650767431afae226620504da619879aaf6f696`. A separate HTTPS clone with Git credential helpers and headers disabled verified all 376 payload entries and ran explicit standalone status successfully. The package digest is recorded in [VERIFIED-PIN](VERIFIED-PIN.md). A collection-specific setup guide was delivered separately through the authorized Drive folder, with viewer access confirmed; neither the collection nor its access link is included here.

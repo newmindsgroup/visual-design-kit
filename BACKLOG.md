@@ -12,7 +12,7 @@ Version-Timestamp: 2026-09-27T14:35:39-04:00
 - [x] Verify authorized Drive folder access and complete bulk download in a signed-out browser on the authoring Mac.
 - [x] Complete safe multi-ZIP import and verify all 723 received manifest entries after an observed Drive filename change.
 - [x] Complete integrated tests, final pinned resume and independent review with no release blockers.
-- [ ] Publish 0.3.0 and verify public distribution.
+- [x] Publish 0.3.0 on main through PR 3 and verify an anonymous checkout, all 376 payload entries and standalone startup.
 - [ ] Repair the pre-existing Unicode case-fold excerpt-offset edge case in a later bounded change.
 
 See [edition evidence](docs/STANDALONE-030.md). A signed-out receiving context is verified separately from physical use on a different computer. Full source review, extraction gaps and native-host artifact acceptance remain scoped follow-up work.
