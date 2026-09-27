@@ -61,3 +61,9 @@ Read only the relevant method for the selected task; preserve existing prerequis
 Version-Timestamp: 2026-09-09 10:32:33 AST
 
 Use [creative direction](../../CREATIVE-DIRECTION.md) to turn initial concepts into annotated boards, original application studies and a comparable decision. Distinguish style, technique, trend and art direction; do not force alternatives for a narrow approved revision.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Direction and visual identity](../../knowledge/direction-and-identity.md) when turning evidence and a central idea into comparable directions and family rules. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

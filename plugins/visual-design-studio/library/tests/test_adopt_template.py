@@ -1,10 +1,9 @@
 """Portable template-adoption regression tests."""
-# Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+# Version-Timestamp: 2026-09-27 14:22:11 AST
 import tempfile
 import unittest
 from pathlib import Path
 import re
-import json
 
 from scripts import adopt_template as subject
 
@@ -61,10 +60,6 @@ class TemplateAdoptionTests(unittest.TestCase):
         self.assertIn("`CURRENT.md` is a legacy pointer only", template)
         self.assertIn("A rejected revision cannot replace the approved baseline", template)
 
-    def test_missing_optional_book_configuration_is_safe(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            self.assertIsNone(subject.resolve_reference_config(Path(temporary)))
-
     def test_pins_encoded_fragment_link_inside_angle_destination_for_spaced_library(self):
         with tempfile.TemporaryDirectory() as temporary:
             library = Path(temporary) / "library with spaces"
@@ -86,28 +81,6 @@ class TemplateAdoptionTests(unittest.TestCase):
                 actual,
                 f'[persona](<{target.resolve()}#active-work> "source")',
             )
-
-    def test_rejects_configured_reference_tool_symlink(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            project = Path(temporary) / "project"
-            library = Path(temporary) / "book library"
-            project.mkdir()
-            library.mkdir()
-            private = project / "private"
-            private.mkdir()
-            target = Path(temporary) / "trusted-tool.py"
-            target.write_text("# tool", encoding="utf-8")
-            symlink = Path(temporary) / "tool-link.py"
-            symlink.symlink_to(target)
-            (private / "reference-library.local.json").write_text(
-                json.dumps({
-                    "reference_library_root": str(library),
-                    "reference_library_tool": str(symlink),
-                }),
-                encoding="utf-8",
-            )
-            with self.assertRaises(ValueError):
-                subject.resolve_reference_config(project)
 
     def test_rejects_source_symlink_and_destination_directory_symlink(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -155,26 +128,12 @@ class TemplateAdoptionTests(unittest.TestCase):
                 subject.LIBRARY_ROOT = original_root
             self.assertEqual(actual, "[guide](linked/guide.md)")
 
-    def test_rejects_configured_reference_tool_with_intermediate_symlink(self):
+    def test_adoption_ignores_stale_reference_configuration(self):
         with tempfile.TemporaryDirectory() as temporary:
-            temporary = Path(temporary)
-            project = temporary / "project"
-            library = temporary / "book library"
-            tools = temporary / "trusted tools"
-            project.mkdir()
-            library.mkdir()
-            tools.mkdir()
-            (tools / "tool.py").write_text("# tool", encoding="utf-8")
-            (temporary / "tool-link").symlink_to(tools, target_is_directory=True)
-            private = project / "private"
+            project = Path(temporary)
+            private = project / 'private'
             private.mkdir()
-            physical_temp = Path("/private/var") / temporary.relative_to("/var")
-            (private / "reference-library.local.json").write_text(
-                json.dumps({
-                    "reference_library_root": str(library),
-                    "reference_library_tool": str(physical_temp / "tool-link/tool.py"),
-                }),
-                encoding="utf-8",
-            )
-            with self.assertRaises(ValueError):
-                subject.resolve_reference_config(project)
+            (private / 'reference-library.local.json').write_text('{stale configuration')
+            result = subject.adopt('design-work.md', project, Path('records/design.md'))
+            self.assertEqual(result['status'], 'dry_run')
+            self.assertFalse((project / 'records/design.md').exists())

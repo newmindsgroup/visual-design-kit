@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+# Version-Timestamp: 2026-09-27 14:22:11 AST
 """Copy one bundled Markdown template into a project without breaking library links."""
 import argparse
 import json
@@ -11,7 +11,6 @@ from urllib.parse import unquote
 
 LIBRARY_ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE_ROOT = LIBRARY_ROOT / "templates"
-LOCAL_REFERENCE_CONFIG = Path("private/reference-library.local.json")
 LINK = re.compile(r"(?<!!)\[([^\]]+)\]\((<[^>]+>|[^)\s]+)(\s+[^)]*)?\)")
 
 
@@ -30,15 +29,6 @@ def _has_symlink_component(root, path):
         raise ValueError("path escapes required root")
     current = root
     for part in relative.parts:
-        current /= part
-        if current.is_symlink():
-            return True
-    return False
-
-
-def _has_explicit_symlink_component(path):
-    current = Path(path.anchor)
-    for part in path.parts[1:]:
         current /= part
         if current.is_symlink():
             return True
@@ -159,33 +149,6 @@ def adopt(template, project_root, destination, apply=False):
     finally:
         os.close(descriptor)
     return result
-
-
-def resolve_reference_config(project_root):
-    """Read optional ignored book settings without treating their absence as a hold."""
-    config = Path(project_root).expanduser().resolve(strict=True) / LOCAL_REFERENCE_CONFIG
-    if not config.exists():
-        return None
-    if config.is_symlink() or not config.is_file():
-        raise ValueError("reference configuration must be a regular file")
-    data = json.loads(config.read_text(encoding="utf-8"))
-    root = data.get("reference_library_root")
-    tool = data.get("reference_library_tool")
-    if not isinstance(root, str) or not root:
-        raise ValueError("reference_library_root is required when configuration exists")
-    root_path = Path(root).expanduser().resolve(strict=True)
-    if not root_path.is_dir():
-        raise ValueError("reference_library_root must be a directory")
-    if tool:
-        raw_tool = Path(tool).expanduser()
-        if not raw_tool.is_absolute() or _has_explicit_symlink_component(raw_tool):
-            raise ValueError("reference_library_tool must be an absolute non-symlink path")
-        tool_path = raw_tool.resolve(strict=True)
-    else:
-        tool_path = LIBRARY_ROOT / "scripts/reference_library.py"
-    if not tool_path.is_file() or tool_path.is_symlink():
-        raise ValueError("reference_library_tool must be a regular trusted file")
-    return {"reference_library_root": root_path, "reference_library_tool": tool_path}
 
 
 def main():

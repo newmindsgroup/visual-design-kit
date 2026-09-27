@@ -4,9 +4,9 @@
 
 **A reusable design workflow for people working with AI coding assistants.** Research the brief, choose a direction, create the work, inspect the output, and carry accepted decisions into the next step. Codex has observed installation and startup evidence. Cursor and Claude Code use a documented project-entry route whose native-session acceptance remains unverified.
 
-> **Current status: supervised evaluation.** The library contains 130 reference capabilities. Version 0.2.1 corrects public onboarding and package documentation. The [0.2.0 evidence](docs/QUALITY-020-RELEASE.md) covers the existing fictional examples, validators and bounded authoring-machine checks. A public repository or a matching checksum does not establish production readiness. Each project still needs human review and checks of its actual outputs.
+> **Current status: supervised evaluation.** The library contains 130 reference capabilities. Version 0.3.0 adds self-contained applied design guidance and explicit optional-reference modes. The [0.2.0 evidence](docs/QUALITY-020-RELEASE.md) covers the existing fictional examples, validators and bounded authoring-machine checks. A public repository or a matching checksum does not establish production readiness. Each project still needs human review and checks of its actual outputs.
 
-Version-Timestamp: 2026-09-27T14:05:22-04:00
+Version-Timestamp: 2026-09-27 14:21:05 AST
 
 [Installation](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Development checks](docs/DEVELOPMENT.md)
 
@@ -89,7 +89,7 @@ Clone the repository into a dedicated library directory:
 ```sh
 git clone https://github.com/newmindsgroup/visual-design-kit.git
 cd visual-design-kit
-git checkout --detach v0.2.1
+git checkout --detach v0.3.0
 ```
 
 Choose a reviewed commit for the project and record `git rev-parse HEAD`. Keep that checkout unchanged during the project. See the [current package pin](docs/VERIFIED-PIN.md) and [verification commands](INSTALLATION.md#verify-the-package). A changing `main` branch is not a fixed project version.
@@ -262,9 +262,30 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
 
 Run the library, JavaScript and optional browser checks using [Development checks](docs/DEVELOPMENT.md). Test counts belong to the exact tested edition. Check `git status --short` after project work to detect unexpected changes; the read-only instruction is an agent-followed rule, not filesystem enforcement.
 
-## Optional books and additional IDEs
+## Use it with or without books
 
-See [local reference requirements](resources/README.md) and [Codex, Cursor and Claude Code setup](docs/IDE-COMPATIBILITY.md). Full books and a public book download are not included. Optional retrieval needs a compatible local collection that you are authorized to use. The core workflow can proceed without book evidence when the selected capability's inputs are otherwise satisfied.
+The kit includes original design instructions, templates, worked fictional examples and an [applied design handbook](plugins/visual-design-studio/library/knowledge/README.md). Books are an optional source of deeper evidence. They are not required to start a project, and connecting them does not train the model.
+
+| Mode | What the AI uses | What you provide |
+| --- | --- | --- |
+| Standalone | Packaged guidance, relevant worked examples and your authorized project inputs | Brief, audience, deliverable and available brand assets |
+| Local library | The same foundation, plus relevant passages and page or section references from your compatible collection | An authorized local library path in ignored configuration |
+
+The handbook covers research, creative direction, typography, color, UX and content, infographics, screen motion, and critique/revision. Each method explains decisions, tradeoffs, a fictional example, failure repairs and the existing template that receives its output. The agent loads only the methods needed for the current task.
+
+To work without books, add this to your brief:
+
+```text
+Use standalone reference mode. Use the packaged design guidance and my
+project inputs. Do not search my computer for books or claim to have read
+any. Record assumptions, show the design rationale, and inspect the output.
+```
+
+If you have a compatible library, follow [local setup](resources/LOCAL-SETUP.md). An unavailable optional library falls back to standalone with a recorded reason. A request that depends on a particular source must wait for that source; ordinary design work can continue. An invalid package pin still stops execution of that package.
+
+An authorized owner may supply a separate Drive folder or download archive. Full books and private collection links are excluded from this public repository and its MIT license. Use the [safe ZIP import steps](resources/LOCAL-SETUP.md#import-an-owner-provided-zip-collection) for a single archive or all Drive download parts, keeping the result outside the kit and client repos. Then point to the folder containing `catalog/` and `manifests/`. The included helper verifies and searches compatible collections; it does not turn an arbitrary PDF folder into an indexed library.
+
+See [reference requirements](resources/README.md) and [Codex, Cursor and Claude Code setup](docs/IDE-COMPATIBILITY.md). No handbook guarantees high-quality output by itself: inspect actual artifacts, preserve accepted brand decisions, and validate the target format.
 
 
 ## Examples and earlier verification

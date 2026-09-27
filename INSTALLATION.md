@@ -1,6 +1,6 @@
 # Install for an independent project
 
-Version-Timestamp: 2026-09-27T14:05:22-04:00
+Version-Timestamp: 2026-09-27 14:21:05 AST
 
 Keep one trusted kit checkout separate from each brand project. The kit supplies instructions and local helpers. Your AI host, design apps, accounts and provider permissions are separate.
 
@@ -20,7 +20,7 @@ The shell examples use macOS or Linux syntax. Authoring-machine evidence is from
 ```sh
 git clone https://github.com/newmindsgroup/visual-design-kit.git
 cd visual-design-kit
-git checkout --detach v0.2.1
+git checkout --detach v0.3.0
 git rev-parse HEAD
 ```
 
@@ -87,6 +87,6 @@ Use the host's supported removal controls for an installed plugin. Removing a pl
 
 ## Scope of the evidence
 
-The [0.2.0 record](docs/QUALITY-020-RELEASE.md) describes its installation, payload checks, automated tests and bounded fictional examples. Version 0.2.1 corrects the public onboarding. Earlier host checks do not automatically qualify this edition on another machine.
+The [0.2.0 record](docs/QUALITY-020-RELEASE.md) describes its installation, payload checks, automated tests and bounded fictional examples. Version 0.3.0 adds standalone method guidance and optional reference preflight; see [edition evidence](docs/STANDALONE-030.md). Earlier host checks do not automatically qualify this edition on another machine.
 
 The package remains for supervised evaluation. Human aesthetic acceptance, real client outcomes, accessibility, physical display behavior and provider operations must be checked for the selected project. Optional books require your own authorized compatible local collection; no public book download is included.

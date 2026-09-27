@@ -1,8 +1,8 @@
 # Visual Design Studio
 
-Version-Timestamp: 2026-09-27T13:48:12-04:00
+Version-Timestamp: 2026-09-27T14:26:33-04:00
 
-One starting skill selects from 130 design capabilities. The 0.2.1 public edition retains the 0.2.0 improvements to completion checks, scoped capability selection, project continuity, optional book access and demonstrated design craft. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
+One starting skill selects from 130 design capabilities. The 0.3.0 public edition adds [original applied method cards](library/knowledge/README.md) and explicit standalone/optional-reference modes, retaining existing completion checks, scoped selection, continuity and craft examples. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
 
 The 0.1.0 installation and Codex startup have historical evidence. They do not automatically validate this edition. This candidate's installation, source checks and reviews are recorded in the repository release evidence. Native Claude plugin packaging is not claimed; Claude Code and Cursor can read the exact entry file in their project. Capability files are selectively read references, not 130 globally registered commands.
 

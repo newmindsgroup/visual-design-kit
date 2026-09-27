@@ -1,10 +1,10 @@
 # Package readiness
 
-Version-Timestamp: 2026-09-27T13:48:12-04:00
+Version-Timestamp: 2026-09-27T14:26:33-04:00
 
-Edition: 0.2.1, public supervised evaluation. This patch fixes public onboarding, licensing and package metadata; it does not add new design capabilities. This page describes package scope, not the installation state of the current computer. Check the host's plugin list and exact installed payload hash. Repository release evidence records authoring-machine installation separately. A fresh session must prove which edition it reads; no host inherits another host's authentication or approvals.
+Edition: 0.3.0, public supervised evaluation. This edition adds eight original applied method cards, explicit standalone/local-library selection and a tested offline reference preflight. It retains the existing 130 capabilities. This page describes package scope, not the installation state of the current computer. Check the host's plugin list and exact installed payload hash. Repository release evidence records authoring-machine installation separately. A fresh session must prove which edition it reads; no host inherits another host's authentication or approvals.
 
-One entry skill selects from 130 reference capabilities. New in this edition: current candidate-bound handoff checks, exact capability selection validation, safe Markdown template adoption, canonical RESUME.md guidance, a byte-identical copy of the optional local reference helper, and a shared rendered craft collection. See [project launch](PROJECT-LAUNCH.md), [handoff contract](library/HANDOFF-CONTRACT.md), [selection contract](library/SELECTION-CONTRACT.md) and [visual examples and limits](library/examples/quality-benchmark/README.md).
+One entry skill selects from 130 reference capabilities. The [applied methods](library/knowledge/README.md) work without private books. The preflight reports availability separately from consultation and preserves source-dependent holds. Existing candidate-bound handoff checks, scoped selection validation, safe template adoption, RESUME.md guidance and rendered craft examples remain in place. See [project launch](PROJECT-LAUNCH.md), [handoff contract](library/HANDOFF-CONTRACT.md), [selection contract](library/SELECTION-CONTRACT.md) and [visual examples and limits](library/examples/quality-benchmark/README.md).
 
 The older installed 0.1.0 edition and source commit 412e628 are a distinct preserved baseline. Its payload hash does not verify this edition. Historical Candidate 11/12, README and workflow acceptance statements inside the library remain version-scoped records, never current installation claims. The current manifests bind this edition's bytes. No passing checksum proves visual quality or 130 executed production workflows.
 

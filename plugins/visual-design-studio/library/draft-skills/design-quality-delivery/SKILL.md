@@ -57,3 +57,9 @@ Read only the relevant method for the selected task; preserve existing prerequis
 Version-Timestamp: 2026-09-11T19:51:13-04:00
 
 Show rationale, flat artwork, motion previews and contextual mockups; label synthetic settings and candidate decisions. Use the [specialist workflow](../../SCREEN-CONTENT-SKILLS.md) for the relevant detailed methods.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Critique, revision and delivery](../../knowledge/critique-revision-and-delivery.md) when turning a visible defect into a bounded repair and checking the current delivery. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

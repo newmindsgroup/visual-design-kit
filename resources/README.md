@@ -1,29 +1,26 @@
-# Optional local references
+# Standalone design and optional local references
 
-Version-Timestamp: 2026-09-27 13:45:58 AST
+Version-Timestamp: 2026-09-27 14:19:56 AST
 
-The kit includes authored design instructions and a local reference utility. Books, source media, extracted text and the author's research collection are not included. No download link or access to that collection is offered by this public release.
+Start in standalone mode with the packaged design instructions, original [method cards](../plugins/visual-design-studio/library/knowledge/README.md), and authorized project inputs. Books are optional. The kit does not train a model on them or claim to have synthesized an entire collection.
 
-You may supply your own local references when you have permission for the intended reading, extraction and use. A library is optional unless your task requires a particular source. If a required source is unavailable, record that limit; never claim to have consulted it. A complete reference-free production run has not been verified across every capability.
+A compatible local library adds deeper, traceable source evidence when a task benefits from it. It is a separate input, supplied by you or provided separately by an authorized collection owner if available. This public repository includes no books or public book download. A complete production run across every capability and host has not been verified.
 
-## Set up your own library
+## Choose the reference mode
 
-Keep source material outside the kit checkout and client repositories. The supplied utility expects a compatible catalog and manifest, not an arbitrary folder of PDFs. Follow [local setup](LOCAL-SETUP.md) for the file contract and commands, then use the [reference workflow](REFERENCE-WORKFLOW.md) to connect bounded evidence to a design decision.
+| Mode | Use | When a library is unavailable |
+| --- | --- | --- |
+| Standalone | Packaged guidance and authorized client inputs | Continue ordinary design work and record that no book source was consulted. |
+| Local library | The same foundation plus selected, inspected sources | Record the reason and continue standalone where inputs suffice. Hold only a claim or task that requires the missing source. |
 
-A compatible library separates:
+The helper's default `auto` setting selects between these modes. Explicit `standalone` skips local configuration and corpus checks, including stale configuration. Library availability never means a source was consulted. Failed package verification remains a stop before executing bundled code, regardless of reference mode.
 
-- `catalog/`: source IDs, relative original/extraction paths, edition and author details, source availability and rights records.
-- `originals/`: only sources permitted for the intended use and recipients.
-- `extracted/`: permitted searchable text with page or section locators.
-- `methods/`: original reusable notes with citations and explicit review limits.
-- `manifests/`: file paths and SHA-256 hashes for integrity checks.
+## Add a library when useful
 
-Keep the local library path, private links and source-specific permissions in ignored project configuration. A checksum establishes file integrity against a manifest. It does not establish source quality, ownership, redistribution permission or full review. An extracted book retains the source's use restrictions.
+Follow [local setup](LOCAL-SETUP.md) for acquisition, ignored configuration and commands, then the [reference workflow](REFERENCE-WORKFLOW.md) for bounded retrieval. The helper accepts a compatible catalog and manifest, not an arbitrary PDF folder. Keep books, extracted text and machine paths outside shared project files.
 
-## Historical author research
+A compatible library separates source identity and availability in `catalog/`, permitted source files in `originals/`, searchable units in `extracted/`, and file-integrity records in `manifests/`. Optional `methods/` notes should be independently written and explicit about review limits. Extracted text keeps the source's use restrictions. A checksum establishes integrity against a manifest, not ownership, quality, redistribution permission or full review.
 
-The [implementation record](LIBRARY-IMPLEMENTATION.md) documents the author's separate collection during September 2026. Its counts, extraction states, review attempts and transfer checks are historical author-only evidence. They do not describe files delivered with this repository, establish current availability or promise access to another user's books.
-
-The public kit's license covers its stated original work. It does not license external books, private examples, third-party assets or any material you add. Check the terms for each source and intended use before extracting, transferring or sharing it.
+The [historical implementation record](LIBRARY-IMPLEMENTATION.md) describes the author's separate collection and dated checks. Its counts do not describe this release or establish current availability. The kit license covers its stated original work, not external books, private examples, third-party assets or material you add.
 
 [Local setup](LOCAL-SETUP.md) | [Reference workflow](REFERENCE-WORKFLOW.md) | [Acceptance checklist](TEAM-READINESS.md)

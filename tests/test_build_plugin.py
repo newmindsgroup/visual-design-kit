@@ -1,5 +1,5 @@
 """Deterministic package build checks for Visual Design Studio."""
-# Version-Timestamp: 2026-09-27T13:48:12-04:00
+# Version-Timestamp: 2026-09-27 14:43:14 AST
 import hashlib
 import json
 from pathlib import Path
@@ -24,6 +24,7 @@ class BuildPluginTests(unittest.TestCase):
         (self.plugin / ".codex-plugin").mkdir(parents=True)
         (self.plugin / "library" / "examples" / "assets").mkdir(parents=True)
         (self.source / "tools" / "reference_library.py").write_bytes(b"canonical reference bytes\n")
+        (self.source / "tools" / "import_reference_archive.py").write_bytes(b"canonical archive importer bytes\n")
         (self.plugin / ".codex-plugin" / "plugin.json").write_text(json.dumps({"name": "visual-design-studio", "version": "0.2.0"}), encoding="utf-8")
         (self.plugin / "library" / "README.md").write_text("library\n", encoding="utf-8")
         (self.plugin / "library" / "examples" / "assets" / "font.license").write_text("license\n", encoding="utf-8")
@@ -58,6 +59,9 @@ class BuildPluginTests(unittest.TestCase):
         self.assertEqual(manifest["canonical_source"]["path"], "curated-plugin-source")
         self.assertEqual(manifest["historical_source"]["version"], "0.1.0")
         self.assertEqual((self.source / "tools" / "reference_library.py").read_bytes(), (self.plugin / "library" / "scripts" / "reference_library.py").read_bytes())
+        self.assertEqual((self.source / "tools" / "import_reference_archive.py").read_bytes(), (self.plugin / "library" / "scripts" / "import_reference_archive.py").read_bytes())
+        sources = {entry['destination']: entry['source'] for entry in manifest['files']}
+        self.assertEqual(sources['scripts/import_reference_archive.py'], 'tools/import_reference_archive.py')
 
     def test_public_distribution_does_not_claim_production_acceptance(self):
         self.apply()
@@ -80,6 +84,9 @@ class BuildPluginTests(unittest.TestCase):
         result = self.invoke()
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("reference_library", result.stdout)
+        self.apply()
+        (self.plugin / "library" / "scripts" / "import_reference_archive.py").write_text("drift\n", encoding="utf-8")
+        self.assertNotEqual(self.invoke().returncode, 0)
 
     def test_apply_refuses_unsafe_symlink_and_ignores_private_temp_and_bytecode(self):
         (self.plugin / "library" / "linked.md").symlink_to(self.plugin / "library" / "README.md")

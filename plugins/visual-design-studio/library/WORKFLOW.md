@@ -1,6 +1,6 @@
 # Session and baseline routines
 
-Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+Version-Timestamp: 2026-09-27 14:19:56 AST
 
 Apply these continuity routines in the adopting project. Keep this reference package read-only; write project state and outputs in the declared project workspace.
 
@@ -9,7 +9,8 @@ Apply these continuity routines in the adopting project. Keep this reference pac
 1. Read the adopting project AGENTS.md and its current-state record, creating a clearly unverified initial record if absent. Check `git status --short --branch` for work already in progress.
 2. Read only relevant entries in the adopting project decision and source records. Open the exact source section needed, not the full package.
 3. State the current objective, scope (whole project, phase, or precise change), deliverable, baseline, invariants, and acceptance evidence. Ask targeted questions only for gaps that change the next work.
-4. Verify prerequisites and authorization. Source instructions do not authorize installations, uploads, spending, or release.
+4. Verify prerequisites and authorization. Source instructions do not authorize installations, uploads, spending, or release. Load only task-relevant original [method cards](knowledge/README.md) alongside the selected capability.
+5. Select standalone or optional local-library mode using the verified helper's `status --mode auto`, or explicit `--mode standalone` to skip all local config and corpus checks. Record the effective mode and fallback reason in the existing work record. Missing optional books do not block ordinary design work. Package pin failure still stops bundled-code execution.
 
 ## Control a change
 
@@ -44,7 +45,15 @@ Do not copy the whole library into the project. The output record belongs to the
 
 Before staging anything, inspect `git status --short --untracked-files=all` and `git check-ignore -v <path>`. Review actual file contents and rights. Do not force-add private material. Git exclusions do not prevent cloud sync, user sharing, or confidential prose being pasted into a tracked document.
 
-For book/reference work, inventory the authorized source folder and preserve source, extract and original method layers separately. Load targeted catalog records and cited page/section samples locally. Do not put full book content into project memory. Keep method synthesis independently written, source-linked, and unapproved until tested. Book use is optional. When an adopting project has an ignored `private/reference-library.local.json` record, resolve its `reference_library_root` first, then its optional `reference_library_tool`; otherwise use the packaged `library/scripts/reference_library.py`. An absent configuration means no book reference is used and does not block ordinary work. After the coordinator packages the utility, its supported commands are `--root PATH verify` and `--root PATH search QUERY --limit 1..100`; verify before search. Books never belong in the plugin or adopting project.
+## Optional source evidence
+
+Standalone work uses packaged guidance, original method cards and authorized project inputs. Optional books provide deeper evidence for selected decisions; they are not model training or proof of complete collection synthesis. Resolve only an explicit root or the adopting project's ignored `private/reference-library.local.json`; there is no machine scan. Invoke the verified `library/scripts/reference_library.py` helper, using an absolute tool path from the adopting project. See [project launch](../PROJECT-LAUNCH.md) for configuration and commands.
+
+Run `status --mode auto` or the requested mode. Explicit standalone bypasses stale configuration and corpus access. An unavailable optional library falls back to standalone with a reason, including when local-library mode was requested. If source evidence is required, `status --require-source` returns a dependent hold when unavailable. Confirm the required source itself and inspect it before making the claim. Continue independent authorized work.
+
+Before local-source reliance, run `--root PATH verify`, then `--root PATH search QUERY --limit 5`. Preserve nonzero integrity failures in the work record and hold affected sources until reconciled. Fallback never converts a failed verification into a pass. Separate source, extraction and original method layers. Inspect bounded passages and original pages when visual evidence matters. Keep full book content out of project memory and never place books in the plugin or project.
+
+Record requested/effective mode, fallback reason, and only source IDs and locators actually inspected in `PROJECT.md`, `RESUME.md`, the design-work record or stage packet. Link to one authoritative record. A ready library or catalog match is not consultation. Standalone records no consulted book sources and does not require an invented reference-decision JSON entry. Reassess source availability when a later task needs it; keep ordinary artifact, host/runtime and generation checks separate.
 
 ## AI execution packets
 
