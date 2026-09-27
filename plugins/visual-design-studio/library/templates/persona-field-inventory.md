@@ -1,8 +1,10 @@
 # Complete persona field inventory
 
-Version-Timestamp: 2026-09-07 09:16:31 AST
+Version-Timestamp: 2026-09-27 13:45:58 AST
 
-Every field is required structurally. Values may be unknown or justified not applicable. Field keys remain stable across languages. See [component definitions](persona-components.json). Historical attribution is isolated in the reference audit.
+Every field is required structurally. Values may be unknown or justified not applicable. Field keys remain stable across languages. See [component definitions](persona-components.json).
+
+Provenance: the user selected a supplied historical persona example to inform this reusable field taxonomy and component accounting. Generic field paths and bilingual labels preserve that structural reference. The source's rendered pages, visual styling, persona claims and values, client data, images and implementation code are not included. The separate historical audit records the comparison; it is not required to use this template and does not supply a third-party license grant. Structural parity does not establish research quality or permission to reuse another project's content.
 
 | ID | Canonical field path | Group | English / original Spanish label | Type  |
 | --- | --- | --- | --- | ---  |

@@ -1,2148 +1,2148 @@
 {
-  "Version-Timestamp": "2026-09-16T18:27:08.062526-04:00",
-  "candidate": "0.2.0",
+  "Version-Timestamp": "2026-09-27T13:52:12-04:00",
+  "candidate": "0.2.1",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper is copied from tools/reference_library.py.",
     "path": "curated-plugin-source",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
-  "distribution_ready": false,
+  "distribution_scope": "public",
   "files": [
     {
       "destination": "AI-DESIGN-CONTEXT.md",
       "sha256": "d667fae9afdf096766b184c86dfb6b35626c1441cc579b365f283ada842ae5d2",
       "source": "curated-plugin-source/AI-DESIGN-CONTEXT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CAPABILITY-CONTRACTS.md",
       "sha256": "0b680bd4d2c1cb86e0719777d574c6944b14d3e2e7afce806dc560e0add4fae7",
       "source": "curated-plugin-source/CAPABILITY-CONTRACTS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "COMPLEMENTARY-SOURCES.md",
       "sha256": "a442c621b91eebb84818f5510767b9338051a636aa7fb9e78c69a84795c381f2",
       "source": "curated-plugin-source/COMPLEMENTARY-SOURCES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "COMPONENT-START.md",
       "sha256": "18aa5ca9ab8696a62f2dfee2e926b01044b070b384ba813970dbbb4f15395d06",
       "source": "curated-plugin-source/COMPONENT-START.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CONTENT-WORKFLOW.md",
       "sha256": "5a79eaa4c44b44dccedc0f07a97f1bb5c4b618590eadc76123c67ccaa7df061a",
       "source": "curated-plugin-source/CONTENT-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CRAFT-LAB.md",
       "sha256": "efde9d7e4c735c60f2d3ce210af892ff0ccbfbe81920ebcebdd274fe1db9096b",
       "source": "curated-plugin-source/CRAFT-LAB.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CRAFT-SELECTION.md",
       "sha256": "cbc8f6324c8c79e72f5db943aa5561e983a930fe06860c9676f871a072de3767",
       "source": "curated-plugin-source/CRAFT-SELECTION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CREATIVE-CONTINUITY.md",
       "sha256": "c472604f998c9b91248a4019c79b7e04ec6d766784accc79aff76c60cfdbc31a",
       "source": "curated-plugin-source/CREATIVE-CONTINUITY.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "CREATIVE-DIRECTION.md",
       "sha256": "6a23529ac7c5b11436b3883762e6e8b6eb0e5330bf6f90b9a2ca18c1ba6d43c9",
       "source": "curated-plugin-source/CREATIVE-DIRECTION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DATA-CONTRACTS.md",
       "sha256": "646eb23672942f1638e956f2a3e467b18503711e69ca1619aacb4831fdc6c68f",
       "source": "curated-plugin-source/DATA-CONTRACTS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DELIVERY-PREFLIGHT.md",
       "sha256": "ae93c0cca259509e58f10a3c5810973240566020e83921b3fe83fa9c2a81fa86",
       "source": "curated-plugin-source/DELIVERY-PREFLIGHT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DESIGN-CRAFT-SOURCES.md",
       "sha256": "6ff74ccbbb3089540adb58dbef904de29cf984f8756f2198b8ef22e2f1eb4913",
       "source": "curated-plugin-source/DESIGN-CRAFT-SOURCES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DESIGN-CRAFT.md",
       "sha256": "74658270a8c8a9783f1dc082cdd947ddc2f213dbe9ad212724567202c24e93d2",
       "source": "curated-plugin-source/DESIGN-CRAFT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DESIGN-PROCESS.md",
       "sha256": "5f8e0c34be4da18fa53302b566a79d644443b25677d447db3372fa948fd521f7",
       "source": "curated-plugin-source/DESIGN-PROCESS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DISPLAY-ADVANCED-SKILLS.md",
       "sha256": "c919e80fa65aea6ff5eac7b87cad8b262c911a0afba3763d592b18086c26f2ce",
       "source": "curated-plugin-source/DISPLAY-ADVANCED-SKILLS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "DISPLAY-WORKFLOW.md",
       "sha256": "5f3ce7d1996a8b7c228e551511da6d823d1a17ec4d80bc150b123e0164a0ee65",
       "source": "curated-plugin-source/DISPLAY-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "HANDOFF-CONTRACT.md",
       "sha256": "23a1a55a60c7204ab7c66b2d53e550ae81f80255d16956053e5797b2151698bc",
       "source": "curated-plugin-source/HANDOFF-CONTRACT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "IDENTITY-WORKFLOW.md",
       "sha256": "5efb2a24bbcdfdbd6b07529c9bdf0ec23fb26927cd22f706c2be5cef74231063",
       "source": "curated-plugin-source/IDENTITY-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "INVENTORY-SOURCES.md",
-      "sha256": "b71bc0c1c5f338450fad90f9c990d530e0f6c6a3aa2e730d4c2f1f2dca5d7f96",
+      "sha256": "8a66dd5f9c73bfa091758b83e0f4ac985c967b11bfc23f82cde54b669546e739",
       "source": "curated-plugin-source/INVENTORY-SOURCES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "MEDIA-GENERATION.md",
       "sha256": "9c267acd83ad298898d86059f1208687eb672ab4a57cd52c71639c0a4785efb7",
       "source": "curated-plugin-source/MEDIA-GENERATION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "MEDIA-QUALITY-WORKFLOW.md",
       "sha256": "59bfe2e76387a4d5d7f5225e4196d77ecdc9823e94b20390ac4595f35b5ea753",
       "source": "curated-plugin-source/MEDIA-QUALITY-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "MEDIA-SETUP-READINESS.md",
       "sha256": "8d91a79cce6cda110babf80b7f54ae45661e896b4bda659f4897ff78c5587d9f",
       "source": "curated-plugin-source/MEDIA-SETUP-READINESS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "MOTION-RECIPES.md",
       "sha256": "25d862b3d460ce85385747fd7d1ad60c968685a43ff7ea291c51791138c45ab4",
       "source": "curated-plugin-source/MOTION-RECIPES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "PROJECT-STARTER-PACKS.md",
       "sha256": "fd8faae0efec396de85e35a2828a20e398595eb1b39d18bea4e95c7b799449de",
       "source": "curated-plugin-source/PROJECT-STARTER-PACKS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "QUALITY.md",
       "sha256": "4fcda5c5d5b95bcff604316a47358a1485c96c1693f9dfdb220f75ec91129498",
       "source": "curated-plugin-source/QUALITY.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "README.md",
-      "sha256": "2a6a8126f5c6ff62e2cc74e57dbd0c7a8780164128c1f60b5554d14471790474",
+      "sha256": "deae5101623b8bfcb07062d86ff1055d71e027340ced4dd7f074dc052483cdc0",
       "source": "curated-plugin-source/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "REFERENCE-CONTRACT.md",
       "sha256": "3697790b6c753c8491c61722b5e9acec1f1c634b5584421ca25becb036cefd7d",
       "source": "curated-plugin-source/REFERENCE-CONTRACT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "REFERENCE-SELECTION.md",
       "sha256": "bab945d1207cc44b71ffc5491d18888e1864066c481f6a3a8586ca0f9e9a5316",
       "source": "curated-plugin-source/REFERENCE-SELECTION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "3f25da5afadc08b1d07ff182c7ec8146733d91b9ca80f9b5511f952981679509",
+      "sha256": "3fb01ca0eba5249aef7a86e535bd3e90b71c42b04a8b7b0d3cc99a3c23ac472e",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "RESEARCH-CAPABILITIES.md",
       "sha256": "4d6ca6d7162e75db131d24b32d2cae838f4cdabef5e5c1c4f05442ba6efd83cc",
       "source": "curated-plugin-source/RESEARCH-CAPABILITIES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "RESUME-CONTRACT.md",
       "sha256": "5d90134842e575507f2d60e4c6f4d1cec4b3f9aef0caf39845438206ef067e0b",
       "source": "curated-plugin-source/RESUME-CONTRACT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "ROUTING-CHECKS.md",
       "sha256": "e0ecf198d05fa7c9b8f4b7d6bc4d00cde7f894a648253ad7b2537b42d89a5261",
       "source": "curated-plugin-source/ROUTING-CHECKS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SCREEN-CONTENT-SKILLS.md",
       "sha256": "033e5554d83d144aa6264decb9c3184277edd2013f0dcaa094f7a6e4be50ee99",
       "source": "curated-plugin-source/SCREEN-CONTENT-SKILLS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SCREEN-PRODUCTION-WORKFLOW.md",
       "sha256": "8feed2f76cbbc82349e23d06a48036f25256e0c27ac2ba63c9bda1e4faf806ed",
       "source": "curated-plugin-source/SCREEN-PRODUCTION-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SELECTION-CONTRACT.md",
       "sha256": "623ead18dcfbe1099ba5ddb28ef798cdb33dfe198faf05ac83f6f3461c06bb72",
       "source": "curated-plugin-source/SELECTION-CONTRACT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SKILL-IMPROVEMENT.md",
       "sha256": "483cf2e8488684a0bc6d541683b64e105bbb87d2fc0cf7fde397651c074d48ca",
       "source": "curated-plugin-source/SKILL-IMPROVEMENT.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SKILLS-VAULT-INDEX.md",
       "sha256": "2cec976e3558ae77921240ad655702354cb56b6c3dfe3bee9e05f2311286c525",
       "source": "curated-plugin-source/SKILLS-VAULT-INDEX.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SOFTWARE-PRODUCTION.md",
       "sha256": "98d92ededa2216114c2d0903f717f9d428654ca929ac7ff342e3a7ce284a2e47",
       "source": "curated-plugin-source/SOFTWARE-PRODUCTION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SOFTWARE-READINESS.md",
       "sha256": "488ac2a48a9c2f53c19f6744d40bb9df2cc2a272202f0daed9fcc3515a6ac58b",
       "source": "curated-plugin-source/SOFTWARE-READINESS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SYSTEM-ADOPTION.md",
       "sha256": "e0d55c9b27e43d2c5e9a5033ae62c375b468d2325de18a1064f1796f8d3492c3",
       "source": "curated-plugin-source/SYSTEM-ADOPTION.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "SYSTEM-INVENTORY.md",
       "sha256": "2ead1c5cc97673e084e7fa50fc27fe42a37d7d90e9af163b49205bb3dd8c6d4c",
       "source": "curated-plugin-source/SYSTEM-INVENTORY.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "TEAM-READINESS.md",
       "sha256": "a519897b6765a9d9baff7b6568a6a0a41fa54959793fd2f22dd44402dcadddaa",
       "source": "curated-plugin-source/TEAM-READINESS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "TOOLCHAINS.md",
       "sha256": "d7e7dd3291062fbab31194a2d8aea21aff9c5a24b2a97127053f1b625d6854c0",
       "source": "curated-plugin-source/TOOLCHAINS.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "USAGE.md",
       "sha256": "19278141f5b9e08e13dca73b0d4e38f8bdc4d273a8589139585fdec8649a24d6",
       "source": "curated-plugin-source/USAGE.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "UX-DELIVERABLES.md",
       "sha256": "59f460d265264a525ec438a55ebafaf28c93469e2934fd08908d6ab0ed097b80",
       "source": "curated-plugin-source/UX-DELIVERABLES.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "VIDEO-INTAKE-2026-09-08.md",
       "sha256": "c04c94664cb20b4659f989252cd49b66e2a3a1adecf73414cbe8fe9adff2ff30",
       "source": "curated-plugin-source/VIDEO-INTAKE-2026-09-08.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "VIDEO-INTAKE.md",
       "sha256": "3b1089497ba456c55bc200d605a74bab1d330a3246d87dd01b78792ed4b1fe89",
       "source": "curated-plugin-source/VIDEO-INTAKE.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "VIDEO-RESOURCE-CATALOG.json",
       "sha256": "9f709be1e185911d99a2f1db74f09184b06f163943880ccefecbae768a8b81a9",
       "source": "curated-plugin-source/VIDEO-RESOURCE-CATALOG.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "VISUAL-DIRECTION-VOCABULARY.md",
       "sha256": "b9f0a78306266d63b444df6063dabc522cf6646f6c58388fdd2bf656d0aff5b1",
       "source": "curated-plugin-source/VISUAL-DIRECTION-VOCABULARY.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "WEBSITE-WORKFLOW.md",
       "sha256": "e5a224c427b1c2d329f13bcb2e453620705bd7a5ba4ac14da365bbf8e01a738e",
       "source": "curated-plugin-source/WEBSITE-WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "WORKFLOW.md",
       "sha256": "49aa8a1a4489f36add82cb085da74bf081442f09132b27ddefe4c56d3a4d80ba",
       "source": "curated-plugin-source/WORKFLOW.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "capabilities.json",
       "sha256": "dd6a01f7869f74cf4e76e5584ab49239f0c7d8285e087b520b24f090b416a560",
       "source": "curated-plugin-source/capabilities.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/__init__.py",
       "sha256": "42d38ba4d757bef2a19694ea423de69d2b7a7b3404c466da70cb854c97d42b1e",
       "source": "curated-plugin-source/design_system/__init__.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/__main__.py",
       "sha256": "8c3ba26f90915cdb4d7d0dbababaae74004d5b9a01de3181c850379f82f1d8e9",
       "source": "curated-plugin-source/design_system/__main__.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/inventory_views.py",
       "sha256": "19183a3b3ab8d3a4589247ee1c53e619747240aab586084a299b09479a27143f",
       "source": "curated-plugin-source/design_system/inventory_views.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/reference_decision.py",
       "sha256": "70edc53de342440bab01e54817ea5fbb25c01508ad9afc243dbb0315321b301b",
       "source": "curated-plugin-source/design_system/reference_decision.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/selection.py",
       "sha256": "701a27251d96e41d75dd73daab726fbef5e1b0cff769d44e3a3b68b587faebc3",
       "source": "curated-plugin-source/design_system/selection.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/system_inventory.py",
       "sha256": "06c73ae8f516efe9fca1547806e890aa0250b72ac90da305b3abc1adde1fb469",
       "source": "curated-plugin-source/design_system/system_inventory.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "design_system/validation.py",
       "sha256": "463a80d780f1a9da5e1ec60cdb3b5be94de0fc4bced61650e9f5f688662df708",
       "source": "curated-plugin-source/design_system/validation.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-brand-guidelines/SKILL.md",
       "sha256": "65a39a705eac4cf5c8e5cd2aab1d4e2d8650b834f207d0da02e94ef4a783dc24",
       "source": "curated-plugin-source/draft-skills/design-brand-guidelines/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-brand-naming/SKILL.md",
       "sha256": "d1a17bf014ac8d085ab001471464b551d67bdd6b5cbadeeafaa649ae0d56b376",
       "source": "curated-plugin-source/draft-skills/design-brand-naming/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-brand-strategy/SKILL.md",
       "sha256": "32dcd8d61c39a1fc7e83516dd221093270af8ace378ad38921a4d8b7c650a253",
       "source": "curated-plugin-source/draft-skills/design-brand-strategy/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-chatgpt-images/SKILL.md",
       "sha256": "0784985080becbf0ceffba1db7a526a12a6a17ff7cf54fa6b1a951a8f542375c",
       "source": "curated-plugin-source/draft-skills/design-chatgpt-images/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-color-system/SKILL.md",
       "sha256": "9a0b989c04467f444d0a79b9e7993cc0dd4cb6307f6f1e89c964e197d6cbbb11",
       "source": "curated-plugin-source/draft-skills/design-color-system/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-color-system/references/palette-craft.md",
       "sha256": "b7cb834a2556a2288b45a9d88c9163ec9a752c5b2b2f2b0f74631ceb124322fa",
       "source": "curated-plugin-source/draft-skills/design-color-system/references/palette-craft.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-color-system/references/proofing-and-maintenance.md",
       "sha256": "520c705dd9466ef497ab4208534f388e51faeb666cb4784ef50a9333cae07e68",
       "source": "curated-plugin-source/draft-skills/design-color-system/references/proofing-and-maintenance.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/SKILL.md",
       "sha256": "dc5c326c6be29846369a3f431dae853363c58cbb46edf5974f19aa6a11aa0d8f",
       "source": "curated-plugin-source/draft-skills/design-content-writing/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/brand.md",
       "sha256": "5d8a400e79b90fca1cc4176d1727b3337f72a7d966e8315e8e386aa2bbc27db8",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/brand.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/campaign.md",
       "sha256": "29356315129a2354cc1ddf7e5e178cebf04836bf242cb54073913f844cc0ce1b",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/campaign.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/decks-collateral.md",
       "sha256": "5901f443e5948ae6639c04b42d8bc47e50b0f0d4f31f650a7252bfd4feddb9f6",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/decks-collateral.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/editorial.md",
       "sha256": "201c67f21fc601f5a6ecce0a58111e2a14e2d842e9997c3a689c4e3632db80cd",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/editorial.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/localization.md",
       "sha256": "86e86300d5a3bdab96161ed75ffe98742313f357a44f4ebb1e9a638dc84ce2f8",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/localization.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/ux.md",
       "sha256": "44bd52f1f281573091cd31553a5c7bc25e95498d72d0548d4d657dd7dd70967b",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/ux.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-content-writing/references/website.md",
       "sha256": "d85091ba54aca5c6165e8594639a3359fb78420f360564df2162bf595ec4d1c0",
       "source": "curated-plugin-source/draft-skills/design-content-writing/references/website.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-art-direction/SKILL.md",
       "sha256": "3f7c5ce25f2c42abff4d96f8266c4b3ab9cf2fbda10bfae5358290cb7c0d1ab1",
       "source": "curated-plugin-source/draft-skills/design-display-art-direction/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-campaigns/SKILL.md",
       "sha256": "883444b400829ec7baa675de57eb4432f27b1e44015405ea6c32e1b224364729",
       "source": "curated-plugin-source/draft-skills/design-display-campaigns/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-content/SKILL.md",
       "sha256": "e2732accd0bcccb26e4dd53cc7e6e39563767a3a64c85357d327a7bbc8f000c0",
       "source": "curated-plugin-source/draft-skills/design-display-content/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-discovery/SKILL.md",
       "sha256": "461b886993cf49c04d5824f3312da806de0226d4b15a44d6328a86b612f0017d",
       "source": "curated-plugin-source/draft-skills/design-display-discovery/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-evaluation/SKILL.md",
       "sha256": "1586f6bafdef39058776d2f3d331cff080399ca52ba95fd772d1f1beaa062b1d",
       "source": "curated-plugin-source/draft-skills/design-display-evaluation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-display-production/SKILL.md",
       "sha256": "f41a462aeb54364e566ea69d3f9d7673de5e19b3dbb47bce1803108759c2209a",
       "source": "curated-plugin-source/draft-skills/design-display-production/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-evidence-research/SKILL.md",
       "sha256": "48411305622acbab156c977e54f200c8b0033c8e8dd6b354e6fbf39c2d196819",
       "source": "curated-plugin-source/draft-skills/design-evidence-research/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-evidence-research/references/retail-context.md",
       "sha256": "38dd14b1628406fd66112dc579f0c6d067c7de1e9f3b93ab502ec7c47e9fb5f5",
       "source": "curated-plugin-source/draft-skills/design-evidence-research/references/retail-context.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-foundations/SKILL.md",
       "sha256": "92fdc14949bcd0af79b2432e219e3c6e125ea7c618cdd8f9895b46e7237ac958",
       "source": "curated-plugin-source/draft-skills/design-foundations/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-foundations/references/adaptive-composition.md",
       "sha256": "96847f80d53a2ebf31a48bcfc91c29ff619a1c3f1a8ab84142c330c4a93f1e77",
       "source": "curated-plugin-source/draft-skills/design-foundations/references/adaptive-composition.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-foundations/references/art-direction.md",
       "sha256": "17a04b4d253e1f477b0b8876763b191979efebfc249ac001535a1c66b10bea99",
       "source": "curated-plugin-source/draft-skills/design-foundations/references/art-direction.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-foundations/references/critique-calibration.md",
       "sha256": "d313ff0f7c75eb43e1f0b954a892b1203a9ac16b05d9150437ef1254bf67c488",
       "source": "curated-plugin-source/draft-skills/design-foundations/references/critique-calibration.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-higgsfield-cli/SKILL.md",
       "sha256": "b883c0dc4d9692c20324569589f66bef0c0e25d7a7987c2741e7c31349d7b6f4",
       "source": "curated-plugin-source/draft-skills/design-higgsfield-cli/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-identity-delivery/SKILL.md",
       "sha256": "2dcdcccea6a259c36862ed6b00272fc19419486f219f7753242768ef5671ae02",
       "source": "curated-plugin-source/draft-skills/design-identity-delivery/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-identity-refresh/SKILL.md",
       "sha256": "2d64d0a097054adb77c7dcc92a93f249acb98262c9685ece4f201b8252af664e",
       "source": "curated-plugin-source/draft-skills/design-identity-refresh/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-identity-system/SKILL.md",
       "sha256": "8ec3f612f21bbe6c0955fe193cba7cae874f143efb4be0047c2e8e530eb9b9c1",
       "source": "curated-plugin-source/draft-skills/design-identity-system/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-identity-system/references/symbol-families.md",
       "sha256": "13a1053660febcac4dfc3e0d1d0a5197f134a362a300dd70aac88f3a0595a91d",
       "source": "curated-plugin-source/draft-skills/design-identity-system/references/symbol-families.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-infographics/SKILL.md",
       "sha256": "4086f55666be78d26ec01a1d03a8fde6f81079b16d6f292c7bf560a0af49ecb8",
       "source": "curated-plugin-source/draft-skills/design-infographics/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-infographics/references/information-design.md",
       "sha256": "732662a7ebcbb1e18921e48a1d8d034546b4827979fd7c1d0f077b38c9d2a283",
       "source": "curated-plugin-source/draft-skills/design-infographics/references/information-design.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-infographics/references/layouts.md",
       "sha256": "daf884d6066003b3fe7f8304b0261bd9842838bf2f3e5f9d7cc4b521d1216d9f",
       "source": "curated-plugin-source/draft-skills/design-infographics/references/layouts.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-concepts/SKILL.md",
       "sha256": "cf332f8d320e279c699dbdde83099d3d0f1032baf3c61110005fd4c4b58bbe27",
       "source": "curated-plugin-source/draft-skills/design-logo-concepts/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-evaluation/SKILL.md",
       "sha256": "15c03adb895b721149a6c148ba8a5d8f2a19968e7e137a1fcbe096cc7b536831",
       "source": "curated-plugin-source/draft-skills/design-logo-evaluation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-evaluation/references/screening-and-reproduction.md",
       "sha256": "f20d585b4d7650be8770549cd38297bd2791ded72b24c19bbf85ca48086faa9f",
       "source": "curated-plugin-source/draft-skills/design-logo-evaluation/references/screening-and-reproduction.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-refinement/SKILL.md",
       "sha256": "377e846d87d899bf8fc3197e89b553fc0d3f66af08a85c930e85ad1531c7ce85",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-refinement/references/lettering-and-optics.md",
       "sha256": "e541c375663d9a3d260a3216e5ad8b3983ca1a5dbb336ef3f9ebcf0ab999bfef",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/references/lettering-and-optics.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-variants/SKILL.md",
       "sha256": "f5ed63238f3b56e9b1da477d5f0b5b51e2cb377248d07411e3df11643aacfd23",
       "source": "curated-plugin-source/draft-skills/design-logo-variants/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-art-direction/SKILL.md",
       "sha256": "d3aa7863c3cc605870625b222c84ab53f86ddb0a7977de43dec76da16d7078f6",
       "source": "curated-plugin-source/draft-skills/design-media-art-direction/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-image-repair/SKILL.md",
       "sha256": "96485cb178621d3b4be7928e4ac9deed9dfcd1fb18fc71b7061ba84a0dc57c8e",
       "source": "curated-plugin-source/draft-skills/design-media-image-repair/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-production-recipes/SKILL.md",
       "sha256": "4060f90ae250ef86d79ad9bf80be3069fac3893e336839984b58adb34c843fa8",
       "source": "curated-plugin-source/draft-skills/design-media-production-recipes/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-quality-evaluation/SKILL.md",
       "sha256": "1917b1884b1071c46db2226172934f36233c1653ea95373b4f882a943f2e34a3",
       "source": "curated-plugin-source/draft-skills/design-media-quality-evaluation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-reference-control/SKILL.md",
       "sha256": "b42f5fcc4acd4d10162d3a02ae13c45b2d1e1f8c8807ae427b72821389f8921b",
       "source": "curated-plugin-source/draft-skills/design-media-reference-control/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-media-route-selection/SKILL.md",
       "sha256": "aa951ac19e4dea28543d615a2b80d09038ad0d92060434e319faefa345777a26",
       "source": "curated-plugin-source/draft-skills/design-media-route-selection/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-motion-effects/SKILL.md",
       "sha256": "48005c5e3dc7a72f32803685c1cf0e6ba5d5188fe1ea51df029727fd7d2744a5",
       "source": "curated-plugin-source/draft-skills/design-motion-effects/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-motion-effects/references/effects.md",
       "sha256": "269caa792ffbe30375ff7b0dc63fd47bff951bd902aeacc0d3c8cb08c44a811e",
       "source": "curated-plugin-source/draft-skills/design-motion-effects/references/effects.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-openart-cli/SKILL.md",
       "sha256": "670b51ad095487288a77ee16cc00a3c16e511cf354e35a0e0eb4da3b62372049",
       "source": "curated-plugin-source/draft-skills/design-openart-cli/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-persona-build/SKILL.md",
       "sha256": "2bca9c35f0a93cb3e7cf5af7e7495a18af31add8ee09f7f3b1f4e870d8b283e5",
       "source": "curated-plugin-source/draft-skills/design-persona-build/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/SKILL.md",
       "sha256": "ebe48119d8cdb62d3126bec1171ee6a999ec849acf3463546a84f1c2466df396",
       "source": "curated-plugin-source/draft-skills/design-production-interface/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/canva.md",
       "sha256": "29aa66eea0a5ca20c421a0d31a9fae85270d2ec66170536652ea3a2b63866815",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/canva.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/export-fidelity.md",
       "sha256": "ff3cdbb67dba30e78ba4c31a2b15c31db24c734e34cdbd1b33d559b8e38b201e",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/export-fidelity.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/figma.md",
       "sha256": "447dd0f9baef3823d4bfd44bd3490d649b9e68af3ed7f91d03c42106119851ee",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/figma.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/illustrator.md",
       "sha256": "8bab0d21cd3ba2c246d25feaba27320f34fff36aa499cea18fc56dcf695a88fa",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/illustrator.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/photoshop.md",
       "sha256": "947411fa3dc242241c8202c05f8b8ddb03864f490adf67cb22efd5cd9cfa84f2",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/photoshop.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-production-interface/references/print-production.md",
       "sha256": "6b0ae5aab6f2dda1f2cfb8ea1d36b6b2fdfc794700c5c0187f8a2be4b0640bf9",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/print-production.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-prototype-evaluation/SKILL.md",
       "sha256": "8c5b6713143ddfda6972330cf82699071114b16b3f06cf92619d42b83830279a",
       "source": "curated-plugin-source/draft-skills/design-prototype-evaluation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-quality-delivery/SKILL.md",
       "sha256": "15472ee527dccdbf60ff5cfa8ae2c8ec98e8e955a92db78f12f4626e7d99019c",
       "source": "curated-plugin-source/draft-skills/design-quality-delivery/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-reference-direction/SKILL.md",
       "sha256": "7455fd818b28244c099fab89ae56f0b9001a1104ae94be417ad8a53327787797",
       "source": "curated-plugin-source/draft-skills/design-reference-direction/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-reference-direction/references/reference-retrieval.md",
       "sha256": "29986176038f168a52a04003d7d21401eeba8d2efb678c8cecdfb35919d953e9",
       "source": "curated-plugin-source/draft-skills/design-reference-direction/references/reference-retrieval.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-acceptance-records/SKILL.md",
       "sha256": "dbf061529d7ef7483fa7b24ce021e78a73020b3955f7bbe3ea99c40733db78c1",
       "source": "curated-plugin-source/draft-skills/design-screen-acceptance-records/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-adaptation/SKILL.md",
       "sha256": "f554bd5897b83cd2c8427956592582458fde51c68bd2126e34b7d2c116d82467",
       "source": "curated-plugin-source/draft-skills/design-screen-adaptation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-animation/SKILL.md",
       "sha256": "2ccf425084e3fbd234848b15a3461ce049da7dece2cd07440bae1eab889a04bc",
       "source": "curated-plugin-source/draft-skills/design-screen-animation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-assets/SKILL.md",
       "sha256": "3d3c168a2bc7d56b0af165055d9e4d54c21b3306f474a0f823625c7d3f5e3193",
       "source": "curated-plugin-source/draft-skills/design-screen-assets/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-assortment/SKILL.md",
       "sha256": "411eaf200e04c2c2792bfac25ff724a7c9d526a139be766f0d31475f1d9c7658",
       "source": "curated-plugin-source/draft-skills/design-screen-assortment/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-attention/SKILL.md",
       "sha256": "12d7db8191cdfd93ef83b168fe08843c25d887fe5aa996708cfde59957424e44",
       "source": "curated-plugin-source/draft-skills/design-screen-attention/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-audio-captions/SKILL.md",
       "sha256": "f9ba99c4d1343860ffc8156f49d45bd61ae09a818216124688bc315399891db0",
       "source": "curated-plugin-source/draft-skills/design-screen-audio-captions/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-batch-rendering/SKILL.md",
       "sha256": "37f388d68f88116f06d69e456f3ded9ba222d5e06263e627c5707553e075ff54",
       "source": "curated-plugin-source/draft-skills/design-screen-batch-rendering/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-cms-integration/SKILL.md",
       "sha256": "efcbbdaf0c64bedc6bc2676f56cff07f26e7ee38e4bb0b05ae1fcf3a29865776",
       "source": "curated-plugin-source/draft-skills/design-screen-cms-integration/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-compositing/SKILL.md",
       "sha256": "2df02c024837bf216994f121369ff83c0789527c6ab2ea0e6975b3ca05c34c4f",
       "source": "curated-plugin-source/draft-skills/design-screen-compositing/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-data-content/SKILL.md",
       "sha256": "5f32eb048fca8350a92b0e6afb5815f8de37c2cad1babc9e5696b8d9864b4cb6",
       "source": "curated-plugin-source/draft-skills/design-screen-data-content/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-dimensional/SKILL.md",
       "sha256": "63b9d2074ffbaabd7f89e545d48dec429b7b546f9f0d8fe04a5201b9f6229369",
       "source": "curated-plugin-source/draft-skills/design-screen-dimensional/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-effects/SKILL.md",
       "sha256": "bfe75e987bf2b4a3942b58da1521e416a00533d7c090477c4cf0db1b6820af94",
       "source": "curated-plugin-source/draft-skills/design-screen-effects/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-evaluation-examples/SKILL.md",
       "sha256": "1cd21c7c31bbf485adeabb91419d256b0c2f72fc47d29a40bcefe54bc90f0a7d",
       "source": "curated-plugin-source/draft-skills/design-screen-evaluation-examples/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-event-content/SKILL.md",
       "sha256": "7f1faaacdfcda99d1a9797a00252c00ba9ef93478264c78ff0a92ba2a4f2b7cb",
       "source": "curated-plugin-source/draft-skills/design-screen-event-content/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-executable-tests/SKILL.md",
       "sha256": "5dba2bfb7f9f9c84d21e8fe8772a165f9b1c94807bb321432a076b09d024b070",
       "source": "curated-plugin-source/draft-skills/design-screen-executable-tests/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-finishing/SKILL.md",
       "sha256": "c1ade59684705a6d83a48f9f02645cd29be2a317aa91636e5ff16ed54871d618",
       "source": "curated-plugin-source/draft-skills/design-screen-finishing/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-formats/SKILL.md",
       "sha256": "71de600f598c2bdf8f4a8e8006d5e6cb32d7311e062538ddfa4357f7a99a3a7b",
       "source": "curated-plugin-source/draft-skills/design-screen-formats/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-html-development/SKILL.md",
       "sha256": "9b925c3026ad4adf886ef3da1bdc6a04286cd3d5a334da0c0758b62828209191",
       "source": "curated-plugin-source/draft-skills/design-screen-html-development/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-kinetic-type/SKILL.md",
       "sha256": "c491515e0e851cff1f826fbed59920fef405887d4a18e7e9f46389dec372ec94",
       "source": "curated-plugin-source/draft-skills/design-screen-kinetic-type/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-localization/SKILL.md",
       "sha256": "c64632e63495cb510bc781efe13921c1859aef2dc8f156f687bfa32f64ddbba9",
       "source": "curated-plugin-source/draft-skills/design-screen-localization/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-loops/SKILL.md",
       "sha256": "7c9016d818635613cd1aab327a1619f45b65057a8f0cf76c98d5cf0c533d7945",
       "source": "curated-plugin-source/draft-skills/design-screen-loops/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-multiscreen/SKILL.md",
       "sha256": "5978875706bf9c6e980e0a3d526f7d309daa1dd7a941e4fc33f54e987c071ed8",
       "source": "curated-plugin-source/draft-skills/design-screen-multiscreen/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-native-projects/SKILL.md",
       "sha256": "74f90ad00d1c176135d3800ae98b78c4221787026888b3c381eee557d8fdcab6",
       "source": "curated-plugin-source/draft-skills/design-screen-native-projects/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-offers/SKILL.md",
       "sha256": "c6a7032a3886eee6c0a41a6e7b149cc335d439d11edf8cb7713bc454f05b26c9",
       "source": "curated-plugin-source/draft-skills/design-screen-offers/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-original-assets/SKILL.md",
       "sha256": "7cce7feb67d7a094958da0f105ddc4e894741d4b7eb9b934bd51b3f9dfff88a3",
       "source": "curated-plugin-source/draft-skills/design-screen-original-assets/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-performance-learning/SKILL.md",
       "sha256": "57e16815cb5faa988199942d21594006ab0c88a9b504eb31a664947657774e2f",
       "source": "curated-plugin-source/draft-skills/design-screen-performance-learning/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-playback-performance/SKILL.md",
       "sha256": "8c6c22d978e4c8bf5b9714c9f190b2277dc3460e5507e49104e9d832c2bfb5ab",
       "source": "curated-plugin-source/draft-skills/design-screen-playback-performance/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-playlists/SKILL.md",
       "sha256": "8b2c0a15e7dc154ebbd1c650eb12685b873849007eeee28ee689d4f656ce479c",
       "source": "curated-plugin-source/draft-skills/design-screen-playlists/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-product-fidelity/SKILL.md",
       "sha256": "3320dbf44f0809a949ea455a5d8602152e6cc4ad10f86615bb80559966b01d7f",
       "source": "curated-plugin-source/draft-skills/design-screen-product-fidelity/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-reconstruction/SKILL.md",
       "sha256": "25498972a2d630896f7570663d93d69bb459bf3ceff8fbaee4deb7514551bd8d",
       "source": "curated-plugin-source/draft-skills/design-screen-reconstruction/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-release-verification/SKILL.md",
       "sha256": "39671404313d808147f33a679720cba269b6b4bdffcc9d248724c6727e0b8bc0",
       "source": "curated-plugin-source/draft-skills/design-screen-release-verification/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-revisions/SKILL.md",
       "sha256": "9c79dc866230ca78a45b2e2f8f8f6c17d29d7d488ffa44c72d26c6435e389525",
       "source": "curated-plugin-source/draft-skills/design-screen-revisions/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-shelf-edge/SKILL.md",
       "sha256": "3b296c547d663cb98b493ebc0094df15a8c1f83bb82eec2c931451d15c0ac414",
       "source": "curated-plugin-source/draft-skills/design-screen-shelf-edge/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-still-motion/SKILL.md",
       "sha256": "d00c0a3387bfde150abcd02c015e43b45650c03241962422dfbb8f2dbb364b3e",
       "source": "curated-plugin-source/draft-skills/design-screen-still-motion/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-storyboard/SKILL.md",
       "sha256": "4d7a5b5cd1bdfa924c5b24e95b50fdc3381c65f89e867df53927a345d5d94664",
       "source": "curated-plugin-source/draft-skills/design-screen-storyboard/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-templates/SKILL.md",
       "sha256": "2d6df55cdc452c7fe4bac3e0ec7c650af49dd6f708b21a813da2e1400b0b57fa",
       "source": "curated-plugin-source/draft-skills/design-screen-templates/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-troubleshooting/SKILL.md",
       "sha256": "d7b0415ec4ac69916a0c2c74fa1c3d1dffbc15b8b44b31c0bb65eb23c2430067",
       "source": "curated-plugin-source/draft-skills/design-screen-troubleshooting/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-screen-video/SKILL.md",
       "sha256": "0a1eea199bf4ea529f17035a94c65f8afd8b594a01fafdfeb3e13f970e762d5a",
       "source": "curated-plugin-source/draft-skills/design-screen-video/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-stage-handoff/SKILL.md",
       "sha256": "895055966bb784c585ada3f93e3a7bb20491cb90cdc77e67b93f696bba248c30",
       "source": "curated-plugin-source/draft-skills/design-stage-handoff/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-taste/SKILL.md",
       "sha256": "023a0d6c13be9228191e0d67223dbcd4c9d564afde87a4fa1321e45838c0037c",
       "source": "curated-plugin-source/draft-skills/design-taste/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-action-reliability/SKILL.md",
       "sha256": "1762685b0c0e888102b66b96bf0c7907cf4a4111d7670990dbd590ed9c9d9e7c",
       "source": "curated-plugin-source/draft-skills/design-touch-action-reliability/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-configurators/SKILL.md",
       "sha256": "ed15bdca904da300367a7c9a90ee36eafc5982132a975ec0bb7966bd0044a9a2",
       "source": "curated-plugin-source/draft-skills/design-touch-configurators/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-device-validation/SKILL.md",
       "sha256": "ccb147d79b4105bf301545d0fc65eb949faa33aace0ad8a2961dcb6d94a76721",
       "source": "curated-plugin-source/draft-skills/design-touch-device-validation/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-forms/SKILL.md",
       "sha256": "d50306acea677dd17d1f80493603a794c9c79fd8b2bd20d16ab54bb19be432d2",
       "source": "curated-plugin-source/draft-skills/design-touch-forms/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-handoffs/SKILL.md",
       "sha256": "7cddd739af77dcb1ba5c54a66556ef96c56259fe8dd60752aba7acdd633e9193",
       "source": "curated-plugin-source/draft-skills/design-touch-handoffs/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-information-architecture/SKILL.md",
       "sha256": "5f6aa44c4fa67de65555ce1adff4a5d74a8466bd651c96d9e8d09109e5d6e3c5",
       "source": "curated-plugin-source/draft-skills/design-touch-information-architecture/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-interaction-patterns/SKILL.md",
       "sha256": "ea6aa93c08b815953ea033d75308027f196c105722c39f946e0f84a89cbec19d",
       "source": "curated-plugin-source/draft-skills/design-touch-interaction-patterns/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-media/SKILL.md",
       "sha256": "da6b4547907cf883707c70b98c2f4113ffbc644e3b6f4c47fd8775837a95d8c7",
       "source": "curated-plugin-source/draft-skills/design-touch-media/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-offline/SKILL.md",
       "sha256": "dd69abe0877651c46ffa7426926b7cfabc2cb1efeeba7e7a3a3907f8fd47f677",
       "source": "curated-plugin-source/draft-skills/design-touch-offline/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-product-discovery/SKILL.md",
       "sha256": "e299d30759e989bf94677fe36e18580cfe07ee13e7d4cbe4310c5372a8a9f31e",
       "source": "curated-plugin-source/draft-skills/design-touch-product-discovery/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-product-education/SKILL.md",
       "sha256": "76e5f9c4d4cdae262beec56b8d96516f407c64c17148d39369a1564090761429",
       "source": "curated-plugin-source/draft-skills/design-touch-product-education/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-states-copy/SKILL.md",
       "sha256": "f81f09e820d10de4ed501098b39fe583b9eb920422a4e72ed168dbf220e71101",
       "source": "curated-plugin-source/draft-skills/design-touch-states-copy/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touch-usability-testing/SKILL.md",
       "sha256": "0b40e7a0805da08ce52ceaf136823a7bee8a3c6e6b67f944bf0c3c7f78f7a6d1",
       "source": "curated-plugin-source/draft-skills/design-touch-usability-testing/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-touchscreen-design/SKILL.md",
       "sha256": "5a7c137e54e83b634f48060e918bf2342a23c097b3cecf9c47f83c97b72bbc5f",
       "source": "curated-plugin-source/draft-skills/design-touchscreen-design/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
       "sha256": "ebde60acc45e0b62d439eecdd78e42eee4633f03c22a0192cf6bae5d739c836f",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-typography/references/advanced-typesetting.md",
       "sha256": "1f07e1ee7e131ca827ce6f600567da9b6ec934208c1aa56651b3ebddcb95fe7b",
       "source": "curated-plugin-source/draft-skills/design-typography/references/advanced-typesetting.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-typography/references/editorial-reading.md",
       "sha256": "aaa6e54af402843c893bcd8691e89f1c4caa77998d4ebb41aa5b2a26b2db5bda",
       "source": "curated-plugin-source/draft-skills/design-typography/references/editorial-reading.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-typography/references/font-discovery.md",
       "sha256": "a71731bf90bba64892ff23f892ee22002fe2b17c07a4f1b2b9651042d4089e31",
       "source": "curated-plugin-source/draft-skills/design-typography/references/font-discovery.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-typography/references/type-craft.md",
       "sha256": "3478c5e25942ae0350bdea93670d396868e462000e554c9e0476f619ca2a9c42",
       "source": "curated-plugin-source/draft-skills/design-typography/references/type-craft.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-ui-system/SKILL.md",
       "sha256": "a98de7e88d418af83b2ee44151bd70a0633ae95b6c7cf5004503a6a7a2c9c594",
       "source": "curated-plugin-source/draft-skills/design-ui-system/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-ui-system/references/system-portability.md",
       "sha256": "11b5dc8ddb055f854a735db7cebeea73d466e652bc3bd5d6512f1d370e0c4a4a",
       "source": "curated-plugin-source/draft-skills/design-ui-system/references/system-portability.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-ux-architecture/SKILL.md",
       "sha256": "46d4b936d032e225cbd85ee2312e8ff5f1703570d83c0bf11f149f90c441f699",
       "source": "curated-plugin-source/draft-skills/design-ux-architecture/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-accessibility/SKILL.md",
       "sha256": "618e245228f411546240d472cfe6ec7b09dfbeadd5ad38f58d6d2904f40348c9",
       "source": "curated-plugin-source/draft-skills/design-web-accessibility/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-accounts/SKILL.md",
       "sha256": "d724b676b09483797bc21f6db256bead981433f1b7317ced1014caefad1cf066",
       "source": "curated-plugin-source/draft-skills/design-web-accounts/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-analytics/SKILL.md",
       "sha256": "b534e6353b4c10b37890f1d1b2106597591ca1c62fe64e00abe3502d316f9c77",
       "source": "curated-plugin-source/draft-skills/design-web-analytics/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-art-direction/SKILL.md",
       "sha256": "5e8b65d24b2477bb9c4d30226083bac7c6babddfd494f4fd1551fd8cbee0dc75",
       "source": "curated-plugin-source/draft-skills/design-web-art-direction/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-audit/SKILL.md",
       "sha256": "d6edd7528ee4a017c9005728c44b7d9e02069bf60079fb008ab7ccb9d4f1384f",
       "source": "curated-plugin-source/draft-skills/design-web-audit/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-booking/SKILL.md",
       "sha256": "ca8eb2a62961feb55bf73593c38371dbfea560d4dad876809a47c384d5d71e49",
       "source": "curated-plugin-source/draft-skills/design-web-booking/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-browser-qa/SKILL.md",
       "sha256": "891ac8f0c399bbc9dbe407a984b218ca884fe29de65e2ef8b3a9e5202f4bbdf7",
       "source": "curated-plugin-source/draft-skills/design-web-browser-qa/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-cms/SKILL.md",
       "sha256": "fd849a1a0e60f34ee789ed1beea208ef1ba3dc72269b591424bf2c9a6e160d7d",
       "source": "curated-plugin-source/draft-skills/design-web-cms/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-commerce/SKILL.md",
       "sha256": "e50f9ef691d8ec3387441be1f9ae051a350b30c78403e975e52a60bce6c0f40a",
       "source": "curated-plugin-source/draft-skills/design-web-commerce/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-content-strategy/SKILL.md",
       "sha256": "02bf8807dfac4668b5f1b1ab25c95f38eca48ba1f5713ad55ff3ab95b112c1f1",
       "source": "curated-plugin-source/draft-skills/design-web-content-strategy/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-conversion/SKILL.md",
       "sha256": "f599eb9c776026f124c2cd4aec0f5d0e082be22984196f04bd30be354518ccff",
       "source": "curated-plugin-source/draft-skills/design-web-conversion/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-copy-fit/SKILL.md",
       "sha256": "3ffc8ff5bcb673ff9c57694e88aa530cb2ccc0e4db97c4faa66d7fa04e96b57a",
       "source": "curated-plugin-source/draft-skills/design-web-copy-fit/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-directory/SKILL.md",
       "sha256": "2ffcff5153671682de0f7f3525f2c521a8f2d6d63ada081b34e033c44b4acdbf",
       "source": "curated-plugin-source/draft-skills/design-web-directory/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-discovery/SKILL.md",
       "sha256": "e5ef2c33ff502b1f7f4d5bbce8173cf09492e5ed699ff325a34b27e9f5a0e033",
       "source": "curated-plugin-source/draft-skills/design-web-discovery/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-editorial/SKILL.md",
       "sha256": "65dec6d4242370b3b0d1b7be90c24743b95704b8a88977193b2c10929846051b",
       "source": "curated-plugin-source/draft-skills/design-web-editorial/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-fidelity/SKILL.md",
       "sha256": "38b40550e7fbb8cb0238ed9ca9e51b5be74a99286e13af9fbd3994a2a733bdcd",
       "source": "curated-plugin-source/draft-skills/design-web-fidelity/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-forms/SKILL.md",
       "sha256": "f441d9e0354281e36dff2a428fae83c862df69bf047765cbb7407f3e1688a765",
       "source": "curated-plugin-source/draft-skills/design-web-forms/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-frontend/SKILL.md",
       "sha256": "a4ecddd5b19d6b2ec8f9decf61cd522f40ad2ea3cee85e33cbcdf9f1e78adeeb",
       "source": "curated-plugin-source/draft-skills/design-web-frontend/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-information-architecture/SKILL.md",
       "sha256": "0b1cfba8375e7be75064a4adce4e51fca86de3b0b59b437ec9510dc6441cd831",
       "source": "curated-plugin-source/draft-skills/design-web-information-architecture/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-integrations/SKILL.md",
       "sha256": "066e510dcf1211f0b810654b369529de87253f5ddd05d6c8bfcbf8399c58fabf",
       "source": "curated-plugin-source/draft-skills/design-web-integrations/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-localization/SKILL.md",
       "sha256": "56ab873d39c05e24e35fc8700c24ddf06802090d955c47cc7b4c3d6de19b7834",
       "source": "curated-plugin-source/draft-skills/design-web-localization/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-maintenance/SKILL.md",
       "sha256": "ac46ede79d10d21657436e750c555f04fe2335047f7e5c58707c360ddf50d6f6",
       "source": "curated-plugin-source/draft-skills/design-web-maintenance/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-media/SKILL.md",
       "sha256": "619f106ebf04e66347324f5936ad8d228e47d17379218bf63d74108d382017c6",
       "source": "curated-plugin-source/draft-skills/design-web-media/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-migration/SKILL.md",
       "sha256": "7bb81f10450983f367ee80b27bd45f9f49d2e03951a7b35957503466f90ecec5",
       "source": "curated-plugin-source/draft-skills/design-web-migration/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-page-architecture/SKILL.md",
       "sha256": "09817d662c4331e8292cc31f582326b50f068d21655507248672a3d2c633ebee",
       "source": "curated-plugin-source/draft-skills/design-web-page-architecture/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-page-templates/SKILL.md",
       "sha256": "14b3c9c5862b3b848200f6613152bd29b3eb3934d4c403cbe0db846f60de6e27",
       "source": "curated-plugin-source/draft-skills/design-web-page-templates/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-performance/SKILL.md",
       "sha256": "4d890e1bc1dac8bcde987458b7205c34c06587516f80da2020e3a24fb8195b5a",
       "source": "curated-plugin-source/draft-skills/design-web-performance/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-platform-adapters/SKILL.md",
       "sha256": "7db65ee5c5724e90e2b6b575515442b57b20a0f60b3a95a8584f760411212485",
       "source": "curated-plugin-source/draft-skills/design-web-platform-adapters/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-privacy/SKILL.md",
       "sha256": "2c0d2bad9ea8cf4be260e2ba1b4445d41c368b0d11b8de74af4b48cae388f709",
       "source": "curated-plugin-source/draft-skills/design-web-privacy/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-release/SKILL.md",
       "sha256": "a5bb678b342f732d74464e4d8c5fe71a665a27092eaae7dd8e0390f56bde80bf",
       "source": "curated-plugin-source/draft-skills/design-web-release/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-responsive/SKILL.md",
       "sha256": "31e10e513f18d19027789519403610e32e7c880bcb05013cb2ec13af8aba43c1",
       "source": "curated-plugin-source/draft-skills/design-web-responsive/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-search/SKILL.md",
       "sha256": "593a9e58ce63aa83ded1142d45946c4a613e42c2e2c29ce8e5e3ce789ee03978",
       "source": "curated-plugin-source/draft-skills/design-web-search/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-seo/SKILL.md",
       "sha256": "5dcd105fbc8b69f4e1fd6cb7d7c9edbad9c5d6f97566f8ca430567031955f371",
       "source": "curated-plugin-source/draft-skills/design-web-seo/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-storytelling/SKILL.md",
       "sha256": "feb9013634a58e804233bc7318fa702e4b6f938c92593515c5b5a9d415d1eff0",
       "source": "curated-plugin-source/draft-skills/design-web-storytelling/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-system-assembly/SKILL.md",
       "sha256": "812e45598cab53d6461f706d9d079a6cc275bc8451820638b017f5d43f9fb060",
       "source": "curated-plugin-source/draft-skills/design-web-system-assembly/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-web-visual-review/SKILL.md",
       "sha256": "ccdcb6ab9a8ca6fa056fc4ccde59003e4bfc501d9aad1ed76a45c79fa8029652",
       "source": "curated-plugin-source/draft-skills/design-web-visual-review/SKILL.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/README.md",
       "sha256": "6e6e77540e37aaf5e75f7866129adc32534c3cd582a864b9eb8c874f4c5e002d",
       "source": "curated-plugin-source/examples/component-specs/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/button.md",
       "sha256": "5081d881a923651e88ae24045503dbc92b0d08ecc528f36044b342d89b253fb3",
       "source": "curated-plugin-source/examples/component-specs/button.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/data-table.md",
       "sha256": "b5bb3611cef7597a484488e4d9de58215adfa505b7224f340e757759bf3f9b74",
       "source": "curated-plugin-source/examples/component-specs/data-table.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/dialog.md",
       "sha256": "7bfc4e5a8ccfb49a7eec8babbecc70d9270298e05429e90d16b68c89cf2b9d30",
       "source": "curated-plugin-source/examples/component-specs/dialog.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/selection-guide.md",
       "sha256": "5f5aa191e2a5f9c6fd0a13cfdabbd832fe006b11993aa0defa0026a3cc6ea176",
       "source": "curated-plugin-source/examples/component-specs/selection-guide.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/sources.json",
       "sha256": "e34efdc3027ce238f107ed6a24dc5507b21c7b2250b588741cf07d5918aa35ce",
       "source": "curated-plugin-source/examples/component-specs/sources.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/specimens.md",
       "sha256": "ac08e342ac71c1ba76ddb1dddbcebde81bdb820b02404d34483cdbc262db92fd",
       "source": "curated-plugin-source/examples/component-specs/specimens.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/text-field.md",
       "sha256": "3a2e1831278bc31993ce929c637e301b67a6a793f3796a59c2472f4ff69a6703",
       "source": "curated-plugin-source/examples/component-specs/text-field.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/component-specs/work-record.md",
       "sha256": "33c7578ff5c818754bd39ab9e271e37b2b22e94aec1549d35a824c44f66a91e7",
       "source": "curated-plugin-source/examples/component-specs/work-record.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/craft-lab/index-v2.html",
       "sha256": "ce60325ad76794de6cd95a6b257e0d3ed53789a11d42ace6553de3dc36639a63",
       "source": "curated-plugin-source/examples/craft-lab/index-v2.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/craft-lab/index.html",
       "sha256": "8a5c65561dd40e95ece144838b70f7a6e253df8b12e64d1249f53c02b716927d",
       "source": "curated-plugin-source/examples/craft-lab/index.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/craft-lab/report-v2.json",
       "sha256": "d57fa2835fbb4843b99e3cf2f5a753e5fd27bdeb1392d6164b416ac6748215ef",
       "source": "curated-plugin-source/examples/craft-lab/report-v2.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/craft-lab/report.json",
       "sha256": "b723778029ef80552f3c4f4429494538efbc616caa20a4fdf5ab768907515fb6",
       "source": "curated-plugin-source/examples/craft-lab/report.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/craft-lab/specimen.json",
       "sha256": "2a400373c30153db6e0c4965216016152225d6066307aa736c79ff372ee51e5c",
       "source": "curated-plugin-source/examples/craft-lab/specimen.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/infographic-story/README.md",
       "sha256": "88051473eab95bbe7a00ee8efff848ef853594d9a845e166e700269892444cd0",
       "source": "curated-plugin-source/examples/infographic-story/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/infographic-story/build.py",
       "sha256": "dd28ddee2cae133e04a675b4a8b2a96d01c1a46c32fbdf892dcf8807cbeae356",
       "source": "curated-plugin-source/examples/infographic-story/build.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/infographic-story/data.json",
       "sha256": "3ce88158d2621f9534d69b7ae241445ff70ab51d78724f5a36a8ccdefe9f29ba",
       "source": "curated-plugin-source/examples/infographic-story/data.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/infographic-story/index.html",
       "sha256": "c60c0b520a9e90983cf4136234ed3f5aa8902fc0a34b28e40201e2873e7eb529",
       "source": "curated-plugin-source/examples/infographic-story/index.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/README.md",
       "sha256": "84c1d1a4559a0f1a187fa98eda6d545ee1b098d8bc5b31b007269bfc2abd01fd",
       "source": "curated-plugin-source/examples/media-quality-recipes/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/routes.json",
       "sha256": "0d5624ebd38326157aac4b044f1dfa03182748ab028026cd2c7997e255e3dbbb",
       "source": "curated-plugin-source/examples/media-quality-recipes/routes.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/touch-session/app.mjs",
       "sha256": "ca011866ebcbb22db3f09e740620b8a94c217a424691685fdb4315d9007e5ac3",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/app.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/touch-session/browser-checks.mjs",
       "sha256": "094f79ac712b86020a5b4a10db428876cc51d5e97891551a4c801d2d625af1e4",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/browser-checks.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/touch-session/index.html",
       "sha256": "ce3463a01c684ac7f91950573a61f24330a935adbb527c3bca3dec6c3b7c36af",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/index.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/touch-session/session.mjs",
       "sha256": "46a2afabb302f04e7bf828873db7918f04c0b08cf3d6ae4514d1d2f93a623728",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/session.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/media-quality-recipes/touch-session/session.test.mjs",
       "sha256": "b1be22df47274bd451132481bc25b2bd41bdc102e2998d02ddef82eee775b8df",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/session.test.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/CONTINUITY.md",
       "sha256": "f12c76d66ed888dd672f27c8ba4d66b79a1a6b1138d7b6abc3fdd419d22ab9a8",
       "source": "curated-plugin-source/examples/quality-benchmark/CONTINUITY.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/EVIDENCE.md",
       "sha256": "07f46f419f12937cc60a4bda24b703b1a80146a3e1d371a2c2df3754965a846b",
       "source": "curated-plugin-source/examples/quality-benchmark/EVIDENCE.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/README.md",
       "sha256": "76891eeb6f6d17e22a543b3d971f395801eefdb3421e01e8768767b36512ffe3",
       "source": "curated-plugin-source/examples/quality-benchmark/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/archivo-OFL.license",
       "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/archivo-OFL.license",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/archivo.ttf",
       "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/archivo.ttf",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/barlow-OFL.license",
       "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/barlow-OFL.license",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/barlow-condensed.ttf",
       "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/barlow-condensed.ttf",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/form.png",
       "sha256": "92af191b93e31c74109795e4a13a16eea3ed4bfde51c065103fe38c513203e01",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/form.png",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/newsreader-OFL.license",
       "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/newsreader-OFL.license",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/newsreader.ttf",
       "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/newsreader.ttf",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/provenance.json",
       "sha256": "90acefe28a93228b2da2f97c506f067a40cfd792e435245bd093fdd3b252434c",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/provenance.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/assets/tidal.png",
       "sha256": "a51f39faebe22ae65f6c952ebaa83ae139320e95d78b8f405ca43a0debc0fbcd",
       "source": "curated-plugin-source/examples/quality-benchmark/assets/tidal.png",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/contract-examples/README.md",
       "sha256": "c60572f89ebe8f1c3a796d7a2050c0e2249b157cfe9d24b9f5cf12fe393cd05b",
       "source": "curated-plugin-source/examples/quality-benchmark/contract-examples/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/contract-examples/evidence.json",
       "sha256": "54c7943f1e92d0f4aba03550c073221e6b48ffc61092f9a57dcf07f61be8a853",
       "source": "curated-plugin-source/examples/quality-benchmark/contract-examples/evidence.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/contract-examples/generate_examples.py",
       "sha256": "60e356ec912b8ff169542a5b4fd35b98a3e10de54c4dd3fc4e3fc1f386d4e533",
       "source": "curated-plugin-source/examples/quality-benchmark/contract-examples/generate_examples.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/contract-examples/handoff.json",
       "sha256": "2fbcc6df9cfb4331e8baabb214275ac2c87145afa2a281bc79164247f46487d2",
       "source": "curated-plugin-source/examples/quality-benchmark/contract-examples/handoff.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/contract-examples/selection.json",
       "sha256": "c70584cca74fc28eb70f7e53c3e87932cfd71ce65249677dc6ba8de57940fa1f",
       "source": "curated-plugin-source/examples/quality-benchmark/contract-examples/selection.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/exports/form-review.pdf",
       "sha256": "9126f983aba84a48efbe3945208115b30f9cfffae1345faa1e1f79ca611091a6",
       "source": "curated-plugin-source/examples/quality-benchmark/exports/form-review.pdf",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/exports/tidal-motion.webm",
       "sha256": "8f4bce11c98e85d9533be295e821baf98f5582473465bdc910c86f9cfe4d7f19",
       "source": "curated-plugin-source/examples/quality-benchmark/exports/tidal-motion.webm",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/exports/tidal-review.pdf",
       "sha256": "a2b8f0fc77e7bbe804eaeeeaeb8abf54efc671b6399f36e0e39c8e6c9e0172fb",
       "source": "curated-plugin-source/examples/quality-benchmark/exports/tidal-review.pdf",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/index.html",
       "sha256": "e9375997a4f11d9034e07ac23410a2eac4e92bf4e4863937d2e871ac2ed5008d",
       "source": "curated-plugin-source/examples/quality-benchmark/index.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/motion.html",
       "sha256": "afa0f77a1c1cb545d2e008de158b961a13142fc1d34e702a90e8fdf1a3084821",
       "source": "curated-plugin-source/examples/quality-benchmark/motion.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/motion.js",
       "sha256": "d3b23498894744f5fdaf0beaacca6958aaf903036f7d5320e436887c11c0c0e2",
       "source": "curated-plugin-source/examples/quality-benchmark/motion.js",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/revision-comparisons.json",
       "sha256": "4aab3676a1c774217a3eb02bef4f61bf94b9c5e1f2859a7b424613701b80c99a",
       "source": "curated-plugin-source/examples/quality-benchmark/revision-comparisons.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/specimen.css",
       "sha256": "e4f1594f9c75bb9b65bf259d1b3dab6b01f47060a35d893ecb03fca68a307101",
       "source": "curated-plugin-source/examples/quality-benchmark/specimen.css",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/specimen.html",
       "sha256": "234469669d09f010b29a62b20ff75b2eba3e985c51f525f49a1330d7b2825b6f",
       "source": "curated-plugin-source/examples/quality-benchmark/specimen.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/specimen.js",
       "sha256": "cd126bfc26704bde382e2d6d2d1de3c72095dc62c7dd2b0cc8ff6b0c5f2131ec",
       "source": "curated-plugin-source/examples/quality-benchmark/specimen.js",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/timeline.json",
       "sha256": "da8d44755557264c5940c67edad27e751631e90cd7c33e02eca9c9ccc9fb937f",
       "source": "curated-plugin-source/examples/quality-benchmark/timeline.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/typography.html",
       "sha256": "0bcfaae8c4c973f5d47ffc812564983dd82fca381163bc97b275c165634a8414",
       "source": "curated-plugin-source/examples/quality-benchmark/typography.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/quality-benchmark/verification.json",
       "sha256": "81307c1af582fe2844c2b47a0953c49742acb6137fffa2fba76a2193a3353498",
       "source": "curated-plugin-source/examples/quality-benchmark/verification.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/reference-baseline.json",
       "sha256": "4ca1d1e9b363db88af33a8580dada552e13f99b7c93c4f0065ffed34276a0346",
       "source": "curated-plugin-source/examples/reference-baseline.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/reference-decision.json",
       "sha256": "9784454d02caee4a29dc197df243d146340f9b60dda642d19061b919e8911163",
       "source": "curated-plugin-source/examples/reference-decision.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/README.md",
       "sha256": "2b0b3a7175c9e6eb5e215a65d6b0761f36d449a2037497ed92195eab191d24c2",
       "source": "curated-plugin-source/examples/screen-production/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/browser-checks.mjs",
       "sha256": "d4e03a6c2e2a322bf064155a77a4aa18013e0e73c28a60af3a2c39a8c76f2515",
       "source": "curated-plugin-source/examples/screen-production/browser-checks.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/campaign.json",
       "sha256": "24a0fa1ae2416fb9a4b86edb8565218c435636359c0c380d55b30de4c87e9e29",
       "source": "curated-plugin-source/examples/screen-production/campaign.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/index.html",
       "sha256": "ec040e62ee866712698c1a821430854934689c30f8b61d19fe2eeb8024e17169",
       "source": "curated-plugin-source/examples/screen-production/index.html",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/player-model.mjs",
       "sha256": "85d9f4476e72bffe3dfc7d05478a1f85579db705653a3da9df5ce8d42305dd7f",
       "source": "curated-plugin-source/examples/screen-production/player-model.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/player.mjs",
       "sha256": "cd02529c1b240a35b90807f3c7a25c7bbf5cf85149eeb64e4c3291c3bca81735",
       "source": "curated-plugin-source/examples/screen-production/player.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/player.test.mjs",
       "sha256": "a0e986f22e76f9a917822e53495d2ee42b03f01b0eb3764e129be0fc067347d8",
       "source": "curated-plugin-source/examples/screen-production/player.test.mjs",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/render-v1/manifest.json",
       "sha256": "c83b8cb46a3e6e443559c18eb264c82284f0cd414d9ff620893e8e7fad2829be",
       "source": "curated-plugin-source/examples/screen-production/render-v1/manifest.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/render-v1/portrait.svg",
       "sha256": "b45d23881f8a43e2b7d790a17fc1a7c0f72d71645e623e590c4109b9394921de",
       "source": "curated-plugin-source/examples/screen-production/render-v1/portrait.svg",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/render-v1/strip.svg",
       "sha256": "6e4ff6dc2050aec91868ed5fe00955804349c5223663a9e4043ef15394a2e1bc",
       "source": "curated-plugin-source/examples/screen-production/render-v1/strip.svg",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/screen-production/render-v1/wide.svg",
       "sha256": "e1deb6426a818ac5d0e4c84be4621d51c67e1784f715cd13094de03da3b65b0a",
       "source": "curated-plugin-source/examples/screen-production/render-v1/wide.svg",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/website-workflow/README.md",
       "sha256": "f40a19fb6c51d85caa0037d71492181662ded2b3413e4eee2e721c13ad59ac24",
       "source": "curated-plugin-source/examples/website-workflow/README.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/assets.md",
       "sha256": "3c29a44b21b582e2e952bd010f0bf2b83fbf8f4f321d226c193842d215230dfb",
       "source": "curated-plugin-source/inventory/assets.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/families.md",
       "sha256": "ff911241d154a31d88d5045d2720332fbe28c7930c819127f5905f66be21dc01",
       "source": "curated-plugin-source/inventory/families.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/foundations.md",
       "sha256": "06bc6bf8d493726322caab9456119132893061b2d856a3ca5c55c45ffa049086",
       "source": "curated-plugin-source/inventory/foundations.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/governance.md",
       "sha256": "f080923c0627005757228eb51c40de101abefa18a41903cf632df31220e28390",
       "source": "curated-plugin-source/inventory/governance.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/index.md",
       "sha256": "8ad5ccc59ef3b98a646f870ec45fbf4b1f5ec72a43228f2b2c7836bd52735c02",
       "source": "curated-plugin-source/inventory/index.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/master.json",
       "sha256": "9044ff01cf3d9c234a177bddaf8e896cf15537d645742fd4f012418b612d2b33",
       "source": "curated-plugin-source/inventory/master.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/patterns.md",
       "sha256": "bd0047664af798768d2f4ece04329fefa7f0639752550fe3f038493cdf1aa1e1",
       "source": "curated-plugin-source/inventory/patterns.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-brand.md",
       "sha256": "616d9dadd7b655571c4194b64571a928877d7810573a3326b015861c6641e5d3",
       "source": "curated-plugin-source/inventory/profile-brand.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-display.md",
       "sha256": "1b0e94e9389e572950f250cf4d101837f9a6e509aff8f2697e31d60688874f8d",
       "source": "curated-plugin-source/inventory/profile-display.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-marketing-sales.md",
       "sha256": "1477914428dcba9639172b58dcf0c2c5cfdc2adb54205713b9f1ed53c5235041",
       "source": "curated-plugin-source/inventory/profile-marketing-sales.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-native-phone.md",
       "sha256": "250da2f4d2ce5b446c3644c1bc14cba9a0f185f7a52d1816dd48d543aac308b1",
       "source": "curated-plugin-source/inventory/profile-native-phone.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-native-tablet.md",
       "sha256": "4f2c0a51590f68c1b5f10ff4992e457610905791215fc665440700b199d9f33b",
       "source": "curated-plugin-source/inventory/profile-native-tablet.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-touch.md",
       "sha256": "6d01dc7120c3b4ae4c39d5103849156a665e0945b23718bd6420d703e05b3d84",
       "source": "curated-plugin-source/inventory/profile-touch.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-web-app.md",
       "sha256": "edeab04be9c86571f50b9ba7141732fc5c60f95f17ececfafd01ab5362103086",
       "source": "curated-plugin-source/inventory/profile-web-app.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profile-website.md",
       "sha256": "4c79737e171e991d7ba74390d90aa0a03f441003a50d529f0b21e89743f53607",
       "source": "curated-plugin-source/inventory/profile-website.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/profiles.md",
       "sha256": "5088787547fa0595ca571aceeced80ccdd3e47349a3ec4dd2f11bb5408a3fd8b",
       "source": "curated-plugin-source/inventory/profiles.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/templates.md",
       "sha256": "080b2f32fe1976f4ea921fd8d62fc0db25c45cb2a324a6dc3c4e7b4add9f44aa",
       "source": "curated-plugin-source/inventory/templates.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "inventory/ui.md",
       "sha256": "99722dfbd025f40d441537d28d514b48c72d335867b647dfcd6f61f669c19b90",
       "source": "curated-plugin-source/inventory/ui.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "scripts/adopt_template.py",
       "sha256": "78d3e559fa746e9ff955723f0c1d2a30b2c753c91a73ccb606c5edd67af78e69",
       "source": "curated-plugin-source/scripts/adopt_template.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "scripts/craft_tools.py",
       "sha256": "b1ad2c11d457459aeb19eaa194c7f35cba831155c689758c8dfa3d5408ee9665",
       "source": "curated-plugin-source/scripts/craft_tools.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "scripts/reference_library.py",
       "sha256": "e65933b72def2622d19ced7a73c6779e807e789834a8c6dbb4edac399301a51b",
       "source": "tools/reference_library.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "scripts/screen_campaign.py",
       "sha256": "7f9ae34c6e33ae00d72d2f4d249b6b441a9045a26d61d111018be3710da150f0",
       "source": "curated-plugin-source/scripts/screen_campaign.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "scripts/wrap-diagnostics.js",
       "sha256": "c9b092206628fda07c40f5449d1abf876ed3ec73dee720715ac1705aa03336eb",
       "source": "curated-plugin-source/scripts/wrap-diagnostics.js",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/color-decision.md",
       "sha256": "73484886fa3cae0f4a962801480f9f9d4a7914dd99e2eee375acf81f8cecad2f",
       "source": "curated-plugin-source/templates/color-decision.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/content-work.md",
       "sha256": "fd5fd9a8f57ed5e1abba3e6b27872f8ecedf88d40011b1e76877b69e55ac86eb",
       "source": "curated-plugin-source/templates/content-work.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/creative-continuity-exercise.md",
       "sha256": "8d6a8523d70baec312570545a9fe5cb294616a3967f9617e78abbd269d8edb3e",
       "source": "curated-plugin-source/templates/creative-continuity-exercise.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/creative-direction-board.md",
       "sha256": "b800f38f0cec853798421304f8ddd784bd896178a7dab7defd1a2c2f582da36a",
       "source": "curated-plugin-source/templates/creative-direction-board.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/creative-direction-stage.md",
       "sha256": "12fbe42bc18186518b8574f409dd22f957abd4a371c5d5fbb0362f2ab3f4cff6",
       "source": "curated-plugin-source/templates/creative-direction-stage.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/design-work.md",
       "sha256": "e01c0f0752763da83207c238a3529d4d59c1f81ab6fa24d888155ea69c885bf2",
       "source": "curated-plugin-source/templates/design-work.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/display-design-brief.md",
       "sha256": "6f8096a4d39684ca6dc6274e973244a1606dde6683f59eee76b2762dac659ed1",
       "source": "curated-plugin-source/templates/display-design-brief.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/display-production-details.md",
       "sha256": "3f1f10b32ffe41ffc933a8b9354dd9bcbf9f75bbb56c8daeb4ec29a4c9075d76",
       "source": "curated-plugin-source/templates/display-production-details.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/evidence-record.json",
       "sha256": "4b50c65d985b62c3799d1fad473884441d17ed3de9e61e00a33297dca9109734",
       "source": "curated-plugin-source/templates/evidence-record.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/handoff-actor-record.json",
       "sha256": "dc92290b4e4da9cc1dd15ee5a8e137345c40e9ee3af2cc8b00efaef53c27fb96",
       "source": "curated-plugin-source/templates/handoff-actor-record.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/handoff-record.json",
       "sha256": "0f0ee8d8dae48d69a592b53011a9ec5805f4e114213c16edf3e76af0456233cb",
       "source": "curated-plugin-source/templates/handoff-record.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/identity-handoff.md",
       "sha256": "52aabf7cd927900ae594001989c7ab925eccbd731c08758c0ccb8377e8ed6a1c",
       "source": "curated-plugin-source/templates/identity-handoff.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/infographic-spec.md",
       "sha256": "0af9812db670eb32f09c5f4fdb9e4f17464fb2ee8258e0307053fb77d3b0e5d6",
       "source": "curated-plugin-source/templates/infographic-spec.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/manifest-record.json",
       "sha256": "0a5487d2420b4a0004217169a94e741d3002a40bec9c7e82c9cc5a1d6379ea2a",
       "source": "curated-plugin-source/templates/manifest-record.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/media-quality-packet.md",
       "sha256": "2aadba5f2f6dba6cf71a19b7357c35aefb7a95f57dc43ce84c5a2d2752ce35b0",
       "source": "curated-plugin-source/templates/media-quality-packet.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/media-quality-rubric.md",
       "sha256": "b9c1b58a13308f3851fdb8ceabecc97e6efc4df16bd57f2d03f63dba0836c647",
       "source": "curated-plugin-source/templates/media-quality-rubric.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/motion-spec.md",
       "sha256": "cb91e3165ec00f677df4153dc7f2371583dd5b206faf1ce2d816a391a1aac08f",
       "source": "curated-plugin-source/templates/motion-spec.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/persona-components.json",
       "sha256": "a368a93f79cf5fc7eb23e77533c9d130094f694332793330f607e9c5d586c308",
       "source": "curated-plugin-source/templates/persona-components.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/persona-field-inventory.md",
-      "sha256": "1972a6b6346ec35d0af6bd3123448b3380269cab340a48fbff24292fb3b5380e",
+      "sha256": "3798aeff7fda0e70b482f3f01c45d196428bfa22cac96a1413b4fbad69f2df85",
       "source": "curated-plugin-source/templates/persona-field-inventory.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/persona-fields.json",
       "sha256": "052c97659144e47f6f1d9e42af451a0a01958f9e07d89d4af9cb4337b15d76e5",
       "source": "curated-plugin-source/templates/persona-fields.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/persona-record.json",
       "sha256": "cd36d33501115fb423313a71697a33b4bee3f76579465ebe9382bfa013005d4a",
       "source": "curated-plugin-source/templates/persona-record.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/persona.md",
       "sha256": "303b118d6d7cf85e492ccffb0e1b586dc3e61b339ae133aca8115591c58912cc",
       "source": "curated-plugin-source/templates/persona.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/reference-decision.md",
       "sha256": "80f8d29d9f79756a5f42b8c7581dcc5a6d44b1aeb8d199e4e6fc24673fa5b48c",
       "source": "curated-plugin-source/templates/reference-decision.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/reference-decision.schema.json",
       "sha256": "f6a507aa98127ab75785d802e3c552efcc338a5cfce9723840b08ba33877e2c8",
       "source": "curated-plugin-source/templates/reference-decision.schema.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/research-brief.md",
       "sha256": "64e87ed8e2fce722fa530bfdc8b63c3e3e2f2ddee61122b360a09a6198d42739",
       "source": "curated-plugin-source/templates/research-brief.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/resume.md",
       "sha256": "8c71a3508f3c379c4ab67bb3c3f9ca015d126f4e9b37a26a02e5481cc8e9fca8",
       "source": "curated-plugin-source/templates/resume.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/selected-capabilities.json",
       "sha256": "4aa64a72c11ac5079a682d29c492e9e5f0e5420fe063988b44be04498d139f52",
       "source": "curated-plugin-source/templates/selected-capabilities.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/selected-capabilities.schema.json",
       "sha256": "ec0ca7d38f89971cada362575bae161a1c70488836a6f7a1f6c658ccbdb076e3",
       "source": "curated-plugin-source/templates/selected-capabilities.schema.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/skill-learning-record.md",
       "sha256": "5298be06ab664f68a915c87dc25a56cdec2a9e59776ccde3161990e45d87f6a9",
       "source": "curated-plugin-source/templates/skill-learning-record.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/specimen-record.md",
       "sha256": "aead1f70099ea799d7961da7b3d52e4f3ca81190ac313b7656ff255f18f91087",
       "source": "curated-plugin-source/templates/specimen-record.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/stage-execution.md",
       "sha256": "e6a8a4f00783a2e2af5ea94a2a488260e78c7bd24d1a492be1777853bf636755",
       "source": "curated-plugin-source/templates/stage-execution.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/system-inventory.schema.json",
       "sha256": "3094fce6caf5804fcd1e414e639ac4467e09e9ad5ff4541c752b182e96a9d54b",
       "source": "curated-plugin-source/templates/system-inventory.schema.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/system-item.md",
       "sha256": "61c59c338a4ab6b8b4a9e37f78a3f268d221d5f4573666a29a18442b1b337c45",
       "source": "curated-plugin-source/templates/system-item.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/system-scope.md",
       "sha256": "41324efa501c22b01cbeeec713fa651a3a1d0bc9cdeecf19c21cd07e4da606c9",
       "source": "curated-plugin-source/templates/system-scope.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/typography-decision.md",
       "sha256": "b27e3800733255cce210e485256c0910d0962319f07b03184f28ef033c42742b",
       "source": "curated-plugin-source/templates/typography-decision.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/ux-deliverable.md",
       "sha256": "c4d1ded556eee38b85f7fb3178510bbc63500caf7b7bf27676210a29e90d081d",
       "source": "curated-plugin-source/templates/ux-deliverable.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/visual-language-system.md",
       "sha256": "26cb5fbceaedf29bd6f3760c99073d43ad057a2853340301cbed58160a958824",
       "source": "curated-plugin-source/templates/visual-language-system.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "templates/website-work.md",
       "sha256": "244afa9d8485a65d3cb27b11af38b87e3e98726b2d7a6fe8f69e45d170c8b13b",
       "source": "curated-plugin-source/templates/website-work.md",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "tests/test_adopt_template.py",
       "sha256": "ac186643c36fb5be36aa5b97d34288ba84e486390d28d196dd1fcfbe7394c6f9",
       "source": "curated-plugin-source/tests/test_adopt_template.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "tests/test_general_media_scope.py",
       "sha256": "9152b8d1fde8e6ec809fe2b3ac4feacdd248dfddb3ba7b085020240da99e47a7",
       "source": "curated-plugin-source/tests/test_general_media_scope.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "tests/test_handoff_current.py",
       "sha256": "7279436c0e1cc7ccbc123fc754c4d2fbbc5784f5970767e5accd85a6b90e4d4c",
       "source": "curated-plugin-source/tests/test_handoff_current.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "tests/test_screen_campaign.py",
       "sha256": "5d8a241bb38af598e3c7ac85b162120265991eda86d08c7fc953f1b5c772a806",
       "source": "curated-plugin-source/tests/test_screen_campaign.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "tests/test_selection.py",
       "sha256": "cb1757cbc575a709547e221f6a35f486c42204f4db6e6456b5facf1aa858b26c",
       "source": "curated-plugin-source/tests/test_selection.py",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     },
     {
       "destination": "website-coverage.json",
       "sha256": "738c9fe9bd78e927e20381377e4d7efc891205099a82df4f2e198c2cba59a01c",
       "source": "curated-plugin-source/website-coverage.json",
-      "status": "candidate-input-not-release-approved"
+      "status": "versioned-evaluation-input"
     }
   ],
   "historical_source": {
@@ -2151,5 +2151,7 @@
     "statement": "Historical baseline only. These hashes do not verify current candidate bytes.",
     "version": "0.1.0"
   },
-  "status": "internal-review-only"
+  "production_accepted": false,
+  "publication_review_required": true,
+  "status": "public-supervised-evaluation"
 }

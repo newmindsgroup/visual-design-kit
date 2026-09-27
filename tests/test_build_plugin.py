@@ -1,5 +1,5 @@
 """Deterministic package build checks for Visual Design Studio."""
-# Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+# Version-Timestamp: 2026-09-27T13:48:12-04:00
 import hashlib
 import json
 from pathlib import Path
@@ -58,6 +58,17 @@ class BuildPluginTests(unittest.TestCase):
         self.assertEqual(manifest["canonical_source"]["path"], "curated-plugin-source")
         self.assertEqual(manifest["historical_source"]["version"], "0.1.0")
         self.assertEqual((self.source / "tools" / "reference_library.py").read_bytes(), (self.plugin / "library" / "scripts" / "reference_library.py").read_bytes())
+
+    def test_public_distribution_does_not_claim_production_acceptance(self):
+        self.apply()
+        manifest = json.loads((self.plugin / "library" / "PACKAGE-MANIFEST.json").read_text())
+        self.assertNotIn("distribution_ready", manifest)
+        self.assertEqual(manifest["distribution_scope"], "public")
+        self.assertTrue(manifest["publication_review_required"])
+        self.assertEqual(manifest["status"], "public-supervised-evaluation")
+        self.assertFalse(manifest["production_accepted"])
+        self.assertTrue(all(item["status"] == "versioned-evaluation-input"
+                            for item in manifest["files"]))
 
     def test_check_detects_payload_mutation_and_generated_copy_drift(self):
         self.apply()

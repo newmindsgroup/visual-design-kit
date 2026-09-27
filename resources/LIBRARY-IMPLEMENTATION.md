@@ -1,14 +1,16 @@
-# Reference library implementation
+# Historical author reference-library implementation
 
-Version-Timestamp: 2026-09-14T18:28:20.809854-04:00
+Version-Timestamp: 2026-09-27 13:45:58 AST
 
-## Authority and destination
+## Historical scope
 
-The owner confirmed permission to distribute the supplied books through Google Drive and for recipients to download them for local use with the kit. This does not authorize other redistribution. Raw sources and extracted book text stay out of this repository.
+This record describes work on the author's separate research collection from September 14 to 15, 2026. All counts, availability statements, pending actions, review attempts and cloud checks below belong to that historical author-only effort. They have not been refreshed for the public release and do not promise access, downloads or recipient permissions.
 
-The initial version is staged under Resource Library / Visual Design Kit Reference Library / v0.1.0 in the owner's Google Drive sync folder. Local copy verification does not establish completed cloud synchronization or recipient access.
+No books, extracted source text, private catalog, source-guide bundle or cloud sharing grant is included in this repository. Adopting users supply their own references with permission for the intended use and recipients. Follow the current [local setup](LOCAL-SETUP.md) and [acceptance checklist](TEAM-READINESS.md); the plan below is preserved as historical evidence, not a public setup task list.
 
-## Ordered completion plan
+Original record opened: 2026-09-14T18:28:20.809854-04:00.
+
+## Historical completion plan
 
 1. Inventory and hash every source; preserve duplicates as provenance records. Recover formerly unavailable originals with a separate receipt.
 2. Package only cataloged sources using relative paths and a checksum manifest. Retain explicit missing, restricted, unsupported and visual-review states.
@@ -20,11 +22,11 @@ The initial version is staged under Resource Library / Visual Design Kit Referen
 8. Test download integrity and retrieval on a receiving machine, then complete Codex, Claude Code and Cursor library-use checks.
 9. Run independent review, publish code/documentation updates, and issue a versioned completion report with unresolved limitations.
 
-## Verified this pass
+## Initial verification snapshot
 
 All 257 existing local original paths matched their recorded SHA-256 hashes. The initial portable package contained 269 catalog records and 445 files, including the catalog and README, before recovery of the 12 previously uncopied records. These counts do not establish synthesis or visual quality.
 
-## Still pending
+## Unresolved at the initial snapshot
 
 Cloud synchronization and downloadable sharing link verification; recovery reconciliation; extraction quality and OCR work; source guides for the full collection; portable retrieval tooling; skill integration coverage; receiving-machine and IDE execution; independent final review. No claim of complete knowledge or production acceptance.
 

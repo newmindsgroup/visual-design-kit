@@ -1,8 +1,8 @@
 # Visual Design Studio
 
-Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+Version-Timestamp: 2026-09-27T13:48:12-04:00
 
-One starting skill selects from 130 design capabilities. This 0.2.0 candidate improves completion checks, scoped capability selection, project continuity, optional book access and demonstrated design craft. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
+One starting skill selects from 130 design capabilities. The 0.2.1 public edition retains the 0.2.0 improvements to completion checks, scoped capability selection, project continuity, optional book access and demonstrated design craft. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
 
 The 0.1.0 installation and Codex startup have historical evidence. They do not automatically validate this edition. This candidate's installation, source checks and reviews are recorded in the repository release evidence. Native Claude plugin packaging is not claimed; Claude Code and Cursor can read the exact entry file in their project. Capability files are selectively read references, not 130 globally registered commands.
 
@@ -13,3 +13,5 @@ Optional book access uses an owner-supplied local path and the packaged read-onl
 `PAYLOAD.sha256` pins exact raw bytes with sorted relative POSIX paths, excluding itself. Its digest must come from a trusted source. New editions get new pins; installing one does not change existing projects. [Feedback](FEEDBACK.md) proposes scoped, tested improvements; no unattended reporting or model training is implied.
 
 The manifest interface capabilities array is empty because the reference workflows are not connector actions.
+
+Public reuse is governed by [MIT](LICENSE) for original work and the [third-party notices](NOTICE.md). Public distribution does not imply unattended production acceptance.

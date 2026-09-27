@@ -1,41 +1,25 @@
-# Reference library: team readiness
+# Optional reference library: acceptance checklist
 
-Version-Timestamp: 2026-09-15T08:48:11.274032-04:00
+Version-Timestamp: 2026-09-27 13:45:58 AST
 
-Status: local evaluation package. Independent release review, cloud download and recipient-machine acceptance remain pending.
+Each adopting project supplies and checks its own authorized reference library. This public release includes no book collection, source-guide bundle, download service or access promise. The author's earlier collection checks do not qualify another library or receiving machine.
 
-## What is usable locally
+## Check your setup
 
-The trusted kit utility accepts a local library path, verifies its manifest files and searches extracted text with source/page references. The Drive-staged collection contains 269 catalog records with duplicate provenance retained, 269 linked source guides, and 723 manifest entries. There are 216 records with substantial extracted or OCR text, 10 with insufficient text and 43 with no extraction. These are records, not unique books. Text volume does not certify quality or full synthesis.
+1. Identify the permitted sources, intended uses and recipients. Keep originals and extracted text outside the kit and client repositories. Confirm whether the selected agent may receive excerpts.
+2. Check the [file contract](LOCAL-SETUP.md) and run the trusted utility against your configured root. Reconcile missing files, changed hashes and unsupported formats before relying on affected sources.
+3. Retrieve a known passage and open the corresponding original page. Record the library version, manifest digest and exact locator. Check OCR, numbers and visual interpretation against the original.
+4. Run a bounded task in the intended IDE: select a source, record a design decision, produce an artifact, revise it and resume from the saved evidence. A successful search does not establish that entire workflow.
+5. If transferring a library to another person or machine, first establish permission for that transfer. Verify the received files and repeat the relevant checks there. Keep credentials and machine-specific configuration local.
 
-The prior 212 sampled local-model reviews are distinguished from newer bounded Codex assessments. OCR for the UI roadmap and infographic reference is provisional. A blank storyboard worksheet is intentionally visual. Source guidance and skill connections remain subject to evidence checks. The plugin's pinned payload has not been silently changed.
+Sources remain optional where the selected capability's inputs are otherwise satisfied. When a task requires an unavailable source, state that limitation and continue only with work supported by available evidence.
 
-## Next steps in order
+## Historical author-only evidence
 
-1. Complete independent review of the reference utility and startup instructions, resolve material findings, and publish the reviewed commits. Authentication and preflight are confirmed, but both permitted milestone review attempts failed. Do not retry this milestone under a new ID or claim review acceptance. Diagnose provider/model access before selecting an authorized review recovery path.
-2. Verify the staged folder has synchronized to Google Drive and obtain its intended share link. Verify access through the actual recipient route; local file presence is not proof of download access.
-3. On a separate machine, download the whole version folder, verify the manifest and retrieve a known passage and original page. Record the exact manifest digest. Do not copy credentials or another machine's local configuration.
-4. Test the optional library workflow in actual Codex, Claude Code and Cursor project sessions. Verify startup, source selection, a bounded artifact, revision and resume. Existing separate-folder checks establish local file integration only.
-5. Publish a tested version with clear install instructions and known limits. Keep source books in Google Drive, outside GitHub. Existing projects retain their pins until they opt into an update.
+During September 2026, the author's separate collection was cataloged, partially extracted and assessed with bounded local checks. The [historical implementation record](LIBRARY-IMPLEMENTATION.md) preserves those dated counts, test results and unresolved limitations. Its private collection, cloud metadata and review history are not a public distribution offer or current acceptance result.
 
-## Parallel knowledge work
+## What acceptance means
 
-Continue original-page review and source synthesis based on relevance. Recover 11 unreadable originals; export 16 native-document bodies; inspect restricted and unsupported sources without bypassing protection. Complete OCR where it helps and retain visual-only resources as such. None of these should be mislabeled complete merely because a file has a checksum.
+Record what was checked, on which machine, with which sources and tools, and what remains unverified. Integrity and retrieval checks do not establish complete design knowledge, source quality, ownership, redistribution rights, full-book review, accessibility conformance or production acceptance of a resulting design.
 
-## Owner input, when needed
-
-A receiving computer or teammate is needed for independent download acceptance. Real-brand testing later needs the brief and assets in its own project. No new permission to share the books is needed: Google Drive distribution and local recipient use are already authorized.
-
-## What this does not certify
-
-This does not establish complete design knowledge, every skill's production quality, provider entitlement, hardware playback, accessibility conformance, full-book review or a tested plugin upgrade. Those remain distinct acceptance gates in the main backlog.
-
-[Local setup](LOCAL-SETUP.md) | [Reference workflow](REFERENCE-WORKFLOW.md) | [Detailed implementation record](LIBRARY-IMPLEMENTATION.md) | [Main backlog](../BACKLOG.md)
-
-## Verified cloud and GitHub status
-
-Version-Timestamp: 2026-09-15T10:16:40.586832-04:00
-
-The saved reference work is published in draft PR #1 on review/reference-library-readiness. Main is unchanged. Drive folder metadata confirms an anyone-reader permission. A raw download of the cloud manifest matched the local 132,227-byte manifest exactly. Direct folder listing was required because search omitted the JSON file. This establishes cloud manifest synchronization, not complete recipient-download integrity.
-
-The review helper accepts one evidence-file argument; repeated arguments replace the earlier value. A combined evidence packet is prepared locally for an authorized review recovery. Failed review output was discarded by the helper, so the underlying execution cause cannot be established from retained logs. Do not reset the review ledger or bypass the exhausted milestone budget.
+[Local setup](LOCAL-SETUP.md) | [Reference workflow](REFERENCE-WORKFLOW.md) | [Historical implementation record](LIBRARY-IMPLEMENTATION.md) | [Main backlog](../BACKLOG.md)

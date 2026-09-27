@@ -1,6 +1,6 @@
 # Inventory source notes
 
-Version-Timestamp: 2026-09-10 20:15:59 AST
+Version-Timestamp: 2026-09-27 13:45:58 AST
 
 The inventory uses original short definitions and synthesis. Public references inform terminology and behavior prompts; their inclusion is not vendor approval, copied implementation, a license grant or conformance evidence. No raw books, transcripts or private archives were imported.
 
@@ -212,4 +212,6 @@ Checked 2026-09-07 at commit `8147538b4226ae41e2487a9179e3bcc1f68e8554`. [Pinned
 
 ## SPECIMEN-SYNTH: Original specimen and composition synthesis
 
-Original generic authoring on 2026-09-07, informed by privately retained observations of a supplied styleguide (record EXC-20260907-EX3). No public source record is supplied for that private example. This entry attributes internal abstraction, not external verification, licensing or runtime behavior. The source comparison attribution map (not bundled) identifies which refinements use it. No page text, code, branded values or assets are distributed.
+Original generic authoring on 2026-09-07, informed by observations of a user-supplied historical styleguide (record EXC-20260907-EX3). The retained lessons concern declaring whether a specimen is static or working, documenting its representation and export type, describing composition slots and responsive changes, and pairing examples with usage guidance. These lessons informed G-006, F-016 and P-027. Rendered source pages, visual styling, page text, implementation code, branded values, client data and assets are not distributed.
+
+The separate comparison audit recorded no visible reuse grant for the supplied page, so it retained original generic documentation lessons only. This provenance note does not assert permission to copy that source or license it through this repository. The private source and detailed comparison record are not needed to use the generic inventory; no access to them is offered. Reference observations do not establish runtime behavior or production acceptance.

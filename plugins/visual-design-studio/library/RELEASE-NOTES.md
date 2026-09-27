@@ -1,4 +1,15 @@
-# Team preview release notes
+# Release notes
+
+Version-Timestamp: 2026-09-27T13:51:25-04:00
+
+## 0.2.1 public edition
+
+Original kit files now have MIT licensing, with separate font and asset notices. Public setup uses the current payload checksum rather than obsolete archive instructions. Optional references require an independently supplied permitted local corpus. The package manifest describes public supervised evaluation and explicitly retains a publication review requirement and no production acceptance. Core design capabilities and example artwork are unchanged from 0.2.0. See [package readiness](../READINESS.md) and [current library setup](README.md).
+
+The following entries are historical source-library records. Their internal-only status applies to those earlier candidates; current redistribution terms are [LICENSE](../LICENSE) and [NOTICE](../NOTICE.md). Historical test counts are not current execution claims.
+
+## Earlier source-library checkpoint
+
 
 Version-Timestamp: 2026-09-12T11:38:16-04:00
 

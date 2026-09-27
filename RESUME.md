@@ -1,5 +1,14 @@
 # Resume Visual Design Kit
 
+Version-Timestamp: 2026-09-27T13:51:02-04:00
+
+Current package: 0.2.1 public distribution preparation. User approved making the dedicated repository public and MIT for original work. Start with [public release evidence](docs/PUBLIC-RELEASE-021.md), [installation](INSTALLATION.md) and [current pin](docs/VERIFIED-PIN.md). Verify remote visibility and branch state before stating publication is complete. Private books and client work remain outside this repository.
+
+This patch repairs public onboarding and license boundaries. Its checks do not upgrade host, provider, visual or client acceptance. Prior installed-cache evidence below is 0.2.0 only; no new installation or project-pin migration is implied.
+
+## Prior 0.2.0 checkpoint
+
+
 Version-Timestamp: 2026-09-16T22:24:18.944807-04:00
 
 Canonical source: this checkout of newmindsgroup/visual-design-kit. Team-sharing destination: default main branch, promoted through PR 1 after the user explicitly requested it. The implementation/review branches retain their history. Verify PR 1 merge state and remote main before claiming synchronization.

@@ -1,8 +1,66 @@
-# Install for independent projects
+# Install for an independent project
 
-Version-Timestamp: 2026-09-14T15:03:31.772234-04:00
+Version-Timestamp: 2026-09-27 13:45:10 AST
 
-This private repository requires GitHub access. Clone it to a dedicated library directory, not a client project. From the clone root run:
+Keep one trusted kit checkout separate from each brand project. The kit supplies instructions and local helpers. Your AI host, design apps, accounts and provider permissions are separate.
+
+## Requirements
+
+- Git to obtain and pin the repository.
+- Codex, Cursor or Claude Code, installed and authenticated through that product, with access to the kit and project folders.
+- Python 3.9 or newer for the bundled command-line helpers. Core validators and reference search use only the standard library.
+- A system SHA-256 utility, such as `shasum` on macOS or `sha256sum` on Linux.
+
+Node.js is needed for the JavaScript tests. Playwright, Chromium, Pillow and FFmpeg are optional development/export tools; see [Development checks](docs/DEVELOPMENT.md). They are not required to read the instructions or select capabilities.
+
+The shell examples use macOS or Linux syntax. Authoring-machine evidence is from macOS. Other operating systems and host versions need their own execution checks.
+
+## Get and pin the kit
+
+```sh
+git clone https://github.com/newmindsgroup/visual-design-kit.git
+cd visual-design-kit
+git rev-parse HEAD
+```
+
+Record that full commit ID in the project. Use a dedicated checkout that stays unchanged during project work. If selecting an older reviewed commit, check out that exact commit in a separate directory and use its matching pin record. Do not combine one edition's files with another edition's digest.
+
+## Verify the package
+
+Read [the current package pin](docs/VERIFIED-PIN.md) from your trusted repository source. From the repository root on macOS:
+
+```sh
+shasum -a 256 plugins/visual-design-studio/PAYLOAD.sha256
+```
+
+Compare all 64 characters with the pin record. Then verify the listed file bytes from the package directory:
+
+```sh
+cd plugins/visual-design-studio
+shasum -a 256 -c PAYLOAD.sha256
+```
+
+On Linux, use `sha256sum` for the first command and `sha256sum -c PAYLOAD.sha256` for the second. Stop if the expected digest is unavailable, any file check fails, or the checkout contains unexplained modifications. `git status --short` helps identify changed or extra files in a Git checkout. The manifest checks listed files; it does not itself reject extra files or authenticate an unknown publisher.
+
+Use the verified SHA-256 of `PAYLOAD.sha256` for the starter's trusted-digest field. Use the absolute path to `plugins/visual-design-studio` for its package-root field. Run no bundled scripts until verification succeeds.
+
+## Configure the project entry
+
+Create a separate directory or repository for each brand. Open your AI task there. Merge [AGENTS.md.template](project-starter/AGENTS.md.template) into the relevant project instruction file, following [the starter guide](project-starter/README.md):
+
+| Host | Project instruction file | Current evidence |
+| --- | --- | --- |
+| Codex | `AGENTS.md` | Earlier editions have authoring-Mac install and explicit startup evidence |
+| Cursor | `AGENTS.md` | Documented route; native-session acceptance remains unverified |
+| Claude Code | `CLAUDE.md` | Documented route; native-session acceptance remains unverified |
+
+Replace both placeholders, preserve existing instructions, and use exactly one marked entry block per instruction file. Keep machine-specific paths in local configuration instead of shared client commits. The project path is authoritative; an optional plugin cache must not silently replace it.
+
+Start a fresh task. Confirm that the agent reads the intended entry, reports the expected edition and digest, and keeps its outputs inside the project. Give it the [initial brief](plugins/visual-design-studio/PROJECT-LAUNCH.md#initial-request). Review its first artifact before continuing. [Host compatibility and acceptance](docs/IDE-COMPATIBILITY.md) describes the remaining checks.
+
+## Optional Codex plugin installation
+
+From the repository root:
 
 ```sh
 codex plugin marketplace add .
@@ -10,42 +68,22 @@ codex plugin add visual-design-studio@visual-design-team --json
 codex plugin list --marketplace visual-design-team --json
 ```
 
-Open a new Codex task inside the separate brand project so it receives fresh plugin discovery. For the verified local cache location, use the explicit starting SKILL.md path. Automatic discovery failed in the authoring environment: Codex reported that 1,141 skills were omitted after the skills context budget was exceeded. An enabled plugin is not necessarily visible to the model. No global skill configuration was changed. Follow the package's PROJECT-LAUNCH.md and keep all brand data in that project. Never assume this existing task reloads its skills after installation.
+These command forms are available in Codex CLI 0.154.0. Earlier package editions were installed and enabled on the authoring Mac. Verify the actual edition and state reported on your host. The marketplace adds one instruction plugin with no bundled connector, hook, credential or provider subscription.
 
-On the authoring machine, Codex CLI 0.154.0 installed version 0.1.0 and reported enabled=true. All 322 installed payload hashes matched. This verifies this installation only, not every machine or a production project.
+Open a fresh task after installation. Automatic discovery failed in an earlier authoring session because the host's skills context budget omitted the entry. Use the configured project entry when discovery is unavailable. Do not assume that the task which installed a plugin has reloaded its skills.
 
-Claude Code native plugin installation is not provided by this Codex manifest. Its intended fallback is to read the starting SKILL.md using its absolute path. That route still needs a fresh execution check.
+This is Codex packaging. Native Cursor and Claude Code plugin installers are not provided; use their project entries above.
 
-## Updates and removal
+## Updates, rollback and removal
 
-Pin a reviewed release or commit. Do not blindly pull a changing branch into a running project. Review changed capabilities and checks, preserve the old version and project pin, then deliberately reinstall the new published version. Upgrade and removal behavior still require a controlled test before being called verified. Removing the plugin must not delete project outputs.
+Review a new edition in a separate checkout. Verify its pin, compare changed instructions and checks, then deliberately update only the project's marked entry and version record. Keep the previous checkout and project pin until the new version is accepted.
 
-## Scope
+An observed upgrade to 0.2.0 removed the previous Codex cache directory. A cache is therefore unsuitable as the only copy of a project pin. For rollback, restore the project's entry to its preserved, verified checkout. Reinstalling an older native plugin additionally depends on the host's supported commands and has not been qualified here.
 
-The marketplace adds one local instruction plugin, no connector credentials, hooks or provider subscriptions. Installation is not authorization to generate paid media or publish client work. Read [remaining work](BACKLOG.md).
+Use the host's supported removal controls for an installed plugin. Removing a plugin does not authorize deleting project outputs or a pinned checkout used by another project. Removal behavior still requires host-specific verification.
 
-## Reliable entry point under evaluation
+## Scope of the evidence
 
-Ask the agent: Read the absolute path to plugins/visual-design-studio/skills/design-project-start/SKILL.md in my trusted checkout, then follow its instructions for this independent project. Do not assume the library is auto-loaded.
+The [0.2.0 record](docs/QUALITY-020-RELEASE.md) describes its installation, payload checks, automated tests and bounded fictional examples. Version 0.2.1 corrects the public onboarding. Earlier host checks do not automatically qualify this edition on another machine.
 
-A fresh Codex session successfully read the installed starting skill, followed its relative links, selected exact catalog IDs for a locked-logo typography case and an unresolved-name new-brand case, and preserved project/feedback boundaries. This was read-only selection, not artwork generation, full dependency execution or human acceptance.
-
-## Project-level startup fix
-
-Version-Timestamp: 2026-09-14T15:09:30.013404-04:00
-
-Use [the project starter](project-starter/README.md) to merge a pinned entry into each independent project. A fresh session in a separate directory followed that entry without a library path in the task prompt. This bypasses the truncated catalog for project startup; it does not repair global auto-discovery. Never overwrite existing project instructions.
-
-Final hardened entry check passed in a second separate read-only project: trusted manifest digest and all 322 payload hashes verified before entry use. No writes or network. An initial heredoc command was blocked by read-only temporary-file rules; an in-memory verification command succeeded. Wrong-digest, conflict and duplicate-merge behavioral cases remain untested.
-
-## Verified 0.2.0 update
-
-Version-Timestamp: 2026-09-16T18:44:50.670908-04:00
-
-The authoring Mac installed and enabled 0.2.0 using `codex plugin add visual-design-studio@visual-design-team --json`. All 364 installed PAYLOAD.sha256 entries matched. The manifest digest is `43bde9afa9b57d8fd9264fea7645451d345b4ac2ad8c2d273d8787131f79f9d3`. Installed handoff and selection examples validate successfully. The optional reference helper matches its canonical repository source.
-
-The native updater removed the 0.1.0 cache directory. Do not rely on the cache to preserve project pins. The old 322-entry payload is recoverable from commit `412e628bed1af9ae41bcad14784f1ebd8bdd3116`, and a verified separate recovery copy is retained in the author's ignored `private/quality-020/recovery-0.1.0`. Do not manually patch Codex's cache. For rollback, use a separate checkout of that trusted commit, verify its recorded digest and all payload files, then deliberately repoint the affected project's entry. Installation rollback would additionally require restoring the old marketplace source through the supported plugin command; that action has not been executed.
-
-Existing project pins were not rewritten. If a historical project points at the removed cache, deliberately adopt the recovered fixed checkout or reviewed new version before continuing. New projects should use a pinned checkout or release directory as described in [the project starter](project-starter/README.md).
-
-A new native Codex session's automatic discovery has not been proven for 0.2.0. Explicit-path navigation is verified; no claim that the current thread hot-reloaded the installed skill is made. Claude Code and Cursor native-session acceptance remain separate. [Edition evidence](docs/QUALITY-020-RELEASE.md).
+The package remains for supervised evaluation. Human aesthetic acceptance, real client outcomes, accessibility, physical display behavior and provider operations must be checked for the selected project. Optional books require your own authorized compatible local collection; no public book download is included.
