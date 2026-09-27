@@ -40,3 +40,9 @@ Read only the relevant method for the selected task; preserve existing prerequis
 ## Provider selection
 
 For a justified generated asset, use [media route selection](../design-media-route-selection/SKILL.md) before selecting [ChatGPT images](../design-chatgpt-images/SKILL.md), [Higgsfield](../design-higgsfield-cli/SKILL.md) or [OpenArt](../design-openart-cli/SKILL.md). Tool access and operation authorization remain separate.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Information and infographics](../../knowledge/information-and-infographics.md) when choosing an encoding from the reader's question and preserving its evidence. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

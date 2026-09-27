@@ -55,3 +55,9 @@ For every rendered display loop, including passive video and LED walls, specify 
 Version-Timestamp: 2026-09-16T18:06:33.096655-04:00
 
 Use the [shared fictional collection](../../examples/quality-benchmark/README.md) for comparative quality, rendered typography, precise revision and motion evidence. Inspect its recorded limits; do not inherit its fonts, style or agent review as approval for another brand.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Screen content and motion](../../knowledge/screen-content-and-motion.md) when making movement support a message with coherent choreography. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

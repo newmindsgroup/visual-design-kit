@@ -24,3 +24,9 @@ Reference-to-output comparison and discrepancy log with affected frames. Hand of
 Require actual source art and rendered output; if either is missing, do not claim fidelity. Preserve originals and correct the smallest affected layer. Record executed evidence separately from plans. Use the [example](../../examples/screen-production/README.md) only within its declared scope.
 
 Complete the [stage handoff](../design-stage-handoff/SKILL.md) with actual files, version, checks, unknowns and next owner.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Screen content and motion](../../knowledge/screen-content-and-motion.md) when preserving factual product imagery while choosing composition and movement. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

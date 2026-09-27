@@ -68,3 +68,9 @@ Version-Timestamp: 2026-09-11T23:21:42-04:00
 Version-Timestamp: 2026-09-11T19:25:03-04:00
 
 Use [logo and identity specialists](../../IDENTITY-WORKFLOW.md) to select naming, concepts, refinement, variants, evaluation, refresh, guidelines or asset delivery. This skill coordinates; selected specialists execute. Preserve accepted upstream inputs and avoid mandatory full-project restarts.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Direction and visual identity](../../knowledge/direction-and-identity.md) when extending a selected direction into coherent visual families. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

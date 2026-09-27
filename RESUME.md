@@ -1,5 +1,17 @@
 # Resume Visual Design Kit
 
+Version-Timestamp: 2026-09-27T14:50:36-04:00
+
+Current package: **0.3.0**. [Current installation](INSTALLATION.md), [payload pin](docs/VERIFIED-PIN.md), [edition evidence](docs/STANDALONE-030.md) and [applied method handbook](plugins/visual-design-studio/library/knowledge/README.md) supersede the historical checkpoints below.
+
+Completed: eight original method cards connected to thirteen existing capability entries; optional local-library configuration and standalone fallback; a safe multi-ZIP importer; signed-out full reference download; a verified local import; fresh standalone Codex planning and resume against the final 376-file payload. Root tests: 76 under Python 3.9 and 3.14. Library tests: 49. Node tests: 11. Claude Fable 5.1 approach and both bounded milestone reviews returned; the final review found no release blockers. Books, extracts, private collection links and local configuration remain outside this public repository.
+
+Release target: main and tag `v0.3.0`. Verify the remote release state before claiming publication. The local final validation record is in ignored `private/standalone-030/`. Existing project pins and installed caches were not changed.
+
+Next: start a separate project with the pinned kit, using standalone mode or its own local reference path. Test actual artwork, revision and recovery there. Do not expand the catalog before observing a concrete gap. A minor pre-existing Unicode excerpt-offset issue is recorded in the edition evidence; it does not prevent startup or verified reference access.
+
+## Prior 0.2.1 checkpoint
+
 Version-Timestamp: 2026-09-27T14:05:22-04:00
 
 Current package: 0.2.1, published publicly from main through PR 2. Original work uses MIT; third-party assets retain their notices. The release tag is `v0.2.1`. See [public release evidence](docs/PUBLIC-RELEASE-021.md), [installation](INSTALLATION.md) and [current pin](docs/VERIFIED-PIN.md).

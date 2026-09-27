@@ -56,3 +56,9 @@ Use the [craft laboratory](../../CRAFT-LAB.md) for specimens and bounded checks.
 Version-Timestamp: 2026-09-11T19:51:13-04:00
 
 Preserve approved product color and compare on intended hardware; assumed profiles do not establish accurate reproduction. Use the [specialist workflow](../../SCREEN-CONTENT-SKILLS.md) for the relevant detailed methods.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Color in use](../../knowledge/color-in-use.md) when choosing relationships and semantic roles from realistic compositions. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

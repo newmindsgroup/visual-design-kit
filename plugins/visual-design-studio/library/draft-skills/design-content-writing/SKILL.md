@@ -53,3 +53,9 @@ When the output is an article, report or digital guide, coordinate accepted copy
 Version-Timestamp: 2026-09-11T20:48:53-04:00
 
 Select relevant [website methods](../../WEBSITE-WORKFLOW.md) for scoped website work. Reuse accepted foundation records and preserve this capability as their owner.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [UX and content decisions](../../knowledge/ux-and-content.md) when writing interface messages tied to actual task states and actions. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

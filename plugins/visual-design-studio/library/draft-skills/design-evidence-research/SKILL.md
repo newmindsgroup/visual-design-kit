@@ -48,3 +48,9 @@ For creative exploration, research only the relevant brand/category/audience gap
 Version-Timestamp: 2026-09-11T19:51:13-04:00
 
 Identify official versus inferred brand rules; market examples are references, not automatic reuse permissions. Use the [specialist workflow](../../SCREEN-CONTENT-SKILLS.md) for the relevant detailed methods.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Research and brief](../../knowledge/research-and-brief.md) when prioritizing an uncertainty that could change the design decision. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

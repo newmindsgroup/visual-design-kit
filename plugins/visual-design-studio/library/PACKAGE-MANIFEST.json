@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-09-27T13:56:35-04:00",
-  "candidate": "0.2.1",
+  "Version-Timestamp": "2026-09-27T14:44:11-04:00",
+  "candidate": "0.3.0",
   "canonical_source": {
-    "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper is copied from tools/reference_library.py.",
+    "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.2.1"
+    "version": "0.3.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -310,7 +310,7 @@
     },
     {
       "destination": "WORKFLOW.md",
-      "sha256": "49aa8a1a4489f36add82cb085da74bf081442f09132b27ddefe4c56d3a4d80ba",
+      "sha256": "f8d68a6681c88ab97f481317ae1236a32302c9d6d8b12006ba7b05069601d937",
       "source": "curated-plugin-source/WORKFLOW.md",
       "status": "versioned-evaluation-input"
     },
@@ -388,7 +388,7 @@
     },
     {
       "destination": "draft-skills/design-color-system/SKILL.md",
-      "sha256": "9a0b989c04467f444d0a79b9e7993cc0dd4cb6307f6f1e89c964e197d6cbbb11",
+      "sha256": "39e8b8186dd40e3c8a5d0b46591d008b7be0ac996a8cbcbb721a49a2c17a9ac8",
       "source": "curated-plugin-source/draft-skills/design-color-system/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -406,7 +406,7 @@
     },
     {
       "destination": "draft-skills/design-content-writing/SKILL.md",
-      "sha256": "dc5c326c6be29846369a3f431dae853363c58cbb46edf5974f19aa6a11aa0d8f",
+      "sha256": "1df4e6762157641009f0153a2e353cd62341ab143dcbfdef66acdbd48955ca31",
       "source": "curated-plugin-source/draft-skills/design-content-writing/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -454,7 +454,7 @@
     },
     {
       "destination": "draft-skills/design-display-art-direction/SKILL.md",
-      "sha256": "3f7c5ce25f2c42abff4d96f8266c4b3ab9cf2fbda10bfae5358290cb7c0d1ab1",
+      "sha256": "d8eab442d5237e539bb8ed094553e796162f0b18c5a3d3d131e9743649782b12",
       "source": "curated-plugin-source/draft-skills/design-display-art-direction/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -490,7 +490,7 @@
     },
     {
       "destination": "draft-skills/design-evidence-research/SKILL.md",
-      "sha256": "48411305622acbab156c977e54f200c8b0033c8e8dd6b354e6fbf39c2d196819",
+      "sha256": "35ea1846b3ff44b2c96537ced4692dc0e3c89250969a34522aca7c836d933bb4",
       "source": "curated-plugin-source/draft-skills/design-evidence-research/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -502,7 +502,7 @@
     },
     {
       "destination": "draft-skills/design-foundations/SKILL.md",
-      "sha256": "92fdc14949bcd0af79b2432e219e3c6e125ea7c618cdd8f9895b46e7237ac958",
+      "sha256": "dc244a8e0f49bb7762bed9189abf8a4d04b4d9698e6901b22b415be5833625b2",
       "source": "curated-plugin-source/draft-skills/design-foundations/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -544,7 +544,7 @@
     },
     {
       "destination": "draft-skills/design-identity-system/SKILL.md",
-      "sha256": "8ec3f612f21bbe6c0955fe193cba7cae874f143efb4be0047c2e8e530eb9b9c1",
+      "sha256": "8c47666367a6aefdd13071c7154ec27670f3e5383b7ba7b7caffadd4e90824f0",
       "source": "curated-plugin-source/draft-skills/design-identity-system/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -556,7 +556,7 @@
     },
     {
       "destination": "draft-skills/design-infographics/SKILL.md",
-      "sha256": "4086f55666be78d26ec01a1d03a8fde6f81079b16d6f292c7bf560a0af49ecb8",
+      "sha256": "d9c0f98dded2e0460e74996a3ed1c657d1c7d78edc229fe31ad3979f0a088607",
       "source": "curated-plugin-source/draft-skills/design-infographics/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -646,7 +646,7 @@
     },
     {
       "destination": "draft-skills/design-motion-effects/SKILL.md",
-      "sha256": "48005c5e3dc7a72f32803685c1cf0e6ba5d5188fe1ea51df029727fd7d2744a5",
+      "sha256": "8cd42aa33f912b3350358bb211e7d40b552b3305c5ca25c160546992643d895e",
       "source": "curated-plugin-source/draft-skills/design-motion-effects/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -718,7 +718,7 @@
     },
     {
       "destination": "draft-skills/design-quality-delivery/SKILL.md",
-      "sha256": "15472ee527dccdbf60ff5cfa8ae2c8ec98e8e955a92db78f12f4626e7d99019c",
+      "sha256": "164a6a6804bd81edee70a7f82c753a28ed79f11afe1358ff7b476ca0f18b0a3e",
       "source": "curated-plugin-source/draft-skills/design-quality-delivery/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -730,7 +730,7 @@
     },
     {
       "destination": "draft-skills/design-reference-direction/references/reference-retrieval.md",
-      "sha256": "29986176038f168a52a04003d7d21401eeba8d2efb678c8cecdfb35919d953e9",
+      "sha256": "c76d9903dd3cc0f1e961cd5e3468ab510f864f6819276f8cf26cf61bc0a2387e",
       "source": "curated-plugin-source/draft-skills/design-reference-direction/references/reference-retrieval.md",
       "status": "versioned-evaluation-input"
     },
@@ -910,7 +910,7 @@
     },
     {
       "destination": "draft-skills/design-screen-product-fidelity/SKILL.md",
-      "sha256": "3320dbf44f0809a949ea455a5d8602152e6cc4ad10f86615bb80559966b01d7f",
+      "sha256": "db58b403591fe8119583dfb1317bebf3bb5eeb57b5fdd584582afb98196a8e7e",
       "source": "curated-plugin-source/draft-skills/design-screen-product-fidelity/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -946,7 +946,7 @@
     },
     {
       "destination": "draft-skills/design-screen-storyboard/SKILL.md",
-      "sha256": "4d7a5b5cd1bdfa924c5b24e95b50fdc3381c65f89e867df53927a345d5d94664",
+      "sha256": "4b1938479070ca29290ac4a0bd17ed9be62d236f8bf0ac0f87c3dbea9e4d65c1",
       "source": "curated-plugin-source/draft-skills/design-screen-storyboard/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1066,7 +1066,7 @@
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
-      "sha256": "ebde60acc45e0b62d439eecdd78e42eee4633f03c22a0192cf6bae5d739c836f",
+      "sha256": "816c9b2045796df315ccc441cdd89028d529b6be235870db3da51f302e507050",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1108,7 +1108,7 @@
     },
     {
       "destination": "draft-skills/design-ux-architecture/SKILL.md",
-      "sha256": "46d4b936d032e225cbd85ee2312e8ff5f1703570d83c0bf11f149f90c441f699",
+      "sha256": "1c0957fc94885e0bf9d0b36fccddfe4b953e63bacce64f56ba0d464c3c3a29bf",
       "source": "curated-plugin-source/draft-skills/design-ux-architecture/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1851,8 +1851,62 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "knowledge/README.md",
+      "sha256": "02b97212315ebd4839baeeff02cea2a3e33435550eb2f4be3175e139cc50dd44",
+      "source": "curated-plugin-source/knowledge/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/color-in-use.md",
+      "sha256": "3005c176cdcc28c53afb44b260f2d526aed82c8af4e3c80418ce3b7b2731d132",
+      "source": "curated-plugin-source/knowledge/color-in-use.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/critique-revision-and-delivery.md",
+      "sha256": "5a6fd5f5f5f54462b9bca7d2145a2ec6c9c8e05c7386263be28ad751b092af9d",
+      "source": "curated-plugin-source/knowledge/critique-revision-and-delivery.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/direction-and-identity.md",
+      "sha256": "c3379968086f2548fb9c5979f3fedc38de49734e6b379f47a76f729ed0391d40",
+      "source": "curated-plugin-source/knowledge/direction-and-identity.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/information-and-infographics.md",
+      "sha256": "147d08badeaa21f34e1afebfb16bc4b16de92089376788094bc4697b2f0c4b22",
+      "source": "curated-plugin-source/knowledge/information-and-infographics.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/research-and-brief.md",
+      "sha256": "4f30c83d46422e584251e6dd805c2955b7c36401f2d6d387a2d2f8fe57e2d53a",
+      "source": "curated-plugin-source/knowledge/research-and-brief.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/screen-content-and-motion.md",
+      "sha256": "39064fdaccbf3ecaa19cd54552c1a35631958e0edba3d4495b9bc544c461bb23",
+      "source": "curated-plugin-source/knowledge/screen-content-and-motion.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/typography-and-composition.md",
+      "sha256": "aabc7d607e9e7e33815237af146ffee24872deab3fde3b3357efe2f91063bc80",
+      "source": "curated-plugin-source/knowledge/typography-and-composition.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/ux-and-content.md",
+      "sha256": "cdb5167b3588927286e72fd68564de3fabbd0af5367ab3c2646a65dfff12b5a2",
+      "source": "curated-plugin-source/knowledge/ux-and-content.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "scripts/adopt_template.py",
-      "sha256": "78d3e559fa746e9ff955723f0c1d2a30b2c753c91a73ccb606c5edd67af78e69",
+      "sha256": "8e51583f322fb65371b3d839edd52a28851d1653684fa25d734a49883456b59f",
       "source": "curated-plugin-source/scripts/adopt_template.py",
       "status": "versioned-evaluation-input"
     },
@@ -1863,8 +1917,14 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "scripts/import_reference_archive.py",
+      "sha256": "18f60fc95ce41a24790fce30d8ccc35c9399a74b3fc80e3f11f547ba41654c79",
+      "source": "tools/import_reference_archive.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "scripts/reference_library.py",
-      "sha256": "e65933b72def2622d19ced7a73c6779e807e789834a8c6dbb4edac399301a51b",
+      "sha256": "c02dceada4ed3be0c99e6a21b35e2f7d1cbe99554c2cf098d20c0b96e2d3249a",
       "source": "tools/reference_library.py",
       "status": "versioned-evaluation-input"
     },
@@ -2110,7 +2170,7 @@
     },
     {
       "destination": "tests/test_adopt_template.py",
-      "sha256": "ac186643c36fb5be36aa5b97d34288ba84e486390d28d196dd1fcfbe7394c6f9",
+      "sha256": "433397e4bc038e42887a560b608fb21aa8ef2b3b53f6d9ed38f8d42e4f2c2239",
       "source": "curated-plugin-source/tests/test_adopt_template.py",
       "status": "versioned-evaluation-input"
     },

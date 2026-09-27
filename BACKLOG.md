@@ -2,6 +2,21 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Standalone and reference portability, 0.3.0
+
+Version-Timestamp: 2026-09-27T14:35:39-04:00
+
+- [x] Original applied method cards linked to existing capabilities for use without books.
+- [x] Explicit standalone/local-library preflight, optional fallback and named-source evidence boundaries.
+- [x] Fresh separate Codex session uses a method and produces a bounded plan without book/config access.
+- [x] Verify authorized Drive folder access and complete bulk download in a signed-out browser on the authoring Mac.
+- [x] Complete safe multi-ZIP import and verify all 723 received manifest entries after an observed Drive filename change.
+- [x] Complete integrated tests, final pinned resume and independent review with no release blockers.
+- [ ] Publish 0.3.0 and verify public distribution.
+- [ ] Repair the pre-existing Unicode case-fold excerpt-offset edge case in a later bounded change.
+
+See [edition evidence](docs/STANDALONE-030.md). A signed-out receiving context is verified separately from physical use on a different computer. Full source review, extraction gaps and native-host artifact acceptance remain scoped follow-up work.
+
 ## Current public distribution milestone
 
 Version-Timestamp: 2026-09-27T13:51:02-04:00
@@ -57,7 +72,7 @@ Do not add arbitrary skills or repeat successful tests merely to extend this lis
 
 ## Reference portability and IDE follow-up
 
-- [x] Owner confirmed Google Drive distribution and recipient local use; bundle staged in a dedicated Drive sync folder. Cloud sharing and download still need verification.
+- [x] Owner confirmed Google Drive distribution and recipient local use; bundle staged in a dedicated Drive sync folder. Signed-out cloud download and local import are verified in 0.3.0.
 - [x] Built relative-path catalog, permission records and checksum manifest for the selected sources.
 - [ ] Resolve uncopied/restricted/unsupported references and inspect outstanding OCR/visual gaps where useful.
 - [x] Verified staged bundle hashes and source/page retrieval from a separate local project folder.

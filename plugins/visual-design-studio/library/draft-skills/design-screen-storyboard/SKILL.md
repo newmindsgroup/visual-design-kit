@@ -22,3 +22,9 @@ Timed storyboard and low-cost animatic with unresolved decisions. Carry source v
 ## Acceptance
 
 Check all claims appear long enough to evaluate, sequence fits duration and essential meaning does not rely on audio. Record actual evidence and failures. Never label an unexecuted check passed. Maintain the approved baseline until the candidate is accepted.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [Screen content and motion](../../knowledge/screen-content-and-motion.md) when designing meaningful beats, readable holds and midway entry. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.

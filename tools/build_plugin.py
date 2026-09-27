@@ -1,5 +1,5 @@
 """Build or verify deterministic Visual Design Studio package metadata."""
-# Version-Timestamp: 2026-09-27T13:48:12-04:00
+# Version-Timestamp: 2026-09-27 14:43:14 AST
 import argparse
 import hashlib
 import json
@@ -16,6 +16,10 @@ OUTPUTS = {
 }
 REFERENCE_SOURCE = "tools/reference_library.py"
 REFERENCE_TARGET = "library/scripts/reference_library.py"
+CANONICAL_SOURCES = {
+    REFERENCE_TARGET: REFERENCE_SOURCE,
+    "library/scripts/import_reference_archive.py": "tools/import_reference_archive.py",
+}
 HISTORICAL_SOURCE = {
     "version": "0.1.0",
     "commit": "412e628",
@@ -116,20 +120,22 @@ def expected_files(plugin_root, source_root, version, timestamp):
         raise BuildError("unreadable plugin.json") from exc
     if metadata.get("version") != version:
         raise BuildError("--version must exactly match .codex-plugin/plugin.json")
-    source = source_root / REFERENCE_SOURCE
-    if source.is_symlink() or not source.is_file():
-        raise BuildError("canonical reference library must be a regular file")
-    source_bytes = source.read_bytes()
-    for relative in OUTPUTS | {REFERENCE_TARGET}:
+    source_bytes = {}
+    for target, relative in CANONICAL_SOURCES.items():
+        source = source_root / relative
+        if source.is_symlink() or not source.is_file():
+            raise BuildError("canonical reference tool must be a regular file")
+        source_bytes[target] = source.read_bytes()
+    for relative in OUTPUTS | set(CANONICAL_SOURCES):
         output_path(plugin_root, relative)
     current = regular_files(plugin_root)
-    for relative in OUTPUTS | {REFERENCE_TARGET}:
+    for relative in OUTPUTS | set(CANONICAL_SOURCES):
         current.pop(relative, None)
-    current[REFERENCE_TARGET] = source_bytes
+    current.update(source_bytes)
     library = {path.removeprefix("library/"): content for path, content in current.items() if path.startswith("library/")}
     manifest_files = []
     for destination in sorted(path for path in library if path not in {"PACKAGE-MANIFEST.json", "CHECKSUMS.sha256"}):
-        source_path = REFERENCE_SOURCE if destination == "scripts/reference_library.py" else f"curated-plugin-source/{destination}"
+        source_path = CANONICAL_SOURCES.get(f"library/{destination}", f"curated-plugin-source/{destination}")
         manifest_files.append({
             "destination": destination,
             "sha256": digest(library[destination]),
@@ -138,7 +144,7 @@ def expected_files(plugin_root, source_root, version, timestamp):
         })
     manifest = {
         "Version-Timestamp": timestamp,
-        "canonical_source": {"path": "curated-plugin-source", "version": version, "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper is copied from tools/reference_library.py."},
+        "canonical_source": {"path": "curated-plugin-source", "version": version, "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/."},
         "candidate": version,
         "distribution_scope": "public",
         "publication_review_required": True,
@@ -158,7 +164,7 @@ def expected_files(plugin_root, source_root, version, timestamp):
 def compare(plugin_root, expected):
     actual = regular_files(plugin_root)
     errors = []
-    for relative in sorted(OUTPUTS | {REFERENCE_TARGET}):
+    for relative in sorted(OUTPUTS | set(CANONICAL_SOURCES)):
         if relative not in actual:
             errors.append(f"missing {relative}")
         elif actual[relative] != expected[relative]:
@@ -182,7 +188,7 @@ def build(plugin_root, source_root, version, timestamp, apply=False):
     expected = expected_files(plugin_root, source_root, version, timestamp)
     plugin_root = checked_root(plugin_root, "plugin root")
     if apply:
-        for relative in [REFERENCE_TARGET, "library/PACKAGE-MANIFEST.json", "library/CHECKSUMS.sha256", "PAYLOAD.sha256"]:
+        for relative in [*sorted(CANONICAL_SOURCES), "library/PACKAGE-MANIFEST.json", "library/CHECKSUMS.sha256", "PAYLOAD.sha256"]:
             replace(output_path(plugin_root, relative), expected[relative])
     errors = compare(plugin_root, expected)
     return {"valid": not errors, "errors": errors, "applied": apply, "version": version}

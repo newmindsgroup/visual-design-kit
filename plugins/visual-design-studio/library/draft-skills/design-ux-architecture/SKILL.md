@@ -47,3 +47,9 @@ Select relevant [website methods](../../WEBSITE-WORKFLOW.md) for scoped website 
 ## Historical evidence boundary
 
 Keep superseded evidence and prior results in the project history, with version links from the handoff. The validated active evidence register accepts current sources only. Do not put historical sources into active support or relabel them current to pass validation. Preserve history outside that active register.
+
+## Applied decision method
+
+Version-Timestamp: 2026-09-27 14:25:39 AST
+
+Read [UX and content decisions](../../knowledge/ux-and-content.md) when connecting task evidence, state behavior and truthful messages. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.
