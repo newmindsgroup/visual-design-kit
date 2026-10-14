@@ -26,3 +26,26 @@ Present options at comparable size with the same name, background and applicatio
 Concept sheets with stable IDs, simple mark views, rationale, alternatives/tradeoffs, representative application and explicit selection status.
 
 Carry file versions, approval scope and unresolved checks through [stage handoff](../design-stage-handoff/SKILL.md).
+
+
+Version-Timestamp: 2026-10-02 17:56:47 AST
+
+## Reference synthesis and construction studies
+
+Before synthesizing supplied references, read [reference synthesis and proportion studies](../design-logo-refinement/references/reference-and-proportion.md). Document visual coverage and distinguish relevant audience cues from unrelated aesthetics. For an existing identity, retain the faithful track unless explicitly rejected; new directions require redesign authority. Requested golden-ratio work applies to new directions as well as refinement, with relationships defined before drawing, measured overlays for every option claimed as measured, and optical comparisons. Label unmeasured sketches provisional.
+
+
+Version-Timestamp: 2026-10-02 18:16:41 AST
+
+## Initial and adjacent typography
+
+When the brief requires a recognizable initial, freeze its intended letter before exploration and apply the [initial-reading criterion](../design-logo-evaluation/SKILL.md#initial-reading-criterion). Pair shortlisted symbols with the exact full name using [brand-name specimens](../design-typography/references/type-craft.md#brand-name-and-symbol-pairing-specimens). A strong type choice cannot conceal a failed symbol criterion.
+
+
+## Retire rejected treatments, compare distinct tracks
+
+Version-Timestamp: 2026-10-02 20:00:26 AST
+
+Record which treatment was rejected separately from the preferred source and its retained features. If the user rejects an enclosure or badge treatment and requests open original refinement plus alternatives, retire that treatment from active options rather than keep varying its border, weight or decoration. This is a project decision, not a universal ban on circles or enclosed marks. Preserve the preferred source in an open faithful track, and develop materially distinct directions only within redesign authority. An explicit request for materially distinct alternatives authorizes exploration of the named element or scope; it does not unlock other approved elements or authorize adoption/replacement. A treatment rejected without such exploration authority does not release other locks.
+
+Compare the requested tracks with the same complete approved name, clean artwork, real type specimens, target sizes and relevant context renders. State the different concept/lettering/composition hypothesis behind each alternative; cosmetic badge variants are not distinct directions. Carry actual reference coverage, retained morphology and accepted contour source forward. Measurements and construction overlays can explain geometry but cannot establish visual quality. If real renders or verified typography are missing, label that comparison provisional and name the missing evidence. Retain rejected drafts as history, not defaults for later work.

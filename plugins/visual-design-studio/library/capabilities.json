@@ -1,5 +1,5 @@
 {
-  "Version-Timestamp": "2026-09-12T11:33:18-04:00",
+  "Version-Timestamp": "2026-10-14 11:13:07 AST",
   "schema_version": "1.0-proposed",
   "mode": "instruction-dependencies-only",
   "capabilities": [
@@ -928,6 +928,26 @@
       "entry": "draft-skills/design-media-production-recipes/SKILL.md",
       "depends_on": [
         "media-quality-evaluation"
+      ]
+    },
+    {
+      "id": "google-vids",
+      "entry": "draft-skills/design-google-vids/SKILL.md",
+      "depends_on": []
+    },
+    {
+      "id": "web-astro",
+      "entry": "draft-skills/design-web-astro/SKILL.md",
+      "depends_on": [
+        "web-frontend"
+      ]
+    },
+    {
+      "id": "web-motion-library",
+      "entry": "draft-skills/design-web-motion-library/SKILL.md",
+      "depends_on": [
+        "motion",
+        "web-frontend"
       ]
     }
   ]

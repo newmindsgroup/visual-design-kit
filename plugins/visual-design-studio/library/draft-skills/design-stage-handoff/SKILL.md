@@ -5,7 +5,7 @@ description: Assemble a bounded AI design-stage instruction or resumable handoff
 
 # Design stage instructions and handoffs
 
-Version-Timestamp: 2026-09-12T11:36:30-04:00
+Version-Timestamp: 2026-10-03T12:31:00.335655-04:00
 
 Project-local draft entry point for manual use in Codex or Claude Code. Tool execution, automatic discovery and host portability are unverified.
 
@@ -44,3 +44,27 @@ At a meaningful feedback or failure checkpoint, select [skill improvement](../..
 Keep superseded evidence and prior results in the project history, with version links from the handoff. The validated active evidence register accepts current sources only. Do not put historical sources into active support or relabel them current to pass validation. Preserve history outside that active register.
 
 The comparison CLI treats lists and empty objects as whole values. It cannot verify an invariant such as frames.0.label inside a list. Declare the whole list invariant, use stable object keys where appropriate, or run a separate element-level check; never claim element preservation from the list-level result alone.
+
+
+## Recoverable revision and activity history
+
+Version-Timestamp: 2026-10-02 21:02:25 AST
+
+For every produced design revision, fill the [immutable revision/activity fields](../../templates/design-work.md#immutable-revision-and-activity-record) in the authoritative project version index; the work record links to that owner. Persist all produced native/artwork/render/export bytes under a new sequence ID and real timestamp with numeric UTC offset or IANA timezone before overwrite or another review; bind parent, source hash, actual verified tool/model/effort, drawing hypothesis and visual delta, review input/output versions, feedback, four acceptance states and measured outcome. A hash without preserved bytes is not recovery. Append activity/decision/outcome events, including failed methods and missing evidence; never store hidden reasoning, secrets or private book text. Historical reconstruction is labeled as such and cannot replace missing originals. Keep confidential history in the authorized project workspace. The project executor owns that index; kit maintenance does not modify client revisions or create a duplicate ledger.
+
+
+## Incremental preview checkpoint
+
+Version-Timestamp: 2026-10-02 21:05:13 AST
+
+For visual work, show the actual versioned preview at a meaningful drawing checkpoint before expensive finalization. State the stage and status (generated sketch, native study, review candidate or accepted-for-stated-scope), one or two concrete visual hypotheses and a focused steering question when needed. Bind feedback to the shown revision and append the response/changed decision to the existing activity record; do not overwrite history or present a generated preview as native proof. Keep one authoritative current-working pointer to immutable revisions. Continue unrelated authorized work while a dependent decision is pending.
+
+Reuse the receiving-stage route in stage-execution.md when stage, inputs, risk, actual failure or capacity changes; do not reroute every tool call or infer a permanent best model. Record recommended versus verified actual runtime, approach, acceptance, repair count and measured elapsed/outcome limits in the existing work packet. A recommendation or prose statement does not switch models. Keep checkpoint overhead proportional; no new dashboard, plugin or background loop is implied.
+
+Produced revisions include saved native/artwork files, exports, previews shown to a user/reviewer, and artifacts cited by a decision. Transient unsaved viewport redraws are not separate revisions. Record omitted artifacts and missing bytes explicitly.
+
+Version-Timestamp: 2026-10-03T12:28:38.580424-04:00
+
+## Progression review site
+
+For requested logo redesign or new identity collaboration, use the [progression-site output contract](../../templates/design-progression-site.md) to present the existing authoritative revision/activity history as a website-format review artifact. This is a presentation of evidence, not a second version authority or automatic publication. Default to a local/draft hub; hosting/sharing requires the authorized destination, verified access and appropriate project/Sites workflow. A selected/accepted logo does not establish completion of the identity system.

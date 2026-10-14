@@ -10,6 +10,12 @@ Published on main through PR 3 at merge `86650767431afae226620504da619879aaf6f69
 
 Next: start a separate project with the pinned kit, using standalone mode or its own local reference path. Test actual artwork, revision and recovery there. Do not expand the catalog before observing a concrete gap. A minor pre-existing Unicode excerpt-offset issue is recorded in the edition evidence; it does not prevent startup or verified reference access.
 
+## Astro motion extension checkpoint
+
+Version-Timestamp: 2026-10-14 11:21:41 AST
+
+[Motion Atlas local 0.4.0 candidate](docs/MOTION-ATLAS-040.md) adds the requested everyday/experimental library and complete source playground. Final review and supported local plugin refresh are recorded in its evidence. Next: receiving-project pilot and device feedback; public publication and project-pin updates remain separate. Preserve the unrelated prior local changes.
+
 ## Prior 0.2.1 checkpoint
 
 Version-Timestamp: 2026-09-27T14:05:22-04:00
@@ -38,3 +44,11 @@ Recovery: Codex removed the prior 0.1.0 cache during update. A separately verifi
 Next: preview the collection, then adopt the reviewed commit in a separate existing-brand or new-brand project using project-starter/README.md. Gather that project's actual brief and approvals before dependent design work. Human aesthetic selection, native Cursor/Claude Code checks, a fresh Codex auto-discovery check and real target hardware remain project-specific acceptance. PowerPoint, backup setup and new paid jobs remain deferred. No goal exists.
 
 Methods: model-governor, TDD, systematic debugging, prompt-engineering-expert, frontend-design, imagegen, plugin-creator, engineering-quality-gate, security-auditor, PDF and GitHub. Terra Medium workers handled bounded implementation; the coordinator integrated and rendered. Approach and two bounded milestone reviews returned Claude Fable 5.1. Task ID vd-kit-020-20260916 has used both milestone attempts. Do not rename it to obtain extra calls. Final small reporting/assertion fixes were verified locally and are explicitly distinguished from independent review.
+
+Version-Timestamp: 2026-10-14 11:37:54 AST
+
+Motion Atlas checkpoint: native 0.4.0 installed/enabled, 440 files byte-identical. Final frozen build passes; 38 browser cases pass. Final focused Claude receipt interrupted and pending with budget exhausted for c9e63872-motion-01. Preserve preview at localhost:17731 for user review. See docs/MOTION-ATLAS-040.md.
+
+Version-Timestamp: 2026-10-14 14:06:55 AST
+
+Headless UI local 0.4.1 installed/enabled; 444 files match owner source. Final10 changed-path groups, regression40, typecheck/build/audit and Fable review findings disposition recorded in private/headless-ui-20261014. Preview retained for user review at localhost:17731. Public/client release pins unchanged.

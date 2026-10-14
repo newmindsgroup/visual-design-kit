@@ -26,3 +26,16 @@ Include endorsement/co-brand placement rules when scoped, with relative prominen
 Variant matrix with stable IDs, source master/version, allowed context, sizes/backgrounds, exact lockup text, approval and file paths.
 
 Carry file versions, approval scope and unresolved checks through [stage handoff](../design-stage-handoff/SKILL.md).
+
+
+## Initial anatomy and accepted contour continuity
+
+Version-Timestamp: 2026-10-02 18:27:13 AST
+
+When a standalone decorated initial appears with a simpler initial in the full wordmark, compare the two initials at matched visible height using proportional scaling. Inspect curve rhythm, terminals, stem/bowl proportions, counters and weight logic, then inspect the complete lockup at actual size. The wordmark need not repeat decorative flourishes, but an arbitrary generic glyph can create two unrelated letters. Record shared anatomy, intentional differences and any approved contrast; preserve locked typography and propose changes rather than silently redrawing it.
+
+Pin the accepted refined contour master/version/hash before deriving later variants. Do not revert to a thinner original or superseded draft merely because it is easier to export. Compare each native/exported variant with its assigned accepted master at matched scale and intended use size, recording visible contour weight, counters and gaps where measurable. Check stroke scaling, transforms, outline conversion and font substitution as relevant. File ancestry or matching stroke settings alone do not prove visible weight fidelity. Record renderer/antialiasing limits; exact pixel equality across renderers is not assumed. Intentional reversed-use or size-specific optical changes need their own approved source/version and comparison, not a silent baseline replacement.
+
+Carry matched-height initial comparisons, accepted contour identity, export observations and unresolved checks through the [logo study record](../../templates/logo-study.md). Source inspection does not establish actual native/rendered fidelity.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-02 18:27:13 AST

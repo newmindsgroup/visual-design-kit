@@ -5,7 +5,7 @@ description: Refine an authorized logo concept into controlled vector geometry a
 
 # Logo drawing and refinement
 
-Version-Timestamp: 2026-09-11T19:25:03-04:00
+Version-Timestamp: 2026-10-03T12:31:00.335655-04:00
 
 Status: authored project-local instruction. No installation or production acceptance implied.
 
@@ -15,7 +15,7 @@ Use the [identity workflow](../../IDENTITY-WORKFLOW.md) and [identity handoff re
 
 ## Method
 
-Work from the selected concept or supplied approved master, exact text and change authority. Preserve a baseline copy. Distinguish a fidelity repair from a redesign. Do not trace or reconstruct a supplied mark without authorization.
+Work from the selected concept or supplied approved master, exact text and change authority. Preserve a baseline copy. Distinguish a fidelity repair from a redesign. Record ownership/rights, editable-source availability and change authority before redrawing an existing mark. Authorized reconstruction of the user-owned baseline is distinct from tracing third-party references, which requires separate rights and authorization. Preserve original and rejected draft as separate versioned records.
 
 Inspect silhouette, negative space, apparent weight, curve continuity, tangent behavior, corners, joins and unnecessary points. Use grids to explain geometry only when useful; do not retrofit arbitrary golden-ratio circles. Compare optical alignment with mathematical alignment at intended sizes. Adjust kerning and custom lettering deliberately, including diacritics and language forms; changes to font software and artwork have different rights implications.
 
@@ -35,3 +35,19 @@ Version-Timestamp: 2026-09-11T19:32:14-04:00
 - [lettering and optics ](references/lettering-and-optics.md)
 
 Use the [craft laboratory](../../CRAFT-LAB.md) for specimens and bounded checks.
+
+
+Version-Timestamp: 2026-10-02 17:56:47 AST
+
+## Reference-led refinement and proportional studies
+
+Read [reference synthesis and proportion studies](references/reference-and-proportion.md) when references, continuity, composition or requested golden-ratio techniques affect the refinement. Preserve retained meaning and inspect the complete typography/icon/lockup system when diagnosing a composition problem. For narrow requests, keep locked elements unchanged and record out-of-scope observations as proposals without acting on them. Deliver measured construction overlays separately from clean and optically corrected artwork.
+
+
+Version-Timestamp: 2026-10-02 18:04:37 AST
+
+Before contour edits, identify retained signature forms and connections using the [signature-structure method](references/reference-and-proportion.md#signature-structure-before-contour-edits). A faithful label requires preserved valued structure, with matched-scale original/edited comparisons. Structural changes require explicit user authorization.
+
+Version-Timestamp: 2026-10-03T12:28:38.580424-04:00
+
+When faithful exploration explicitly requires a distinctive source asset, reuse that actual asset with its rights, version and crop boundary recorded. A generic replacement does not fulfill the request; if original bytes are missing, label the hold or authorized reconstruction rather than claiming fidelity. Compare optical upper/lower lettering consistency in rendered context even when anchors or shared construction are identical. Geometry equality supports construction evidence, not optical acceptance. Present preserved trials through the existing [progression-site contract](../../templates/design-progression-site.md) when a collaboration hub is requested.

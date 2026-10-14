@@ -1,0 +1,8 @@
+# Version-Timestamp: 2026-10-14 10:29:10 AST
+interface:
+  display_name: "Astro Website Delivery"
+  short_description: "Assess and build Astro sites with current APIs"
+  default_prompt: "Use $astro to assess or build this website with version-matched APIs and verified acceptance."
+
+
+# Agent-Attribution: computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-14 10:32:00 AST

@@ -9,7 +9,7 @@ Version-Timestamp: 2026-09-27 14:19:56 AST
 Coordinate a scoped brand/design project through evidence, selected instructions, actual deliverables and review. Read [current readiness](../../READINESS.md) first, then [project launch](../../PROJECT-LAUNCH.md). All relative paths resolve from this skill file, never the current working directory.
 
 ## Context and requirements
-The library root is ../../library relative to this file. It is read-only. Use the adopting project's instructions and authorized output folder. Never put brand assets or project outputs in the plugin. Verify the pinned payload checksums before executing bundled scripts. Read [usage](../../library/USAGE.md) and [contracts](../../library/CAPABILITY-CONTRACTS.md). Look up exact capability IDs and entry paths in [the catalog](../../library/capabilities.json); read selected entries explicitly. Do not expect nested reference skills to be registered commands. Select prerequisites as input contracts, not mandatory repeated work. Check actual tools and authority for the next operation.
+The library root is ../../library relative to this file. It is read-only. Use the adopting project's instructions and authorized output folder. Never put brand assets or project outputs in the plugin. Verify the pinned payload checksums before executing bundled scripts. Read [usage](../../library/USAGE.md) and [contracts](../../library/CAPABILITY-CONTRACTS.md). For Google Vids marketing, sales, brand or product video requests, select `google-vids` and read [its native video workflow](../../library/draft-skills/design-google-vids/SKILL.md). Look up exact capability IDs and entry paths in [the catalog](../../library/capabilities.json); read selected entries explicitly. Do not expect nested reference skills to be registered commands. Select prerequisites as input contracts, not mandatory repeated work. Check actual tools and authority for the next operation.
 
 For a new project record, use the bundled `scripts/adopt_template.py` from its absolute library location. Dry-run is the default; use `--apply` only after confirming the project root and a new relative destination. It pins instruction links to the installed library and leaves project placeholders for the adopting project to fill. Use project-root `RESUME.md` as the canonical continuity record. A retained `CURRENT.md` may only point to it.
 
@@ -24,3 +24,9 @@ New brand: establish audience, offer, differentiation and naming status before i
 
 ## Outputs and evaluation
 Follow [project launch](../../PROJECT-LAUNCH.md) for project-owned records. Produce the requested artifacts, inspect them, record actual checks, and retain failures. Technical passes do not establish visual approval. Preserve baseline versions and unresolved decisions at each handoff. At a meaningful failure or learning milestone, use [feedback](../../FEEDBACK.md); do not auto-edit the shared library. Provider use, spending, sharing and client approval remain scoped to explicit authority. Never transfer approval between projects.
+
+## Astro and website motion
+
+Version-Timestamp: 2026-10-14 11:13:07 AST
+
+For explicitly selected Astro builds use catalog ID `web-astro`. For website effects, transitions, scroll and original component specimens use `web-motion-library` alongside accepted `motion`/`web-frontend` inputs. Read [the motion library](../../library/MOTION-LIBRARY.md) selectively. Copy source examples to the adopting project before installation/build; do not write into the installed kit.

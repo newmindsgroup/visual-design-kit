@@ -1,21 +1,60 @@
-# Current package pin
+# Candidate package pin
 
-Version-Timestamp: 2026-09-27T14:50:36-04:00
+Version-Timestamp: 2026-10-01T21:53:25.951067+00:00
 
-Package version: 0.3.0. Release tag: `v0.3.0`. Status: public, supervised evaluation.
+Package version: 0.3.1 candidate. Not installed or released. Independent Claude review pending: subscription authentication check failed. Installed 0.3.0 remains active.
 
-SHA-256 of `plugins/visual-design-studio/PAYLOAD.sha256`:
+SHA-256 of plugins/visual-design-studio/PAYLOAD.sha256:
 
 ```text
-bb50c998190fe382daadc4c8506784c145cde4225e5a8b6d1ec65765a64663ed
+72b84bdd155252fdd028c54c13160088815947dddcb256f159218c15c7dcdc20
 ```
 
-All 376 listed payload hashes were verified during the release checks.
+All listed payload hashes verified locally. Pin establishes exact candidate bytes, not production or aesthetic approval. Existing project pins are preserved.
 
-The digest identifies the package payload. The repository also contains startup templates and documentation outside that payload. Record the full checkout commit from `git rev-parse HEAD` alongside the package version and digest in each project's `library-version.json`. Keep that checkout unchanged during the project.
+Previous reviewed 0.3.0 digest: bb50c998190fe382daadc4c8506784c145cde4225e5a8b6d1ec65765a64663ed.
 
-Follow [the installation verification commands](../INSTALLATION.md#verify-the-package) before executing bundled scripts. This record is a maintainer assertion from the repository, not a cryptographic signature. Confirm that you obtained the repository from the publisher you intended. A matching checksum establishes matching bytes, not source trust, output quality or production acceptance.
 
-## Historical evidence
+Version-Timestamp: 2026-10-02 18:00:38 AST
 
-The [0.2.0 verification record](QUALITY-020-RELEASE.md) reports 364 payload files and digest `43bde9afa9b57d8fd9264fea7645451d345b4ac2ad8c2d273d8787131f79f9d3`. It applies only to that edition. Do not use a historical digest for the current package.
+Local logo instruction correction synchronized; Fable 5.1 reviewed the focused sanitized method. The full 0.3.1 candidate remains unreleased and retains its other review/acceptance holds.
+
+
+Version-Timestamp: 2026-10-02 18:10:24 AST
+
+Focused morphology and contour-study corrections synchronized locally; other 0.3.1 release/acceptance holds remain.
+
+
+Version-Timestamp: 2026-10-02 18:20:16 AST
+
+[Typography correction](TYPOGRAPHY-FEEDBACK-CHECKS.md) synchronized through append-only source deltas, retaining existing applied typography methods. Candidate remains unreleased with other acceptance holds unchanged.
+
+
+Version-Timestamp: 2026-10-02 18:27:52 AST
+
+[Lockup continuity clarification](LOCKUP-CONSISTENCY-20261002.md) synchronized locally. Other candidate acceptance/release holds remain.
+
+
+Version-Timestamp: 2026-10-02 20:04:13 AST
+
+[Finished-review/exploration safeguards](REVIEW-EXPLORATION-CHECKS.md) synchronized locally. Live CLI lists 0.3.1 installed/enabled, but cache payload differs and lacks the new reference. This task does not modify cache or activate source additions; candidate/runtime/release states remain separate.
+
+Version-Timestamp: 2026-10-02T21:11:43.193072-04:00
+
+Local acceptance/history/preview payload refreshed. Current-chat runtime and client visual acceptance unverified.
+
+Version-Timestamp: 2026-10-02T22:14:29.457016-04:00
+
+Native-detail instruction refresh installed; current-chat reload and client repair evidence remain separate.
+
+Version-Timestamp: 2026-10-03T12:32:11.014296-04:00
+
+Progression-site contract candidate refreshed locally, no actual website or collaboration backend claimed.
+
+Version-Timestamp: 2026-10-14 11:37:54 AST
+
+Astro Motion Atlas local 0.4.0 is installed/enabled and 440 cache files match source. See MOTION-ATLAS-040.md for checks and the interrupted final review hold. This local receipt does not replace public or client release pins.
+
+Version-Timestamp: 2026-10-14 14:06:55 AST
+
+Headless UI local 0.4.1 installed/enabled; 444 files match owner source. Final10 changed-path groups, regression40, typecheck/build/audit and Fable review findings disposition recorded in private/headless-ui-20261014. Preview retained for user review at localhost:17731. Public/client release pins unchanged.

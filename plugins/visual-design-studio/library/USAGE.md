@@ -76,3 +76,9 @@ At handoff, always record the catalog hash/version and selected entry hashes. Re
 The planner orders instruction reading, not production tasks. For each dependency, identify the input information relevant to the requested scope and record reuse, required creation, specifically authorized provisional use, or not applicable with a reason. It does not require every output of an upstream skill. Logo refinement can use a supplied accepted master; identity refresh preserves accepted positioning; evaluation reads delivery criteria before judging a concept without first delivering it. Strict project/persona requirements still apply. An exclusion conflict holds only the affected use until its relevant input disposition is resolved; it never silently forces execution of an excluded skill.
 
 The pattern media-* matches only IDs beginning media-. Provider IDs chatgpt-images, higgsfield-cli and openart-cli are separate exact IDs; do not assume the pattern includes them.
+
+## Astro website motion extension
+
+Version-Timestamp: 2026-10-14 11:13:07 AST
+
+Astro website and motion extensions: [Motion Atlas](MOTION-LIBRARY.md). Exact capability IDs: `web-astro` and `web-motion-library`. The [source playground](examples/astro-motion/README.md) is copied into a project-owned working directory before dependency installation.
