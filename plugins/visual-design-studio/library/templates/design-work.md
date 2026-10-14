@@ -1,6 +1,6 @@
 # Selected design work record
 
-Version-Timestamp: 2026-09-08 18:04:08 AST
+Version-Timestamp: 2026-10-03T12:31:00.335655-04:00
 
 Replace this template timestamp with the actual revision time when creating a record.
 
@@ -55,3 +55,29 @@ Reference the Criterion basis ID and its method; record actual result, evidence 
 For a delivery candidate, use [delivery preflight](../DELIVERY-PREFLIGHT.md) to reconcile this record with actual source/export versions and recipient instructions. Keep applicable checks and failures in Checks and limits; preparing this section does not send files.
 
 Actual outputs and versions, manifest, remaining risks, next action/owner, refresh trigger and recovery instructions. Preparing a handoff does not send it.
+
+
+## Immutable revision and activity record
+
+Version-Timestamp: 2026-10-02 21:02:25 AST
+
+Use the existing authoritative project version index (such as VERSION-INDEX) with this record, not a parallel workflow. Every produced design revision gets a never-reused sequence ID plus real timestamp with numeric UTC offset or IANA timezone and parent revision (or explicit root). Preserve all native masters, artwork, renders and exports actually produced at versioned paths before any overwrite; verify readable bytes and hashes. Do not overwrite a revision snapshot. Missing originals stay missing; a regenerated or historical reconstruction has a new ID and an explicit reconstruction label, not an original-byte claim. Hashes alone do not recover lost images.
+
+| Revision ID/time/parent | Source version/hash and preserved artifact paths/hashes | Actual tool/version/model/effort (verified or unknown) | Hypothesis, strategy and visual delta | Review input/output revision IDs | Feedback event and acceptance states | Outcome metric/result and limits |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Append activity events with timestamp, actor/tool, action/strategy, input/output versions, concise rationale, review/feedback, failed methods and actual check results. Update the current index through new status events while keeping historical artifact bytes and prior events intact. Record elapsed time, repair/iteration count, remaining criterion failures and observed outcome where measured; unknown metrics stay unknown. Separate critique completion, criteria evidence, user visual acceptance and production readiness. Store no hidden chain-of-thought, credentials, private books or bulk context. Keep confidential artifacts/logs local to their authorized project; versioning is not publishing or permission to export to a new service. Native/Git history may supplement this index but cannot substitute for recovery evidence for ignored or overwritten renders.
+
+
+## Preview and current-working checkpoint
+
+Version-Timestamp: 2026-10-02 21:05:13 AST
+
+- One authoritative current-working pointer/index location and exact revision; stage/status: generated sketch/native study/review candidate/accepted-for-stated-scope. Link here if another existing record owns the pointer; do not create a duplicate authority.
+- Actual versioned preview/evidence path, one or two visual hypotheses, intended observable effect, checkpoint before costly finalization and focused steering question/decision if needed:
+- User feedback event ID, shown revision/hash, actual response/evidence pointer, changed decision/next revision or unresolved dependent hold. Feedback and status changes append to history; immutable artifact bytes stay unchanged.
+- Receiving-stage route reference and change trigger (stage/input/risk/failure/capacity); recommendation versus actual verified runtime/approach, acceptance/outcome, repairs and measured elapsed time/limits. Do not measure quality by model-call volume.
+
+Version-Timestamp: 2026-10-03T12:28:38.580424-04:00
+
+When a progression/review website is requested, fill [design-progression-site.md](design-progression-site.md) from this record and the authoritative version index. Record audience/access, included revision/event IDs, excluded confidential material, actual interaction persistence, site artifact version, and local/share status. The hub does not replace this history or imply publication permission.

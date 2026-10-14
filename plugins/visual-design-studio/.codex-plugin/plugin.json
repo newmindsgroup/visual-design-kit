@@ -1,6 +1,6 @@
 {
   "name": "visual-design-studio",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "description": "Start separate brand and design projects using a versioned, selectively loaded design library.",
   "author": {
     "name": "New Minds Group"
@@ -8,8 +8,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Visual Design Studio",
-    "shortDescription": "Use Visual Design Studio in Codex.",
-    "longDescription": "One entry skill selects from 130 design capabilities. Includes original applied method cards, explicit standalone and optional local-reference modes, scoped handoffs, portable templates and rendered craft examples. Supervised evaluation; client and device acceptance remain project-specific.",
+    "shortDescription": "Brand design and motion",
+    "longDescription": "Selectively loaded design capabilities with original applied methods, optional reference modes, scoped handoffs and an Astro, Tailwind and Vue motion playground. Supervised evaluation; client and device acceptance remain project-specific.",
     "developerName": "New Minds Group",
     "category": "Productivity",
     "defaultPrompt": [
@@ -17,5 +17,6 @@
       "Start a new-brand project."
     ],
     "capabilities": []
-  }
+  },
+  "Version-Timestamp": "2026-10-14 15:15:59 AST"
 }

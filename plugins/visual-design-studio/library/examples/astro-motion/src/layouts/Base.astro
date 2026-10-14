@@ -1,0 +1,10 @@
+---
+// Version-Timestamp: 2026-10-14 11:06:44 AST
+import {ClientRouter} from 'astro:transitions';import '../styles/global.css';
+interface Props { title:string } const {title}=Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="A coded collection of website motion studies, reusable components and researched recipes."/><meta name="robots" content="noindex"/><title>{title} | Motion Atlas</title><ClientRouter/></head><body><a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-paper focus:z-50">Skip to content</a><header class="border-b border-line"><div class="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"><a href="/" class="no-underline font-medium tracking-tight">Visual Design Kit <span class="text-muted ml-2">/ Motion Atlas</span></a><a href="/#catalog" class="text-sm">Explore studies ↗</a></div></header><main id="main" class="max-w-7xl mx-auto px-6 md:px-12" tabindex="-1"><slot/></main><footer class="max-w-7xl mx-auto px-6 md:px-12 py-10 text-xs text-muted border-t border-line mt-16 flex flex-wrap gap-4 justify-between"><p>Original specimens. Adapt to your project’s design system.</p><p>Version 0.1.0 · 14 October 2026</p></footer>
+<script>// Route changes orient keyboard focus; initial arrival keeps normal focus order.
+let swapping=false;document.addEventListener('astro:before-swap',()=>{swapping=true});document.addEventListener('astro:page-load',()=>{if(swapping){requestAnimationFrame(()=>document.getElementById('main')?.focus({preventScroll:true}));swapping=false;}});
+</script>
+</body></html>

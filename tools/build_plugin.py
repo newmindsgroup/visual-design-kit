@@ -1,5 +1,5 @@
 """Build or verify deterministic Visual Design Studio package metadata."""
-# Version-Timestamp: 2026-09-27 14:43:14 AST
+# Version-Timestamp: 2026-10-14 11:18:14 AST
 import argparse
 import hashlib
 import json
@@ -38,7 +38,9 @@ def digest(content):
 
 def ignored(relative):
     parts = relative.parts
-    return (any(part in {".git", "private", "__pycache__", "tmp", "temp"} for part in parts)
+    if parts[:3] == ("library", "examples", "astro-motion") and any(part in {"dist", "qa-output"} for part in parts[3:]):
+        return True
+    return (any(part in {".git", "private", "__pycache__", "tmp", "temp", "node_modules", ".astro", ".vite"} for part in parts)
             or relative.name.startswith(".build-plugin-") or relative.name == ".DS_Store" or relative.name.endswith((".pyc", ".tmp", "~")))
 
 

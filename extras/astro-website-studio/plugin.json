@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "astro-website-studio",
+  "version": "0.1.0",
+  "description": "Assess and build client marketing and content websites with Astro, version-matched APIs, project-specific CMS selection, and observable acceptance.",
+  "author": {
+    "name": "New Minds Group"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Astro Website Studio",
+        "shortDescription": "Astro marketing websites",
+        "longDescription": "One Astro delivery skill with selective architecture, content, integration and verification references. No bundled external server or automatic deployment.",
+        "developerName": "New Minds Group",
+        "category": "Productivity",
+        "defaultPrompt": "Use the Astro skill to assess or build this client marketing website."
+      }
+    },
+    "com.newmindsgroup": {
+      "versionTimestamp": "2026-10-14 10:33:20 AST",
+      "agentAttribution": "computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-14 10:33:20 AST"
+    }
+  }
+}

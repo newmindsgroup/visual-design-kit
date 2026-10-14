@@ -18,3 +18,21 @@ Status: blank, unverified. Copy into the project workspace and reference from de
 - Glyph/shaping, wrap, text scaling/spacing, small-screen and native export checks:
 - Selected source files/hashes or recipient acquisition instructions:
 - Approval, remaining holds, change notifications to downstream record owners (color retains pair validity), next owner/test:
+
+
+Version-Timestamp: 2026-10-02 18:16:41 AST
+
+## Brand-name comparison, when scoped
+
+- Authorized scope: replacement/pairing/typesetting-only; skip discovery under typesetting-only and record family/icon unchanged.
+- Artwork-control path/version/hash if original family is unknown, visible text, approved-name mismatch and live-text/file-identity exemption:
+- Exact approved full-name text, case/diacritics/descriptors; original type/artwork control and allowed replacement/typesetting scope:
+- Per-candidate ID, source/file/hash/version, real weight/style/axes, discovered/available/rendered/rights-approved status and required-use license evidence:
+- Requested versus rendered app family/style, substitution check, native/export proof or pending status:
+- Wordmark-only and symbol/name sheet paths; same symbol master, content, background and use:
+- Equal nominal-size and matched optical-size views; visible measurement reference, actual dimensions/nominal size and scale adjustment, with proportions preserved:
+- Personality/authority fit, width/weight/counters/apertures, kerning/word-spacing changes and actual-size readability observations:
+- Symbol/type weight/curve/height/gap relationship, benefit/tradeoff/failure per option and recommendation:
+- Separate design selection, user/audience, native/export and rights acceptance; remaining owner/check:
+
+- Symbol-study/initial-reading record link when the brief requires it; observed reading, reviewer context, user/audience status and unresolved criterion, independent of type selection:

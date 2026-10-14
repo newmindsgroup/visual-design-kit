@@ -1,0 +1,23 @@
+/* Version-Timestamp: 2026-10-14 11:06:44 AST */
+@import "tailwindcss";
+@theme { --color-ink:#171a1d; --color-paper:#f6f7f5; --color-line:#d8ddda; --color-muted:#62696e; --color-accent:#B08838; }
+:root { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#171a1d; background:#f6f7f5; }
+* { box-sizing:border-box; } body { margin:0; } button,a,input,summary { -webkit-tap-highlight-color:transparent; }
+button,a,summary { touch-action:manipulation; } button { cursor:pointer; } button:disabled { cursor:default; opacity:.6; }
+:focus-visible { outline:2px solid #171a1d; outline-offset:5px; }
+button,.control { border:1px solid #d8ddda; border-radius:999px; padding:.65rem 1rem; background:#f6f7f5; font:inherit; }
+button:hover:not(:disabled) { background:#e9ede9; } a { color:inherit; } ::selection { background:#d9c99e; }
+.stage { min-height:350px; display:grid; place-items:center; padding:2rem; background:#e9ede9; border-radius:3px; position:relative; overflow:hidden; }
+.shape { width:100px; height:100px; background:#657f95; border-radius:25%; }
+.specimen { width:min(100%,460px); } .fixture { background:#f6f7f5; border:1px solid #d8ddda; border-radius:3px; padding:1.2rem; }
+.eyebrow { font: .72rem ui-monospace,SFMono-Regular,monospace; letter-spacing:.12em; text-transform:uppercase; color:#62696e; }
+.demo-row { display:flex; gap:1rem; justify-content:center; align-items:center; flex-wrap:wrap; }
+.pill { display:inline-block; font:.7rem ui-monospace,monospace; padding:.3rem .55rem; border:1px solid #d8ddda; border-radius:999px; }
+.component-note { color:#62696e; font-size:.85rem; margin-top:1.2rem; }
+@media(max-width:600px) { .stage{padding:1.1rem; min-height:320px;} }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; scroll-behavior:auto!important; } }
+[data-reduced="true"] *,[data-reduced="true"] *::before,[data-reduced="true"] *::after { animation-duration:.001ms!important; transition-duration:.001ms!important; }
+
+
+/* Portal preferences must be applied inside the teleported tree. */
+[data-overlay-panel][data-reduced="true"], [role="dialog"][data-reduced="true"] [data-overlay-backdrop] { transition-duration:.001ms!important; animation-duration:.001ms!important; }

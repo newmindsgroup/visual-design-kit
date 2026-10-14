@@ -10,6 +10,12 @@ Version-Timestamp: 2026-09-27 14:21:05 AST
 
 [Installation](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Development checks](docs/DEVELOPMENT.md)
 
+## Local motion extension
+
+Version-Timestamp: 2026-10-14 11:21:41 AST
+
+The local 0.4.0 candidate adds [Motion Atlas](docs/MOTION-ATLAS-040.md): Astro, Tailwind and Vue skills, 20 working motion studies, 20 researched recipes and reusable components. It is a local supervised-evaluation extension; the public release and existing project pins remain distinct.
+
 ## What this is for
 
 Visual Design Kit gives a designer and an AI agent a common process, vocabulary, and set of deliverable contracts. It helps turn an ambiguous request into a sequence of inspectable outputs. It supports an entire project, an individual phase, or a precise revision.
@@ -297,3 +303,13 @@ This edition strengthens the existing capabilities instead of adding another ove
 Run the collection locally from the library directory with `python3 -m http.server 17672 --bind 127.0.0.1`, then open `http://127.0.0.1:17672/examples/quality-benchmark/`. This binds only to your computer. It does not publish client work.
 
 Version 0.2.0 was installed and hash-verified on the authoring Mac. Its independent review, 74 code tests, 20 browser cases and export checks are recorded in the edition evidence above. These are dated results for that edition. Use the current package pin for installation and retain project-specific review of your actual deliverables.
+
+## Astro and Headless UI additions
+
+Version-Timestamp: 2026-10-14 15:14:00 AST
+
+The integrated local candidate is Visual Design Studio 0.4.1. It includes Astro/Tailwind/Vue skills, 22 working studies, 20 researched recipes and original Headless UI dialog/drawer specimens. [Library guide](plugins/visual-design-studio/library/MOTION-LIBRARY.md), [Headless UI evidence](plugins/visual-design-studio/library/HEADLESS-UI-EVIDENCE.md), [Safari checkpoint](docs/SAFARI-CHECKPOINT.md).
+
+[Framework research](docs/research/astro-20261014/framework-assessment.md) and [agency, brand and creative-source research](docs/research/astro-20261014/adoption-and-creative-sources.md) retain dated evidence and scope distinctions. An [optional standalone Astro skill](extras/astro-website-studio/skills/astro/SKILL.md) is included for hosts without the full kit. Use the integrated kit or the standalone skill per environment to avoid duplicate loading. The standalone portable manifest is separate from the native Design Kit plugin.
+
+Source publication is not a production-readiness certification or a release tag. Native Safari and screen-reader acceptance remain incomplete; project-specific checks and existing project pins still apply.

@@ -18,3 +18,15 @@ Parent: [identity workflow](../IDENTITY-WORKFLOW.md). Markdown companion to exis
 - Delivery: existing manifest ID, source/export binding, format/profile/dimensions, licenses and recipient instructions.
 - Migration: old/new mapping, coexistence, authorized rollout, deprecated files and rollback.
 - Decision: creative approval distinct from legal, native/rendered, supplier/device and audience acceptance.
+
+
+Version-Timestamp: 2026-10-02 17:56:47 AST
+
+## Logo study companion
+
+For reference-led logo work or requested proportion studies, attach the [logo study record](logo-study.md). Carry visual coverage, faithful versus alternative dispositions, measured overlays, optical departures and use-by-variant acceptance. Do not convert rejected drafts into rejection of the original identity.
+
+
+Version-Timestamp: 2026-10-02 21:02:25 AST
+
+Carry the existing project's [immutable revision/activity record](design-work.md#immutable-revision-and-activity-record): revision/parent IDs, recoverable source/native/render bytes, drawing strategy/delta, actual actor/tool metadata, bound review versions and append-only feedback/outcome states. The project executor owns client VERSION-INDEX; reusable-kit maintenance stores only sanitized method evidence.

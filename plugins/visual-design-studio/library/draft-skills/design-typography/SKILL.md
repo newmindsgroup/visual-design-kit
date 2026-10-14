@@ -86,3 +86,12 @@ Use the [shared fictional collection](../../examples/quality-benchmark/README.md
 Version-Timestamp: 2026-09-27 14:25:39 AST
 
 Read [Typography and composition](../../knowledge/typography-and-composition.md) when repairing hierarchy, awkward wrapping or cross-format fit without shrinking the whole composition. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.
+
+
+Version-Timestamp: 2026-10-02 18:16:41 AST
+
+## Brand-name and symbol pairing
+
+For brand-name/wordmark selection or weak symbol/type pairing, apply the [brand-name specimen method](references/type-craft.md#brand-name-and-symbol-pairing-specimens): preserve original typography, verify actual rendering and rights, compare full-name specimens at nominal and matched optical size, and justify options through the brief. Font names alone are not a selection result.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-02 18:19:38 AST

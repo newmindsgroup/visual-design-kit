@@ -24,3 +24,9 @@ Working components/pages and implementation evidence. Attach to the existing des
 Run relevant tests and inspect keyboard, responsive, error and no-enhancement behavior. Preserve prior approved work. A specification, sample or simulated interaction is not proof of production behavior. Use [acceptance scenarios](../../examples/website-workflow/README.md) and project-specific checks; no external changes or installation are implied.
 
 Complete the [stage handoff](../design-stage-handoff/SKILL.md) with actual files, version, checks, unknowns and next owner.
+
+## Astro website motion extension
+
+Version-Timestamp: 2026-10-14 11:13:07 AST
+
+For an explicitly selected Astro stack, select `web-astro`; for original website motion components and recipes select `web-motion-library`. See the [motion library](../../MOTION-LIBRARY.md). Do not make Astro the default for unrelated website projects.

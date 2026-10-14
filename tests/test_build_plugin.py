@@ -130,5 +130,19 @@ class BuildPluginTests(unittest.TestCase):
                 path.unlink()
 
 
+    def test_frontend_runtime_outputs_are_excluded_but_source_is_shipped(self):
+        app = self.plugin / "library" / "examples" / "astro-motion"
+        for directory in ("node_modules", ".astro", ".vite", "dist", "qa-output"):
+            path = app / directory / "artifact.txt"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("runtime artifact")
+        (app / "source.vue").write_text("original source")
+        self.apply()
+        payload = (self.plugin / "PAYLOAD.sha256").read_text()
+        self.assertIn("astro-motion/source.vue", payload)
+        for directory in ("node_modules", ".astro", ".vite", "dist", "qa-output"):
+            self.assertNotIn(f"astro-motion/{directory}/", payload)
+
+
 if __name__ == "__main__":
     unittest.main()

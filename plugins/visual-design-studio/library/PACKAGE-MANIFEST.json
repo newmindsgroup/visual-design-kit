@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-09-27T14:44:11-04:00",
-  "candidate": "0.3.0",
+  "Version-Timestamp": "2026-10-14 15:15:59 AST",
+  "candidate": "0.4.1",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.3.0"
+    "version": "0.4.1"
   },
   "distribution_scope": "public",
   "files": [
@@ -111,6 +111,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "HEADLESS-UI-EVIDENCE.md",
+      "sha256": "39baca55ee5c07477b2d580a8919ebc488561ad98b0a947261c4f1c72962e79e",
+      "source": "curated-plugin-source/HEADLESS-UI-EVIDENCE.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "IDENTITY-WORKFLOW.md",
       "sha256": "5efb2a24bbcdfdbd6b07529c9bdf0ec23fb26927cd22f706c2be5cef74231063",
       "source": "curated-plugin-source/IDENTITY-WORKFLOW.md",
@@ -138,6 +144,18 @@
       "destination": "MEDIA-SETUP-READINESS.md",
       "sha256": "8d91a79cce6cda110babf80b7f54ae45661e896b4bda659f4897ff78c5587d9f",
       "source": "curated-plugin-source/MEDIA-SETUP-READINESS.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "MOTION-ATLAS-EVIDENCE.md",
+      "sha256": "273748e000fd225d3f94216a5ecb111671ddae52295ccc8f1e00f18f5169a6d6",
+      "source": "curated-plugin-source/MOTION-ATLAS-EVIDENCE.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "MOTION-LIBRARY.md",
+      "sha256": "60045a8c7118f6df387e37dabdde7b109782a94b36247c4a08bf6ad2d03f9121",
+      "source": "curated-plugin-source/MOTION-LIBRARY.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -268,7 +286,7 @@
     },
     {
       "destination": "USAGE.md",
-      "sha256": "19278141f5b9e08e13dca73b0d4e38f8bdc4d273a8589139585fdec8649a24d6",
+      "sha256": "fd9dae765e96b6548a44d8d40501cd08de4ffddcf2826863074dcd7b9adbad10",
       "source": "curated-plugin-source/USAGE.md",
       "status": "versioned-evaluation-input"
     },
@@ -316,7 +334,7 @@
     },
     {
       "destination": "capabilities.json",
-      "sha256": "dd6a01f7869f74cf4e76e5584ab49239f0c7d8285e087b520b24f090b416a560",
+      "sha256": "97f05cf624feb21b936335b580373fe59b8fdbe4d46ff7c89714d24ec21ed525",
       "source": "curated-plugin-source/capabilities.json",
       "status": "versioned-evaluation-input"
     },
@@ -525,6 +543,18 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "draft-skills/design-google-vids/SKILL.md",
+      "sha256": "a71cdfbe0fcfeec2274c524c91a5d752fd0b2ab1213ef65470c0051b801fa2d7",
+      "source": "curated-plugin-source/draft-skills/design-google-vids/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-google-vids/references/google-vids.md",
+      "sha256": "066cd64d61631ed16e04bb5cd26354621d3dcf9eaa36cb3a722c91f521722c86",
+      "source": "curated-plugin-source/draft-skills/design-google-vids/references/google-vids.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "draft-skills/design-higgsfield-cli/SKILL.md",
       "sha256": "b883c0dc4d9692c20324569589f66bef0c0e25d7a7987c2741e7c31349d7b6f4",
       "source": "curated-plugin-source/draft-skills/design-higgsfield-cli/SKILL.md",
@@ -574,14 +604,20 @@
     },
     {
       "destination": "draft-skills/design-logo-concepts/SKILL.md",
-      "sha256": "cf332f8d320e279c699dbdde83099d3d0f1032baf3c61110005fd4c4b58bbe27",
+      "sha256": "bb2edb544cb0ef0e69689a70a3aaa3fe486078d2221a54e649e54baf7775e631",
       "source": "curated-plugin-source/draft-skills/design-logo-concepts/SKILL.md",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-evaluation/SKILL.md",
-      "sha256": "15c03adb895b721149a6c148ba8a5d8f2a19968e7e137a1fcbe096cc7b536831",
+      "sha256": "79efc386e8b09c0bff85a5f3767fefc69d17638d1207f992e589242948c408bd",
       "source": "curated-plugin-source/draft-skills/design-logo-evaluation/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-logo-evaluation/references/review-contract.md",
+      "sha256": "73d994cab62d3ec997efa498f39fb79eb7b10cb2df5435a6dcb7b45ce4da96e7",
+      "source": "curated-plugin-source/draft-skills/design-logo-evaluation/references/review-contract.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -592,19 +628,25 @@
     },
     {
       "destination": "draft-skills/design-logo-refinement/SKILL.md",
-      "sha256": "377e846d87d899bf8fc3197e89b553fc0d3f66af08a85c930e85ad1531c7ce85",
+      "sha256": "08637f910573896dac19c1fa3917363068dd5c23a5e6457ba659aebd7387c129",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/SKILL.md",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "draft-skills/design-logo-refinement/references/lettering-and-optics.md",
-      "sha256": "e541c375663d9a3d260a3216e5ad8b3983ca1a5dbb336ef3f9ebcf0ab999bfef",
+      "sha256": "3fc3a7a4ad70257e1afb11c8110dd55f79717d3c6d1e2cf58201acb7b9359384",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/references/lettering-and-optics.md",
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "draft-skills/design-logo-refinement/references/reference-and-proportion.md",
+      "sha256": "b5129447db31762257504d1d5053107dd4e952a74423c9c95195c400801b18eb",
+      "source": "curated-plugin-source/draft-skills/design-logo-refinement/references/reference-and-proportion.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "draft-skills/design-logo-variants/SKILL.md",
-      "sha256": "f5ed63238f3b56e9b1da477d5f0b5b51e2cb377248d07411e3df11643aacfd23",
+      "sha256": "6088b7305c23c991a761e7ac35fb28af2a708a07543663b589dce4a23b760bb7",
       "source": "curated-plugin-source/draft-skills/design-logo-variants/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -646,7 +688,7 @@
     },
     {
       "destination": "draft-skills/design-motion-effects/SKILL.md",
-      "sha256": "8cd42aa33f912b3350358bb211e7d40b552b3305c5ca25c160546992643d895e",
+      "sha256": "fc99e31d6a47c1194414ab774512ff06a415b1dabba8a2635b23c4a298c4296e",
       "source": "curated-plugin-source/draft-skills/design-motion-effects/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -970,7 +1012,7 @@
     },
     {
       "destination": "draft-skills/design-stage-handoff/SKILL.md",
-      "sha256": "895055966bb784c585ada3f93e3a7bb20491cb90cdc77e67b93f696bba248c30",
+      "sha256": "2cef803f88ee5eb78e1da347f4786a6fbc4850b25800ec9d096749532855b8a9",
       "source": "curated-plugin-source/draft-skills/design-stage-handoff/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1066,7 +1108,7 @@
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
-      "sha256": "816c9b2045796df315ccc441cdd89028d529b6be235870db3da51f302e507050",
+      "sha256": "76fe69de74f583fdff99cb5dbfa0bd4071d6d907cdd30b414ec5268dd544cdcf",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1090,7 +1132,7 @@
     },
     {
       "destination": "draft-skills/design-typography/references/type-craft.md",
-      "sha256": "3478c5e25942ae0350bdea93670d396868e462000e554c9e0476f619ca2a9c42",
+      "sha256": "7fb3b7ea2b6c27b14898b3e68ba046d3d714ae072620bb03fa785aadd6b88cbc",
       "source": "curated-plugin-source/draft-skills/design-typography/references/type-craft.md",
       "status": "versioned-evaluation-input"
     },
@@ -1134,6 +1176,30 @@
       "destination": "draft-skills/design-web-art-direction/SKILL.md",
       "sha256": "5e8b65d24b2477bb9c4d30226083bac7c6babddfd494f4fd1551fd8cbee0dc75",
       "source": "curated-plugin-source/draft-skills/design-web-art-direction/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-astro/SKILL.md",
+      "sha256": "3e238cb43d2ba06d449998061e20ef4faa9c1ad19345c29fb8ee157feeb31176",
+      "source": "curated-plugin-source/draft-skills/design-web-astro/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-astro/references/architecture.md",
+      "sha256": "371d83fcdff60088edfe0ee7345ec423b54ec56a2bd690a68d5a42e041461d43",
+      "source": "curated-plugin-source/draft-skills/design-web-astro/references/architecture.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-astro/references/headless-ui.md",
+      "sha256": "1d5361bd5a3e29e70d0e932acba6e37c09b500d937ea2bbf745d15636dc01ad2",
+      "source": "curated-plugin-source/draft-skills/design-web-astro/references/headless-ui.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-astro/references/research.md",
+      "sha256": "71ef51d43930347d6fbff0daeadd26acd07bcaad8410dd784d0a1846bd05c22d",
+      "source": "curated-plugin-source/draft-skills/design-web-astro/references/research.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -1216,7 +1282,7 @@
     },
     {
       "destination": "draft-skills/design-web-frontend/SKILL.md",
-      "sha256": "a4ecddd5b19d6b2ec8f9decf61cd522f40ad2ea3cee85e33cbcdf9f1e78adeeb",
+      "sha256": "c8bae44abdb89cfd5745e75ed7cbe00c25b5ec4fe5113720e8906d5b965b665d",
       "source": "curated-plugin-source/draft-skills/design-web-frontend/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1254,6 +1320,30 @@
       "destination": "draft-skills/design-web-migration/SKILL.md",
       "sha256": "7bb81f10450983f367ee80b27bd45f9f49d2e03951a7b35957503466f90ecec5",
       "source": "curated-plugin-source/draft-skills/design-web-migration/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-motion-library/SKILL.md",
+      "sha256": "9fedbc85330c9010565809585c9e33d04349929e87c09f6299195994f3c9a77c",
+      "source": "curated-plugin-source/draft-skills/design-web-motion-library/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-motion-library/references/creative-sources.md",
+      "sha256": "49bbe76f200c38ab2e9fbe5cb91b56a2c0762fd9655db4ec2e2eebcf266f281c",
+      "source": "curated-plugin-source/draft-skills/design-web-motion-library/references/creative-sources.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-motion-library/references/lifecycle.md",
+      "sha256": "f4ce2191f0a11e89ebbba8c166b6d54c87fd4924cefc0444865cd173a739ba69",
+      "source": "curated-plugin-source/draft-skills/design-web-motion-library/references/lifecycle.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-web-motion-library/references/verification.md",
+      "sha256": "31a9e2fd67b3a9a8fb72277ac4e355526cf588d06af8e2cddbd4dee761d146ef",
+      "source": "curated-plugin-source/draft-skills/design-web-motion-library/references/verification.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -1326,6 +1416,204 @@
       "destination": "draft-skills/design-web-visual-review/SKILL.md",
       "sha256": "ccdcb6ab9a8ca6fa056fc4ccde59003e4bfc501d9aad1ed76a45c79fa8029652",
       "source": "curated-plugin-source/draft-skills/design-web-visual-review/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/DESIGN.md",
+      "sha256": "642d7ab089b6fba9bbe4eeab209bd616b80afadf83f40738c739458a071cc103",
+      "source": "curated-plugin-source/examples/astro-motion/DESIGN.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/README.md",
+      "sha256": "0d8f682522b4e94b5e2f53b215d6dc36c827c9526f402b1bb19325951b914cf5",
+      "source": "curated-plugin-source/examples/astro-motion/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/astro.config.mjs",
+      "sha256": "3232b42abeb385f5c656e8578506459cae24cd49c36873f98113f7c192816b05",
+      "source": "curated-plugin-source/examples/astro-motion/astro.config.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/package-lock.json",
+      "sha256": "d37ca24f3a2821e23480c2aefb207cd812bacb84cc57f44b4caf093bda98f6c8",
+      "source": "curated-plugin-source/examples/astro-motion/package-lock.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/package.json",
+      "sha256": "b93ac9a0266b1d2546fc1bd756c61d20999c45367ca0e97fe371dbdeb86237ec",
+      "source": "curated-plugin-source/examples/astro-motion/package.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/EffectStage.vue",
+      "sha256": "6c8f2e8bfaf08346ff3a0921f2cecb2b81227f6bbcb06030fd7f889664da7be6",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/EffectStage.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/AmbientCanvas.vue",
+      "sha256": "51060f90f29735b49bc8e2c35b676bcf8caaf5d68172687d91812d05ff73942b",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/AmbientCanvas.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/ButtonFeedback.vue",
+      "sha256": "26aad669c3be71d54c0c46ca763434fda2b61e3fcd65dc6ddb0269020cc3a01a",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/ButtonFeedback.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/Carousel.vue",
+      "sha256": "08f1e9f41b3000a5349e503f01fb6bb5f7a242c44c4ec0580113c2f016085fb0",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/Carousel.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/Disclosure.vue",
+      "sha256": "ddaf17462fe91c1f9c80fd8c4f3badeb273d36d783277eaff21218a04023a7ac",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/Disclosure.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/HeadlessOverlay.vue",
+      "sha256": "4b3cec2711050c34da9dc9ade7e861ada29386e6f1f1535c550b73b221c62021",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/HeadlessOverlay.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/ListMotion.vue",
+      "sha256": "adc5ba95c201efc9f7a872f0abb24a3779cd6fa0bba7a4b8503d6fa27f0e6f21",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/ListMotion.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/MaskReveal.vue",
+      "sha256": "3722cec921b03ff4fc0059831e916438051a4f330385b5ecd477ea5d1fa059bb",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/MaskReveal.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/PointerCard.vue",
+      "sha256": "978b38c0e0c141736fbd69264d17b4f2f7a37febcc1dfaa5df75d557a1dc4dd6",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/PointerCard.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/ReadingProgress.vue",
+      "sha256": "1b8aab08bbacabc448e2b5d9b336402a9ec30430645c92488e42c5fe5550e335",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/ReadingProgress.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/Reveal.vue",
+      "sha256": "35fe6cda21cf9d32df4c044f14487e45de36df0bfeb7f45b69857f704330a289",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/Reveal.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/ScrollScene.vue",
+      "sha256": "201b602934c51e19436412f7147b9de45cedcf5480cfd2487fda433ea2c66a90",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/ScrollScene.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/SvgDraw.vue",
+      "sha256": "a51448063bb993bb4e5b46d930b8ce776bd6cb99f772580541b5a85bdf2bf05a",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/SvgDraw.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/Tabs.vue",
+      "sha256": "09d939b84baf4dc29ddd175d06ab15ef39ec631b78526a6abdd423f9577ddfcc",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/Tabs.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/TextReveal.vue",
+      "sha256": "953234c7b065fd6acb1bfa1e2d0b48525adc888e92569b6f365c0b616ad86ad5",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/TextReveal.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/components/effects/WebGLScene.vue",
+      "sha256": "b359fa3aa1313d82bfd6d26d02cf39afe27e588593ab748747731c628278d25d",
+      "source": "curated-plugin-source/examples/astro-motion/src/components/effects/WebGLScene.vue",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/layouts/Base.astro",
+      "sha256": "a81790e6a936562c300033acf097a41e903e1a75059c6e516eb02c0940d3f43a",
+      "source": "curated-plugin-source/examples/astro-motion/src/layouts/Base.astro",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/lib/catalog.mjs",
+      "sha256": "47c038fc36de85e319437eef7b77c5f1682da0c8174aba9ef2e26eb4b9e97775",
+      "source": "curated-plugin-source/examples/astro-motion/src/lib/catalog.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/lib/runtime.mjs",
+      "sha256": "11dc0652905644bef632a5b22d574daad947d8a863133a915962092ec343a1f9",
+      "source": "curated-plugin-source/examples/astro-motion/src/lib/runtime.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/lib/useMotion.ts",
+      "sha256": "05f7c487b4d778a6912dd669694cde8474e94fe67eaa54f46c8b8dda5258bad8",
+      "source": "curated-plugin-source/examples/astro-motion/src/lib/useMotion.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/lib/webgl.mjs",
+      "sha256": "7c3177700876808407977cc392b154a4a06fcaa9483e40b50c3d625f417e4710",
+      "source": "curated-plugin-source/examples/astro-motion/src/lib/webgl.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/pages/effects/[id].astro",
+      "sha256": "9ebd1bae5b3fbb4eb9552c499162d00a80b4a5f97ac56f8a1ed2d6fbf5b5c35b",
+      "source": "curated-plugin-source/examples/astro-motion/src/pages/effects/[id].astro",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/pages/index.astro",
+      "sha256": "60b09e7fc5c0d193fbe6051f099ee366133ff01d8026a6d3b685fba9dd7e96c0",
+      "source": "curated-plugin-source/examples/astro-motion/src/pages/index.astro",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/src/styles/global.css",
+      "sha256": "b61650438768227f1d383a1c1f70f602fce470d5fc71fa8631344de5982ccc62",
+      "source": "curated-plugin-source/examples/astro-motion/src/styles/global.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/tests/browser.mjs",
+      "sha256": "71b24b42a28ed736a5b457a9b7b15d88361316f532dc6e29c3b604b49b5c640f",
+      "source": "curated-plugin-source/examples/astro-motion/tests/browser.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/tests/headless-ui.mjs",
+      "sha256": "f7f04e5a28e10e6d190272c985d43aa5e63c123d9edb3bbda8ced8ad380384e8",
+      "source": "curated-plugin-source/examples/astro-motion/tests/headless-ui.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/tests/runtime.test.mjs",
+      "sha256": "927b4e4b01fc400ee95a771a790b44c3e4f033e8993648ac692f7d260112af34",
+      "source": "curated-plugin-source/examples/astro-motion/tests/runtime.test.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/astro-motion/tsconfig.json",
+      "sha256": "f81088be05cc7788a4b7001cad5a4d89edb5334b4c18a4ea240b65aaade6ac58",
+      "source": "curated-plugin-source/examples/astro-motion/tsconfig.json",
       "status": "versioned-evaluation-input"
     },
     {
@@ -1971,8 +2259,14 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "templates/design-progression-site.md",
+      "sha256": "510cfcbd78f75b5fa45ba0378e08772a364c2524001b7fc44ae27cea498e5bec",
+      "source": "curated-plugin-source/templates/design-progression-site.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "templates/design-work.md",
-      "sha256": "e01c0f0752763da83207c238a3529d4d59c1f81ab6fa24d888155ea69c885bf2",
+      "sha256": "775d680b08c0647927680bde45d4eb7f176b79e28c5f3fcc71e9d5f0f12687a3",
       "source": "curated-plugin-source/templates/design-work.md",
       "status": "versioned-evaluation-input"
     },
@@ -2008,7 +2302,7 @@
     },
     {
       "destination": "templates/identity-handoff.md",
-      "sha256": "52aabf7cd927900ae594001989c7ab925eccbd731c08758c0ccb8377e8ed6a1c",
+      "sha256": "2bd1100ec8839db7a6b01c5077020831494720407e164f1cb2ec5ee620ac9921",
       "source": "curated-plugin-source/templates/identity-handoff.md",
       "status": "versioned-evaluation-input"
     },
@@ -2016,6 +2310,12 @@
       "destination": "templates/infographic-spec.md",
       "sha256": "0af9812db670eb32f09c5f4fdb9e4f17464fb2ee8258e0307053fb77d3b0e5d6",
       "source": "curated-plugin-source/templates/infographic-spec.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "templates/logo-study.md",
+      "sha256": "9450672b3df7552a415327f3ea21ad3094ea0d615ae6991deeaf310235c2de39",
+      "source": "curated-plugin-source/templates/logo-study.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2146,7 +2446,7 @@
     },
     {
       "destination": "templates/typography-decision.md",
-      "sha256": "b27e3800733255cce210e485256c0910d0962319f07b03184f28ef033c42742b",
+      "sha256": "2bbb205b82b4c1d059417de56cb8b5f67e37ffb8937a8e3133dd8e932a3fbbe2",
       "source": "curated-plugin-source/templates/typography-decision.md",
       "status": "versioned-evaluation-input"
     },

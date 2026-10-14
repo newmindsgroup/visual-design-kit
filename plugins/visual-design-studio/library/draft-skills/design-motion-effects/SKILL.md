@@ -61,3 +61,9 @@ Use the [shared fictional collection](../../examples/quality-benchmark/README.md
 Version-Timestamp: 2026-09-27 14:25:39 AST
 
 Read [Screen content and motion](../../knowledge/screen-content-and-motion.md) when making movement support a message with coherent choreography. The card adds original worked reasoning; reuse this capability's existing prerequisites, records and acceptance checks. Load only the selected card. Its fictional example is teaching material, not tested project evidence.
+
+## Astro website motion extension
+
+Version-Timestamp: 2026-10-14 11:13:07 AST
+
+For Astro/Tailwind/Vue website effects, select `web-motion-library` for the [original component collection](../../MOTION-LIBRARY.md). Keep motion purpose/choreography here and runtime adoption/evidence in the selected capability.
