@@ -1,315 +1,159 @@
 # Visual Design Kit
 
-![Visual Design Kit connects a shared library to independent existing-brand and new-brand projects, with reviewed lessons flowing back.](docs/images/kit-overview.svg)
+![Visual Design Kit 0.5.0: a brief goes through the design director, the Design Space Atlas and scored directions into discipline skills and a render-and-critique loop.](docs/images/kit-overview.svg)
 
-**A reusable design workflow for people working with AI coding assistants.** Research the brief, choose a direction, create the work, inspect the output, and carry accepted decisions into the next step. Codex has observed installation and startup evidence. Cursor and Claude Code use a documented project-entry route whose native-session acceptance remains unverified.
+**Make Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Current status: supervised evaluation.** The library contains 130 reference capabilities. Version 0.3.0 adds self-contained applied design guidance and explicit optional-reference modes. The [0.2.0 evidence](docs/QUALITY-020-RELEASE.md) covers the existing fictional examples, validators and bounded authoring-machine checks. A public repository or a matching checksum does not establish production readiness. Each project still needs human review and checks of its actual outputs.
+> **Status: supervised evaluation (0.5.0).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-09-27 14:21:05 AST
+Version-Timestamp: 2026-10-20 02:05:00 UTC
 
-[Installation](INSTALLATION.md) · [Start a project](#start-a-project) · [What is included](#what-is-included) · [Readiness](#what-is-verified) · [AI instructions](#instructions-for-ai-agents) · [Full catalog](docs/CAPABILITIES.md) · [Development checks](docs/DEVELOPMENT.md)
+[Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
-## Local motion extension
+## Install
 
-Version-Timestamp: 2026-10-14 11:21:41 AST
+**Claude Code**
 
-The local 0.4.0 candidate adds [Motion Atlas](docs/MOTION-ATLAS-040.md): Astro, Tailwind and Vue skills, 20 working motion studies, 20 researched recipes and reusable components. It is a local supervised-evaluation extension; the public release and existing project pins remain distinct.
+```text
+/plugin install visual-design-studio --marketplace newmindsgroup/visual-design-kit
+```
 
-## What this is for
+or `/plugin marketplace add newmindsgroup/visual-design-kit`, then `/plugin install visual-design-studio@visual-design-team`.
 
-Visual Design Kit gives a designer and an AI agent a common process, vocabulary, and set of deliverable contracts. It helps turn an ambiguous request into a sequence of inspectable outputs. It supports an entire project, an individual phase, or a precise revision.
+**claude.ai and Claude Desktop:** Customize > Plugins > Add > Add marketplace > `newmindsgroup/visual-design-kit`.
 
-Examples include:
+**Codex:** `codex plugin marketplace add .` from a clone, then `codex plugin add visual-design-studio@visual-design-team`.
 
-- Extending an existing brand into a website, campaign, retail screen, or touchscreen experience while preserving its approved identity.
-- Developing a new brand from research and positioning through logo concepts, typography, color, visual language, and guidelines.
-- Designing a website or app experience using audience evidence, journeys, flows, information architecture, prototypes, and a component inventory.
-- Creating copy, infographics, presentations, sales collateral, static screen content, and motion content with an explicit message and design rationale.
-- Revising an existing deliverable without accidentally changing approved text, product details, layout, or branding.
+Details, version pinning and integrity checks: [INSTALLATION.md](INSTALLATION.md). No API keys or paid services are required.
 
-The kit supplies instructions, templates, reference methods, and selected validation tools. The AI and available production software execute the work. Installing the kit does not include a design app, provider subscription, media credits, client assets, or an unattended service.
+## Use it
 
-## How the pieces fit together
+Ask in plain language; the right skill loads on its own.
 
-| Piece | Meaning | Where it lives |
-| --- | --- | --- |
-| Kit | The versioned collection of reusable methods | This repository |
-| Plugin | Codex packaging for the entry skill | `plugins/visual-design-studio/` |
-| Starting skill | Reads the brief and selects relevant instructions | `skills/design-project-start/SKILL.md` inside the plugin |
-| Capability | A focused design task with inputs, outputs and checks | The [130-entry catalog](docs/CAPABILITIES.md) |
-| Agent | Codex, Cursor or Claude Code following the selected instructions | Your separate project task |
-| Project | One brand's assets, deliverables, decisions and memory | A separate folder or repo |
+| You say | What happens |
+| --- | --- |
+| "We're launching a debit card for students in Brazil. What should the brand look like?" | `design-director` extracts the variables, asks 2-4 questions that change the answer, queries the atlas, renders 3-5 directions and recommends one with a score table |
+| "Critique this landing page" (with a file, URL or screenshot) | `design-critique` renders it at real sizes, scores it against a rubric, names generic-AI tells and gives prioritized fixes |
+| "Set up our color tokens with dark mode" | `color` + `design-system` build DTCG tokens, contrast-checked in every mode |
+| "Design the onboarding for our iOS app" | `native-app-design` + `ui-design` apply HIG specifics, states and accessibility |
+| "Spec the animation for this bottom sheet" | `motion` gives durations, easing curves, choreography and reduced-motion behavior |
+| "Print specs for a tri-fold brochure" | `print-packaging-social` gives trim, bleed, color, paper and preflight |
 
-**Repository name:** `visual-design-kit`. **Plugin identifier:** `visual-design-studio`. **Marketplace identifier:** `visual-design-team`. The latter two are retained so the repository rename does not break the existing local installation.
+## What's inside
 
-Only the starting skill is placed in the plugin's discoverable skills directory. The 130 capability files remain reference material loaded as needed. They are not all registered commands or all loaded into every task.
+**Registered skills** (names and short descriptions stay in context; bodies load only when used):
 
-## What is included
+| Skill | Covers |
+| --- | --- |
+| `design-director` | Brief intake, qualifying questions, atlas query, category scan, divergent directions, stylescapes, weighted scoring, recommendation |
+| `brand-identity` | Strategy and positioning, naming, logo design and construction, identity systems, guidelines |
+| `typography` | Selection, pairing, scales, setting, fluid type, licensing, multiscript |
+| `color` | Palette architecture, OKLCH ramps, WCAG and APCA contrast, dark mode, color meaning |
+| `layout` | Grids, spacing, composition, responsive recomposition, formats |
+| `imagery` | Iconography, illustration systems, photo art direction, AI image generation, 3D |
+| `motion` | Principles, timing and easing, choreography, kinetic type, CSS/GSAP/Lottie/Rive/Remotion/After Effects, sound |
+| `ux-design` | Research, heuristics, UX laws, measurement, IA, journeys, content design |
+| `ui-design` | Components and states, forms, navigation, data-dense UI, feedback, flows, AI and chat interfaces, accessibility |
+| `web-design` | Page architecture, conversion, responsive, Core Web Vitals, SEO, stack selection, launch |
+| `native-app-design` | iOS (HIG), Android (Material 3), cross-platform, large screens, app patterns, store assets, SwiftUI/Compose handoff |
+| `design-system` | DTCG token architecture, theming, Figma variables and Code Connect, component APIs, documentation, governance |
+| `data-visualization` | Chart choice, data palettes, labeling, dashboards, infographics, accessible charts |
+| `print-packaging-social` | Prepress, packaging, social formats, OOH, presentations, email |
+| `design-critique` | Render-screenshot-score-revise loop, rubric, AI-tells catalog, accessibility audit |
+| `design-project-start` | Client-project continuity: pinned version, selections, decisions, approvals, resume, handoff |
 
-| Category | Main coverage | Entry reference |
-| --- | --- | --- |
-| Research and audience | Existing-brand audit, evidence, positioning, personas, source limitations | [Research](plugins/visual-design-studio/library/RESEARCH-CAPABILITIES.md) |
-| Creative direction | Mood boards, distinct concepts, style vocabulary, rationale, visual language | [Creative direction](plugins/visual-design-studio/library/CREATIVE-DIRECTION.md) |
-| Brand and identity | Naming, logo concepts/refinement/variants, refresh, guidelines, delivery | [Identity workflow](plugins/visual-design-studio/library/IDENTITY-WORKFLOW.md) |
-| Design craft and taste | Hierarchy, composition, typography, color, critique and refinement | [Craft methods](plugins/visual-design-studio/library/DESIGN-CRAFT.md) |
-| UX and UI | Personas, journeys, flows, architecture, prototypes and interface systems | [UX deliverables](plugins/visual-design-studio/library/UX-DELIVERABLES.md) |
-| Websites | Discovery, content, responsive layout, implementation, SEO, accessibility, QA and release | [Website workflow](plugins/visual-design-studio/library/WEBSITE-WORKFLOW.md) |
-| Displays | Screen content, adaptation, campaigns, playlists, product fidelity and finishing | [Display workflow](plugins/visual-design-studio/library/DISPLAY-WORKFLOW.md) |
-| Touchscreens | Interaction states, product education, forms, offline behavior, session recovery and device tests | [Screen skills](plugins/visual-design-studio/library/SCREEN-CONTENT-SKILLS.md) |
-| Motion and media | Storyboards, animation, kinetic type, loops, video, compositing and generation routes | [Media workflow](plugins/visual-design-studio/library/MEDIA-QUALITY-WORKFLOW.md) |
-| Content | Brand voice, website and UX copy, campaign copy, decks and collateral | [Content workflow](plugins/visual-design-studio/library/CONTENT-WORKFLOW.md) |
-| Infographics | Story structure, information hierarchy, layout and visual explanation | [Infographic skill](plugins/visual-design-studio/library/draft-skills/design-infographics/SKILL.md) |
-| Production and delivery | Tool selection, editable masters, exports, fidelity checks and handoff | [Production](plugins/visual-design-studio/library/SOFTWARE-PRODUCTION.md) |
+**Design Space Atlas:** 125 entries across 7 axes: 37 styles, 32 industries, 17 markets, 10 audiences, 12 brand archetypes, 5 price tiers and 12 channels. Each is a compact, opinionated brief with fonts, colors, scales, conventions, clichés, regulation and reference anchors. Query it with `python3 plugins/visual-design-studio/library/scripts/atlas.py query "<brief>"`. See the [atlas guide](plugins/visual-design-studio/library/atlas/README.md).
 
-The JSON catalog `plugins/visual-design-studio/library/capabilities.json` is canonical; docs/CAPABILITIES.md is its generated human-readable view. The [complete catalog](docs/CAPABILITIES.md) lists every exact capability ID, instruction file, and declared dependency. A listed component or technique is inventory coverage, not proof that a reusable implementation or production-tested output already exists.
+**Design tokens:** a W3C DTCG token set with primitives, semantic roles, light/dark/high-contrast modes and two brands, built to CSS, Tailwind v4, resolved JSON and Figma variables, with a linter that enforces WCAG contrast in every mode. See [tokens](plugins/visual-design-studio/library/tokens/README.md).
 
-## The working sequence
+**Reference code:** a React + Tailwind + Radix component system wired to the tokens ([react-system](plugins/visual-design-studio/library/examples/react-system/README.md)) and Astro + Vue motion components ([astro-motion](plugins/visual-design-studio/library/examples/astro-motion/README.md)).
+
+**Deep process library:** 133 process capabilities, templates and contracts for client delivery, linked from the skills ([catalog](docs/CAPABILITIES.md)).
+
+## How it finds the best solution
 
 ```mermaid
 flowchart LR
-    A[Brief and available evidence] --> B[Select relevant capabilities]
-    B --> C[Research and clarify gaps]
-    C --> D[Explore directions]
-    D --> E[Review and select]
-    E --> F[Produce requested work]
-    F --> G[Inspect and revise]
-    G --> H[Deliver and record]
-    G -->|Scoped feedback| F
+    A[Brief] --> B[Intake: variables and 2-4 questions]
+    B --> C[Atlas: industry, market, audience, archetype, tier, channel]
+    C --> D[Category scan: conventions and white space]
+    D --> E[3-5 directions: expected, adjacent, breaking]
+    E --> F[Stylescapes rendered and inspected]
+    F --> G[Weighted scores and sensitivity check]
+    G --> H[Recommendation and runner-up]
+    H --> I[Discipline skills produce the work]
+    I --> J[Critique loop until the rubric passes]
 ```
 
-This is a branching process, not a compulsory checklist. A typography correction should not trigger a new logo or a complete persona study. Existing approved inputs can satisfy earlier stages. Missing prerequisites must be resolved or explicitly treated as provisional before dependent work proceeds.
+Directions must differ on at least three of six axes (type, palette, layout logic, imagery, motion, voice). Scores use weight presets for launches, regulated industries, rebrands and product UI, and the sensitivity check names the criterion that would flip the decision. See the [worked example](plugins/visual-design-studio/skills/design-director/references/worked-example.md).
 
-For an **existing brand**, identify the authoritative guidelines, locked assets, campaigns, tone, and permitted scope of change. If official assets are unavailable, distinguish public observations from official rules. Proposed extensions remain provisional until accepted.
+## Quality loop
 
-For a **new brand**, establish the offer, audience, positioning, and naming status before identity concepts. Naming exploration does not establish trademark clearance. Move selected directions into a coherent visual system and then into the requested applications.
+- **Stylescape calibration set:** 12 fictional brands rendered as complete stylescapes across very different styles, industries, markets and audiences, including RTL Arabic, Japanese, Portuguese and Spanish. See [stylescapes](plugins/visual-design-studio/library/examples/stylescapes/README.md).
+- **AI-tells gallery:** named generic-AI design patterns, each shown next to a better version. See [ai-tells](plugins/visual-design-studio/library/examples/ai-tells/README.md).
+- **Render review:** `skills/design-critique/scripts/render_review.mjs` screenshots any page at real widths and reports overflow, orphaned words, fonts, contrast and axe accessibility findings.
+- **Evals:** 12 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, defaults, accessibility, RTL, critique, tokens, motion, iOS, print and compliance briefs, plus a control that design skills stay out of unrelated work. See [evals](plugins/visual-design-studio/evals/README.md).
+- **Earlier calibration:** the FORM and TIDAL [quality benchmark](plugins/visual-design-studio/library/examples/quality-benchmark/README.md) with correct, generic and wrong variants.
 
-## Start a project
+## Client projects and continuity
 
-You need Git, a separately installed and authenticated AI host with access to local project files, and Python 3.9 or newer for the bundled command-line helpers. Core helpers use the Python standard library. Node.js is needed only for the JavaScript tests; browser checks and export tools have [optional dependencies](docs/DEVELOPMENT.md). Design apps, provider accounts and media credits are separate.
+For client work that needs a frozen kit version and traceable approvals across sessions, keep each brand in its own folder or repository and use `design-project-start`. It records the pinned version (`library-version.json`), selected capabilities, decisions, approvals and `RESUME.md`, and keeps the shared library read-only. Setup, payload verification and the project entry template are in [INSTALLATION.md](INSTALLATION.md) and [project-starter](project-starter/README.md). Optional, owner-supplied reference books can be connected through [local setup](resources/LOCAL-SETUP.md); the kit works fully without them.
 
-### 1. Get the library
-
-Clone the repository into a dedicated library directory:
-
-```sh
-git clone https://github.com/newmindsgroup/visual-design-kit.git
-cd visual-design-kit
-git checkout --detach v0.3.0
-```
-
-Choose a reviewed commit for the project and record `git rev-parse HEAD`. Keep that checkout unchanged during the project. See the [current package pin](docs/VERIFIED-PIN.md) and [verification commands](INSTALLATION.md#verify-the-package). A changing `main` branch is not a fixed project version.
-
-### 2. Install the Codex plugin, if desired
-
-From the clone root:
-
-```sh
-codex plugin marketplace add .
-codex plugin add visual-design-studio@visual-design-team --json
-codex plugin list --marketplace visual-design-team --json
-```
-
-Installation of earlier editions was observed on Codex CLI 0.154.0 on the authoring Mac. Verify the current edition on your own host. The plugin does not install or authenticate Figma, Adobe, OpenArt, or Higgsfield.
-
-### 3. Create an independent brand project
-
-Create a separate folder or repository for the brand and open the AI task there. Do not create client deliverables inside this library. For the two intended cases, use two different projects.
-
-Merge the [project starter](project-starter/AGENTS.md.template) into that project's `AGENTS.md`, following its [instructions](project-starter/README.md). Preserve existing instructions. Replace the package-root placeholder with the absolute path to `plugins/visual-design-studio` inside your pinned checkout. Replace the digest placeholder with the trusted SHA-256 of that package's `PAYLOAD.sha256`.
-
-To calculate the manifest digest locally on macOS:
-
-```sh
-shasum -a 256 plugins/visual-design-studio/PAYLOAD.sha256
-```
-
-The maintainer-verified package baseline is listed in [the pin record](docs/VERIFIED-PIN.md). The expected digest must come from the trusted version or maintainer. Calculating a digest from an unknown download does not make the download trustworthy. The startup entry compares the digest and verifies listed file bytes before following package instructions.
-
-For Cursor, merge the configured entry into the project's `AGENTS.md`. For Claude Code, use `CLAUDE.md`. Preserve existing instructions and keep one authoritative entry per host. Native-session acceptance for both hosts remains unverified; see [host compatibility](docs/IDE-COMPATIBILITY.md). The Codex manifest is not a native Cursor or Claude plugin installer.
-
-The path in the project entry is authoritative for that project. The optional installed plugin cache may lag and must not silently replace it. Keep machine-specific absolute paths out of shared client commits; prepare each machine's entry locally. The checksum covers plugin payload files, not the repo-level startup template; the latter is pinned by the Git commit.
-
-### 4. Give the project its brief
-
-Use a request like this inside the separate brand project:
-
-```text
-Use this project's Visual Design Kit entry.
-This is an existing brand / new brand.
-Our first deliverable is [...].
-Our audience and intended channel are [...].
-The available assets and guidelines are at [...], or are not available yet.
-Preserve these approved decisions: [...].
-Ask for the information needed for the next step, select the relevant
-capabilities, and produce the first reviewable deliverable.
-Keep project data here and the shared library read-only.
-```
-
-You do not need to supply every possible detail at once. The agent should identify the information needed for the next dependency. It must not fill unknown facts with invented research or approvals.
-
-### 5. Review actual outputs
-
-Review the design and its rationale, not just the agent's report. Record what is approved, what needs revision, and what must remain unchanged. Final delivery should include the requested editable source, exports, usage notes, and unresolved limitations.
-
-## Why an installed skill can be missing from the AI's list
-
-An installed plugin can be omitted from the model-visible skills list when a host exceeds its skills context budget. This happened on the authoring Mac. An enabled plugin alone therefore does not prove that the current task can discover it.
-
-The project starter directs the agent to a known, pinned entry file. Earlier fresh-session checks reached the correct library and verified its checksums through that route. Use a fresh task to confirm the current edition, entry path and digest. Global automatic discovery remains host-dependent.
+Lessons from projects come back through the [feedback contract](plugins/visual-design-studio/FEEDBACK.md): sanitized proposals, maintainer review, a test on the original and a contrasting case, then a versioned update that projects adopt deliberately.
 
 ## What is verified
 
-| Area | Current evidence | Limit |
+| Area | Evidence (0.5.0 candidate) | Limit |
 | --- | --- | --- |
-| Package integrity | Exact current digest is recorded in [the pin record](docs/VERIFIED-PIN.md) | Verify your checkout before use; hashes do not authenticate an unknown publisher |
-| Codex installation | Earlier editions installed and enabled on the authoring Mac | The current edition needs receiving-host verification |
-| Explicit project startup | Earlier fresh separate projects read the entry and verified payloads | Read-only startup, not finished artwork |
-| Capability selection | Existing-brand and new-brand selection exercises are recorded | Bounded scenarios |
-| Catalog | 130 unique IDs, existing entry files and valid dependency references | Not 130 production executions |
-| Automated checks | [0.2.0 evidence](docs/QUALITY-020-RELEASE.md) records Python, Node, browser and export checks | Rerun applicable [checks](docs/DEVELOPMENT.md) for changed bytes |
-| Cursor and Claude Code startup | Explicit project-entry routes documented | Native-session acceptance pending |
-| Automatic skill discovery | Failed under host catalog budget | Project startup workaround tested |
-| Production quality | Several historical tool fixtures exist | New outputs still require inspection and approval |
+| Claude packaging | `claude plugin validate` passes for the marketplace and both plugins; installed and enabled in Claude Code 2.1.304 (isolated config, 2026-10-20) | claude.ai and Desktop install follow the documented route; check in your workspace |
+| Packaging rules | `tools/validate_plugin.py`: claude.ai-compatible frontmatter, description budget, version sync, every relative link resolves | Structural, not behavioral |
+| Atlas | 125/125 entries validated against the schema; index regenerated and checked in CI | Platform specs and regulation change; entries are dated and say where to verify |
+| Tokens | Lint enforces DTCG structure, alias resolution, contract names and WCAG contrast in every mode and brand | Brand-specific tokens still need human review |
+| Automated tests | Repository and library Python suites, Node example tests and builds; all run in CI on every push | See [edition evidence](docs/RELEASE-050.md) for counts |
+| Behavior | 12 eval cases ship with the plugin; see [edition evidence](docs/RELEASE-050.md) for what was run | Evals sample behavior; they do not certify every output |
+| Codex | Earlier editions installed on the authoring Mac | Re-verify 0.5.0 on your host |
+| Design quality | Calibration sets and the critique loop raise the floor | Human art direction and client approval remain required |
 
-**Known holds:** the local-model revision-fidelity and touchscreen-recovery tests failed; that route is not qualified for those tasks. Codex production/revision tests in independent projects remain pending, which is a separate status. The latest generated OpenArt motion remains visually unverified. Real screen/player, accessibility, and human acceptance belong to the actual implementation. PowerPoint and backup are explicitly deferred.
+## Develop and contribute
 
-Older candidate and test records are historical. Use this README, [installation guide](INSTALLATION.md), [current pin](docs/VERIFIED-PIN.md) and edition-specific evidence for current scope. A documentation correction does not weaken a capability's input or quality requirements.
+Maintainers: start with [CLAUDE.md](CLAUDE.md) and the [authoring skill](.claude/skills/design-kit-authoring/SKILL.md) (writing rules, skill format, atlas schema, token contract). Run the checks:
 
-## Tool and output expectations
-
-Use the tool that produces the required result and editable master. Figma desktop/MCP, Illustrator, Photoshop, and Canva have bounded fixture evidence in the original project. This does not establish every operation, font, asset type, or export on another machine. Separate Figma CLI, broader Adobe motion routes, and Higgsfield generation still have qualification gaps.
-
-OpenArt, Higgsfield and built-in image generation are optional routes. Check authentication, permitted data, model parameters, available entitlement, and scoped credit allowance before generation. Never automatically repeat an uncertain submission.
-
-Product and environment imagery should meet the agreed photographic standard and preserve product identity. Logos, diagrams, type and other vector work should use the appropriate medium. Typography should avoid isolated last words and awkward wrapping at the actual output sizes. Check hierarchy, contrast, readability, accessibility, and brand consistency on the rendered artifact.
-
-## Project memory and feedback
-
-```mermaid
-flowchart LR
-    A[Project observation] --> B[Project-owned evidence]
-    B --> C[Sanitized proposal]
-    C --> D[Maintainer review]
-    D --> E[Test original and contrasting case]
-    E --> F[Versioned library update]
-    F --> G[Project chooses upgrade]
+```sh
+python3 tools/validate_plugin.py
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests
+(cd plugins/visual-design-studio/library && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests)
+claude plugin validate . && claude plugin validate plugins/visual-design-studio
 ```
 
-Each project keeps `PROJECT.md`, `library-version.json`, `SELECTED-CAPABILITIES.json`, `DECISIONS.md`, and `RESUME.md`, plus the relevant deliverable templates. Use standard Markdown so Obsidian can navigate those files without creating a second competing copy. The kit is not a background memory service.
+Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md); security reports follow [SECURITY.md](SECURITY.md). [Development checks](docs/DEVELOPMENT.md) cover optional browser and export tooling.
 
-The [feedback contract](plugins/visual-design-studio/FEEDBACK.md) puts proposals under the project's `feedback/library-proposals/` directory. Remove client identifiers, private URLs, proprietary copy, assets, secrets, and personal data. No return destination is assumed. The project owner authorizes where a sanitized proposal goes.
+## License
 
-A maintainer reviews overlap, improves an existing skill or creates a distinct reusable skill, tests the change, and versions the accepted result. Projects remain pinned until they deliberately adopt an update. This improves instructions and process; it does not retrain the underlying AI model.
-
-## Instructions for AI agents
-
-1. Read the adopting project's instructions first. For current package scope, README.md, INSTALLATION.md and docs/VERIFIED-PIN.md supersede historical candidate statements; they do not weaken capability constraints. Resolve entry conflicts explicitly.
-2. Verify the trusted package pin and payload. Do not write inside the package.
-3. Read `skills/design-project-start/SKILL.md` and its governing links.
-4. Use exact IDs and entry paths from `library/capabilities.json`; do not guess IDs from directory names.
-5. Load only relevant capabilities and required input contracts. Reuse accepted evidence rather than recreating it.
-6. Keep assumptions, proposed decisions, approved baselines, actual files and failed checks distinct.
-7. Verify destination tools and authority. Installation does not grant spending, uploads or release approval.
-8. Inspect actual outputs. A valid JSON record or successful export does not prove good design.
-9. Save a truthful project handoff and sanitized improvement proposals when useful.
-
-## License and contributions
-
-Original code, skills and documentation use the [MIT license](LICENSE). [Notices and asset provenance](NOTICE.md) explain the separately licensed fonts, generated fictional examples and excluded private reference material. Start with [contribution guidance](CONTRIBUTING.md), [security reporting](SECURITY.md), and the [public release audit](docs/PUBLIC-RELEASE-021.md).
+Original code, skills and documentation are [MIT](LICENSE). Bundled fonts are OFL-licensed with their license files; see [NOTICE.md](NOTICE.md) and [third-party dependencies](docs/THIRD-PARTY-DEPENDENCIES.md). Reference anchors name public work for orientation only; no third-party brand assets are included.
 
 ## Repository map
 
 ```text
 visual-design-kit/
-  README.md                         Human and AI overview
-  INSTALLATION.md                    Setup, verification and host limits
-  BACKLOG.md                         Remaining work
-  RESUME.md                          Maintainer checkpoint
-  LICENSE                            MIT terms for original work
-  NOTICE.md                          Third-party and asset terms
-  CONTRIBUTING.md                    Contribution guidance
-  SECURITY.md                        Private security reporting
-  resources/                         Optional local reference setup
-  tools/                             Packaging and verification helpers
-  tests/                             Repository tests
-  docs/
-    CAPABILITIES.md                  Every catalog ID and dependency
-    DEVELOPMENT.md                   Local tests and optional QA tools
-    VERIFIED-PIN.md                  Current package digest
-    images/                         Documentation artwork
-  project-starter/                   Mergeable project startup instructions
-  .agents/plugins/marketplace.json   Codex marketplace entry
+  .claude-plugin/marketplace.json      Claude marketplace (Claude Code, claude.ai, Desktop)
+  .agents/plugins/marketplace.json     Codex marketplace
+  .claude/skills/design-kit-authoring/ Maintainer authoring rules
+  .github/workflows/ci.yml             Tests, validators and builds on every push
+  CLAUDE.md                            Maintainer instructions
+  INSTALLATION.md                      Install, pin and verify
   plugins/visual-design-studio/
-    .codex-plugin/plugin.json        Plugin metadata
-    skills/design-project-start/    One discoverable entry
-    library/                        Reference skills, templates and checks
-    PROJECT-LAUNCH.md                Independent project contract
-    FEEDBACK.md                     Reviewed improvement process
-    READINESS.md                    Edition scope and verification limits
-    PAYLOAD.sha256                  File integrity manifest
+    .claude-plugin/ .codex-plugin/     Plugin manifests (versions kept in sync)
+    skills/                            16 registered skills
+    evals/                             claude plugin eval cases
+    library/atlas/                     Design Space Atlas (125 entries)
+    library/tokens/                    DTCG tokens and builds
+    library/examples/                  Stylescapes, AI tells, benchmarks, React and Astro code
+    library/draft-skills/              133 process capabilities for client delivery
+    library/scripts/                   atlas, tokens, color and type tools (stdlib Python)
+  extras/astro-website-studio/         Standalone Astro skill plugin
+  tools/  tests/  docs/                Build, validation, tests and edition records
 ```
 
-This GitHub repository is the curated reusable snapshot. The original local research workspace and its history were not uploaded wholesale. The [backlog](BACKLOG.md) includes completing a repeatable, reviewed source-to-release update process. Private books, client sources, generated experiments, and provider receipts are excluded.
+## History
 
-## What comes next
-
-Start one supervised project through the pinned project entry. Check the first artifact, request a precise revision, then resume in a fresh task and verify the accepted baseline. Test the selected tools and target devices as that project requires. Report a concrete failure or useful improvement through the feedback contract.
-
-The [September 16 audit](docs/DESIGN-QUALITY-AUDIT-2026-09-16.md) has an [implementation record](docs/QUALITY-020-RELEASE.md). The [backlog](BACKLOG.md) retains historical and remaining work; completed audit repairs do not establish real-project acceptance.
-
-## Reproduce the bundled tests
-
-From the repository root, run the root Python suite:
-
-```sh
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
-```
-
-Run the library, JavaScript and optional browser checks using [Development checks](docs/DEVELOPMENT.md). Test counts belong to the exact tested edition. Check `git status --short` after project work to detect unexpected changes; the read-only instruction is an agent-followed rule, not filesystem enforcement.
-
-## Use it with or without books
-
-The kit includes original design instructions, templates, worked fictional examples and an [applied design handbook](plugins/visual-design-studio/library/knowledge/README.md). Books are an optional source of deeper evidence. They are not required to start a project, and connecting them does not train the model.
-
-| Mode | What the AI uses | What you provide |
-| --- | --- | --- |
-| Standalone | Packaged guidance, relevant worked examples and your authorized project inputs | Brief, audience, deliverable and available brand assets |
-| Local library | The same foundation, plus relevant passages and page or section references from your compatible collection | An authorized local library path in ignored configuration |
-
-The handbook covers research, creative direction, typography, color, UX and content, infographics, screen motion, and critique/revision. Each method explains decisions, tradeoffs, a fictional example, failure repairs and the existing template that receives its output. The agent loads only the methods needed for the current task.
-
-To work without books, add this to your brief:
-
-```text
-Use standalone reference mode. Use the packaged design guidance and my
-project inputs. Do not search my computer for books or claim to have read
-any. Record assumptions, show the design rationale, and inspect the output.
-```
-
-If you have a compatible library, follow [local setup](resources/LOCAL-SETUP.md). An unavailable optional library falls back to standalone with a recorded reason. A request that depends on a particular source must wait for that source; ordinary design work can continue. An invalid package pin still stops execution of that package.
-
-An authorized owner may supply a separate Drive folder or download archive. Full books and private collection links are excluded from this public repository and its MIT license. Use the [safe ZIP import steps](resources/LOCAL-SETUP.md#import-an-owner-provided-zip-collection) for a single archive or all Drive download parts, keeping the result outside the kit and client repos. Then point to the folder containing `catalog/` and `manifests/`. The included helper verifies and searches compatible collections; it does not turn an arbitrary PDF folder into an indexed library.
-
-See [reference requirements](resources/README.md) and [Codex, Cursor and Claude Code setup](docs/IDE-COMPATIBILITY.md). No handbook guarantees high-quality output by itself: inspect actual artifacts, preserve accepted brand decisions, and validate the target format.
-
-
-## Examples and earlier verification
-
-[What changed and what was tested](docs/QUALITY-020-RELEASE.md) · [Resume the work](RESUME.md) · [Implementation plan](docs/QUALITY-IMPLEMENTATION-020.md) · [Visual calibration collection](plugins/visual-design-studio/library/examples/quality-benchmark/README.md)
-
-This edition strengthens the existing capabilities instead of adding another overlapping design agent. A shared set of fictional examples teaches the difference between technical correctness, distinctive craft and a polished design that violates the brief. It includes precise revisions, motion, PDF proofs and intentional failure controls. Human acceptance stays separate from automated checks.
-
-Run the collection locally from the library directory with `python3 -m http.server 17672 --bind 127.0.0.1`, then open `http://127.0.0.1:17672/examples/quality-benchmark/`. This binds only to your computer. It does not publish client work.
-
-Version 0.2.0 was installed and hash-verified on the authoring Mac. Its independent review, 74 code tests, 20 browser cases and export checks are recorded in the edition evidence above. These are dated results for that edition. Use the current package pin for installation and retain project-specific review of your actual deliverables.
-
-## Astro and Headless UI additions
-
-Version-Timestamp: 2026-10-14 15:14:00 AST
-
-The integrated local candidate is Visual Design Studio 0.4.1. It includes Astro/Tailwind/Vue skills, 22 working studies, 20 researched recipes and original Headless UI dialog/drawer specimens. [Library guide](plugins/visual-design-studio/library/MOTION-LIBRARY.md), [Headless UI evidence](plugins/visual-design-studio/library/HEADLESS-UI-EVIDENCE.md), [Safari checkpoint](docs/SAFARI-CHECKPOINT.md).
-
-[Framework research](docs/research/astro-20261014/framework-assessment.md) and [agency, brand and creative-source research](docs/research/astro-20261014/adoption-and-creative-sources.md) retain dated evidence and scope distinctions. An [optional standalone Astro skill](extras/astro-website-studio/skills/astro/SKILL.md) is included for hosts without the full kit. Use the integrated kit or the standalone skill per environment to avoid duplicate loading. The standalone portable manifest is separate from the native Design Kit plugin.
-
-Source publication is not a production-readiness certification or a release tag. Native Safari and screen-reader acceptance remain incomplete; project-specific checks and existing project pins still apply.
+0.5.0 rebuilt the kit around Claude-native skills, the Design Space Atlas, concrete defaults, tokens and the quality loop after an [audit](docs/RELEASE-050.md) found the library was mostly process text with little design knowledge. Earlier editions: [0.4 motion atlas](docs/MOTION-ATLAS-040.md), [0.3 standalone methods](docs/STANDALONE-030.md), [0.2 quality release](docs/QUALITY-020-RELEASE.md), [public release](docs/PUBLIC-RELEASE-021.md). The [backlog](BACKLOG.md) tracks remaining work.

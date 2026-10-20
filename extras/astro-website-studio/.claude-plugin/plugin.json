@@ -1,0 +1,12 @@
+{
+  "name": "astro-website-studio",
+  "version": "0.1.0",
+  "description": "Assess and build client marketing and content websites with Astro, version-matched APIs, project-specific CMS selection, and observable acceptance.",
+  "author": {
+    "name": "New Minds Group",
+    "url": "https://github.com/newmindsgroup"
+  },
+  "repository": "https://github.com/newmindsgroup/visual-design-kit",
+  "license": "MIT",
+  "keywords": ["astro", "website", "cms"]
+}

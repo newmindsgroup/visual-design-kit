@@ -4,7 +4,7 @@ Version-Timestamp: 2026-09-10 20:21:06 AST
 
 Agent-Attribution: computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.149.1; timestamp=2026-09-08 21:35:22 AST
 
-Decide whether platform-native, a compatible licensed family or original symbols best serves recognition and brand. Do not invent a custom metaphor when a familiar convention is important. Select a shared viewBox, apparent stroke weight, cap/join style, corner behavior, perspective and negative-space rhythm. Grid values are project choices, not copied vendor mandates.
+Decide whether platform-native, a compatible licensed family or original symbols best serves recognition and brand. Do not invent a custom metaphor when a familiar convention is important. Select a shared viewBox, apparent stroke weight, cap/join style, corner behavior, perspective and negative-space rhythm. Start from the icon grid defaults in [iconography](../../../../skills/imagery/references/iconography.md) (24px grid, 2px padding, 1.5-2px stroke) and adapt them to the brand; record the final values.
 
 Sketch at the smallest actual use. Balance apparent area rather than forcing every silhouette to identical bounds. Use optical correction where circles or diagonals appear lighter. Distinguish filled/outline/selected states without changing meaning. Remove detail that collapses at small size, and check 1x rasterization as well as enlarged vectors. Illustration art direction is owned by the image guide; this guide owns symbol construction and recognition.
 

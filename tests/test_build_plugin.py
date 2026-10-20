@@ -41,6 +41,32 @@ class BuildPluginTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return result
 
+    def test_claude_manifest_version_must_match(self):
+        (self.plugin / ".claude-plugin").mkdir()
+        (self.plugin / ".claude-plugin" / "plugin.json").write_text(json.dumps({"name": "visual-design-studio", "version": "0.1.9"}), encoding="utf-8")
+        result = self.invoke("--apply")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(".claude-plugin/plugin.json", result.stdout)
+        (self.plugin / ".claude-plugin" / "plugin.json").write_text(json.dumps({"name": "visual-design-studio", "version": "0.2.0"}), encoding="utf-8")
+        self.apply()
+        payload_paths = {line.split("  ", 1)[1] for line in (self.plugin / "PAYLOAD.sha256").read_text().splitlines()}
+        self.assertIn(".claude-plugin/plugin.json", payload_paths)
+
+    def test_eval_results_and_example_builds_are_not_payload(self):
+        (self.plugin / "evals" / "case" / "results").mkdir(parents=True)
+        (self.plugin / "evals" / "case" / "prompt.md").write_text("prompt\n", encoding="utf-8")
+        (self.plugin / "evals" / "case" / "results" / "run.json").write_text("{}\n", encoding="utf-8")
+        (self.plugin / "library" / "examples" / "react-system" / "dist").mkdir(parents=True)
+        (self.plugin / "library" / "examples" / "react-system" / "dist" / "index.js").write_text("built\n", encoding="utf-8")
+        (self.plugin / "library" / "tokens" / "dist").mkdir(parents=True)
+        (self.plugin / "library" / "tokens" / "dist" / "tokens.css").write_text(":root{}\n", encoding="utf-8")
+        self.apply()
+        payload_paths = {line.split("  ", 1)[1] for line in (self.plugin / "PAYLOAD.sha256").read_text().splitlines()}
+        self.assertIn("evals/case/prompt.md", payload_paths)
+        self.assertNotIn("evals/case/results/run.json", payload_paths)
+        self.assertNotIn("library/examples/react-system/dist/index.js", payload_paths)
+        self.assertIn("library/tokens/dist/tokens.css", payload_paths)
+
     def test_apply_then_check_is_deterministic_and_hashes_every_current_file(self):
         self.assertNotEqual(self.invoke().returncode, 0)
         self.apply()

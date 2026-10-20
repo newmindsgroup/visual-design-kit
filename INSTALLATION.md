@@ -1,10 +1,47 @@
-# Install for an independent project
+# Install
 
-Version-Timestamp: 2026-09-27 14:21:05 AST
+Version-Timestamp: 2026-10-20 02:05:00 UTC (Claude install routes); 2026-09-27 14:21:05 AST (project pinning)
+
+Visual Design Studio installs as a native plugin in Claude Code, claude.ai and Claude Desktop, and as a Codex plugin. For client projects that need a frozen kit version and traceable approvals, also pin a checkout as described under [Pin the kit for a client project](#get-and-pin-the-kit).
+
+## Claude Code
+
+Inside Claude Code (2.1.275 or later supports the one-step form):
+
+```text
+/plugin install visual-design-studio --marketplace newmindsgroup/visual-design-kit
+```
+
+Or in two steps, which also works on older versions:
+
+```text
+/plugin marketplace add newmindsgroup/visual-design-kit
+/plugin install visual-design-studio@visual-design-team
+```
+
+From a shell: `claude plugin marketplace add newmindsgroup/visual-design-kit` then `claude plugin install visual-design-studio@visual-design-team`. To freeze a version for a client project, check out a reviewed tag locally and add that path instead: `claude plugin marketplace add /absolute/path/to/visual-design-kit`. Add `--scope project` to declare the marketplace in the project's shared settings so teammates get the same source. Check what loaded with `claude plugin details visual-design-studio`, which lists the skills and their always-on token cost.
+
+Observed on 2026-10-20 with Claude Code 2.1.304 in an isolated configuration: the local marketplace added, the plugin installed and enabled at 0.5.0, and `claude plugin validate` passed for the marketplace and both plugins.
+
+## claude.ai and Claude Desktop
+
+Open **Customize > Plugins > Add > Add marketplace** and enter `newmindsgroup/visual-design-kit`, then install **Visual Design Studio**. Chat surfaces load the plugin's skills; this plugin ships no agents, hooks or MCP servers, so nothing is lost there. Organization admins may need to allow the marketplace first. These steps follow Anthropic's plugin documentation as of October 2026; confirm the menu names in your workspace.
+
+The plugin needs no API keys, connectors or paid services. Optional tools it can use when you have them: the Figma connector (design-system and handoff work), Playwright and Chromium (rendering and screenshots in `design-critique`), and image or video generation providers you already pay for.
+
+## Codex
+
+From a clone of the repository root:
+
+```sh
+codex plugin marketplace add .
+codex plugin add visual-design-studio@visual-design-team --json
+codex plugin list --marketplace visual-design-team --json
+```
+
+## Requirements for the bundled helpers
 
 Keep one trusted kit checkout separate from each brand project. The kit supplies instructions and local helpers. Your AI host, design apps, accounts and provider permissions are separate.
-
-## Requirements
 
 - Git to obtain and pin the repository.
 - Codex, Cursor or Claude Code, installed and authenticated through that product, with access to the kit and project folders.
@@ -20,7 +57,7 @@ The shell examples use macOS or Linux syntax. Authoring-machine evidence is from
 ```sh
 git clone https://github.com/newmindsgroup/visual-design-kit.git
 cd visual-design-kit
-git checkout --detach v0.3.0
+git checkout --detach <reviewed tag or commit>
 git rev-parse HEAD
 ```
 
@@ -61,21 +98,13 @@ Replace both placeholders, preserve existing instructions, and use exactly one m
 
 Start a fresh task. Confirm that the agent reads the intended entry, reports the expected edition and digest, and keeps its outputs inside the project. Give it the [initial brief](plugins/visual-design-studio/PROJECT-LAUNCH.md#initial-request). Review its first artifact before continuing. [Host compatibility and acceptance](docs/IDE-COMPATIBILITY.md) describes the remaining checks.
 
-## Optional Codex plugin installation
+## Codex installation notes
 
-From the repository root:
-
-```sh
-codex plugin marketplace add .
-codex plugin add visual-design-studio@visual-design-team --json
-codex plugin list --marketplace visual-design-team --json
-```
-
-These command forms are available in Codex CLI 0.154.0. Earlier package editions were installed and enabled on the authoring Mac. Verify the actual edition and state reported on your host. The marketplace adds one instruction plugin with no bundled connector, hook, credential or provider subscription.
+The Codex commands are listed at the top of this guide. They are available in Codex CLI 0.154.0. Earlier package editions were installed and enabled on the authoring Mac. Verify the actual edition and state reported on your host. The marketplace adds one instruction plugin with no bundled connector, hook, credential or provider subscription.
 
 Open a fresh task after installation. Automatic discovery failed in an earlier authoring session because the host's skills context budget omitted the entry. Use the configured project entry when discovery is unavailable. Do not assume that the task which installed a plugin has reloaded its skills.
 
-This is Codex packaging. Native Cursor and Claude Code plugin installers are not provided; use their project entries above.
+Claude Code, claude.ai and Claude Desktop install the same plugin natively through `.claude-plugin/marketplace.json` (see the top of this guide). Cursor has no native installer for this kit; use its project entry above.
 
 ## Updates, rollback and removal
 

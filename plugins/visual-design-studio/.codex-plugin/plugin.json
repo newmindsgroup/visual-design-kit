@@ -1,22 +1,23 @@
 {
   "name": "visual-design-studio",
-  "version": "0.4.1",
-  "description": "Start separate brand and design projects using a versioned, selectively loaded design library.",
+  "version": "0.5.0",
+  "description": "Design anything: a design director, a Design Space Atlas of styles, industries, markets, audiences, archetypes, price tiers and channels, discipline skills with concrete defaults, DTCG tokens and a render-and-critique loop, plus independent brand-project continuity.",
   "author": {
     "name": "New Minds Group"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "Visual Design Studio",
-    "shortDescription": "Brand design and motion",
-    "longDescription": "Selectively loaded design capabilities with original applied methods, optional reference modes, scoped handoffs and an Astro, Tailwind and Vue motion playground. Supervised evaluation; client and device acceptance remain project-specific.",
+    "shortDescription": "Brand, product and motion design",
+    "longDescription": "A design director that turns a brief into scored, rendered directions; a 125-entry Design Space Atlas; 14 discipline skills with concrete defaults; DTCG tokens with contrast linting; a React reference system; and a render-and-critique quality loop. Supervised evaluation; client and device acceptance remain project-specific.",
     "developerName": "New Minds Group",
     "category": "Productivity",
     "defaultPrompt": [
+      "Find the best design direction for this brief.",
       "Start an existing-brand project.",
       "Start a new-brand project."
     ],
     "capabilities": []
   },
-  "Version-Timestamp": "2026-10-14 15:15:59 AST"
+  "Version-Timestamp": "2026-10-20 02:05:00 UTC"
 }

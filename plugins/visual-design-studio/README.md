@@ -1,17 +1,28 @@
 # Visual Design Studio
 
-Version-Timestamp: 2026-09-27T14:26:33-04:00
+Version-Timestamp: 2026-10-20 02:05:00 UTC
 
-One starting skill selects from 130 design capabilities. The 0.3.0 public edition adds [original applied method cards](library/knowledge/README.md) and explicit standalone/optional-reference modes, retaining existing completion checks, scoped selection, continuity and craft examples. Start with [readiness](READINESS.md), [independent project setup](PROJECT-LAUNCH.md) and the [visual calibration collection](library/examples/quality-benchmark/README.md).
+Design anything with Claude: a design director that turns a brief into scored, rendered directions; a Design Space Atlas of 125 styles, industries, markets, audiences, archetypes, price tiers and channels; 14 discipline skills with concrete defaults; DTCG design tokens with contrast linting; and a render-and-critique quality loop.
 
-The 0.1.0 installation and Codex startup have historical evidence. They do not automatically validate this edition. This candidate's installation, source checks and reviews are recorded in the repository release evidence. Native Claude plugin packaging is not claimed; Claude Code and Cursor can read the exact entry file in their project. Capability files are selectively read references, not 130 globally registered commands.
+Install in Claude Code:
 
-Use the library read-only. Keep each brand in its own project with a pinned library version, exact [selection record](library/SELECTION-CONTRACT.md) and canonical [RESUME.md](library/RESUME-CONTRACT.md). `CURRENT.md` is only a legacy pointer. Use `library/scripts/adopt_template.py` to copy Markdown templates without breaking instruction links; dry-run first, then `--apply` within the authorized project. Existing files are not overwritten.
+```text
+/plugin install visual-design-studio --marketplace newmindsgroup/visual-design-kit
+```
 
-Optional book access uses an owner-supplied local path and the packaged read-only helper. Full books, credentials and client assets never ship in this plugin. Follow [local retrieval](library/draft-skills/design-reference-direction/references/reference-retrieval.md). No source corpus is required to use the core workflow.
+In claude.ai or Claude Desktop: Customize > Plugins > Add > Add marketplace > `newmindsgroup/visual-design-kit`. Codex and pinned client-project setup: see the repository's [installation guide](https://github.com/newmindsgroup/visual-design-kit/blob/main/INSTALLATION.md).
 
-`PAYLOAD.sha256` pins exact raw bytes with sorted relative POSIX paths, excluding itself. Its digest must come from a trusted source. New editions get new pins; installing one does not change existing projects. [Feedback](FEEDBACK.md) proposes scoped, tested improvements; no unattended reporting or model training is implied.
+## Contents
 
-The manifest interface capabilities array is empty because the reference workflows are not connector actions.
+- `skills/`: 16 registered skills. Start with `design-director` for any new brief; `design-critique` reviews any visible output; `design-project-start` keeps client-project records.
+- `library/atlas/`: the [Design Space Atlas](library/atlas/README.md) and `library/scripts/atlas.py` to query it.
+- `library/tokens/`: [DTCG tokens](library/tokens/README.md), built with `library/scripts/tokens.py`.
+- `library/examples/`: [stylescapes](library/examples/stylescapes/README.md), [AI tells](library/examples/ai-tells/README.md), the [quality benchmark](library/examples/quality-benchmark/README.md), and reference code.
+- `library/draft-skills/`, `templates/`, `knowledge/`: the deep process library for client delivery ([usage](library/USAGE.md)).
+- `evals/`: [behavioral evals](evals/README.md) for `claude plugin eval`.
 
-Public reuse is governed by [MIT](LICENSE) for original work and the [third-party notices](NOTICE.md). Public distribution does not imply unattended production acceptance.
+## Status and integrity
+
+Supervised evaluation; see [readiness](READINESS.md). `PAYLOAD.sha256` pins every packaged file (sorted relative POSIX paths, excluding itself); its digest must come from a trusted source such as the repository's pin record. New editions get new pins and never change existing project pins. Improvements flow through the [feedback contract](FEEDBACK.md).
+
+Public reuse is governed by [MIT](LICENSE) for original work and the [third-party notices](NOTICE.md).
