@@ -61,7 +61,7 @@ Excellent color work is mostly neutrals and restraint: a tuned neutral ramp does
 - **Default indigo or purple-to-pink gradient.** Fix: choose the hue from the category map in [brand color](references/brand-color.md).
 - **Pure gray neutrals with a saturated accent.** Looks unfinished. Fix: tint neutrals 0.005-0.015 chroma toward the accent or a warm or cool bias.
 - **Brand color used as text color everywhere.** Mid-lightness brand hues often fail 4.5:1. Fix: use a darker ramp step for text (`--color-accent-fg`) and the brand step for fills.
-- **Light gray text.** `#999` on white is 2.8:1. Fix: `--color-fg-muted` (4.5:1+) for secondary text; `--color-fg-subtle` only for placeholders and non-essential text.
+- **Light gray text.** `#999` on white is 2.85:1. Fix: `--color-fg-muted` (4.5:1+) for secondary text; `--color-fg-subtle` only for placeholders and non-essential text.
 - **Status by color alone.** Fix: icon plus text plus color.
 - **Inverted dark mode.** Pure black canvas, pure white text, same saturated accents: glare and vibration. Fix: [dark mode](references/dark-mode.md).
 - **Too many accents.** Five competing hues flatten hierarchy. Fix: one accent; others become neutrals or data colors.
