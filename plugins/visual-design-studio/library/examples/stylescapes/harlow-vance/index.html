@@ -31,8 +31,8 @@
   --color-accent-active: #521510;
   --color-accent-subtle: #EFE3DA;
   --color-accent-fg: #862519;
-  --color-brass: #C9B27A;              /* Brass, on library green only */
-  --color-brass-text: #6E5A2A;         /* Brass, text-safe on vellum */
+  --brand-brass: #C9B27A;              /* Brass, on library green only */
+  --brand-brass-text: #6E5A2A;         /* Brass, text-safe on vellum */
   --color-success-fg: #2F5A3F; --color-success-bg: #E3EBE3; --color-success-border: #2F5A3F;
   --color-warning-fg: #6E5A2A; --color-warning-bg: #F2EAD3; --color-warning-border: #6E5A2A;
   --color-danger-fg: #8F1D14;  --color-danger-bg: #F6E4DF;  --color-danger-border: #8F1D14;
@@ -62,7 +62,7 @@
   --ease-decelerate: cubic-bezier(0, 0, 0, 1);
   --container-xl: 1280px;
   --gutter: clamp(1rem, 4vw, 2rem);
-  --rule-line: 32px;                    /* pleading-paper line pitch */
+  --brand-rule-line: 32px;                    /* pleading-paper line pitch */
 }
 @media (prefers-reduced-motion: reduce) {
   :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
@@ -109,7 +109,7 @@ a { color: inherit; }
 .pleading { position: relative; padding-inline-start: 64px; }
 .pleading::before, .pleading::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 64px; width: 1px; background: var(--color-accent-default); }
 .pleading::after { inset-inline-start: 68px; }
-.line-nos { position: absolute; inset-block: 0; inset-inline-start: 0; width: 64px; overflow: hidden; list-style: none; margin: 0; padding: var(--space-12) 0 0; text-align: end; padding-inline-end: 16px; font-size: 0.75rem; line-height: var(--rule-line); color: var(--color-fg-subtle); font-variant-numeric: lining-nums tabular-nums; user-select: none; }
+.line-nos { position: absolute; inset-block: 0; inset-inline-start: 0; width: 64px; overflow: hidden; list-style: none; margin: 0; padding: var(--space-12) 0 0; text-align: end; padding-inline-end: 16px; font-size: 0.75rem; line-height: var(--brand-rule-line); color: var(--color-fg-subtle); font-variant-numeric: lining-nums tabular-nums; user-select: none; }
 .hero-body { display: grid; grid-template-columns: minmax(0, 7.2fr) minmax(0, 4.8fr); gap: var(--space-16); padding: var(--space-12) 0 var(--space-12) var(--space-12); }
 .eyebrow { display: flex; align-items: center; gap: var(--space-3); color: var(--color-accent-default); margin: 0 0 var(--space-8); }
 .eyebrow::before { content: "§"; font-family: var(--font-family-body); font-weight: 400; font-size: 1.25rem; letter-spacing: 0; line-height: 1; }
@@ -212,7 +212,7 @@ a { color: inherit; }
 .field .error { display: flex; gap: 8px; align-items: flex-start; color: var(--color-danger-fg); font-size: 0.9375rem; line-height: 1.4; }
 .field .error svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
 .counsel { display: grid; grid-template-columns: 132px 1fr; gap: var(--space-6); align-items: start; }
-.portrait { aspect-ratio: 4 / 5; background: var(--color-bg-inverse); color: var(--color-brass); display: grid; place-items: center; align-content: center; gap: 10px; border: 1px solid var(--color-border-strong); box-shadow: inset 0 0 0 5px var(--color-bg-inverse), inset 0 0 0 6px rgb(201 178 122 / 0.6); }
+.portrait { aspect-ratio: 4 / 5; background: var(--color-bg-inverse); color: var(--brand-brass); display: grid; place-items: center; align-content: center; gap: 10px; border: 1px solid var(--color-border-strong); box-shadow: inset 0 0 0 5px var(--color-bg-inverse), inset 0 0 0 6px rgb(201 178 122 / 0.6); }
 .portrait b { font-family: var(--font-family-display); font-weight: 400; font-size: 2.75rem; line-height: 1; letter-spacing: 0.02em; }
 .portrait b i { font-family: var(--font-family-body); font-size: 0.8em; }
 .portrait small { font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.4; }
@@ -253,7 +253,7 @@ a { color: inherit; }
 .cards { display: grid; gap: var(--space-8); justify-items: center; }
 .bcard { width: min(100%, 504px); aspect-ratio: 3.5 / 2; position: relative; box-shadow: 0 1px 0 rgb(23 21 15 / 0.08), 0 18px 40px -24px rgb(23 21 15 / 0.45); }
 .bcard-front { background: var(--color-bg-inverse); color: var(--color-fg-inverse); display: grid; place-items: center; }
-.bcard-front .seal-sm { width: 46%; color: var(--color-brass); }
+.bcard-front .seal-sm { width: 46%; color: var(--brand-brass); }
 .bcard-back { background: var(--color-bg-surface-raised); display: grid; grid-template-columns: 28px 1fr; transform: rotate(-1.6deg) translateX(24px); }
 .bcard-back::before, .bcard-back::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 28px; width: 1px; background: var(--color-accent-default); }
 .bcard-back::after { inset-inline-start: 31px; }
@@ -271,9 +271,9 @@ a { color: inherit; }
 .icons li { display: grid; justify-items: center; gap: 10px; padding: var(--space-5) var(--space-2); border-inline-end: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); }
 .icons svg { width: 40px; height: 40px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.25; stroke-linecap: butt; stroke-linejoin: miter; }
 .icons span { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); }
-.engraving { position: relative; background: var(--color-bg-inverse); color: var(--color-brass); aspect-ratio: 7 / 5; overflow: hidden; border: 1px solid var(--color-border-strong); }
+.engraving { position: relative; background: var(--color-bg-inverse); color: var(--brand-brass); aspect-ratio: 7 / 5; overflow: hidden; border: 1px solid var(--color-border-strong); }
 .engraving svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.engraving figcaption { position: absolute; inset-inline: 0; bottom: 0; padding: 14px 18px; font-size: 0.8125rem; font-style: italic; color: var(--color-fg-inverse); background: linear-gradient(transparent, rgb(31 43 36 / 0.92) 40%); }
+.engraving figcaption { position: absolute; inset-inline: 0; bottom: 0; padding: 14px 18px; font-size: clamp(0.6875rem, 1.6vw, 0.8125rem); font-style: italic; color: var(--color-fg-inverse); background: linear-gradient(transparent, rgb(31 43 36 / 0.92) 40%); }
 
 /* ---------- 8. Motion ---------- */
 .motion-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-16); align-items: start; }
@@ -312,17 +312,17 @@ a { color: inherit; }
 
 /* ---------- 10. Rationale ---------- */
 #rationale { background: var(--color-bg-inverse); color: var(--color-fg-inverse); border-bottom: 0; }
-#rationale .section-head { border-bottom-color: var(--color-brass); }
-#rationale .section-head .no { color: var(--color-brass); }
+#rationale .section-head { border-bottom-color: var(--brand-brass); }
+#rationale .section-head .no { color: var(--brand-brass); }
 #rationale .section-head p { color: #B9C2BC; }
 .rat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-12); }
-.rat-grid h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0 0 var(--space-4); color: var(--color-brass); }
+.rat-grid h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0 0 var(--space-4); color: var(--brand-brass); }
 .rat-grid p { margin: 0 0 var(--space-4); font-size: 1.0625rem; line-height: 1.6; }
 .rat-grid ul { margin: 0; padding-inline-start: 1.1em; font-size: 1rem; line-height: 1.55; }
 .rat-grid li { margin-bottom: 8px; }
 .colophon { margin-top: var(--space-16); padding-top: var(--space-4); border-top: 1px solid rgb(201 178 122 / 0.5); font-size: 0.8125rem; color: #B9C2BC; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
 .colophon a { color: var(--color-fg-inverse); }
-#rationale :focus-visible { outline-color: var(--color-brass); box-shadow: none; }
+#rationale :focus-visible { outline-color: var(--brand-brass); box-shadow: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
@@ -389,7 +389,7 @@ a { color: inherit; }
 
 <main>
 <!-- ================= 2. HERO ================= -->
-<section id="hero" aria-label="Key visual: firm landing page">
+<section id="hero" aria-labelledby="hero-t">
   <div class="wrap">
     <nav class="site-nav" aria-label="Firm site (sample)">
       <a class="wordmark" href="#hero">Harlow <span class="amp">&amp;</span> Vance</a>
@@ -412,7 +412,7 @@ a { color: inherit; }
       <div class="hero-body">
         <div>
           <p class="caps eyebrow">Commercial litigation &amp; appeals &middot; New York</p>
-          <h2 class="hero-title">Decided,<span class="l2"><span class="it">not</span> settled.</span></h2>
+          <h2 class="hero-title" id="hero-t">Decided,<span class="l2"><span class="it">not</span> settled.</span></h2>
           <p class="deck">We try and appeal the disputes that cannot be allowed to go wrong, in federal and state courts across the country. When the record matters, a partner writes it.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#components">Request a conflicts check</a>
@@ -451,9 +451,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 3. PALETTE ================= -->
-<section id="palette" class="section">
+<section id="palette" class="section" aria-labelledby="palette-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">ii.</span><h2>Palette</h2><p>A law library, not a bank: ink, vellum and one red used like sealing wax.</p></div>
+    <div class="section-head"><span class="no">ii.</span><h2 id="palette-t">Palette</h2><p>A law library, not a bank: ink, vellum and one red used like sealing wax.</p></div>
     <ul class="swatches">
       <li class="swatch"><div class="chip" style="background:#F3EFE6"><span style="color:#17150F">Aa</span></div><div class="info"><span class="role">bg-canvas</span><b>Vellum</b>#F3EFE6<br>oklch(0.95 0.013 87)<span class="ratio">Ink on it 15.90:1</span></div></li>
       <li class="swatch"><div class="chip" style="background:#FBF9F4"><span style="color:#5B554A">Aa</span></div><div class="info"><span class="role">bg-surface</span><b>Bond</b>#FBF9F4<br>oklch(0.98 0.007 89)<span class="ratio">Docket gray on it 7.02:1</span></div></li>
@@ -469,9 +469,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 4. TYPE ================= -->
-<section id="type" class="section">
+<section id="type" class="section" aria-labelledby="type-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">iii.</span><h2>Type</h2><p>One Caslon family in two optical cuts. Hierarchy comes from size and italic, never from a second typeface.</p></div>
+    <div class="section-head"><span class="no">iii.</span><h2 id="type-t">Type</h2><p>One Caslon family in two optical cuts. Hierarchy comes from size and italic, never from a second typeface.</p></div>
     <div class="spec-row">
       <p class="t-display">The appeal is won in the <em>record</em>.</p>
       <div class="spec-meta"><b>Display</b>Libre Caslon Display 400 (OFL)<br>clamp(48px, 6.6vw, 96px) / 0.95<br>Tracking &minus;0.02em; italic accent from Libre Caslon Text Italic<br>Only above 40px; the hairlines break up below that.</div>
@@ -495,9 +495,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 5. COMPONENTS ================= -->
-<section id="components" class="section">
+<section id="components" class="section" aria-labelledby="components-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">iv.</span><h2>Components</h2><p>Square corners, ruled inputs and one filled action per view.</p></div>
+    <div class="section-head"><span class="no">iv.</span><h2 id="components-t">Components</h2><p>Square corners, ruled inputs and one filled action per view.</p></div>
     <div class="comp-grid">
       <div class="panel p-buttons">
         <span class="caps">Buttons</span>
@@ -554,9 +554,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 6. APPLICATIONS ================= -->
-<section id="applications" class="section">
+<section id="applications" class="section" aria-labelledby="applications-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">v.</span><h2>Applications</h2><p>The appeals page on a phone, and the card a partner hands across the table.</p></div>
+    <div class="section-head"><span class="no">v.</span><h2 id="applications-t">Applications</h2><p>The appeals page on a phone, and the card a partner hands across the table.</p></div>
     <div class="apps">
       <div>
         <div class="phone" role="img" aria-label="Mobile appeals page: headline Reversal is a craft, a short paragraph, a Request a conflicts check button and three recent outcomes">
@@ -606,9 +606,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 7. IMAGERY ================= -->
-<section id="imagery" class="section">
+<section id="imagery" class="section" aria-labelledby="imagery-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">vi.</span><h2>Imagery &amp; iconography</h2><p>Architecture and paper, never gavels.</p></div>
+    <div class="section-head"><span class="no">vi.</span><h2 id="imagery-t">Imagery &amp; iconography</h2><p>Architecture and paper, never gavels.</p></div>
     <div class="img-grid">
       <div class="img-copy">
         <p>Photography is black and white, shot in raking daylight: courthouse stone, stair rails, a bound volume with its spine cracked, a partner at eye level with no props. No gavels, scales, handshakes or skylines. Where a photograph is not available, use a line engraving in brass on library green.</p>
@@ -659,9 +659,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 8. MOTION ================= -->
-<section id="motion" class="section">
+<section id="motion" class="section" aria-labelledby="motion-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">vii.</span><h2>Motion</h2><p>Deliberate. Nothing bounces; the rule is drawn, the verdict is set.</p></div>
+    <div class="section-head"><span class="no">vii.</span><h2 id="motion-t">Motion</h2><p>Deliberate. Nothing bounces; the rule is drawn, the verdict is set.</p></div>
     <div class="motion-grid">
       <div>
         <p style="margin-top:0;max-width:46ch">Motion behaves like a pen on paper: rules draw downward, lines of text arrive in reading order, and outcomes appear without flourish. It is used on first view and on state change only, never on scroll loops.</p>
@@ -681,7 +681,7 @@ a { color: inherit; }
           <div class="rule"></div>
           <ol><li style="--i:0">1</li><li style="--i:1">2</li><li style="--i:2">3</li><li style="--i:3">4</li><li style="--i:4">5</li><li style="--i:5">6</li><li style="--i:6">7</li><li style="--i:7">8</li></ol>
           <div class="demo-lines">
-            <p class="caps" style="--i:0; line-height:32px">Castellan Re v. Meridian Holdings</p>
+            <p class="caps" style="--i:0; line-height:32px">Castellan Re v. Meridian</p>
             <p style="--i:1">The district court excluded the expert</p>
             <p style="--i:2">without the hearing Rule 702 requires.</p>
             <p style="--i:3"><em>We reverse and remand.</em></p>
@@ -695,9 +695,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 9. VOICE ================= -->
-<section id="voice" class="section">
+<section id="voice" class="section" aria-labelledby="voice-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">viii.</span><h2>Voice</h2><p>Measured, specific, in complete sentences. Authority is shown by the record, not adjectives.</p></div>
+    <div class="section-head"><span class="no">viii.</span><h2 id="voice-t">Voice</h2><p>Measured, specific, in complete sentences. Authority is shown by the record, not adjectives.</p></div>
     <div class="voice">
       <div><span class="caps">Headline</span><blockquote>Decided, not settled.</blockquote><p class="why">Three words, a claim the ledger beneath it substantiates.</p></div>
       <div><span class="caps">Call to action</span><blockquote class="cta">Request a conflicts check</blockquote><p class="why">The real first step with any firm. It respects the reader&rsquo;s process instead of asking for a &ldquo;free consultation&rdquo;.</p></div>
@@ -707,9 +707,9 @@ a { color: inherit; }
 </section>
 
 <!-- ================= 10. RATIONALE ================= -->
-<section id="rationale" class="section">
+<section id="rationale" class="section" aria-labelledby="rationale-t">
   <div class="wrap">
-    <div class="section-head"><span class="no">ix.</span><h2>Rationale</h2><p>Why the record, and not the skyline.</p></div>
+    <div class="section-head"><span class="no">ix.</span><h2 id="rationale-t">Rationale</h2><p>Why the record, and not the skyline.</p></div>
     <div class="rat-grid">
       <div>
         <h3>Why it fits</h3>
