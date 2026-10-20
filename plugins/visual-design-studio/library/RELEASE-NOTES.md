@@ -2,6 +2,17 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.6.0 Design ops: agents, Figma, fidelity, evals
+
+Version-Timestamp: 2026-10-20 11:00:00 UTC
+
+- **Specialist agents.** `direction-explorer` builds one direction per position in parallel for `design-director`; `art-director`, `accessibility-auditor`, `copy-editor`, `brand-guardian` and `frontend-engineer` form the `design-critique` review panel with a score merge and conflict ladder. Hosts without plugin agents use the single-context fallback.
+- **`figma-workflow` skill.** Token import as Figma variables (`tokens.py figma-script`), variant components bound to variables, stylescape and screen push, pull to code, Code Connect mapping, Dev Mode handoff and a fallback without a Figma connector.
+- **Build fidelity.** `compare_build.mjs` diffs an approved design against the build (pixels and computed styles) at real widths, with masks and CI exit codes; `references/build-fidelity.md` sets thresholds.
+- **Evals.** 32 cases; `typography-longform-defaults` (no lift) replaced by a bilingual annual-report case.
+
+Existing project pins are unaffected; adopt 0.6.0 deliberately.
+
 ## 0.5.0 Claude-native design studio
 
 Version-Timestamp: 2026-10-20 03:40:00 UTC

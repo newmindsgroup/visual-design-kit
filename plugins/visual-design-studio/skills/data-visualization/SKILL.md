@@ -1,14 +1,14 @@
 ---
 name: data-visualization
 description: >-
-  Choose, design and label charts, dashboards and infographics: chart selection by task, colorblind-safe categorical
-  palettes (Okabe-Ito) and OKLCH sequential and diverging scales, 3:1 mark contrast, direct labels and number
-  formatting, KPI dashboards with filters, time ranges and empty states, data stories, and accessible charts with text
-  alternatives and data tables. Use when visualizing data in any medium, picking a chart type or chart colors, building
-  stat tiles or a dashboard, designing an infographic, or making a chart accessible.
+  Load before answering any chart, graph, dashboard, infographic or chart-color question, even a quick one: it holds
+  the kit's tested defaults. Covers chart choice by task, colorblind-safe categorical palettes (Okabe-Ito, limits past
+  8 series), OKLCH sequential and diverging scales for light and dark mode, 3:1 mark contrast, direct labels, number
+  formats, KPI tiles, dashboards with filters and empty states, and accessible charts with text alternatives and data
+  tables.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
 ---
 

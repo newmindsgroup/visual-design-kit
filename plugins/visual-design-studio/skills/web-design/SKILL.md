@@ -1,13 +1,13 @@
 ---
 name: web-design
 description: >-
-  Designs and ships websites: landing pages, homepages, product, pricing, about and blog pages, conversion and ethical
-  persuasion, responsive and fluid layouts, images, Core Web Vitals performance, SEO and structured data, stack and CMS
-  choice (Astro, Next.js, WordPress, Webflow, Framer) and launch QA. Use when planning, designing, building, auditing or
-  launching a website or landing page, improving conversion, speed or search visibility, or choosing a web stack.
+  Load before planning, designing, auditing or launching any website, landing page or microsite, including regulated,
+  multilingual or market-specific launches. Covers page types (home, product, pricing, about, blog), conversion and
+  ethical persuasion, responsive and fluid layouts, images, Core Web Vitals, SEO and structured data, localization and
+  language-law requirements, stack and CMS choice (Astro, Next.js, WordPress, Webflow, Framer) and launch QA.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
 ---
 

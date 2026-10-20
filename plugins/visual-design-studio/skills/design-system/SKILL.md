@@ -71,6 +71,7 @@ A good design system makes the brand's decisions once and compiles them everywhe
 ## References
 
 - [Token architecture](references/token-architecture.md): DTCG format, tiers, naming, aliasing, modes, multi-brand, build and lint.
+- [Figma workflow](../figma-workflow/SKILL.md): hands-on token import, component build, push/pull and Code Connect through the Figma MCP server.
 - [Theming](references/theming.md): light, dark, high contrast, brands, density, platform outputs.
 - [Figma](references/figma.md): variables, styles, auto layout, component properties, publishing, Dev Mode, Code Connect, Figma MCP and the figma skills.
 - [Component API](references/component-api.md): props, variants, composition, controlled state, polymorphism, accessibility contracts, headless libraries, shadcn/ui.

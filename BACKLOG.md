@@ -2,6 +2,24 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Design ops, 0.6.0
+
+Version-Timestamp: 2026-10-20 11:00:00 UTC
+
+- [x] Eval suite grown to 32 cases; the no-lift typography case replaced; maintainer eval loop skill with `summarize_eval.py`.
+- [x] Parallel direction exploration and a five-member review panel as plugin agents.
+- [x] `figma-workflow` skill and `compare_build.mjs` build-fidelity diff.
+- [x] Spec radar (`tools/spec_radar.py`, `docs/SPEC-RADAR.md`) and a monthly scheduled review.
+- [x] Private companion scaffold (taste profile, references, outcomes log) prepared outside this repository.
+- [x] Full eval run (one per arm) and a targeted re-run after fixes: skill loading rose from 8/21 to 14/15 tracked runs (see RELEASE-060).
+- [ ] Harden the eight all-of rubrics that still fail strong answers (critique-described-pricing, dataviz-nine-categories, director-distinct-scored, email-dark-mode, low-literacy-benefits-form, packaging-luxury-vs-value, quebec-french-launch, tokens-dark-mode-contrast) into weighted graders, then `--runs 3` with ablation; fix skills one at a time with the eval loop.
+- [ ] Make `pharma-promo-fair-balance` load a skill (it passes on Claude's own knowledge).
+- [ ] Exercise `figma-workflow` against a live Figma file through the Figma MCP server; confirm plan limits marked "verify".
+- [ ] Confirm the `visual-design-studio:<agent>` invocation name on each host; confirm Codex ignores agents cleanly.
+- [ ] Attach the repository and GitHub connector to the monthly spec radar scheduled task so it can open PRs.
+- [ ] Create the private `nmg-design-studio-private` repository and push the scaffold; run the calibration exercise.
+- [ ] Bring `figma-workflow/references/no-connector.md` up to reference depth (written under time pressure).
+
 ## Claude-native design studio, 0.5.0
 
 Version-Timestamp: 2026-10-20 02:05:00 UTC
@@ -14,14 +32,14 @@ Version-Timestamp: 2026-10-20 02:05:00 UTC
 - [x] CI for Python 3.9 and 3.13 suites, validators, atlas, tokens, payload integrity, Claude validation and example builds.
 - [x] 12 `claude plugin eval` cases with a should-not-fire control.
 - [x] Eval smoke tests (about $0.30): control case passes; the direction case exposed and then confirmed fixes for two design-director defects (reply language, specifics under concision).
-- [ ] Run the full eval suite with ablation and `--runs 3` within an agreed cost cap; record the with/without delta per case.
-- [ ] Replace or harden eval cases that pass without the plugin (typography-longform-defaults) with cases that test kit-specific value.
+- [x] Run the full eval suite with ablation within an agreed cost cap (done in 0.6.0 at one run per arm; see RELEASE-060).
+- [x] Replace or harden eval cases that pass without the plugin (typography-longform-defaults) with cases that test kit-specific value.
 - [ ] Token contract additions proposed during authoring: `--duration-reduced` (reduced-motion crossfade), `--ease-overshoot`, a `linear()` spring and stagger tokens; `--size-control-sm/md/lg` (32/40/48px); density tokens.
 - [ ] Confirm claude.ai and Claude Desktop marketplace install in a receiving workspace; verify Codex install of 0.5.0.
 - [ ] Native-speaker review of market entries and the Arabic, Japanese, Portuguese and Spanish stylescape copy.
 - [ ] Re-verify every atlas statement marked "verify" against primary sources before relying on it for a client.
-- [ ] Second wave (proposed): eval-driven improvement loop skill, parallel-agent divergence in design-director, specialist reviewer agents, Figma round-trip skill, design-to-build fidelity checks, scheduled spec and trend radar.
-- [ ] Private companion (proposed): studio taste profile, licensed visual reference library and client outcome records, kept out of this public repository.
+- [x] Second wave (shipped in 0.6.0): eval-driven improvement loop skill, parallel-agent divergence in design-director, specialist reviewer agents, Figma round-trip skill, design-to-build fidelity checks, scheduled spec and trend radar.
+- [x] Private companion (scaffolded in 0.6.0; repository still to create): studio taste profile, licensed visual reference library and client outcome records, kept out of this public repository.
 
 ## Standalone and reference portability, 0.3.0
 

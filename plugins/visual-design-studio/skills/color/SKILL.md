@@ -1,14 +1,13 @@
 ---
 name: color
 description: >-
-  Build color systems for brands, products and campaigns: palette roles and proportions, 11-13 step OKLCH ramps, semantic
-  tokens, WCAG 2.2 contrast with APCA as an advisory check, dark and high-contrast modes, cultural meaning, and
-  distinctive brand colors with Pantone, CMYK and RGB specs. Use when choosing or extending a palette, generating ramps
-  or color tokens, checking contrast, designing dark mode, picking status or brand colors, or replacing a generic
-  purple-gradient look with something ownable.
+  Load before choosing, extending or checking any color: brand palettes, UI and dark-mode tokens, status colors, chart
+  colors or contrast fixes, even a quick question. Covers palette roles and proportions, 11-13 step OKLCH ramps,
+  semantic tokens, WCAG 2.2 contrast with APCA as an advisory check, dark and high-contrast modes, cultural meaning,
+  Pantone, CMYK and RGB specs, and replacing a generic purple-gradient look with something ownable.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
 ---
 

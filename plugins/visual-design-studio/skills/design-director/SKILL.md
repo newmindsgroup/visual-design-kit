@@ -1,14 +1,14 @@
 ---
 name: design-director
 description: >-
-  Turn any design brief into the best design solution. Extracts every variable (industry, market, audience, archetype,
-  price tier, channel, constraints), asks only the questions that change the answer, queries the Design Space Atlas,
-  generates 3-5 deliberately different directions, renders them as stylescapes, scores them with a weighted matrix and
-  recommends one with reasoning. Use at the start of any brand, website, app, campaign, packaging, motion or design-system
-  work, when choosing a visual direction or style, or when asked "what should this look like?"
+  Load first for any brand, website, app, campaign, packaging, motion or design-system brief, or when asked what
+  something should look like. Extracts every variable (industry, market, audience, archetype, price tier, channel,
+  constraints), asks at most 4 questions that change the answer, queries the Design Space Atlas, builds 3-5 distinct
+  directions with named fonts and hex colors, renders stylescapes, scores them with weights and a sensitivity check,
+  and recommends one with a runner-up.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:05:00 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:05:00 UTC"
 ---
 
@@ -32,7 +32,10 @@ Great design is the right answer to a specific brief, chosen from real alternati
 
 - **Reply in the user's language.** The market decides the language of sample brand copy (headlines, CTAs), not of your answer. Gloss foreign-language samples in the user's language.
 - **Every direction carries specifics, even in a short answer:** two named typefaces (display and text), 3-5 colors as hex with roles, one layout idea, one imagery idea and one line of sample copy. Cut prose before you cut specifics; an adjective-only direction is not a direction.
-- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). In a short answer, keep the table to the criteria and totals.
+- **Ask at most 4 qualifying questions**, each with options and a recommended answer, and only when two plausible answers lead to different designs. State every other assumption in one line. A long questionnaire is a failure even when every question is reasonable.
+- **Prove the directions differ:** one line or a small table naming, for each pair, at least 3 of the 6 axes (type, palette, layout logic, imagery, motion, voice) on which they differ.
+- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). State the weights. In a short answer, keep the table to the criteria and totals.
+- **Always include a one-line sensitivity check**: whether a plausible weight change flips the winner, naming the criterion ("B wins unless differentiation weighs less than 15%").
 
 ## Workflow
 
@@ -43,7 +46,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 3. **Query the atlas.** Run `python3 ../../library/scripts/atlas.py query "<brief in plain words>"` and read the top industry, market, audience, archetype, tier and channel entries. Read each industry entry's *Recommended directions* and *Category clichés* before inventing your own.
 4. **Scan the category.** Follow [category scan](references/category-scan.md): map 6-12 competitors on type, color, imagery, layout and voice; find the white space. Skip only if you have no web access, and say so.
 5. **Diverge on purpose.** Build 3-5 direction recipes using [divergence](references/divergence.md). Each recipe = 1-2 style IDs + archetype + tier signals + channel constraints, then concrete tokens. Check combinations with `python3 ../../library/scripts/atlas.py combine <ids...>` and resolve every listed conflict deliberately.
-6. **Render, don't describe.** Make a stylescape per direction ([stylescapes](references/stylescapes.md)). Then screenshot and inspect them with the `design-critique` skill's `scripts/render_review.mjs`. Fix generic-AI tells before anyone sees them.
+6. **Render, don't describe.** In Claude Code and Cowork, dispatch one `direction-explorer` subagent per direction in parallel ([parallel exploration](references/parallel-exploration.md)); in chat, build them in turn. Make a stylescape per direction ([stylescapes](references/stylescapes.md)). Then screenshot and inspect them with the `design-critique` skill's `scripts/render_review.mjs`. Fix generic-AI tells before anyone sees them.
 7. **Score.** Use the weighted matrix in [scoring](references/scoring.md) and compute it with `python3 scripts/score_directions.py scores.json` (presets: default, launch, regulated, rebrand, product-ui). It prints the table and the sensitivity check: if a plausible weight change flips the winner, say so.
 8. **Recommend.** Present: the directions side by side, the score table, the recommendation, the runner-up, risks, and what would change your mind. Keep it to one screen of text plus the visuals.
 9. **Converge and hand off.** After a choice, turn the direction into tokens and route to the discipline skills per [handoff](references/handoff.md). For client projects with records and approvals, also use `design-project-start`.
@@ -74,8 +77,9 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [Scoring](references/scoring.md): weighted matrix, weight presets by brief type, sensitivity check, recommendation format.
 - [Handoff](references/handoff.md): from chosen direction to tokens and discipline skills.
 - [Worked example](references/worked-example.md): a full run from brief to recommendation.
+- [Parallel exploration](references/parallel-exploration.md): one direction-explorer subagent per position in Claude Code and Cowork, the distinctness test on returns, single-context fallback for chat.
 - Atlas index and schema: `../../library/atlas/README.md`.
 - Calibration set of distinct directions: `../../library/examples/stylescapes/README.md`.
-- Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`.
+- Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`, `figma-workflow` (any task naming Figma, Dev Mode or Code Connect).
 
 Catalog IDs covered: research, reference-direction, brand-strategy, design-taste, web-discovery, display-discovery, display-art-direction, web-art-direction, media-art-direction

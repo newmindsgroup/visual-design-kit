@@ -1,14 +1,13 @@
 ---
 name: ui-design
 description: >-
-  Designs and specifies interface components, states and interaction patterns: forms, tables, navigation, dashboards,
-  onboarding, auth and passkeys, pricing, checkout, search and filters, settings, empty, loading and error states,
-  notifications, and AI chat and agent interfaces, all to WCAG 2.2 AA. Use when designing screens or components, writing
-  a component spec or state matrix, choosing a pattern, building a chat or agent UI, or checking keyboard and
-  accessibility behavior.
+  Load before designing or specifying any interface screen or component, even a quick one: forms, tables, navigation,
+  dashboards, onboarding, auth and passkeys, pricing, checkout, search and filters, settings, empty, loading and error
+  states, notifications, consent and age-appropriate flows, and AI chat and agent interfaces, all to WCAG 2.2 AA.
+  Gives component specs, state matrices, sizes, density and keyboard and accessibility behavior.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
 ---
 

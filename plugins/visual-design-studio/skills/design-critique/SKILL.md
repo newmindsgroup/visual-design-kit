@@ -1,10 +1,14 @@
 ---
 name: design-critique
 description: >-
-  Renders a design at real sizes, screenshots it, scores it against a 12-criterion rubric, lists up to five prioritized fixes, then revises and re-renders until the target is met. Includes a catalog of generic-AI design tells, the name-swap and squint tests, and a 15-minute accessibility audit. Use when reviewing, critiquing, QA-ing or polishing any page, screen, deck, social post, stylescape or brand asset; when asked "is this good", "make it better" or "does this look AI-made"; or before delivering work to a client.
+  Load before reviewing, critiquing, QA-ing or polishing any design, including one only described in words: page,
+  screen, pricing table, deck, social post, stylescape or brand asset. Renders at real sizes, scores a 12-criterion
+  rubric, names generic-AI tells, runs the name-swap and squint tests and a 15-minute accessibility audit, gives at
+  most five prioritized fixes, checks build fidelity against the approved design, and revises until the target is met.
+  Also for "is this good" or "does this look AI-made".
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:32:54 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:32:54 UTC"
 ---
 
@@ -90,6 +94,8 @@ Not tested: <screen reader on Windows, real devices, ...>
 - [Rubric](references/rubric.md): twelve criteria with 1-5 descriptors, caps and a score sheet. Read before scoring.
 - [AI tells](references/ai-tells.md): 26 named tells with what they look like, why they happen and the fix.
 - [Accessibility audit](references/accessibility-audit.md): the 15-minute pass (axe, keyboard, focus, zoom and reflow, contrast, targets, motion, VoiceOver and NVDA).
+- [Review panel](references/review-panel.md): art-director, accessibility-auditor, copy-editor, brand-guardian and frontend-engineer subagents, score merge into the rubric, conflict ladder, chat fallback.
+- [Build fidelity](references/build-fidelity.md) and [compare_build.mjs](scripts/compare_build.mjs): pixel and computed-style diff of approved design vs build, thresholds, masks, pairing with Core Web Vitals.
 - [Revision discipline](references/revision-discipline.md): scoped changes, invariants, before and after evidence, stop rules.
 - [render_review.mjs](scripts/render_review.mjs): Node 18+, no bundled dependencies. Install Playwright and axe-core in the working project (`npm i -D playwright axe-core && npx playwright install chromium`) or point `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_CHROMIUM` and `AXE_SCRIPT` at existing copies. `--exclude SELECTOR` skips deliberate controls or third-party embeds; `--strict` exits 2 on blocking findings for CI.
 - [AI-tells gallery](../../library/examples/ai-tells/index.html) and its [README](../../library/examples/ai-tells/README.md): 18 tells rendered generic versus better across 18 industries and styles.

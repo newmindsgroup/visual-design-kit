@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
-  <title id="title">Visual Design Kit 0.5.0: any brief to the best design direction</title>
+  <title id="title">Visual Design Kit 0.6.0: any brief to the best design direction</title>
   <desc id="desc">A brief goes to the design director, which asks qualifying questions and queries the Design Space Atlas of 125 entries across seven axes. It renders three to five distinct directions, scores them and recommends one. Discipline skills produce the work and a critique loop renders, scores and revises until the rubric passes.</desc>
   <!-- Version-Timestamp: 2026-10-20 02:05:00 UTC -->
   <style>
@@ -14,7 +14,7 @@
     .score { font: 700 15px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #0E1A1D; }
   </style>
   <rect width="1200" height="600" fill="#F3F6F6"/>
-  <text x="64" y="70" class="label">VISUAL DESIGN KIT 0.5.0</text>
+  <text x="64" y="70" class="label">VISUAL DESIGN KIT 0.6.0</text>
   <text x="64" y="124" class="title">Any brief. The best design direction.</text>
   <text x="64" y="160" class="sub">Claude as design director: explore deliberately different options, render them, score them, then build and critique.</text>
 
