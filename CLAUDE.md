@@ -1,6 +1,6 @@
 # Visual Design Kit: maintainer instructions
 
-Version-Timestamp: 2026-10-20 02:05:00 UTC
+Version-Timestamp: 2026-10-20 11:00:00 UTC
 
 This repository is a public, MIT-licensed Claude plugin marketplace (`.claude-plugin/marketplace.json`) that also ships a Codex plugin. The main plugin is `plugins/visual-design-studio/`. These instructions are for working **on** the kit. Projects that **use** the kit install the plugin; they never edit this repo.
 
@@ -11,7 +11,9 @@ This repository is a public, MIT-licensed Claude plugin marketplace (`.claude-pl
 - `plugins/visual-design-studio/library/tokens/`: DTCG token source (`src/`) and generated output (`dist/`).
 - `plugins/visual-design-studio/library/draft-skills/`, `templates/`, `knowledge/`: deep process library (unregistered; linked from skills).
 - `plugins/visual-design-studio/library/examples/`: calibration sets (stylescapes, ai-tells, quality-benchmark) and reference code (astro-motion, react-system).
-- `plugins/visual-design-studio/evals/`: `claude plugin eval` cases.
+- `plugins/visual-design-studio/agents/`: specialist subagents (direction-explorer and the review panel). Claude Code and Cowork load them; every skill keeps a single-context fallback.
+- `plugins/visual-design-studio/evals/`: `claude plugin eval` cases. Improve skills with `.claude/skills/design-kit-eval-loop/`.
+- `tools/spec_radar.py`: lists volatile "verify" claims for the monthly review in `docs/SPEC-RADAR.md`.
 - `tools/`: packaging build and validation. `tests/`: repository tests.
 
 ## Before every commit
