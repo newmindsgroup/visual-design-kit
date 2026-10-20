@@ -28,6 +28,12 @@ Great design is the right answer to a specific brief, chosen from real alternati
 | Scoring | Weighted matrix, 1-5 per criterion, weights from the brief, with a sensitivity check | Client supplies their own criteria: use theirs, keep yours as a second view |
 | Recommendation | One winner, one runner-up, what would flip the decision | Scores within 0.2: present both as a deliberate choice for the client |
 
+## Non-negotiables
+
+- **Reply in the user's language.** The market decides the language of sample brand copy (headlines, CTAs), not of your answer. Gloss foreign-language samples in the user's language.
+- **Every direction carries specifics, even in a short answer:** two named typefaces (display and text), 3-5 colors as hex with roles, one layout idea, one imagery idea and one line of sample copy. Cut prose before you cut specifics; an adjective-only direction is not a direction.
+- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). In a short answer, keep the table to the criteria and totals.
+
 ## Workflow
 
 Paths in commands are relative to this skill's directory; resolve them to absolute paths before running.

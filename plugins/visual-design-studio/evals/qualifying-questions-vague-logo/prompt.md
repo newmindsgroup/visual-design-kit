@@ -1,6 +1,6 @@
 ---
 max_turns: 10
-allowed_tools: [Read, Glob, Grep, Skill, Bash, Write]
+allowed_tools: [Read, Glob, Grep, Skill]
 ---
 
 Design a logo for my company.

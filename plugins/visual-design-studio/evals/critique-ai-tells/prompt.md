@@ -1,6 +1,6 @@
 ---
 max_turns: 15
-allowed_tools: [Read, Glob, Grep, Skill, Bash, Write]
+allowed_tools: [Read, Glob, Grep, Skill]
 ---
 
 Critique this landing page hero and tell me exactly what to change:
