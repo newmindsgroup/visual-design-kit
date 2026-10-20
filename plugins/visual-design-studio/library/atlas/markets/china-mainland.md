@@ -14,7 +14,7 @@ version_timestamp: __TS__
 
 ## Language and script
 
-- Simplified Chinese (`zh-Hans-CN`, Han script, 6,000+ commonly used characters), standard Mandarin (Putonghua). Cantonese is spoken in Guangdong but written Chinese is shared; Hong Kong, Macau and Taiwan use Traditional characters and different vocabulary, so treat them as separate markets (`zh-Hant-HK`, `zh-Hant-TW`). Ethnic-minority scripts (Uyghur, Tibetan, Mongolian) appear in autonomous regions. English is used for premium and tech branding but rarely carries a mass-market message.
+- Simplified Chinese (`zh-Hans-CN`, Han script, several thousand commonly used characters), standard Mandarin (Putonghua). Cantonese is spoken in Guangdong but written Chinese is shared; Hong Kong, Macau and Taiwan use Traditional characters and different vocabulary, so treat them as separate markets (`zh-Hant-HK`, `zh-Hant-TW`). Ethnic-minority scripts (Uyghur, Tibetan, Mongolian) appear in autonomous regions. English is used for premium and tech branding but rarely carries a mass-market message.
 - Always set `lang="zh-Hans"` or `zh-CN`; without it browsers may choose another regional Han glyph variant (for example 骨, 直, 海 look different in Japan, Korea and Taiwan).
 - Software sold in China is expected to support GB 18030 (verify the current edition).
 - Tone and copy: crisp, upbeat, benefit-led; four-character phrases and rhythm are valued. Official or financial copy is formal; social copy is playful with internet slang that changes quickly (use local writers). Use 您 (formal "you") for banking, healthcare and premium brands; 你 for youth and casual apps.
@@ -40,7 +40,7 @@ version_timestamp: __TS__
 - Justified text is acceptable for Chinese because characters are equal width; italics are not used (use bold, color or emphasis dots via `text-emphasis`). Do not use uppercase transforms for CJK.
 - **Vertical text** (`writing-mode: vertical-rl`) is traditional but is used mainly in decoration, poetry, seals, packaging for tea and liquor; punctuation shifts to the upper right in vertical text. Avoid for UI and body copy.
 - Layout: information-dense mobile pages with banners, coupons, countdown timers, ranking lists, red badges and floating buttons are normal; user expectation is value and social proof. Premium and luxury brands succeed with restraint, but still show product details, KOL proof and shopping cues. Use WeUI (WeChat), Ant Design (Ant Group), TDesign (Tencent) and HarmonyOS design guidelines for platform-native patterns.
-- Mini programs: keep content out of the WeChat capsule area (top right menu, about 87 x 32 pt) and respect safe areas.
+- Mini programs: keep content out of the WeChat capsule area (top-right menu, roughly 87 x 32 pt; verify the current spec) and respect safe areas.
 - Elder-friendly mode (关怀模式, large fonts, simplified screens) is a recognized regulatory and market expectation for major apps.
 
 ## Color and symbolism
@@ -58,7 +58,7 @@ version_timestamp: __TS__
 - Politically sensitive topics and symbols are legally risky: Taiwan, Hong Kong, Tibet, Xinjiang, Tiananmen, territorial disputes. Maps must use state-approved standard maps; incorrect borders or omitting Taiwan are treated as "problem maps" with penalties. The national flag and emblem cannot be used in trademarks or commercial advertising.
 - Avoid clocks as gifts (送钟 sounds like "attending a funeral"), sharing pears (分梨 sounds like parting) and the number 4 in gift sets.
 - Content standards: no content that harms national image, promotes superstition, or targets minors improperly; AI-generated content must be labeled.
-- Beauty and body norms are intense; avoid lookism and appearance anxiety messaging; regulators have cracked down on "sissy men" and overtly extravagant displays.
+- Beauty and body norms are intense; avoid lookism and appearance anxiety messaging; regulators scrutinize ostentatious displays of wealth and content that reaches minors.
 
 ## Formats and conventions
 
@@ -113,5 +113,5 @@ version_timestamp: __TS__
 - Noto Sans/Serif CJK and Source Han (Adobe/Google, OFL); LXGW WenKai
 - WeChat Mini Program design guidelines and WeUI; Ant Design; Tencent TDesign; HarmonyOS design guidelines
 - Alipay and WeChat Pay merchant documentation; UnionPay brand guidelines
-- Lü Jingren, Hung Hsiao-Chi and Chinese graphic design history (Hanzi poster tradition); Jiang Hua-style "guochao" examples such as Li-Ning and Florasis
+- Lü Jingren (book design) and Han Meilin (Beijing 2008 Fuwa mascots) for contemporary Chinese design; Li-Ning and Florasis as public "guochao" brand examples
 - CAC (cac.gov.cn) and MIIT announcements for algorithm, AI labeling and app rules
