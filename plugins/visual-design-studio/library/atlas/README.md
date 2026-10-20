@@ -21,7 +21,7 @@ The atlas maps the design space so Claude can design for any style, industry, ma
 ## Use it
 
 ```sh
-# Find what is relevant to a brief (top 3 per axis)
+# Find what is relevant to a brief (top 4 per axis)
 python3 ../scripts/atlas.py query "premium skincare for men in korea, minimalist, instagram launch"
 
 # Read one entry

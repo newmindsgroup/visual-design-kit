@@ -3,8 +3,8 @@ id: market.southeast-asia
 axis: market
 name: Southeast Asia
 aliases: [SEA, ASEAN, Indonesia, Thailand, Vietnam, Philippines, Malaysia, Singapore, Cambodia, Myanmar, Laos]
-summary: Mobile-first, young and linguistically varied region (Latin, Thai, Khmer, Lao and Burmese scripts) where super apps, QR wallets, cash on delivery and messaging commerce shape design and law differs by country.
-tags: [southeast asia, asean, indonesia, thailand, vietnam, philippines, malaysia, singapore, super app, qr payments, thai]
+summary: Mobile-first, young, multilingual region (Latin, Thai, Khmer, Lao, Burmese scripts) where super apps, QR wallets, cash on delivery and messaging commerce shape design; laws differ by country.
+tags: [southeast asia, asean, indonesia, thailand, vietnam, philippines, malaysia, singapore, super app, thai]
 pairs_with: [industry.ecommerce-dtc, industry.fintech-banking, industry.marketplaces-platforms, industry.food-beverage-cpg, industry.gaming-esports, industry.hotels-travel, style.playful-bubbly, style.vibrant-gradient-saas, channel.native-app, audience.low-bandwidth-entry-devices]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC

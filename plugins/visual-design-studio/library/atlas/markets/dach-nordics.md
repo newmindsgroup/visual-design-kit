@@ -4,7 +4,7 @@ axis: market
 name: DACH and the Nordics
 aliases: [Germany, Austria, Switzerland, Sweden, Norway, Denmark, Finland, Iceland, DACH, Scandinavia, Nordic countries, de-DE, sv-SE]
 summary: High-trust, high-income markets where precision, privacy, strict consumer law, bank-based digital ID (BankID, MitID) and mobile payments (Swish, Vipps, TWINT) define design.
-tags: [germany, austria, switzerland, nordics, scandinavia, sweden, norway, denmark, finland, gdpr, bankid, twint]
+tags: [germany, austria, switzerland, nordics, scandinavia, sweden, norway, denmark, finland, twint]
 pairs_with: [industry.fintech-banking, industry.automotive-mobility, industry.industrial-manufacturing-construction, industry.energy-climate, industry.saas-b2b, style.scandinavian-nordic, style.swiss-international, style.bauhaus-constructivist, style.quiet-minimal, channel.web-app]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC

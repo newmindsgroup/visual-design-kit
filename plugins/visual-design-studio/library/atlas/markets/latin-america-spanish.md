@@ -4,7 +4,7 @@ axis: market
 name: Spanish-speaking Latin America
 aliases: [LATAM, Latin America, Spanish LATAM, es-419, Mexico, Argentina, Colombia, Chile, Peru, hispanoamerica]
 summary: Mobile-first Spanish-speaking region from Mexico to Argentina with diverse dialects, cash-and-voucher payments, instant bank transfers, wallets and a fast-changing patchwork of data laws.
-tags: [latin america, latam, spanish, es-419, mexico, argentina, colombia, mercado pago, spei, oxxo, yape]
+tags: [latin america, latam, spanish, es-419, mexico, argentina, colombia, mercado pago, oxxo, yape]
 pairs_with: [industry.fintech-banking, industry.ecommerce-dtc, industry.marketplaces-platforms, industry.food-beverage-cpg, industry.media-entertainment-streaming, style.playful-bubbly, style.vibrant-gradient-saas, channel.native-app, channel.social-media, audience.low-bandwidth-entry-devices]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC

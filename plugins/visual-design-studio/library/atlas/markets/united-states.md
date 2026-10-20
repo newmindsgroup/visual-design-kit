@@ -18,7 +18,7 @@ version_timestamp: 2026-10-20 02:17:13 UTC
 - Spanish is the largest second language (roughly 40 million people speak it at home per Census ACS). Next most common: Chinese, Tagalog, Vietnamese, Arabic, French, Korean (ACS; verify the current ranking). Offer Spanish first when localizing; see `market.us-hispanic-puerto-rico-caribbean` for bilingual patterns.
 - Title Case versus sentence case: Apple HIG and Material both favor sentence case for UI labels; marketing headlines vary. Pick one rule per product and apply it everywhere.
 - Inclusive language: singular "they" is accepted in most style guides (AP, Chicago, Microsoft, Google). Avoid sports idioms ("touch base", "home run", "out of left field") in products with international users; they do not translate.
-- Name the file `lang="en-US"` in HTML so spell-check and hyphenation use the right dictionary.
+- Set `lang="en-US"` in HTML so spell-check and hyphenation use the right dictionary.
 
 ## Typography and layout
 

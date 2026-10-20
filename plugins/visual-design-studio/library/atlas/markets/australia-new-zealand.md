@@ -3,9 +3,9 @@ id: market.australia-new-zealand
 axis: market
 name: Australia and New Zealand
 aliases: [Australia, New Zealand, Aotearoa, ANZ, en-AU, en-NZ, Aussie, Kiwi, te reo Maori]
-summary: English-language, high-income Pacific markets with relaxed tone, tap-to-pay and BNPL habits, Indigenous protocols (First Nations, te reo Māori), GST-inclusive prices and strong consumer and privacy law.
+summary: English-language Pacific markets with a relaxed tone, tap-to-pay and BNPL habits, Indigenous protocols (First Nations, te reo Māori), GST-inclusive prices and strong consumer and privacy law.
 tags: [australia, new zealand, aotearoa, anz, en-au, en-nz, te reo maori, first nations, afterpay, gst]
-pairs_with: [industry.fintech-banking, industry.real-estate-proptech, industry.hotels-travel, industry.sports-fitness, industry.government-civic, industry.energy-climate, style.eco-natural-sustainable, style.civic-plain, style.handcrafted-organic, channel.marketing-website, channel.native-app]
+pairs_with: [industry.fintech-banking, industry.real-estate-proptech, industry.hotels-travel, industry.sports-fitness, industry.government-civic, style.eco-natural-sustainable, style.civic-plain, style.handcrafted-organic, channel.marketing-website, channel.native-app]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC
 ---

@@ -4,7 +4,7 @@ axis: market
 name: Japan
 aliases: [Japanese market, ja-JP, Nihon, Japanese typography, kanji kana, keigo]
 summary: Japanese-language market with three scripts, polite register, information-rich layouts, iPhone-heavy mobile use, LINE, PayPay, konbini payments and tax-inclusive pricing under APPI and commerce law.
-tags: [japan, japanese, ja-jp, kanji, kana, keigo, line, paypay, konbini, vertical text, appi]
+tags: [japan, japanese, ja-jp, kanji, kana, keigo, line, paypay, konbini, vertical text]
 pairs_with: [industry.ecommerce-dtc, industry.food-beverage-cpg, industry.gaming-esports, industry.fashion-apparel, industry.automotive-mobility, industry.hotels-travel, style.quiet-minimal, style.playful-bubbly, style.illustrative-narrative, channel.native-app]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC

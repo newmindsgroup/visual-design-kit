@@ -4,7 +4,7 @@ axis: market
 name: Western Europe (France, Iberia, Italy, Benelux)
 aliases: [France, Spain, Portugal, Italy, Belgium, Netherlands, Luxembourg, Benelux, southern Europe, EU market, fr-FR, es-ES, it-IT, nl-NL]
 summary: Multilingual EU markets with strict GDPR cookie rules, the European Accessibility Act, national payment schemes (iDEAL, Bizum, Carte Bancaire, Multibanco) and local language laws.
-tags: [france, spain, portugal, italy, benelux, netherlands, belgium, gdpr, eaa, ideal, bizum, multibanco]
+tags: [france, spain, portugal, italy, benelux, netherlands, belgium, ideal, bizum, multibanco]
 pairs_with: [industry.fintech-banking, industry.fashion-apparel, industry.luxury-goods, industry.hotels-travel, industry.food-beverage-cpg, style.editorial-magazine, style.classic-luxury-serif, style.fashion-editorial-didone, channel.ecommerce-store, channel.marketing-website]
 avoid_with: []
 version_timestamp: 2026-10-20 02:17:13 UTC

@@ -227,19 +227,35 @@ def score(entry, query_text, query_words):
         if len(alias) > 3 and alias in query_text:
             total += 6
     name_words = set(words(entry["name"])) | set(slug.split("-"))
-    tag_words = {tag.lower() for tag in entry["tags"]}
+    tag_words = {part for tag in entry["tags"] + entry["aliases"] for part in words(tag)}
     summary_words = set(words(entry["summary"]))
     for word in set(query_words):
         if word in name_words:
             total += 3
+        elif any(related(word, other) for other in name_words):
+            total += 2
         if word in tag_words:
             total += 2
+        elif any(related(word, other) for other in tag_words):
+            total += 1
         if word in summary_words:
             total += 1
     return total
 
 
-def query(text, root=ATLAS, axis=None, per_axis=3):
+def related(first, second):
+    """Word variants such as minimal/minimalist or luxury/luxurious share a stem of 5+ letters."""
+    if len(first) < 5 or len(second) < 5:
+        return False
+    stem = 0
+    for left, right in zip(first, second):
+        if left != right:
+            break
+        stem += 1
+    return stem >= 5 and stem >= min(len(first), len(second)) - 3
+
+
+def query(text, root=ATLAS, axis=None, per_axis=4):
     index = load_index(root)
     query_text = " " + " ".join(words(text)) + " "
     raw_text = text.lower()
@@ -287,7 +303,7 @@ def main(argv=None):
     q = sub.add_parser("query", help="find relevant entries for a brief")
     q.add_argument("text")
     q.add_argument("--axis", choices=sorted(SECTIONS))
-    q.add_argument("--limit", type=int, default=3, help="results per axis")
+    q.add_argument("--limit", type=int, default=4, help="results per axis")
     s = sub.add_parser("show", help="print an entry path and summary")
     s.add_argument("id")
     c = sub.add_parser("combine", help="check a combination of ids for conflicts")

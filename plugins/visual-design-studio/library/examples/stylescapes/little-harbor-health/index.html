@@ -159,8 +159,8 @@ a { color: var(--color-accent-fg); }
 .harbor .facts li { display: flex; align-items: center; gap: 8px; }
 .harbor .facts svg { width: 20px; height: 20px; color: var(--lh-lamp); }
 .scene { position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: clamp(1rem, 3vw, 2.5rem); }
-.beam { transform-origin: 770px 312px; animation: sweep 9s var(--ease-linear) infinite alternate; }
-@keyframes sweep { from { transform: rotate(-9deg); } to { transform: rotate(12deg); } }
+.beam { transform-origin: 770px 300px; animation: sweep 9s var(--ease-linear) infinite alternate; }
+@keyframes sweep { from { transform: rotate(-10deg); } to { transform: rotate(8deg); } }
 .boat { animation: bob 4.8s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
 @keyframes bob { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(6px) rotate(2deg); } }
 .twinkle { animation: tw 3.6s ease-in-out infinite alternate; }
@@ -370,8 +370,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 @media (max-width: 1100px) {
   .harbor { grid-template-columns: 1fr; }
   .harbor-copy { padding: clamp(2rem, 6vw, 3.5rem); padding-bottom: 0; }
-  .scene-art { height: 640px; }
-  .scene { padding-top: 360px; justify-content: center; }
+  .harbor { background: linear-gradient(to top, #2A9488 0 300px, transparent 300px), radial-gradient(90% 60% at 72% 0%, #1D4E7E 0%, var(--lh-night) 48%, var(--lh-night-deep) 100%); }
+  .scene-art { bottom: 296px; height: 520px; }
+  .scene { padding-top: 470px; justify-content: center; }
   .pebbles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .type-grid, .img-grid, .motion-grid, .apps { grid-template-columns: 1fr; }
   .c-buttons, .c-input, .c-card, .c-badges { grid-column: 1 / -1; grid-row: auto; }
@@ -385,8 +386,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .dir-brief { justify-self: start; text-align: left; }
   .nav ul, .nav-actions .btn--quiet { display: none; }
   .harbor { border-radius: 32px; }
-  .scene-art { height: 560px; }
-  .scene { padding: 300px 1rem 1rem; }
+  .scene-art { bottom: 296px; height: 420px; }
+  .scene { padding: 360px 1rem 1rem; }
   .visit { width: 100%; }
   .icon-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stickers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -463,7 +464,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
       <svg class="scene-art" viewBox="0 0 1216 760" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Illustration: a harbor at night. A lighthouse on a rock sweeps its beam over gentle waves; a dotted line runs from its lamp to the lit window of a small house on the cliff, and a little sailboat bobs in the water.">
         <defs>
-          <linearGradient id="beamG" x1="1" x2="0" y1="0" y2="0"><stop offset="0" stop-color="#FFC845" stop-opacity="0.7"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></linearGradient>
+          <linearGradient id="beamG" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FFC845" stop-opacity="0.7"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></linearGradient>
           <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFC845" stop-opacity="0.55"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></radialGradient>
           <mask id="moonM"><rect width="1216" height="760" fill="#fff"/><circle cx="946" cy="104" r="36" fill="#000"/></mask>
         </defs>
@@ -475,9 +476,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <circle class="twinkle" cx="640" cy="200" r="2.4"/><circle class="twinkle" cx="1180" cy="150" r="2"/><circle class="twinkle" cx="860" cy="230" r="2"/><circle class="twinkle" cx="1100" cy="250" r="2.4"/><circle class="twinkle" cx="590" cy="130" r="1.8"/><circle class="twinkle" cx="380" cy="40" r="1.8"/>
         </g>
         <circle cx="926" cy="118" r="40" fill="#FFF6E3" mask="url(#moonM)"/>
-        <g class="beam"><path d="M770 312 L470 200 L470 400 Z" fill="url(#beamG)" opacity="0.6"/></g>
+        <g class="beam"><path d="M770 300 L1080 190 L1080 390 Z" fill="url(#beamG)" opacity="0.55"/></g>
         <!-- distant hills -->
-        <path d="M480 640 C560 600 640 596 720 610 S880 630 960 600 S1120 560 1216 572 V760 H480z" fill="#17466F"/>
+        <path d="M240 760 C340 690 470 642 600 628 C700 616 800 630 880 616 S1100 566 1216 572 V760z" fill="#17466F"/>
         <!-- cliff with house (right) -->
         <path d="M930 760 C944 600 980 420 1060 352 C1100 330 1160 326 1216 330 V760z" fill="#1C5582"/>
         <g transform="translate(1076 270)">
