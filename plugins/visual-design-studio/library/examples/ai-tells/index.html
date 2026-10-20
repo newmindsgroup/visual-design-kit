@@ -38,6 +38,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 .intro{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px clamp(24px,5vw,72px);align-items:end;padding:clamp(40px,7vw,104px) 0 clamp(32px,4vw,56px)}
 .intro h1{margin:0;text-wrap:balance;font-weight:800;font-stretch:115%;font-size:clamp(46px,7.6vw,112px);line-height:.9;letter-spacing:-.04em}
 .intro p{margin:0 0 14px;text-wrap:pretty;max-width:50ch;font-size:clamp(16px,1.3vw,18px)}
+.intro .key{font-size:13px;margin-top:20px}
 .key{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font:500 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mark{display:inline-block;width:10px;height:10px;margin-right:8px;vertical-align:0}
 .mark--g{border:1.5px solid currentColor;border-radius:50%}
@@ -54,8 +55,10 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 .tell-id{margin:0;font:500 12px/1.5 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
 .spec{margin:0;min-width:0;display:flex;flex-direction:column}
-.spec>figcaption{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;min-height:22px;margin-bottom:10px;font:500 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.spec>figcaption b{color:var(--ink);font-weight:700}
+.spec>figcaption{display:flex;flex-wrap:wrap;gap:2px 14px;align-items:baseline;min-height:22px;margin-bottom:10px;font:500 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.spec>figcaption p{margin:0}
+.spec>figcaption b{color:var(--ink);font-weight:700;margin-right:6px}
+.spec>figcaption .sid{text-transform:none;letter-spacing:.02em}
 .mini{container-type:inline-size;position:relative;overflow:hidden;flex:1;min-height:440px;isolation:isolate}
 .spec[data-variant="better"] .mini :is(p,li,dd,span){text-wrap:pretty}
 .spec[data-variant="better"] .mini [class*="-hd"]{text-wrap:balance}
@@ -63,7 +66,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 .why strong{font-weight:700}
 .colophon{border-top:2px solid var(--ink);padding:32px 0 64px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px clamp(20px,3vw,40px);font-size:15px}
 .colophon h2{margin:0 0 8px;font:500 12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.colophon p{margin:0 0 10px;max-width:46ch}
+.colophon p{margin:0 0 10px;max-width:46ch;text-wrap:pretty}
 @media (max-width:900px){
   .intro,.pair,.colophon{grid-template-columns:minmax(0,1fr)}
   .tell-head{grid-template-columns:auto minmax(0,1fr)}
@@ -235,9 +238,9 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 /* 07 glassmorphism everywhere */
 .g07{background:#E9D5FF;color:#fff;padding:36px 7%;display:grid;place-items:center}
 .g07 .blob{position:absolute;border-radius:50%;filter:blur(40px);z-index:-1}
-.g07 .b1{width:60%;height:60%;left:-10%;top:-10%;background:#F472B6}
-.g07 .b2{width:55%;height:55%;right:-12%;top:20%;background:#60A5FA}
-.g07 .b3{width:50%;height:45%;left:20%;bottom:-15%;background:#C084FC}
+.g07 .b1{width:55%;height:55%;left:0;top:0;background:#F472B6}
+.g07 .b2{width:50%;height:50%;right:0;top:22%;background:#60A5FA}
+.g07 .b3{width:50%;height:40%;left:22%;bottom:0;background:#C084FC}
 .g07 .glass{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:20px}
 .g07 .card{padding:26px 22px;display:flex;flex-direction:column;gap:12px;text-align:center;width:100%;max-width:440px}
 .g07 .hd{font-size:clamp(24px,5.6cqi,32px);font-weight:700;line-height:1.15}
@@ -284,8 +287,8 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 /* 09 glowing orbs */
 .g09{background:#070B1A;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:36px 8%}
 .g09 .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75;z-index:-1}
-.g09 .o1{width:280px;height:280px;background:#7C3AED;left:-60px;top:-40px}
-.g09 .o2{width:240px;height:240px;background:#06B6D4;right:-50px;bottom:-30px}
+.g09 .o1{width:240px;height:240px;background:#7C3AED;left:0;top:0}
+.g09 .o2{width:220px;height:220px;background:#06B6D4;right:0;bottom:0}
 .g09 .g-pill{background:rgba(124,58,237,.25);border:1px solid rgba(167,139,250,.5);color:#DDD6FE}
 .g09 .hd{font-size:clamp(28px,7cqi,44px);font-weight:800;line-height:1.1;letter-spacing:-.03em;max-width:15ch}
 .g09 .tx{color:#A5B4FC;max-width:38ch}
@@ -387,7 +390,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 .b12 p{margin:0}
 .b12-art{width:100%;height:auto;align-self:center}
 .b12-art .ink{mix-blend-mode:multiply}
-.b12-hd{font-weight:900;font-stretch:62%;font-size:clamp(46px,13cqi,84px);line-height:.86;text-transform:uppercase;letter-spacing:-.01em}
+.b12-hd{font-weight:900;font-stretch:62%;font-size:clamp(46px,10.6cqi,84px);line-height:.86;text-transform:uppercase;letter-spacing:-.01em}
 .b12-tx{margin-top:14px!important;font-size:15px;line-height:1.45;font-weight:500}
 .b12-tag{margin-top:16px!important;padding-top:10px;border-top:3px solid #0050A0;font-weight:800;font-stretch:80%;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
 @container (max-width:500px){.b12>.in{grid-template-columns:minmax(0,1fr)}.b12-art{max-width:300px}}
@@ -548,7 +551,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
 
   <main>
   <section class="intro" aria-labelledby="page-title">
-    <h1 id="page-title">Spot the default. Fix it on purpose.</h1>
+    <h1 id="page-title">Spot the default. Fix it on&nbsp;purpose.</h1>
     <div>
       <p>Eighteen patterns that make a design look machine-made, each rendered twice at real size: the first answer a model reaches for, and a better version built for a specific brief. The better versions span eighteen styles and industries on purpose.</p>
       <p>A pattern is a tell when it appears by default. A purple gradient, a glass panel or a centered hero is fine when the brief asks for it and the execution earns it.</p>
@@ -584,7 +587,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">01</span><h2 id="t01-h">Default indigo-to-pink gradient</h2><p class="tell-id">AT-01 / default-gradient</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Logistics SaaS hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Logistics SaaS hero</p></figcaption>
         <div class="mini gen g01">
           <span class="g-pill">✨ Introducing Flowly AI</span>
           <p class="hd">Supercharge your logistics workflow</p>
@@ -593,7 +596,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Freight dispatch / style.data-dense-utilitarian</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Freight dispatch</p><p class="sid">style.data-dense-utilitarian</p></figcaption>
         <div class="mini b01">
           <div class="b01-bar"><span class="b01-logo">Lanefield</span><span><span class="b01-dot"></span>38 trucks on the road</span></div>
           <p class="b01-hd">Every truck, every dock, one board.</p>
@@ -616,7 +619,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">02</span><h2 id="t02-h">One sans for everything</h2><p class="tell-id">AT-02 / one-sans-everywhere</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Restaurant menu</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Restaurant menu</p></figcaption>
         <div class="mini gen g02">
           <p class="hd">Our Menu</p>
           <p class="tx">Fresh, seasonal dishes made with love.</p>
@@ -629,7 +632,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Wood-fired trattoria / style.mid-century-modern</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Wood-fired trattoria</p><p class="sid">style.mid-century-modern</p></figcaption>
         <div class="mini b02">
           <div class="b02-mast"><p class="b02-name">Brace</p><p class="b02-sub">Cucina a legna<br>Via Ripa 12</p></div>
           <p class="b02-sec">Dal forno <span>from the wood oven</span></p>
@@ -650,7 +653,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">03</span><h2 id="t03-h">Centered hero and three icon cards</h2><p class="tell-id">AT-03 / centered-hero-three-cards</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Architecture studio home</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Architecture studio home</p></figcaption>
         <div class="mini gen g03">
           <span class="g-pill">Award-winning architecture</span>
           <p class="hd">Designing spaces that inspire</p>
@@ -664,7 +667,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Architects for schools / style.swiss-international</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Architects for schools</p><p class="sid">style.swiss-international</p></figcaption>
         <div class="mini b03">
           <div class="b03-top"><span>Studio Ferrand</span><span>Architects, Lyon</span></div>
           <div class="b03-grid">
@@ -699,7 +702,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">04</span><h2 id="t04-h">Emoji as icons</h2><p class="tell-id">AT-04 / emoji-icons</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Dental practice services</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Dental practice services</p></figcaption>
         <div class="mini gen g04">
           <p class="hd">Our Services</p>
           <ul>
@@ -711,7 +714,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Family dental practice / style.clinical-calm</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Family dental practice</p><p class="sid">style.clinical-calm</p></figcaption>
         <div class="mini b04">
           <div class="b04-head"><p class="b04-name">Saltmarsh Family Dental</p><p class="b04-open"><span class="b04-dot"></span>Open today 8:00 to 18:00</p></div>
           <ul class="b04-list">
@@ -731,7 +734,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">05</span><h2 id="t05-h">Icons in pastel circles</h2><p class="tell-id">AT-05 / pastel-icon-circles</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Parking permit service</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Parking permit service</p></figcaption>
         <div class="mini gen g05">
           <p class="hd">How It Works</p>
           <p class="tx">Get your parking permit in 4 easy steps!</p>
@@ -744,7 +747,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Council service page / style.civic-plain</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Council service page</p><p class="sid">style.civic-plain</p></figcaption>
         <div class="mini b05">
           <div class="b05-bar">Eastmoor Council</div>
           <div class="b05-body">
@@ -767,7 +770,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">06</span><h2 id="t06-h">Uniform soft cards everywhere</h2><p class="tell-id">AT-06 / uniform-soft-cards</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Banking app overview</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Banking app overview</p></figcaption>
         <div class="mini gen g06">
           <p class="hd">Welcome back, Alex 👋</p>
           <p class="tx">Here's your financial overview for this month.</p>
@@ -782,7 +785,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Neobank account / style.quiet-minimal</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Neobank account</p><p class="sid">style.quiet-minimal</p></figcaption>
         <div class="mini b06">
           <div class="b06-top"><span class="b06-brand">tern</span><span>Everyday account ·· 4821</span></div>
           <p class="b06-label">Balance</p>
@@ -806,7 +809,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">07</span><h2 id="t07-h">Glassmorphism on everything</h2><p class="tell-id">AT-07 / gratuitous-glass</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Hotel booking hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Hotel booking hero</p></figcaption>
         <div class="mini gen g07">
           <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
           <div class="glass card">
@@ -818,7 +821,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Mountain lodge / style.scandinavian-nordic</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Mountain lodge</p><p class="sid">style.scandinavian-nordic</p></figcaption>
         <div class="mini b07">
           <div class="b07-hero">
           <svg class="b07-scene" viewBox="0 0 600 460" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -857,7 +860,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">08</span><h2 id="t08-h">Gradient text headline</h2><p class="tell-id">AT-08 / gradient-text</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Fitness app hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Fitness app hero</p></figcaption>
         <div class="mini gen g08">
           <span class="g-pill">🏃 New: your AI running coach</span>
           <p class="hd"><span class="grad">The future of fitness</span> is here</p>
@@ -866,10 +869,10 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Running club / style.bold-geometric-sport</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Running club</p><p class="sid">style.bold-geometric-sport</p></figcaption>
         <div class="mini b08">
           <p class="b08-kicker"><span>Northbank Run Club</span><span>Week 14</span></p>
-          <p class="b08-hd">River loop</p>
+          <p class="b08-hd">River<br>loop</p>
           <p class="b08-dist"><span>5K</span><span>10K</span></p>
           <div class="b08-slab"><b>Thursday 19:00</b><span>Meet at the boathouse steps. Every pace has a group, and nobody finishes alone.</span></div>
           <ul class="b08-pace" aria-label="Pace groups"><li><b>6:30</b>/km</li><li><b>5:45</b>/km</li><li><b>5:00</b>/km</li></ul>
@@ -884,7 +887,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">09</span><h2 id="t09-h">Glowing orbs and blobs</h2><p class="tell-id">AT-09 / glow-orbs</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Energy app hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Energy app hero</p></figcaption>
         <div class="mini gen g09">
           <span class="orb o1"></span><span class="orb o2"></span>
           <span class="g-pill">⚡ Powered by AI</span>
@@ -894,7 +897,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Energy co-op / style.eco-natural-sustainable</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Energy co-op</p><p class="sid">style.eco-natural-sustainable</p></figcaption>
         <div class="mini b09">
           <p class="b09-kicker"><b>Commonwatt</b><span>Tonight on your local grid</span></p>
           <p class="b09-hd">Cleanest power tonight: 01:00&nbsp;to&nbsp;04:00.</p>
@@ -922,7 +925,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">10</span><h2 id="t10-h">Fake dashboard hero</h2><p class="tell-id">AT-10 / fake-dashboard-hero</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Invoicing SaaS hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Invoicing SaaS hero</p></figcaption>
         <div class="mini gen g10">
           <p class="hd">All your finances in one beautiful dashboard</p>
           <p class="tx">Powerful analytics to help you grow faster.</p>
@@ -937,7 +940,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Invoicing for freelancers / style.flat-material</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Invoicing for freelancers</p><p class="sid">style.flat-material</p></figcaption>
         <div class="mini b10"><div class="in">
           <div class="b10-copy">
             <p class="b10-brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 4h13l-4 4.5 4 4.5H6Z" fill="#D9472B"/></svg>Pennant</p>
@@ -968,7 +971,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">11</span><h2 id="t11-h">Sparkles for anything AI</h2><p class="tell-id">AT-11 / ai-sparkles</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Support inbox reply</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Support inbox reply</p></figcaption>
         <div class="mini gen g11">
           <div class="g11-ticket"><b>Re: Order #48213 arrived damaged</b><span>Hi, my lamp arrived with a cracked base and I need it before...</span></div>
           <div class="g11-tools"><span>✨ AI Magic</span><span>✨ Improve</span><span>✨ Generate</span><span>✨ Summarize</span></div>
@@ -977,7 +980,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Support tool / style.corporate-modern</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Support tool</p><p class="sid">style.corporate-modern</p></figcaption>
         <div class="mini b11">
           <div class="b11-ticket">
             <p class="b11-meta"><span>#48213</span><span>Priya Raman, 14 min ago</span></p>
@@ -1002,7 +1005,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">12</span><h2 id="t12-h">Blob-people illustration</h2><p class="tell-id">AT-12 / blob-people</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Community project hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Community project hero</p></figcaption>
         <div class="mini gen g12">
           <svg viewBox="0 0 420 220" aria-hidden="true">
             <ellipse cx="210" cy="206" rx="190" ry="10" fill="#E9E5FF"/>
@@ -1017,7 +1020,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Bike repair co-op / style.risograph-print-texture</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Bike repair co-op</p><p class="sid">style.risograph-print-texture</p></figcaption>
         <div class="mini b12"><div class="in">
           <svg class="b12-art" viewBox="0 0 300 270" aria-hidden="true">
             <defs>
@@ -1047,7 +1050,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
             </g>
           </svg>
           <div>
-            <p class="b12-hd">Fix your own bike.</p>
+            <p class="b12-hd">Fix your<br>own bike.</p>
             <p class="b12-tx">Tuesdays 18:00 to 21:00 at 14&nbsp;Mill&nbsp;Yard. Stands, tools and help are free. Parts at cost.</p>
             <p class="b12-tag">Spoke &amp; Spanner Co-op</p>
           </div>
@@ -1063,7 +1066,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">13</span><h2 id="t13-h">Meaningless metrics</h2><p class="tell-id">AT-14 / empty-metrics</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Insurance proof band</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Insurance proof band</p></figcaption>
         <div class="mini gen g13">
           <p class="hd">Trusted by thousands</p>
           <div class="g13-grid"><div><b>10x</b><span>Faster claims</span></div><div><b>99.9%</b><span>Customer satisfaction</span></div><div><b>500K+</b><span>Happy customers</span></div><div><b>24/7</b><span>Award-winning support</span></div></div>
@@ -1071,7 +1074,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Home insurer / style.editorial-magazine</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Home insurer</p><p class="sid">style.editorial-magazine</p></figcaption>
         <div class="mini b13">
           <p class="b13-kicker"><span>Alder Mutual</span><span>Home claims, 2025</span></p>
           <p class="b13-hd">How fast we paid home claims last year, including the slow ones.</p>
@@ -1092,7 +1095,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">14</span><h2 id="t14-h">Vague promise copy</h2><p class="tell-id">AT-15 / vague-promise + AT-24 / copy-tells</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Pottery course hero</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Pottery course hero</p></figcaption>
         <div class="mini gen g14">
           <span class="g-pill">🎨 Creative courses</span>
           <p class="hd">Unlock your creative potential</p>
@@ -1101,7 +1104,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Clay studio course / style.handcrafted-organic</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Clay studio course</p><p class="sid">style.handcrafted-organic</p></figcaption>
         <div class="mini b14">
           <p class="b14-kicker">Kiln Street Clay Studio · Spring wheel course</p>
           <p class="b14-hd">Throw a set of four mugs in <em>six Saturdays.</em></p>
@@ -1130,7 +1133,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">15</span><h2 id="t15-h">Low-contrast gray body text</h2><p class="tell-id">AT-17 / gray-body-text</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Law firm insight article</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Law firm insight article</p></figcaption>
         <div class="mini gen g15">
           <p class="cat">INSIGHTS</p>
           <p class="hd">Understanding Break Clauses in Commercial Leases</p>
@@ -1140,7 +1143,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Litigation firm / style.classic-luxury-serif</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Litigation firm</p><p class="sid">style.classic-luxury-serif</p></figcaption>
         <div class="mini b15">
           <p class="b15-cat">Calder Whitlock · Property disputes</p>
           <p class="b15-hd">What a break clause actually lets you do</p>
@@ -1158,7 +1161,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">16</span><h2 id="t16-h">Too many calls to action</h2><p class="tell-id">AT-18 / cta-pileup</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Rental listing</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Rental listing</p></figcaption>
         <div class="mini gen g16">
           <div class="g16-banner">🔥 High demand! 12 people are viewing this property</div>
           <div class="g16-img" aria-hidden="true">🏢</div>
@@ -1171,7 +1174,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>1930s mansion flat / style.art-deco</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> 1930s mansion flat</p><p class="sid">style.art-deco</p></figcaption>
         <div class="mini b16"><div class="in">
           <div class="b16-frame">
             <p class="b16-kicker">Marlowe Court, 1934</p>
@@ -1190,12 +1193,12 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
                 <path d="M130 70a22 22 0 0 1 22 22M58 120a22 22 0 0 0 22-22M150 120a22 22 0 0 1 22-22" stroke-width="1" stroke="#B9C9C4"/>
                 <path d="M58 120 80 98M150 120 172 98" stroke-width="1" stroke="#B9C9C4"/>
               </g>
-              <g fill="#EFE6D2" font-family="Archivo, sans-serif" font-size="10" text-anchor="middle">
-                <text x="70" y="60">Living</text><text x="70" y="74" fill="#B9C9C4" font-size="9">5.1 × 4.2</text>
-                <text x="190" y="60">Bedroom 1</text><text x="190" y="74" fill="#B9C9C4" font-size="9">4.0 × 3.6</text>
+              <g fill="#EFE6D2" font-family="Archivo, sans-serif" font-size="12" text-anchor="middle">
+                <text x="70" y="60">Living</text><text x="70" y="74" fill="#B9C9C4" font-size="11">5.1 × 4.2</text>
+                <text x="190" y="60">Bedroom 1</text><text x="190" y="74" fill="#B9C9C4" font-size="11">4.0 × 3.6</text>
                 <text x="52" y="158">Kitchen</text>
                 <text x="122" y="158">Bath</text>
-                <text x="200" y="158">Bedroom 2</text><text x="200" y="172" fill="#B9C9C4" font-size="9">3.0 × 2.8</text>
+                <text x="200" y="158">Bedroom 2</text><text x="200" y="172" fill="#B9C9C4" font-size="11">3.0 × 2.8</text>
               </g>
             </svg>
             <figcaption>Second floor, 74 m², south at top</figcaption>
@@ -1212,7 +1215,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">17</span><h2 id="t17-h">Badge and pill overload</h2><p class="tell-id">AT-19 / pill-overload</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Product card</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Product card</p></figcaption>
         <div class="mini gen g17"><div class="in">
           <div class="g17-img" aria-hidden="true">🧣<div class="g17-pills"><span class="pl new">NEW</span><span class="pl hot">🔥 HOT</span><span class="pl best">BESTSELLER</span><span class="pl off">-30%</span><span class="pl lim">LIMITED</span><span class="pl eco">ECO 🌱</span></div></div>
           <div class="g17-info">
@@ -1226,7 +1229,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Silk scarves / style.fashion-editorial-didone</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Silk scarves</p><p class="sid">style.fashion-editorial-didone</p></figcaption>
         <div class="mini b17"><div class="in">
           <div class="b17-img">
             <svg viewBox="0 0 200 200" aria-hidden="true">
@@ -1265,7 +1268,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
     <div class="tell-head"><span class="tell-n" aria-hidden="true">18</span><h2 id="t18-h">Dark mode with neon glow</h2><p class="tell-id">AT-20 / neon-dark-mode</p></div>
     <div class="pair">
       <figure class="spec" data-variant="generic">
-        <figcaption><b><span class="mark mark--g"></span>Generic</b><span>Deploy status screen</span></figcaption>
+        <figcaption><p><b><span class="mark mark--g"></span>Generic</b> Deploy status screen</p></figcaption>
         <div class="mini gen g18">
           <p class="g18-title">⚡ DEPLOY STATUS</p>
           <div class="g18-card"><span class="g18-status">● DEPLOYED</span><p class="name">web-app-prod</p><div class="g18-bar"></div><p class="small">Build time: 41s · Region: fra1 · Commit: 4f2c91e</p></div>
@@ -1273,7 +1276,7 @@ a:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:
         </div>
       </figure>
       <figure class="spec" data-variant="better">
-        <figcaption><b><span class="mark mark--b"></span>Better</b><span>Deploy CLI and cloud / style.dark-tech-developer</span></figcaption>
+        <figcaption><p><b><span class="mark mark--b"></span>Better</b> Deploy CLI and cloud</p><p class="sid">style.dark-tech-developer</p></figcaption>
         <div class="mini b18">
           <div class="b18-head"><span>shipyard / web / <b>production</b></span><span class="b18-live"><i></i>Live</span></div>
           <div class="b18-panel">

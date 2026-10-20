@@ -143,7 +143,7 @@ Levels 0-5 = 0, 1, 3, 6, 8, 12dp. Cards and app bars at rest sit at 0-1; menus a
 - **Bottom sheets**: standard or modal, drag handle 32x4dp, top corners 28dp, max width about 640dp on large screens.
 - **Dialogs**: basic dialogs with 1-2 actions, text buttons at the end; full-screen dialogs on compact widths for complex input.
 - **Snackbars**: one at a time, one optional action, above the navigation bar and FAB.
-- **Loading indicator** (Expressive): morphing shapes for waits under about 5 seconds and pull-to-refresh; linear progress for determinate work.
+- **Loading indicator** (Expressive): morphing shapes for short indeterminate waits and pull-to-refresh, replacing most indeterminate circular spinners; linear or circular progress for determinate work.
 
 ## Adaptive and themed icons
 

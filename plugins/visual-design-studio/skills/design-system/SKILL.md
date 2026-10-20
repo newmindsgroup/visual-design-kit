@@ -20,7 +20,7 @@ A good design system makes the brand's decisions once and compiles them everywhe
 
 | Decision | Default | Change when |
 | --- | --- | --- |
-| Source of truth | DTCG 2025.10 JSON in the repository ([tokens](../../library/tokens/README.md), `library/tokens/src/`) built by [tokens.py](../../library/scripts/tokens.py) | Client mandates another master: import it once, then keep exactly one master |
+| Source of truth | DTCG 2025.10 JSON in the repository ([token sources](../../library/tokens/src/), documented in `library/tokens/README.md`) built by [tokens.py](../../library/scripts/tokens.py) | Client mandates another master: import it once, then keep exactly one master |
 | Tiers | Primitives, semantic per mode, optional component tokens, brand overrides that remap primitives | Tiny one-off site: primitives plus semantic only |
 | Naming | `category.concept.property.state` to CSS `--color-bg-surface-raised`; roles, never values | Never rename published names without a one-minor deprecation alias |
 | Modes | Light, dark, high contrast; follow the OS with a user override | Fixed-environment kiosks: one tuned mode |

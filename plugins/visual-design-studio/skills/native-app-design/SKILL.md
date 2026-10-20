@@ -43,7 +43,7 @@ Excellent app design feels like it belongs on the device: system navigation, typ
 5. **Apply platform specifics.** [iOS HIG](references/ios-hig.md) for bars, sheets, Dynamic Type, materials, haptics; [Android Material 3](references/android-material3.md) for components, type roles, color roles, shape and motion.
 6. **Map tokens.** Express every color, type, space and radius as a kit semantic token, then map to platform roles with [SwiftUI and Compose handoff](references/handoff-swiftui-compose.md). No raw hex in screen specs.
 7. **Design the hard states.** Empty, loading, offline, error, permission denied, paywall, account deletion, first run. Use [app patterns](references/app-patterns.md).
-8. **Render and inspect.** Build frames at real sizes (393x852pt and 440x956pt iPhone, 412x915dp Android phone, 1024pt-wide iPad, foldable inner screen) in light, dark, high contrast, largest text, RTL and one translated locale. Screenshot and critique them with the `design-critique` skill before anyone sees them.
+8. **Render and inspect.** Build frames at real sizes (402x874pt and 440x956pt iPhone, 375x667pt small iPhone, 412x915dp and 360x800dp Android phones, 1024pt-wide iPad, foldable inner screen) in light, dark, high contrast, largest text, RTL and one translated locale. Screenshot and critique them with the `design-critique` skill before anyone sees them.
 9. **Ship the store presence.** Icons and screenshots per [app store assets](references/app-store-assets.md).
 10. **Hand off.** Specs name tokens, text roles, components and states per platform, with prototype links and the evidence of step 8.
 
@@ -51,7 +51,7 @@ Excellent app design feels like it belongs on the device: system navigation, typ
 
 - **Market**: Android dominates devices in India, Brazil, Indonesia and much of Africa and Southeast Asia; iOS is strong in the US, Japan, UK and Australia. Check current share data for the specific market and design Android-first where it leads, including 360dp-wide budget phones.
 - **Audience**: older adults and accessibility-first audiences need 56pt/dp targets, Body at xLarge as the design baseline and fewer tabs; expert power users get density, keyboard shortcuts and iPad multi-window; low-bandwidth audiences need offline-first states and small downloads.
-- **Industry and regulation**: fintech and health need biometric re-auth, confirmation screens, privacy-safe notifications and widgets, and careful dynamic-color decisions where color carries meaning. Kids apps fall under COPPA (US) and the stores' kids categories: no third-party analytics or ads without compliance; confirm with counsel.
+- **Industry and regulation**: fintech and health need biometric re-auth, confirmation screens, privacy-safe notifications and widgets, and careful dynamic-color decisions where color carries meaning. Kids apps fall under COPPA (US) and the stores' kids programs: Apple's Kids Category bars links out, purchases and other distractions except behind a parental gate and restricts third-party analytics and ads (App Review 1.3); confirm with counsel.
 - **Price tier and archetype**: premium and luxury apps show restraint in chrome and spend craft on content typography and imagery; playful archetypes can use M3 Expressive shapes and springs, but navigation stays standard.
 - **Stack**: native gets new platform features first; React Native with Expo UI renders real native components; Flutter and Compose Multiplatform draw their own, so glass and Expressive effects may be approximations.
 

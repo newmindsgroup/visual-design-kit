@@ -131,13 +131,13 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 4px; }
 .btn small { font-size: 0.75rem; letter-spacing: 0.2em; opacity: 0.85; }
 
-.stage { display: grid; grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr); min-height: 720px; }
+.stage { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); min-height: 720px; }
 .stage-copy { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-8); padding: var(--space-10) var(--space-10) var(--space-12) var(--gutter); }
-.stage-copy .en { align-self: end; display: grid; gap: var(--space-6); max-width: 30ch; }
+.stage-copy .en { align-self: end; display: grid; gap: var(--space-6); max-width: 34ch; }
 .stage-copy .en h1 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 2.5vw, 2.375rem); line-height: 1.35; letter-spacing: 0.01em; text-wrap: balance; }
 .stage-copy .en p { font-size: 1rem; line-height: 1.8; color: var(--color-fg-muted); }
 .ja-head { display: flex; gap: var(--space-5); align-self: start; padding-top: var(--space-6); }
-.ja-head .main { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.5rem, 3.8vw, 3.5rem); line-height: 1.5; letter-spacing: 0.18em; height: 12.4em; }
+.ja-head .main { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.5rem, 3.8vw, 3.5rem); line-height: 1.6; letter-spacing: 0.16em; }
 .ja-head .sub { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.5em; color: var(--color-fg-muted); padding-top: 0.6em; }
 .shoji {
   position: relative; overflow: hidden;
@@ -190,7 +190,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 /* Type */
 .type-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0; border-top: 1px solid var(--color-border-default); }
 .tcell { padding: var(--space-10) var(--space-8) var(--space-10) 0; border-bottom: 1px solid var(--color-border-subtle); }
-.tcell + .tcell { padding-left: var(--space-8); border-left: 1px solid var(--color-border-subtle); }
+.tcell:nth-child(2n) { padding-left: var(--space-8); border-left: 1px solid var(--color-border-subtle); }
 .tcell .label { display: block; margin-bottom: var(--space-6); letter-spacing: 0.16em; }
 .t-ja-display { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.55; letter-spacing: 0.14em; }
 .t-en-display { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 2.125rem); line-height: 1.35; margin-top: var(--space-5); letter-spacing: 0.01em; }
@@ -263,7 +263,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .welcome { aspect-ratio: 100 / 148; background: #FBF8F1; color: var(--ky-sumi); position: relative; box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.7); padding: 13% 12%; display: flex; flex-direction: row-reverse; justify-content: space-between; background-image: radial-gradient(rgb(139 123 102 / 0.08) 1px, transparent 1.2px); background-size: 5px 5px; }
 .welcome .v1 { font-family: var(--font-family-display); font-size: clamp(1.375rem, 2.2vw, 1.75rem); letter-spacing: 0.3em; line-height: 1.9; writing-mode: vertical-rl; }
 .welcome .v2 { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.26em; line-height: 2.2; writing-mode: vertical-rl; color: var(--ky-usuzumi); align-self: center; }
-.welcome .seal { position: static; width: 34px; height: 34px; align-self: flex-end; }
+.welcome .seal { position: static; width: 34px; height: 34px; align-self: flex-start; }
 .welcome .en { position: absolute; left: 12%; bottom: 9%; right: 40%; font-family: var(--font-family-display); font-size: 0.8125rem; line-height: 1.6; color: var(--ky-usuzumi); letter-spacing: 0.02em; }
 .app-cap { color: #C9CCD0; font-size: 0.9375rem; line-height: 1.8; }
 .app-cap b { color: #ECE9E1; font-weight: 500; display: block; font-family: var(--font-family-display); font-size: 1.25rem; letter-spacing: 0.06em; margin-bottom: 8px; }
@@ -275,7 +275,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .img-copy p + p { margin-top: var(--space-5); color: var(--color-fg-muted); }
 .icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--color-border-default); border-left: 1px solid var(--color-border-subtle); margin-top: var(--space-10); }
 .icons figure { aspect-ratio: 1; border-right: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); display: grid; place-items: center; align-content: center; gap: 12px; }
-.icons svg { width: 34px; height: 34px; color: var(--ky-sumi); }
+.icons svg { width: 40px; height: 40px; color: var(--ky-sumi); }
 .icons figcaption { font-size: 0.6875rem; letter-spacing: 0.16em; color: var(--color-fg-muted); text-transform: uppercase; }
 .texture { position: relative; aspect-ratio: 4 / 3; background: #F3EFE6; overflow: hidden; }
 .texture svg { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -320,17 +320,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 }
 
 @media (max-width: 1100px) {
-  .topnav { display: none; }
+  .topbar nav { display: none; }
   .topbar { grid-template-columns: 1fr auto; }
   .stage { grid-template-columns: 1fr; }
-  .stage-copy { order: 2; padding: var(--space-10) var(--gutter); }
+  .stage-copy { order: 2; padding: var(--space-10) var(--gutter); grid-template-columns: minmax(0, 1fr) auto; }
   .shoji { min-height: 560px; }
   .strips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .strip { border-bottom: 1px solid var(--color-border-subtle); }
   .sec-head, .img-grid, .motion-grid { grid-template-columns: 1fr; gap: var(--space-4); }
   .pal-note { grid-template-columns: 1fr; }
   .type-grid, .comp-grid, .voice { grid-template-columns: 1fr; }
-  .tcell + .tcell, .comp:nth-child(2n), .vl + .vl { padding-left: 0; border-left: 0; }
+  .tcell:nth-child(2n), .comp:nth-child(2n), .vl + .vl { padding-left: 0; border-left: 0; }
   .apps, .card-wrap { grid-template-columns: 1fr; }
   .phone { margin-inline: auto; }
   .rat { grid-template-columns: 1fr; }
@@ -341,9 +341,12 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .lang { display: none; }
   .mark .ja { display: none; }
   .top-right .btn { min-height: 44px; padding: 0 16px; }
-  .stage-copy { grid-template-columns: 1fr auto; gap: var(--space-5); }
-  .ja-head { padding-top: 0; }
-  .ja-head .main { font-size: 1.875rem; height: 13em; letter-spacing: 0.14em; }
+  .stage-copy { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .booking .label { letter-spacing: 0.08em; }
+  .booking .val small { display: block; margin-left: 0; }
+  .ja-head { padding-top: 0; order: -1; justify-self: end; }
+  .stage-copy .en { max-width: none; }
+  .ja-head .main { font-size: 1.875rem; letter-spacing: 0.14em; }
   .ja-head .sub { font-size: 0.8125rem; }
   .shoji { min-height: 420px; }
   .shoji .lattice { background-size: 72px 100%, 100% 88px; background-position: 34px 0, 0 44px; }
@@ -434,7 +437,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       </div>
       <div class="ja-head" lang="ja" aria-hidden="true">
         <p class="sub vert">京都 東山 ・ 八室</p>
-        <p class="main vert">庭の音だけが、聞こえる宿。</p>
+        <p class="main vert">庭の音だけが、<br>聞こえる宿。</p>
       </div>
     </div>
     <div class="shoji" role="img" aria-label="Morning light through a shoji screen; the soft shadow of a maple branch falls across the paper lattice.">
@@ -481,7 +484,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class="type-grid">
       <div class="tcell">
         <span class="label">Display · Shippori Mincho 500 · 56px / 1.55 · tracking 0.14em</span>
-        <p class="t-ja-display" lang="ja">朝七時、縁側で朝食を。</p>
+        <p class="t-ja-display" lang="ja">朝七時、<br>縁側で朝食を。</p>
         <p class="t-en-display">Breakfast on the engawa, at seven.</p>
         <p class="t-caption" style="margin-top:12px">English display: Shippori Mincho 400 · 34px / 1.35. Same family, so the two languages read as one voice.</p>
       </div>
@@ -588,7 +591,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
                 <path d="M164 1v168" stroke="#23221F" stroke-width="2"/>
                 <rect x="176" y="12" width="92" height="146" fill="#DDE3D3"/>
                 <circle cx="206" cy="58" r="10" fill="#B8C2AA"/><circle cx="238" cy="104" r="14" fill="#B8C2AA"/><circle cx="214" cy="128" r="6" fill="#9AA58C"/>
-                <g font-family="Zen Kaku Gothic New, sans-serif" font-size="9" fill="#23221F" text-anchor="middle">
+                <g font-family="Zen Kaku Gothic New, sans-serif" font-size="11" fill="#23221F" text-anchor="middle">
                   <text x="70" y="88" lang="ja">八畳</text>
                   <text x="147" y="43" lang="ja">床の間</text>
                   <text x="147" y="103" lang="ja">檜風呂</text>
@@ -681,7 +684,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   <div class="wrap">
     <div class="sec-head"><span class="no">09</span><h2 id="voice-title">Voice <span lang="ja">言葉</span></h2><p>A host who speaks softly and precisely. Japanese in polite, unhurried teineigo; English plain and specific. Fewer adjectives than you think, and never "luxury".</p></div>
     <div class="voice">
-      <div class="vl"><span class="label">Headline</span><p class="ja" lang="ja">庭の音だけが、聞こえる宿。</p><p class="en">An inn where you hear only the garden.</p><p class="why">A sensory promise rather than a claim. The English is transcreated, not translated word for word.</p></div>
+      <div class="vl"><span class="label">Headline</span><p class="ja" lang="ja">庭の音だけが、<br>聞こえる宿。</p><p class="en">An inn where you hear only the garden.</p><p class="why">A sensory promise rather than a claim. The English is transcreated, not translated word for word.</p></div>
       <div class="vl"><span class="label">CTA</span><p class="ja" lang="ja">空室を確認する</p><p class="en">Check availability</p><p class="why">Asks, does not push. "Book now" would be the only urgent sentence on the site.</p></div>
       <div class="vl vl--err"><span class="label">Error</span><div class="box"><p class="ja" lang="ja">ご希望の日程は満室です。前後の空いている日をご案内します。</p><p class="en">Those nights are full. Here are the nearest open dates.</p></div><p class="why">Apologetic tone in Japanese, practical in English; both move straight to alternatives.</p></div>
     </div>

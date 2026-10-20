@@ -15,7 +15,7 @@ Checked against Apple's Human Interface Guidelines (developer.apple.com/design/h
 
 | Item | Default | Notes |
 | --- | --- | --- |
-| Design frame | 393x852pt (6.1-6.3 in class) and 440x956pt (largest Pro Max class); check 375x667pt for small devices | Common starting points; Apple removed the device table from the HIG layout page in Sept 2026 and points to Device Hub in Xcode, so verify current sizes there |
+| Design frame | 402x874pt (6.3 in: iPhone 17, 16 Pro, 17 Pro) or 393x852pt (6.1 in: iPhone 15, 16), and 440x956pt (Pro Max); check 375x667pt for small devices | Common starting points; Apple removed the device table from the HIG layout page in Sept 2026 and points to Device Hub in Xcode, so verify current sizes there |
 | Safe area | Always lay out inside `safeAreaInsets`; read them, never hardcode | Typical portrait insets: top 47-62pt on Face ID iPhones (Dynamic Island models at the high end), bottom 34pt for the home indicator. Landscape adds leading/trailing insets |
 | Side margins | 16pt on compact width; 20pt on wider iPhones and iPad regular width | Use the system layout margins (`layoutMargins`, SwiftUI default padding) rather than a fixed number |
 | Readable width | Constrain long text to the readable content guide (about 60-75 characters) | Matters on iPad and in landscape |

@@ -301,7 +301,16 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
     declared.set(family, (declared.get(family) || 0) + 1);
     if (isExcluded(el)) continue;
     contrast.textElements += 1;
-    const box = el.getBoundingClientRect();
+    // Use the painted extent of the element's own text, not its box, for the overlap test.
+    let box = null;
+    for (const n of el.childNodes) {
+      if (n.nodeType !== 3 || !n.textContent.trim()) continue;
+      const range = document.createRange(); range.selectNodeContents(n);
+      const r = range.getBoundingClientRect();
+      if (!r.width || !r.height) continue;
+      box = box ? { left: Math.min(box.left, r.left), right: Math.max(box.right, r.right), top: Math.min(box.top, r.top), bottom: Math.max(box.bottom, r.bottom) } : { left: r.left, right: r.right, top: r.top, bottom: r.bottom };
+    }
+    box = box || el.getBoundingClientRect();
     let reason = null; let approximate = false; const layers = [];
     for (let a = el; a; a = a.parentElement) {
       const s = getComputedStyle(a);

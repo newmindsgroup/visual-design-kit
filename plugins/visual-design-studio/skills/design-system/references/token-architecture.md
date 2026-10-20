@@ -2,7 +2,7 @@
 
 Version-Timestamp: 2026-10-20 02:08:24 UTC
 
-Design tokens are named design decisions stored once and compiled to every platform. The kit's source of truth is `library/tokens/src/*.tokens.json` in W3C Design Tokens Community Group (DTCG) format; [the tokens README](../../../library/tokens/README.md) documents the files, and [tokens.py](../../../library/scripts/tokens.py) builds, lints and checks them. Names and tiers are fixed by the kit's token contract (`.claude/skills/design-kit-authoring/references/token-contract.md` in the repository).
+Design tokens are named design decisions stored once and compiled to every platform. The kit's source of truth is `library/tokens/src/*.tokens.json` in W3C Design Tokens Community Group (DTCG) format ([sources](../../../library/tokens/src/); file guide in `library/tokens/README.md`), and [tokens.py](../../../library/scripts/tokens.py) builds, lints and checks them. Names and tiers are fixed by the kit's token contract (`.claude/skills/design-kit-authoring/references/token-contract.md` in the repository).
 
 ## The format (DTCG 2025.10)
 
