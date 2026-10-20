@@ -12,3 +12,5 @@ plugins/visual-design-studio/library/examples/react-system/dist/
 test-results/
 playwright-report/
 qa-output/
+plugins/visual-design-studio/library/examples/astro-motion/dist/
+plugins/visual-design-studio/library/examples/astro-motion/.astro/

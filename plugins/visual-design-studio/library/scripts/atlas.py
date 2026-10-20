@@ -39,6 +39,8 @@ SECTIONS = {
 }
 TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} [A-Z]{2,5}$")
 LIMITS = {"tags": (4, 10), "pairs_with": (3, 10), "avoid_with": (0, 6)}
+BODY_ID = re.compile(r"(?<![\w./-])((?:style|industry|market|audience|archetype|tier|channel)\.[a-z0-9]+(?:-[a-z0-9]+)*)(?![\w-])")
+FILE_SUFFIXES = {"css", "js", "json", "md", "html", "svg", "png", "mjs", "ts"}
 STOP = set("a an and the for of to in on with by at or is are be our we my your app apps site website brand new".split())
 
 
@@ -132,6 +134,11 @@ def check_entry(path, registry, root=ATLAS):
                 errors.append(f"{rel}: {key} references itself")
     if set(meta["pairs_with"]) & set(meta["avoid_with"]):
         errors.append(f"{rel}: an id appears in both pairs_with and avoid_with")
+    for ref in sorted(set(BODY_ID.findall(body))):
+        if ref.split(".", 1)[1] in FILE_SUFFIXES:
+            continue
+        if ref not in registry:
+            errors.append(f"{rel}: body mentions unknown atlas id {ref}")
     if axis in SECTIONS:
         found, content = sections_of(body)
         required = SECTIONS[axis]

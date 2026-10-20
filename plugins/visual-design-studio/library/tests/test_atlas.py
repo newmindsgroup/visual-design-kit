@@ -70,6 +70,11 @@ class AtlasFixture(unittest.TestCase):
         self.assertTrue(any("references itself" in error for error in errors))
         self.assertTrue(any("unknown id market.nowhere" in error for error in errors))
 
+    def test_unknown_ids_in_body_fail(self):
+        self.write(entry().replace("- line 0", "- see `industry.beta` and industry.nope and style.css", 1))
+        errors, _, _ = atlas.validate(self.root)
+        self.assertEqual([e for e in errors if "body mentions" in e], ["styles/alpha.md: body mentions unknown atlas id industry.nope"])
+
     def test_thin_entries_and_bad_summaries_fail(self):
         self.write(entry(summary="too short", body_lines=1))
         errors, _, _ = atlas.validate(self.root)

@@ -1,0 +1,95 @@
+{
+  "Version-Timestamp": "2026-10-20 01:42:00 UTC",
+  "counts": {
+    "industry": 1,
+    "style": 1
+  },
+  "total": 2,
+  "entries": [
+    {
+      "id": "industry.fintech-banking",
+      "axis": "industry",
+      "name": "Fintech and Banking",
+      "aliases": [
+        "fintech",
+        "banking",
+        "neobank",
+        "bank",
+        "payments",
+        "personal finance",
+        "wealth management",
+        "lending",
+        "credit union"
+      ],
+      "summary": "Money products where trust, clarity and control come first; differentiation now comes from tone, craft and transparency rather than blue-and-shield symbolism.",
+      "tags": [
+        "finance",
+        "banking",
+        "payments",
+        "money",
+        "trust",
+        "fintech",
+        "neobank",
+        "wealth",
+        "lending",
+        "security"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.corporate-modern",
+        "style.quiet-minimal",
+        "style.neo-brutalist",
+        "archetype.ruler",
+        "archetype.sage",
+        "archetype.everyperson",
+        "channel.native-app",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "archetype.jester"
+      ],
+      "path": "industries/fintech-banking.md"
+    },
+    {
+      "id": "style.swiss-international",
+      "axis": "style",
+      "name": "Swiss / International Typographic Style",
+      "aliases": [
+        "swiss style",
+        "international typographic style",
+        "international style",
+        "grid modernism",
+        "swiss design"
+      ],
+      "summary": "Objective, grid-driven design with asymmetric layouts, grotesque sans-serif type, flat color and photography; clarity itself is the aesthetic.",
+      "tags": [
+        "grid",
+        "sans-serif",
+        "typographic",
+        "modernist",
+        "objective",
+        "asymmetric",
+        "flat",
+        "systematic"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.saas-b2b",
+        "industry.legal-professional-services",
+        "industry.events-conferences",
+        "archetype.sage",
+        "archetype.ruler",
+        "channel.presentation",
+        "channel.environmental-wayfinding"
+      ],
+      "avoid_with": [
+        "audience.children-under-13",
+        "archetype.jester",
+        "style.maximalist-eclectic"
+      ],
+      "path": "styles/swiss-international.md"
+    }
+  ]
+}
