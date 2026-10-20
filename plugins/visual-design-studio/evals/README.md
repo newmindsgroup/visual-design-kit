@@ -1,6 +1,6 @@
 # Evals
 
-Version-Timestamp: 2026-10-20 10:31:13 UTC
+Version-Timestamp: 2026-10-20 12:05:00 UTC
 
 Behavioral evals for the Visual Design Studio plugin, in the `claude plugin eval` format: each case is a folder with `prompt.md` (the user request and run limits) and `graders/*.md` (LLM rubric, file checks and skill-firing indicators).
 
@@ -69,4 +69,15 @@ Add a case whenever a real project exposes a failure: describe the request in `p
 Total spend for these runs: about $0.30. One run per arm is a smoke test; use `--runs 3` or more before drawing conclusions.
 
 
-`typography-longform-defaults` was removed on 2026-10-20 because it passed without the plugin; `typography-bilingual-annual-report` replaces it. Pilot format checks of the new suite (`--runs 1 --ablation none`): `no-fire-sql-query` 1.00 ($0.04), `japan-vertical-editorial` 1.00 ($0.18). The full ablation run is pending.
+`typography-longform-defaults` was removed on 2026-10-20 because it passed without the plugin; `typography-bilingual-annual-report` replaces it. Pilot format checks of the new suite (`--runs 1 --ablation none`): `no-fire-sql-query` 1.00 ($0.04), `japan-vertical-editorial` 1.00 ($0.18).
+
+## 0.6.0 results (2026-10-20, Claude Code 2.1.304, judge haiku)
+
+**Full suite, one run per arm, before fixes** ($4.24, 32 cases): overall 0.64 with the plugin. Clear lift on `japan-vertical-editorial` (+0.80), `arabic-rtl-hero` (+0.75), `brazil-pix-checkout` (+0.60) and `typography-bilingual-annual-report` (+0.25). The main defect: the expected skill loaded in only 8 of the 21 with-plugin runs that track skill firing, so many cases measured Claude without the kit. Two regressions traced to the kit: a thin logo brief drew 7 questions, and `director-distinct-scored` had no sensitivity check.
+
+**Fixes:** eight skill descriptions now open with when to load them ("Load before answering any ... question, even a quick one"). `design-director` has non-negotiables for at most 4 questions, a pairwise distinctness line and a sensitivity line. `brand-identity` caps thin-brief questions at 4. The `grade` regex now accepts "5th-6th grade".
+
+**Re-run of the 15 affected cases, with plugin only** ($1.34): the skill loaded in 14 of 15. Moved to 1.00: `critique-ai-tells`, `direction-genz-neobank-brazil`, `kids-coppa-onboarding`, `locked-brand-careers-site`, `neurodivergent-focus-app` and `qualifying-questions-vague-logo` (the regression is fixed). Still below the bar: `critique-described-pricing`, `dataviz-nine-categories`, `director-distinct-scored`, `email-dark-mode`, `low-literacy-benefits-form`, `packaging-luxury-vs-value`, `quebec-french-launch` and `tokens-dark-mode-contrast`. A read of these responses shows mostly strong answers failing one clause of an all-of rubric, so the next loop is grader hardening (split rubrics into weighted graders) plus `--runs 3`, then skill fixes where a clause is a real gap. `pharma-promo-fair-balance` passes its graders but did not load a skill.
+
+Total eval spend for 0.6.0: about $5.70, under the $15 cap.
+

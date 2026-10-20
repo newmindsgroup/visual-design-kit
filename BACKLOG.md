@@ -11,7 +11,9 @@ Version-Timestamp: 2026-10-20 11:00:00 UTC
 - [x] `figma-workflow` skill and `compare_build.mjs` build-fidelity diff.
 - [x] Spec radar (`tools/spec_radar.py`, `docs/SPEC-RADAR.md`) and a monthly scheduled review.
 - [x] Private companion scaffold (taste profile, references, outcomes log) prepared outside this repository.
-- [ ] Run 3 repeats on cases that are low, split or near the lift bar (with >= 0.67, delta >= +0.33); fix skills one at a time with the eval loop.
+- [x] Full eval run (one per arm) and a targeted re-run after fixes: skill loading rose from 8/21 to 14/15 tracked runs (see RELEASE-060).
+- [ ] Harden the eight all-of rubrics that still fail strong answers (critique-described-pricing, dataviz-nine-categories, director-distinct-scored, email-dark-mode, low-literacy-benefits-form, packaging-luxury-vs-value, quebec-french-launch, tokens-dark-mode-contrast) into weighted graders, then `--runs 3` with ablation; fix skills one at a time with the eval loop.
+- [ ] Make `pharma-promo-fair-balance` load a skill (it passes on Claude's own knowledge).
 - [ ] Exercise `figma-workflow` against a live Figma file through the Figma MCP server; confirm plan limits marked "verify".
 - [ ] Confirm the `visual-design-studio:<agent>` invocation name on each host; confirm Codex ignores agents cleanly.
 - [ ] Attach the repository and GitHub connector to the monthly spec radar scheduled task so it can open PRs.

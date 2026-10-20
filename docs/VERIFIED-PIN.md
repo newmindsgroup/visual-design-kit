@@ -73,3 +73,17 @@ SHA-256 of plugins/visual-design-studio/PAYLOAD.sha256:
 ```
 
 All 898 listed payload files verified locally with `sha256sum -c`; the payload file set matches the git-tracked plugin files exactly. This pin establishes exact candidate bytes, not production or aesthetic approval. A maintainer should re-verify on a receiving machine before relying on it; existing project pins are unaffected. Evidence: [edition record](RELEASE-050.md).
+
+## 0.6.0 candidate
+
+Version-Timestamp: 2026-10-20 12:10:00 UTC
+
+Package version: 0.6.0 candidate on branch `feat/wave-2-design-ops` (PR #6). Built with `tools/build_plugin.py --version 0.6.0 --timestamp "2026-10-20 12:10:00 UTC"`.
+
+SHA-256 of plugins/visual-design-studio/PAYLOAD.sha256:
+
+```text
+41558f63e2643b095af31e1e2831e5b26de92bab1adab4079288ce40279b4834
+```
+
+All 990 listed payload files were verified locally with `sha256sum -c`, and the payload file set matches the git-tracked plugin files exactly. This pin fixes the exact candidate bytes. It is not production or aesthetic approval. Existing project pins are unaffected. Evidence: [edition record](RELEASE-060.md).
