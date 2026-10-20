@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareFill: Plain and Sure | Stylescape 10</title>
+<meta name="description" content="Stylescape for CareFill, a fictional prescription refill and reminder app for adults 65 and over. Direction: Plain and Sure. Civic plain meets clinical calm, Caregiver archetype, native app.">
+<style>
+@font-face { font-family: "Public Sans"; src: url("../fonts/public-sans/public-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+
+:root {
+  --color-bg-canvas: #FFFFFF;          /* Paper */
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #F3F5F8;          /* Mist */
+  --color-bg-inverse: #0B1B2B;         /* Ink */
+  --color-fg-default: #0B1B2B;
+  --color-fg-muted: #3D4B5C;           /* Slate: 8.90:1, still body-safe */
+  --color-fg-subtle: #5A6878;
+  --color-fg-inverse: #FFFFFF;
+  --color-fg-on-accent: #FFFFFF;
+  --color-border-subtle: #C9D2DD;
+  --color-border-default: #5A6878;
+  --color-border-strong: #0B1B2B;
+  --color-accent-default: #1D4F91;     /* Care blue */
+  --color-accent-hover: #163E73;
+  --color-accent-active: #102F58;
+  --color-accent-subtle: #E8EEF7;
+  --color-accent-fg: #1D4F91;
+  --color-success-fg: #155C30; --color-success-bg: #E5F2E8; --color-success-border: #155C30;
+  --color-warning-fg: #6B4500; --color-warning-bg: #FFF1C2; --color-warning-border: #6B4500;
+  --color-danger-fg: #B42318;  --color-danger-bg: #FDECEA;  --color-danger-border: #B42318;
+  --color-info-fg: #1D4F91;    --color-info-bg: #E8EEF7;    --color-info-border: #1D4F91;
+  --color-focus-ring: #FFDD00;         /* civic yellow focus, with an ink underline */
+  --color-overlay-scrim: rgb(11 27 43 / 0.6);
+
+  --font-family-display: "Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-family-body: "Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-family-mono: ui-monospace, Menlo, Consolas, monospace;
+  /* Older-adult scale: everything one step up from the contract defaults */
+  --font-size-xs: 1rem; --font-size-sm: 1.125rem; --font-size-md: 1.25rem; --font-size-lg: 1.5rem; --font-size-xl: 1.875rem;
+  --font-size-2xl: 2.25rem; --font-size-3xl: 2.75rem; --font-size-4xl: 3.5rem; --font-size-5xl: 4.25rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --measure-body: 60ch;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 48px;             /* raised from 24px for this audience */
+  --size-target-comfortable: 56px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --border-width-thin: 2px; --border-width-thick: 4px;
+  --shadow-sm: 0 1px 2px rgb(11 27 43 / 0.12);
+  --shadow-md: 0 2px 6px rgb(11 27 43 / 0.12);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) { :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.25rem; line-height: 1.5; -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums; }
+svg { display: block; max-width: 100%; }
+a { color: var(--color-accent-default); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:hover { color: var(--color-accent-hover); text-decoration-thickness: 3px; }
+/* Civic focus: yellow fill with ink underline, impossible to miss */
+:focus-visible { outline: 3px solid transparent; background-color: var(--color-focus-ring) !important; color: var(--color-fg-default) !important; box-shadow: 0 -2px var(--color-focus-ring), 0 4px var(--color-fg-default) !important; text-decoration: none; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.tabnum { font-variant-numeric: tabular-nums; }
+
+/* ---------- 1. Direction ---------- */
+#direction { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-8); align-items: center; padding-block: var(--space-5); }
+#direction .no { font-size: 1rem; font-weight: 700; color: #C9D8EE; }
+#direction h1 { margin: 0; font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+#direction h1 span { font-weight: 400; }
+#direction .brief { grid-column: 1 / -1; margin: 0; font-size: 1.125rem; color: #DDE4EC; max-width: 90ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 1rem; padding: 4px 12px; border: 2px solid #8FA3BA; border-radius: var(--radius-sm); }
+#direction a { color: #FFFFFF; font-weight: 700; display: inline-flex; align-items: center; min-height: 48px; }
+
+/* ---------- 2. Hero ---------- */
+#hero { background: var(--color-bg-canvas); border-bottom: 2px solid var(--color-border-subtle); overflow: hidden; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-5); border-bottom: 4px solid var(--color-accent-default); }
+.logo { display: inline-flex; align-items: center; gap: 12px; color: var(--color-fg-default); text-decoration: none; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; min-height: 48px; }
+.logo svg { width: 44px; height: 44px; }
+.topbar nav ul { display: flex; gap: var(--space-8); list-style: none; margin: 0; padding: 0; }
+.topbar nav a { display: inline-flex; align-items: center; min-height: 48px; font-weight: 600; color: var(--color-fg-default); }
+.helpline { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--color-fg-default); text-decoration: none; min-height: 48px; }
+.helpline svg { width: 28px; height: 28px; color: var(--color-accent-default); }
+.helpline small { display: block; font-size: 1rem; font-weight: 400; color: var(--color-fg-muted); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: center; padding-block: var(--space-16) 0; }
+.hero-copy { padding-bottom: var(--space-16); }
+.hero-copy h2 { margin: 0 0 var(--space-6); font-size: clamp(2.75rem, 4.6vw, 4.25rem); line-height: 1.05; font-weight: 800; letter-spacing: -0.025em; }
+.hero-copy h2 span { color: var(--color-accent-default); }
+.lead { font-size: 1.5rem; line-height: 1.45; margin: 0 0 var(--space-8); max-width: 30ch; }
+.checks { list-style: none; margin: 0 0 var(--space-10); padding: 0; display: grid; gap: var(--space-3); }
+.checks li { display: flex; gap: 12px; align-items: flex-start; font-size: 1.25rem; }
+.checks svg { flex: none; width: 28px; height: 28px; margin-top: 1px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.store-note { margin: var(--space-4) 0 0; font-size: 1.125rem; color: var(--color-fg-muted); }
+
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 12px 28px; border-radius: var(--radius-sm); border: 2px solid transparent; font-family: inherit; font-size: 1.25rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--duration-moderate) var(--ease-standard); }
+.btn svg { width: 26px; height: 26px; flex: none; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); box-shadow: 0 3px 0 var(--color-accent-active); }
+.btn-primary:hover { background: var(--color-accent-hover); color: #fff; }
+.btn-primary:active { transform: translateY(2px); box-shadow: none; }
+.btn-go { background: var(--color-success-fg); color: #fff; box-shadow: 0 3px 0 #0C3D1E; }
+.btn-secondary { background: var(--color-bg-canvas); color: var(--color-accent-default); border-color: var(--color-accent-default); }
+.btn-secondary:hover { background: var(--color-accent-subtle); }
+.btn[disabled] { background: #E4E8ED; color: #4F5D6C; box-shadow: none; cursor: not-allowed; }
+.btn.is-focus { background: var(--color-focus-ring); color: var(--color-fg-default); box-shadow: 0 4px 0 var(--color-fg-default); }
+
+/* Phones shown at actual size (375pt wide) */
+.phones { position: relative; height: 820px; }
+.phones::before { content: ""; position: absolute; inset: 60px -20% 0 6%; background: var(--color-accent-subtle); border-radius: 24px 24px 0 0; }
+.phone { position: absolute; width: 399px; padding: 12px; border-radius: 56px; background: #0B1B2B; box-shadow: 0 30px 60px -30px rgb(11 27 43 / 0.5); }
+.phone .scr { position: relative; height: 784px; border-radius: 44px; overflow: hidden; background: #FFFFFF; font-size: 20px; line-height: 1.4; }
+.ph-1 { inset-inline-start: 2%; top: 0; z-index: 2; }
+.ph-2 { inset-inline-start: 62%; top: 110px; zoom: 0.86; }
+.sbar { display: flex; justify-content: space-between; align-items: center; height: 50px; padding: 0 28px 0 32px; font-size: 16px; font-weight: 700; }
+.sbar span:last-child { display: flex; gap: 6px; align-items: center; }
+.app-h { padding: 6px 22px 14px; }
+.app-h .greet { margin: 0; font-size: 28px; font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; }
+.app-h .date { margin: 2px 0 0; font-size: 18px; color: var(--color-fg-muted); }
+.now { margin: 0 14px; border: 3px solid var(--color-accent-default); border-radius: var(--radius-lg); padding: 16px 16px 18px; }
+.now .when { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.pill-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--color-accent-default); color: #fff; font-size: 17px; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); }
+.now .time { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.med { display: grid; grid-template-columns: 64px 1fr; gap: 14px; align-items: center; margin-bottom: 14px; }
+.med .pic { width: 64px; height: 64px; border-radius: 12px; background: var(--color-bg-sunken); display: grid; place-items: center; }
+.med b { display: block; font-size: 24px; line-height: 1.15; }
+.med span { display: block; font-size: 19px; color: var(--color-fg-muted); line-height: 1.3; }
+.now .btn { width: 100%; min-height: 60px; font-size: 22px; }
+.now .later { display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: 6px; font-size: 19px; font-weight: 700; }
+.list-h { margin: 18px 22px 6px; font-size: 18px; font-weight: 700; color: var(--color-fg-muted); text-transform: none; }
+.row { display: grid; grid-template-columns: 96px 1fr auto; gap: 10px; align-items: center; min-height: 72px; margin: 0 14px; padding: 8px; border-bottom: 2px solid var(--color-border-subtle); }
+.row .t { font-size: 19px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.row b { display: block; font-size: 20px; line-height: 1.2; }
+.row span.s { font-size: 17px; color: var(--color-fg-muted); }
+.row .ok { color: var(--color-success-fg); display: flex; align-items: center; gap: 4px; font-size: 17px; font-weight: 700; }
+.row .ok svg { width: 26px; height: 26px; }
+.tabs { position: absolute; inset-inline: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--color-border-subtle); background: #fff; padding: 6px 6px 24px; }
+.tabs span { display: grid; justify-items: center; gap: 2px; min-height: 64px; padding-top: 6px; font-size: 16px; font-weight: 700; color: var(--color-fg-muted); border-radius: 10px; }
+.tabs span.on { color: var(--color-accent-default); background: var(--color-accent-subtle); }
+.tabs svg { width: 28px; height: 28px; }
+/* Refill screen */
+.rf { padding: 8px 22px; }
+.rf .back { display: flex; align-items: center; gap: 6px; min-height: 48px; font-size: 19px; font-weight: 700; color: var(--color-accent-default); }
+.rf .done { display: flex; gap: 14px; align-items: center; background: var(--color-success-bg); border-inline-start: 6px solid var(--color-success-fg); padding: 16px; margin: 8px 0 18px; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+.rf .done svg { width: 44px; height: 44px; flex: none; }
+.rf .done b { font-size: 26px; line-height: 1.15; color: var(--color-success-fg); }
+.rf dl { margin: 0 0 18px; display: grid; gap: 14px; }
+.rf dt { font-size: 17px; font-weight: 700; color: var(--color-fg-muted); }
+.rf dd { margin: 0; font-size: 21px; line-height: 1.35; }
+.rf dd b { font-size: 22px; }
+.rf .btn { width: 100%; margin-bottom: 12px; font-size: 21px; }
+.share { display: flex; align-items: center; gap: 10px; font-size: 18px; color: var(--color-fg-muted); margin-top: 6px; }
+.share i { width: 36px; height: 36px; border-radius: 50%; background: #D6E0EE; color: var(--color-fg-default); font-style: normal; font-weight: 800; display: grid; place-items: center; font-size: 16px; }
+
+/* ---------- Section frame ---------- */
+.section { padding-block: clamp(4rem, 7vw, 6rem); border-bottom: 2px solid var(--color-border-subtle); }
+.sec-h { margin-bottom: var(--space-10); max-width: 70ch; }
+.sec-h .num { display: inline-block; font-size: 1.125rem; font-weight: 700; color: var(--color-accent-default); margin-bottom: var(--space-2); }
+.sec-h h2 { margin: 0 0 var(--space-4); font-size: clamp(2.25rem, 4vw, 3rem); line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; padding-bottom: var(--space-3); border-bottom: 4px solid var(--color-fg-default); display: inline-block; }
+.sec-h p { margin: 0; font-size: 1.375rem; line-height: 1.5; color: var(--color-fg-default); }
+.inset { border-inline-start: 6px solid var(--color-accent-default); background: var(--color-bg-sunken); padding: var(--space-5) var(--space-6); margin: var(--space-8) 0 0; font-size: 1.25rem; max-width: 70ch; }
+
+/* ---------- 3. Palette ---------- */
+.pal { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); list-style: none; margin: 0; padding: 0; }
+.pal li { border: 2px solid var(--color-border-subtle); border-radius: var(--radius-md); overflow: hidden; }
+.pal .chip { height: 120px; display: flex; align-items: flex-end; padding: 14px 16px; font-size: 1.375rem; font-weight: 800; }
+.pal .info { padding: 14px 16px 16px; font-size: 1.0625rem; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.pal .info b { display: block; font-size: 1.125rem; }
+.pal .info .r { display: inline-block; margin-top: 6px; font-weight: 700; }
+
+/* ---------- 4. Type ---------- */
+.type-rows { display: grid; gap: 0; border-top: 2px solid var(--color-fg-default); }
+.trow { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-10); padding-block: var(--space-8); border-bottom: 2px solid var(--color-border-subtle); align-items: start; }
+.trow .spec { font-size: 1.0625rem; line-height: 1.55; color: var(--color-fg-muted); }
+.trow .spec b { display: block; color: var(--color-fg-default); font-size: 1.25rem; }
+.t-d { margin: 0; font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1.05; font-weight: 800; letter-spacing: -0.025em; }
+.t-b { margin: 0; font-size: 1.25rem; line-height: 1.5; max-width: 60ch; }
+.t-b + .t-b { margin-top: 1em; }
+.t-c { margin: 0; font-size: 1.125rem; line-height: 1.45; color: var(--color-fg-muted); }
+.t-n { font-size: 2.5rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; margin: 0; }
+.compare { display: flex; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-4); align-items: baseline; }
+.compare span { font-size: 1rem; color: var(--color-fg-muted); }
+
+/* ---------- 5. Components ---------- */
+.comp { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-8); }
+.box { grid-column: span 6; border: 2px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-8); }
+.box > h3 { margin: 0 0 var(--space-6); font-size: 1.375rem; font-weight: 800; }
+.btn-stack { display: grid; gap: var(--space-5); justify-items: start; }
+.btn-stack p { margin: 0; font-size: 1.0625rem; color: var(--color-fg-muted); }
+.field { display: grid; gap: 8px; margin-bottom: var(--space-6); }
+.field label { font-size: 1.375rem; font-weight: 700; }
+.field .hint { font-size: 1.125rem; color: var(--color-fg-muted); line-height: 1.45; }
+.field input { font: inherit; font-size: 1.5rem; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; min-height: 60px; padding: 0 16px; border: 2px solid var(--color-fg-default); border-radius: 0; width: 100%; max-width: 16ch; background: #fff; color: var(--color-fg-default); }
+.field input:focus-visible { box-shadow: inset 0 0 0 2px var(--color-fg-default) !important; outline: 4px solid var(--color-focus-ring); outline-offset: 0; background: #fff !important; }
+.field.err { border-inline-start: 6px solid var(--color-danger-border); padding-inline-start: var(--space-5); }
+.field.err input { border-width: 4px; border-color: var(--color-danger-border); }
+.field .error { font-size: 1.25rem; font-weight: 700; color: var(--color-danger-fg); display: flex; gap: 8px; align-items: flex-start; }
+.field .error svg { flex: none; width: 28px; height: 28px; }
+.badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: var(--space-6); }
+.badge { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 14px 4px 10px; border-radius: var(--radius-sm); font-size: 1.125rem; font-weight: 700; border: 2px solid currentColor; }
+.badge svg { width: 24px; height: 24px; }
+.bd-taken { color: var(--color-success-fg); background: var(--color-success-bg); }
+.bd-due { color: var(--color-warning-fg); background: var(--color-warning-bg); }
+.bd-missed { color: var(--color-danger-fg); background: var(--color-danger-bg); }
+.bd-refill { color: var(--color-info-fg); background: var(--color-info-bg); }
+.medcard { display: grid; grid-template-columns: 88px 1fr; gap: var(--space-5); border: 2px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--space-5); }
+.medcard .pic { width: 88px; height: 88px; border-radius: 14px; background: var(--color-bg-sunken); display: grid; place-items: center; }
+.medcard h4 { margin: 0; font-size: 1.625rem; line-height: 1.2; }
+.medcard p { margin: 4px 0 0; font-size: 1.1875rem; color: var(--color-fg-muted); }
+.medcard .meta { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: var(--space-4) 0; font-size: 1.125rem; }
+.medcard .meta dt { font-weight: 700; }
+.medcard .meta dd { margin: 0; }
+.medcard a { display: inline-flex; align-items: center; min-height: 48px; font-weight: 700; }
+
+/* ---------- 6. Applications ---------- */
+.apps { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
+.lock { width: 100%; max-width: 420px; margin-inline: auto; border-radius: 48px; padding: 12px; background: #0B1B2B; }
+.lock .scr { border-radius: 38px; overflow: hidden; background: linear-gradient(170deg, #34506F, #142A40 70%); color: #fff; padding: 22px 16px 28px; min-height: 560px; display: flex; flex-direction: column; }
+.lock .clock { text-align: center; font-size: 18px; font-weight: 600; margin-top: 8px; }
+.lock .clock b { display: block; font-size: 84px; font-weight: 300; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.notif { margin-top: auto; background: rgb(255 255 255 / 0.96); color: var(--color-fg-default); border-radius: 22px; padding: 16px 18px; }
+.notif .app { display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700; color: var(--color-fg-muted); margin-bottom: 6px; }
+.notif .app span:first-child { display: flex; align-items: center; gap: 8px; }
+.notif .app svg { width: 24px; height: 24px; }
+.notif b { display: block; font-size: 21px; line-height: 1.25; }
+.notif p { margin: 4px 0 12px; font-size: 19px; line-height: 1.35; }
+.notif .acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.notif .acts span { display: grid; place-items: center; min-height: 52px; border-radius: 12px; font-size: 18px; font-weight: 700; background: var(--color-accent-subtle); color: var(--color-accent-default); }
+.notif .acts span:first-child { background: var(--color-success-fg); color: #fff; }
+.sms { margin-top: 10px; background: rgb(255 255 255 / 0.96); color: var(--color-fg-default); border-radius: 22px; padding: 14px 18px; font-size: 19px; line-height: 1.35; }
+.sms small { display: block; font-size: 15px; font-weight: 700; color: var(--color-fg-muted); margin-bottom: 4px; }
+.chart { background: #fff; border: 2px solid var(--color-border-subtle); box-shadow: 0 24px 40px -28px rgb(11 27 43 / 0.45); padding: 36px 40px; aspect-ratio: 8.5 / 11; max-width: 640px; margin-inline: auto; display: flex; flex-direction: column; }
+.chart header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 4px solid var(--color-fg-default); padding-bottom: 12px; margin-bottom: 14px; gap: 12px; }
+.chart h4 { margin: 0; font-size: 30px; line-height: 1.1; font-weight: 800; }
+.chart header p { margin: 4px 0 0; font-size: 17px; }
+.chart header .logo { font-size: 18px; gap: 8px; min-height: 0; }
+.chart header .logo svg { width: 28px; height: 28px; }
+.chart table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.chart th, .chart td { border: 2px solid var(--color-fg-default); padding: 6px 6px; text-align: center; }
+.chart th { font-size: 15px; background: var(--color-bg-sunken); }
+.chart td:first-child, .chart th:first-child { text-align: start; width: 44%; }
+.chart td:first-child b { display: block; font-size: 17px; }
+.chart td:first-child span { font-size: 14px; color: var(--color-fg-muted); }
+.chart td .bx { display: inline-block; width: 24px; height: 24px; border: 2px solid var(--color-fg-default); border-radius: 3px; vertical-align: middle; }
+.chart td .bx.x { background: linear-gradient(45deg, transparent 44%, var(--color-fg-default) 44% 56%, transparent 56%), linear-gradient(-45deg, transparent 44%, var(--color-fg-default) 44% 56%, transparent 56%); }
+.chart .tm { font-variant-numeric: tabular-nums; font-weight: 700; }
+.chart-help { margin-top: 18px; padding: 12px 14px; border-inline-start: 6px solid var(--color-accent-default); background: var(--color-accent-subtle); font-size: 17px; line-height: 1.4; }
+.chart-notes { margin-top: 18px; font-size: 17px; }
+.chart-notes span { display: block; height: 34px; border-bottom: 2px solid var(--color-border-subtle); }
+.chart footer { margin-top: auto; padding-top: 12px; font-size: 16px; border-top: 2px solid var(--color-border-subtle); display: flex; justify-content: space-between; gap: 12px; }
+.cap { text-align: center; font-size: 1.0625rem; color: var(--color-fg-muted); margin: var(--space-3) 0 0; }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-12); }
+.img-grid p { margin: 0 0 var(--space-5); max-width: 56ch; }
+.icons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); list-style: none; margin: var(--space-6) 0 0; padding: 0; }
+.icons li { display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 12px 16px; border: 2px solid var(--color-border-subtle); border-radius: var(--radius-md); font-size: 1.25rem; font-weight: 700; }
+.icons svg { width: 40px; height: 40px; flex: none; fill: none; stroke: var(--color-accent-default); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.pills { background: var(--color-bg-sunken); border-radius: var(--radius-lg); padding: var(--space-8); }
+.pills h3 { margin: 0 0 var(--space-2); font-size: 1.375rem; }
+.pills > p { font-size: 1.125rem; color: var(--color-fg-muted); margin: 0 0 var(--space-6); }
+.pill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.pill-grid figure { margin: 0; background: #fff; border: 2px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 16px; display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; }
+.pill-grid svg { width: 96px; height: 72px; }
+.pill-grid figcaption { font-size: 1.0625rem; line-height: 1.4; }
+.pill-grid figcaption b { display: block; font-size: 1.1875rem; }
+
+/* ---------- 8. Motion ---------- */
+.motion { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-12); align-items: start; }
+.mt { width: 100%; border-collapse: collapse; font-size: 1.125rem; }
+.mt th, .mt td { text-align: start; padding: 12px 12px 12px 0; border-bottom: 2px solid var(--color-border-subtle); vertical-align: top; }
+.mt th { border-bottom: 4px solid var(--color-fg-default); }
+.mt code { font-family: var(--font-family-mono); font-size: 0.9375rem; white-space: nowrap; display: inline-block; }
+.demo { border: 2px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-8); }
+.demo .med { margin-bottom: var(--space-5); }
+.take { position: relative; width: 100%; min-height: 64px; font-size: 1.375rem; overflow: hidden; }
+.take .ck { width: 30px; height: 30px; }
+.take .ck path { stroke-dasharray: 30; stroke-dashoffset: 30; }
+.take[aria-pressed="true"] { background: var(--color-success-bg); color: var(--color-success-fg); border-color: var(--color-success-fg); box-shadow: none; transition: background-color var(--duration-slow) var(--ease-standard), color var(--duration-slow) var(--ease-standard); }
+.take[aria-pressed="true"] .ck path { stroke-dashoffset: 0; transition: stroke-dashoffset var(--duration-slow) var(--ease-decelerate) 80ms; }
+.demo .note { margin: var(--space-4) 0 0; font-size: 1.125rem; color: var(--color-fg-muted); }
+.undo { display: none; margin-top: var(--space-3); }
+.take[aria-pressed="true"] + .undo { display: inline-flex; }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.voice figure { margin: 0; border-top: 6px solid var(--color-accent-default); padding-top: var(--space-5); }
+.voice figure.e { border-top-color: var(--color-danger-border); }
+.voice .k { font-size: 1.125rem; font-weight: 700; color: var(--color-fg-muted); margin: 0 0 var(--space-3); }
+.voice blockquote { margin: 0 0 var(--space-4); font-size: 2rem; line-height: 1.15; font-weight: 800; letter-spacing: -0.015em; }
+.voice blockquote.err { font-size: 1.375rem; line-height: 1.4; font-weight: 600; letter-spacing: 0; background: var(--color-danger-bg); border-inline-start: 6px solid var(--color-danger-border); padding: 14px 16px; }
+.voice figcaption { font-size: 1.125rem; color: var(--color-fg-muted); }
+
+/* ---------- 10. Rationale ---------- */
+#rationale { background: var(--color-bg-sunken); border-bottom: 0; }
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-10); }
+.rat h3 { margin: 0 0 var(--space-4); font-size: 1.625rem; font-weight: 800; padding-bottom: 8px; border-bottom: 4px solid var(--color-accent-default); display: inline-block; }
+.rat p, .rat li { font-size: 1.1875rem; line-height: 1.55; }
+.rat p { margin: 0 0 var(--space-4); }
+.rat ul { margin: 0; padding-inline-start: 1.2em; }
+.rat li { margin-bottom: 10px; }
+.defaults { margin-top: var(--space-12); width: 100%; border-collapse: collapse; font-size: 1.125rem; background: #fff; }
+.defaults caption { text-align: start; font-size: 1.375rem; font-weight: 800; padding-bottom: var(--space-3); }
+.defaults th, .defaults td { border: 2px solid var(--color-border-subtle); padding: 12px 14px; text-align: start; vertical-align: top; }
+.defaults thead th { background: var(--color-bg-inverse); color: #fff; border-color: var(--color-bg-inverse); }
+.colophon { margin-top: var(--space-12); padding-top: var(--space-4); border-top: 2px solid var(--color-border-subtle); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); font-size: 1.0625rem; color: var(--color-fg-muted); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); padding-top: var(--space-10); }
+  .hero-copy { padding-bottom: 0; }
+  .phones { height: 830px; max-width: 760px; }
+  .ph-1 { inset-inline-start: 0; }
+  .ph-2 { inset-inline-start: 50%; }
+  .topbar nav { display: none; }
+  .pal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .box { grid-column: span 12; }
+  .apps, .img-grid, .motion { grid-template-columns: minmax(0, 1fr); }
+  .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  body { font-size: 1.1875rem; }
+  #direction .wrap { grid-template-columns: 1fr; }
+  .helpline small { display: none; }
+  .logo { font-size: 1.5rem; }
+  .hero-copy h2 { font-size: 2.5rem; }
+  .lead { font-size: 1.3125rem; }
+  .cta-row .btn { width: 100%; }
+  .phones { height: auto; }
+  .phones::before { inset: 80px -40px 0; }
+  .phone { position: relative; inset: auto; zoom: 0.86; margin-inline: auto; }
+  .ph-2 { display: none; }
+  .pal { grid-template-columns: minmax(0, 1fr); }
+  .pal li { display: grid; grid-template-columns: 110px 1fr; }
+  .pal .chip { height: auto; min-height: 110px; }
+  .trow { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .box { padding: var(--space-5); }
+  .medcard { grid-template-columns: minmax(0, 1fr); }
+  .icons { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pill-grid { grid-template-columns: minmax(0, 1fr); }
+  .chart { padding: 18px 14px; aspect-ratio: auto; }
+  .chart h4 { font-size: 24px; }
+  .chart table { font-size: 14px; }
+  .chart th, .chart td { padding: 4px 2px; }
+  .chart td .bx { width: 18px; height: 18px; }
+  .chart header .logo { display: none; }
+  .defaults { font-size: 1rem; }
+  .mt { font-size: 1rem; }
+  .mt code { white-space: normal; overflow-wrap: anywhere; display: inline; font-size: 0.875rem; }
+  .defaults th, .defaults td { padding: 8px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cf-mark" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#1D4F91"/><rect x="9" y="17" width="26" height="10" rx="5" fill="#FFFFFF"/><path d="M22 17v10" stroke="#1D4F91" stroke-width="2"/><path d="M22 9v5M22 30v5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#155C30"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="pill-round" viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" fill="#FFFFFF" stroke="#0B1B2B" stroke-width="2.5"/><path d="M14 32h36" stroke="#0B1B2B" stroke-width="2"/><text x="32" y="28" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="9" font-weight="800" fill="#0B1B2B">L</text><text x="32" y="44" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="9" font-weight="800" fill="#0B1B2B">10</text></symbol>
+    <symbol id="pill-oval" viewBox="0 0 64 64"><ellipse cx="32" cy="32" rx="24" ry="14" fill="#F2C94C" stroke="#0B1B2B" stroke-width="2.5"/><text x="32" y="37" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11" font-weight="800" fill="#0B1B2B">M 500</text></symbol>
+    <symbol id="pill-cap" viewBox="0 0 64 64"><rect x="8" y="22" width="48" height="20" rx="10" fill="#FFFFFF" stroke="#0B1B2B" stroke-width="2.5"/><path d="M18 22.5h14v19H18a9.5 9.5 0 0 1 0-19z" fill="#C2410C"/><path d="M32 22v20" stroke="#0B1B2B" stroke-width="2.5"/></symbol>
+    <symbol id="pill-soft" viewBox="0 0 64 64"><ellipse cx="32" cy="32" rx="16" ry="16" fill="#E9B949" stroke="#0B1B2B" stroke-width="2.5"/><ellipse cx="26" cy="26" rx="5" ry="3" fill="#FFFFFF" opacity="0.7"/></symbol>
+  </defs>
+</svg>
+
+<header id="direction">
+  <div class="wrap">
+    <span class="no">Stylescape 10 of 12</span>
+    <h1>CareFill <span>&middot; Plain and Sure</span></h1>
+    <a href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.civic-plain</li><li>style.clinical-calm</li><li>industry.healthcare-provider</li><li>audience.older-adults</li><li>archetype.caregiver</li><li>channel.native-app</li>
+    </ul>
+    <p class="brief">A prescription refill and reminder app for people 65 and over, and the family who help them. Public-service plainness (big type, one task per screen, yellow focus) with a calm clinical palette. Nothing to decode.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO ================= -->
+<section id="hero" aria-labelledby="hero-t">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="#hero"><svg aria-hidden="true"><use href="#cf-mark"/></svg>CareFill</a>
+      <nav aria-label="Site (sample)"><ul><li><a href="#hero">How it works</a></li><li><a href="#hero">For families</a></li><li><a href="#hero">Pharmacies</a></li></ul></nav>
+      <a class="helpline" href="#hero"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 3h4l2 6-3 2a14 14 0 0 0 6 6l2-3 6 2v4a3 3 0 0 1-3 3A20 20 0 0 1 5 6a3 3 0 0 1 3-3z" fill="currentColor"/></svg><span>1-800-555-0134<small>Real people, 8 AM to 8 PM</small></span></a>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h2 id="hero-t">The right medicine at the <span>right time.</span></h2>
+        <p class="lead">CareFill reminds you when to take each medicine and orders your refill before you run out.</p>
+        <ul class="checks">
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Big, clear words and buttons</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Your pharmacist is one tap away</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Share with a family member if you want</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#applications">Get the free app</a>
+          <a class="btn btn-secondary" href="#hero"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 3h4l2 6-3 2a14 14 0 0 0 6 6l2-3 6 2v4a3 3 0 0 1-3 3A20 20 0 0 1 5 6a3 3 0 0 1 3-3z" fill="currentColor"/></svg>Call us to set it up</a>
+        </div>
+        <p class="store-note">Free on iPhone and Android. Works with most US pharmacies.</p>
+      </div>
+      <div class="phones" aria-label="App screens shown at actual size">
+        <div class="phone ph-1" role="img" aria-label="Today screen: Good morning, Margaret. Take now at 8:00 AM: Lisinopril 10 mg, 1 tablet with water, with a large I took it button. Later today: Metformin at 12:00 PM. Taken: Vitamin D at 7:30 AM.">
+          <div class="scr">
+            <div class="sbar"><span>8:01</span><span><svg width="20" height="14" viewBox="0 0 20 14"><path d="M1 13h3V9H1zM6 13h3V6H6zM11 13h3V3h-3zM16 13h3V0h-3z" fill="#0B1B2B"/></svg><svg width="28" height="14" viewBox="0 0 28 14"><rect x="1" y="1" width="23" height="12" rx="3" fill="none" stroke="#0B1B2B" stroke-width="1.5"/><rect x="3" y="3" width="16" height="8" rx="1.5" fill="#0B1B2B"/><path d="M26 5v4" stroke="#0B1B2B" stroke-width="2"/></svg></span></div>
+            <div class="app-h"><p class="greet">Good morning, Margaret</p><p class="date">Tuesday, March 3</p></div>
+            <div class="now">
+              <div class="when"><span class="pill-tag">Take now</span><span class="time">8:00 AM</span></div>
+              <div class="med"><span class="pic"><svg width="52" height="52"><use href="#pill-round"/></svg></span><span><b>Lisinopril 10 mg</b><span>1 tablet, with water</span></span></div>
+              <span class="btn btn-go"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M6 14.5l5 5 11-12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>I took it</span>
+              <span class="later">Remind me in 15 minutes</span>
+            </div>
+            <p class="list-h">Later today</p>
+            <div class="row"><span class="t">12:00 PM</span><span><b>Metformin 500 mg</b><span class="s">1 tablet, with lunch</span></span><svg width="40" height="40" aria-hidden="true"><use href="#pill-oval"/></svg></div>
+            <div class="row"><span class="t">7:30 AM</span><span><b>Vitamin D</b><span class="s">1 softgel</span></span><span class="ok"><svg aria-hidden="true"><use href="#ic-check"/></svg>Taken</span></div>
+            <div class="tabs" aria-hidden="true">
+              <span class="on"><svg viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M4 11h20M10 3v5M18 3v5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Today</span>
+              <span><svg viewBox="0 0 28 28"><rect x="4" y="10" width="20" height="9" rx="4.5" fill="none" stroke="currentColor" stroke-width="2.5" transform="rotate(-35 14 14)"/><path d="M11 9l6 9" stroke="currentColor" stroke-width="2.5"/></svg>Medicines</span>
+              <span><svg viewBox="0 0 28 28"><path d="M5 9h18v14H5zM9 9V6a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>Refills</span>
+              <span><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M11 11a3 3 0 1 1 4 2.8c-1 .4-1 1.2-1 2.2M14 20v.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Help</span>
+            </div>
+          </div>
+        </div>
+        <div class="phone ph-2" role="img" aria-label="Refill screen: Your refill is ready. Atorvastatin 20 mg, 30 tablets. Pick up at Elm Street Pharmacy, open until 8 PM. You pay $4.00. Buttons: Get directions, Bring it to my home.">
+          <div class="scr">
+            <div class="sbar"><span>2:14</span><span></span></div>
+            <div class="rf">
+              <span class="back">&larr; Refills</span>
+              <div class="done"><svg aria-hidden="true"><use href="#ic-check"/></svg><b>Your refill is ready</b></div>
+              <dl>
+                <div><dt>Medicine</dt><dd><b>Atorvastatin 20 mg</b><br>30 tablets</dd></div>
+                <div><dt>Pick up at</dt><dd>Elm Street Pharmacy<br>214 Elm St. Open until 8 PM</dd></div>
+                <div><dt>You pay</dt><dd><b class="tabnum">$4.00</b></dd></div>
+              </dl>
+              <span class="btn btn-primary">Get directions</span>
+              <span class="btn btn-secondary">Bring it to my home</span>
+              <p class="share"><i>D</i>Daniel (your son) can see this</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="pal-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 3</span><br><h2 id="pal-t">Palette</h2><p>White paper, near-black ink and one calm blue. Status colors always come with a word and an icon, never color alone. Body text is 7:1 or higher everywhere.</p></div>
+    <ul class="pal">
+      <li><div class="chip" style="background:#0B1B2B;color:#fff">Ink</div><div class="info"><b>fg-default</b>#0B1B2B &middot; oklch(0.22 0.038 250)<br><span class="r">17.41:1 on Paper</span></div></li>
+      <li><div class="chip" style="background:#1D4F91;color:#fff">Care blue</div><div class="info"><b>accent-default</b>#1D4F91 &middot; oklch(0.43 0.121 257)<br><span class="r">White on it 8.14:1</span></div></li>
+      <li><div class="chip" style="background:#3D4B5C;color:#fff">Slate</div><div class="info"><b>fg-muted</b>#3D4B5C &middot; oklch(0.41 0.034 254)<br><span class="r">8.90:1 on Paper, 8.15:1 on Mist</span></div></li>
+      <li><div class="chip" style="background:#FFFFFF;color:#0B1B2B;border-bottom:2px solid #C9D2DD">Paper</div><div class="info"><b>bg-canvas</b>#FFFFFF &middot; oklch(1.00 0 0)<br><span class="r">Ink on it 17.41:1</span></div></li>
+      <li><div class="chip" style="background:#F3F5F8;color:#0B1B2B">Mist</div><div class="info"><b>bg-sunken</b>#F3F5F8 &middot; oklch(0.97 0.005 258)<br><span class="r">Ink on it 15.94:1</span></div></li>
+      <li><div class="chip" style="background:#155C30;color:#fff">Taken green</div><div class="info"><b>success-fg</b>#155C30 &middot; oklch(0.42 0.100 152)<br><span class="r">White on it 8.06:1</span></div></li>
+      <li><div class="chip" style="background:#FFF1C2;color:#6B4500">Due amber</div><div class="info"><b>warning-bg / fg</b>#FFF1C2 / #6B4500<br>oklch(0.96 0.062 93)<br><span class="r">Text on it 7.52:1</span></div></li>
+      <li><div class="chip" style="background:#FFDD00;color:#0B1B2B">Focus yellow</div><div class="info"><b>focus-ring</b>#FFDD00 &middot; oklch(0.90 0.186 98)<br><span class="r">Ink on it 12.93:1</span></div></li>
+    </ul>
+    <p class="inset">Missed doses use Alert red #B42318 (6.57:1 on Paper) with the word &ldquo;Missed&rdquo; and a warning icon. Red is never used for anything else, so it keeps its meaning.</p>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 4</span><br><h2 id="type-t">Type</h2><p>One family, Public Sans, the typeface of the US Web Design System. Wide letters, open shapes, clear numbers. The smallest text anywhere is 16px; reading text is 20px.</p></div>
+    <div class="type-rows">
+      <div class="trow"><p class="t-d">Your refill is ready.</p><div class="spec"><b>Display</b>Public Sans ExtraBold 800<br>clamp(44px, 5vw, 68px) / 1.05<br>Tracking &minus;0.025em. In the app: 28px.</div></div>
+      <div class="trow"><div><p class="t-b">Take 1 tablet each morning with a glass of water. If you forget, take it when you remember. Do not take 2 tablets to make up for a missed one.</p><p class="t-b">Questions? Tap Help to call or message your pharmacist.</p></div><div class="spec"><b>Body</b>Public Sans Regular 400 and Bold 700<br>20px / 1.5, measure 60ch<br>Sentence case, short sentences, reading level about grade 6.</div></div>
+      <div class="trow"><div><p class="t-n">8:00 AM &middot; $4.00 &middot; 30 tablets</p><div class="compare"><span>Tabular numbers line up in lists, so 8:00 and 12:00 align.</span></div></div><div class="spec"><b>Numbers</b>Public Sans 800, tabular figures<br>Times always with AM or PM; doses always with units.</div></div>
+      <div class="trow"><p class="t-c">Last updated today at 7:58 AM by Elm Street Pharmacy.</p><div class="spec"><b>Caption, the smallest size</b>Public Sans 400, 18px / 1.45 (16px only for tab labels)<br>Slate, 8.90:1.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="comp-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 5</span><br><h2 id="comp-t">Components</h2><p>Every control is at least 48 by 48 pixels; main actions are 56 to 64 high and full width in the app. Labels sit above fields, never inside them.</p></div>
+    <div class="comp">
+      <div class="box">
+        <h3>Buttons</h3>
+        <div class="btn-stack">
+          <button class="btn btn-primary" type="button">Order my refill</button>
+          <button class="btn btn-secondary" type="button">Call my pharmacist</button>
+          <button class="btn btn-primary" type="button" disabled>Refill already ordered</button>
+          <button class="btn btn-primary is-focus" type="button">Focus state</button>
+          <p>Focus: yellow fill and a 4px ink underline (the GOV.UK pattern). It shows on any background and does not rely on color perception alone.</p>
+        </div>
+      </div>
+      <form class="box" onsubmit="return false" novalidate>
+        <h3>Text input</h3>
+        <div class="field err">
+          <label for="cf-rx">Prescription number</label>
+          <span class="hint" id="cf-rx-hint">It is on your pill bottle label, after &ldquo;Rx&rdquo;. For example, 4417-2209.</span>
+          <span class="error" id="cf-rx-err"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3l12 21H2z" fill="#B42318"/><path d="M14 11v6M14 20.5v.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>Enter all 8 numbers from your pill bottle, like 4417-2209.</span>
+          <input id="cf-rx" type="text" inputmode="numeric" value="4417-22" aria-invalid="true" aria-describedby="cf-rx-hint cf-rx-err">
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="cf-zip">ZIP code</label>
+          <input id="cf-zip" type="text" inputmode="numeric" value="44102" autocomplete="postal-code" style="max-width:9ch">
+        </div>
+      </form>
+      <div class="box">
+        <h3>Status tags</h3>
+        <div class="badges">
+          <span class="badge bd-taken"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Taken</span>
+          <span class="badge bd-due"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Due at 12:00 PM</span>
+          <span class="badge bd-missed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 10v5M12 18v.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>Missed</span>
+          <span class="badge bd-refill"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Refill in 3 days</span>
+        </div>
+        <p style="margin:0;font-size:1.125rem;color:var(--color-fg-muted)">Shape, icon and word carry the meaning; color only confirms it.</p>
+      </div>
+      <article class="box" aria-label="Medicine card">
+        <h3>Medicine card</h3>
+        <div class="medcard">
+          <span class="pic"><svg width="72" height="72" aria-hidden="true"><use href="#pill-oval"/></svg></span>
+          <div>
+            <h4>Metformin 500 mg</h4>
+            <p>For blood sugar. Yellow oval tablet marked &ldquo;M 500&rdquo;.</p>
+            <dl class="meta"><dt>When</dt><dd>12:00 PM, with lunch</dd><dt>Left</dt><dd><span class="tabnum">9</span> tablets (about 9 days)</dd><dt>Doctor</dt><dd>Dr. Ana Ruiz</dd></dl>
+            <a href="#components">See full instructions</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="app-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 6</span><br><h2 id="app-t">Applications</h2><p>The reminder has to work without opening the app, and the plan has to work without a phone. So: a lock-screen notification with a text-message backup, and a large-print chart for the fridge.</p></div>
+    <div class="apps">
+      <div>
+        <div class="lock" role="img" aria-label="Phone lock screen at 8:00 showing a CareFill notification: Time for Lisinopril 10 mg, 1 tablet with water, with buttons I took it and Remind me later; below it a text message backup asking to reply 1 when taken">
+          <div class="scr">
+            <div class="clock">Tuesday, March 3<b>8:00</b></div>
+            <div class="notif">
+              <div class="app"><span><svg aria-hidden="true"><use href="#cf-mark"/></svg>CareFill</span><span>now</span></div>
+              <b>Time for Lisinopril 10 mg</b>
+              <p>1 tablet, with water.</p>
+              <div class="acts"><span>I took it</span><span>Remind me later</span></div>
+            </div>
+            <div class="sms"><small>Text message &middot; 8:15 AM, if not marked</small>CareFill: Time for Lisinopril 10 mg (1 tablet). Reply 1 when you have taken it. Reply STOP to end texts.</div>
+          </div>
+        </div>
+        <p class="cap">Notification with real buttons; a text message follows after 15 minutes only if the dose is not marked.</p>
+      </div>
+      <div>
+        <div class="chart" role="img" aria-label="Printable weekly medicine chart for Margaret Ellis with check boxes for each day">
+          <header><div><h4>My medicines this week</h4><p>Margaret Ellis &middot; March 2 to 8</p></div><span class="logo"><svg aria-hidden="true"><use href="#cf-mark"/></svg>CareFill</span></header>
+          <table>
+            <thead><tr><th>Medicine and time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+            <tbody>
+              <tr><td><b>Vitamin D</b><span class="tm">7:30 AM</span> <span>&middot; 1 softgel</span></td><td><span class="bx x"></span></td><td><span class="bx x"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td></tr>
+              <tr><td><b>Lisinopril 10 mg</b><span class="tm">8:00 AM</span> <span>&middot; 1 tablet</span></td><td><span class="bx x"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td></tr>
+              <tr><td><b>Metformin 500 mg</b><span class="tm">12:00 PM</span> <span>&middot; with lunch</span></td><td><span class="bx x"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td></tr>
+              <tr><td><b>Atorvastatin 20 mg</b><span class="tm">9:00 PM</span> <span>&middot; 1 tablet</span></td><td><span class="bx x"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td><td><span class="bx"></span></td></tr>
+            </tbody>
+          </table>
+          <div class="chart-help"><b>If you forget a dose</b> take it when you remember, unless it is almost time for the next one. Never take 2 at once.</div>
+          <div class="chart-notes"><b>Notes for my doctor</b><span></span><span></span><span></span></div>
+          <footer><span>Questions? Call <b>1-800-555-0134</b></span><span>Refill due: <b>Atorvastatin, March 9</b></span></footer>
+        </div>
+        <p class="cap">Printable chart, US Letter, 16pt minimum. Families print it from the app&rsquo;s Share menu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="img-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 7</span><br><h2 id="img-t">Imagery and icons</h2><p>Show the medicine, not a mood. Real pictures of each pill help people check they are taking the right one.</p></div>
+    <div class="img-grid">
+      <div>
+        <p>Photography shows real older adults at home in daylight, doing ordinary things: a kitchen counter, a weekly pill box, a phone held at arm&rsquo;s length. Ages, bodies and skin tones vary. Never use smiling stock seniors in white, stethoscopes, or glowing medical holograms.</p>
+        <p>Icons are simple 2.5px outlines with round ends on a 28px grid, always next to a word. No icon appears alone as a button.</p>
+        <ul class="icons">
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="4" y="10" width="20" height="9" rx="4.5" transform="rotate(-35 14 14)"/><path d="M11 9l6 9"/></svg>Medicine</li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M7 19V12a7 7 0 0 1 14 0v7l2 3H5zM11 25h6"/></svg>Reminder</li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 12a10 10 0 0 1 18-4l2 2M24 16a10 10 0 0 1-18 4l-2-2M24 4v6h-6M4 24v-6h6"/></svg>Refill</li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M2 8h14v12H2zM16 12h5l4 4v4h-9z"/><circle cx="7" cy="21" r="2.5"/><circle cx="20" cy="21" r="2.5"/></svg>Delivery</li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="10" cy="9" r="4"/><path d="M3 23a7 7 0 0 1 14 0M19 6a4 4 0 0 1 0 7M21 16a6 6 0 0 1 4 7"/></svg>Family</li>
+          <li><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M8 3h4l2 6-3 2a14 14 0 0 0 6 6l2-3 6 2v4a3 3 0 0 1-3 3A20 20 0 0 1 5 6a3 3 0 0 1 3-3z"/></svg>Call us</li>
+        </ul>
+      </div>
+      <div class="pills">
+        <h3>Pill pictures</h3>
+        <p>Drawn from the pharmacy&rsquo;s imprint data: true shape, color and marking, on a plain background, at least 64px.</p>
+        <div class="pill-grid">
+          <figure><svg aria-hidden="true" viewBox="0 0 64 64"><use href="#pill-round"/></svg><figcaption><b>Lisinopril 10 mg</b>White, round, &ldquo;L 10&rdquo;</figcaption></figure>
+          <figure><svg aria-hidden="true" viewBox="0 0 64 64"><use href="#pill-oval"/></svg><figcaption><b>Metformin 500 mg</b>Yellow, oval, &ldquo;M 500&rdquo;</figcaption></figure>
+          <figure><svg aria-hidden="true" viewBox="0 0 64 64"><use href="#pill-cap"/></svg><figcaption><b>Omeprazole 20 mg</b>Orange and white capsule</figcaption></figure>
+          <figure><svg aria-hidden="true" viewBox="0 0 64 64"><use href="#pill-soft"/></svg><figcaption><b>Vitamin D 1000 IU</b>Gold softgel</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="mo-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 8</span><br><h2 id="mo-t">Motion</h2><p>Calm and confirming. Motion only says &ldquo;that worked&rdquo;. Nothing moves on its own, nothing disappears before it is read, and every action can be undone.</p></div>
+    <div class="motion">
+      <table class="mt">
+        <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Confirm a dose (color, check)</td><td><code>--duration-slow</code> 320ms</td><td><code>--ease-standard</code>, check draws with <code>--ease-decelerate</code></td></tr>
+          <tr><td>Button press</td><td><code>--duration-moderate</code> 200ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Screen change</td><td>Platform default push</td><td>No custom transitions</td></tr>
+          <tr><td>Messages</td><td>Stay until closed</td><td>No auto-hiding toasts, no carousels</td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">State changes at once; the check appears without drawing</td></tr>
+        </tbody>
+      </table>
+      <div class="demo">
+        <div class="med"><span class="pic"><svg width="52" height="52" aria-hidden="true"><use href="#pill-round"/></svg></span><span><b>Lisinopril 10 mg</b><span>1 tablet, with water</span></span></div>
+        <button class="btn btn-go take" type="button" id="cf-take" aria-pressed="false"><svg class="ck" viewBox="0 0 30 30" aria-hidden="true"><path d="M6 15.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>I took it</span></button>
+        <button class="btn btn-secondary undo" type="button" id="cf-undo">Undo</button>
+        <p class="note" aria-live="polite" id="cf-status">Try it: press &ldquo;I took it&rdquo;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="vo-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 9</span><br><h2 id="vo-t">Voice</h2><p>A patient pharmacist on the phone: warm, exact, unhurried. Use the person&rsquo;s words (&ldquo;medicine&rdquo;, &ldquo;pill&rdquo;), give the next step every time, and never blame.</p></div>
+    <div class="voice">
+      <figure><p class="k">Headline</p><blockquote>The right medicine at the right time.</blockquote><figcaption>Says exactly what the app does, in words a 10-year-old and a 90-year-old both understand.</figcaption></figure>
+      <figure><p class="k">Call to action</p><blockquote>I took it</blockquote><figcaption>First person, past tense: it reads like something the person would say, not a command.</figcaption></figure>
+      <figure class="e"><p class="k">Error message</p><blockquote class="err">We could not reach your pharmacy. Your refill is not ordered yet. Try again, or call us at 1-800-555-0134.</blockquote><figcaption>Plain about what did and did not happen, then two ways forward, one of them a human.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="ra-t">
+  <div class="wrap">
+    <div class="sec-h"><span class="num">Section 10</span><br><h2 id="ra-t">Rationale</h2><p>Why plain beats pretty for this audience.</p></div>
+    <div class="rat">
+      <div>
+        <h3>Why it fits</h3>
+        <p>People over 65 often manage several medicines with changing eyesight, dexterity and memory, and many distrust apps that hide things. Patterns from public services (GOV.UK, USWDS) were tested with exactly these users: large labels above fields, one task per screen, obvious focus, words before icons.</p>
+        <p>The Caregiver archetype shows up as reassurance and shared care, not as soft pastel imagery.</p>
+      </div>
+      <div>
+        <h3>What it risks</h3>
+        <ul>
+          <li>It can look like a government form. Warmth comes from the voice, the greeting by name and the pill pictures.</li>
+          <li>Families and pharmacists see health data: HIPAA, consent for sharing and text-message consent (TCPA) shape these flows. Confirm with counsel.</li>
+          <li>Platform text-size settings must scale all of this further; test at the largest iOS and Android sizes.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The expected alternative</h3>
+        <p>A blue gradient with a stethoscope, a smiling stock couple, 14px gray text on white, icon-only tabs and swipe-to-confirm gestures. It looks modern in a pitch deck and fails the people who need it most.</p>
+      </div>
+    </div>
+    <table class="defaults">
+      <caption>Older-adult defaults used on this page</caption>
+      <thead><tr><th scope="col">Property</th><th scope="col">General default</th><th scope="col">CareFill</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Body text</th><td>16px</td><td>20px (app and web)</td></tr>
+        <tr><th scope="row">Smallest text</th><td>12px</td><td>16px, tab labels only</td></tr>
+        <tr><th scope="row">Target size</th><td>24px min, 44px comfortable</td><td>48px min, 56&ndash;64px for main actions</td></tr>
+        <tr><th scope="row">Text contrast</th><td>4.5:1</td><td>7:1 or higher</td></tr>
+        <tr><th scope="row">Borders and controls</th><td>1px, 3:1</td><td>2px, ink or Care blue</td></tr>
+        <tr><th scope="row">Messages</th><td>Toast, 4&ndash;6s</td><td>Stay until closed</td></tr>
+      </tbody>
+    </table>
+    <div class="colophon"><span>Fictional service for the Visual Design Kit stylescape set. People, pharmacies and phone numbers are invented (555 numbers).</span><span>Type: Public Sans, SIL Open Font License (<a href="../fonts/public-sans/OFL.txt">OFL.txt</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var t = document.getElementById('cf-take'), u = document.getElementById('cf-undo'), s = document.getElementById('cf-status');
+  t.addEventListener('click', function () {
+    if (t.getAttribute('aria-pressed') === 'true') return;
+    t.setAttribute('aria-pressed', 'true');
+    t.lastElementChild.textContent = 'Taken at 8:02 AM';
+    s.textContent = 'Saved. Daniel can see that you took it.';
+  });
+  u.addEventListener('click', function () {
+    t.setAttribute('aria-pressed', 'false');
+    t.lastElementChild.textContent = 'I took it';
+    s.textContent = 'Undone. Lisinopril is still due.';
+    t.focus();
+  });
+})();
+</script>
+</body>
+</html>

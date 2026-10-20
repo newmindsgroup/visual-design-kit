@@ -15,7 +15,7 @@ Apple figures were read from App Store Connect Help ("Screenshot specifications"
 | iPhone with Face ID, large display | iPhone 11 Pro Max to 14 Plus | 1284x2778 or 1242x2688 | Required only if no Dynamic Island large set is provided |
 | iPhone with Face ID, medium display | iPhone X to 14, 16e, 17e | 1170x2532, 1125x2436 or 1080x2340 | Optional, scaled otherwise |
 | iPhone with Home button | 5.5 in and 4.7 in models | 1242x2208; 750x1334 | Optional |
-| iPhone Duo | Outer and inner displays | 1398x2034 (outer), 2007x2853 (inner) | Required from April 2027 for apps built with the iOS 27.1 SDK or later; supplying them adds an "optimized for iPhone Duo" badge |
+| iPhone Duo | Outer and inner displays | 1398x2034 (outer, matches the native panel); 2007x2853 (inner, larger than the native 1878x2670 panel, so native captures must be scaled; reported by developers, verify in App Store Connect) | Required from April 2027 for apps built with the iOS 27.1 SDK or later; supplying them adds an "optimized for iPhone Duo" badge (verify) |
 | iPad 13-inch | iPad Pro and Air 13-inch | 2064x2752 or 2048x2732 | Required if the app runs on iPad |
 | iPad 11-inch | iPad, iPad Air, iPad mini | 1668x2420, 1668x2388, 1640x2360 or 1488x2266 | Optional |
 

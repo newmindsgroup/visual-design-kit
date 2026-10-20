@@ -39,7 +39,7 @@ Compose: `ListDetailPaneScaffold`, `SupportingPaneScaffold`, `NavigationSuiteSca
 ## iPhone resizing and iPhone Duo
 
 - iOS 27: iPhone apps run fully resizable in iPhone Mirroring on Mac and on iPad. `UIRequiresFullscreen` now gives discrete resizing rather than opting out. Replace orientation checks with size-class checks.
-- iPhone Duo (Apple developer site, October 2026): an outer display and an inner display. App Store screenshots for it are 1398x2034px (outer) and 2007x2853px (inner) portrait, required from April 2027 for apps built with the iOS 27.1 SDK or later. Treat the inner display as a regular-width canvas (list-detail, supporting pane) and keep task continuity when people open or close the device. Apple's HIG and WWDC26 sessions on iPhone Duo hold the detailed patterns; verify there before designing fold-specific behavior.
+- iPhone Duo (Apple developer site, October 2026): an outer display and an inner display. Apple's spec sheet lists the outer panel at 1398x2034 and the inner at 1878x2670; App Store screenshots are reported as 1398x2034px (outer) and 2007x2853px (inner, scaled up from native captures; verify in App Store Connect), required from April 2027 for apps built with the iOS 27.1 SDK or later. Treat the inner display as a regular-width canvas (list-detail, supporting pane) and keep task continuity when people open or close the device. Apple's HIG and WWDC26 sessions on iPhone Duo hold the detailed patterns; verify there before designing fold-specific behavior.
 
 ## Android foldables and tablets
 
