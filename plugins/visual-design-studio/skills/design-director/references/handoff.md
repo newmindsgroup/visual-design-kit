@@ -1,6 +1,6 @@
 # From chosen direction to production
 
-Version-Timestamp: 2026-10-20 02:05:00 UTC
+Version-Timestamp: 2026-10-20 13:20:00 UTC
 
 Once a direction is chosen, lock it into tokens and route each deliverable to the skill that owns it. Keep the decision traceable.
 
@@ -36,6 +36,15 @@ See the `design-system` skill for token architecture, theming and Figma.
 | Print, packaging, social, decks, email | `print-packaging-social` | Production-ready files to spec |
 | Review | `design-critique` | Rubric scores and prioritized fixes |
 
-## 4. Keep the idea intact
+## 4. Prompts for generators and build tools
+
+When a deliverable is produced by another AI tool (image generators, video generators, v0, Lovable, Figma Make, another agent), write its prompt from the chosen recipe, never from scratch:
+
+1. **Source of truth:** the recipe and tokens. Name the typefaces, hex palette with proportions, layout logic, imagery style, motion personality, voice and the clichés to avoid. Add the channel's specs (aspect ratio, safe areas, sizes).
+2. **Prompt craft:** if the `prompt-engineering-expert` plugin is installed (listed in this kit's marketplace), hand it the recipe and the target tool and ask for the prompt. It runs a gap scan, applies its blueprint and scores the result. Without it, use the prompt anatomy in `imagery`'s [AI image generation](../../imagery/references/ai-image-generation.md) reference.
+3. **Check the output, not the prompt:** run what comes back through `design-critique` against the same recipe, and fix the prompt (not the image by hand) when a tell repeats.
+4. **Record** tool, model, version, prompt and approver, as the `imagery` provenance default requires.
+
+## 5. Keep the idea intact
 
 Every downstream deliverable should pass a quick check against the chosen recipe: same type roles, same palette proportions, same layout logic, same motion personality, same voice. When a deliverable needs to deviate (a dense dashboard inside an expressive brand), document the rule ("product UI uses the neutral ramp and accent at 5% coverage") rather than drifting.

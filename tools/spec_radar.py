@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """List every volatile claim in the plugin that is marked for verification.
 
-Version-Timestamp: 2026-10-20 05:10:00 UTC
+Version-Timestamp: 2026-10-20 13:10:00 UTC
 
 Atlas entries and skill references mark volatile facts (regulation dates,
 platform specs, social formats, payment coverage, statistics) with the word
@@ -12,6 +12,10 @@ primary sources in priority order. Standard library only; Python 3.9+.
     python3 tools/spec_radar.py                 # Markdown report on stdout
     python3 tools/spec_radar.py --json          # machine-readable
     python3 tools/spec_radar.py --topic regulation --older-than 90
+    python3 tools/spec_radar.py --all           # ignore tools/spec_radar_scope.json
+
+By default the scope file limits the report to our markets, platform specs and
+accessibility standards; see docs/SPEC-RADAR.md.
 """
 
 import argparse
@@ -24,6 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / "plugins" / "visual-design-studio"
 SCAN_DIRS = ("skills", "library/atlas")
+SCOPE_FILE = ROOT / "tools" / "spec_radar_scope.json"
 
 MARKER = re.compile(r"\bverify\b", re.IGNORECASE)
 # Instructions to the reader ("verify the build", "verify that ...") are process
@@ -67,6 +72,26 @@ def file_stamp(text):
         return dt.date.fromisoformat(match.group(1))
     except ValueError:
         return None
+
+
+def load_scope(path=SCOPE_FILE):
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    return {
+        "markets": set(data["markets"]),
+        "include": re.compile(data["include_pattern"], re.IGNORECASE),
+        "exclude": re.compile(data["exclude_pattern"], re.IGNORECASE),
+    }
+
+
+def in_scope(item, scope):
+    """Keep our markets, platform specs and standards; drop other jurisdictions."""
+    parts = item["file"].split("/")
+    if parts[:3] == ["library", "atlas", "markets"]:
+        return parts[3][:-3] in scope["markets"]
+    claim = item["claim"]
+    if scope["exclude"].search(claim) and not scope["include"].search(claim):
+        return False
+    return True
 
 
 def collect(plugin_root=PLUGIN, today=None):
@@ -133,10 +158,15 @@ def main(argv=None):
     parser.add_argument("--older-than", type=int, metavar="DAYS",
                         help="only files whose Version-Timestamp is at least DAYS old (undated files included)")
     parser.add_argument("--plugin-root", type=Path, default=PLUGIN)
+    parser.add_argument("--all", action="store_true", help="ignore the scope file and report every claim")
+    parser.add_argument("--scope", type=Path, default=SCOPE_FILE, help="scope file (default tools/spec_radar_scope.json)")
     args = parser.parse_args(argv)
 
     today = dt.datetime.now(dt.timezone.utc).date()
     items = collect(args.plugin_root, today)
+    if not args.all:
+        scope = load_scope(args.scope)
+        items = [i for i in items if in_scope(i, scope)]
     if args.topic:
         items = [i for i in items if i["topic"] == args.topic]
     if args.older_than is not None:

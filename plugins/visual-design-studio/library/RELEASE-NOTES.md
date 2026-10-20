@@ -2,6 +2,13 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.6.1 Prompt handoff and scoped spec radar
+
+Version-Timestamp: 2026-10-20 17:00:00 UTC
+
+- **Prompts for generators and build tools.** `design-director`'s handoff now has a step that turns the chosen recipe into prompts for image, video and UI-build tools. It hands off to the `prompt-engineering-expert` plugin (now listed in this marketplace) and falls back to `imagery`'s AI image generation reference.
+- **Spec radar scope.** The monthly review covers only the United States, the Dominican Republic and the Caribbean, Spanish-speaking Latin America, platform specs, WCAG, ADA and Section 508 (`tools/spec_radar_scope.json`). In scope: 205 of 299 claims.
+
 ## 0.6.0 Design ops: agents, Figma, fidelity, evals
 
 Version-Timestamp: 2026-10-20 11:00:00 UTC

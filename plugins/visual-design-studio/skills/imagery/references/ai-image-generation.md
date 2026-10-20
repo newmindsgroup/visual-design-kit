@@ -1,8 +1,8 @@
 # AI image generation
 
-Version-Timestamp: 2026-10-20 02:07:10 UTC
+Version-Timestamp: 2026-10-20 13:20:00 UTC
 
-Generated images are a production medium like illustration or 3D. They are excellent for exploration, mood, backgrounds, stylized art and composites, and they are misleading when they stand in for proof. Write prompts like a photographer's brief, lock a style for consistency, clean up by hand, and keep an honest record.
+Generated images are a production medium like illustration or 3D. They are excellent for exploration, mood, backgrounds, stylized art and composites, and they are misleading when they stand in for proof. Write prompts like a photographer's brief, lock a style for consistency, clean up by hand, and keep an honest record. For prompts built from a chosen direction, or for video and build tools, pair this reference with the `prompt-engineering-expert` plugin (see `design-director`'s [handoff](../../design-director/references/handoff.md#4-prompts-for-generators-and-build-tools)).
 
 ## Appropriate vs misleading uses
 
