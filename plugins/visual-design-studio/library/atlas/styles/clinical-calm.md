@@ -29,7 +29,7 @@ Lower the user's heart rate while raising their confidence. People meet healthca
 
 | Token | Value |
 | --- | --- |
-| Display font | Figtree (OFL); Source Serif 4 (OFL) for reassuring long-form headings in educational content; commercial: Frutiger (the NHS brand font), Sofia Pro, Avenir Next |
+| Display font | Figtree (OFL); Lora (OFL) for reassuring long-form headings in educational content; commercial: Frutiger (the NHS brand font), Sofia Pro, Avenir Next |
 | Body font | Figtree (OFL) or Atkinson Hyperlegible Next (OFL) for maximum character distinction; commercial: Frutiger, Avenir Next |
 | Mono / numerals | Figtree with `tabular-nums` for vitals and lab values; DM Mono (OFL) for IDs |
 | Type scale ratio | 1.250 (major third); headings 24/30/38px, body 17-19px |

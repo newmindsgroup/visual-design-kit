@@ -29,8 +29,8 @@ Let the printing process show. A risograph is a Japanese stencil duplicator that
 
 | Token | Value |
 | --- | --- |
-| Display font | Bricolage Grotesque (OFL, optical size and width axes); Anybody (OFL, width 50-150); commercial: ABC Favorit, GT America Expanded |
-| Body font | Space Mono (OFL) for captions and short copy; Newsreader (OFL) for longer text; commercial: Maison Neue, Untitled Sans |
+| Display font | Bricolage Grotesque (OFL, optical size and width axes); Gasoek One (OFL, heavy display) for poster headlines; commercial: ABC Favorit, GT America Expanded |
+| Body font | Space Mono (OFL) for captions and short copy; Crimson Pro (OFL) for longer text; commercial: Maison Neue, Untitled Sans |
 | Type scale ratio | 1.414 (augmented fourth) for poster-like contrast; body 15-17px, display 56-160px |
 | Body size / line-height | 15-17px / 1.5 (mono) or 1.55 (serif); measure 45-60ch |
 | Display letter-spacing | -0.02em to -0.04em for heavy widths; 0 for mono |
@@ -103,4 +103,4 @@ Keep it analog. Shapes slide into place in 150-250ms with a 1-2px overshoot, ink
 - Print Club London and other independent riso studios and zine fairs for process references
 - Josef Albers, *Interaction of Color*, for overprint and transparency studies
 - Silkscreen poster traditions: the Polish poster school, Cuban OSPAAAL posters and Pop-era gig posters
-- Google Fonts specimens: Bricolage Grotesque, Anybody, Space Mono, Newsreader
+- Google Fonts specimens: Bricolage Grotesque, Gasoek One, Space Mono, Crimson Pro

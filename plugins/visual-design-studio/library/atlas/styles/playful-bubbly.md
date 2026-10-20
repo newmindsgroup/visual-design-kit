@@ -29,7 +29,7 @@ Make the product feel like it wants you to succeed. Soft geometry, bright candy 
 
 | Token | Value |
 | --- | --- |
-| Display font | Fredoka (OFL); Baloo 2 (OFL); commercial: Sofia Pro Soft, Recoleta, Gooper |
+| Display font | Fredoka (OFL); Baloo 2 (OFL); commercial: Sofia Pro Soft, Cooper Black, Gooper |
 | Body font | Nunito (OFL, rounded terminals); commercial: Circular, Avenir Next Rounded |
 | Mono | Not needed; use Nunito tabular figures for scores and timers |
 | Type scale ratio | 1.333 (perfect fourth); big headings against generous body; kids' products start body at 18-20px |

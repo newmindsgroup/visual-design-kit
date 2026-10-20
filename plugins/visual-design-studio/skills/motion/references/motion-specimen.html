@@ -131,6 +131,8 @@
   .stage { position: relative; height: 180px; border: 1px dashed var(--color-border-strong); border-radius: 12px; display: grid; place-items: center; overflow: hidden; margin-top: 12px; }
   .card { width: min(280px, 80%); padding: 20px; border-radius: 12px; background: var(--color-bg-canvas); border: 1px solid var(--color-border-strong); }
   .card p { margin: 0; }
+  .stage-hint { margin: 0; color: var(--color-fg-muted); font-size: 0.875rem; }
+  .card:not([hidden]) + .stage-hint { display: none; }
   .ext { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-fg-muted); }
   footer { margin-top: 32px; color: var(--color-fg-muted); font-size: 0.875rem; }
 
@@ -191,6 +193,7 @@
         <p><strong>Saved to your board</strong></p>
         <p class="lede">Opacity, a 16px rise and scale 0.96 to 1.</p>
       </div>
+      <p class="stage-hint" aria-hidden="true">Press Show card</p>
     </div>
   </section>
 

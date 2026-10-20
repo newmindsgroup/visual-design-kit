@@ -139,37 +139,37 @@ a { color: var(--color-accent-fg); }
   --color-focus-ring: var(--lh-lamp);
   position: relative;
   border-radius: var(--lh-radius-hero);
-  background: radial-gradient(120% 90% at 78% 8%, #1B4A78 0%, var(--lh-night) 45%, var(--lh-night-deep) 100%);
+  background: radial-gradient(90% 80% at 72% 0%, #1D4E7E 0%, var(--lh-night) 48%, var(--lh-night-deep) 100%);
   color: var(--lh-cream);
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  min-height: 640px;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  min-height: 720px;
   isolation: isolate;
 }
-.harbor-copy { padding: clamp(2rem, 5vw, 4.5rem); padding-right: 0; align-self: center; position: relative; z-index: 2; }
+.scene-art { position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; }
+.harbor-copy { padding: clamp(2rem, 5vw, 4.5rem); padding-right: 0; padding-bottom: clamp(6rem, 10vw, 9rem); align-self: center; position: relative; }
 .live { display: inline-flex; align-items: center; gap: 10px; background: rgb(255 246 227 / 0.1); border: 1px solid rgb(255 246 227 / 0.28); border-radius: 99px; padding: 6px 14px 6px 10px; font-size: 0.9375rem; font-weight: 600; }
 .live i { width: 10px; height: 10px; border-radius: 50%; background: #7BE0B2; box-shadow: 0 0 0 4px rgb(123 224 178 / 0.2); }
-.harbor h1 { font-family: var(--font-family-display); font-weight: 600; font-size: clamp(2.75rem, 5.6vw, 5.25rem); line-height: 1.0; letter-spacing: -0.012em; margin-top: var(--space-6); text-wrap: balance; }
+.harbor h1 { font-family: var(--font-family-display); font-weight: 600; font-size: clamp(2.75rem, 5.4vw, 5rem); line-height: 1.0; letter-spacing: -0.012em; margin-top: var(--space-6); text-wrap: balance; }
 .harbor h1 em { font-style: normal; color: var(--lh-lamp); }
 .harbor .lede { margin-top: var(--space-6); font-size: clamp(1.125rem, 1.4vw, 1.3125rem); line-height: 1.5; color: #DCE6F0; max-width: 40ch; }
 .harbor .ctas { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8); }
-.harbor .facts { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-8); padding: 0; list-style: none; font-size: 0.9375rem; color: #C9D8E8; }
+.harbor .facts { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-8); padding: 0; list-style: none; font-size: 0.9375rem; color: #DCE6F0; }
 .harbor .facts li { display: flex; align-items: center; gap: 8px; }
 .harbor .facts svg { width: 20px; height: 20px; color: var(--lh-lamp); }
-.scene { position: relative; min-height: 100%; }
-.scene > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.beam { transform-origin: 452px 196px; animation: sweep 9s var(--ease-linear) infinite alternate; }
-@keyframes sweep { from { transform: rotate(-14deg); } to { transform: rotate(10deg); } }
-.boat { animation: bob 4.8s ease-in-out infinite alternate; }
-@keyframes bob { from { transform: translateY(0) rotate(-1.5deg); } to { transform: translateY(5px) rotate(1.5deg); } }
+.scene { position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: clamp(1rem, 3vw, 2.5rem); }
+.beam { transform-origin: 770px 312px; animation: sweep 9s var(--ease-linear) infinite alternate; }
+@keyframes sweep { from { transform: rotate(-9deg); } to { transform: rotate(12deg); } }
+.boat { animation: bob 4.8s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes bob { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(6px) rotate(2deg); } }
 .twinkle { animation: tw 3.6s ease-in-out infinite alternate; }
 .twinkle:nth-of-type(2n) { animation-delay: -1.2s; }
 @keyframes tw { from { opacity: 0.35; } to { opacity: 1; } }
 
 .visit {
-  position: absolute; right: clamp(1rem, 3vw, 2.5rem); bottom: clamp(1rem, 3vw, 2.5rem); z-index: 3;
-  width: min(360px, calc(100% - 2rem));
+  position: relative; z-index: 3;
+  width: min(360px, 100%);
   background: #fff; color: var(--lh-ink);
   border-radius: 28px; padding: 18px 18px 18px;
   box-shadow: var(--shadow-xl);
@@ -206,7 +206,7 @@ a { color: var(--color-accent-fg); }
 /* Palette: pebbles */
 .pebbles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
 .pebble { display: grid; gap: 14px; }
-.pebble .shape { aspect-ratio: 1.25; border-radius: 58% 42% 52% 48% / 52% 46% 54% 48%; display: flex; align-items: flex-end; padding: 18px 22px; font-family: var(--font-family-display); font-weight: 600; font-size: 1.375rem; box-shadow: inset 0 -10px 0 0 rgb(0 0 0 / 0.06); }
+.pebble .shape { aspect-ratio: 1.25; border-radius: 58% 42% 52% 48% / 52% 46% 54% 48%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px 22px; font-family: var(--font-family-display); font-weight: 600; font-size: 1.375rem; box-shadow: inset 0 -10px 0 0 rgb(0 0 0 / 0.06); }
 .pebble:nth-child(2n) .shape { border-radius: 46% 54% 40% 60% / 56% 44% 56% 44%; }
 .pebble:nth-child(3n) .shape { border-radius: 62% 38% 48% 52% / 44% 58% 42% 56%; }
 .pebble dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 0.9375rem; }
@@ -369,8 +369,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 @media (max-width: 1100px) {
   .harbor { grid-template-columns: 1fr; }
-  .harbor-copy { padding: clamp(2rem, 6vw, 3.5rem); }
-  .scene { min-height: 520px; }
+  .harbor-copy { padding: clamp(2rem, 6vw, 3.5rem); padding-bottom: 0; }
+  .scene-art { height: 640px; }
+  .scene { padding-top: 360px; justify-content: center; }
   .pebbles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .type-grid, .img-grid, .motion-grid, .apps { grid-template-columns: 1fr; }
   .c-buttons, .c-input, .c-card, .c-badges { grid-column: 1 / -1; grid-row: auto; }
@@ -384,8 +385,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .dir-brief { justify-self: start; text-align: left; }
   .nav ul, .nav-actions .btn--quiet { display: none; }
   .harbor { border-radius: 32px; }
-  .scene { min-height: 470px; }
-  .visit { left: 1rem; right: 1rem; width: auto; bottom: 1rem; }
+  .scene-art { height: 560px; }
+  .scene { padding: 300px 1rem 1rem; }
+  .visit { width: 100%; }
   .icon-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stickers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .device { width: 100%; max-width: 340px; }
@@ -459,61 +461,55 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </ul>
       </div>
 
-      <div class="scene">
-        <svg viewBox="0 0 640 640" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration: a harbor at night. A lighthouse sweeps its beam over gentle waves toward a small house with a lit window, while a little sailboat bobs nearby.">
-          <defs>
-            <linearGradient id="beamG" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FFC845" stop-opacity="0.75"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></linearGradient>
-            <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFC845" stop-opacity="0.55"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></radialGradient>
-            <mask id="moonM"><rect width="640" height="640" fill="#fff"/><circle cx="148" cy="96" r="34" fill="#000"/></mask>
-          </defs>
-          <!-- stars -->
-          <g fill="#FFF6E3">
-            <path class="twinkle" d="M300 70c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9z"/>
-            <path class="twinkle" d="M560 60c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
-            <path class="twinkle" d="M380 140c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
-            <circle class="twinkle" cx="230" cy="170" r="2.4"/><circle class="twinkle" cx="520" cy="130" r="2"/><circle class="twinkle" cx="80" cy="200" r="2"/><circle class="twinkle" cx="610" cy="210" r="2.4"/><circle class="twinkle" cx="350" cy="230" r="1.8"/>
-          </g>
-          <!-- moon -->
-          <circle cx="130" cy="110" r="38" fill="#FFF6E3" mask="url(#moonM)"/>
-          <!-- beam -->
-          <g class="beam"><path d="M452 196 L60 120 L60 300 Z" fill="url(#beamG)" opacity="0.55"/></g>
-          <!-- far hills -->
-          <path d="M0 430 C80 400 150 410 220 425 S360 440 420 415 S560 390 640 410 V640 H0z" fill="#16466F"/>
-          <!-- left cliff + house -->
-          <path d="M0 420 C40 380 120 370 170 392 C200 405 210 430 214 470 L0 470z" fill="#1C5582"/>
-          <g transform="translate(70 318)">
-            <path d="M0 60 V26 L36 0 L72 26 V60z" fill="#FFF6E3"/>
-            <path d="M-8 30 L36 -6 L80 30" fill="none" stroke="#FF8364" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="14" y="30" width="18" height="18" rx="5" fill="#FFC845"/>
-            <rect x="42" y="34" width="14" height="26" rx="6" fill="#1C5582"/>
-            <circle cx="23" cy="39" r="26" fill="url(#glow)"/>
-          </g>
-          <!-- dotted call line from window to lighthouse -->
-          <path d="M108 352 C210 250 330 230 440 200" fill="none" stroke="#FFC845" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12" opacity="0.9"/>
-          <!-- rock + lighthouse -->
-          <path d="M370 470 C380 430 420 410 470 412 C520 414 560 440 572 470z" fill="#1C5582"/>
-          <g>
-            <path d="M432 412 L440 230 H464 L472 412z" fill="#FFF6E3"/>
-            <path d="M436.6 330 H467.4 L469 368 H435z" fill="#FF8364"/>
-            <path d="M438.6 268 H465.4 L466.4 296 H437.6z" fill="#FF8364"/>
-            <rect x="428" y="216" width="48" height="16" rx="6" fill="#0C2845"/>
-            <rect x="436" y="182" width="32" height="34" rx="9" fill="#FFC845"/>
-            <circle cx="452" cy="196" r="44" fill="url(#glow)"/>
-            <path d="M430 184 Q452 156 474 184z" fill="#FF8364"/>
-            <rect x="447" y="390" width="10" height="22" rx="5" fill="#0C2845"/>
-          </g>
-          <!-- waves -->
-          <path d="M0 470 C40 455 80 455 120 470 S200 485 240 470 320 455 360 470 440 485 480 470 560 455 600 470 640 480 640 480 V640 H0z" fill="#1F5F86"/>
-          <g class="boat">
-            <path d="M240 486 h86 c-6 16-18 22-43 22 s-37-6-43-22z" fill="#FF8364"/>
-            <path d="M284 484 V420 L320 478z" fill="#FFF6E3"/>
-            <path d="M280 484 V432 L254 476z" fill="#FFC845"/>
-          </g>
-          <path d="M0 512 C40 498 80 498 120 512 S200 526 240 512 320 498 360 512 440 526 480 512 560 498 600 512 640 520 640 520 V640 H0z" fill="#1F7A74"/>
-          <path d="M0 560 C50 544 100 544 150 560 S250 576 300 560 400 544 450 560 550 576 600 560 640 556 640 556 V640 H0z" fill="#2A9488"/>
-          <path d="M60 590 c10-6 20-6 30 0 M200 604 c10-6 20-6 30 0 M420 596 c10-6 20-6 30 0" fill="none" stroke="#CFEDE4" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-        </svg>
+      <svg class="scene-art" viewBox="0 0 1216 760" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Illustration: a harbor at night. A lighthouse on a rock sweeps its beam over gentle waves; a dotted line runs from its lamp to the lit window of a small house on the cliff, and a little sailboat bobs in the water.">
+        <defs>
+          <linearGradient id="beamG" x1="1" x2="0" y1="0" y2="0"><stop offset="0" stop-color="#FFC845" stop-opacity="0.7"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFC845" stop-opacity="0.55"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></radialGradient>
+          <mask id="moonM"><rect width="1216" height="760" fill="#fff"/><circle cx="946" cy="104" r="36" fill="#000"/></mask>
+        </defs>
+        <g fill="#FFF6E3">
+          <path class="twinkle" d="M700 90c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9z"/>
+          <path class="twinkle" d="M1130 70c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <path class="twinkle" d="M1040 190c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <path class="twinkle" d="M500 60c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <circle class="twinkle" cx="640" cy="200" r="2.4"/><circle class="twinkle" cx="1180" cy="150" r="2"/><circle class="twinkle" cx="860" cy="230" r="2"/><circle class="twinkle" cx="1100" cy="250" r="2.4"/><circle class="twinkle" cx="590" cy="130" r="1.8"/><circle class="twinkle" cx="380" cy="40" r="1.8"/>
+        </g>
+        <circle cx="926" cy="118" r="40" fill="#FFF6E3" mask="url(#moonM)"/>
+        <g class="beam"><path d="M770 312 L470 200 L470 400 Z" fill="url(#beamG)" opacity="0.6"/></g>
+        <!-- distant hills -->
+        <path d="M480 640 C560 600 640 596 720 610 S880 630 960 600 S1120 560 1216 572 V760 H480z" fill="#17466F"/>
+        <!-- cliff with house (right) -->
+        <path d="M930 760 C944 600 980 420 1060 352 C1100 330 1160 326 1216 330 V760z" fill="#1C5582"/>
+        <g transform="translate(1076 270)">
+          <path d="M0 62 V28 L36 0 L72 28 V62z" fill="#FFF6E3"/>
+          <path d="M-8 32 L36 -6 L80 32" fill="none" stroke="#FF8364" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="14" y="32" width="18" height="18" rx="5" fill="#FFC845"/>
+          <rect x="44" y="36" width="14" height="26" rx="6" fill="#1C5582"/>
+          <circle cx="23" cy="41" r="30" fill="url(#glow)"/>
+        </g>
+        <path d="M1092 306 C1010 230 880 236 792 300" fill="none" stroke="#FFC845" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+        <!-- rock + lighthouse (center) -->
+        <path d="M650 620 C664 578 712 560 770 562 C830 564 878 584 892 620z" fill="#1C5582"/>
+        <path d="M754 568 L760 330 H780 L786 568z" fill="#FFF6E3"/>
+        <path d="M757.7 452 H782.3 L783.5 496 H756.5z" fill="#FF8364"/>
+        <path d="M759.3 372 H780.7 L781.5 406 H758.5z" fill="#FF8364"/>
+        <rect x="746" y="316" width="48" height="16" rx="6" fill="#0C2845"/>
+        <rect x="754" y="280" width="32" height="36" rx="9" fill="#FFC845"/>
+        <circle cx="770" cy="298" r="50" fill="url(#glow)"/>
+        <path d="M748 282 Q770 252 792 282z" fill="#FF8364"/>
+        <!-- waves, lower on the left so the copy stays on calm sky -->
+        <path d="M0 690 C60 678 110 678 170 690 S290 702 350 690 470 660 540 650 650 640 720 620 840 604 920 618 1060 640 1216 610 V760 H0z" fill="#1F5F86"/>
+        <g class="boat">
+          <path d="M560 646 h86 c-6 16-18 22-43 22 s-37-6-43-22z" fill="#FF8364"/>
+          <path d="M604 644 V580 L640 638z" fill="#FFF6E3"/>
+          <path d="M600 644 V592 L574 636z" fill="#FFC845"/>
+        </g>
+        <path d="M0 716 C60 704 120 704 180 716 S300 728 360 716 480 700 540 696 660 690 720 676 840 664 900 676 1060 692 1216 664 V760 H0z" fill="#1F7A74"/>
+        <path d="M0 742 C60 732 120 732 180 742 S300 752 360 742 480 730 560 728 700 724 780 714 900 708 980 718 1120 726 1216 708 V760 H0z" fill="#2A9488"/>
+        <path d="M120 730 c10-6 20-6 30 0 M420 722 c10-6 20-6 30 0 M840 700 c10-6 20-6 30 0" fill="none" stroke="#CFEDE4" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
 
+      <div class="scene">
         <aside class="visit" aria-label="Example visit status card">
           <div class="visit-top"><span>Video visit</span><span class="tag"><i aria-hidden="true"></i>You're next</span></div>
           <div class="doc"><svg aria-hidden="true"><use href="#doc-av"/></svg><div><b>Dr. Amara Osei, MD</b><span>Pediatrics · 11 years · speaks EN, FR</span></div></div>
@@ -562,7 +558,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     <div class="type-grid">
       <div class="card">
         <div class="meta"><span>Display</span><span>Fredoka 600</span><span>clamp(44px, 5.4vw, 76px) / 1.02</span><span>tracking −0.012em</span></div>
-        <p class="t-display">Little fevers, big worries? A real doctor is up.</p>
+        <p class="t-display">Little fevers, big worries? A&nbsp;real doctor is up.</p>
         <p class="t-h2">Fredoka 500 for section titles, 24-32px / 1.15</p>
       </div>
       <div>
@@ -657,12 +653,12 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
                 <circle cx="92" cy="54" r="3.5" fill="#14304F"/><circle cx="118" cy="54" r="3.5" fill="#14304F"/>
                 <path d="M94 70c6 5 16 5 22 0" fill="none" stroke="#14304F" stroke-width="3" stroke-linecap="round"/>
                 <path d="M62 140c0-28 18-44 43-44s43 16 43 44v54c0 10-6 16-16 16H78c-10 0-16-6-16-16z" fill="#CFEDE4" stroke="#14304F" stroke-width="3"/>
-                <path d="M62 128 32 168M148 128l30 40" stroke="#14304F" stroke-width="16" stroke-linecap="round"/>
-                <path d="M62 128 32 168M148 128l30 40" stroke="#CFEDE4" stroke-width="10" stroke-linecap="round"/>
-                <path d="M86 210v44M124 210v44" stroke="#14304F" stroke-width="18" stroke-linecap="round"/>
-                <path d="M86 210v44M124 210v44" stroke="#CFEDE4" stroke-width="12" stroke-linecap="round"/>
+                <path d="M64 128 36 172M146 128l28 44" stroke="#14304F" stroke-width="22" stroke-linecap="round"/>
+                <path d="M64 128 36 172M146 128l28 44" stroke="#CFEDE4" stroke-width="16" stroke-linecap="round"/>
+                <path d="M86 210v40M124 210v40" stroke="#14304F" stroke-width="24" stroke-linecap="round"/>
+                <path d="M86 210v40M124 210v40" stroke="#CFEDE4" stroke-width="18" stroke-linecap="round"/>
                 <path d="M164 34h34" stroke="#14304F" stroke-width="0"/>
-                <text x="168" y="30" font-family="Atkinson Hyperlegible Next, sans-serif" font-size="13" font-weight="700" fill="#14304F">Left ear</text>
+                <path d="M158 58 176 30" stroke="#14304F" stroke-width="2"/><text x="206" y="24" text-anchor="end" font-family="Atkinson Hyperlegible Next, sans-serif" font-size="13" font-weight="700" fill="#14304F">Left ear</text>
               </svg>
             </div>
             <div class="sym"><span class="on">Fever</span><span class="on">Ear pain</span><span>Cough</span><span>Fussy</span><span>Rash</span></div>
@@ -675,7 +671,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <h3>Milo was brave today.</h3>
           <p>After every visit, the doctor sends a sticker to the child's profile. Kids pick one; parents can print the sheet.</p>
           <div class="stickers">
-            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="#FFC845" stroke="#fff" stroke-width="8"/><path d="M48 92 75 40l27 52z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M54 80h42" stroke="#FF8364" stroke-width="6"/><rect x="65" y="30" width="20" height="14" rx="5" fill="#14304F"/><path d="M30 104c10-6 20-6 30 0s20 6 30 0 20-6 30 0" fill="none" stroke="#1F7A74" stroke-width="6" stroke-linecap="round"/></svg><figcaption>Lighthouse keeper</figcaption></figure>
+            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="#FFC845" stroke="#fff" stroke-width="8"/><path d="M62 112 66 54h18l4 58z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M64.6 92h20.8M65.6 74h18.8" stroke="#FF8364" stroke-width="8"/><rect x="62" y="40" width="26" height="16" rx="5" fill="#14304F"/><path d="M60 42 75 26l15 16z" fill="#FF8364" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M90 46l22-8M90 52l22 4" stroke="#14304F" stroke-width="4" stroke-linecap="round"/><path d="M28 118c10-6 20-6 30 0s20 6 30 0 20-6 30 0" fill="none" stroke="#1F7A74" stroke-width="6" stroke-linecap="round"/></svg><figcaption>Lighthouse keeper</figcaption></figure>
             <figure><svg viewBox="0 0 150 150" aria-hidden="true"><path d="M75 8c14 0 18 14 30 18s26 2 30 16-8 22-6 34 12 24 4 36-24 6-34 14-14 18-26 18-16-12-26-18-26-2-34-14 4-24 4-36-12-22-8-34 18-10 30-16S61 8 75 8z" fill="#CFEDE4" stroke="#fff" stroke-width="8"/><path d="M42 92h66c-4 14-16 20-33 20s-29-6-33-20z" fill="#FF8364" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M78 90V42l26 46z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/></svg><figcaption>Brave sailor</figcaption></figure>
             <figure><svg viewBox="0 0 150 150" aria-hidden="true"><rect x="10" y="10" width="130" height="130" rx="40" fill="#12375E" stroke="#fff" stroke-width="8"/><path d="M98 88A30 30 0 0 1 60 50a30 30 0 1 0 38 38z" fill="#FFC845"/><circle cx="104" cy="44" r="4" fill="#FFF6E3"/><circle cx="40" cy="104" r="3" fill="#FFF6E3"/></svg><figcaption>Night owl</figcaption></figure>
             <figure><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="#FF8364" stroke="#fff" stroke-width="8"/><path d="M75 34l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/></svg><figcaption>Super patient</figcaption></figure>

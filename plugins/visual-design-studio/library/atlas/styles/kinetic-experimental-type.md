@@ -30,7 +30,7 @@ Make the letters do the work of the image. Type becomes shape, rhythm and behavi
 | Token | Value |
 | --- | --- |
 | Display font | Anybody (OFL, wdth 50-150, wght 100-900); Mona Sans (OFL, wdth 75-125, wght 200-900); Recursive (OFL, axes MONO, CASL, wght 300-1000, slnt); Fraunces (OFL, axes opsz, wght, SOFT, WONK); commercial: ABC Diatype Variable, GT Flexa, Obviously Variable |
-| Body font | Mona Sans or Roboto Flex (OFL) at fixed axes; static text faces such as Newsreader (OFL) for reading copy |
+| Body font | Mona Sans (OFL) at fixed axes; a static text face such as Newsreader (OFL) for reading copy |
 | Mono (data, captions) | Recursive Mono (MONO 1) or Space Mono (OFL) |
 | Type scale ratio | Extreme: 1.618 or larger between body and display; body 16-18px, display `clamp(4rem, 14vw, 22rem)` |
 | Body size / line-height | 16-18px / 1.5; measure 55-65ch; display line-height 0.8-0.95 |

@@ -151,8 +151,8 @@ a { color: inherit; }
 .section-art .scroller { overflow-x: auto; }
 .swipe { display: none; }
 .section-art svg { width: 100%; height: auto; }
-.section-art .lbl { font-family: "Archivo", sans-serif; font-stretch: 85%; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
-.section-art .lbl-n { font-family: "Archivo", sans-serif; font-weight: 500; font-size: 12px; }
+.section-art .lbl { font-family: "Archivo", sans-serif; font-stretch: 85%; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+.section-art .lbl-n { font-family: "Archivo", sans-serif; font-weight: 500; font-size: 13px; }
 .art-caption { display: flex; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-3); font-family: var(--font-family-ui); font-size: 0.8125rem; color: var(--color-fg-muted); }
 .stats { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
 .stats ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 0; padding: var(--space-10) 0; gap: var(--space-8); }
@@ -289,16 +289,17 @@ a { color: inherit; }
 .contour { position: relative; background: var(--color-bg-inverse); color: var(--color-shallows); border-radius: var(--radius-lg); overflow: hidden; min-height: 420px; }
 .contour svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .contour figcaption { position: absolute; inset-inline: 20px; bottom: 16px; font-family: var(--font-family-ui); font-size: 0.8125rem; color: #DCE9E6; }
-.duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-3); }
-.duo div { height: 120px; border-radius: var(--radius-lg); position: relative; overflow: hidden; font-family: var(--font-family-ui); font-size: 0.75rem; font-weight: 600; padding: 10px 12px; display: flex; align-items: flex-end; }
-.duo .yes { background:
-   linear-gradient(transparent 55%, rgb(11 46 53 / 0.75)),
-   radial-gradient(120% 60% at 30% 100%, #6F8E5A 0 40%, transparent 41%),
-   linear-gradient(#C9D9D3 0 48%, #9CC3C9 48% 62%, #8A9E73 62%);
-   color: #FFFFFF; }
-.duo .no { background: repeating-linear-gradient(90deg, #8B8F94 0 2px, #A3A7AB 2px 6px); color: #FFFFFF; filter: saturate(0); }
-.duo .no::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgb(0 0 0 / 0.7)); }
-.duo span { position: relative; }
+.photo-spec { margin: var(--space-4) 0 0; }
+.photo-spec .frame { position: relative; aspect-ratio: 5 / 2; border-radius: var(--radius-lg); overflow: hidden; }
+.photo-spec svg { width: 100%; height: 100%; }
+.photo-spec .crop { position: absolute; width: 18px; height: 18px; border: 0 solid #FFFFFF; }
+.photo-spec .tl { top: 10px; left: 10px; border-top-width: 2px; border-left-width: 2px; }
+.photo-spec .tr { top: 10px; right: 10px; border-top-width: 2px; border-right-width: 2px; }
+.photo-spec .bl { bottom: 10px; left: 10px; border-bottom-width: 2px; border-left-width: 2px; }
+.photo-spec .br { bottom: 10px; right: 10px; border-bottom-width: 2px; border-right-width: 2px; }
+.photo-spec .thirds { position: absolute; inset: 0; background: linear-gradient(90deg, transparent calc(33.33% - 0.5px), rgb(255 255 255 / 0.55) calc(33.33% - 0.5px) calc(33.33% + 0.5px), transparent 0, transparent calc(66.66% - 0.5px), rgb(255 255 255 / 0.55) calc(66.66% - 0.5px) calc(66.66% + 0.5px), transparent 0), linear-gradient(transparent calc(33.33% - 0.5px), rgb(255 255 255 / 0.55) calc(33.33% - 0.5px) calc(33.33% + 0.5px), transparent 0, transparent calc(66.66% - 0.5px), rgb(255 255 255 / 0.55) calc(66.66% - 0.5px) calc(66.66% + 0.5px), transparent 0); }
+.photo-spec figcaption { font-family: var(--font-family-ui); font-size: 0.875rem; line-height: 1.45; margin-top: 10px; }
+.photo-spec figcaption span { color: var(--color-fg-muted); }
 
 /* ---------- 8. Motion ---------- */
 .motion { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
@@ -368,7 +369,7 @@ a { color: inherit; }
   .hero-copy .deck-row { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
   .give { padding: var(--space-5); }
   .section-art { margin-top: var(--space-6); }
-  .section-art svg { width: 210%; max-width: none; }
+  .section-art svg { width: 300%; max-width: none; }
   .swipe { display: inline; }
   .art-caption { flex-direction: column; gap: 2px; }
   .stats ul { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); padding-block: var(--space-8); }
@@ -384,7 +385,6 @@ a { color: inherit; }
   .email-head, .email-body { padding-inline: 20px; }
   .email-head svg.wave { width: calc(100% + 40px); margin-inline: -20px; }
   .email-chrome { flex-direction: column; gap: 2px; }
-  .duo { grid-template-columns: minmax(0, 1fr); }
 }
 </style>
 </head>
@@ -490,8 +490,8 @@ a { color: inherit; }
         <path d="M0 128H1440" stroke-dasharray="14 8" stroke="#C73A24" stroke-width="2"/>
       </g>
       <g>
-        <rect x="24" y="117" width="292" height="22" fill="#C73A24"/><text class="lbl" x="34" y="132" fill="#FFFFFF">+1.0 m by 2100 &#183; intermediate scenario</text>
-        <rect x="24" y="149" width="164" height="22" fill="#0B2E35"/><text class="lbl" x="34" y="164" fill="#F3F5F0">+0.3 m by 2050</text>
+        <rect x="24" y="116" width="318" height="24" fill="#C73A24"/><text class="lbl" x="34" y="132" fill="#FFFFFF">+1.0 m by 2100 &#183; intermediate scenario</text>
+        <rect x="24" y="148" width="176" height="24" fill="#0B2E35"/><text class="lbl" x="34" y="164" fill="#F3F5F0">+0.3 m by 2050</text>
         <text class="lbl" x="34" y="196" fill="#0B2E35">Mean high water today</text>
       </g>
       <g font-family="Archivo, sans-serif" fill="#0B2E35">
@@ -706,10 +706,22 @@ a { color: inherit; }
           </svg>
           <figcaption>Texture: bathymetric contours of Pell Sound, 1 m intervals, with the 2050 shoreline dashed in Life-ring. Use behind data callouts at 60&ndash;80% opacity.</figcaption>
         </figure>
-        <div class="duo">
-          <div class="yes"><span>Yes: wide, wet, working, named.</span></div>
-          <div class="no"><span>No: disaster spectacle, desaturated despair.</span></div>
-        </div>
+        <figure class="photo-spec">
+          <div class="frame" role="img" aria-label="Photo placeholder: wide low-tide frame with the horizon in the upper third, a volunteer setting reef bags in the middle distance">
+            <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="600" height="240" fill="#DCE9E6"/>
+              <rect y="78" width="600" height="14" fill="#9CC3C9"/>
+              <rect y="92" width="600" height="148" fill="#B9AA86"/>
+              <path d="M0 150c80-14 140 10 210-2s120-36 200-30 130 26 190 20v18c-60 8-120-16-190-18s-130 22-200 32-140-8-210 4z" fill="#76A9B1"/>
+              <path d="M0 210c100-10 200 8 300-4s200-14 300-6v40H0z" fill="#A69772"/>
+              <g fill="#E3D6B8" stroke="#0B2E35" stroke-width="1.2"><ellipse cx="350" cy="134" rx="11" ry="5"/><ellipse cx="372" cy="131" rx="11" ry="5"/><ellipse cx="394" cy="129" rx="10" ry="5"/><ellipse cx="416" cy="128" rx="10" ry="5"/><ellipse cx="438" cy="127" rx="10" ry="4.5"/></g>
+              <g fill="#0B2E35"><circle cx="452" cy="96" r="5"/><path d="M447 103c6-2 12 2 12 9l-2 13h-4l-1-8-5 8h-4l3-12c-4 0-7-3-7-6z"/><path d="M459 108l10 12" stroke="#0B2E35" stroke-width="3" stroke-linecap="round"/></g>
+            </svg>
+            <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+            <span class="thirds" aria-hidden="true"></span>
+          </div>
+          <figcaption><b>Rosa Delgado</b> sets reef bags at Pell Island, 6:52 a.m., 14 January 2026. <span>Photo: J. Okoye for Tidewater, used with consent. Caption format: who, doing what, where, when; credit last.</span></figcaption>
+        </figure>
       </div>
     </div>
   </div>

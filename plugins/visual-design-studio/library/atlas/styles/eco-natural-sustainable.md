@@ -29,14 +29,14 @@ Look as if the product grew rather than was manufactured, and back it with proof
 
 | Token | Value |
 | --- | --- |
-| Display font | Young Serif (OFL); Bricolage Grotesque (OFL, optical size and width axes) for a modern, earthy sans; commercial: Recoleta, Reckless, Tiempos Headline |
+| Display font | Young Serif (OFL); Red Hat Display (OFL) for a modern, earthy sans; commercial: Reckless, Tiempos Headline, Canela Text |
 | Body font | Karla (OFL); Work Sans (OFL); commercial: Freight Text, Sofia Pro |
 | Mono (data, SKUs) | DM Mono (OFL) |
 | Type scale ratio | 1.250 (major third); calm steps, display 44-72px |
 | Body size / line-height | 17-18px / 1.6-1.65; measure 55-65ch |
 | Display letter-spacing | -0.01em to -0.02em; line-height 1.1-1.15 |
 | Caps / labels | 12-13px uppercase, +0.1em, weight 600, in moss deep for category tags |
-| Weights | Display 400 (Young Serif is single-weight) or 600 for Bricolage; body 400, UI 600 |
+| Weights | Display 400 (Young Serif is single-weight) or 600-700 for Red Hat Display; body 400, UI 600 |
 | Palette | Bone #F8F4EA (oklch 0.97 0.014 89); Sand #EFE7D6 (oklch 0.93 0.024 86); Forest #1F3D2B (oklch 0.33 0.049 156); Moss deep #4A6A2E (oklch 0.48 0.095 132); Clay deep #9A4F37 (oklch 0.51 0.107 38); Sun #E0B341 (oklch 0.79 0.138 87); Ink #1B2A21 (oklch 0.27 0.026 158); Soft ink #4F5E54 (oklch 0.47 0.024 156) |
 | Graphic-only hues | River #3E7C86 (oklch 0.55 0.066 209) for charts and large fills; lighter moss #5F7F3E (oklch 0.56 0.099 131) and clay #B5654A (oklch 0.59 0.111 39) for illustration, not text |
 | Accent proportion | Bone/sand 60-70%, forest or ink 20-25%, moss/clay/sun accents 5-10%; avoid pure grass green (#4CAF50-like) as the dominant color |
@@ -104,4 +104,4 @@ Slow, grounded and optional. Fade up elements 12-16px over 500-700ms, let botani
 - FTC Green Guides (16 CFR Part 260), UK CMA Green Claims Code, EU Directive 2024/825
 - Sustainable Web Design guidance and the Green Web Foundation for digital footprint practice
 - B Corp and FSC certification marks, usable only by certified holders
-- Google Fonts specimens: Young Serif, Bricolage Grotesque, Karla
+- Google Fonts specimens: Young Serif, Red Hat Display, Karla

@@ -29,7 +29,7 @@ Let drawing do the explaining. Instead of photography and icon grids, the brand 
 
 | Token | Value |
 | --- | --- |
-| Display font | Fraunces (OFL, variable: SOFT and WONK axes); Young Serif (OFL); commercial: Recoleta, Canela, GT Sectra |
+| Display font | Fraunces (OFL, variable: SOFT and WONK axes); DM Serif Display (OFL); commercial: Recoleta, Canela, GT Sectra |
 | Body font | Literata (OFL); Newsreader (OFL); commercial: Tiempos Text, Freight Text |
 | Hand-lettered accent | Caveat (OFL) for margin notes only; commission custom lettering for logo and chapter titles |
 | Type scale ratio | 1.333 (perfect fourth) with generous display jumps; chapter titles 56-96px |

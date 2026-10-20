@@ -29,8 +29,8 @@ Respect the reader's time and eyes. Developers spend hours in dark editors, so a
 
 | Token | Value |
 | --- | --- |
-| Display font | Geist (OFL); Mona Sans (OFL, variable width); commercial: Söhne, GT America |
-| Body font | Geist (OFL) or Mona Sans; commercial: Söhne Text |
+| Display font | Geist (OFL); Hubot Sans (OFL, GitHub's technical variable-width sans); commercial: Söhne, GT America |
+| Body font | Geist (OFL); commercial: Söhne Text |
 | Mono (code, labels) | Geist Mono (OFL); JetBrains Mono (OFL); commercial: Berkeley Mono, Söhne Mono |
 | Type scale ratio | 1.200 for product UI, 1.250 for marketing; product body is 13-14px, marketing body 16px |
 | Body size / line-height | UI 14px / 1.4; docs and marketing 16px / 1.6; code 13-14px / 1.6; measure 60-68ch |
@@ -86,7 +86,7 @@ Fast and informational. Hover states change border-color and background in 100ms
 ## Clichés and AI tells
 
 - Lazy version: black background, Inter or Space Grotesk, a purple-to-blue radial glow behind a centered headline, glass cards with 1px white-10% borders, an animated "typing" tagline, and a fake terminal.
-- Fix: choose the signal color from the brand (mint, amber or a saturated blue) and name it; left-align the layout; replace the glow with a real product panel; set headings in Geist or Mona Sans with tight tracking; show actual logs, diffs and benchmarks; add a light theme and a docs-quality reading mode.
+- Fix: choose the signal color from the brand (mint, amber or a saturated blue) and name it; left-align the layout; replace the glow with a real product panel; set headings in Geist or Hubot Sans with tight tracking; show actual logs, diffs and benchmarks; add a light theme and a docs-quality reading mode.
 
 ## Accessibility notes
 
