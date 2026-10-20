@@ -3,7 +3,7 @@ id: style.y2k-cyber
 axis: style
 name: Y2K / Cyber
 aliases: [y2k, frutiger aero, cybercore, millennium, chrome and gloss, aqua ui, 2000s futurism, web 1.0 futurism]
-summary: Millennium-era techno-optimism: glossy aqua buttons, chrome and bubble forms, sci-fi extended type, translucent panels and acid accents on icy or void grounds; nostalgic, glossy, energetic.
+summary: Millennium-era techno-optimism - glossy aqua buttons, chrome and bubble forms, sci-fi extended type, translucent panels and acid accents on icy or void grounds; nostalgic, glossy, energetic.
 tags: [y2k, cyber, chrome, glossy, aqua, futuristic, nostalgia, 2000s]
 pairs_with: [audience.teens-gen-z, industry.fashion-apparel, industry.beauty-cosmetics, industry.gaming-esports, industry.media-entertainment-streaming, industry.events-conferences, archetype.jester, archetype.explorer, channel.social-media, channel.video-motion]
 avoid_with: [industry.healthcare-provider, industry.insurance, industry.government-civic, audience.older-adults, tier.luxury, audience.neurodivergent]

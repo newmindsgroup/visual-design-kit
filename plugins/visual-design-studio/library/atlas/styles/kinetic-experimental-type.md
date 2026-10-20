@@ -3,7 +3,7 @@ id: style.kinetic-experimental-type
 axis: style
 name: Kinetic / Experimental Typography
 aliases: [kinetic type, experimental typography, variable font motion, type-as-image, expressive typography, moving type, typographic motion]
-summary: Letterforms as the main image and behavior: variable-font axes, scale extremes and motion that respond to scroll, pointer or sound, with a readable resting state and disciplined limits.
+summary: Letterforms as the main image and behavior, using variable-font axes, scale extremes and motion that respond to scroll, pointer or sound, with a readable resting state and disciplined limits.
 tags: [kinetic, typography, experimental, variable-fonts, motion, type-as-image, expressive, scroll, animation, poster]
 pairs_with: [industry.creative-agencies-studios, industry.events-conferences, industry.media-entertainment-streaming, industry.fashion-apparel, archetype.magician, archetype.creator, archetype.outlaw, channel.video-motion, channel.marketing-website, channel.ooh-signage]
 avoid_with: [audience.older-adults, audience.disability-accessibility-first, audience.neurodivergent, audience.low-bandwidth-entry-devices, industry.healthcare-provider, industry.government-civic]

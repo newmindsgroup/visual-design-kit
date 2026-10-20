@@ -3,7 +3,7 @@ id: style.web-brutalist
 axis: style
 name: Raw Web Brutalism
 aliases: [brutalist web design, brutalist websites, raw html, anti-design, default web aesthetic, unstyled web, raw brutalism]
-summary: Deliberately raw websites: system fonts, browser-blue links, hard black-and-white blocks and visible structure; honesty and speed over polish. Niche and risky; needs usability scaffolding.
+summary: Deliberately raw websites - system fonts, browser-blue links, hard black-and-white blocks and visible structure; honesty and speed over polish. Niche and risky; needs usability scaffolding.
 tags: [brutalist, raw, anti-design, html, monospace, default, stark, web]
 pairs_with: [industry.creative-agencies-studios, industry.media-entertainment-streaming, industry.nonprofit-ngo, industry.developer-tools, archetype.outlaw, archetype.creator, channel.marketing-website, audience.expert-power-users, audience.low-bandwidth-entry-devices]
 avoid_with: [industry.healthcare-provider, industry.fintech-banking, tier.luxury, audience.older-adults, audience.children-under-13, archetype.caregiver]
@@ -69,7 +69,7 @@ Absent by design. State changes are immediate, links change color, and nothing s
 ## Fits and risks
 
 - **Where it works today:** art, architecture and design studio portfolios (`industry.creative-agencies-studios`), record labels, galleries and independent publishers (`industry.media-entertainment-streaming`), campaigns and collectives (`industry.nonprofit-ngo`), developer tool docs and personal sites (`industry.developer-tools`, `audience.expert-power-users`), and fast static marketing pages (`channel.marketing-website`). The honest, lightweight HTML also suits `audience.low-bandwidth-entry-devices`. `archetype.outlaw` and `archetype.creator` use the rawness as a stance.
-- **Accessibility risk:** the plain-HTML core is robust (semantic, zoomable, high contrast), but the performative variant often fails WCAG: overlapping text at 200% zoom (1.4.4, 1.4.10), missing visible focus (2.4.7), tiny link targets (2.5.8), and unlabeled controls. Test with keyboard, a screen reader and 400% zoom.
+- **Accessibility risk:** the plain-HTML core is sturdy (semantic, zoomable, high contrast), but the performative variant often fails WCAG: overlapping text at 200% zoom (1.4.4, 1.4.10), missing visible focus (2.4.7), tiny link targets (2.5.8), and unlabeled controls. Test with keyboard, a screen reader and 400% zoom.
 - **Longevity and brand risk:** it is a statement tied to a design-culture moment; it can look broken or negligent to ordinary customers, hurts trust in regulated or care contexts, and becomes a pastiche when copied. Plan a restrained evolution rather than a permanent identity for mass brands.
 - **Wrong for:** `industry.healthcare-provider` and `industry.fintech-banking` (trust and error recovery matter more than attitude), `tier.luxury`, `audience.older-adults` and `audience.children-under-13` (need guidance and friendly affordances), and `archetype.caregiver`.
 

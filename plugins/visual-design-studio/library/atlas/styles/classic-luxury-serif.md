@@ -3,7 +3,7 @@ id: style.classic-luxury-serif
 axis: style
 name: Classic Luxury Serif
 aliases: [heritage luxury, maison style, old money, quiet luxury serif, fine jewelry style, haute couture serif, high-end traditional]
-summary: Centered, ceremonial heritage luxury: light serif or Roman capitals, deep jewel grounds with antique gold, hairline rules, slow fades and abundant space; price signaled through restraint.
+summary: Centered, ceremonial heritage luxury - light serif or Roman capitals, deep jewel grounds with antique gold, hairline rules, slow fades and abundant space; price signaled through restraint.
 tags: [luxury, serif, heritage, elegant, gold, centered, jewelry, maison]
 pairs_with: [industry.luxury-goods, industry.hotels-travel, industry.fashion-apparel, industry.real-estate-proptech, audience.affluent-hnwi, tier.luxury, tier.ultra-luxury, archetype.ruler, archetype.lover, channel.packaging]
 avoid_with: [tier.value, audience.teens-gen-z, archetype.jester, archetype.outlaw, audience.low-bandwidth-entry-devices, industry.gaming-esports]
@@ -84,7 +84,7 @@ Slow and reverent. Fade content in 700-1100ms with a short 8-16px rise, crossfad
 
 ## Clichés and AI tells
 
-- The lazy version: black background, gold gradient "LUXURY" in Cinzel, a diamond or crown icon, and "Elevated living, exquisitely crafted" copy.
+- The lazy version: black background, gold gradient "LUXURY" in Cinzel, a diamond or crown icon, and "Refined living, exquisitely crafted" copy.
 - Generated imagery of gold-dusted bottles, floating jewelry and impossible marble with garbled engraved text.
 - Fix: choose a real, named material or craft process to photograph, write specific provenance copy (maker, place, year), use a quiet palette with one ground color and thin gold lines, and test every gold-on-ground pair for contrast.
 

@@ -3,7 +3,7 @@ id: style.maximalist-eclectic
 axis: style
 name: Maximalist / Eclectic
 aliases: [maximalism, more is more, eclectic, pattern clash, jewel box, layered, curated chaos, kitchen sink design]
-summary: Controlled abundance: jewel colors, clashing patterns, layered type and imagery, mixed eras and shapes, held together by one repeated device; richness, humor and personality over restraint.
+summary: Controlled abundance - jewel colors, clashing patterns, layered type and imagery, mixed eras and shapes, held together by one repeated device; richness, humor and personality over restraint.
 tags: [maximalist, eclectic, pattern, jewel-tones, layered, ornate, colorful, bold]
 pairs_with: [industry.fashion-apparel, industry.restaurants-hospitality, industry.hotels-travel, industry.events-conferences, industry.beauty-cosmetics, archetype.jester, archetype.creator, archetype.magician, channel.packaging, channel.social-media]
 avoid_with: [industry.government-civic, industry.healthcare-provider, audience.neurodivergent, audience.low-bandwidth-entry-devices, audience.older-adults, channel.web-app]

@@ -3,7 +3,7 @@ id: style.mid-century-modern
 axis: style
 name: Mid-Century Modern
 aliases: [mcm, midcentury, atomic age, eames era, 1950s modern, mad men style, cut-paper modernism]
-summary: Optimistic postwar modernism: organic and geometric shapes, cut-paper illustration, warm walnut, teal and burnt-orange palettes, and friendly gothic and slab type from c. 1945-1969.
+summary: Optimistic postwar modernism - organic and geometric shapes, cut-paper illustration, warm walnut, teal and burnt-orange palettes, and friendly gothic and slab type from c. 1945-1969.
 tags: [midcentury, atomic, retro, organic-shapes, warm, cut-paper, 1950s, modernist]
 pairs_with: [industry.real-estate-proptech, industry.ecommerce-dtc, industry.restaurants-hospitality, industry.hotels-travel, archetype.creator, archetype.everyperson, tier.mid-market, tier.premium, channel.ecommerce-store, market.united-states]
 avoid_with: [industry.gaming-esports, industry.crypto-web3, archetype.outlaw]

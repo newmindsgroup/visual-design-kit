@@ -3,7 +3,7 @@ id: style.seventies-psychedelic-groovy
 axis: style
 name: 70s Psychedelic / Groovy
 aliases: [70s, groovy, psychedelic, retro seventies, cooper black style, earth tones retro, flower power, disco-era, 1970s revival]
-summary: Warm, curvy 1960s-70s optimism: fat soft serifs, wavy bands, sunbursts and concentric arcs in avocado, harvest gold, burnt orange and plum; sensual, sunny and a little trippy.
+summary: Warm, curvy 1960s-70s optimism - fat soft serifs, wavy bands, sunbursts and concentric arcs in avocado, harvest gold, burnt orange and plum; sensual, sunny and a little trippy.
 tags: [70s, groovy, psychedelic, retro, warm, curvy, earth-tones, soft-serif]
 pairs_with: [industry.food-beverage-cpg, industry.restaurants-hospitality, industry.media-entertainment-streaming, industry.events-conferences, industry.beauty-cosmetics, industry.fashion-apparel, archetype.lover, archetype.creator, archetype.jester, channel.packaging]
 avoid_with: [industry.legal-professional-services, industry.fintech-banking, audience.neurodivergent, industry.government-civic]

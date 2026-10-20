@@ -81,6 +81,11 @@ class AtlasFixture(unittest.TestCase):
         self.assertTrue(any("summary must be" in error for error in errors))
         self.assertTrue(any("too thin" in error for error in errors))
 
+    def test_quotes_are_stripped_and_inner_colons_kept(self):
+        meta, _ = atlas.parse_entry('---\nname: "Alpha: the first"\nsummary: Plain: with colon\n---\n')
+        self.assertEqual(meta["name"], "Alpha: the first")
+        self.assertEqual(meta["summary"], "Plain: with colon")
+
     def test_malformed_frontmatter_fails_cleanly(self):
         self.write("---\nid style.alpha\n---\n")
         errors, _, _ = atlas.validate(self.root)

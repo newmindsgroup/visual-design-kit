@@ -3,7 +3,7 @@ id: style.handcrafted-organic
 axis: style
 name: Handcrafted / Organic
 aliases: [handmade, hand-drawn, artisan, craft, organic shapes, earthy, folk, arts and crafts, hand lettered, natural]
-summary: Warm, imperfect and human-made: hand-drawn lines, soft wobbly shapes, earthy dyes, paper and linen textures and a friendly soft serif; the maker's hand is visible and trusted.
+summary: Warm, imperfect and human-made - hand-drawn lines, soft wobbly shapes, earthy dyes, paper and linen textures and a friendly soft serif; the maker's hand is visible and trusted.
 tags: [handmade, organic, artisan, hand-drawn, earthy, warm, craft, textured]
 pairs_with: [industry.food-beverage-cpg, industry.restaurants-hospitality, industry.beauty-cosmetics, industry.ecommerce-dtc, industry.nonprofit-ngo, archetype.caregiver, archetype.innocent, archetype.creator, tier.premium, channel.packaging]
 avoid_with: [industry.developer-tools, industry.crypto-web3, industry.logistics-supply-chain, audience.expert-power-users]

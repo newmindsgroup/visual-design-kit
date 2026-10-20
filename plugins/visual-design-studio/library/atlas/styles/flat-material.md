@@ -3,7 +3,7 @@ id: style.flat-material
 axis: style
 name: Flat / Material
 aliases: [flat design, material design, material 3, material you, material expressive, google material, android design language]
-summary: Color-field, ornament-free flat design plus Google's Material system: tonal color, state layers, tiered elevation and spring motion, a predictable and highly implementable look for apps and tools.
+summary: Color-field, ornament-free flat design plus Google's Material system with tonal color, state layers, tiered elevation and spring motion; a predictable, highly implementable look for apps and tools.
 tags: [flat, material, material-3, android, tonal, elevation, ui-kit, buttons, google, systematic]
 pairs_with: [channel.native-app, channel.web-app, industry.saas-b2b, industry.marketplaces-platforms, audience.low-bandwidth-entry-devices, market.india-south-asia, market.southeast-asia, market.sub-saharan-africa, tier.value, archetype.everyperson]
 avoid_with: [tier.ultra-luxury, tier.luxury, archetype.lover, industry.luxury-goods, industry.fashion-apparel]

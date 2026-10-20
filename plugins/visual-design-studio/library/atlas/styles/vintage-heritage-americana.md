@@ -3,7 +3,7 @@ id: style.vintage-heritage-americana
 axis: style
 name: Vintage Heritage / Americana
 aliases: [americana, heritage branding, vintage badge, letterpress americana, wood type poster, workwear heritage, craft heritage, rustic vintage]
-summary: Turn-of-the-century to mid-century American print craft: wood-type slabs, badges and banners, letterpress ink, cream paper and barn-red, navy and mustard; authenticity through specific, earned detail.
+summary: Turn-of-the-century to mid-century American print craft - wood-type slabs, badges and banners, letterpress ink, cream paper and barn-red, navy and mustard; authenticity from specific, earned detail.
 tags: [vintage, heritage, americana, letterpress, wood-type, badge, craft, retro]
 pairs_with: [industry.food-beverage-cpg, industry.restaurants-hospitality, industry.automotive-mobility, industry.sports-fitness, industry.industrial-manufacturing-construction, archetype.everyperson, archetype.hero, archetype.explorer, channel.packaging, market.united-states]
 avoid_with: [industry.ai-products, industry.crypto-web3, tier.ultra-luxury, archetype.magician]

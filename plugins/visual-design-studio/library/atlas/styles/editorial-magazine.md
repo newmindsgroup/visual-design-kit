@@ -3,7 +3,7 @@ id: style.editorial-magazine
 axis: style
 name: Editorial / Magazine
 aliases: [editorial design, magazine layout, print editorial, longform editorial, publication design, magazine style]
-summary: Publication-grade hierarchy: high-contrast serif display, readable text serif, multi-column grids, pull quotes, strong crops and one spot color; design that makes reading feel curated.
+summary: Publication-grade hierarchy - high-contrast serif display, readable text serif, multi-column grids, pull quotes, strong crops and one spot color; design that makes reading feel curated.
 tags: [editorial, serif, magazine, typographic, longform, columns, publication, grid]
 pairs_with: [industry.media-entertainment-streaming, industry.fashion-apparel, industry.creative-agencies-studios, industry.nonprofit-ngo, archetype.sage, archetype.creator, tier.premium, channel.print-collateral, channel.email, channel.marketing-website]
 avoid_with: [channel.web-app, audience.low-bandwidth-entry-devices, industry.logistics-supply-chain]

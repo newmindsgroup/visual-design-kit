@@ -3,7 +3,7 @@ id: style.playful-bubbly
 axis: style
 name: Playful / Bubbly
 aliases: [playful, bubbly, friendly rounded, chunky ui, kawaii-adjacent, duolingo style, sticker ui, bouncy ui]
-summary: Round, chunky, saturated and bouncy: pill buttons, blob shapes, mascots and springy motion that make products feel friendly and easy, as long as contrast and seriousness are managed.
+summary: Round, chunky, saturated and bouncy, with pill buttons, blob shapes, mascots and springy motion that make products feel friendly and easy, provided contrast and seriousness are managed.
 tags: [playful, bubbly, rounded, friendly, colorful, kids, mascot, chunky, bouncy, fun]
 pairs_with: [industry.kids-family, industry.education-edtech, industry.food-beverage-cpg, audience.children-under-13, audience.teens-gen-z, archetype.jester, archetype.innocent, channel.native-app, channel.social-media, tier.value]
 avoid_with: [tier.luxury, tier.ultra-luxury, industry.legal-professional-services, industry.pharma-biotech, archetype.ruler, industry.insurance]

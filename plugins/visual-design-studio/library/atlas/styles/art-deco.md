@@ -3,7 +3,7 @@ id: style.art-deco
 axis: style
 name: Art Deco
 aliases: [deco, 1920s glamour, gatsby style, jazz age, streamline moderne, art moderne]
-summary: Symmetrical geometric glamour: gold on black, sunbursts, chevrons and stepped forms, tall display capitals and lacquered, machine-age luxury from the Jazz Age.
+summary: Symmetrical geometric glamour - gold on black, sunbursts, chevrons and stepped forms, tall display capitals and lacquered, machine-age luxury from the Jazz Age.
 tags: [geometric, gold, symmetrical, glamour, jazz-age, ornamental, luxury, 1920s]
 pairs_with: [industry.hotels-travel, industry.restaurants-hospitality, industry.luxury-goods, industry.events-conferences, tier.luxury, archetype.ruler, archetype.lover, archetype.magician, channel.packaging, channel.print-collateral]
 avoid_with: [industry.developer-tools, tier.value, audience.low-bandwidth-entry-devices, industry.government-civic]

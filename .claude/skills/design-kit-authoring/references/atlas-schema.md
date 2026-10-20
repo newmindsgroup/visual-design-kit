@@ -16,7 +16,7 @@ The atlas maps the design space so Claude can design for any style, industry, ma
 
 ## Frontmatter
 
-Strict subset of YAML: one `key: value` per line; lists use `[a, b, c]` on one line; no nesting; no multi-line values; do not quote unless the value contains a colon.
+Strict subset of YAML: one `key: value` per line; lists use `[a, b, c]` on one line; no nesting; no multi-line values. Colons inside a value are fine (only the first colon separates key and value); surrounding quotes are optional and stripped.
 
 ```yaml
 ---

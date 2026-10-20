@@ -3,7 +3,7 @@ id: style.clinical-calm
 axis: style
 name: Clinical Calm
 aliases: [healthcare ui, medical clean, calm health design, patient-friendly design, clinical clarity, care ui, wellbeing clean]
-summary: Reassuring healthcare clarity: soft teal-blue, warm neutrals, plain language, large targets and low-stimulation layouts that lower anxiety and prevent errors without feeling sterile.
+summary: Reassuring healthcare clarity with soft teal-blue, warm neutrals, plain language, large targets and low-stimulation layouts that lower anxiety and prevent errors without feeling sterile.
 tags: [healthcare, clinical, calm, clarity, patient, medical, reassuring, accessible, teal, plain-language]
 pairs_with: [industry.healthcare-provider, industry.digital-health-wellness, industry.pharma-biotech, industry.insurance, audience.older-adults, audience.disability-accessibility-first, archetype.caregiver, archetype.sage, channel.web-app, channel.native-app]
 avoid_with: [archetype.outlaw, archetype.jester, industry.gaming-esports, tier.ultra-luxury]

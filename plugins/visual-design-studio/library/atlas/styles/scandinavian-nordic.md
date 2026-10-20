@@ -3,7 +3,7 @@ id: style.scandinavian-nordic
 axis: style
 name: Scandinavian / Nordic
 aliases: [scandi, nordic design, scandinavian design, hygge, lagom, democratic design, nordic minimalism]
-summary: Light, functional and friendly: pale grounds, birch and fjord tones, humanist sans with a soft serif, rounded but restrained shapes and practical clarity; design for everyday life.
+summary: Light, functional and friendly - pale grounds, birch and fjord tones, humanist sans with a soft serif, rounded but restrained shapes and practical clarity; design for everyday life.
 tags: [scandinavian, nordic, functional, light, friendly, humanist, wood, democratic]
 pairs_with: [industry.ecommerce-dtc, industry.kids-family, industry.education-edtech, industry.digital-health-wellness, industry.government-civic, market.dach-nordics, archetype.everyperson, archetype.caregiver, tier.mid-market, channel.native-app]
 avoid_with: [industry.gaming-esports, archetype.outlaw, tier.ultra-luxury]

@@ -3,7 +3,7 @@ id: style.quiet-minimal
 axis: style
 name: Quiet Minimal / Japandi
 aliases: [japandi, wabi-sabi, muji style, zen minimalism, soft minimalism, calm minimal, ma, japanese minimalism]
-summary: Calm, warm minimalism: low-chroma paper and stone tones, soft mincho or gentle sans type, vast negative space and near-still motion; emptiness is the feature, not the absence of one.
+summary: Calm, warm minimalism - low-chroma paper and stone tones, soft mincho or gentle sans type, vast negative space and near-still motion; emptiness is the feature, not the absence of one.
 tags: [minimal, japandi, wabi-sabi, calm, neutral, whitespace, warm, japanese]
 pairs_with: [industry.digital-health-wellness, industry.beauty-cosmetics, industry.hotels-travel, industry.ecommerce-dtc, market.japan, archetype.sage, archetype.innocent, tier.premium, channel.native-app, channel.ecommerce-store]
 avoid_with: [industry.gaming-esports, archetype.jester, audience.older-adults, audience.low-literacy-plain-language]

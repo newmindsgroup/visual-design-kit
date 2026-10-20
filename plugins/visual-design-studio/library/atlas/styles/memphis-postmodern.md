@@ -3,7 +3,7 @@ id: style.memphis-postmodern
 axis: style
 name: Memphis / Postmodern
 aliases: [memphis, memphis milano, memphis group, 80s postmodern, postmodernism, squiggle and confetti, terrazzo pop]
-summary: Playful 1980s postmodern geometry: squiggles, zigzags, confetti and terrazzo patterns, pastel-and-primary clashes, tilted shapes and wide geometric type; deliberate bad taste made joyful.
+summary: Playful 1980s postmodern geometry - squiggles, zigzags, confetti and terrazzo patterns, pastel-and-primary clashes, tilted shapes and wide geometric type; deliberate bad taste made joyful.
 tags: [memphis, postmodern, playful, patterns, geometric, 80s, colorful, shapes]
 pairs_with: [industry.kids-family, industry.education-edtech, industry.food-beverage-cpg, industry.events-conferences, industry.creative-agencies-studios, audience.teens-gen-z, archetype.jester, archetype.creator, channel.packaging, channel.social-media]
 avoid_with: [industry.legal-professional-services, industry.healthcare-provider, tier.luxury, archetype.ruler, audience.neurodivergent, industry.insurance]

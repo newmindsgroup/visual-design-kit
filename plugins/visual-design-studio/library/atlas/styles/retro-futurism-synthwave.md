@@ -3,7 +3,7 @@ id: style.retro-futurism-synthwave
 axis: style
 name: Retro-Futurism / Synthwave
 aliases: [synthwave, outrun, retrowave, vaporwave-adjacent, 80s neon, googie, space age, raygun gothic, tron style]
-summary: The 1980s imagining the future: neon magenta and cyan on deep violet, sunset gradients, perspective grids, chrome-and-italic type and scanlines; nostalgic night-drive energy with a space-age lineage.
+summary: The 1980s imagining the future - neon magenta and cyan on deep violet, sunset gradients, perspective grids, chrome-and-italic type and scanlines; nostalgic night-drive energy with a space-age lineage.
 tags: [synthwave, retrowave, neon, 80s, grid, sunset, futuristic, nostalgia]
 pairs_with: [industry.gaming-esports, industry.media-entertainment-streaming, industry.events-conferences, industry.automotive-mobility, industry.crypto-web3, archetype.explorer, archetype.outlaw, archetype.magician, channel.video-motion, channel.social-media]
 avoid_with: [industry.healthcare-provider, industry.government-civic, industry.insurance, audience.older-adults, audience.neurodivergent, tier.luxury]

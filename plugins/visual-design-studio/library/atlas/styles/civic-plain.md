@@ -3,7 +3,7 @@ id: style.civic-plain
 axis: style
 name: Civic Plain / Public Service
 aliases: [government design, gov.uk style, uswds, public sector design, plain language ui, service design, civic design, accessible-first]
-summary: Task-first public-service design: plain language, large readable type, high contrast, strong focus states and proven patterns, as in the GOV.UK Design System and the US Web Design System.
+summary: Task-first public-service design with plain language, large readable type, high contrast, strong focus states and proven patterns, as in the GOV.UK Design System and the US Web Design System.
 tags: [civic, government, public-service, plain-language, accessible, forms, gov-uk, uswds, utilitarian, trust]
 pairs_with: [industry.government-civic, industry.nonprofit-ngo, audience.low-literacy-plain-language, audience.older-adults, audience.disability-accessibility-first, audience.low-bandwidth-entry-devices, archetype.everyperson, channel.web-app, market.united-kingdom-ireland, market.united-states]
 avoid_with: [archetype.outlaw, archetype.jester, tier.luxury, tier.ultra-luxury, industry.fashion-apparel, industry.luxury-goods]

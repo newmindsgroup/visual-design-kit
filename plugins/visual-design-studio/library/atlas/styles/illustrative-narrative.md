@@ -3,7 +3,7 @@ id: style.illustrative-narrative
 axis: style
 name: Illustrative / Narrative
 aliases: [illustration-led, storybook, editorial illustration, hand-drawn brand, narrative design, picture book style, scrollytelling illustration]
-summary: Illustration carries the story and the brand: a consistent hand-made world of characters, scenes and lettering on warm paper tones, with type and layout supporting the narrative.
+summary: Illustration carries the story and the brand through a consistent hand-made world of characters, scenes and lettering on warm paper tones, with type and layout supporting the narrative.
 tags: [illustration, storybook, narrative, hand-drawn, warm, characters, editorial, scenes, lettering, story]
 pairs_with: [industry.education-edtech, industry.kids-family, industry.nonprofit-ngo, industry.food-beverage-cpg, industry.hotels-travel, archetype.creator, archetype.innocent, archetype.explorer, channel.packaging, channel.marketing-website]
 avoid_with: [industry.logistics-supply-chain, audience.expert-power-users, channel.web-app, industry.legal-professional-services]

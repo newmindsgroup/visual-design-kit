@@ -3,7 +3,7 @@ id: style.corporate-modern
 axis: style
 name: Corporate Modern / Enterprise Clean
 aliases: [enterprise clean, corporate clean, business modern, b2b clean, enterprise design system, professional modern]
-summary: Credible, systematized business design: one deep brand blue, cool neutrals, modular cards, restrained 6-8px radius and product-led imagery; trust through consistency rather than flair.
+summary: Credible, systematized business design with one deep brand blue, cool neutrals, modular cards, restrained 6-8px radius and product-led imagery; trust through consistency rather than flair.
 tags: [corporate, enterprise, b2b, clean, professional, blue, modular, trustworthy, saas]
 pairs_with: [industry.saas-b2b, industry.fintech-banking, industry.insurance, industry.legal-professional-services, audience.b2b-buying-committee, archetype.ruler, archetype.sage, tier.mid-market, channel.presentation, channel.marketing-website]
 avoid_with: [archetype.outlaw, archetype.jester, audience.children-under-13, industry.gaming-esports, tier.ultra-luxury]

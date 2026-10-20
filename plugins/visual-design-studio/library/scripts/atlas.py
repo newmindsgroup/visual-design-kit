@@ -80,6 +80,8 @@ def parse_entry(text):
             inner = value[1:-1].strip()
             meta[key] = [part.strip() for part in inner.split(",") if part.strip()] if inner else []
         else:
+            if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+                value = value[1:-1]
             meta[key] = value
     return meta, text[end + 5:]
 

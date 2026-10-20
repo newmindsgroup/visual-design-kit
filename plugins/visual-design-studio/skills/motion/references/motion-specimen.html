@@ -77,6 +77,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
@@ -105,7 +106,6 @@
     border-left: 4px solid var(--color-accent-default); background: var(--color-bg-surface);
     padding: 12px 16px; margin: 16px 0; border-radius: 0 8px 8px 0;
   }
-  .notice[hidden] { display: none; }
   .status { min-height: 1.5em; color: var(--color-fg-muted); font-size: 0.875rem; }
 
   section { background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: 12px; padding: 20px 16px; margin-top: 24px; }
@@ -130,7 +130,6 @@
 
   .stage { position: relative; height: 180px; border: 1px dashed var(--color-border-strong); border-radius: 12px; display: grid; place-items: center; overflow: hidden; margin-top: 12px; }
   .card { width: min(280px, 80%); padding: 20px; border-radius: 12px; background: var(--color-bg-canvas); border: 1px solid var(--color-border-strong); }
-  .card[hidden] { display: none; }
   .card p { margin: 0; }
   .ext { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-fg-muted); }
   footer { margin-top: 32px; color: var(--color-fg-muted); font-size: 0.875rem; }
@@ -190,7 +189,7 @@
     <div class="stage">
       <div class="card" id="card" hidden>
         <p><strong>Saved to your board</strong></p>
-        <p class="lede">Opacity, an 16px rise and scale 0.96 to 1.</p>
+        <p class="lede">Opacity, a 16px rise and scale 0.96 to 1.</p>
       </div>
     </div>
   </section>
@@ -322,22 +321,26 @@
 
   const card = document.getElementById('card');
   const toggle = document.getElementById('toggle-card');
+  let shown = false;
   toggle.addEventListener('click', () => {
-    const opening = card.hidden;
+    shown = !shown;
+    // Interruptible: start from wherever the card is now, not from the nominal start state.
+    const now = getComputedStyle(card);
+    const from = card.hidden ? null : { opacity: now.opacity, transform: now.transform === 'none' ? 'none' : now.transform };
     card.getAnimations().forEach((a) => a.cancel());
-    toggle.setAttribute('aria-expanded', String(opening));
-    toggle.textContent = opening ? 'Hide card' : 'Show card';
-    if (opening) {
+    toggle.setAttribute('aria-expanded', String(shown));
+    toggle.textContent = shown ? 'Hide card' : 'Show card';
+    if (shown) {
       card.hidden = false;
       card.animate(
-        [{ opacity: 0, transform: 'translateY(16px) scale(0.96)' }, { opacity: 1, transform: 'none' }],
+        [from || { opacity: 0, transform: 'translateY(16px) scale(0.96)' }, { opacity: 1, transform: 'none' }],
         { duration: playDuration('--duration-slow', 320), easing: easingFor('--ease-emphasized-decelerate'), fill: 'both' });
       status.textContent = 'Card entering.';
     } else {
       const a = card.animate(
-        [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(8px) scale(0.98)' }],
+        [from || { opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(8px) scale(0.98)' }],
         { duration: playDuration('--duration-moderate', 200), easing: easingFor('--ease-emphasized-accelerate'), fill: 'both' });
-      a.finished.then(() => { card.hidden = true; a.cancel(); }).catch(() => {});
+      a.finished.then(() => { if (!shown) { card.hidden = true; a.cancel(); } }).catch(() => {});
       status.textContent = 'Card leaving.';
     }
   });

@@ -3,7 +3,7 @@ id: style.neo-brutalist
 axis: style
 name: Neo-Brutalism
 aliases: [neubrutalism, neobrutalism, neo brutalist ui, hard shadow ui, gumroad style, chunky outline ui]
-summary: Friendly, loud interfaces: thick black outlines, hard offset shadows, flat pastel and saturated fills, chunky grotesque type and snappy press states; playful structure, still highly legible.
+summary: Friendly, loud interfaces - thick black outlines, hard offset shadows, flat pastel and saturated fills, chunky grotesque type and snappy press states; playful structure, still highly legible.
 tags: [neo-brutalist, thick-borders, hard-shadow, flat, playful, bold, ui, pastel]
 pairs_with: [industry.saas-b2b, industry.developer-tools, industry.fintech-banking, industry.ecommerce-dtc, industry.creative-agencies-studios, audience.teens-gen-z, archetype.everyperson, archetype.jester, channel.marketing-website, tier.mid-market]
 avoid_with: [tier.luxury, tier.ultra-luxury, industry.healthcare-provider, industry.insurance, audience.older-adults, industry.legal-professional-services]

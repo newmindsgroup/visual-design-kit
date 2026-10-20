@@ -3,7 +3,7 @@ id: style.grunge-punk-zine
 axis: style
 name: Grunge / Punk / DIY Zine
 aliases: [punk, zine, diy, photocopy, xerox, ransom note, grunge, cut and paste, riot grrrl, underground press]
-summary: Photocopied, cut-and-paste, hand-made graphics: ransom-note lettering, torn paper, tape, marker scrawl, black-and-white with fluorescent hits; urgency, authenticity and refusal of polish.
+summary: Photocopied, cut-and-paste, hand-made graphics - ransom-note lettering, torn paper, tape, marker scrawl, black-and-white with fluorescent hits; urgency, authenticity and refusal of polish.
 tags: [punk, zine, grunge, diy, collage, photocopy, raw, underground]
 pairs_with: [industry.media-entertainment-streaming, industry.fashion-apparel, industry.creative-agencies-studios, industry.nonprofit-ngo, audience.teens-gen-z, archetype.outlaw, archetype.creator, channel.social-media, channel.print-collateral, channel.ooh-signage]
 avoid_with: [industry.fintech-banking, industry.healthcare-provider, industry.insurance, tier.luxury, archetype.ruler, archetype.caregiver]

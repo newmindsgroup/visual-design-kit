@@ -3,7 +3,7 @@ id: style.skeuomorphic-tactile
 axis: style
 name: Skeuomorphic / Tactile
 aliases: [skeuomorphism, skeuomorphic design, tactile ui, realistic ui, material realism, hardware ui, ios 6 style]
-summary: Interfaces modeled on real materials and devices: leather, brass, felt, glass, knobs and switches, with consistent top lighting, bevels and texture so controls explain themselves by looking physical.
+summary: Interfaces modeled on real materials and devices (leather, brass, felt, knobs, switches) with consistent top lighting, bevels and texture so controls explain themselves by looking physical.
 tags: [skeuomorphic, tactile, realistic, texture, leather, knobs, hardware, bevel, metaphor, audio]
 pairs_with: [industry.media-entertainment-streaming, industry.gaming-esports, industry.food-beverage-cpg, audience.older-adults, audience.low-literacy-plain-language, archetype.creator, archetype.everyperson, channel.native-app, channel.packaging]
 avoid_with: [industry.saas-b2b, industry.fintech-banking, audience.expert-power-users, audience.low-bandwidth-entry-devices, channel.email]

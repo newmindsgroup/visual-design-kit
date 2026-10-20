@@ -3,7 +3,7 @@ id: style.data-dense-utilitarian
 axis: style
 name: Data-Dense / Utilitarian
 aliases: [dense ui, terminal ui, trading ui, bloomberg style, ops dashboard, control room ui, information-dense, power-user interface]
-summary: Maximum information per screen for expert users: tabular figures, small type, tight rows, semantic color only, keyboard control and tiled panels, as in trading terminals and operations tools.
+summary: Maximum information per screen for expert users, with tabular figures, small type, tight rows, semantic color only, keyboard control and tiled panels, as in trading terminals and ops tools.
 tags: [dense, data, utilitarian, trading, dashboard, tables, terminal, ops, expert, monospace]
 pairs_with: [audience.expert-power-users, industry.fintech-banking, industry.logistics-supply-chain, industry.industrial-manufacturing-construction, industry.energy-climate, industry.saas-b2b, industry.crypto-web3, channel.web-app, archetype.sage, tier.mid-market]
 avoid_with: [audience.children-under-13, audience.older-adults, audience.low-literacy-plain-language, tier.luxury, archetype.lover, channel.native-app]
