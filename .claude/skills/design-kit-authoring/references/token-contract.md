@@ -51,6 +51,15 @@ Breakpoints (JSON and Tailwind only, since CSS variables cannot drive media quer
 - **Meridian** (default): deep teal accent, OKLCH hue about 195, cool neutral ramp. Chosen to avoid the generic indigo/purple default.
 - **Ember** (`data-brand="ember"`): warm vermilion accent, OKLCH hue about 35, warm neutral ramp. Demonstrates multi-brand theming.
 
+## Implementation details (0.5.0)
+
+- Brand-level primitive groups `color.neutral`, `color.accent` and `font.family` are marked brandable and are the only groups a `brands/<name>.tokens.json` file may override. `[data-brand="meridian"]` is also emitted so nested scopes can switch back.
+- Shadow sets live in primitives as `elevation.soft`, `elevation.firm` and `elevation.deep`; the semantic files map `shadow.sm|md|lg|xl` to them per mode, because dark mode uses borders and lighter surfaces more than shadows.
+- Component tokens (`components.tokens.json`) alias semantic or public scale tokens only and are re-declared on `:root`, `[data-theme]` and `[data-brand]` so nested scopes resolve.
+- Dark and high-contrast media queries apply only to `:root:not([data-theme])`, so an explicit `data-theme` always wins.
+- Values a single page or brand needs beyond this contract use a `--brand-` prefix (for example `--brand-brass`) and never shadow contract names.
+- `library/tokens/README.md` is the generated, user-facing API reference; keep it in sync when this contract changes.
+
 ## Contrast guarantees (enforced by `tokens.py lint`)
 
-In every mode and brand: `fg-default`, `fg-muted` on `bg-canvas`, `bg-surface` and `bg-surface-raised` at 4.5:1 or more; `fg-subtle` 3:1 or more (non-essential text and placeholders only); `fg-on-accent` on `accent-default`, `accent-hover` and `accent-active` 4.5:1; `accent-fg` on `accent-subtle` 4.5:1; each status `fg` on its `bg` 4.5:1; `border-strong` and `focus-ring` on `bg-canvas` 3:1. High-contrast mode raises body text to 7:1.
+In every mode and brand: `fg-default`, `fg-muted` on `bg-canvas`, `bg-surface` and `bg-surface-raised` at 4.5:1 or more; `fg-subtle` 3:1 or more (non-essential text and placeholders only); `fg-on-accent` on `accent-default`, `accent-hover` and `accent-active` 4.5:1; `accent-fg` on `accent-subtle` 4.5:1; each status `fg` on its `bg` 4.5:1; `border-strong` and `focus-ring` on `bg-canvas` 3:1; each status `border` on `bg-canvas` and `bg-surface` 3:1 so it can mark an invalid input (WCAG 1.4.11). High-contrast mode raises body text to 7:1. The kit adds further pairs the components rely on; `tokens.py lint` reports all of them (336 pairs in 0.5.0).
