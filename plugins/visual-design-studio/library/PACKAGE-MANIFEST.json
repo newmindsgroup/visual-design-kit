@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-20 04:00:00 UTC",
-  "candidate": "0.5.0",
+  "Version-Timestamp": "2026-10-20 11:15:00 UTC",
+  "candidate": "0.6.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.5.0"
+    "version": "0.6.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -196,7 +196,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "0bf53a439491c18f6138d6152435166a22d710c0c92cf6546121d3cb160f0f8f",
+      "sha256": "104cd27dc495a8a76670cd5d82b59225fe765bef72f6e0e8ddd3675cc9753453",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -3376,7 +3376,7 @@
     },
     {
       "destination": "examples/stylescapes/_template/stylescape.html",
-      "sha256": "92502c521af968b3cc430faf073cd5a460e45243f03254e89c0fce5b23b0588c",
+      "sha256": "1440ac4e5696d1b97e6151093b0371c74491845f915844fa44bb1424cfaba0e6",
       "source": "curated-plugin-source/examples/stylescapes/_template/stylescape.html",
       "status": "versioned-evaluation-input"
     },
