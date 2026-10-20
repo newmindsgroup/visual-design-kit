@@ -30,6 +30,8 @@ export interface SelectProps {
   autoComplete?: string;
   size?: Size;
   necessityIndicator?: NecessityIndicator;
+  /** See TextField: hide only in toolbars where the value makes the purpose obvious. */
+  labelVisible?: boolean;
   id?: string;
   className?: string;
   children: ReactNode;
@@ -44,6 +46,7 @@ export function Select({
   placeholder,
   size = 'md',
   necessityIndicator = 'none',
+  labelVisible = true,
   id,
   className,
   children,
@@ -59,7 +62,14 @@ export function Select({
 
   return (
     <div data-slot="select" className={cx('flex min-w-0 flex-col gap-1', className)}>
-      <FieldLabel htmlFor={ids.id} id={ids.labelId} required={required} necessityIndicator={necessityIndicator} disabled={disabled}>
+      <FieldLabel
+        htmlFor={ids.id}
+        id={ids.labelId}
+        required={required}
+        necessityIndicator={necessityIndicator}
+        disabled={disabled}
+        className={labelVisible ? undefined : 'sr-only'}
+      >
         {label}
       </FieldLabel>
       {hint ? <FieldHint id={ids.hintId}>{hint}</FieldHint> : null}

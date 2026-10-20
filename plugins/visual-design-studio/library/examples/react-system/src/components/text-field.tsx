@@ -47,6 +47,11 @@ export type TextFieldProps = Omit<ComponentProps<'input'>, 'size' | 'children'> 
   onValueChange?: (value: string) => void;
   /** Classes for the input element itself; `className` goes on the outer wrapper. */
   inputClassName?: string;
+  /**
+   * Keep labels visible. Hide one only in a toolbar where an adjacent icon and placeholder make the purpose
+   * obvious (a search field); the label is still the accessible name.
+   */
+  labelVisible?: boolean;
   'data-preview-state'?: PreviewState;
 };
 
@@ -63,6 +68,7 @@ export function TextField({
   onChange,
   className,
   inputClassName,
+  labelVisible = true,
   id,
   required,
   disabled,
@@ -87,7 +93,14 @@ export function TextField({
       data-disabled={disabled || undefined}
       className={cx('flex min-w-0 flex-col gap-1', className)}
     >
-      <FieldLabel htmlFor={ids.id} id={ids.labelId} required={required} necessityIndicator={necessityIndicator} disabled={disabled}>
+      <FieldLabel
+        htmlFor={ids.id}
+        id={ids.labelId}
+        required={required}
+        necessityIndicator={necessityIndicator}
+        disabled={disabled}
+        className={labelVisible ? undefined : 'sr-only'}
+      >
         {label}
       </FieldLabel>
       {hint ? <FieldHint id={ids.hintId}>{hint}</FieldHint> : null}

@@ -80,7 +80,7 @@ export function Checkbox({
       <div className="grid min-w-0 gap-0.5 py-0.5">
         <label
           htmlFor={ids.id}
-          className={cx('cursor-pointer text-md leading-snug text-default', disabled && 'cursor-not-allowed text-muted')}
+          className={cx('text-md leading-snug', disabled ? 'cursor-not-allowed text-muted' : 'cursor-pointer text-default')}
         >
           {label}
         </label>

@@ -2,6 +2,21 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.5.0 Claude-native design studio
+
+Version-Timestamp: 2026-10-20 03:40:00 UTC
+
+The kit becomes a native Claude plugin (Claude Code, claude.ai, Claude Desktop) while keeping Codex packaging, and shifts from process guidance to design knowledge Claude can apply directly.
+
+- **16 registered skills.** `design-director` (brief to scored, rendered directions), 13 discipline skills with concrete defaults (brand identity, typography, color, layout, imagery, motion, UX, UI, web, native apps, design systems, data visualization, print/packaging/social), `design-critique` (render, score, revise) and `design-project-start` (client-project continuity). Always-on cost is about 2,900 tokens; each skill loads its body only when used.
+- **Design Space Atlas.** 125 schema-validated entries: 37 styles, 32 industries, 17 markets, 10 audiences, 12 archetypes, 5 price tiers and 12 channels, with `scripts/atlas.py` to query, combine, validate and index them.
+- **Design tokens.** DTCG source with light, dark and high-contrast modes and two brands; CSS, Tailwind v4, resolved JSON and Figma variable outputs; `scripts/tokens.py` lints 336 contrast pairs; `scripts/color_tools.py` (OKLCH ramps, WCAG, APCA) and `scripts/type_scale.py`.
+- **Calibration and quality loop.** Twelve stylescapes across very different briefs, an AI-tells gallery, a render-review script, a React reference component system and 12 `claude plugin eval` cases.
+- **Policy change.** "No universal numbers" statements in this library now point to defaults with documented override conditions.
+- **Fixes found during integration.** Status border tokens raised to 3:1 (WCAG 1.4.11); the FORM/TIDAL index page no longer orphans headline words, falls back to another font for arrows, or uses undersized link targets.
+
+The 133-capability process library, templates and continuity contracts are unchanged and remain linked from the registered skills. Existing project pins are unaffected; adopt 0.5.0 deliberately.
+
 ## 0.2.1 public edition
 
 Original kit files now have MIT licensing, with separate font and asset notices. Public setup uses the current payload checksum rather than obsolete archive instructions. Optional references require an independently supplied permitted local corpus. The package manifest describes public supervised evaluation and explicitly retains a publication review requirement and no production acceptance. Core design capabilities and example artwork are unchanged from 0.2.0. See [package readiness](../READINESS.md) and [current library setup](README.md).

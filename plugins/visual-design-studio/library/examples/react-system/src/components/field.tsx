@@ -42,7 +42,7 @@ export function FieldLabel({
   return (
     <label
       data-slot="field-label"
-      className={cx('text-sm font-medium leading-snug text-default', disabled && 'text-muted', className)}
+      className={cx('text-sm font-medium leading-snug', disabled ? 'text-muted' : 'text-default', className)}
       {...rest}
     >
       {children}

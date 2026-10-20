@@ -13,7 +13,10 @@ Version-Timestamp: 2026-10-20 02:05:00 UTC
 - [x] Replace "no universal numbers" guidance with defaults plus documented overrides.
 - [x] CI for Python 3.9 and 3.13 suites, validators, atlas, tokens, payload integrity, Claude validation and example builds.
 - [x] 12 `claude plugin eval` cases with a should-not-fire control.
-- [ ] Run the eval suite with ablation within an agreed cost cap; record the with/without score delta per case.
+- [x] Eval smoke tests (about $0.30): control case passes; the direction case exposed and then confirmed fixes for two design-director defects (reply language, specifics under concision).
+- [ ] Run the full eval suite with ablation and `--runs 3` within an agreed cost cap; record the with/without delta per case.
+- [ ] Replace or harden eval cases that pass without the plugin (typography-longform-defaults) with cases that test kit-specific value.
+- [ ] Token contract additions proposed during authoring: `--duration-reduced` (reduced-motion crossfade), `--ease-overshoot`, a `linear()` spring and stagger tokens; `--size-control-sm/md/lg` (32/40/48px); density tokens.
 - [ ] Confirm claude.ai and Claude Desktop marketplace install in a receiving workspace; verify Codex install of 0.5.0.
 - [ ] Native-speaker review of market entries and the Arabic, Japanese, Portuguese and Spanish stylescape copy.
 - [ ] Re-verify every atlas statement marked "verify" against primary sources before relying on it for a client.
