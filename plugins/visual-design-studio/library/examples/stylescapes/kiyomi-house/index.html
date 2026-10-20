@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiyomi House: Light Through Paper | Stylescape 03</title>
+<meta name="description" content="Stylescape for Kiyomi House, a fictional eight-room boutique inn in Kyoto with a bilingual Japanese and English website. Quiet-minimal direction. Visual Design Kit calibration set.">
+<!--
+  Visual Design Kit stylescape calibration set, brand 3 of 12 (fictional brand).
+  Direction: Light Through Paper (quiet minimal, Japanese luxury hospitality).
+  Atlas: style.quiet-minimal, industry.hotels-travel, market.japan, archetype.innocent, tier.luxury, channel.marketing-website
+  Fonts: Shippori Mincho (OFL 1.1) and Zen Kaku Gothic New (OFL 1.1), subset to the glyphs on this page
+         (Basic Latin + the Japanese characters used). Re-subset if you change the Japanese copy.
+  Version-Timestamp: 2026-10-20 02:03:12 UTC
+  Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:03:12 UTC
+-->
+<style>
+@font-face { font-family: "Shippori Mincho"; src: url("../fonts/shippori-mincho/shippori-mincho-kiyomi-subset-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Shippori Mincho"; src: url("../fonts/shippori-mincho/shippori-mincho-kiyomi-subset-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Zen Kaku Gothic New"; src: url("../fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Zen Kaku Gothic New"; src: url("../fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  --ky-shikkui: #EAE9E4;   /* plaster */
+  --ky-washi: #F6F5F1;     /* paper */
+  --ky-sumi: #23221F;      /* ink */
+  --ky-usuzumi: #5C5A54;   /* thin ink */
+  --ky-koke: #4E5A44;      /* moss */
+  --ky-beni: #A8402C;      /* seal vermilion */
+  --ky-yoru: #20262E;      /* night */
+  --ky-kihada: #8B7B66;    /* bare wood */
+
+  --color-bg-canvas: var(--ky-shikkui);
+  --color-bg-surface: var(--ky-washi);
+  --color-bg-surface-raised: #FBFAF7;
+  --color-bg-sunken: #E1E0DA;
+  --color-bg-inverse: var(--ky-yoru);
+  --color-fg-default: var(--ky-sumi);
+  --color-fg-muted: var(--ky-usuzumi);
+  --color-fg-subtle: #7C7A73;
+  --color-fg-inverse: #ECE9E1;
+  --color-fg-on-accent: var(--ky-washi);
+  --color-border-subtle: #D9D6CD;
+  --color-border-default: #C4C0B5;
+  --color-border-strong: #7C7A73;
+  --color-accent-default: var(--ky-sumi);
+  --color-accent-hover: #3A3934;
+  --color-accent-active: #000000;
+  --color-accent-subtle: #E3E6DE;
+  --color-accent-fg: var(--ky-koke);
+  --color-success-fg: #3F5A3A; --color-success-bg: #E8EEE3; --color-success-border: #3F5A3A;
+  --color-warning-fg: #6E4E12; --color-warning-bg: #F4ECDA; --color-warning-border: #6E4E12;
+  --color-danger-fg: #9E3324;  --color-danger-bg: #F7E9E4;  --color-danger-border: #9E3324;
+  --color-info-fg: #34495E;    --color-info-bg: #E6EBEF;    --color-info-border: #34495E;
+  --color-focus-ring: var(--ky-koke);
+  --color-overlay-scrim: rgb(32 38 46 / 0.5);
+
+  --font-family-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-family-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, Menlo, monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.06em;
+  --ky-tracking-label: 0.24em; /* brand extension: wide-set Latin labels */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-sm: none; --shadow-md: none; --shadow-lg: 0 24px 60px -30px rgb(35 34 31 / 0.25); --shadow-xl: 0 40px 80px -40px rgb(35 34 31 / 0.35);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ky-duration-dwell: 800ms; /* brand extension: page-level fades */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-linear: linear;
+  --container-xl: 1280px;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; --ky-duration-dwell: 0.01ms; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1rem; line-height: 1.75; font-weight: 400; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, figure, dl, dd { margin: 0; }
+svg { display: block; }
+a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 4px; }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 10; background: var(--ky-sumi); color: var(--ky-washi); padding: 10px 14px; }
+.skip:focus { left: 8px; }
+:lang(ja) { line-break: strict; font-feature-settings: "palt" 0; }
+.mincho { font-family: var(--font-family-display); }
+.label { font-family: var(--font-family-body); font-size: 0.75rem; font-weight: 500; letter-spacing: var(--ky-tracking-label); text-transform: uppercase; color: var(--color-fg-muted); }
+.wrap { max-width: calc(var(--container-xl) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.vert { writing-mode: vertical-rl; text-orientation: mixed; }
+
+#direction a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+/* ---------- 1. Direction ---------- */
+#direction { background: var(--ky-washi); border-bottom: 1px solid var(--color-border-subtle); }
+#direction .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4) var(--space-12); padding-block: var(--space-8); align-items: start; }
+.dir-name { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+.dir-name b { font-family: var(--font-family-display); font-weight: 500; font-size: 1.5rem; letter-spacing: 0.04em; }
+.dir-name span { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.dir-brief { font-size: 0.9375rem; color: var(--color-fg-muted); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: var(--space-3) 0 0; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--color-fg-muted); }
+.chips li::before { content: ""; display: inline-block; width: 5px; height: 5px; background: var(--ky-koke); margin-right: 8px; vertical-align: 2px; }
+
+/* ---------- 2. Hero ---------- */
+#hero { background: var(--ky-washi); position: relative; }
+.topbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-block: var(--space-6); gap: var(--space-6); }
+.mark { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.mark .en { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.32em; text-transform: uppercase; }
+.mark .ja { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.2em; color: var(--color-fg-muted); }
+.topnav { display: flex; gap: var(--space-8); list-style: none; padding: 0; margin: 0; }
+.topnav a { text-decoration: none; display: grid; justify-items: center; line-height: 1.3; padding: 6px 0; }
+.topnav a span:first-child { font-size: 0.8125rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.topnav a span:last-child { font-size: 0.75rem; color: var(--color-fg-muted); letter-spacing: 0.2em; }
+.top-right { display: flex; justify-content: flex-end; align-items: center; gap: var(--space-6); }
+.lang { font-size: 0.8125rem; letter-spacing: 0.12em; color: var(--color-fg-muted); }
+.lang b { color: var(--ky-sumi); font-weight: 500; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 0 28px; font: 500 0.875rem/1 var(--font-family-body); letter-spacing: 0.16em; text-decoration: none; cursor: pointer; border: 1px solid var(--ky-sumi); border-radius: 0; transition: background-color var(--duration-slow) var(--ease-standard), color var(--duration-slow) var(--ease-standard); }
+.btn--primary { background: var(--ky-sumi); color: var(--ky-washi); }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--secondary { background: transparent; color: var(--ky-sumi); }
+.btn--secondary:hover { background: var(--ky-sumi); color: var(--ky-washi); }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #5F5D57; border-color: var(--color-border-default); cursor: not-allowed; }
+.btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 4px; }
+.btn small { font-size: 0.75rem; letter-spacing: 0.2em; opacity: 0.85; }
+
+.stage { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); min-height: 720px; }
+.stage-copy { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-8); padding: var(--space-10) var(--space-10) var(--space-12) var(--gutter); }
+.stage-copy .en { align-self: end; display: grid; gap: var(--space-6); max-width: 34ch; }
+.stage-copy .en h1 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 2.5vw, 2.375rem); line-height: 1.35; letter-spacing: 0.01em; text-wrap: balance; }
+.stage-copy .en p { font-size: 1rem; line-height: 1.8; color: var(--color-fg-muted); }
+.ja-head { display: flex; gap: var(--space-5); align-self: start; padding-top: var(--space-6); position: relative; z-index: 1; }
+.ja-head .main { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.5rem, 3.8vw, 3.5rem); line-height: 1.6; letter-spacing: 0.16em; height: 8.4em; }
+/* Vertical text gets an explicit max inline size so its layout never depends on the viewport height */
+.ja-head .sub { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.5em; color: var(--color-fg-muted); padding-top: 0.6em; height: 14em; }
+.shoji {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(80% 70% at 62% 38%, #FFFDF6 0%, #F8F2E4 45%, #E9E2D2 100%);
+}
+.shoji .lattice {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(90deg, rgb(110 96 78 / 0.55) 0 5px, transparent 5px),
+    linear-gradient(0deg, rgb(110 96 78 / 0.55) 0 5px, transparent 5px);
+  background-size: 108px 100%, 100% 132px;
+  background-position: 52px 0, 0 66px;
+}
+.shoji .frame { position: absolute; inset: 0; border: 14px solid #6E604E; border-right: 0; opacity: 0.9; }
+.shoji .branch { position: absolute; inset: -4% -6% -4% -4%; width: 110%; height: 108%; mix-blend-mode: multiply; animation: drift 14s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(-10px, 6px) rotate(0.6deg); } }
+.seal { position: absolute; right: 36px; bottom: 36px; width: 46px; height: 46px; }
+.booking { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; border-top: 1px solid var(--color-border-default); }
+.booking > div { padding: var(--space-5) var(--space-8); border-right: 1px solid var(--color-border-subtle); display: grid; gap: 2px; }
+.booking > div:first-child { padding-left: var(--gutter); }
+.booking .label { letter-spacing: 0.2em; }
+.booking .val { font-family: var(--font-family-display); font-size: 1.375rem; line-height: 1.4; }
+.booking .val small { font-family: var(--font-family-body); font-size: 0.8125rem; color: var(--color-fg-muted); margin-left: 8px; letter-spacing: 0.04em; }
+.booking .go { padding: var(--space-4) var(--gutter) var(--space-4) var(--space-8); display: flex; align-items: center; border: 0; }
+.booking .go .btn { min-height: 60px; padding: 0 34px; }
+
+/* ---------- Sections ---------- */
+.sec { padding-block: clamp(5rem, 10vw, 9rem); }
+.sec + .sec { border-top: 1px solid var(--color-border-subtle); }
+.sec-head { display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-8); align-items: start; margin-bottom: clamp(3rem, 6vw, 5rem); }
+.sec-head .no { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.2em; color: var(--color-fg-muted); padding-top: 0.6em; }
+.sec-head h2 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.3; letter-spacing: 0.04em; }
+.sec-head h2 span { display: block; font-size: 0.5em; letter-spacing: 0.3em; color: var(--color-fg-muted); margin-top: 6px; }
+.sec-head p { color: var(--color-fg-muted); max-width: 52ch; }
+
+/* Palette: paper strips */
+.strips { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); border-top: 1px solid var(--color-border-default); }
+.strip { display: grid; grid-template-rows: 300px auto; border-right: 1px solid var(--color-border-subtle); }
+.strip:last-child { border-right: 0; }
+.strip .fill { position: relative; }
+.strip .fill .k { position: absolute; top: 18px; right: 14px; writing-mode: vertical-rl; max-height: 6em; font-family: var(--font-family-display); font-size: 1.5rem; letter-spacing: 0.3em; }
+.strip dl { padding: 16px 14px 0; display: grid; gap: 6px; font-size: 0.8125rem; line-height: 1.5; }
+.strip dt { font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-fg-muted); }
+.strip dd { font-variant-numeric: tabular-nums; }
+.strip dd.role { font-weight: 500; }
+.pal-note { margin-top: var(--space-10); display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--space-8); color: var(--color-fg-muted); font-size: 0.9375rem; }
+.pal-note p { max-width: 78ch; }
+
+/* Type */
+.type-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0; border-top: 1px solid var(--color-border-default); }
+.tcell { padding: var(--space-10) var(--space-8) var(--space-10) 0; border-bottom: 1px solid var(--color-border-subtle); }
+.tcell:nth-child(2n) { padding-left: var(--space-8); border-left: 1px solid var(--color-border-subtle); }
+.tcell .label { display: block; margin-bottom: var(--space-6); letter-spacing: 0.16em; }
+.t-ja-display { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: 1.55; letter-spacing: 0.14em; }
+.t-en-display { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 2.125rem); line-height: 1.35; margin-top: var(--space-5); letter-spacing: 0.01em; }
+.t-ja-body { font-size: 1rem; line-height: 2; letter-spacing: 0.06em; max-width: 34em; }
+.t-en-body { font-size: 1rem; line-height: 1.75; max-width: 60ch; margin-top: var(--space-5); color: var(--color-fg-default); }
+.t-caption { font-size: 0.8125rem; line-height: 1.6; letter-spacing: 0.08em; color: var(--color-fg-muted); }
+.vert-spec { display: flex; gap: var(--space-10); align-items: start; }
+.vert-spec p { font-family: var(--font-family-display); font-size: 1.375rem; line-height: 2; letter-spacing: 0.16em; height: 14em; }
+
+/* Components */
+.comp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--color-border-default); }
+.comp { padding: var(--space-10) var(--space-8) var(--space-12) 0; border-bottom: 1px solid var(--color-border-subtle); }
+.comp:nth-child(2n) { padding-left: var(--space-8); padding-right: 0; border-left: 1px solid var(--color-border-subtle); }
+.comp > .label { display: block; margin-bottom: var(--space-8); letter-spacing: 0.16em; }
+.btn-grid { display: grid; grid-template-columns: repeat(2, max-content); gap: var(--space-8) var(--space-8); }
+.btn-cap { display: grid; gap: 12px; justify-items: start; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--color-fg-muted); }
+.field { display: grid; gap: 6px; max-width: 460px; }
+.field + .field { margin-top: var(--space-8); }
+.field label { font-size: 0.9375rem; font-weight: 500; letter-spacing: 0.04em; }
+.field label span { color: var(--color-fg-muted); font-weight: 400; margin-left: 10px; font-size: 0.8125rem; }
+.field .hint { font-size: 0.8125rem; color: var(--color-fg-muted); letter-spacing: 0.02em; }
+.input { width: 100%; min-height: 52px; background: transparent; border: 0; border-bottom: 1px solid var(--color-border-strong); padding: 0 2px; font: 400 1.125rem var(--font-family-body); color: var(--ky-sumi); letter-spacing: 0.04em; }
+.input:focus-visible { outline: none; border-bottom: 2px solid var(--ky-koke); background: linear-gradient(to top, rgb(78 90 68 / 0.06), transparent 60%); }
+.field--error .input { border-bottom: 2px solid var(--color-danger-fg); }
+.err { display: flex; gap: 10px; color: var(--color-danger-fg); font-size: 0.875rem; line-height: 1.6; }
+.err svg { flex: none; width: 18px; height: 18px; margin-top: 3px; }
+.room { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: var(--space-6); align-items: stretch; }
+.room .ph { background: linear-gradient(160deg, #D8D2C3 0%, #C8C1AF 55%, #A9A08A 100%); position: relative; min-height: 220px; overflow: hidden; }
+.room .ph svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.room .no { font-family: var(--font-family-display); font-size: 0.8125rem; letter-spacing: 0.2em; color: var(--color-fg-muted); }
+.room h3 { font-family: var(--font-family-display); font-weight: 500; font-size: 1.75rem; line-height: 1.3; letter-spacing: 0.1em; margin-top: 4px; }
+.room h3 span { font-size: 0.55em; letter-spacing: 0.18em; color: var(--color-fg-muted); margin-left: 10px; font-weight: 400; }
+.room p { font-size: 0.9375rem; color: var(--color-fg-muted); margin-top: 8px; line-height: 1.7; }
+.room .price { margin-top: var(--space-4); display: flex; justify-content: space-between; align-items: end; border-top: 1px solid var(--color-border-subtle); padding-top: var(--space-3); }
+.room .price b { font-family: var(--font-family-display); font-weight: 400; font-size: 1.375rem; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.room .price small { font-size: 0.75rem; color: var(--color-fg-muted); letter-spacing: 0.08em; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.tag { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 14px; border: 1px solid var(--color-border-default); font-size: 0.8125rem; letter-spacing: 0.08em; }
+.tag span { color: var(--color-fg-muted); font-size: 0.75rem; letter-spacing: 0.1em; }
+.tag--koke { background: var(--color-accent-subtle); border-color: transparent; color: var(--ky-koke); }
+.tag--koke span { color: var(--ky-koke); }
+.tag--sumi { background: var(--ky-sumi); color: var(--ky-washi); border-color: var(--ky-sumi); }
+.tag--sumi span { color: #CFCCC4; }
+.tag--warn { border-color: var(--color-warning-fg); color: var(--color-warning-fg); }
+.tag--warn span { color: var(--color-warning-fg); }
+
+/* Applications */
+#applications { background: var(--ky-yoru); color: #ECE9E1; }
+#applications .sec-head .no, #applications .sec-head p, #applications .sec-head h2 span { color: #A9ADB2; }
+.apps { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; }
+.phone { width: 340px; background: var(--ky-washi); color: var(--ky-sumi); border-radius: 44px; padding: 14px; box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.6); border: 1px solid #3A424C; }
+.pscreen { border-radius: 32px; overflow: hidden; background: var(--ky-washi); height: 700px; display: flex; flex-direction: column; border: 1px solid var(--color-border-subtle); }
+.p-top { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; font-size: 0.6875rem; letter-spacing: 0.28em; }
+.p-hero { height: 230px; position: relative; overflow: hidden; background: radial-gradient(80% 80% at 60% 30%, #FFFDF6, #EEE6D5 70%, #DDD3BE); }
+.p-hero .lattice { position: absolute; inset: 0; background-image: linear-gradient(90deg, rgb(110 96 78 / 0.5) 0 3px, transparent 3px), linear-gradient(0deg, rgb(110 96 78 / 0.5) 0 3px, transparent 3px); background-size: 54px 100%, 100% 66px; background-position: 26px 0, 0 33px; }
+.p-hero svg { position: absolute; inset: -10%; width: 120%; height: 120%; mix-blend-mode: multiply; }
+.p-body { padding: 18px 22px; display: grid; gap: 10px; flex: 1; align-content: start; }
+.p-body .head { display: flex; justify-content: space-between; align-items: end; }
+.p-body h3 { font-family: var(--font-family-display); font-weight: 500; font-size: 1.75rem; letter-spacing: 0.12em; line-height: 1.2; }
+.p-body h3 small { display: block; font-size: 0.5em; letter-spacing: 0.24em; color: var(--color-fg-muted); font-weight: 400; margin-top: 4px; }
+.p-body .no { font-family: var(--font-family-display); font-size: 2.5rem; line-height: 1; color: #8A867C; }
+.p-body p { font-size: 0.8125rem; line-height: 1.75; color: var(--color-fg-muted); }
+.plan { border: 1px solid var(--color-border-subtle); padding: 10px; background: #FBFAF7; }
+.plan svg { width: 100%; height: auto; }
+.p-cta { margin: auto 20px 20px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; border-top: 1px solid var(--color-border-subtle); padding-top: 14px; }
+.p-cta b { font-family: var(--font-family-display); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.04em; }
+.p-cta small { display: block; font-size: 0.6875rem; color: var(--color-fg-muted); letter-spacing: 0.1em; }
+.p-cta .btn { min-height: 46px; padding: 0 18px; font-size: 0.8125rem; letter-spacing: 0.14em; }
+.card-wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: var(--space-10); align-items: center; }
+.welcome { aspect-ratio: 100 / 148; background: #FBF8F1; color: var(--ky-sumi); position: relative; box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.7); padding: 13% 12%; display: flex; flex-direction: row-reverse; justify-content: space-between; background-image: radial-gradient(rgb(139 123 102 / 0.08) 1px, transparent 1.2px); background-size: 5px 5px; }
+.welcome .v1 { font-family: var(--font-family-display); font-size: clamp(1.375rem, 2.2vw, 1.75rem); letter-spacing: 0.3em; line-height: 1.9; writing-mode: vertical-rl; max-height: 14em; }
+.welcome .v2 { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.26em; line-height: 2.2; writing-mode: vertical-rl; color: var(--ky-usuzumi); align-self: center; max-height: 16em; }
+.welcome .seal { position: static; width: 34px; height: 34px; align-self: flex-start; }
+.welcome .en { position: absolute; left: 12%; bottom: 9%; right: 40%; font-family: var(--font-family-display); font-size: 0.8125rem; line-height: 1.6; color: var(--ky-usuzumi); letter-spacing: 0.02em; }
+.app-cap { color: #C9CCD0; font-size: 0.9375rem; line-height: 1.8; }
+.app-cap b { color: #ECE9E1; font-weight: 500; display: block; font-family: var(--font-family-display); font-size: 1.25rem; letter-spacing: 0.06em; margin-bottom: 8px; }
+.app-cap + .app-cap { margin-top: var(--space-8); }
+
+/* Imagery */
+.img-grid { display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-8); align-items: start; }
+.img-copy p { max-width: 52ch; }
+.img-copy p + p { margin-top: var(--space-5); color: var(--color-fg-muted); }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--color-border-default); border-left: 1px solid var(--color-border-subtle); margin-top: var(--space-10); }
+.icons figure { aspect-ratio: 1; border-right: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); display: grid; place-items: center; align-content: center; gap: 12px; }
+.icons svg { width: 40px; height: 40px; color: var(--ky-sumi); }
+.icons figcaption { font-size: 0.6875rem; letter-spacing: 0.16em; color: var(--color-fg-muted); text-transform: uppercase; }
+.texture { position: relative; aspect-ratio: 4 / 3; background: #F3EFE6; overflow: hidden; }
+.texture svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.texture figcaption { position: absolute; left: 20px; bottom: 16px; font-size: 0.75rem; letter-spacing: 0.14em; color: var(--color-fg-muted); background: rgb(246 245 241 / 0.86); padding: 4px 10px; }
+
+/* Motion */
+.motion-grid { display: grid; grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-8); align-items: start; }
+.mspec { border-top: 1px solid var(--color-border-default); }
+.mspec div { display: grid; grid-template-columns: 1fr auto; gap: 4px 20px; padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border-subtle); }
+.mspec b { font-weight: 500; font-size: 0.9375rem; }
+.mspec span { font-family: var(--font-family-display); font-variant-numeric: tabular-nums; font-size: 1.0625rem; }
+.mspec code { grid-column: 1 / -1; font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-fg-muted); }
+.mdemo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: radial-gradient(70% 70% at 50% 40%, #FFFDF6, #EFE8D8 70%, #E0D7C3); }
+.mdemo .lattice { position: absolute; inset: 0; background-image: linear-gradient(90deg, rgb(110 96 78 / 0.5) 0 4px, transparent 4px), linear-gradient(0deg, rgb(110 96 78 / 0.5) 0 4px, transparent 4px); background-size: 90px 100%, 100% 110px; background-position: 44px 0, 0 54px; }
+.mdemo svg { position: absolute; inset: -8%; width: 116%; height: 116%; mix-blend-mode: multiply; animation: drift 7s ease-in-out infinite alternate; }
+.mdemo .glow { position: absolute; inset: 0; background: radial-gradient(40% 40% at 70% 30%, rgb(255 236 190 / 0.5), transparent 70%); animation: light 9s ease-in-out infinite alternate; }
+@keyframes light { from { opacity: 0.2; transform: translateX(-30px); } to { opacity: 1; transform: translateX(20px); } }
+.mdemo figcaption { position: absolute; left: 16px; bottom: 14px; font-size: 0.75rem; letter-spacing: 0.12em; color: var(--color-fg-muted); background: rgb(246 245 241 / 0.86); padding: 4px 10px; }
+
+/* Voice */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--color-border-default); }
+.vl { padding: var(--space-10) var(--space-8) var(--space-10) 0; display: grid; gap: var(--space-5); align-content: start; }
+.vl + .vl { padding-left: var(--space-8); border-left: 1px solid var(--color-border-subtle); }
+.vl .label { letter-spacing: 0.16em; }
+.vl .ja { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(1.375rem, 2.2vw, 1.875rem); line-height: 1.6; letter-spacing: 0.1em; }
+.vl .en { font-family: var(--font-family-display); font-size: 1.125rem; line-height: 1.5; color: var(--color-fg-default); }
+.vl .why { font-size: 0.875rem; color: var(--color-fg-muted); line-height: 1.7; }
+.vl--err .ja { font-size: 1.25rem; }
+.vl--err .box { border-left: 2px solid var(--color-danger-fg); padding-left: var(--space-4); display: grid; gap: 8px; }
+
+/* Rationale */
+.rat { display: grid; grid-template-columns: 120px repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.rat h3 { font-family: var(--font-family-display); font-weight: 500; font-size: 1.25rem; letter-spacing: 0.06em; margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 1px solid var(--color-border-default); }
+.rat p, .rat li { font-size: 0.9375rem; line-height: 1.8; }
+.rat ul { padding-left: 1em; margin: 0; display: grid; gap: 8px; }
+.rat .fine { margin-top: var(--space-5); color: var(--color-fg-muted); font-size: 0.875rem; }
+footer { border-top: 1px solid var(--color-border-subtle); padding-block: var(--space-10); font-size: 0.8125rem; letter-spacing: 0.04em; color: var(--color-fg-muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .shoji .branch, .mdemo svg, .mdemo .glow { animation: none !important; }
+}
+
+@media (max-width: 1100px) {
+  .topbar nav { display: none; }
+  .topbar { grid-template-columns: 1fr auto; }
+  .stage { grid-template-columns: minmax(0, 1fr); }
+  .stage-copy { order: 2; padding: var(--space-10) var(--gutter); grid-template-columns: minmax(0, 1fr) auto; }
+  .shoji { min-height: 560px; }
+  .strips { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .strip { border-bottom: 1px solid var(--color-border-subtle); }
+  .sec-head, .img-grid, .motion-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+  .pal-note { grid-template-columns: 1fr; }
+  .type-grid, .comp-grid, .voice { grid-template-columns: minmax(0, 1fr); }
+  .tcell:nth-child(2n), .comp:nth-child(2n), .vl + .vl { padding-left: 0; border-left: 0; }
+  .apps, .card-wrap { grid-template-columns: minmax(0, 1fr); }
+  .phone { margin-inline: auto; }
+  .rat { grid-template-columns: 1fr; }
+  .rat > :first-child { display: none; }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: 1fr; }
+  .lang { display: none; }
+  .mark .ja { display: none; }
+  .top-right .btn { min-height: 44px; padding: 0 16px; }
+  .stage-copy { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .booking .label { letter-spacing: 0.08em; }
+  .booking .val small { display: block; margin-left: 0; }
+  .ja-head { padding-top: 0; order: -1; justify-self: end; }
+  .stage-copy .en { max-width: none; }
+  .ja-head .main { font-size: 1.875rem; letter-spacing: 0.14em; }
+  .ja-head .sub { font-size: 0.8125rem; }
+  .shoji { min-height: 420px; }
+  .shoji .lattice { background-size: 72px 100%, 100% 88px; background-position: 34px 0, 0 44px; }
+  .shoji .frame { border-width: 8px; }
+  .booking { grid-template-columns: 1fr 1fr; }
+  .booking > div, .booking > div:first-child { padding: var(--space-4) var(--gutter); border-bottom: 1px solid var(--color-border-subtle); }
+  .booking > div:nth-child(3) { grid-column: 1 / -1; }
+  .booking .go { grid-column: 1 / -1; padding: var(--space-4) var(--gutter) var(--space-6); }
+  .booking .go .btn { width: 100%; }
+  .strips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strip { grid-template-rows: 180px auto; }
+  .strip:nth-child(2n) { border-right: 0; }
+  .vert-spec { gap: var(--space-6); }
+  .vert-spec p { font-size: 1.125rem; }
+  .btn-grid { grid-template-columns: 1fr; }
+  .room { grid-template-columns: 1fr; }
+  .room .ph { min-height: 180px; }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .phone { width: 100%; max-width: 340px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to the key visual</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="leaf" d="M40.4 69.5 L42.6 63.6 L41.6 63.3 L37.8 64.8 L32.1 66.6 L32.6 64.5 L20.3 62.2 L31.6 55.5 L30.8 53.3 L36.7 53.7 L23.1 47.0 L26.0 45.0 L18.3 27.4 L35.5 34.9 L37.0 32.1 L44.5 45.1 L39.5 28.1 L42.9 29.1 L50.0 10.0 L57.1 29.1 L60.5 28.1 L55.5 45.1 L63.0 32.1 L64.5 34.9 L81.7 27.4 L74.0 45.0 L76.9 47.0 L63.3 53.7 L69.2 53.3 L68.4 55.5 L79.7 62.2 L67.4 64.5 L67.9 66.6 L62.2 64.8 L58.4 63.3 L57.4 63.6 L59.6 69.5 L52.6 66.9 L51.1 67.8 L50.0 66.0 L48.9 67.8 L47.4 66.9Z"/>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="softer" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="9"/></filter>
+    <!-- One maple branch, reused as a cast shadow -->
+    <g id="branch">
+      <path d="M1000 -20 C900 80 820 120 700 170 C600 212 520 260 430 340 C380 384 330 420 260 450" fill="none" stroke="#000" stroke-width="9" stroke-linecap="round"/>
+      <path d="M760 140 C770 200 760 250 730 300 M600 214 C560 180 520 170 470 172 M520 262 C540 320 530 370 500 410 M860 96 C900 150 930 170 980 180 M430 340 C390 300 350 290 300 300" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+      <use href="#leaf" transform="translate(690 270) rotate(20) scale(1.3)"/>
+      <use href="#leaf" transform="translate(440 120) rotate(-30) scale(1.2)"/>
+      <use href="#leaf" transform="translate(460 380) rotate(10) scale(1.4)"/>
+      <use href="#leaf" transform="translate(940 150) rotate(40) scale(1.2)"/>
+      <use href="#leaf" transform="translate(250 260) rotate(-20) scale(1.3)"/>
+      <use href="#leaf" transform="translate(560 40) rotate(-5) scale(1.0)"/>
+      <use href="#leaf" transform="translate(200 410) rotate(-50) scale(1.1)"/>
+      <use href="#leaf" transform="translate(780 20) rotate(15) scale(0.9)"/>
+      <use href="#leaf" transform="translate(340 200) rotate(25) scale(0.9)"/>
+    </g>
+    <symbol id="i-futon" viewBox="0 0 24 24"><path d="M3 15h18v3H3zM5 15v-3.5h6V15M3 18v2M21 18v2" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path d="M4 13h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM8 10c-1-1.5 1-2.5 0-4M12 10c-1-1.5 1-2.5 0-4M16 10c-1-1.5 1-2.5 0-4" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-tea" viewBox="0 0 24 24"><path d="M6 9h12l-1.2 9.5a2 2 0 0 1-2 1.5H9.2a2 2 0 0 1-2-1.5zM6.6 13h10.8M10 6c0-1 1-1.5 1-2.5M13.5 6c0-1 1-1.5 1-2.5" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-toro" viewBox="0 0 24 24"><path d="M12 2.5 6 6.5h12zM8 6.5v1.5h8V6.5M9 8v5h6V8M10.5 10h3M7 13h10v1.5H7zM10 14.5v4h4v-4M7.5 18.5h9V21h-9z" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1"/><path d="M6 10h12M9 14h.01M15 14h.01M8 21l2-4M16 21l-2-4M10 6h4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1"/><path d="M12 12h9M18 12v3M15.5 12v2" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7.5v6M12 16v1" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="seal" viewBox="0 0 46 46"><rect x="1" y="1" width="44" height="44" rx="3" fill="#A8402C"/><rect x="5" y="5" width="36" height="36" fill="none" stroke="#F6F5F1" stroke-width="1.6"/><text x="23" y="31" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="21" font-weight="500" fill="#F6F5F1">清</text></symbol>
+  </defs>
+</svg>
+
+<!-- 1. DIRECTION -->
+<header id="direction">
+  <div class="wrap">
+    <div>
+      <div class="dir-name"><b>Kiyomi House</b><span>Stylescape 03 / 12 · Light Through Paper · <a href="../index.html">All stylescapes</a></span></div>
+      <ul class="chips" aria-label="Atlas IDs"><li>style.quiet-minimal</li><li>industry.hotels-travel</li><li>market.japan</li><li>archetype.innocent</li><li>tier.luxury</li><li>channel.marketing-website</li></ul>
+    </div>
+    <p class="dir-brief">An eight-room inn in Higashiyama, Kyoto, booked by guests from Japan and abroad. Luxury expressed as restraint: one plaster tone, one paper tone, sumi ink, and the shadow of a maple on a shoji screen. Japanese and English carry equal weight.</p>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO: bilingual landing hero -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrap topbar">
+    <a class="mark" href="#hero"><span class="en">Kiyomi House</span><span class="ja" lang="ja">宿 きよみ</span></a>
+    <nav aria-label="Main">
+      <ul class="topnav">
+        <li><a href="#hero"><span>Rooms</span><span lang="ja">客室</span></a></li>
+        <li><a href="#hero"><span>Garden</span><span lang="ja">庭</span></a></li>
+        <li><a href="#hero"><span>Dining</span><span lang="ja">食</span></a></li>
+        <li><a href="#hero"><span>Access</span><span lang="ja">交通</span></a></li>
+      </ul>
+    </nav>
+    <div class="top-right"><span class="lang"><b>EN</b> / <span lang="ja">日本語</span></span><a class="btn btn--secondary" href="#hero">Reserve <small lang="ja">予約</small></a></div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-copy">
+      <div class="en">
+        <h1 id="hero-title">An inn where you hear only the garden.</h1>
+        <p>Eight rooms around a moss garden on a quiet lane in Higashiyama. No televisions. Breakfast on the engawa at seven, tea whenever you ask.</p>
+      </div>
+      <div class="ja-head" lang="ja" aria-hidden="true">
+        <p class="sub vert">京都 東山 ・ 八室</p>
+        <p class="main vert">庭の音だけが、<br>聞こえる宿。</p>
+      </div>
+    </div>
+    <div class="shoji" role="img" aria-label="Morning light through a shoji screen; the soft shadow of a maple branch falls across the paper lattice.">
+      <div class="lattice"></div>
+      <svg class="branch" viewBox="0 0 1000 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g filter="url(#softer)" opacity="0.18"><use href="#branch" transform="translate(30 30)"/></g>
+        <g filter="url(#soft)" opacity="0.34" fill="#4A5244"><use href="#branch"/></g>
+      </svg>
+      <div class="frame"></div>
+      <svg class="seal" aria-hidden="true"><use href="#seal"/></svg>
+    </div>
+  </div>
+
+  <form class="booking" aria-label="Check availability" onsubmit="return false">
+    <div><span class="label">Check-in <span lang="ja">チェックイン</span></span><span class="val">Nov 14<small>Fri · <span lang="ja">11月14日(金)</span></small></span></div>
+    <div><span class="label">Check-out <span lang="ja">チェックアウト</span></span><span class="val">Nov 16<small>Sun · 2 nights</small></span></div>
+    <div><span class="label">Guests <span lang="ja">人数</span></span><span class="val">2 adults<small lang="ja">大人2名</small></span></div>
+    <div class="go"><button class="btn btn--primary" type="submit">Check availability <small lang="ja">空室を確認する</small></button></div>
+  </form>
+</section>
+
+<!-- 3. PALETTE -->
+<section id="palette" class="sec" aria-labelledby="palette-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">03</span><h2 id="palette-title">Palette <span lang="ja">色</span></h2><p>Eight colors named after the materials of the house. Text is always sumi or usuzumi on plaster or paper; color appears only as moss, a vermilion seal and the night.</p></div>
+    <div class="strips">
+      <div class="strip"><div class="fill" style="background:#EAE9E4"><span class="k" lang="ja">漆喰</span></div><dl><dt>Shikkui · plaster</dt><dd class="role">Canvas</dd><dd>#EAE9E4</dd><dd>oklch(0.93 0.007 97)</dd><dd>Sumi on it 13.09:1 AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#F6F5F1"><span class="k" lang="ja">和紙</span></div><dl><dt>Washi · paper</dt><dd class="role">Surface</dd><dd>#F6F5F1</dd><dd>oklch(0.97 0.005 95)</dd><dd>Sumi on it 14.58:1 AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#23221F;color:#F6F5F1"><span class="k" lang="ja">墨</span></div><dl><dt>Sumi · ink</dt><dd class="role">Text, primary button</dd><dd>#23221F</dd><dd>oklch(0.25 0.006 92)</dd><dd>14.58:1 on washi AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#5C5A54;color:#F6F5F1"><span class="k" lang="ja">薄墨</span></div><dl><dt>Usuzumi · thin ink</dt><dd class="role">Secondary text</dd><dd>#5C5A54</dd><dd>oklch(0.47 0.010 92)</dd><dd>5.67:1 on plaster AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#4E5A44;color:#F6F5F1"><span class="k" lang="ja">苔</span></div><dl><dt>Koke · moss</dt><dd class="role">Accent, focus ring</dd><dd>#4E5A44</dd><dd>oklch(0.45 0.038 131)</dd><dd>6.71:1 on washi AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#A8402C;color:#FFFFFF"><span class="k" lang="ja">紅</span></div><dl><dt>Beni · seal red</dt><dd class="role">Seal only, under 1%</dd><dd>#A8402C</dd><dd>oklch(0.51 0.141 33)</dd><dd>5.60:1 on washi AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#20262E;color:#ECE9E1"><span class="k" lang="ja">夜</span></div><dl><dt>Yoru · night</dt><dd class="role">Evening sections</dd><dd>#20262E</dd><dd>oklch(0.27 0.017 256)</dd><dd>Paper text 12.56:1 AA</dd></dl></div>
+      <div class="strip"><div class="fill" style="background:#8B7B66;color:#F6F5F1"><span class="k" lang="ja">木肌</span></div><dl><dt>Kihada · bare wood</dt><dd class="role">Lattice, rules</dd><dd>#8B7B66</dd><dd>oklch(0.59 0.036 74)</dd><dd>3.76:1 on washi, graphics only</dd></dl></div>
+    </div>
+    <div class="pal-note"><span></span><p>The temptation in quiet minimalism is light grey text on off-white. Here the lightest text color is usuzumi at 5.67:1; anything paler is a rule or a lattice, never words. Vermilion is the seal and nothing else: a second red element would turn calm into alarm.</p></div>
+  </div>
+</section>
+
+<!-- 4. TYPE -->
+<section id="type" class="sec" aria-labelledby="type-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">04</span><h2 id="type-title">Type <span lang="ja">書体</span></h2><p>Shippori Mincho carries the voice in both scripts, from vertical headlines to English display. Zen Kaku Gothic New handles everything you operate: navigation, forms, prices.</p></div>
+    <div class="type-grid">
+      <div class="tcell">
+        <span class="label">Display · Shippori Mincho 500 · 56px / 1.55 · tracking 0.14em</span>
+        <p class="t-ja-display" lang="ja">朝七時、<br>縁側で朝食を。</p>
+        <p class="t-en-display">Breakfast on the engawa, at seven.</p>
+        <p class="t-caption" style="margin-top:12px">English display: Shippori Mincho 400 · 34px / 1.35. Same family, so the two languages read as one voice.</p>
+      </div>
+      <div class="tcell">
+        <span class="label">Vertical · tategaki · 22px / 2.0</span>
+        <div class="vert-spec" lang="ja">
+          <p class="vert">雨の日は、雨の音を。</p>
+          <p class="vert" style="color:var(--color-fg-muted)">晴れの日は、苔の匂いを。</p>
+        </div>
+      </div>
+      <div class="tcell">
+        <span class="label">Body · Zen Kaku Gothic New 400 · 16px / 2.0 (JA), 1.75 (EN)</span>
+        <p class="t-ja-body" lang="ja">東山の静かな路地に、八つの客室と苔の庭があります。テレビはありません。かわりに、雨の音と、朝の鳥の声があります。</p>
+        <p class="t-en-body">On a quiet lane in Higashiyama there are eight rooms and a moss garden. There are no televisions. Instead there is the rain, and birds in the morning.</p>
+      </div>
+      <div class="tcell">
+        <span class="label">Caption · Zen Kaku Gothic New 400 · 13px / 1.6 · tracking 0.08em</span>
+        <p class="t-caption" lang="ja">チェックイン 15:00 ・ チェックアウト 11:00</p>
+        <p class="t-caption" style="margin-top:6px">Check-in 15:00 · Check-out 11:00 · Kyoto Station 15 minutes by taxi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMPONENTS -->
+<section id="components" class="sec" aria-labelledby="components-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">05</span><h2 id="components-title">Components <span lang="ja">部品</span></h2><p>Square corners, hairline borders, no shadows. Inputs are a single underline, like a line on a registration card. Focus is a moss outline with 4px of air.</p></div>
+    <div class="comp-grid">
+      <div class="comp">
+        <span class="label">Buttons</span>
+        <div class="btn-grid">
+          <div class="btn-cap"><button class="btn btn--primary" type="button">Reserve <small lang="ja">予約する</small></button>Primary</div>
+          <div class="btn-cap"><button class="btn btn--secondary" type="button">View room <small lang="ja">詳しく見る</small></button>Secondary</div>
+          <div class="btn-cap"><button class="btn" type="button" disabled>Full <small lang="ja">満室</small></button>Disabled</div>
+          <div class="btn-cap"><button class="btn btn--primary is-focus" type="button">Reserve <small lang="ja">予約する</small></button>Focus visible</div>
+        </div>
+      </div>
+      <div class="comp">
+        <span class="label">Text input</span>
+        <div class="field">
+          <label for="nm">Name, as on your passport <span lang="ja">お名前（ローマ字）</span></label>
+          <input class="input" id="nm" type="text" value="Claire Laurent" aria-describedby="nm-hint">
+          <span class="hint" id="nm-hint">We prepare your welcome card with this spelling.</span>
+        </div>
+        <div class="field field--error">
+          <label for="em">Email <span lang="ja">メールアドレス</span></label>
+          <input class="input" id="em" type="email" value="claire.laurent@" aria-invalid="true" aria-describedby="em-err">
+          <p class="err" id="em-err"><svg aria-hidden="true"><use href="#i-alert"/></svg><span>Please check the address, for example name@example.com.<br><span lang="ja">メールアドレスの形式をご確認ください。</span></span></p>
+        </div>
+      </div>
+      <div class="comp">
+        <span class="label">Room card</span>
+        <article class="room">
+          <div class="ph" role="img" aria-label="Room placeholder: tatami and a low window">
+            <svg viewBox="0 0 180 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M0 150h180v70H0z" fill="#B9AE94"/><path d="M0 150h180M60 150v70M120 150v70M0 185h180" stroke="#8B7B66" stroke-width="1.5"/><rect x="30" y="40" width="120" height="80" fill="#F3EEE2"/><path d="M70 40v80M110 40v80M30 80h120" stroke="#8B7B66" stroke-width="2.5"/></svg>
+          </div>
+          <div>
+            <span class="no">03</span>
+            <h3 lang="ja">月の間<span lang="en">Tsuki</span></h3>
+            <p>Eight tatami, an engawa facing the moss garden, a hinoki bath. The moon rises over the east wall in autumn.</p>
+            <div class="price"><b>¥68,000</b><small>per night, 2 guests, breakfast</small></div>
+          </div>
+        </article>
+      </div>
+      <div class="comp">
+        <span class="label">Tags</span>
+        <div class="tags">
+          <span class="tag tag--koke">Breakfast included <span lang="ja">朝食付き</span></span>
+          <span class="tag">Garden view <span lang="ja">庭に面した</span></span>
+          <span class="tag">Hinoki bath <span lang="ja">檜風呂</span></span>
+          <span class="tag tag--sumi">Members <span lang="ja">会員</span></span>
+          <span class="tag tag--warn">1 room left <span lang="ja">残り1室</span></span>
+        </div>
+        <p class="t-caption" style="margin-top:var(--space-6)">Tags pair English with Japanese at a smaller size, never translated by icon alone. Scarcity uses the warning tone and words, not red.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. APPLICATIONS -->
+<section id="applications" class="sec" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">06</span><h2 id="apps-title">Applications <span lang="ja">展開</span></h2><p>Most guests decide on a phone. The room page leads with the floor plan, because a tatami count tells a Japanese guest everything and teaches an international guest what to expect.</p></div>
+    <div class="apps">
+      <div class="phone" role="img" aria-label="Mobile room page for room 03, Tsuki: shoji light, a floor plan with eight tatami, engawa, tokonoma and hinoki bath, and a Reserve button with the price ¥68,000.">
+        <div class="pscreen" aria-hidden="true">
+          <div class="p-top"><span>KIYOMI HOUSE</span><span>EN / <span lang="ja">日本語</span></span></div>
+          <div class="p-hero"><div class="lattice"></div><svg viewBox="0 0 1000 720" preserveAspectRatio="xMidYMid slice"><g filter="url(#soft)" opacity="0.32" fill="#4A5244"><use href="#branch"/></g></svg></div>
+          <div class="p-body">
+            <div class="head"><h3 lang="ja">月の間<small lang="en">ROOM · TSUKI</small></h3><span class="no">03</span></div>
+            <p>Eight tatami, an engawa and a hinoki bath. Two guests.</p>
+            <div class="plan">
+              <svg viewBox="0 0 280 170">
+                <rect x="1" y="1" width="278" height="168" fill="#FBFAF7" stroke="#23221F" stroke-width="2"/>
+                <g fill="#E9E3D2" stroke="#8B7B66" stroke-width="1.2">
+                  <rect x="10" y="10" width="60" height="30"/><rect x="70" y="10" width="60" height="30"/>
+                  <rect x="10" y="40" width="30" height="60"/><rect x="40" y="40" width="60" height="30"/><rect x="40" y="70" width="60" height="30"/><rect x="100" y="40" width="30" height="60"/>
+                  <rect x="10" y="100" width="60" height="30"/><rect x="70" y="100" width="60" height="30"/>
+                </g>
+                <rect x="130" y="10" width="34" height="60" fill="#D8CFB8" stroke="#8B7B66" stroke-width="1.2"/>
+                <rect x="130" y="70" width="34" height="60" fill="#DCE1D6" stroke="#8B7B66" stroke-width="1.2"/>
+                <rect x="10" y="130" width="154" height="30" fill="#EFEADF" stroke="#8B7B66" stroke-width="1.2"/>
+                <path d="M164 1v168" stroke="#23221F" stroke-width="2"/>
+                <rect x="176" y="12" width="92" height="146" fill="#DDE3D3"/>
+                <circle cx="206" cy="58" r="10" fill="#B8C2AA"/><circle cx="238" cy="104" r="14" fill="#B8C2AA"/><circle cx="214" cy="128" r="6" fill="#9AA58C"/>
+                <g font-family="Zen Kaku Gothic New, sans-serif" font-size="11" fill="#23221F" text-anchor="middle">
+                  <text x="70" y="88" lang="ja">八畳</text>
+                  <text x="147" y="43" lang="ja">床の間</text>
+                  <text x="147" y="103" lang="ja">檜風呂</text>
+                  <text x="87" y="149" lang="ja">縁側</text>
+                  <text x="222" y="86" lang="ja">庭</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="p-cta"><span><b>¥68,000</b><small>per night · breakfast</small></span><span class="btn btn--primary">Reserve</span></div>
+        </div>
+      </div>
+      <div class="card-wrap">
+        <div class="welcome" role="img" aria-label="Letterpress welcome card with vertical Japanese text: Welcome. Please take your time. For Ms. Laurent, with a small vermilion seal.">
+          <p class="v1" lang="ja" aria-hidden="true">ようこそ。<br>どうぞ、ごゆっくり。</p>
+          <p class="v2" lang="ja" aria-hidden="true">ロラン様　月の間にて</p>
+          <svg class="seal" aria-hidden="true"><use href="#seal"/></svg>
+          <p class="en" aria-hidden="true">Welcome, Ms. Laurent. Please take your time.</p>
+        </div>
+        <div>
+          <p class="app-cap"><b>Welcome card, 100 × 148 mm</b>Letterpress on cotton paper, set vertically, signed with the house seal. Waiting on the tatami when guests arrive. The English line is a quiet footnote, not a translation fighting for space.</p>
+          <p class="app-cap"><b>Mobile room page</b>Shoji light at the top, the floor plan as the hero, one reserve action pinned to the bottom with the full nightly price shown before tapping.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. IMAGERY -->
+<section id="imagery" class="sec" aria-labelledby="imagery-title">
+  <div class="wrap">
+    <div class="img-grid">
+      <span class="sec-head no" style="margin:0;display:block;font-family:var(--font-family-display);letter-spacing:0.2em;color:var(--color-fg-muted)">07</span>
+      <div class="img-copy">
+        <h2 id="imagery-title" class="mincho" style="font-weight:400;font-size:clamp(1.75rem,3vw,2.5rem);letter-spacing:0.04em;line-height:1.3;margin-bottom:var(--space-8)">Imagery and icons <span lang="ja" style="display:block;font-size:0.5em;letter-spacing:0.3em;color:var(--color-fg-muted);margin-top:6px">写真と図像</span></h2>
+        <p>Photography is natural light only, shot in the hour after sunrise or before dusk: paper, wood grain, steam, a single cup. People appear from behind or as hands. Never a wide-angle lens on a small room; never a guest posing in a yukata.</p>
+        <p>Icons are 1px hairlines on a 24px grid, square ends, drawn like architectural plan symbols. Texture is washi fiber and shadow, never a pattern of cherry blossoms, torii or Mount Fuji.</p>
+        <div class="icons" role="list" aria-label="Icon set">
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-futon"/></svg><figcaption>Futon</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-bath"/></svg><figcaption>Bath</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-tea"/></svg><figcaption>Tea</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-toro"/></svg><figcaption>Garden</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-train"/></svg><figcaption>Access</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-key"/></svg><figcaption>Check-in</figcaption></figure>
+        </div>
+      </div>
+      <figure class="texture">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <filter id="fiber"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.18" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 0.45  0 0 0 0 0.40  0 0 0 0 0.33  0 0 0 0.55 0"/></filter>
+          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 0.4  0 0 0 0 0.36  0 0 0 0 0.3  0 0 0 0.12 0"/></filter>
+          <rect width="800" height="600" fill="#F3EFE6"/>
+          <rect width="800" height="600" filter="url(#fiber)" opacity="0.35"/>
+          <rect width="800" height="600" filter="url(#grain)"/>
+          <g filter="url(#softer)" opacity="0.2" fill="#3E4538" transform="translate(-160 60) scale(0.95)"><use href="#branch"/></g>
+          <use href="#seal" x="700" y="500" width="46" height="46"/>
+        </svg>
+        <figcaption>Washi fiber + branch shadow, generated (SVG turbulence)</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MOTION -->
+<section id="motion" class="sec" aria-labelledby="motion-title">
+  <div class="wrap">
+    <div class="motion-grid">
+      <span style="font-family:var(--font-family-display);letter-spacing:0.2em;color:var(--color-fg-muted)">08</span>
+      <div>
+        <h2 id="motion-title" class="mincho" style="font-weight:400;font-size:clamp(1.75rem,3vw,2.5rem);letter-spacing:0.04em;line-height:1.3;margin-bottom:var(--space-6)">Motion <span lang="ja" style="display:block;font-size:0.5em;letter-spacing:0.3em;color:var(--color-fg-muted);margin-top:6px">動き</span></h2>
+        <p style="color:var(--color-fg-muted);max-width:50ch;margin-bottom:var(--space-8)">Motion behaves like daylight: slow, continuous, never startling. Nothing slides in from the side; things become visible.</p>
+        <div class="mspec">
+          <div><b>Image and section reveal</b><span>800ms</span><code>opacity 0 to 1 · cubic-bezier(0, 0, 0, 1)</code></div>
+          <div><b>Hover on buttons and links</b><span>320ms</span><code>color and background only · cubic-bezier(0.2, 0, 0, 1)</code></div>
+          <div><b>Branch shadow drift (ambient)</b><span>14s alternate</span><code>translate 10px, rotate 0.6deg · ease-in-out</code></div>
+          <div><b>Reduced motion</b><span>0ms</span><code>ambient drift stops; reveals become instant</code></div>
+        </div>
+      </div>
+      <figure class="mdemo" role="img" aria-label="Motion demo: the maple shadow drifts slowly across the shoji while the patch of light shifts.">
+        <div class="lattice"></div>
+        <div class="glow"></div>
+        <svg viewBox="0 0 1000 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g filter="url(#soft)" opacity="0.32" fill="#4A5244"><use href="#branch"/></g></svg>
+        <figcaption>Live demo · stops with reduced motion</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VOICE -->
+<section id="voice" class="sec" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">09</span><h2 id="voice-title">Voice <span lang="ja">言葉</span></h2><p>A host who speaks softly and precisely. Japanese in polite, unhurried teineigo; English plain and specific. Fewer adjectives than you think, and never "luxury".</p></div>
+    <div class="voice">
+      <div class="vl"><span class="label">Headline</span><p class="ja" lang="ja">庭の音だけが、<br>聞こえる宿。</p><p class="en">An inn where you hear only the garden.</p><p class="why">A sensory promise rather than a claim. The English is transcreated, not translated word for word.</p></div>
+      <div class="vl"><span class="label">CTA</span><p class="ja" lang="ja">空室を確認する</p><p class="en">Check availability</p><p class="why">Asks, does not push. "Book now" would be the only urgent sentence on the site.</p></div>
+      <div class="vl vl--err"><span class="label">Error</span><div class="box"><p class="ja" lang="ja">ご希望の日程は満室です。前後の空いている日をご案内します。</p><p class="en">Those nights are full. Here are the nearest open dates.</p></div><p class="why">Apologetic tone in Japanese, practical in English; both move straight to alternatives.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RATIONALE -->
+<section id="rationale" class="sec" aria-labelledby="rationale-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">10</span><h2 id="rationale-title">Rationale <span lang="ja">理由</span></h2><p>Why this direction, its risks, and what the category would have done by default.</p></div>
+    <div class="rat">
+      <span></span>
+      <article><h3>Why it fits</h3><ul><li>At eight rooms, the product is the atmosphere. A screen of light and shadow sells silence better than any photo carousel.</li><li>Innocent archetype: purity and simplicity, expressed with real materials rather than pastel clichés.</li><li>Japanese guests read vertical Mincho as cultured and sincere; international guests read the same restraint as "authentic Kyoto" without needing a single torii.</li></ul></article>
+      <article><h3>What it risks</h3><ul><li>Quiet can tip into empty or generic "Japandi". The shadow, the floor plan and the seal must stay; they are the owned assets.</li><li>Photography quality becomes critical. A weak photo has nowhere to hide on a page this calm.</li><li>Vertical text needs careful reading order and must never hold information that is not also in the horizontal text.</li></ul></article>
+      <article><h3>Category-expected alternative</h3><p>A booking-engine template: full-width photo carousel, star ratings, an orange "Book now" button, discount banners and a long amenities grid (<code>style.corporate-modern</code> + <code>tier.mid-market</code>). It converts impulse travelers and cheapens an eight-room inn.</p><p class="fine">Confirm before launch: Japan's Act on the Protection of Personal Information (APPI) for guest data, the Hotel Business Act guest-register requirements (passport details for foreign guests), and accessibility of the booking engine.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Kiyomi House is a fictional inn made for the Visual Design Kit stylescape set. All artwork is CSS and inline SVG.</span><span>Type: Shippori Mincho and Zen Kaku Gothic New (SIL OFL 1.1), subset. <a href="../index.html">All stylescapes</a></span></div></footer>
+</body>
+</html>

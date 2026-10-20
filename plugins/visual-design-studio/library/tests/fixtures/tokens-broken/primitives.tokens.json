@@ -1,0 +1,28 @@
+{
+  "$description": "Deliberately broken token set for tests/test_tokens.py. Every problem here is intentional.",
+  "$extensions": {"com.github.newmindsgroup.vdk": {"brand": "fixture", "brandName": "Fixture"}},
+  "color": {
+    "$type": "color",
+    "white": {"$value": "#ffffff"},
+    "gray": {
+      "100": {"$value": "#eeeeee"},
+      "400": {"$value": "#aaaaaa"},
+      "900": {"$value": "#111111"}
+    },
+    "bad-hex": {"$value": "#12345"},
+    "loop-a": {"$value": "{color.loop-b}"},
+    "loop-b": {"$value": "{color.loop-a}"},
+    "accent": {
+      "$extensions": {"com.github.newmindsgroup.vdk": {"brandable": true}},
+      "600": {"$value": "{color.gray.900}"}
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "4": {"$value": "1rem"}
+  },
+  "Radius": {
+    "$type": "dimension",
+    "md": {"$value": "8px"}
+  }
+}

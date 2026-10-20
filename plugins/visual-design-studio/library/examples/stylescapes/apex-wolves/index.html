@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex Wolves: Hunt As One | Stylescape 09</title>
+<meta name="description" content="Stylescape for Apex Wolves, a fictional esports team launching Season 07 on social media. Direction: Hunt As One. Bold geometric sport with a dark-tech HUD layer, Hero archetype.">
+<style>
+@font-face { font-family: "Saira"; src: url("../fonts/saira/saira-latin-wdth-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-stretch: 50% 125%; font-style: normal; font-display: swap; }
+@font-face { font-family: "Saira"; src: url("../fonts/saira/saira-latin-wdth-wght-italic.woff2") format("woff2"); font-weight: 100 900; font-stretch: 50% 125%; font-style: italic; font-display: swap; }
+
+:root {
+  color-scheme: dark;
+  --color-bg-canvas: #0A0B0D;          /* Night */
+  --color-bg-surface: #16181C;         /* Steel */
+  --color-bg-surface-raised: #22252B;  /* Gunmetal */
+  --color-bg-sunken: #050607;
+  --color-bg-inverse: #F2F1EC;         /* Fang */
+  --color-fg-default: #F2F1EC;
+  --color-fg-muted: #9AA0A6;           /* Ash */
+  --color-fg-subtle: #6B717B;
+  --color-fg-inverse: #0A0B0D;
+  --color-fg-on-accent: #0A0B0D;
+  --color-border-subtle: #22252B;
+  --color-border-default: #5B616B;
+  --color-border-strong: #9AA0A6;
+  --color-accent-default: #D4FF1E;     /* Volt */
+  --color-accent-hover: #E2FF66;
+  --color-accent-active: #BDE600;
+  --color-accent-subtle: #1F2608;
+  --color-accent-fg: #D4FF1E;
+  --brand-live: #FF3B30;               /* Live red */
+  --brand-ice: #8FD8FF;                /* Ice: info and data only */
+  --color-success-fg: #D4FF1E; --color-success-bg: #1F2608; --color-success-border: #D4FF1E;
+  --color-warning-fg: #FFC53D; --color-warning-bg: #2A2108; --color-warning-border: #FFC53D;
+  --color-danger-fg: #FF5A4F;  --color-danger-bg: #2A0E0C;  --color-danger-border: #FF5A4F;
+  --color-info-fg: #8FD8FF;    --color-info-bg: #0E2230;    --color-info-border: #8FD8FF;
+  --color-focus-ring: #F2F1EC;
+  --color-overlay-scrim: rgb(5 6 7 / 0.7);
+
+  --font-family-display: "Saira", "Arial Narrow", sans-serif;
+  --font-family-body: "Saira", "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "Saira", ui-monospace, monospace; /* tabular figures at wdth 100 stand in for mono */
+
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem; --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-caps: 0.08em;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 2px; --radius-md: 2px; --radius-lg: 4px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-md: none;
+  --brand-angle: -12deg;                     /* the one angle: every slash, skew and cut */
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --brand-ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) { :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.0625rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.label { font-family: var(--font-family-body); font-stretch: 100%; font-weight: 600; font-size: 0.75rem; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.disp { font-family: var(--font-family-display); font-style: italic; font-weight: 900; font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; }
+
+/* ---------- 1. Direction ---------- */
+#direction { border-bottom: 1px solid var(--color-border-subtle); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-8); align-items: center; padding-block: var(--space-4) var(--space-5); }
+#direction .no { color: var(--color-accent-default); }
+#direction h1 { margin: 0; font-size: 1.5rem; line-height: 1; }
+#direction h1 span { color: var(--color-accent-default); }
+#direction .brief { grid-column: 1 / -1; margin: 0; color: var(--color-fg-muted); font-size: 1rem; max-width: 92ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; padding: 3px 10px; border: 1px solid var(--color-border-default); color: var(--color-fg-default); transform: skewX(var(--brand-angle)); }
+.back { font-weight: 600; font-size: 0.875rem; text-underline-offset: 4px; padding-block: 10px; }
+
+/* ---------- 2. Hero key art ---------- */
+#hero { position: relative; overflow: hidden; background:
+  linear-gradient(90deg, rgb(242 241 236 / 0.04) 1px, transparent 1px) 0 0 / 80px 80px,
+  linear-gradient(rgb(242 241 236 / 0.04) 1px, transparent 1px) 0 0 / 80px 80px,
+  var(--color-bg-canvas); }
+.ka { position: relative; min-height: 820px; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.ka-slab { position: absolute; inset-block: 0; inset-inline-end: 0; width: 47%; background: var(--color-accent-default); clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); }
+.ka-slab::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(-78deg, transparent 0 22px, rgb(10 11 13 / 0.07) 22px 24px); }
+.ka-07 { position: absolute; inset-inline-end: -2%; bottom: -14%; font-size: 900px; line-height: 0.8; color: transparent; -webkit-text-stroke: 3px rgb(10 11 13 / 0.22); pointer-events: none; user-select: none; }
+.ka-mark { position: absolute; inset-inline-end: 7%; top: 50%; width: 400px; height: 400px; transform: translateY(-54%); color: var(--color-bg-canvas); }
+.ka-clock { position: absolute; inset-inline-end: var(--gutter); top: 28px; color: var(--color-bg-canvas); text-align: end; }
+.ka-clock b { display: block; font-size: 2rem; font-weight: 800; font-stretch: 75%; letter-spacing: 0; line-height: 1; font-variant-numeric: tabular-nums; }
+.ka-copy { position: relative; z-index: 2; padding: 28px 0 150px var(--gutter); padding-inline-start: max(var(--gutter), calc((100vw - var(--container-xl)) / 2 + var(--gutter))); display: flex; flex-direction: column; }
+.ka-top { display: flex; align-items: center; gap: 14px; margin-bottom: 72px; }
+.ka-top svg { width: 44px; height: 44px; color: var(--color-fg-default); }
+.ka-top .name { font-size: 1.25rem; font-weight: 800; font-stretch: 85%; font-style: italic; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
+.ka-top .name small { display: block; font-size: 0.6875rem; font-style: normal; font-weight: 600; letter-spacing: 0.12em; color: var(--color-fg-muted); margin-top: 3px; }
+.ka-kicker { margin: 0 0 18px; display: flex; gap: 12px; align-items: center; color: var(--color-accent-default); }
+.ka-kicker::before { content: ""; width: 40px; height: 4px; background: currentColor; transform: skewX(var(--brand-angle)); }
+.ka-title { margin: 0; font-size: clamp(5rem, 15.5vw, 14rem); line-height: 0.8; }
+.ka-title span { display: block; }
+.ka-title .one { color: var(--color-accent-default); padding-inline-start: 0.42em; }
+.ka-info { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); margin-top: 34px; }
+.ka-match { display: grid; gap: 2px; }
+.ka-match b { font-size: 1.375rem; font-weight: 800; font-stretch: 80%; font-style: italic; text-transform: uppercase; letter-spacing: 0.01em; line-height: 1.1; }
+.ka-match span { color: var(--color-fg-muted); font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+.roster { position: absolute; inset-inline: 0; bottom: 0; z-index: 3; border-top: 1px solid var(--color-border-default); background: var(--color-bg-canvas); }
+.roster ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; margin: 0 auto; padding: 0 var(--gutter); max-width: var(--container-xl); }
+.roster li { display: grid; grid-template-columns: auto 1fr; gap: 0 12px; align-items: center; padding: 18px 16px; border-inline-start: 1px solid var(--color-border-subtle); }
+.roster li:first-child { border-inline-start: 0; padding-inline-start: 0; }
+.roster .n { grid-row: span 2; font-size: 2.75rem; font-weight: 900; font-stretch: 55%; font-style: italic; line-height: 0.9; color: var(--color-accent-default); font-variant-numeric: tabular-nums; }
+.roster .h { font-size: 1.125rem; font-weight: 800; font-stretch: 85%; letter-spacing: 0.04em; line-height: 1.1; }
+.roster .r { color: var(--color-fg-muted); font-size: 0.8125rem; line-height: 1.3; }
+
+/* Buttons: skewed on the brand angle; focus ring follows the skew */
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border: 2px solid transparent; border-radius: 0; transform: skewX(var(--brand-angle)); font-family: var(--font-family-body); font-weight: 800; font-stretch: 85%; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color var(--duration-fast) var(--brand-ease-snap), color var(--duration-fast) var(--brand-ease-snap), box-shadow var(--duration-moderate) var(--brand-ease-snap); }
+.btn > span { display: inline-flex; align-items: center; gap: 10px; transform: skewX(calc(var(--brand-angle) * -1)); }
+.btn svg { width: 18px; height: 18px; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn-primary:hover { background: var(--color-accent-hover); box-shadow: 6px 6px 0 var(--color-fg-default); }
+.btn-primary:active { background: var(--color-accent-active); box-shadow: none; }
+.btn-secondary { background: transparent; color: var(--color-fg-default); border-color: var(--color-fg-default); }
+.btn-secondary:hover { background: var(--color-fg-default); color: var(--color-fg-inverse); }
+.btn[disabled] { background: var(--color-bg-surface-raised); color: var(--color-fg-subtle); border-color: transparent; cursor: not-allowed; box-shadow: none; }
+.btn:focus-visible, .btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 4px; }
+
+/* ---------- Section frame ---------- */
+.section { padding-block: clamp(4rem, 8vw, 7rem); border-top: 1px solid var(--color-border-subtle); }
+.s-head { display: grid; grid-template-columns: auto 1fr; gap: var(--space-2) var(--space-8); align-items: end; margin-bottom: var(--space-12); }
+.s-head .idx { font-size: clamp(4rem, 9vw, 8rem); line-height: 0.75; color: transparent; -webkit-text-stroke: 2px var(--color-accent-default); grid-row: span 2; }
+.s-head h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 0.85; }
+.s-head p { margin: 0; color: var(--color-fg-muted); max-width: 60ch; font-size: 1.0625rem; }
+
+/* ---------- 3. Palette ---------- */
+.pal { display: grid; grid-template-columns: 3fr 3fr 2fr 2fr 2fr 2fr 2fr; gap: 0; list-style: none; margin: 0; padding: 0; border: 1px solid var(--color-border-subtle); }
+.pal li { min-height: 300px; display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; font-size: 0.8125rem; line-height: 1.45; font-variant-numeric: tabular-nums; position: relative; }
+.pal li b { font-size: 1.75rem; font-weight: 900; font-stretch: 62%; font-style: italic; text-transform: uppercase; line-height: 1; margin-bottom: 8px; letter-spacing: 0.01em; }
+.pal .role { position: absolute; top: 14px; inset-inline-start: 16px; }
+.pal-bar { display: grid; grid-template-columns: 58fr 18fr 12fr 8fr 3fr 1fr; height: 14px; margin-top: var(--space-6); }
+.pal-note { color: var(--color-fg-muted); font-size: 0.9375rem; margin: var(--space-3) 0 0; max-width: 100ch; }
+
+/* ---------- 4. Type ---------- */
+.type-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-8); }
+.tcard { background: var(--color-bg-surface); padding: var(--space-8); position: relative; overflow: hidden; }
+.tcard .label { color: var(--color-fg-muted); display: flex; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-6); }
+.t-disp { margin: 0; font-size: clamp(4rem, 9vw, 8.5rem); line-height: 0.82; }
+.t-disp em { font-style: italic; color: var(--color-accent-default); }
+.axis { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: var(--space-6); align-items: baseline; }
+.axis span { font-weight: 900; font-style: italic; font-size: 2.5rem; line-height: 1; text-transform: uppercase; }
+.axis small { display: block; font-size: 0.6875rem; color: var(--color-fg-muted); font-style: normal; font-weight: 600; letter-spacing: 0.08em; }
+.t-body { margin: 0 0 var(--space-4); font-size: 1.0625rem; line-height: 1.55; max-width: 52ch; }
+.t-cap { margin: 0; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--color-border-subtle); margin-top: var(--space-6); }
+.stat-row div { background: var(--color-bg-surface); padding: 12px 0 0; }
+.stat-row b { display: block; font-size: 2.5rem; font-weight: 800; font-stretch: 75%; line-height: 1; font-variant-numeric: tabular-nums; }
+
+/* ---------- 5. Components ---------- */
+.comp { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); }
+.cbox { background: var(--color-bg-surface); padding: var(--space-8); border-top: 3px solid var(--color-accent-default); }
+.cbox > .label { display: block; color: var(--color-fg-muted); margin-bottom: var(--space-6); }
+.cb-btn { grid-column: span 4; }
+.cb-form { grid-column: span 4; }
+.cb-badge { grid-column: span 4; }
+.cb-card { grid-column: span 12; }
+.btn-col { display: grid; gap: var(--space-5); justify-items: start; padding-inline-start: 8px; }
+.btn-col p { margin: 0; color: var(--color-fg-muted); font-size: 0.875rem; }
+.field { display: grid; gap: 6px; margin-bottom: var(--space-5); }
+.field label { font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.field .hint { color: var(--color-fg-muted); font-size: 0.875rem; line-height: 1.4; }
+.field input { font: inherit; font-weight: 600; font-size: 1.125rem; letter-spacing: 0.04em; min-height: 52px; padding: 0 14px; background: var(--color-bg-canvas); color: var(--color-fg-default); border: 2px solid var(--color-border-default); border-radius: 0; width: 100%; }
+.field input:focus-visible { outline: none; border-color: var(--color-accent-default); box-shadow: 0 0 0 3px rgb(212 255 30 / 0.35); }
+.field.err input { border-color: var(--color-danger-border); }
+.field .error { display: flex; gap: 8px; align-items: flex-start; color: var(--color-danger-fg); font-size: 0.9375rem; font-weight: 600; line-height: 1.4; }
+.field .error svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+.badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.badge { display: inline-flex; align-items: center; gap: 8px; min-height: 28px; padding: 2px 12px; font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; transform: skewX(var(--brand-angle)); }
+.badge > span { transform: skewX(calc(var(--brand-angle) * -1)); display: inline-flex; align-items: center; gap: 8px; }
+.b-live { background: var(--brand-live); color: var(--color-fg-inverse); }
+.b-live i { width: 8px; height: 8px; border-radius: 50%; background: var(--color-fg-inverse); animation: blink 1.2s steps(2, jump-none) infinite; }
+@keyframes blink { 50% { opacity: 0.25; } }
+.b-win { background: var(--color-accent-default); color: var(--color-fg-inverse); }
+.b-loss { border: 2px solid var(--color-border-strong); color: var(--color-fg-default); }
+.b-new { background: var(--brand-ice); color: var(--color-fg-inverse); }
+.match-list { list-style: none; margin: var(--space-6) 0 0; padding: 0; }
+.match-list li { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center; min-height: 56px; border-top: 1px solid var(--color-border-subtle); font-variant-numeric: tabular-nums; }
+.match-list li b { font-weight: 800; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.02em; }
+.match-list li span { color: var(--color-fg-muted); font-size: 0.875rem; }
+.match-list .sc { font-size: 1.375rem; font-weight: 800; font-stretch: 75%; color: var(--color-fg-default); }
+.pcard { display: grid; grid-template-columns: 300px 1fr 1fr; gap: var(--space-8); align-items: stretch; }
+.pcard .portrait { position: relative; aspect-ratio: 4 / 5; background: var(--color-accent-default); overflow: hidden; clip-path: polygon(0 0, 100% 0, 100% 88%, 82% 100%, 0 100%); }
+.pcard .portrait::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, var(--color-bg-canvas) 0 1.4px, transparent 1.6px) 0 0 / 7px 7px; -webkit-mask: radial-gradient(21% 17% at 52% 38%, #000 98%, transparent), radial-gradient(58% 30% at 50% 100%, #000 98%, transparent); mask: radial-gradient(21% 17% at 52% 38%, #000 98%, transparent), radial-gradient(58% 30% at 50% 100%, #000 98%, transparent); }
+.pcard .portrait .pnum { position: absolute; top: 6px; inset-inline-start: 14px; font-size: 5rem; line-height: 1; color: var(--color-bg-canvas); }
+.pcard h3 { margin: 0; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 0.82; }
+.pcard .role { margin: 10px 0 var(--space-6); color: var(--color-fg-muted); }
+.bars { display: grid; gap: 14px; }
+.bars div { display: grid; grid-template-columns: 90px 1fr 56px; gap: 12px; align-items: center; font-variant-numeric: tabular-nums; }
+.bars i { display: block; height: 10px; background: var(--color-bg-surface-raised); position: relative; transform: skewX(var(--brand-angle)); }
+.bars i::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--v); background: var(--color-accent-default); }
+.bars b { font-size: 1.25rem; font-weight: 800; font-stretch: 80%; text-align: end; }
+.quote { align-self: end; border-inline-start: 3px solid var(--color-accent-default); padding-inline-start: var(--space-5); }
+.quote p { margin: 0 0 10px; font-size: 1.5rem; font-weight: 700; font-style: italic; font-stretch: 85%; line-height: 1.2; }
+.quote span { color: var(--color-fg-muted); font-size: 0.875rem; }
+
+/* ---------- 6. Applications: social set ---------- */
+.posts { display: grid; grid-template-columns: 1fr 1fr 0.78fr; gap: var(--space-6); align-items: start; }
+.post-wrap figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 10px; color: var(--color-fg-muted); font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
+.post { container-type: inline-size; position: relative; overflow: hidden; background: var(--color-bg-canvas); outline: 1px solid var(--color-border-subtle); }
+.post.r45 { aspect-ratio: 1080 / 1350; }
+.post.r916 { aspect-ratio: 1080 / 1920; }
+.post * { margin: 0; }
+.post .grid { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(242 241 236 / 0.05) 1px, transparent 1px) 0 0 / 7.4cqw 7.4cqw, linear-gradient(rgb(242 241 236 / 0.05) 1px, transparent 1px) 0 0 / 7.4cqw 7.4cqw; }
+.post .hdr { position: absolute; top: 5.5cqw; inset-inline: 5.5cqw; display: flex; justify-content: space-between; align-items: center; }
+.post .hdr .tm { display: flex; align-items: center; gap: 2cqw; font-size: 3cqw; font-weight: 800; font-style: italic; font-stretch: 85%; text-transform: uppercase; letter-spacing: 0.04em; }
+.post .hdr svg { width: 7cqw; height: 7cqw; color: var(--color-fg-default); }
+.post .hdr .wk { font-size: 2.6cqw; font-weight: 600; letter-spacing: 0.1em; color: var(--color-fg-muted); text-transform: uppercase; }
+/* Post A: match day */
+.pa .slab { position: absolute; inset-inline: 0; bottom: 0; height: 40%; background: var(--color-accent-default); clip-path: polygon(0 26%, 100% 0, 100% 100%, 0 100%); }
+.pa .md { position: absolute; top: 17cqw; inset-inline-start: 5.5cqw; font-size: 26cqw; line-height: 0.8; }
+.pa .md span { display: block; }
+.pa .md span + span { color: var(--color-accent-default); padding-inline-start: 9cqw; }
+.pa .vs { position: absolute; inset-inline: 5.5cqw; bottom: 9cqw; color: var(--color-bg-canvas); display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 3cqw; }
+.pa .vs .team { font-size: 5.6cqw; line-height: 0.9; font-weight: 900; font-style: italic; font-stretch: 62%; text-transform: uppercase; }
+.pa .vs .team small { display: block; font-size: 2.6cqw; font-style: normal; font-weight: 700; font-stretch: 100%; letter-spacing: 0.08em; margin-bottom: 1cqw; }
+.pa .vs .x { font-size: 12cqw; font-weight: 900; font-style: italic; font-stretch: 55%; line-height: 0.8; }
+.pa .vs .team:last-child { text-align: end; }
+.pa .when { position: absolute; inset-inline-start: 5.5cqw; bottom: 30cqw; display: inline-flex; gap: 2cqw; background: var(--color-bg-canvas); color: var(--color-fg-default); padding: 1.6cqw 3cqw; font-size: 3.4cqw; font-weight: 800; letter-spacing: 0.06em; font-variant-numeric: tabular-nums; transform: skewX(var(--brand-angle)); }
+.pa .when span { transform: skewX(12deg); display: inline-block; }
+/* Post B: result */
+.pb { background: var(--color-accent-default); color: var(--color-bg-canvas); }
+.pb .grid { background: linear-gradient(90deg, rgb(10 11 13 / 0.07) 1px, transparent 1px) 0 0 / 7.4cqw 7.4cqw, linear-gradient(rgb(10 11 13 / 0.07) 1px, transparent 1px) 0 0 / 7.4cqw 7.4cqw; }
+.pb .hdr svg, .pb .hdr .wk { color: var(--color-bg-canvas); }
+.pb .w { position: absolute; top: 15cqw; inset-inline-start: 5.5cqw; font-size: 7cqw; line-height: 1; padding: 1cqw 3cqw; background: var(--color-bg-canvas); color: var(--color-accent-default); transform: skewX(var(--brand-angle)); }
+.pb .score { position: absolute; top: 22cqw; inset-inline-start: 3cqw; font-size: 58cqw; line-height: 0.85; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.pb .head { position: absolute; inset-inline: 5.5cqw; bottom: 30cqw; font-size: 8cqw; line-height: 0.88; }
+.pb .maps { position: absolute; inset-inline: 5.5cqw; bottom: 6cqw; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 0.4cqw solid var(--color-bg-canvas); }
+.pb .maps div { padding-top: 2cqw; font-size: 2.6cqw; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.pb .maps b { display: block; font-size: 7cqw; font-weight: 900; font-stretch: 62%; font-style: italic; line-height: 1; font-variant-numeric: tabular-nums; }
+.pb .maps .l b { opacity: 0.45; }
+/* Story: roster reveal */
+.ps .num { position: absolute; top: 26cqw; inset-inline-end: -6cqw; font-size: 110cqw; line-height: 0.8; color: transparent; -webkit-text-stroke: 0.5cqw var(--color-accent-default); }
+.ps .ph { position: absolute; inset-inline: 0; top: 24cqw; height: 80cqw; background: radial-gradient(circle at 50% 50%, var(--color-accent-default) 0 0.55cqw, transparent 0.65cqw) 0 0 / 2.6cqw 2.6cqw; -webkit-mask: radial-gradient(16cqw 18cqw at 52% 34%, #000 98%, transparent), radial-gradient(46cqw 30cqw at 50% 100%, #000 98%, transparent); mask: radial-gradient(16cqw 18cqw at 52% 34%, #000 98%, transparent), radial-gradient(46cqw 30cqw at 50% 100%, #000 98%, transparent); }
+.ps .slab { position: absolute; inset-inline: 0; bottom: 0; height: 47%; background: var(--color-bg-canvas); clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%); }
+.ps .rev { position: absolute; inset-inline-start: 6cqw; bottom: 64cqw; font-size: 4cqw; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-default); }
+.ps .tag { position: absolute; inset-inline-start: 5cqw; bottom: 42cqw; font-size: 26cqw; line-height: 0.8; }
+.ps .role { position: absolute; inset-inline-start: 6cqw; bottom: 33cqw; font-size: 4.4cqw; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); }
+.ps .link { position: absolute; inset-inline: 0; bottom: 21cqw; display: flex; justify-content: center; }
+.ps .link span { background: var(--color-fg-default); color: var(--color-bg-canvas); font-size: 3.6cqw; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 2cqw 5cqw; border-radius: 99cqw; }
+.ps .safe { position: absolute; inset-inline: 0; border: 0 dashed rgb(143 216 255 / 0.9); pointer-events: none; }
+.ps .safe.t { top: 0; height: 13cqw; border-bottom-width: 0.35cqw; background: rgb(143 216 255 / 0.10); }
+.ps .safe.b { bottom: 0; height: 17.7cqw; border-top-width: 0.35cqw; background: rgb(143 216 255 / 0.10); }
+.ps .safe span { position: absolute; inset-inline-end: 3cqw; font-size: 2.6cqw; font-weight: 700; color: var(--brand-ice); letter-spacing: 0.06em; text-transform: uppercase; }
+.ps .safe.t span { bottom: 1cqw; } .ps .safe.b span { top: 1cqw; }
+.ps .hdr { top: 16cqw; }
+.toggle-safe { margin-top: var(--space-3); }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
+.img-grid p { margin: 0 0 var(--space-5); max-width: 54ch; }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; list-style: none; margin: var(--space-8) 0 0; padding: 0; border: 1px solid var(--color-border-subtle); }
+.icons li { display: grid; justify-items: center; gap: 10px; padding: var(--space-5) 4px; border-inline-end: 1px solid var(--color-border-subtle); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-fg-muted); }
+.icons li:last-child { border-inline-end: 0; }
+.icons svg { width: 40px; height: 40px; fill: none; stroke: var(--color-fg-default); stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
+.icons svg .v { stroke: var(--color-accent-default); }
+.tex { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.tex > div { position: relative; min-height: 260px; overflow: hidden; }
+.tex .t1 { background: var(--color-bg-surface); }
+.tex .t1::before { content: ""; position: absolute; inset: -20%; background: repeating-linear-gradient(-78deg, transparent 0 18px, var(--color-accent-default) 18px 20px, transparent 20px 34px, rgb(212 255 30 / 0.4) 34px 35px); -webkit-mask: linear-gradient(100deg, transparent 20%, #000 80%); mask: linear-gradient(100deg, transparent 20%, #000 80%); }
+.tex .t2 { background: var(--color-accent-default); }
+.tex .t2::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle, var(--color-bg-canvas) 0 2px, transparent 2.4px) 0 0 / 10px 10px; -webkit-mask: radial-gradient(120% 90% at 100% 100%, #000 10%, transparent 75%); mask: radial-gradient(120% 90% at 100% 100%, #000 10%, transparent 75%); }
+.tex .t3 { grid-column: span 2; min-height: 180px; background: var(--color-bg-canvas); border: 1px solid var(--color-border-subtle); display: flex; align-items: center; justify-content: center; }
+.tex .t3 svg { width: 92%; height: auto; }
+.tex span.cap { position: absolute; inset-inline-start: 14px; bottom: 12px; padding: 4px 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.tex .t1 .cap { color: var(--color-fg-default); background: var(--color-bg-canvas); }
+.tex .t2 .cap { color: var(--color-accent-default); background: var(--color-bg-canvas); }
+
+/* ---------- 8. Motion ---------- */
+.motion { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
+.mt { width: 100%; border-collapse: collapse; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+.mt th, .mt td { text-align: start; padding: 11px 10px 11px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.mt th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-fg-muted); border-bottom: 2px solid var(--color-accent-default); }
+.mt code { font-family: ui-monospace, Menlo, monospace; font-size: 0.8125rem; color: var(--color-accent-default); }
+.stage { position: relative; height: 320px; background: var(--color-bg-surface); overflow: hidden; display: grid; place-items: center; }
+.stage .res { font-size: clamp(5rem, 11vw, 10rem); line-height: 0.8; padding: 0.06em 0.12em; }
+.stage .res em { font-style: italic; color: var(--color-accent-default); }
+.stage .sweep { position: absolute; inset-block: -10%; width: 34%; background: var(--color-accent-default); transform: skewX(var(--brand-angle)) translateX(-260%); }
+.stage.play .sweep { animation: sweep 560ms var(--brand-ease-snap) both; }
+.stage.play .res { animation: reveal 560ms var(--brand-ease-snap) both; }
+@keyframes sweep { 0% { transform: skewX(var(--brand-angle)) translateX(-260%); } 100% { transform: skewX(var(--brand-angle)) translateX(420%); } }
+@keyframes reveal { 0%, 30% { clip-path: inset(0 100% 0 0); transform: translateX(-24px); } 100% { clip-path: inset(0 0 0 0); transform: none; } }
+@media (prefers-reduced-motion: reduce) { .stage.play .sweep, .stage.play .res, .b-live i { animation: none; } }
+.stage-ctl { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-top: var(--space-4); color: var(--color-fg-muted); font-size: 0.875rem; }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.voice figure { margin: 0; background: var(--color-bg-surface); padding: var(--space-8) var(--space-6); display: flex; flex-direction: column; gap: var(--space-5); position: relative; }
+.voice figure::before { content: ""; position: absolute; inset-inline-start: 0; top: 0; width: 64px; height: 6px; background: var(--color-accent-default); transform: skewX(var(--brand-angle)); transform-origin: 0 0; }
+.voice figure.e::before { background: var(--color-danger-fg); }
+.voice blockquote { margin: 0; font-size: clamp(2.5rem, 4.5vw, 4rem); line-height: 0.85; }
+.voice blockquote.cta-l { font-size: 1.25rem; line-height: 1; }
+.voice blockquote.err { font-family: var(--font-family-body); font-style: normal; font-weight: 600; font-stretch: 100%; text-transform: none; font-size: 1.1875rem; line-height: 1.4; color: var(--color-danger-fg); letter-spacing: 0; }
+.voice figcaption { margin-top: auto; color: var(--color-fg-muted); font-size: 0.9375rem; line-height: 1.45; }
+
+/* ---------- 10. Rationale ---------- */
+#rationale { background: var(--color-accent-default); color: var(--color-fg-inverse); border-top: 0; }
+#rationale .s-head .idx { -webkit-text-stroke-color: var(--color-bg-canvas); }
+#rationale .s-head p { color: #2A3008; }
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-10); }
+.rat h3 { margin: 0 0 var(--space-4); font-size: 2rem; line-height: 0.9; }
+.rat p, .rat li { font-size: 1.0625rem; line-height: 1.55; font-weight: 500; }
+.rat p { margin: 0 0 var(--space-4); }
+.rat ul { margin: 0; padding-inline-start: 1.1em; }
+.colophon { margin-top: var(--space-16); padding-top: var(--space-4); border-top: 2px solid var(--color-bg-canvas); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); font-size: 0.875rem; font-weight: 600; }
+#rationale a { color: var(--color-fg-inverse); }
+#rationale :focus-visible { outline-color: var(--color-bg-canvas); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .ka { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .ka-slab { position: relative; width: 100%; height: 360px; clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%); order: -1; }
+  .ka { position: relative; }
+  .ka-copy { position: static; }
+  .ka-copy > :not(.ka-top) { position: relative; z-index: 2; }
+  .ka-mark { width: 240px; height: 240px; inset-inline-end: 8%; top: 44%; transform: translateY(-50%); }
+  .ka-07 { font-size: 520px; bottom: auto; top: -30px; }
+  .ka-clock { top: auto; bottom: 36px; inset-inline-end: auto; inset-inline-start: var(--gutter); text-align: start; }
+  .ka-copy { padding: 0 var(--gutter) var(--space-10); }
+  .ka-top { position: absolute; top: 20px; inset-inline-start: var(--gutter); z-index: 3; margin: 0; }
+  .ka-top svg, .ka-top .name { color: var(--color-bg-canvas); }
+  .ka-top .name small { color: #2A3008; }
+  .ka-kicker { margin-top: var(--space-2); }
+  .roster { position: relative; }
+  .roster ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .roster li:nth-child(4) { border-inline-start: 0; padding-inline-start: 0; }
+  .pal { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pal li { min-height: 200px; }
+  .type-grid, .img-grid, .motion { grid-template-columns: minmax(0, 1fr); }
+  .cb-btn, .cb-form, .cb-badge { grid-column: span 12; }
+  .pcard { grid-template-columns: 220px 1fr; }
+  .pcard .quote { grid-column: span 2; }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .post-wrap.story { grid-column: span 2; max-width: 360px; justify-self: center; width: 100%; }
+  .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: 1fr; }
+  .ka-slab { height: 300px; }
+  .ka-mark { width: 180px; height: 180px; inset-inline-end: 6%; top: 50%; }
+  .ka-title { font-size: clamp(5rem, 30vw, 7.5rem); }
+  .ka-clock b { font-size: 1.5rem; }
+  .ka-info .btn { width: calc(100% - 12px); }
+  .roster ol { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .roster li { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--color-border-subtle); }
+  .roster li:nth-child(odd) { padding-inline-end: 8px; }
+  .roster li:last-child { grid-column: span 2; }
+  .s-head { grid-template-columns: minmax(0, 1fr); }
+  .s-head .idx { grid-row: auto; }
+  .pal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pal li { min-height: 170px; }
+  .pal li:first-child { grid-column: span 2; }
+  .tcard, .cbox { padding: var(--space-5); }
+  .pcard { grid-template-columns: minmax(0, 1fr); }
+  .pcard .portrait { max-width: 260px; }
+  .pcard .quote { grid-column: auto; }
+  .posts { grid-template-columns: minmax(0, 1fr); }
+  .post-wrap.story { grid-column: auto; max-width: 300px; }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .icons li:nth-child(3) { border-inline-end: 0; }
+  .icons li:nth-child(-n+3) { border-bottom: 1px solid var(--color-border-subtle); }
+  .tex { grid-template-columns: minmax(0, 1fr); }
+  .tex .t3 { grid-column: auto; }
+  .stage-ctl { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="wolf" viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M15 5L36 27L50 21L64 27L85 5L90 43L83 57L96 61L77 71L71 80L62 86L50 98L38 86L29 80L23 71L4 61L17 57L10 43Z M20 13L32 27L23 34Z M80 13L68 27L77 34Z M25 44L44 49L38 55Z M75 44L56 49L62 55Z M50 29L41 40L50 36L59 40Z M45 60L55 60L51.5 75L48.5 75Z M43 79L57 79L50 87Z"/></symbol>
+    <symbol id="raven" viewBox="0 0 100 100"><path fill="currentColor" fill-rule="evenodd" d="M8 40L46 22L70 30L96 22L80 40L92 46L70 52L60 78L44 70L40 92L30 66L10 58L26 50Z M58 36L66 36L62 41Z"/></symbol>
+  </defs>
+</svg>
+
+<header id="direction">
+  <div class="wrap">
+    <span class="label no">Stylescape 09 / 12</span>
+    <h1 class="disp">Apex Wolves &middot; <span>Hunt As One</span></h1>
+    <a class="back" href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.bold-geometric-sport</li><li>style.dark-tech-developer</li><li>industry.gaming-esports</li><li>audience.teens-gen-z</li><li>archetype.hero</li><li>channel.social-media</li>
+    </ul>
+    <p class="brief">An esports team launching Season 07 across social feeds. Borrow the discipline of a traditional sports club (one angle, one signal color, numbers as heroes) and add a dark HUD layer gamers recognize. No RGB glow, no glitch.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO: season key art ================= -->
+<section id="hero" aria-labelledby="ka-title">
+  <div class="ka">
+    <div class="ka-slab" aria-hidden="true">
+      <span class="ka-07 disp">07</span>
+      <svg class="ka-mark"><use href="#wolf"/></svg>
+      <div class="ka-clock label">Opener in<b>04d 11h 22m</b></div>
+    </div>
+    <div class="ka-copy">
+      <div class="ka-top"><svg aria-hidden="true"><use href="#wolf"/></svg><span class="name">Apex Wolves<small>Est. 2019 &middot; Stockholm</small></span></div>
+      <p class="ka-kicker label">Season 07 &middot; 2026</p>
+      <h2 class="ka-title disp" id="ka-title"><span>Hunt</span><span>as</span><span class="one">one.</span></h2>
+      <div class="ka-info">
+        <a class="btn btn-primary" href="#applications"><span>Set match reminder <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg></span></a>
+        <div class="ka-match"><b>vs Northgate Ravens</b><span>Sat 14 Feb &middot; 19:00 CET &middot; Live on the team channel</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="roster" aria-label="Season 07 roster">
+    <ol>
+      <li><span class="n">07</span><span class="h">KAIRO</span><span class="r">Captain &middot; In-game lead</span></li>
+      <li><span class="n">11</span><span class="h">NOVA</span><span class="r">Entry</span></li>
+      <li><span class="n">23</span><span class="h">VEX</span><span class="r">Flex</span></li>
+      <li><span class="n">04</span><span class="h">HOLT</span><span class="r">Support</span></li>
+      <li><span class="n">19</span><span class="h">RUNA</span><span class="r">Anchor &middot; Rookie</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="pal-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">03</span><h2 class="disp" id="pal-t">Palette</h2><p>Two team colors, like a football club: Night and Volt. Fang for text. Live red only when something is live.</p></div>
+    <ul class="pal">
+      <li style="background:#0A0B0D;color:#F2F1EC;border-inline-end:1px solid #22252B"><span class="role label" style="color:#9AA0A6">bg-canvas</span><b>Night</b>#0A0B0D<br>oklch(0.15 0.005 264)<br>Fang on it 17.41:1</li>
+      <li style="background:#D4FF1E;color:#0A0B0D"><span class="role label">accent-default</span><b>Volt</b>#D4FF1E<br>oklch(0.94 0.221 121)<br>On Night 16.99:1 &middot; Night on it 16.99:1</li>
+      <li style="background:#F2F1EC;color:#0A0B0D"><span class="role label">fg-default</span><b>Fang</b>#F2F1EC<br>oklch(0.96 0.007 97)<br>On Night 17.41:1</li>
+      <li style="background:#16181C;color:#F2F1EC"><span class="role label" style="color:#9AA0A6">bg-surface</span><b>Steel</b>#16181C<br>oklch(0.21 0.009 264)<br>Ash on it 6.73:1</li>
+      <li style="background:#9AA0A6;color:#0A0B0D"><span class="role label">fg-muted</span><b>Ash</b>#9AA0A6<br>oklch(0.70 0.011 248)<br>On Night 7.46:1</li>
+      <li style="background:#FF3B30;color:#0A0B0D"><span class="role label">live, alerts</span><b>Live red</b>#FF3B30<br>oklch(0.65 0.232 29)<br>Night on it 5.55:1</li>
+      <li style="background:#8FD8FF;color:#0A0B0D"><span class="role label">info, data</span><b>Ice</b>#8FD8FF<br>oklch(0.85 0.091 233)<br>On Night 12.60:1</li>
+    </ul>
+    <div class="pal-bar" aria-hidden="true"><span style="background:#0A0B0D;outline:1px solid #22252B"></span><span style="background:#D4FF1E"></span><span style="background:#F2F1EC"></span><span style="background:#16181C"></span><span style="background:#FF3B30"></span><span style="background:#8FD8FF"></span></div>
+    <p class="pal-note">Proportion on a typical post: Night 58%, Volt 18% (one slab, never a gradient), Fang 12%, Steel 8%, Live red 3%, Ice 1%. Volt is a fill, not a glow. Error text on dark uses #FF5A4F (5.78:1 on Steel).</p>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">04</span><h2 class="disp" id="type-t">Type</h2><p>One variable family, Saira, from 50% to 125% width. Headlines squeeze to 62% and slant; data opens up to 100% with tabular figures.</p></div>
+    <div class="type-grid">
+      <div class="tcard">
+        <div class="label"><span>Display</span><span>Saira Black Italic &middot; wdth 62 &middot; wght 900</span></div>
+        <p class="t-disp disp">No one <em>hunts</em> alone.</p>
+        <div class="axis" aria-hidden="true">
+          <span style="font-stretch:50%">Pack<small>wdth 50</small></span>
+          <span style="font-stretch:62%">Pack<small>wdth 62</small></span>
+          <span style="font-stretch:85%">Pack<small>wdth 85</small></span>
+          <span style="font-stretch:110%">Pack<small>wdth 110</small></span>
+        </div>
+        <p class="t-cap" style="margin-top:18px">clamp(80px, 15.5vw, 224px) / 0.80 &middot; uppercase &middot; tracking &minus;0.01em. Never below 32px.</p>
+      </div>
+      <div class="tcard">
+        <div class="label"><span>Body &amp; data</span><span>Saira 400&ndash;800 &middot; wdth 100</span></div>
+        <p class="t-body">KAIRO has called every round of the qualifier from the same seat. This season he gets a rookie anchor, a new entry player and the hardest group in the league. Opening night is Saturday.</p>
+        <p class="t-cap">Body 17px / 1.55 &middot; Caption 12px caps, +0.08em</p>
+        <div class="stat-row">
+          <div><span class="t-cap">Rating</span><b>1.18</b></div>
+          <div><span class="t-cap">K/D</span><b>1.31</b></div>
+          <div><span class="t-cap">ADR</span><b>84.6</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="comp-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">05</span><h2 class="disp" id="comp-t">Components</h2><p>Everything sits on the &minus;12&deg; angle. Square corners, hard offsets, no blur.</p></div>
+    <div class="comp">
+      <div class="cbox cb-btn">
+        <span class="label">Buttons</span>
+        <div class="btn-col">
+          <button class="btn btn-primary" type="button"><span>Join the pack</span></button>
+          <button class="btn btn-secondary" type="button"><span>Watch the reveal</span></button>
+          <button class="btn btn-primary" type="button" disabled><span>Sold out</span></button>
+          <button class="btn btn-primary is-focus" type="button"><span>Focus state</span></button>
+          <p>Focus: 3px Fang outline, 4px offset, skewed with the button. Hover adds a hard 6px Fang offset, never a glow.</p>
+        </div>
+      </div>
+      <form class="cbox cb-form" onsubmit="return false" novalidate>
+        <span class="label">Text input</span>
+        <div class="field err">
+          <label for="aw-tag">Gamertag</label>
+          <span class="hint" id="aw-tag-hint">3&ndash;16 letters or numbers. This is how the pack sees you.</span>
+          <input id="aw-tag" type="text" value="KAIRO" aria-invalid="true" aria-describedby="aw-tag-hint aw-tag-err">
+          <span class="error" id="aw-tag-err"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 1.5l8 15H1z" fill="currentColor"/><path d="M9 7v4.5M9 13.2v1" stroke="#0A0B0D" stroke-width="2"/></svg>KAIRO is taken. Add your number, like KAIRO07, or pick a new tag.</span>
+        </div>
+        <div class="field">
+          <label for="aw-team">Favorite player</label>
+          <input id="aw-team" type="text" value="RUNA">
+        </div>
+      </form>
+      <div class="cbox cb-badge">
+        <span class="label">Badges and match list</span>
+        <div class="badges">
+          <span class="badge b-live"><span><i></i>Live</span></span>
+          <span class="badge b-win"><span>Win</span></span>
+          <span class="badge b-loss"><span>Loss</span></span>
+          <span class="badge b-new"><span>New drop</span></span>
+        </div>
+        <ul class="match-list">
+          <li><b>vs Northgate Ravens</b><span>Sat 14 Feb</span><span class="sc">19:00</span></li>
+          <li><b>vs Saltmarsh Kings</b><span>Thu 19 Feb</span><span class="sc">20:30</span></li>
+          <li><b>vs Iron Lynx</b><span>Sun 22 Feb</span><span class="sc">18:00</span></li>
+        </ul>
+      </div>
+      <article class="cbox cb-card" aria-label="Player card">
+        <span class="label">Player card</span>
+        <div class="pcard">
+          <div class="portrait" role="img" aria-label="Duotone halftone portrait placeholder for KAIRO, number 07"><span class="pnum disp">07</span></div>
+          <div>
+            <h3 class="disp">Kairo</h3>
+            <p class="role label">Captain &middot; In-game lead &middot; 4th season</p>
+            <div class="bars">
+              <div><span class="label">Rating</span><i style="--v:78%"></i><b>1.18</b></div>
+              <div><span class="label">K/D</span><i style="--v:86%"></i><b>1.31</b></div>
+              <div><span class="label">Clutch %</span><i style="--v:41%"></i><b>41</b></div>
+              <div><span class="label">Opening</span><i style="--v:62%"></i><b>62</b></div>
+            </div>
+          </div>
+          <div class="quote"><p>&ldquo;Last season we played for highlights. This season we play for each other.&rdquo;</p><span>KAIRO, at the Season 07 reveal</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="app-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">06</span><h2 class="disp" id="app-t">Social set</h2><p>Season-launch posts built at full size (1080 &times; 1350 feed, 1080 &times; 1920 story) and scaled here with container units, so every measurement holds at any size.</p></div>
+    <div class="posts">
+      <figure class="post-wrap" style="margin:0">
+        <div class="post r45 pa" role="img" aria-label="Feed post: Match Day, Apex Wolves versus Northgate Ravens, Saturday 14 February 19:00 CET">
+          <div class="grid"></div>
+          <div class="hdr"><span class="tm"><svg aria-hidden="true"><use href="#wolf"/></svg>Apex Wolves</span><span class="wk">S07 &middot; Week 1</span></div>
+          <p class="md disp"><span>Match</span><span>day.</span></p>
+          <div class="slab"></div>
+          <p class="when"><span>SAT 14 FEB &middot; 19:00 CET</span></p>
+          <div class="vs"><p class="team"><small>Home</small>Apex<br>Wolves</p><p class="x">VS</p><p class="team"><small>Away</small>Northgate<br>Ravens</p></div>
+        </div>
+        <figcaption><span>Feed &middot; 1080 &times; 1350 (4:5)</span><span>Match day</span></figcaption>
+      </figure>
+      <figure class="post-wrap" style="margin:0">
+        <div class="post r45 pb" role="img" aria-label="Feed post: Win, 2 to 1, Wolves take the opener, map scores 13-9, 11-13, 13-7">
+          <div class="grid"></div>
+          <div class="hdr"><span class="tm"><svg aria-hidden="true"><use href="#wolf"/></svg>Apex Wolves</span><span class="wk">Final</span></div>
+          <p class="w disp">Win</p>
+          <p class="score disp">2&ndash;1</p>
+          <p class="head disp">Wolves take<br>the opener.</p>
+          <div class="maps"><div>Map 1<b>13&ndash;9</b></div><div class="l">Map 2<b>11&ndash;13</b></div><div>Map 3<b>13&ndash;7</b></div></div>
+        </div>
+        <figcaption><span>Feed &middot; 1080 &times; 1350 (4:5)</span><span>Result</span></figcaption>
+      </figure>
+      <figure class="post-wrap story" style="margin:0">
+        <div class="post r916 ps" id="aw-story" role="img" aria-label="Story: roster reveal, number 07 KAIRO, captain and in-game lead, with a Meet the pack link sticker; platform safe zones marked">
+          <div class="grid"></div>
+          <span class="num disp">07</span>
+          <div class="ph"></div>
+          <div class="slab"></div>
+          <div class="hdr"><span class="tm"><svg aria-hidden="true"><use href="#wolf"/></svg>Apex Wolves</span><span class="wk">Roster 1/5</span></div>
+          <p class="rev">Roster reveal</p>
+          <p class="tag disp">Kairo</p>
+          <p class="role">Captain &middot; In-game lead</p>
+          <div class="link"><span>Meet the pack</span></div>
+          <div class="safe t"><span>Keep clear &middot; 250 px</span></div>
+          <div class="safe b"><span>Keep clear &middot; 340 px</span></div>
+        </div>
+        <figcaption><span>Story &middot; 1080 &times; 1920 (9:16)</span><span>Safe zones shown</span></figcaption>
+        <button class="btn btn-secondary toggle-safe" type="button" id="aw-safe" aria-pressed="true" style="min-height:44px;font-size:0.8125rem;padding:0 16px"><span>Hide safe zones</span></button>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="img-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">07</span><h2 class="disp" id="img-t">Imagery</h2><p>Flash-lit, hard-cropped portraits turned into Volt halftone duotones. Geometry does the shouting; players never pose with fake fire.</p></div>
+    <div class="img-grid">
+      <div>
+        <p>Shoot players head-and-shoulders against black with one hard key light, then render as a Volt-on-Night halftone so any photo quality looks deliberate. Crop at the forehead, never the chin. Speed comes from the &minus;12&deg; slashes, not from motion blur or lens flares.</p>
+        <p>Icons are 2px square-cap strokes on a 24px grid with 45&deg; corners. Volt marks the one active part.</p>
+        <ul class="icons">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/><path d="M12 11v2" class="v"/></svg>Aim</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v6l-5 5-5-5zM12 14v4M8 21h8M7 5H3v2l4 3M17 5h4v2l-4 3"/><path d="M10 7h4" class="v"/></svg>Trophy</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l3 10-3 2-4-4H9l-4 4-3-2z"/><path d="M8 10v4M6 12h4" /><path d="M16 11h.01M18 13h.01" class="v"/></svg>Play</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v16H3zM3 10h18M8 2v5M16 2v5"/><path d="M8 14h3v3H8z" class="v"/></svg>Fixture</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M10 9l5 3-5 3z" class="v"/></svg>Live</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><path d="M4 14h4v6H4zM16 14h4v6h-4z"/><path d="M20 20l-4 2h-3" class="v"/></svg>Comms</li>
+        </ul>
+      </div>
+      <div class="tex">
+        <div class="t1"><span class="cap">Slash field &middot; &minus;12&deg;</span></div>
+        <div class="t2"><span class="cap">Halftone fade, 10px cell</span></div>
+        <div class="t3" aria-hidden="true">
+          <svg viewBox="0 0 720 150"><g fill="#D4FF1E"><use href="#wolf" x="0" y="15" width="120" height="120"/></g>
+            <g fill="none" stroke="#5B616B" stroke-width="1"><path d="M150 20h560M150 130h560M150 75h560" stroke-dasharray="2 6"/></g>
+            <g fill="#F2F1EC" font-family="Saira, sans-serif" font-weight="900" font-style="italic" font-size="96" style="font-stretch:62%"><text x="150" y="114">APEX WOLVES</text></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="mo-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">08</span><h2 class="disp" id="mo-t">Motion</h2><p>Snap. Things arrive fast and land hard on the brand angle, like a cut in a broadcast package.</p></div>
+    <div class="motion">
+      <table class="mt">
+        <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Slash wipe, reveal</td><td>560ms</td><td><code>--brand-ease-snap</code> cubic-bezier(0.16, 1, 0.3, 1)</td></tr>
+          <tr><td>Hover, press</td><td><code>--duration-fast</code> 120ms</td><td><code>--brand-ease-snap</code></td></tr>
+          <tr><td>Exit</td><td><code>--duration-moderate</code> 200ms</td><td><code>--ease-accelerate</code></td></tr>
+          <tr><td>Story cut</td><td>6 frames at 30fps (200ms)</td><td>Hard cut on beat; no crossfades</td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">Final frame shown; Live dot stops blinking</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="stage play" id="aw-stage" aria-hidden="true"><span class="sweep"></span><p class="res disp">W <em>2&ndash;1</em></p></div>
+        <div class="stage-ctl"><span>Volt slash crosses in 560ms; the score is unmasked behind it.</span><button class="btn btn-secondary" type="button" id="aw-replay" style="min-height:44px;font-size:0.875rem"><span>Replay</span></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="vo-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">09</span><h2 class="disp" id="vo-t">Voice</h2><p>Captain&rsquo;s voice: short, certain, about the team. Confident without trash talk; fans are &ldquo;the pack&rdquo;.</p></div>
+    <div class="voice">
+      <figure><span class="label" style="color:var(--color-fg-muted)">Headline</span><blockquote class="disp">Hunt as one.</blockquote><figcaption>Three words a fan can chant, caption and tattoo. The Hero is the team, not a single star.</figcaption></figure>
+      <figure><span class="label" style="color:var(--color-fg-muted)">Call to action</span><blockquote class="disp cta-l"><span class="btn btn-primary" style="pointer-events:none"><span>Set match reminder</span></span></blockquote><figcaption>A real, useful next step for a fan scrolling past, instead of a vague &ldquo;Join now&rdquo;.</figcaption></figure>
+      <figure class="e"><span class="label" style="color:var(--color-fg-muted)">Error message</span><blockquote class="err">KAIRO is taken. Add your number, like KAIRO07, or pick a new tag.</blockquote><figcaption>Names the problem, offers a fix in the fan&rsquo;s own language. No &ldquo;Oops!&rdquo;.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="ra-t">
+  <div class="wrap">
+    <div class="s-head"><span class="idx disp" aria-hidden="true">10</span><h2 class="disp" id="ra-t">Rationale</h2><p>Why a sports club, not a gaming peripheral.</p></div>
+    <div class="rat">
+      <div>
+        <h3 class="disp">Why it fits</h3>
+        <p>Gen Z fans follow esports like football: rosters, fixtures, results, kits. Treating the team as a club (one mark, two colors, one angle, numbers everywhere) makes Apex Wolves instantly recognizable in a feed at thumbnail size, where most esports posts blur into neon.</p>
+        <p>The dark-tech layer (grid, tabular stats, HUD labels) is native to how players already read the game.</p>
+      </div>
+      <div>
+        <h3 class="disp">What it risks</h3>
+        <ul>
+          <li>Volt is loud. Overused it tires the eye; keep it to one slab per frame.</li>
+          <li>Condensed italic caps lose legibility below 32px and in long lines. Body copy stays upright at 100% width.</li>
+          <li>Safe zones and frame sizes change by platform and over time; confirm against each platform&rsquo;s current guidance before production.</li>
+          <li>Sponsors will want logos on everything. Reserve a fixed sponsor band so the system survives.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="disp">The expected alternative</h3>
+        <p>Purple-to-cyan neon on black, glitch and chromatic aberration, a snarling illustrated wolf with glowing eyes, and Orbitron-style display type. It says &ldquo;gaming&rdquo; and nothing else. The adjacent option, a pure broadcast-graphics look, is sharp but cold; this keeps the club&rsquo;s warmth for fans.</p>
+      </div>
+    </div>
+    <div class="colophon"><span>Fictional team for the Visual Design Kit stylescape set. Players, opponents and fixtures are invented.</span><span>Type: Saira, SIL Open Font License (<a href="../fonts/saira/OFL.txt">OFL.txt</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var st = document.getElementById('aw-stage');
+  document.getElementById('aw-replay').addEventListener('click', function () { st.classList.remove('play'); void st.offsetWidth; st.classList.add('play'); });
+  var s = document.getElementById('aw-story'), b = document.getElementById('aw-safe');
+  b.addEventListener('click', function () {
+    var on = b.getAttribute('aria-pressed') === 'true';
+    s.querySelectorAll('.safe').forEach(function (el) { el.style.display = on ? 'none' : ''; });
+    b.setAttribute('aria-pressed', String(!on));
+    b.firstElementChild.textContent = on ? 'Show safe zones' : 'Hide safe zones';
+  });
+})();
+</script>
+</body>
+</html>

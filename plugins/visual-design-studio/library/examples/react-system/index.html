@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-20 02:52:00 UTC -->
+<html lang="en" data-theme="light" data-brand="meridian" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Components · VDK React reference system</title>
+    <meta name="description" content="Sixteen accessible React components wired to the Visual Design Kit tokens: every state, three themes, two brands." />
+    <script>
+      // Set theme, brand and direction before first paint: ?theme=&brand=&dir=, then saved choice, then OS.
+      (function () {
+        var root = document.documentElement;
+        var query = new URLSearchParams(window.location.search);
+        var saved = {};
+        try {
+          saved = JSON.parse(window.localStorage.getItem("vdk-react-system:display") || "{}") || {};
+        } catch (error) {}
+        var media = function (q) {
+          return window.matchMedia ? window.matchMedia(q).matches : false;
+        };
+        var system = media("(prefers-contrast: more)") ? "high-contrast" : media("(prefers-color-scheme: dark)") ? "dark" : "light";
+        var theme = query.get("theme") || saved.theme || system;
+        var brand = query.get("brand") || saved.brand || "meridian";
+        var dir = query.get("dir") || saved.dir || "ltr";
+        if (["light", "dark", "high-contrast"].indexOf(theme) < 0) theme = "light";
+        if (["meridian", "ember"].indexOf(brand) < 0) brand = "meridian";
+        root.setAttribute("data-theme", theme);
+        root.setAttribute("data-brand", brand);
+        root.setAttribute("dir", dir === "rtl" ? "rtl" : "ltr");
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This specimen is a React app. Enable JavaScript, or read the components in src/components/.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

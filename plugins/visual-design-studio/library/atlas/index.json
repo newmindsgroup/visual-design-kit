@@ -1,0 +1,5792 @@
+{
+  "Version-Timestamp": "2026-10-20 02:17:13 UTC",
+  "counts": {
+    "archetype": 12,
+    "audience": 10,
+    "channel": 12,
+    "industry": 32,
+    "market": 17,
+    "style": 37,
+    "tier": 5
+  },
+  "total": 125,
+  "entries": [
+    {
+      "id": "archetype.caregiver",
+      "axis": "archetype",
+      "name": "Caregiver",
+      "aliases": [
+        "nurturer",
+        "protector",
+        "helper",
+        "altruist",
+        "guardian",
+        "supporter"
+      ],
+      "summary": "Brands that promise protection, comfort and generous help, expressed through soft warm palettes, rounded forms, human photography and calm, reassuring pacing.",
+      "tags": [
+        "care",
+        "protection",
+        "nurturing",
+        "comfort",
+        "support",
+        "safety",
+        "compassionate",
+        "gentle",
+        "helpful"
+      ],
+      "pairs_with": [
+        "style.clinical-calm",
+        "style.scandinavian-nordic",
+        "style.handcrafted-organic",
+        "style.eco-natural-sustainable",
+        "industry.healthcare-provider",
+        "industry.digital-health-wellness",
+        "industry.nonprofit-ngo",
+        "industry.insurance",
+        "industry.kids-family",
+        "audience.older-adults"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.web-brutalist",
+        "style.y2k-cyber",
+        "style.dark-tech-developer"
+      ],
+      "path": "archetypes/caregiver.md"
+    },
+    {
+      "id": "archetype.creator",
+      "axis": "archetype",
+      "name": "Creator",
+      "aliases": [
+        "artist",
+        "maker",
+        "innovator",
+        "builder",
+        "inventor",
+        "imaginative brand"
+      ],
+      "summary": "Brands that promise self-expression and the power to make things, expressed through distinctive custom type, paint-box color, tactile craft and visible process.",
+      "tags": [
+        "creative",
+        "maker",
+        "imaginative",
+        "expressive",
+        "craft",
+        "original",
+        "artistic",
+        "innovation",
+        "diy"
+      ],
+      "pairs_with": [
+        "style.handcrafted-organic",
+        "style.collage-mixed-media",
+        "style.risograph-print-texture",
+        "style.illustrative-narrative",
+        "style.kinetic-experimental-type",
+        "industry.creative-agencies-studios",
+        "industry.education-edtech",
+        "industry.marketplaces-platforms",
+        "industry.saas-b2b",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "style.civic-plain",
+        "style.data-dense-utilitarian",
+        "style.corporate-modern"
+      ],
+      "path": "archetypes/creator.md"
+    },
+    {
+      "id": "archetype.everyperson",
+      "axis": "archetype",
+      "name": "Everyperson",
+      "aliases": [
+        "regular guy",
+        "good neighbor",
+        "realist",
+        "working stiff",
+        "citizen",
+        "friend next door"
+      ],
+      "summary": "Brands that promise belonging, honesty and fair value, expressed through friendly sans type, warm neutrals, real people and approachable, unpretentious design.",
+      "tags": [
+        "belonging",
+        "honest",
+        "friendly",
+        "relatable",
+        "practical",
+        "down-to-earth",
+        "community",
+        "inclusive",
+        "value"
+      ],
+      "pairs_with": [
+        "style.flat-material",
+        "style.scandinavian-nordic",
+        "style.corporate-modern",
+        "style.civic-plain",
+        "industry.marketplaces-platforms",
+        "industry.ecommerce-dtc",
+        "industry.fintech-banking",
+        "industry.government-civic",
+        "tier.value",
+        "tier.mid-market"
+      ],
+      "avoid_with": [
+        "style.fashion-editorial-didone",
+        "style.kinetic-experimental-type",
+        "tier.ultra-luxury",
+        "tier.luxury"
+      ],
+      "path": "archetypes/everyperson.md"
+    },
+    {
+      "id": "archetype.explorer",
+      "axis": "archetype",
+      "name": "Explorer",
+      "aliases": [
+        "seeker",
+        "adventurer",
+        "wanderer",
+        "pioneer",
+        "pilgrim",
+        "rugged individualist"
+      ],
+      "summary": "Brands that promise freedom, discovery and self-reliance, expressed through earthy palettes, big landscapes, rugged type and a sense of open horizon.",
+      "tags": [
+        "adventure",
+        "freedom",
+        "outdoors",
+        "discovery",
+        "rugged",
+        "travel",
+        "independence",
+        "wild",
+        "authentic"
+      ],
+      "pairs_with": [
+        "style.vintage-heritage-americana",
+        "style.eco-natural-sustainable",
+        "style.handcrafted-organic",
+        "style.illustrative-narrative",
+        "industry.hotels-travel",
+        "industry.sports-fitness",
+        "industry.automotive-mobility",
+        "industry.energy-climate",
+        "channel.ecommerce-store"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.corporate-modern",
+        "tier.ultra-luxury"
+      ],
+      "path": "archetypes/explorer.md"
+    },
+    {
+      "id": "archetype.hero",
+      "axis": "archetype",
+      "name": "Hero",
+      "aliases": [
+        "warrior",
+        "champion",
+        "achiever",
+        "athlete",
+        "rescuer",
+        "competitor"
+      ],
+      "summary": "Brands that prove worth through courage, discipline and mastery, expressed through high-contrast, forceful type, dynamic diagonals and decisive color.",
+      "tags": [
+        "courage",
+        "mastery",
+        "performance",
+        "strong",
+        "athletic",
+        "determined",
+        "competitive",
+        "victory",
+        "bold"
+      ],
+      "pairs_with": [
+        "style.bold-geometric-sport",
+        "style.dark-tech-developer",
+        "style.kinetic-experimental-type",
+        "style.bauhaus-constructivist",
+        "industry.sports-fitness",
+        "industry.automotive-mobility",
+        "industry.gaming-esports",
+        "industry.logistics-supply-chain",
+        "audience.teens-gen-z"
+      ],
+      "avoid_with": [
+        "style.quiet-minimal",
+        "style.handcrafted-organic",
+        "style.soft-ui-neumorphic",
+        "tier.ultra-luxury"
+      ],
+      "path": "archetypes/hero.md"
+    },
+    {
+      "id": "archetype.innocent",
+      "axis": "archetype",
+      "name": "Innocent",
+      "aliases": [
+        "purist",
+        "optimist",
+        "dreamer",
+        "naive",
+        "child",
+        "wholesome brand"
+      ],
+      "summary": "Brands that promise simplicity, goodness and a fresh start, expressed through light, clean, friendly visuals and plain, optimistic language.",
+      "tags": [
+        "pure",
+        "simple",
+        "optimistic",
+        "wholesome",
+        "gentle",
+        "honest",
+        "fresh",
+        "nostalgic",
+        "light"
+      ],
+      "pairs_with": [
+        "style.quiet-minimal",
+        "style.scandinavian-nordic",
+        "style.handcrafted-organic",
+        "style.clinical-calm",
+        "industry.food-beverage-cpg",
+        "industry.kids-family",
+        "industry.digital-health-wellness",
+        "tier.value"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.dark-tech-developer",
+        "style.y2k-cyber",
+        "industry.crypto-web3"
+      ],
+      "path": "archetypes/innocent.md"
+    },
+    {
+      "id": "archetype.jester",
+      "axis": "archetype",
+      "name": "Jester",
+      "aliases": [
+        "fool",
+        "trickster",
+        "clown",
+        "comedian",
+        "entertainer",
+        "joker"
+      ],
+      "summary": "Brands that promise fun, lightness and irreverence, expressed through saturated color, bouncy type, quirky illustration and spring-loaded motion.",
+      "tags": [
+        "playful",
+        "humor",
+        "fun",
+        "irreverent",
+        "colorful",
+        "cheeky",
+        "quirky",
+        "joyful",
+        "witty"
+      ],
+      "pairs_with": [
+        "style.playful-bubbly",
+        "style.memphis-postmodern",
+        "style.neo-brutalist",
+        "style.collage-mixed-media",
+        "style.illustrative-narrative",
+        "industry.food-beverage-cpg",
+        "industry.kids-family",
+        "industry.media-entertainment-streaming",
+        "industry.education-edtech",
+        "audience.teens-gen-z"
+      ],
+      "avoid_with": [
+        "style.classic-luxury-serif",
+        "style.clinical-calm",
+        "style.swiss-international",
+        "industry.insurance",
+        "industry.legal-professional-services",
+        "tier.ultra-luxury"
+      ],
+      "path": "archetypes/jester.md"
+    },
+    {
+      "id": "archetype.lover",
+      "axis": "archetype",
+      "name": "Lover",
+      "aliases": [
+        "romantic",
+        "sensualist",
+        "partner",
+        "intimate",
+        "aesthete",
+        "hedonist"
+      ],
+      "summary": "Brands that promise intimacy, beauty and passion, expressed through rich warm color, flowing curves, tactile close-ups and unhurried pacing.",
+      "tags": [
+        "intimacy",
+        "sensual",
+        "romantic",
+        "beauty",
+        "passion",
+        "indulgent",
+        "elegant",
+        "desire",
+        "warm"
+      ],
+      "pairs_with": [
+        "style.fashion-editorial-didone",
+        "style.classic-luxury-serif",
+        "style.art-nouveau-ornamental",
+        "style.art-deco",
+        "industry.beauty-cosmetics",
+        "industry.fashion-apparel",
+        "industry.restaurants-hospitality",
+        "industry.luxury-goods",
+        "tier.luxury",
+        "tier.premium"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.web-brutalist",
+        "style.civic-plain",
+        "industry.logistics-supply-chain"
+      ],
+      "path": "archetypes/lover.md"
+    },
+    {
+      "id": "archetype.magician",
+      "axis": "archetype",
+      "name": "Magician",
+      "aliases": [
+        "visionary",
+        "alchemist",
+        "wizard",
+        "catalyst",
+        "transformer",
+        "dreamer-maker"
+      ],
+      "summary": "Brands that promise transformation and make the impossible feel possible, expressed through luminous color, depth, mystery and moments of reveal.",
+      "tags": [
+        "transformation",
+        "visionary",
+        "wonder",
+        "mystery",
+        "immersive",
+        "luminous",
+        "innovation",
+        "magic",
+        "future"
+      ],
+      "pairs_with": [
+        "style.glass-spatial",
+        "style.retro-futurism-synthwave",
+        "style.vibrant-gradient-saas",
+        "style.art-deco",
+        "industry.ai-products",
+        "industry.media-entertainment-streaming",
+        "industry.beauty-cosmetics",
+        "industry.gaming-esports",
+        "channel.video-motion"
+      ],
+      "avoid_with": [
+        "style.civic-plain",
+        "style.data-dense-utilitarian",
+        "style.web-brutalist",
+        "industry.government-civic"
+      ],
+      "path": "archetypes/magician.md"
+    },
+    {
+      "id": "archetype.outlaw",
+      "axis": "archetype",
+      "name": "Outlaw",
+      "aliases": [
+        "rebel",
+        "revolutionary",
+        "wild one",
+        "misfit",
+        "disruptor",
+        "iconoclast"
+      ],
+      "summary": "Brands that break rules and reject the status quo, expressed through high-contrast black palettes, raw type, hard edges and confrontational voice.",
+      "tags": [
+        "rebel",
+        "disruptive",
+        "raw",
+        "countercultural",
+        "edgy",
+        "defiant",
+        "bold",
+        "anti-establishment"
+      ],
+      "pairs_with": [
+        "style.grunge-punk-zine",
+        "style.web-brutalist",
+        "style.neo-brutalist",
+        "style.collage-mixed-media",
+        "style.kinetic-experimental-type",
+        "industry.media-entertainment-streaming",
+        "industry.automotive-mobility",
+        "industry.food-beverage-cpg",
+        "audience.teens-gen-z"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.civic-plain",
+        "industry.insurance",
+        "industry.healthcare-provider",
+        "audience.older-adults"
+      ],
+      "path": "archetypes/outlaw.md"
+    },
+    {
+      "id": "archetype.ruler",
+      "axis": "archetype",
+      "name": "Ruler",
+      "aliases": [
+        "leader",
+        "sovereign",
+        "boss",
+        "authority",
+        "patriarch",
+        "institution"
+      ],
+      "summary": "Brands that promise control, order and prestige, expressed through disciplined grids, deep navy-black palettes, refined serifs and unhurried, symmetrical composition.",
+      "tags": [
+        "authority",
+        "prestige",
+        "control",
+        "order",
+        "leadership",
+        "premium",
+        "institutional",
+        "formal",
+        "status"
+      ],
+      "pairs_with": [
+        "style.classic-luxury-serif",
+        "style.swiss-international",
+        "style.corporate-modern",
+        "style.art-deco",
+        "industry.fintech-banking",
+        "industry.legal-professional-services",
+        "industry.luxury-goods",
+        "industry.automotive-mobility",
+        "tier.premium",
+        "tier.luxury"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.playful-bubbly",
+        "style.memphis-postmodern",
+        "style.y2k-cyber",
+        "audience.children-under-13"
+      ],
+      "path": "archetypes/ruler.md"
+    },
+    {
+      "id": "archetype.sage",
+      "axis": "archetype",
+      "name": "Sage",
+      "aliases": [
+        "expert",
+        "scholar",
+        "researcher",
+        "thinker",
+        "teacher",
+        "analyst"
+      ],
+      "summary": "Brands built on knowledge, insight and truth, expressed through calm structure, readable typography, evidence and restrained color.",
+      "tags": [
+        "knowledge",
+        "expert",
+        "insight",
+        "research",
+        "truth",
+        "intelligent",
+        "editorial",
+        "authority"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.editorial-magazine",
+        "style.quiet-minimal",
+        "style.data-dense-utilitarian",
+        "industry.education-edtech",
+        "industry.legal-professional-services",
+        "industry.saas-b2b",
+        "audience.expert-power-users",
+        "channel.presentation"
+      ],
+      "avoid_with": [
+        "style.maximalist-eclectic",
+        "style.y2k-cyber",
+        "industry.gaming-esports"
+      ],
+      "path": "archetypes/sage.md"
+    },
+    {
+      "id": "audience.affluent-hnwi",
+      "axis": "audience",
+      "name": "Affluent and High-Net-Worth",
+      "aliases": [
+        "hnwi",
+        "uhnw",
+        "affluent",
+        "wealthy clients",
+        "private clients",
+        "private banking",
+        "family office",
+        "luxury clients",
+        "mass affluent"
+      ],
+      "summary": "Time-poor, privacy-conscious and often 50+ clients who judge a brand by discretion, service and flawless execution; design for quiet confidence, human escalation, low friction and legible type.",
+      "tags": [
+        "affluent",
+        "hnwi",
+        "wealth",
+        "private banking",
+        "luxury clients",
+        "concierge",
+        "discretion",
+        "family office",
+        "privacy"
+      ],
+      "pairs_with": [
+        "style.classic-luxury-serif",
+        "style.quiet-minimal",
+        "style.editorial-magazine",
+        "industry.luxury-goods",
+        "industry.fintech-banking",
+        "industry.real-estate-proptech",
+        "archetype.ruler",
+        "tier.premium",
+        "tier.luxury",
+        "tier.ultra-luxury"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.vibrant-gradient-saas",
+        "tier.value",
+        "archetype.jester"
+      ],
+      "path": "audiences/affluent-hnwi.md"
+    },
+    {
+      "id": "audience.b2b-buying-committee",
+      "axis": "audience",
+      "name": "B2B Buying Committees",
+      "aliases": [
+        "b2b buyers",
+        "enterprise buyers",
+        "buying group",
+        "decision makers",
+        "procurement",
+        "champion",
+        "economic buyer",
+        "committee purchase"
+      ],
+      "summary": "Groups of 6-10 stakeholders with different questions and risks; design evidence by role, shareable assets, transparent pricing and proof, and a journey that survives weeks of forwarding and silence.",
+      "tags": [
+        "b2b",
+        "enterprise",
+        "buying committee",
+        "procurement",
+        "decision makers",
+        "sales enablement",
+        "saas",
+        "proof",
+        "trust center"
+      ],
+      "pairs_with": [
+        "style.corporate-modern",
+        "style.swiss-international",
+        "style.editorial-magazine",
+        "industry.saas-b2b",
+        "industry.industrial-manufacturing-construction",
+        "industry.legal-professional-services",
+        "industry.logistics-supply-chain",
+        "archetype.ruler",
+        "archetype.sage",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.playful-bubbly",
+        "archetype.jester"
+      ],
+      "path": "audiences/b2b-buying-committee.md"
+    },
+    {
+      "id": "audience.children-under-13",
+      "axis": "audience",
+      "name": "Children under 13",
+      "aliases": [
+        "kids",
+        "children",
+        "young children",
+        "preschool",
+        "early readers",
+        "tweens",
+        "kids apps",
+        "family apps"
+      ],
+      "summary": "Young users with limited reading, fine-motor and abstract-reasoning skills; design for huge targets, audio and icons, forgiving flows and parent-gated commerce under strict child-privacy law.",
+      "tags": [
+        "children",
+        "kids",
+        "coppa",
+        "preschool",
+        "early readers",
+        "parental gate",
+        "playful",
+        "edtech",
+        "tweens"
+      ],
+      "pairs_with": [
+        "industry.kids-family",
+        "industry.education-edtech",
+        "style.playful-bubbly",
+        "style.illustrative-narrative",
+        "style.flat-material",
+        "archetype.innocent",
+        "archetype.jester",
+        "archetype.caregiver",
+        "channel.native-app",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "style.web-brutalist",
+        "style.dark-tech-developer",
+        "style.fashion-editorial-didone",
+        "style.grunge-punk-zine",
+        "archetype.outlaw"
+      ],
+      "path": "audiences/children-under-13.md"
+    },
+    {
+      "id": "audience.disability-accessibility-first",
+      "axis": "audience",
+      "name": "Disability and Accessibility-First",
+      "aliases": [
+        "accessibility",
+        "a11y",
+        "inclusive design",
+        "wcag",
+        "blind users",
+        "low vision",
+        "deaf",
+        "motor impairment",
+        "assistive technology"
+      ],
+      "summary": "Products where people with vision, hearing, motor or cognitive disabilities are core users; treat WCAG 2.2 AA as the floor, build in keyboard, screen-reader and zoom support, and test with real users.",
+      "tags": [
+        "accessibility",
+        "wcag",
+        "a11y",
+        "screen reader",
+        "keyboard",
+        "low vision",
+        "inclusive",
+        "assistive technology",
+        "ada"
+      ],
+      "pairs_with": [
+        "style.civic-plain",
+        "style.clinical-calm",
+        "style.swiss-international",
+        "style.flat-material",
+        "industry.government-civic",
+        "industry.healthcare-provider",
+        "industry.education-edtech",
+        "channel.web-app",
+        "channel.marketing-website",
+        "archetype.caregiver"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.soft-ui-neumorphic",
+        "style.kinetic-experimental-type",
+        "style.y2k-cyber"
+      ],
+      "path": "audiences/disability-accessibility-first.md"
+    },
+    {
+      "id": "audience.expert-power-users",
+      "axis": "audience",
+      "name": "Expert and Power Users",
+      "aliases": [
+        "power users",
+        "experts",
+        "professionals",
+        "pro tools",
+        "developers",
+        "analysts",
+        "traders",
+        "keyboard-first",
+        "high-density"
+      ],
+      "summary": "Daily professionals who value speed and depth over friendliness; give them dense layouts, keyboard-first control, saved views, bulk actions, undo and instant response, without losing accessibility.",
+      "tags": [
+        "power users",
+        "expert",
+        "pro tools",
+        "keyboard shortcuts",
+        "command palette",
+        "density",
+        "dashboards",
+        "productivity"
+      ],
+      "pairs_with": [
+        "style.data-dense-utilitarian",
+        "style.dark-tech-developer",
+        "style.swiss-international",
+        "industry.developer-tools",
+        "industry.saas-b2b",
+        "industry.fintech-banking",
+        "archetype.sage",
+        "archetype.creator",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.soft-ui-neumorphic",
+        "style.maximalist-eclectic",
+        "archetype.innocent"
+      ],
+      "path": "audiences/expert-power-users.md"
+    },
+    {
+      "id": "audience.low-bandwidth-entry-devices",
+      "axis": "audience",
+      "name": "Low Bandwidth and Entry-Level Devices",
+      "aliases": [
+        "low bandwidth",
+        "slow network",
+        "2g 3g",
+        "emerging markets",
+        "entry-level android",
+        "android go",
+        "feature phone",
+        "kaios",
+        "data saver",
+        "lite apps"
+      ],
+      "summary": "Users on slow, metered networks and 1-3 GB RAM phones; design text-first pages under about 500 KB, 48px targets, 7:1 contrast, offline tolerance and honest data costs.",
+      "tags": [
+        "low bandwidth",
+        "performance",
+        "android go",
+        "emerging markets",
+        "data saver",
+        "offline",
+        "pwa",
+        "feature phone",
+        "lite"
+      ],
+      "pairs_with": [
+        "style.civic-plain",
+        "style.flat-material",
+        "style.web-brutalist",
+        "style.data-dense-utilitarian",
+        "market.india-south-asia",
+        "market.sub-saharan-africa",
+        "market.southeast-asia",
+        "market.latin-america-spanish",
+        "industry.fintech-banking",
+        "tier.value"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.skeuomorphic-tactile",
+        "style.kinetic-experimental-type",
+        "style.vibrant-gradient-saas",
+        "style.retro-futurism-synthwave"
+      ],
+      "path": "audiences/low-bandwidth-entry-devices.md"
+    },
+    {
+      "id": "audience.low-literacy-plain-language",
+      "axis": "audience",
+      "name": "Low Literacy / Plain Language",
+      "aliases": [
+        "low literacy",
+        "plain language",
+        "plain english",
+        "easy read",
+        "health literacy",
+        "esl",
+        "limited english proficiency",
+        "functional literacy"
+      ],
+      "summary": "People who read slowly, in a second language or under stress; write at grade 5-6, show one step at a time, pair icons with words and never make comprehension a hurdle to a service.",
+      "tags": [
+        "plain language",
+        "low literacy",
+        "readability",
+        "health literacy",
+        "easy read",
+        "icons",
+        "forms",
+        "government"
+      ],
+      "pairs_with": [
+        "style.civic-plain",
+        "style.flat-material",
+        "style.illustrative-narrative",
+        "industry.government-civic",
+        "industry.nonprofit-ngo",
+        "industry.healthcare-provider",
+        "industry.fintech-banking",
+        "archetype.everyperson",
+        "archetype.caregiver",
+        "market.india-south-asia"
+      ],
+      "avoid_with": [
+        "style.kinetic-experimental-type",
+        "style.soft-ui-neumorphic",
+        "style.glass-spatial",
+        "style.art-nouveau-ornamental"
+      ],
+      "path": "audiences/low-literacy-plain-language.md"
+    },
+    {
+      "id": "audience.neurodivergent",
+      "axis": "audience",
+      "name": "Neurodivergent Users",
+      "aliases": [
+        "neurodiversity",
+        "adhd",
+        "autism",
+        "autistic",
+        "dyslexia",
+        "dyscalculia",
+        "dyspraxia",
+        "cognitive accessibility",
+        "sensory sensitivity"
+      ],
+      "summary": "Users with ADHD, autism, dyslexia and related differences; reduce sensory load and surprises, support memory and executive function, keep language literal, and let people tune the interface.",
+      "tags": [
+        "neurodivergent",
+        "adhd",
+        "autism",
+        "dyslexia",
+        "cognitive accessibility",
+        "sensory",
+        "executive function",
+        "calm",
+        "personalization"
+      ],
+      "pairs_with": [
+        "style.quiet-minimal",
+        "style.clinical-calm",
+        "style.civic-plain",
+        "style.scandinavian-nordic",
+        "style.flat-material",
+        "industry.digital-health-wellness",
+        "industry.education-edtech",
+        "archetype.caregiver",
+        "archetype.sage",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.maximalist-eclectic",
+        "style.kinetic-experimental-type",
+        "style.y2k-cyber",
+        "style.grunge-punk-zine",
+        "style.vibrant-gradient-saas"
+      ],
+      "path": "audiences/neurodivergent.md"
+    },
+    {
+      "id": "audience.older-adults",
+      "axis": "audience",
+      "name": "Older Adults (65+)",
+      "aliases": [
+        "seniors",
+        "older adults",
+        "elderly",
+        "retirees",
+        "silver surfers",
+        "65 plus",
+        "boomers",
+        "aging users"
+      ],
+      "summary": "Adults 65+ with varied digital skill and age-related changes in vision, dexterity and memory; design for large text, 7:1 contrast, large targets, patient flows and a human support route.",
+      "tags": [
+        "older adults",
+        "seniors",
+        "aging",
+        "large text",
+        "high contrast",
+        "healthcare",
+        "retirement",
+        "accessibility"
+      ],
+      "pairs_with": [
+        "style.civic-plain",
+        "style.clinical-calm",
+        "style.flat-material",
+        "industry.healthcare-provider",
+        "industry.insurance",
+        "industry.government-civic",
+        "industry.fintech-banking",
+        "archetype.caregiver",
+        "archetype.everyperson",
+        "channel.print-collateral"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.kinetic-experimental-type",
+        "style.y2k-cyber",
+        "style.soft-ui-neumorphic",
+        "style.dark-tech-developer"
+      ],
+      "path": "audiences/older-adults.md"
+    },
+    {
+      "id": "audience.teens-gen-z",
+      "axis": "audience",
+      "name": "Teens and Gen Z",
+      "aliases": [
+        "teenagers",
+        "teens",
+        "gen z",
+        "young adults",
+        "digital natives",
+        "students",
+        "youth"
+      ],
+      "summary": "Phone-first 13-24 year olds who expect speed, expressive identity and peer-made content; designing for them now also means age assurance, privacy-by-default and no engagement dark patterns.",
+      "tags": [
+        "teens",
+        "gen z",
+        "youth",
+        "mobile-first",
+        "dark mode",
+        "social",
+        "creators",
+        "age assurance",
+        "students"
+      ],
+      "pairs_with": [
+        "style.neo-brutalist",
+        "style.y2k-cyber",
+        "style.collage-mixed-media",
+        "style.risograph-print-texture",
+        "style.kinetic-experimental-type",
+        "style.playful-bubbly",
+        "industry.gaming-esports",
+        "industry.media-entertainment-streaming",
+        "channel.social-media",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.classic-luxury-serif",
+        "style.corporate-modern",
+        "archetype.ruler"
+      ],
+      "path": "audiences/teens-gen-z.md"
+    },
+    {
+      "id": "channel.ecommerce-store",
+      "axis": "channel",
+      "name": "E-commerce Store",
+      "aliases": [
+        "online store",
+        "webshop",
+        "shop",
+        "storefront",
+        "dtc store",
+        "product page",
+        "checkout",
+        "shopify store"
+      ],
+      "summary": "Online stores where product imagery, price clarity, trust and a short path to checkout drive revenue; every screen is judged on add-to-cart and completed orders.",
+      "tags": [
+        "ecommerce",
+        "pdp",
+        "product page",
+        "checkout",
+        "cart",
+        "catalog",
+        "conversion",
+        "merchandising",
+        "shopify",
+        "retail"
+      ],
+      "pairs_with": [
+        "style.editorial-magazine",
+        "style.quiet-minimal",
+        "style.flat-material",
+        "style.handcrafted-organic",
+        "industry.ecommerce-dtc",
+        "industry.fashion-apparel",
+        "industry.beauty-cosmetics",
+        "industry.food-beverage-cpg",
+        "tier.mid-market",
+        "archetype.everyperson"
+      ],
+      "avoid_with": [
+        "style.kinetic-experimental-type",
+        "style.web-brutalist",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "channels/ecommerce-store.md"
+    },
+    {
+      "id": "channel.email",
+      "axis": "channel",
+      "name": "Email",
+      "aliases": [
+        "email design",
+        "newsletter",
+        "html email",
+        "email campaign",
+        "transactional email",
+        "email template",
+        "edm"
+      ],
+      "summary": "HTML email built for inconsistent clients (Outlook, Gmail, Apple Mail) and dark mode, where a single column, tested code, one clear CTA and small file size beat visual ambition.",
+      "tags": [
+        "email",
+        "newsletter",
+        "html email",
+        "outlook",
+        "gmail",
+        "dark mode",
+        "transactional",
+        "template",
+        "deliverability",
+        "mjml"
+      ],
+      "pairs_with": [
+        "style.editorial-magazine",
+        "style.corporate-modern",
+        "style.flat-material",
+        "style.quiet-minimal",
+        "industry.ecommerce-dtc",
+        "industry.saas-b2b",
+        "industry.fashion-apparel",
+        "industry.nonprofit-ngo",
+        "archetype.sage",
+        "archetype.everyperson"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.kinetic-experimental-type",
+        "style.soft-ui-neumorphic"
+      ],
+      "path": "channels/email.md"
+    },
+    {
+      "id": "channel.environmental-wayfinding",
+      "axis": "channel",
+      "name": "Environmental Graphics and Wayfinding",
+      "aliases": [
+        "wayfinding",
+        "signage",
+        "environmental graphics",
+        "egd",
+        "sign system",
+        "interior graphics",
+        "exhibition design",
+        "directional signs",
+        "ada signs"
+      ],
+      "summary": "Signs, maps and environmental graphics that guide people through buildings and sites; legibility at distance, decision-point placement, consistent naming and code compliance decide success.",
+      "tags": [
+        "wayfinding",
+        "signage",
+        "environmental graphics",
+        "ada",
+        "tactile",
+        "braille",
+        "legibility",
+        "directional",
+        "sign system",
+        "maps"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.civic-plain",
+        "style.bold-geometric-sport",
+        "style.clinical-calm",
+        "style.mid-century-modern",
+        "industry.government-civic",
+        "industry.healthcare-provider",
+        "industry.hotels-travel",
+        "industry.events-conferences",
+        "audience.disability-accessibility-first"
+      ],
+      "avoid_with": [
+        "style.art-nouveau-ornamental",
+        "style.grunge-punk-zine",
+        "style.kinetic-experimental-type"
+      ],
+      "path": "channels/environmental-wayfinding.md"
+    },
+    {
+      "id": "channel.marketing-website",
+      "axis": "channel",
+      "name": "Marketing Website",
+      "aliases": [
+        "website",
+        "landing page",
+        "brochure site",
+        "corporate site",
+        "company website",
+        "microsite",
+        "campaign site"
+      ],
+      "summary": "Public websites that explain, persuade and convert; judged by clarity of message, speed, search visibility, accessibility and conversion rather than feature depth.",
+      "tags": [
+        "website",
+        "landing page",
+        "conversion",
+        "seo",
+        "responsive",
+        "performance",
+        "hero",
+        "cms",
+        "astro",
+        "core web vitals"
+      ],
+      "pairs_with": [
+        "style.corporate-modern",
+        "style.editorial-magazine",
+        "style.swiss-international",
+        "style.vibrant-gradient-saas",
+        "industry.saas-b2b",
+        "industry.creative-agencies-studios",
+        "audience.b2b-buying-committee",
+        "archetype.sage",
+        "archetype.creator",
+        "tier.mid-market"
+      ],
+      "avoid_with": [
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "channels/marketing-website.md"
+    },
+    {
+      "id": "channel.native-app",
+      "axis": "channel",
+      "name": "Native Mobile App",
+      "aliases": [
+        "mobile app",
+        "ios app",
+        "android app",
+        "iphone app",
+        "app store app",
+        "tablet app",
+        "cross-platform app"
+      ],
+      "summary": "iOS and Android apps designed to platform conventions, thumb reach, safe areas, gestures and store requirements; judged by speed, clarity and how native they feel.",
+      "tags": [
+        "ios",
+        "android",
+        "mobile",
+        "app store",
+        "hig",
+        "material 3",
+        "gestures",
+        "safe area",
+        "swiftui",
+        "compose"
+      ],
+      "pairs_with": [
+        "style.flat-material",
+        "style.glass-spatial",
+        "style.soft-ui-neumorphic",
+        "industry.fintech-banking",
+        "industry.digital-health-wellness",
+        "industry.sports-fitness",
+        "industry.marketplaces-platforms",
+        "audience.teens-gen-z",
+        "audience.older-adults",
+        "archetype.everyperson"
+      ],
+      "avoid_with": [
+        "style.web-brutalist",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "channels/native-app.md"
+    },
+    {
+      "id": "channel.ooh-signage",
+      "axis": "channel",
+      "name": "Out-of-Home and Digital Signage",
+      "aliases": [
+        "ooh",
+        "billboard",
+        "outdoor advertising",
+        "transit advertising",
+        "digital signage",
+        "dooh",
+        "poster site",
+        "bus shelter",
+        "kiosk screen"
+      ],
+      "summary": "Billboards, transit and digital screens read in seconds from distance; one idea, huge type, high contrast and ruthless copy cuts matter more than detail.",
+      "tags": [
+        "ooh",
+        "billboard",
+        "outdoor",
+        "transit",
+        "digital signage",
+        "dooh",
+        "poster",
+        "large format",
+        "legibility",
+        "viewing distance"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.bold-geometric-sport",
+        "style.neo-brutalist",
+        "style.fashion-editorial-didone",
+        "style.kinetic-experimental-type",
+        "industry.automotive-mobility",
+        "industry.food-beverage-cpg",
+        "industry.events-conferences",
+        "archetype.hero",
+        "archetype.jester"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.art-nouveau-ornamental",
+        "style.maximalist-eclectic"
+      ],
+      "path": "channels/ooh-signage.md"
+    },
+    {
+      "id": "channel.packaging",
+      "axis": "channel",
+      "name": "Packaging",
+      "aliases": [
+        "package design",
+        "pack design",
+        "labels",
+        "boxes",
+        "cartons",
+        "bottles",
+        "pouches",
+        "cpg packaging",
+        "unboxing"
+      ],
+      "summary": "Three-dimensional, shelf-and-hand design where dielines, print process, barcodes, regulatory copy and material choice constrain a brand that must win in seconds.",
+      "tags": [
+        "packaging",
+        "dieline",
+        "label",
+        "carton",
+        "pouch",
+        "shelf",
+        "cpg",
+        "barcode",
+        "unboxing",
+        "regulatory"
+      ],
+      "pairs_with": [
+        "style.vintage-heritage-americana",
+        "style.handcrafted-organic",
+        "style.risograph-print-texture",
+        "style.bold-geometric-sport",
+        "style.illustrative-narrative",
+        "industry.food-beverage-cpg",
+        "industry.beauty-cosmetics",
+        "industry.ecommerce-dtc",
+        "industry.luxury-goods",
+        "tier.premium"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.kinetic-experimental-type"
+      ],
+      "path": "channels/packaging.md"
+    },
+    {
+      "id": "channel.presentation",
+      "axis": "channel",
+      "name": "Presentations and Decks",
+      "aliases": [
+        "presentation",
+        "slide deck",
+        "pitch deck",
+        "keynote",
+        "powerpoint",
+        "google slides",
+        "sales deck",
+        "board deck",
+        "slides"
+      ],
+      "summary": "Slides that support a speaker or a reader; 16:9 layouts with one message per slide, large type, strong templates and clear data stories beat dense documents on screen.",
+      "tags": [
+        "presentation",
+        "deck",
+        "slides",
+        "pitch",
+        "keynote",
+        "powerpoint",
+        "template",
+        "storytelling",
+        "data",
+        "16:9"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.editorial-magazine",
+        "style.corporate-modern",
+        "style.quiet-minimal",
+        "style.bold-geometric-sport",
+        "industry.saas-b2b",
+        "industry.events-conferences",
+        "audience.b2b-buying-committee",
+        "archetype.sage",
+        "archetype.ruler"
+      ],
+      "avoid_with": [
+        "style.web-brutalist",
+        "style.maximalist-eclectic"
+      ],
+      "path": "channels/presentation.md"
+    },
+    {
+      "id": "channel.print-collateral",
+      "axis": "channel",
+      "name": "Print Collateral",
+      "aliases": [
+        "print design",
+        "brochure",
+        "flyer",
+        "business card",
+        "poster",
+        "catalog",
+        "annual report",
+        "stationery",
+        "leaflet",
+        "book"
+      ],
+      "summary": "Printed pieces built for prepress from the start (bleed, CMYK, resolution, paper and finishing) where color and craft are judged in the hand at actual size.",
+      "tags": [
+        "print",
+        "brochure",
+        "flyer",
+        "business card",
+        "poster",
+        "catalog",
+        "prepress",
+        "cmyk",
+        "bleed",
+        "finishing"
+      ],
+      "pairs_with": [
+        "style.editorial-magazine",
+        "style.swiss-international",
+        "style.classic-luxury-serif",
+        "style.risograph-print-texture",
+        "style.fashion-editorial-didone",
+        "industry.luxury-goods",
+        "industry.events-conferences",
+        "industry.nonprofit-ngo",
+        "tier.premium",
+        "archetype.ruler"
+      ],
+      "avoid_with": [
+        "style.glass-spatial",
+        "style.soft-ui-neumorphic"
+      ],
+      "path": "channels/print-collateral.md"
+    },
+    {
+      "id": "channel.social-media",
+      "axis": "channel",
+      "name": "Social Media",
+      "aliases": [
+        "social",
+        "social content",
+        "instagram",
+        "tiktok",
+        "linkedin",
+        "youtube",
+        "reels",
+        "stories",
+        "social posts",
+        "social ads"
+      ],
+      "summary": "Feed, story and short-video formats where a 1-3 second hook, platform-native framing and mobile-sized type decide whether anyone stops; specs change often.",
+      "tags": [
+        "social",
+        "instagram",
+        "tiktok",
+        "linkedin",
+        "youtube",
+        "reels",
+        "stories",
+        "carousel",
+        "thumbnails",
+        "hooks"
+      ],
+      "pairs_with": [
+        "style.playful-bubbly",
+        "style.collage-mixed-media",
+        "style.editorial-magazine",
+        "style.vibrant-gradient-saas",
+        "style.kinetic-experimental-type",
+        "audience.teens-gen-z",
+        "industry.ecommerce-dtc",
+        "industry.media-entertainment-streaming",
+        "archetype.jester",
+        "archetype.creator"
+      ],
+      "avoid_with": [
+        "style.art-nouveau-ornamental",
+        "style.classic-luxury-serif"
+      ],
+      "path": "channels/social-media.md"
+    },
+    {
+      "id": "channel.video-motion",
+      "axis": "channel",
+      "name": "Video and Motion",
+      "aliases": [
+        "video",
+        "motion graphics",
+        "brand film",
+        "explainer",
+        "animation",
+        "title sequence",
+        "video ad",
+        "lottie",
+        "kinetic type"
+      ],
+      "summary": "Time-based work from brand films and ads to UI animation and social video, where aspect ratio, frame rate, codec, loudness and caption choices must be fixed before the first frame.",
+      "tags": [
+        "video",
+        "motion graphics",
+        "animation",
+        "brand film",
+        "explainer",
+        "codec",
+        "loudness",
+        "captions",
+        "lottie",
+        "after effects"
+      ],
+      "pairs_with": [
+        "style.kinetic-experimental-type",
+        "style.retro-futurism-synthwave",
+        "style.glass-spatial",
+        "style.illustrative-narrative",
+        "style.bold-geometric-sport",
+        "industry.media-entertainment-streaming",
+        "industry.gaming-esports",
+        "industry.ai-products",
+        "archetype.magician",
+        "archetype.hero"
+      ],
+      "avoid_with": [
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "channels/video-motion.md"
+    },
+    {
+      "id": "channel.web-app",
+      "axis": "channel",
+      "name": "Web Application",
+      "aliases": [
+        "web app",
+        "saas app",
+        "dashboard",
+        "admin panel",
+        "portal",
+        "internal tool",
+        "product UI",
+        "browser app"
+      ],
+      "summary": "Logged-in browser products where speed, density, state handling and keyboard flow decide the experience; design for repeated daily tasks, not first impressions.",
+      "tags": [
+        "saas",
+        "dashboard",
+        "app shell",
+        "tables",
+        "forms",
+        "productivity",
+        "components",
+        "states",
+        "keyboard",
+        "data"
+      ],
+      "pairs_with": [
+        "style.data-dense-utilitarian",
+        "style.corporate-modern",
+        "style.flat-material",
+        "style.dark-tech-developer",
+        "industry.saas-b2b",
+        "industry.developer-tools",
+        "industry.fintech-banking",
+        "audience.expert-power-users",
+        "archetype.sage",
+        "archetype.everyperson"
+      ],
+      "avoid_with": [
+        "style.maximalist-eclectic",
+        "style.art-nouveau-ornamental"
+      ],
+      "path": "channels/web-app.md"
+    },
+    {
+      "id": "industry.ai-products",
+      "axis": "industry",
+      "name": "AI Products",
+      "aliases": [
+        "artificial intelligence",
+        "generative ai",
+        "ai assistant",
+        "chatbot",
+        "copilot",
+        "llm product",
+        "ai agent",
+        "machine learning product",
+        "ai startup"
+      ],
+      "summary": "Assistants, copilots, agents and generative tools; trust is the design problem, so disclosure, sources, uncertainty and human control matter more than futuristic styling.",
+      "tags": [
+        "ai",
+        "generative",
+        "chatbot",
+        "assistant",
+        "copilot",
+        "agent",
+        "llm",
+        "prompt",
+        "trust",
+        "citations"
+      ],
+      "pairs_with": [
+        "style.quiet-minimal",
+        "style.editorial-magazine",
+        "style.handcrafted-organic",
+        "archetype.sage",
+        "archetype.magician",
+        "archetype.caregiver",
+        "audience.expert-power-users",
+        "channel.web-app",
+        "channel.native-app",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.y2k-cyber",
+        "style.retro-futurism-synthwave",
+        "audience.children-under-13"
+      ],
+      "path": "industries/ai-products.md"
+    },
+    {
+      "id": "industry.automotive-mobility",
+      "axis": "industry",
+      "name": "Automotive and Mobility",
+      "aliases": [
+        "automotive",
+        "car",
+        "EV",
+        "electric vehicle",
+        "dealership",
+        "mobility",
+        "ride-hailing",
+        "micromobility",
+        "motorcycle",
+        "fleet",
+        "in-car UX",
+        "HMI"
+      ],
+      "summary": "Vehicles, dealer journeys and mobility services where emotion drives desire but safety rules govern the dashboard; design spans showroom, configurator, app and in-car interface.",
+      "tags": [
+        "automotive",
+        "car",
+        "ev",
+        "mobility",
+        "dealership",
+        "configurator",
+        "hmi",
+        "infotainment",
+        "ride-hailing",
+        "fleet"
+      ],
+      "pairs_with": [
+        "style.quiet-minimal",
+        "style.art-deco",
+        "style.retro-futurism-synthwave",
+        "style.vintage-heritage-americana",
+        "style.glass-spatial",
+        "archetype.explorer",
+        "archetype.hero",
+        "archetype.outlaw",
+        "tier.premium",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.handcrafted-organic",
+        "style.memphis-postmodern",
+        "archetype.innocent"
+      ],
+      "path": "industries/automotive-mobility.md"
+    },
+    {
+      "id": "industry.beauty-cosmetics",
+      "axis": "industry",
+      "name": "Beauty and Cosmetics",
+      "aliases": [
+        "beauty",
+        "cosmetics",
+        "skincare",
+        "makeup",
+        "haircare",
+        "fragrance",
+        "personal care",
+        "clean beauty",
+        "derm brand",
+        "beauty retail"
+      ],
+      "summary": "Skincare, makeup, hair and fragrance brands selling transformation and self-expression; texture, color accuracy, inclusive shade range and substantiated claims decide desire and trust.",
+      "tags": [
+        "beauty",
+        "cosmetics",
+        "skincare",
+        "makeup",
+        "haircare",
+        "fragrance",
+        "shade",
+        "ingredients",
+        "routine",
+        "glow"
+      ],
+      "pairs_with": [
+        "style.classic-luxury-serif",
+        "style.clinical-calm",
+        "style.seventies-psychedelic-groovy",
+        "style.quiet-minimal",
+        "archetype.lover",
+        "archetype.magician",
+        "archetype.creator",
+        "tier.luxury",
+        "tier.premium",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "style.web-brutalist",
+        "style.data-dense-utilitarian",
+        "style.dark-tech-developer",
+        "archetype.ruler"
+      ],
+      "path": "industries/beauty-cosmetics.md"
+    },
+    {
+      "id": "industry.creative-agencies-studios",
+      "axis": "industry",
+      "name": "Creative Agencies and Studios",
+      "aliases": [
+        "design agency",
+        "branding agency",
+        "creative studio",
+        "advertising agency",
+        "digital agency",
+        "production studio",
+        "freelancer portfolio",
+        "motion studio",
+        "architecture studio"
+      ],
+      "summary": "Businesses that sell creative judgment; their own site and identity are the portfolio, so craft, point of view and clear working process matter more than category conventions.",
+      "tags": [
+        "agency",
+        "studio",
+        "portfolio",
+        "branding",
+        "creative",
+        "advertising",
+        "design-studio",
+        "case-study",
+        "showreel",
+        "freelance"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.web-brutalist",
+        "style.editorial-magazine",
+        "style.kinetic-experimental-type",
+        "style.collage-mixed-media",
+        "style.dark-tech-developer",
+        "archetype.creator",
+        "archetype.magician",
+        "archetype.outlaw",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.civic-plain",
+        "archetype.caregiver",
+        "tier.value"
+      ],
+      "path": "industries/creative-agencies-studios.md"
+    },
+    {
+      "id": "industry.crypto-web3",
+      "axis": "industry",
+      "name": "Crypto and Web3",
+      "aliases": [
+        "cryptocurrency",
+        "blockchain",
+        "web3",
+        "defi",
+        "nft",
+        "digital assets",
+        "crypto exchange",
+        "wallet",
+        "dao",
+        "stablecoin",
+        "token"
+      ],
+      "summary": "Exchanges, wallets, protocols and token communities; a category with reputational debt where credibility now depends on plain risk language, self-custody clarity and design restraint rather than hype.",
+      "tags": [
+        "crypto",
+        "blockchain",
+        "web3",
+        "defi",
+        "wallet",
+        "exchange",
+        "nft",
+        "token",
+        "dao",
+        "stablecoin"
+      ],
+      "pairs_with": [
+        "style.y2k-cyber",
+        "style.quiet-minimal",
+        "style.civic-plain",
+        "style.dark-tech-developer",
+        "archetype.outlaw",
+        "archetype.ruler",
+        "archetype.sage",
+        "tier.premium",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.handcrafted-organic",
+        "style.vintage-heritage-americana",
+        "audience.children-under-13",
+        "audience.older-adults"
+      ],
+      "path": "industries/crypto-web3.md"
+    },
+    {
+      "id": "industry.developer-tools",
+      "axis": "industry",
+      "name": "Developer Tools",
+      "aliases": [
+        "devtools",
+        "developer platform",
+        "api platform",
+        "cli tool",
+        "sdk",
+        "infrastructure software",
+        "devops",
+        "open source project",
+        "developer experience"
+      ],
+      "summary": "Tools, APIs and platforms used by software engineers; credibility comes from documentation, speed and honest technical detail, and the brand is judged by how the docs and CLI feel.",
+      "tags": [
+        "developer",
+        "api",
+        "docs",
+        "cli",
+        "sdk",
+        "open-source",
+        "infrastructure",
+        "devops",
+        "terminal",
+        "code"
+      ],
+      "pairs_with": [
+        "style.dark-tech-developer",
+        "style.data-dense-utilitarian",
+        "style.swiss-international",
+        "style.web-brutalist",
+        "style.retro-futurism-synthwave",
+        "archetype.sage",
+        "archetype.creator",
+        "audience.expert-power-users",
+        "channel.marketing-website",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.classic-luxury-serif",
+        "style.art-nouveau-ornamental",
+        "audience.children-under-13",
+        "audience.older-adults"
+      ],
+      "path": "industries/developer-tools.md"
+    },
+    {
+      "id": "industry.digital-health-wellness",
+      "axis": "industry",
+      "name": "Digital Health and Wellness",
+      "aliases": [
+        "digital health",
+        "health app",
+        "wellness app",
+        "mental health app",
+        "telehealth startup",
+        "wearable",
+        "fitness tracker",
+        "sleep app",
+        "meditation app",
+        "digital therapeutics",
+        "femtech"
+      ],
+      "summary": "Consumer health apps, telehealth brands, wearables and mental-health tools; caring and motivating, but handling sensitive data, avoiding medical overclaims and shame-driven patterns.",
+      "tags": [
+        "wellness",
+        "digital-health",
+        "telehealth",
+        "mental-health",
+        "wearable",
+        "meditation",
+        "sleep",
+        "habit",
+        "fitness",
+        "femtech"
+      ],
+      "pairs_with": [
+        "style.illustrative-narrative",
+        "style.eco-natural-sustainable",
+        "style.quiet-minimal",
+        "style.bold-geometric-sport",
+        "style.risograph-print-texture",
+        "archetype.caregiver",
+        "archetype.explorer",
+        "archetype.creator",
+        "audience.teens-gen-z",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.retro-futurism-synthwave",
+        "archetype.outlaw"
+      ],
+      "path": "industries/digital-health-wellness.md"
+    },
+    {
+      "id": "industry.ecommerce-dtc",
+      "axis": "industry",
+      "name": "E-commerce and DTC Retail",
+      "aliases": [
+        "ecommerce",
+        "online store",
+        "direct-to-consumer",
+        "dtc brand",
+        "online retail",
+        "shopify store",
+        "webshop",
+        "d2c",
+        "subscription commerce"
+      ],
+      "summary": "Brands that sell directly online; conversion depends on product imagery, speed, clear pricing and a frictionless checkout, while brand story differentiates in a market of look-alike storefronts.",
+      "tags": [
+        "ecommerce",
+        "dtc",
+        "retail",
+        "shop",
+        "checkout",
+        "cart",
+        "product-page",
+        "subscription",
+        "shopify",
+        "conversion"
+      ],
+      "pairs_with": [
+        "style.scandinavian-nordic",
+        "style.mid-century-modern",
+        "style.maximalist-eclectic",
+        "style.editorial-magazine",
+        "archetype.everyperson",
+        "archetype.creator",
+        "tier.mid-market",
+        "audience.teens-gen-z",
+        "channel.ecommerce-store",
+        "channel.email"
+      ],
+      "avoid_with": [
+        "style.web-brutalist",
+        "style.kinetic-experimental-type",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "industries/ecommerce-dtc.md"
+    },
+    {
+      "id": "industry.education-edtech",
+      "axis": "industry",
+      "name": "Education and EdTech",
+      "aliases": [
+        "education",
+        "edtech",
+        "e-learning",
+        "online learning",
+        "school",
+        "university",
+        "college",
+        "language learning",
+        "lms",
+        "bootcamp",
+        "tutoring",
+        "corporate training",
+        "mooc"
+      ],
+      "summary": "Schools, universities, learning platforms and training products; design must help people learn and persist, serve students, teachers and parents together, and protect minors' data and attention.",
+      "tags": [
+        "education",
+        "edtech",
+        "learning",
+        "course",
+        "school",
+        "university",
+        "student",
+        "teacher",
+        "lms",
+        "tutoring"
+      ],
+      "pairs_with": [
+        "style.playful-bubbly",
+        "style.civic-plain",
+        "style.skeuomorphic-tactile",
+        "style.illustrative-narrative",
+        "archetype.innocent",
+        "archetype.sage",
+        "archetype.caregiver",
+        "audience.children-under-13",
+        "audience.teens-gen-z",
+        "audience.neurodivergent"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.web-brutalist",
+        "style.y2k-cyber",
+        "archetype.outlaw"
+      ],
+      "path": "industries/education-edtech.md"
+    },
+    {
+      "id": "industry.energy-climate",
+      "axis": "industry",
+      "name": "Energy and Climate Tech",
+      "aliases": [
+        "energy",
+        "utilities",
+        "renewables",
+        "solar",
+        "wind",
+        "EV charging",
+        "battery storage",
+        "climate tech",
+        "cleantech",
+        "carbon",
+        "oil and gas",
+        "heat pump"
+      ],
+      "summary": "Utilities, renewables and climate tech where trust rests on verifiable claims and clear bills; green aesthetics are saturated, so evidence, data and honest tone are the differentiators.",
+      "tags": [
+        "energy",
+        "utilities",
+        "renewables",
+        "solar",
+        "climate",
+        "cleantech",
+        "ev-charging",
+        "carbon",
+        "sustainability",
+        "grid"
+      ],
+      "pairs_with": [
+        "style.eco-natural-sustainable",
+        "style.data-dense-utilitarian",
+        "style.corporate-modern",
+        "style.flat-material",
+        "style.seventies-psychedelic-groovy",
+        "archetype.caregiver",
+        "archetype.sage",
+        "archetype.explorer",
+        "channel.web-app",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.art-deco",
+        "archetype.outlaw"
+      ],
+      "path": "industries/energy-climate.md"
+    },
+    {
+      "id": "industry.events-conferences",
+      "axis": "industry",
+      "name": "Events and Conferences",
+      "aliases": [
+        "events",
+        "conferences",
+        "festivals",
+        "trade shows",
+        "expos",
+        "summits",
+        "meetups",
+        "ticketing",
+        "exhibitions",
+        "hybrid events",
+        "galas",
+        "live events"
+      ],
+      "summary": "Time-boxed gatherings sold on programme, people and atmosphere; the identity must work across site, ticket, badge, stage and signage, with price transparency and access information up front.",
+      "tags": [
+        "events",
+        "conferences",
+        "festival",
+        "summit",
+        "trade-show",
+        "ticketing",
+        "speakers",
+        "programme",
+        "badge",
+        "venue"
+      ],
+      "pairs_with": [
+        "style.vibrant-gradient-saas",
+        "style.collage-mixed-media",
+        "style.swiss-international",
+        "style.memphis-postmodern",
+        "style.kinetic-experimental-type",
+        "archetype.magician",
+        "archetype.creator",
+        "archetype.explorer",
+        "channel.environmental-wayfinding",
+        "channel.ooh-signage"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.civic-plain",
+        "style.skeuomorphic-tactile",
+        "archetype.caregiver"
+      ],
+      "path": "industries/events-conferences.md"
+    },
+    {
+      "id": "industry.fashion-apparel",
+      "axis": "industry",
+      "name": "Fashion and Apparel",
+      "aliases": [
+        "fashion",
+        "clothing",
+        "apparel",
+        "footwear",
+        "accessories",
+        "streetwear",
+        "fashion brand",
+        "fashion retail",
+        "fashion label",
+        "lookbook"
+      ],
+      "summary": "Clothing, footwear and accessories sold on identity and desire; image, typography and editorial voice carry the brand while fit, returns and sustainability claims decide trust.",
+      "tags": [
+        "fashion",
+        "apparel",
+        "clothing",
+        "footwear",
+        "lookbook",
+        "streetwear",
+        "collection",
+        "runway",
+        "editorial",
+        "style"
+      ],
+      "pairs_with": [
+        "style.fashion-editorial-didone",
+        "style.web-brutalist",
+        "style.eco-natural-sustainable",
+        "archetype.lover",
+        "archetype.outlaw",
+        "archetype.creator",
+        "tier.luxury",
+        "tier.premium",
+        "channel.ecommerce-store",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "style.corporate-modern",
+        "style.data-dense-utilitarian",
+        "archetype.caregiver"
+      ],
+      "path": "industries/fashion-apparel.md"
+    },
+    {
+      "id": "industry.fintech-banking",
+      "axis": "industry",
+      "name": "Fintech and Banking",
+      "aliases": [
+        "fintech",
+        "banking",
+        "neobank",
+        "bank",
+        "payments",
+        "personal finance",
+        "wealth management",
+        "lending",
+        "credit union"
+      ],
+      "summary": "Money products where trust, clarity and control come first; differentiation now comes from tone, craft and transparency rather than blue-and-shield symbolism.",
+      "tags": [
+        "finance",
+        "banking",
+        "payments",
+        "money",
+        "trust",
+        "fintech",
+        "neobank",
+        "wealth",
+        "lending",
+        "security"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.corporate-modern",
+        "style.quiet-minimal",
+        "style.neo-brutalist",
+        "archetype.ruler",
+        "archetype.sage",
+        "archetype.everyperson",
+        "channel.native-app",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "archetype.jester"
+      ],
+      "path": "industries/fintech-banking.md"
+    },
+    {
+      "id": "industry.food-beverage-cpg",
+      "axis": "industry",
+      "name": "Food, Beverage and CPG",
+      "aliases": [
+        "food brand",
+        "beverage brand",
+        "cpg",
+        "consumer packaged goods",
+        "fmcg",
+        "snack",
+        "drinks",
+        "grocery brand",
+        "alcohol brand",
+        "packaged food",
+        "private label"
+      ],
+      "summary": "Packaged food, drink and household goods sold through shelves, shops and screens; shelf impact, label compliance, appetite appeal and everyday trust all converge on the pack.",
+      "tags": [
+        "food",
+        "beverage",
+        "cpg",
+        "packaging",
+        "shelf",
+        "grocery",
+        "snack",
+        "drink",
+        "label",
+        "brand"
+      ],
+      "pairs_with": [
+        "style.handcrafted-organic",
+        "style.vintage-heritage-americana",
+        "style.playful-bubbly",
+        "style.art-deco",
+        "style.grunge-punk-zine",
+        "archetype.everyperson",
+        "archetype.jester",
+        "archetype.outlaw",
+        "tier.value",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.glass-spatial",
+        "style.dark-tech-developer",
+        "archetype.ruler"
+      ],
+      "path": "industries/food-beverage-cpg.md"
+    },
+    {
+      "id": "industry.gaming-esports",
+      "axis": "industry",
+      "name": "Gaming and Esports",
+      "aliases": [
+        "video games",
+        "gaming",
+        "esports",
+        "game studio",
+        "game publisher",
+        "game UI",
+        "HUD",
+        "streamer",
+        "mobile games",
+        "live service",
+        "gaming hardware"
+      ],
+      "summary": "Interactive entertainment and competitive scenes where community, identity and in-game UI matter as much as key art; rules on ratings, loot boxes and minors shape monetization design.",
+      "tags": [
+        "gaming",
+        "games",
+        "esports",
+        "hud",
+        "game-ui",
+        "streaming",
+        "community",
+        "live-service",
+        "key-art",
+        "mobile-games"
+      ],
+      "pairs_with": [
+        "style.y2k-cyber",
+        "style.illustrative-narrative",
+        "style.skeuomorphic-tactile",
+        "style.retro-futurism-synthwave",
+        "style.neo-brutalist",
+        "style.bold-geometric-sport",
+        "archetype.hero",
+        "archetype.explorer",
+        "audience.teens-gen-z",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.civic-plain",
+        "style.classic-luxury-serif",
+        "archetype.caregiver"
+      ],
+      "path": "industries/gaming-esports.md"
+    },
+    {
+      "id": "industry.government-civic",
+      "axis": "industry",
+      "name": "Government and Civic",
+      "aliases": [
+        "government",
+        "public sector",
+        "civic tech",
+        "city",
+        "municipality",
+        "agency",
+        "public service",
+        "gov.uk",
+        "federal",
+        "state and local",
+        "elections"
+      ],
+      "summary": "Public services used by everyone, often under stress and without a choice; success is task completion, plain language, accessibility and earned trust rather than brand expression.",
+      "tags": [
+        "government",
+        "civic",
+        "public-sector",
+        "forms",
+        "services",
+        "accessibility",
+        "plain-language",
+        "city",
+        "elections",
+        "benefits"
+      ],
+      "pairs_with": [
+        "style.civic-plain",
+        "style.clinical-calm",
+        "style.swiss-international",
+        "style.flat-material",
+        "archetype.everyperson",
+        "archetype.caregiver",
+        "audience.low-literacy-plain-language",
+        "audience.disability-accessibility-first",
+        "audience.older-adults",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.y2k-cyber",
+        "style.grunge-punk-zine",
+        "style.maximalist-eclectic",
+        "archetype.outlaw"
+      ],
+      "path": "industries/government-civic.md"
+    },
+    {
+      "id": "industry.healthcare-provider",
+      "axis": "industry",
+      "name": "Healthcare Providers",
+      "aliases": [
+        "hospital",
+        "health system",
+        "clinic",
+        "medical practice",
+        "physician group",
+        "dental practice",
+        "urgent care",
+        "patient portal",
+        "telehealth provider",
+        "primary care"
+      ],
+      "summary": "Hospitals, clinics and practices where patients arrive anxious and in a hurry; design must make finding care, booking, paying and understanding results calm, accessible and private.",
+      "tags": [
+        "healthcare",
+        "hospital",
+        "clinic",
+        "patient",
+        "appointment",
+        "portal",
+        "medical",
+        "doctor",
+        "care",
+        "telehealth"
+      ],
+      "pairs_with": [
+        "style.clinical-calm",
+        "style.scandinavian-nordic",
+        "style.collage-mixed-media",
+        "archetype.caregiver",
+        "archetype.everyperson",
+        "archetype.sage",
+        "audience.older-adults",
+        "audience.low-literacy-plain-language",
+        "audience.disability-accessibility-first",
+        "channel.environmental-wayfinding"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.web-brutalist",
+        "archetype.outlaw",
+        "archetype.jester"
+      ],
+      "path": "industries/healthcare-provider.md"
+    },
+    {
+      "id": "industry.hotels-travel",
+      "axis": "industry",
+      "name": "Hotels and Travel",
+      "aliases": [
+        "hotel",
+        "resort",
+        "hospitality",
+        "travel agency",
+        "tourism",
+        "airline",
+        "online travel agency",
+        "ota",
+        "vacation rental",
+        "tour operator",
+        "destination marketing",
+        "booking platform"
+      ],
+      "summary": "Hotels, airlines, booking platforms and destinations selling trips and stays; imagery sells desire, but date pickers, total prices, maps and trustworthy itineraries decide the booking.",
+      "tags": [
+        "hotel",
+        "travel",
+        "tourism",
+        "booking",
+        "resort",
+        "airline",
+        "destination",
+        "vacation",
+        "itinerary",
+        "stay"
+      ],
+      "pairs_with": [
+        "style.editorial-magazine",
+        "style.eco-natural-sustainable",
+        "style.retro-futurism-synthwave",
+        "style.classic-luxury-serif",
+        "style.quiet-minimal",
+        "archetype.explorer",
+        "archetype.lover",
+        "tier.premium",
+        "tier.luxury",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.grunge-punk-zine",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "industries/hotels-travel.md"
+    },
+    {
+      "id": "industry.industrial-manufacturing-construction",
+      "axis": "industry",
+      "name": "Industrial, Manufacturing and Construction",
+      "aliases": [
+        "industrial",
+        "manufacturing",
+        "construction",
+        "heavy equipment",
+        "building products",
+        "engineering",
+        "machinery",
+        "factory",
+        "tools",
+        "contractors",
+        "B2B industrial"
+      ],
+      "summary": "Physical, safety-critical and spec-driven B2B categories where buyers want proof, uptime and clear information; design earns trust through precision, durability and plain engineering language.",
+      "tags": [
+        "industrial",
+        "manufacturing",
+        "construction",
+        "machinery",
+        "equipment",
+        "engineering",
+        "safety",
+        "b2b",
+        "catalog",
+        "hmi"
+      ],
+      "pairs_with": [
+        "style.corporate-modern",
+        "style.vintage-heritage-americana",
+        "style.bauhaus-constructivist",
+        "style.swiss-international",
+        "style.data-dense-utilitarian",
+        "archetype.hero",
+        "archetype.everyperson",
+        "archetype.ruler",
+        "audience.b2b-buying-committee",
+        "channel.print-collateral"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.y2k-cyber",
+        "style.seventies-psychedelic-groovy",
+        "archetype.lover"
+      ],
+      "path": "industries/industrial-manufacturing-construction.md"
+    },
+    {
+      "id": "industry.insurance",
+      "axis": "industry",
+      "name": "Insurance",
+      "aliases": [
+        "insurer",
+        "insurtech",
+        "auto insurance",
+        "home insurance",
+        "life insurance",
+        "health insurance plan",
+        "renters insurance",
+        "pet insurance",
+        "broker",
+        "underwriter"
+      ],
+      "summary": "Products sold on the promise of protection when things go wrong; design must make complex coverage understandable, quotes fast and claims humane while staying within heavily regulated disclosures.",
+      "tags": [
+        "insurance",
+        "insurtech",
+        "policy",
+        "coverage",
+        "claims",
+        "quote",
+        "premium",
+        "broker",
+        "underwriting",
+        "protection"
+      ],
+      "pairs_with": [
+        "style.flat-material",
+        "style.corporate-modern",
+        "style.illustrative-narrative",
+        "style.playful-bubbly",
+        "archetype.caregiver",
+        "archetype.everyperson",
+        "tier.mid-market",
+        "channel.web-app",
+        "channel.native-app",
+        "channel.email"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.maximalist-eclectic",
+        "archetype.outlaw"
+      ],
+      "path": "industries/insurance.md"
+    },
+    {
+      "id": "industry.kids-family",
+      "axis": "industry",
+      "name": "Kids and Family",
+      "aliases": [
+        "kids",
+        "children",
+        "family",
+        "toys",
+        "baby",
+        "parenting",
+        "kids apps",
+        "children's media",
+        "family entertainment",
+        "edutainment"
+      ],
+      "summary": "Products for children and the adults who buy and supervise them; two audiences, strict privacy and advertising law, and a design bar set by safety, comprehension and parent trust.",
+      "tags": [
+        "kids",
+        "children",
+        "toys",
+        "family",
+        "parenting",
+        "baby",
+        "playful",
+        "safety",
+        "coppa",
+        "screen-time"
+      ],
+      "pairs_with": [
+        "style.playful-bubbly",
+        "style.handcrafted-organic",
+        "style.illustrative-narrative",
+        "style.scandinavian-nordic",
+        "archetype.innocent",
+        "archetype.caregiver",
+        "audience.children-under-13",
+        "channel.packaging",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.dark-tech-developer",
+        "style.data-dense-utilitarian",
+        "archetype.outlaw"
+      ],
+      "path": "industries/kids-family.md"
+    },
+    {
+      "id": "industry.legal-professional-services",
+      "axis": "industry",
+      "name": "Legal and Professional Services",
+      "aliases": [
+        "law firm",
+        "legal",
+        "lawyers",
+        "attorneys",
+        "accounting",
+        "consulting",
+        "advisory",
+        "audit",
+        "professional services",
+        "legal tech",
+        "notary"
+      ],
+      "summary": "Expertise sold on reputation and judgment; clients buy credibility, clarity and a named person, within advertising and confidentiality rules that limit how bold the brand can be.",
+      "tags": [
+        "legal",
+        "law-firm",
+        "attorney",
+        "accounting",
+        "consulting",
+        "advisory",
+        "professional-services",
+        "credibility",
+        "partners",
+        "legal-tech"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.editorial-magazine",
+        "style.classic-luxury-serif",
+        "style.corporate-modern",
+        "style.scandinavian-nordic",
+        "archetype.ruler",
+        "archetype.sage",
+        "archetype.caregiver",
+        "tier.premium",
+        "audience.b2b-buying-committee"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.playful-bubbly",
+        "style.y2k-cyber",
+        "archetype.jester"
+      ],
+      "path": "industries/legal-professional-services.md"
+    },
+    {
+      "id": "industry.logistics-supply-chain",
+      "axis": "industry",
+      "name": "Logistics and Supply Chain",
+      "aliases": [
+        "logistics",
+        "supply chain",
+        "freight",
+        "shipping",
+        "delivery",
+        "courier",
+        "warehouse",
+        "3PL",
+        "last mile",
+        "freight forwarding",
+        "fleet",
+        "trucking",
+        "ports",
+        "fulfillment"
+      ],
+      "summary": "Moving goods reliably across modes and borders; brands win on dependable tracking, exception handling and operator-grade tools, within strict labeling, safety and customs conventions.",
+      "tags": [
+        "logistics",
+        "supply-chain",
+        "freight",
+        "shipping",
+        "delivery",
+        "warehouse",
+        "tracking",
+        "fleet",
+        "last-mile",
+        "forwarding"
+      ],
+      "pairs_with": [
+        "style.swiss-international",
+        "style.corporate-modern",
+        "style.data-dense-utilitarian",
+        "style.flat-material",
+        "style.playful-bubbly",
+        "archetype.hero",
+        "archetype.everyperson",
+        "archetype.sage",
+        "audience.b2b-buying-committee",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.art-nouveau-ornamental",
+        "style.fashion-editorial-didone",
+        "style.collage-mixed-media",
+        "archetype.lover"
+      ],
+      "path": "industries/logistics-supply-chain.md"
+    },
+    {
+      "id": "industry.luxury-goods",
+      "axis": "industry",
+      "name": "Luxury Goods",
+      "aliases": [
+        "luxury",
+        "high-end",
+        "haute couture",
+        "fine jewelry",
+        "watches",
+        "leather goods",
+        "maison",
+        "prestige",
+        "designer",
+        "premium fashion",
+        "collectibles"
+      ],
+      "summary": "Scarce, crafted goods sold on heritage, desire and discretion; design is restraint, material truth and service, with legal attention to origin, materials and sustainability claims.",
+      "tags": [
+        "luxury",
+        "maison",
+        "jewelry",
+        "watches",
+        "leather",
+        "heritage",
+        "craftsmanship",
+        "exclusivity",
+        "couture",
+        "prestige"
+      ],
+      "pairs_with": [
+        "style.classic-luxury-serif",
+        "style.quiet-minimal",
+        "style.fashion-editorial-didone",
+        "archetype.ruler",
+        "archetype.lover",
+        "archetype.magician",
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "audience.affluent-hnwi",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.vibrant-gradient-saas",
+        "style.grunge-punk-zine",
+        "tier.value"
+      ],
+      "path": "industries/luxury-goods.md"
+    },
+    {
+      "id": "industry.marketplaces-platforms",
+      "axis": "industry",
+      "name": "Marketplaces and Platforms",
+      "aliases": [
+        "marketplace",
+        "two-sided marketplace",
+        "platform",
+        "gig economy",
+        "peer-to-peer",
+        "classifieds",
+        "sharing economy",
+        "sellers and buyers",
+        "app store",
+        "creator platform",
+        "booking platform"
+      ],
+      "summary": "Two-sided products that must earn trust between strangers; design balances supply and demand, makes quality and safety legible, and now operates under platform-specific transparency laws.",
+      "tags": [
+        "marketplace",
+        "platform",
+        "two-sided",
+        "sellers",
+        "buyers",
+        "listings",
+        "reviews",
+        "trust-and-safety",
+        "gig",
+        "p2p"
+      ],
+      "pairs_with": [
+        "style.flat-material",
+        "style.data-dense-utilitarian",
+        "style.handcrafted-organic",
+        "style.editorial-magazine",
+        "style.corporate-modern",
+        "archetype.everyperson",
+        "archetype.explorer",
+        "archetype.creator",
+        "channel.web-app",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.art-deco",
+        "style.classic-luxury-serif",
+        "style.kinetic-experimental-type",
+        "archetype.ruler"
+      ],
+      "path": "industries/marketplaces-platforms.md"
+    },
+    {
+      "id": "industry.media-entertainment-streaming",
+      "axis": "industry",
+      "name": "Media, Entertainment and Streaming",
+      "aliases": [
+        "streaming",
+        "video on demand",
+        "OTT",
+        "film",
+        "television",
+        "music streaming",
+        "podcasts",
+        "publishing",
+        "news media",
+        "entertainment",
+        "studio",
+        "broadcaster"
+      ],
+      "summary": "Content businesses where artwork, discovery and playback carry the brand; the interface must disappear behind the title while meeting accessibility, ratings and subscription rules.",
+      "tags": [
+        "streaming",
+        "media",
+        "entertainment",
+        "film",
+        "tv",
+        "music",
+        "podcast",
+        "publishing",
+        "discovery",
+        "subscription"
+      ],
+      "pairs_with": [
+        "style.glass-spatial",
+        "style.editorial-magazine",
+        "style.maximalist-eclectic",
+        "style.kinetic-experimental-type",
+        "style.dark-tech-developer",
+        "archetype.magician",
+        "archetype.jester",
+        "archetype.creator",
+        "channel.native-app",
+        "channel.video-motion"
+      ],
+      "avoid_with": [
+        "style.clinical-calm",
+        "style.civic-plain",
+        "archetype.ruler"
+      ],
+      "path": "industries/media-entertainment-streaming.md"
+    },
+    {
+      "id": "industry.nonprofit-ngo",
+      "axis": "industry",
+      "name": "Nonprofits and NGOs",
+      "aliases": [
+        "nonprofit",
+        "non-profit",
+        "NGO",
+        "charity",
+        "foundation",
+        "fundraising",
+        "humanitarian",
+        "advocacy",
+        "social enterprise",
+        "cause"
+      ],
+      "summary": "Mission-driven organizations that must earn donor trust, protect the dignity of the people they serve and prove impact; design is judged by transparency and restraint as much as emotion.",
+      "tags": [
+        "nonprofit",
+        "charity",
+        "ngo",
+        "fundraising",
+        "donation",
+        "advocacy",
+        "humanitarian",
+        "impact",
+        "volunteer",
+        "cause"
+      ],
+      "pairs_with": [
+        "style.editorial-magazine",
+        "style.illustrative-narrative",
+        "style.civic-plain",
+        "style.eco-natural-sustainable",
+        "archetype.caregiver",
+        "archetype.hero",
+        "archetype.everyperson",
+        "tier.value",
+        "channel.marketing-website",
+        "channel.email"
+      ],
+      "avoid_with": [
+        "style.fashion-editorial-didone",
+        "style.y2k-cyber",
+        "tier.ultra-luxury",
+        "archetype.jester"
+      ],
+      "path": "industries/nonprofit-ngo.md"
+    },
+    {
+      "id": "industry.pharma-biotech",
+      "axis": "industry",
+      "name": "Pharma and Biotech",
+      "aliases": [
+        "pharmaceutical",
+        "drug brand",
+        "biotech",
+        "life sciences",
+        "medical device",
+        "medtech",
+        "clinical trial",
+        "biopharma",
+        "patient support program",
+        "hcp marketing"
+      ],
+      "summary": "Prescription and OTC medicines, biotech platforms and medical devices; communication is shaped by fair-balance rules, scientific evidence and patient need, so clarity of risk is part of the design.",
+      "tags": [
+        "pharma",
+        "biotech",
+        "drug",
+        "medicine",
+        "clinical-trial",
+        "hcp",
+        "patient",
+        "medical-device",
+        "life-sciences",
+        "isi"
+      ],
+      "pairs_with": [
+        "style.corporate-modern",
+        "style.swiss-international",
+        "style.clinical-calm",
+        "style.kinetic-experimental-type",
+        "style.editorial-magazine",
+        "archetype.sage",
+        "archetype.caregiver",
+        "archetype.hero",
+        "audience.low-literacy-plain-language",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.maximalist-eclectic",
+        "archetype.jester",
+        "archetype.outlaw"
+      ],
+      "path": "industries/pharma-biotech.md"
+    },
+    {
+      "id": "industry.real-estate-proptech",
+      "axis": "industry",
+      "name": "Real Estate and PropTech",
+      "aliases": [
+        "real estate",
+        "property",
+        "brokerage",
+        "estate agent",
+        "listings portal",
+        "proptech",
+        "property management",
+        "rental platform",
+        "developer marketing",
+        "new build",
+        "mortgage broker site"
+      ],
+      "summary": "Brokerages, listing portals, developers and property technology; often the largest purchase of a life, so trust, local knowledge, honest imagery and fair-housing rules shape every screen.",
+      "tags": [
+        "real-estate",
+        "property",
+        "listings",
+        "brokerage",
+        "rental",
+        "proptech",
+        "homes",
+        "mortgage",
+        "development",
+        "agent"
+      ],
+      "pairs_with": [
+        "style.flat-material",
+        "style.glass-spatial",
+        "style.vintage-heritage-americana",
+        "style.classic-luxury-serif",
+        "style.mid-century-modern",
+        "archetype.everyperson",
+        "archetype.ruler",
+        "archetype.magician",
+        "tier.mid-market",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.y2k-cyber",
+        "style.retro-futurism-synthwave"
+      ],
+      "path": "industries/real-estate-proptech.md"
+    },
+    {
+      "id": "industry.restaurants-hospitality",
+      "axis": "industry",
+      "name": "Restaurants and Food Service",
+      "aliases": [
+        "restaurant",
+        "cafe",
+        "coffee shop",
+        "bar",
+        "fast casual",
+        "qsr",
+        "food service",
+        "bakery",
+        "ghost kitchen",
+        "food truck",
+        "catering",
+        "menu design",
+        "hospitality dining"
+      ],
+      "summary": "Restaurants, cafes, bars and delivery brands where appetite, atmosphere and convenience meet; menus, signage, ordering flows and reservations carry the brand through every touchpoint.",
+      "tags": [
+        "restaurant",
+        "cafe",
+        "menu",
+        "dining",
+        "bar",
+        "food-service",
+        "reservation",
+        "ordering",
+        "delivery",
+        "hospitality"
+      ],
+      "pairs_with": [
+        "style.vintage-heritage-americana",
+        "style.art-nouveau-ornamental",
+        "style.neo-brutalist",
+        "style.handcrafted-organic",
+        "style.mid-century-modern",
+        "archetype.everyperson",
+        "archetype.lover",
+        "archetype.jester",
+        "tier.mid-market",
+        "channel.environmental-wayfinding"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.glass-spatial",
+        "style.dark-tech-developer"
+      ],
+      "path": "industries/restaurants-hospitality.md"
+    },
+    {
+      "id": "industry.saas-b2b",
+      "axis": "industry",
+      "name": "B2B SaaS",
+      "aliases": [
+        "b2b software",
+        "saas",
+        "enterprise software",
+        "business software",
+        "cloud software",
+        "productivity software",
+        "workflow software",
+        "platform software"
+      ],
+      "summary": "Subscription software sold to teams and companies; buyers weigh proof, security and time-to-value, so the product itself is the hero and brand is expressed through craft, point of view and clarity.",
+      "tags": [
+        "saas",
+        "b2b",
+        "software",
+        "enterprise",
+        "platform",
+        "dashboard",
+        "pricing",
+        "onboarding",
+        "trial",
+        "product-led"
+      ],
+      "pairs_with": [
+        "style.corporate-modern",
+        "style.swiss-international",
+        "style.vibrant-gradient-saas",
+        "style.illustrative-narrative",
+        "archetype.sage",
+        "archetype.creator",
+        "tier.mid-market",
+        "audience.b2b-buying-committee",
+        "channel.marketing-website",
+        "channel.web-app"
+      ],
+      "avoid_with": [
+        "style.grunge-punk-zine",
+        "style.art-nouveau-ornamental",
+        "style.seventies-psychedelic-groovy",
+        "audience.children-under-13"
+      ],
+      "path": "industries/saas-b2b.md"
+    },
+    {
+      "id": "industry.sports-fitness",
+      "axis": "industry",
+      "name": "Sports and Fitness",
+      "aliases": [
+        "sports",
+        "fitness",
+        "gym",
+        "athletic wear",
+        "sportswear",
+        "running",
+        "training app",
+        "wellness studio",
+        "team",
+        "league",
+        "wearables",
+        "outdoor sports"
+      ],
+      "summary": "Performance, community and identity products, from teams and sportswear to gyms and training apps; energy and motivation sell, while body image, health data and subscriptions need care.",
+      "tags": [
+        "sports",
+        "fitness",
+        "gym",
+        "training",
+        "athletic",
+        "running",
+        "team",
+        "league",
+        "wearable",
+        "community"
+      ],
+      "pairs_with": [
+        "style.bold-geometric-sport",
+        "style.vintage-heritage-americana",
+        "style.fashion-editorial-didone",
+        "style.dark-tech-developer",
+        "style.eco-natural-sustainable",
+        "archetype.hero",
+        "archetype.explorer",
+        "archetype.lover",
+        "audience.teens-gen-z",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "style.art-nouveau-ornamental",
+        "style.clinical-calm",
+        "style.classic-luxury-serif",
+        "archetype.sage"
+      ],
+      "path": "industries/sports-fitness.md"
+    },
+    {
+      "id": "market.australia-new-zealand",
+      "axis": "market",
+      "name": "Australia and New Zealand",
+      "aliases": [
+        "Australia",
+        "New Zealand",
+        "Aotearoa",
+        "ANZ",
+        "en-AU",
+        "en-NZ",
+        "Aussie",
+        "Kiwi",
+        "te reo Maori"
+      ],
+      "summary": "English-language Pacific markets with a relaxed tone, tap-to-pay and BNPL habits, Indigenous protocols (First Nations, te reo Māori), GST-inclusive prices and strong consumer and privacy law.",
+      "tags": [
+        "australia",
+        "new zealand",
+        "aotearoa",
+        "anz",
+        "en-au",
+        "en-nz",
+        "te reo maori",
+        "first nations",
+        "afterpay",
+        "gst"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.real-estate-proptech",
+        "industry.hotels-travel",
+        "industry.sports-fitness",
+        "industry.government-civic",
+        "style.eco-natural-sustainable",
+        "style.civic-plain",
+        "style.handcrafted-organic",
+        "channel.marketing-website",
+        "channel.native-app"
+      ],
+      "avoid_with": [],
+      "path": "markets/australia-new-zealand.md"
+    },
+    {
+      "id": "market.brazil-portuguese",
+      "axis": "market",
+      "name": "Brazil",
+      "aliases": [
+        "Brasil",
+        "Brazilian market",
+        "pt-BR",
+        "Brazilian Portuguese",
+        "Pix market"
+      ],
+      "summary": "Portuguese-speaking, mobile-first market where Pix, boleto and card installments shape checkout, LGPD and consumer code rules apply, and WhatsApp is the default channel.",
+      "tags": [
+        "brazil",
+        "brasil",
+        "portuguese",
+        "pt-br",
+        "pix",
+        "boleto",
+        "lgpd",
+        "whatsapp",
+        "cpf",
+        "installments"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.ecommerce-dtc",
+        "industry.marketplaces-platforms",
+        "industry.food-beverage-cpg",
+        "industry.beauty-cosmetics",
+        "style.playful-bubbly",
+        "style.vibrant-gradient-saas",
+        "channel.native-app",
+        "channel.social-media",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [],
+      "path": "markets/brazil-portuguese.md"
+    },
+    {
+      "id": "market.canada",
+      "axis": "market",
+      "name": "Canada",
+      "aliases": [
+        "Canadian market",
+        "en-CA",
+        "fr-CA",
+        "Quebec",
+        "Canadian French",
+        "bilingual Canada"
+      ],
+      "summary": "Officially bilingual (English and French) North American market where Quebec French law, Canadian spelling, Interac payments and accessibility statutes shape design.",
+      "tags": [
+        "canada",
+        "quebec",
+        "bilingual",
+        "french canadian",
+        "interac",
+        "bill 96",
+        "law 25",
+        "aoda",
+        "canadian english"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.government-civic",
+        "industry.ecommerce-dtc",
+        "industry.healthcare-provider",
+        "industry.energy-climate",
+        "style.civic-plain",
+        "style.corporate-modern",
+        "channel.marketing-website",
+        "channel.web-app"
+      ],
+      "avoid_with": [],
+      "path": "markets/canada.md"
+    },
+    {
+      "id": "market.china-mainland",
+      "axis": "market",
+      "name": "Mainland China",
+      "aliases": [
+        "China",
+        "PRC",
+        "Chinese market",
+        "Simplified Chinese",
+        "zh-CN",
+        "zh-Hans",
+        "WeChat ecosystem",
+        "Great Firewall"
+      ],
+      "summary": "Simplified-Chinese mobile super-app market where WeChat, Alipay and Douyin dominate, info-dense interfaces are normal, and PIPL, ICP licensing and ad-law rules shape design and hosting.",
+      "tags": [
+        "china",
+        "mainland china",
+        "simplified chinese",
+        "wechat",
+        "alipay",
+        "mini program",
+        "icp",
+        "pipl",
+        "douyin",
+        "cjk"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.beauty-cosmetics",
+        "industry.luxury-goods",
+        "industry.fashion-apparel",
+        "industry.gaming-esports",
+        "industry.media-entertainment-streaming",
+        "style.maximalist-eclectic",
+        "style.vibrant-gradient-saas",
+        "channel.native-app",
+        "channel.social-media"
+      ],
+      "avoid_with": [],
+      "path": "markets/china-mainland.md"
+    },
+    {
+      "id": "market.dach-nordics",
+      "axis": "market",
+      "name": "DACH and the Nordics",
+      "aliases": [
+        "Germany",
+        "Austria",
+        "Switzerland",
+        "Sweden",
+        "Norway",
+        "Denmark",
+        "Finland",
+        "Iceland",
+        "DACH",
+        "Scandinavia",
+        "Nordic countries",
+        "de-DE",
+        "sv-SE"
+      ],
+      "summary": "High-trust, high-income markets where precision, privacy, strict consumer law, bank-based digital ID (BankID, MitID) and mobile payments (Swish, Vipps, TWINT) define design.",
+      "tags": [
+        "germany",
+        "austria",
+        "switzerland",
+        "nordics",
+        "scandinavia",
+        "sweden",
+        "norway",
+        "denmark",
+        "finland",
+        "twint"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.automotive-mobility",
+        "industry.industrial-manufacturing-construction",
+        "industry.energy-climate",
+        "industry.saas-b2b",
+        "style.scandinavian-nordic",
+        "style.swiss-international",
+        "style.bauhaus-constructivist",
+        "style.quiet-minimal",
+        "channel.web-app"
+      ],
+      "avoid_with": [],
+      "path": "markets/dach-nordics.md"
+    },
+    {
+      "id": "market.india-south-asia",
+      "axis": "market",
+      "name": "India and South Asia",
+      "aliases": [
+        "India",
+        "Bharat",
+        "Hindi",
+        "Indic scripts",
+        "Devanagari",
+        "Bangladesh",
+        "Pakistan",
+        "Sri Lanka",
+        "Nepal",
+        "UPI market",
+        "vernacular"
+      ],
+      "summary": "Android-first, multilingual and multi-script region where UPI, WhatsApp and vernacular interfaces drive adoption, with Indic-script typesetting, lakh/crore numbers and new DPDP privacy rules.",
+      "tags": [
+        "india",
+        "south asia",
+        "hindi",
+        "devanagari",
+        "indic",
+        "upi",
+        "vernacular",
+        "rtl urdu",
+        "dpdp",
+        "bangladesh"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.ecommerce-dtc",
+        "industry.education-edtech",
+        "industry.media-entertainment-streaming",
+        "industry.food-beverage-cpg",
+        "style.maximalist-eclectic",
+        "style.vibrant-gradient-saas",
+        "style.playful-bubbly",
+        "channel.native-app",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [],
+      "path": "markets/india-south-asia.md"
+    },
+    {
+      "id": "market.israel-hebrew",
+      "axis": "market",
+      "name": "Israel (Hebrew)",
+      "aliases": [
+        "Israel",
+        "Hebrew",
+        "he-IL",
+        "RTL Hebrew",
+        "Israeli market",
+        "Start-up Nation"
+      ],
+      "summary": "Hebrew right-to-left market with a tech-savvy, direct, mobile-first audience, Hebrew-Arabic-Russian-English multilingualism, installment-heavy payments and Shabbat and holiday rhythms.",
+      "tags": [
+        "israel",
+        "hebrew",
+        "rtl",
+        "he-il",
+        "shabbat",
+        "bit",
+        "installments",
+        "ils",
+        "amendment 13"
+      ],
+      "pairs_with": [
+        "industry.saas-b2b",
+        "industry.fintech-banking",
+        "industry.developer-tools",
+        "industry.ecommerce-dtc",
+        "industry.healthcare-provider",
+        "industry.events-conferences",
+        "style.dark-tech-developer",
+        "style.corporate-modern",
+        "channel.web-app",
+        "channel.native-app"
+      ],
+      "avoid_with": [],
+      "path": "markets/israel-hebrew.md"
+    },
+    {
+      "id": "market.japan",
+      "axis": "market",
+      "name": "Japan",
+      "aliases": [
+        "Japanese market",
+        "ja-JP",
+        "Nihon",
+        "Japanese typography",
+        "kanji kana",
+        "keigo"
+      ],
+      "summary": "Japanese-language market with three scripts, polite register, information-rich layouts, iPhone-heavy mobile use, LINE, PayPay, konbini payments and tax-inclusive pricing under APPI and commerce law.",
+      "tags": [
+        "japan",
+        "japanese",
+        "ja-jp",
+        "kanji",
+        "kana",
+        "keigo",
+        "line",
+        "paypay",
+        "konbini",
+        "vertical text"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.food-beverage-cpg",
+        "industry.gaming-esports",
+        "industry.fashion-apparel",
+        "industry.automotive-mobility",
+        "industry.hotels-travel",
+        "style.quiet-minimal",
+        "style.playful-bubbly",
+        "style.illustrative-narrative",
+        "channel.native-app"
+      ],
+      "avoid_with": [],
+      "path": "markets/japan.md"
+    },
+    {
+      "id": "market.korea",
+      "axis": "market",
+      "name": "South Korea",
+      "aliases": [
+        "Korea",
+        "South Korea",
+        "Korean market",
+        "ko-KR",
+        "Hangul",
+        "K-wave",
+        "Hallyu"
+      ],
+      "summary": "Hangul-script, hyper-connected mobile market where KakaoTalk, Naver and Toss lead, Samsung devices dominate, trends move fast, and PIPA consent rules are among the strictest in Asia.",
+      "tags": [
+        "korea",
+        "south korea",
+        "korean",
+        "hangul",
+        "ko-kr",
+        "kakaotalk",
+        "naver",
+        "toss",
+        "pipa",
+        "pretendard"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.beauty-cosmetics",
+        "industry.ecommerce-dtc",
+        "industry.gaming-esports",
+        "industry.media-entertainment-streaming",
+        "style.vibrant-gradient-saas",
+        "style.playful-bubbly",
+        "style.y2k-cyber",
+        "channel.native-app",
+        "channel.social-media"
+      ],
+      "avoid_with": [],
+      "path": "markets/korea.md"
+    },
+    {
+      "id": "market.latin-america-spanish",
+      "axis": "market",
+      "name": "Spanish-speaking Latin America",
+      "aliases": [
+        "LATAM",
+        "Latin America",
+        "Spanish LATAM",
+        "es-419",
+        "Mexico",
+        "Argentina",
+        "Colombia",
+        "Chile",
+        "Peru",
+        "hispanoamerica"
+      ],
+      "summary": "Mobile-first Spanish-speaking region from Mexico to Argentina with diverse dialects, cash-and-voucher payments, instant bank transfers, wallets and a fast-changing patchwork of data laws.",
+      "tags": [
+        "latin america",
+        "latam",
+        "spanish",
+        "es-419",
+        "mexico",
+        "argentina",
+        "colombia",
+        "mercado pago",
+        "oxxo",
+        "yape"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.ecommerce-dtc",
+        "industry.marketplaces-platforms",
+        "industry.food-beverage-cpg",
+        "industry.media-entertainment-streaming",
+        "style.playful-bubbly",
+        "style.vibrant-gradient-saas",
+        "channel.native-app",
+        "channel.social-media",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [],
+      "path": "markets/latin-america-spanish.md"
+    },
+    {
+      "id": "market.middle-east-north-africa-arabic",
+      "axis": "market",
+      "name": "Middle East and North Africa (Arabic)",
+      "aliases": [
+        "MENA",
+        "Arab world",
+        "GCC",
+        "Gulf",
+        "Saudi Arabia",
+        "UAE",
+        "Egypt",
+        "Levant",
+        "Maghreb",
+        "Arabic RTL",
+        "ar-SA",
+        "ar-AE",
+        "ar-EG"
+      ],
+      "summary": "Right-to-left Arabic-script markets from the Gulf to the Maghreb, mobile-first and young, with strong religious and family norms, mada and cash-on-delivery payments, and fast-evolving data laws.",
+      "tags": [
+        "arabic",
+        "rtl",
+        "mena",
+        "gcc",
+        "saudi arabia",
+        "uae",
+        "egypt",
+        "ramadan",
+        "mada",
+        "right-to-left"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.fintech-banking",
+        "industry.real-estate-proptech",
+        "industry.luxury-goods",
+        "industry.hotels-travel",
+        "industry.government-civic",
+        "style.classic-luxury-serif",
+        "style.art-deco",
+        "channel.native-app",
+        "channel.social-media"
+      ],
+      "avoid_with": [],
+      "path": "markets/middle-east-north-africa-arabic.md"
+    },
+    {
+      "id": "market.southeast-asia",
+      "axis": "market",
+      "name": "Southeast Asia",
+      "aliases": [
+        "SEA",
+        "ASEAN",
+        "Indonesia",
+        "Thailand",
+        "Vietnam",
+        "Philippines",
+        "Malaysia",
+        "Singapore",
+        "Cambodia",
+        "Myanmar",
+        "Laos"
+      ],
+      "summary": "Mobile-first, young, multilingual region (Latin, Thai, Khmer, Lao, Burmese scripts) where super apps, QR wallets, cash on delivery and messaging commerce shape design; laws differ by country.",
+      "tags": [
+        "southeast asia",
+        "asean",
+        "indonesia",
+        "thailand",
+        "vietnam",
+        "philippines",
+        "malaysia",
+        "singapore",
+        "super app",
+        "thai"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.fintech-banking",
+        "industry.marketplaces-platforms",
+        "industry.food-beverage-cpg",
+        "industry.gaming-esports",
+        "industry.hotels-travel",
+        "style.playful-bubbly",
+        "style.vibrant-gradient-saas",
+        "channel.native-app",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [],
+      "path": "markets/southeast-asia.md"
+    },
+    {
+      "id": "market.sub-saharan-africa",
+      "axis": "market",
+      "name": "Sub-Saharan Africa",
+      "aliases": [
+        "Africa",
+        "Nigeria",
+        "Kenya",
+        "South Africa",
+        "Ghana",
+        "Ethiopia",
+        "Anglophone Africa",
+        "Francophone Africa",
+        "M-Pesa market"
+      ],
+      "summary": "Young, mobile-money-led, multilingual region with low-end Android, costly data and USSD reach; Nigeria, Kenya, South Africa and Ghana lead digital adoption, with fast-growing data laws.",
+      "tags": [
+        "africa",
+        "sub-saharan africa",
+        "nigeria",
+        "kenya",
+        "south africa",
+        "ghana",
+        "m-pesa",
+        "mobile money",
+        "ussd",
+        "low bandwidth"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.ecommerce-dtc",
+        "industry.marketplaces-platforms",
+        "industry.education-edtech",
+        "industry.nonprofit-ngo",
+        "industry.healthcare-provider",
+        "style.playful-bubbly",
+        "style.flat-material",
+        "channel.native-app",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [],
+      "path": "markets/sub-saharan-africa.md"
+    },
+    {
+      "id": "market.united-kingdom-ireland",
+      "axis": "market",
+      "name": "United Kingdom and Ireland",
+      "aliases": [
+        "UK",
+        "Britain",
+        "Great Britain",
+        "GB",
+        "Ireland",
+        "Eire",
+        "en-GB",
+        "en-IE",
+        "British Isles",
+        "Wales",
+        "Scotland"
+      ],
+      "summary": "English-language British and Irish markets with distinct spelling, GBP versus EUR, strong plain-language and accessibility traditions, UK GDPR/PECR and EU GDPR, and bilingual Welsh and Irish duties.",
+      "tags": [
+        "uk",
+        "ireland",
+        "britain",
+        "en-gb",
+        "gov.uk",
+        "uk gdpr",
+        "pecr",
+        "eircode",
+        "faster payments",
+        "open banking"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.government-civic",
+        "industry.legal-professional-services",
+        "industry.hotels-travel",
+        "style.civic-plain",
+        "style.editorial-magazine",
+        "style.swiss-international",
+        "channel.marketing-website",
+        "channel.web-app",
+        "audience.older-adults"
+      ],
+      "avoid_with": [],
+      "path": "markets/united-kingdom-ireland.md"
+    },
+    {
+      "id": "market.united-states",
+      "axis": "market",
+      "name": "United States",
+      "aliases": [
+        "US",
+        "USA",
+        "America",
+        "American market",
+        "en-US",
+        "US English"
+      ],
+      "summary": "Large, diverse English-first market with Spanish as a major second language; shaped by card and wallet payments, a patchwork of state privacy laws, and ADA accessibility litigation.",
+      "tags": [
+        "united states",
+        "usa",
+        "american",
+        "en-us",
+        "us english",
+        "ccpa",
+        "ada",
+        "apple pay",
+        "venmo",
+        "state privacy"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.saas-b2b",
+        "industry.ecommerce-dtc",
+        "industry.healthcare-provider",
+        "style.corporate-modern",
+        "style.vintage-heritage-americana",
+        "channel.web-app",
+        "channel.ecommerce-store",
+        "audience.older-adults"
+      ],
+      "avoid_with": [],
+      "path": "markets/united-states.md"
+    },
+    {
+      "id": "market.us-hispanic-puerto-rico-caribbean",
+      "axis": "market",
+      "name": "US Hispanic, Puerto Rico and the Caribbean",
+      "aliases": [
+        "US Hispanic",
+        "Latino market",
+        "Hispanic marketing",
+        "Puerto Rico",
+        "boricua",
+        "Caribbean",
+        "Spanglish",
+        "bilingual EN/ES"
+      ],
+      "summary": "Bilingual English/Spanish design for US Hispanic and Latino audiences, Puerto Rico (a US territory with Spanish dominant) and Caribbean markets; varied origins, Spanish variants and payments.",
+      "tags": [
+        "hispanic",
+        "latino",
+        "puerto rico",
+        "caribbean",
+        "bilingual",
+        "spanish",
+        "spanglish",
+        "ath movil",
+        "zelle",
+        "remittances"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.food-beverage-cpg",
+        "industry.healthcare-provider",
+        "industry.media-entertainment-streaming",
+        "industry.ecommerce-dtc",
+        "style.playful-bubbly",
+        "style.illustrative-narrative",
+        "channel.social-media",
+        "channel.native-app",
+        "archetype.caregiver"
+      ],
+      "avoid_with": [],
+      "path": "markets/us-hispanic-puerto-rico-caribbean.md"
+    },
+    {
+      "id": "market.western-europe",
+      "axis": "market",
+      "name": "Western Europe (France, Iberia, Italy, Benelux)",
+      "aliases": [
+        "France",
+        "Spain",
+        "Portugal",
+        "Italy",
+        "Belgium",
+        "Netherlands",
+        "Luxembourg",
+        "Benelux",
+        "southern Europe",
+        "EU market",
+        "fr-FR",
+        "es-ES",
+        "it-IT",
+        "nl-NL"
+      ],
+      "summary": "Multilingual EU markets with strict GDPR cookie rules, the European Accessibility Act, national payment schemes (iDEAL, Bizum, Carte Bancaire, Multibanco) and local language laws.",
+      "tags": [
+        "france",
+        "spain",
+        "portugal",
+        "italy",
+        "benelux",
+        "netherlands",
+        "belgium",
+        "ideal",
+        "bizum",
+        "multibanco"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.fashion-apparel",
+        "industry.luxury-goods",
+        "industry.hotels-travel",
+        "industry.food-beverage-cpg",
+        "style.editorial-magazine",
+        "style.classic-luxury-serif",
+        "style.fashion-editorial-didone",
+        "channel.ecommerce-store",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [],
+      "path": "markets/western-europe.md"
+    },
+    {
+      "id": "style.art-deco",
+      "axis": "style",
+      "name": "Art Deco",
+      "aliases": [
+        "deco",
+        "1920s glamour",
+        "gatsby style",
+        "jazz age",
+        "streamline moderne",
+        "art moderne"
+      ],
+      "summary": "Symmetrical geometric glamour - gold on black, sunbursts, chevrons and stepped forms, tall display capitals and lacquered, machine-age luxury from the Jazz Age.",
+      "tags": [
+        "geometric",
+        "gold",
+        "symmetrical",
+        "glamour",
+        "jazz-age",
+        "ornamental",
+        "luxury",
+        "1920s"
+      ],
+      "pairs_with": [
+        "industry.hotels-travel",
+        "industry.restaurants-hospitality",
+        "industry.luxury-goods",
+        "industry.events-conferences",
+        "tier.luxury",
+        "archetype.ruler",
+        "archetype.lover",
+        "archetype.magician",
+        "channel.packaging",
+        "channel.print-collateral"
+      ],
+      "avoid_with": [
+        "industry.developer-tools",
+        "tier.value",
+        "audience.low-bandwidth-entry-devices",
+        "industry.government-civic"
+      ],
+      "path": "styles/art-deco.md"
+    },
+    {
+      "id": "style.art-nouveau-ornamental",
+      "axis": "style",
+      "name": "Art Nouveau and Ornamental",
+      "aliases": [
+        "art nouveau",
+        "jugendstil",
+        "secession style",
+        "modernisme",
+        "belle epoque ornament",
+        "whiplash curve",
+        "botanical ornament"
+      ],
+      "summary": "Flowing whiplash curves, botanical ornament, arched frames and hand-lettered display type in muted natural colors; decoration fused with structure, c. 1890-1910.",
+      "tags": [
+        "ornamental",
+        "botanical",
+        "organic",
+        "curves",
+        "hand-lettered",
+        "belle-epoque",
+        "decorative",
+        "poster"
+      ],
+      "pairs_with": [
+        "industry.beauty-cosmetics",
+        "industry.food-beverage-cpg",
+        "industry.hotels-travel",
+        "industry.restaurants-hospitality",
+        "archetype.lover",
+        "archetype.creator",
+        "archetype.magician",
+        "tier.premium",
+        "channel.packaging",
+        "channel.print-collateral"
+      ],
+      "avoid_with": [
+        "industry.developer-tools",
+        "audience.expert-power-users",
+        "channel.web-app",
+        "audience.low-bandwidth-entry-devices",
+        "industry.fintech-banking"
+      ],
+      "path": "styles/art-nouveau-ornamental.md"
+    },
+    {
+      "id": "style.bauhaus-constructivist",
+      "axis": "style",
+      "name": "Bauhaus and Constructivist",
+      "aliases": [
+        "bauhaus",
+        "constructivism",
+        "russian constructivism",
+        "dessau modernism",
+        "geometric modernism",
+        "primary color modernism"
+      ],
+      "summary": "Primary-color geometry, circles-squares-triangles, bold sans type and diagonal composition; form follows function, with Constructivism adding agitprop energy and photomontage.",
+      "tags": [
+        "geometric",
+        "primary-colors",
+        "diagonal",
+        "sans-serif",
+        "modernist",
+        "poster",
+        "bauhaus",
+        "constructivist"
+      ],
+      "pairs_with": [
+        "industry.creative-agencies-studios",
+        "industry.events-conferences",
+        "industry.education-edtech",
+        "industry.industrial-manufacturing-construction",
+        "archetype.creator",
+        "archetype.hero",
+        "channel.print-collateral",
+        "channel.environmental-wayfinding",
+        "market.dach-nordics"
+      ],
+      "avoid_with": [
+        "tier.ultra-luxury",
+        "archetype.lover",
+        "industry.beauty-cosmetics",
+        "audience.low-literacy-plain-language"
+      ],
+      "path": "styles/bauhaus-constructivist.md"
+    },
+    {
+      "id": "style.bold-geometric-sport",
+      "axis": "style",
+      "name": "Bold Geometric / Sport Energy",
+      "aliases": [
+        "sports branding",
+        "athletic design",
+        "performance brand",
+        "bold condensed type",
+        "dynamic geometry",
+        "esports energy",
+        "fitness brand"
+      ],
+      "summary": "Heavy condensed type, diagonal geometry, hard color blocks and oversized numerals that convey speed, power and competition; built for sport, fitness, events and performance brands.",
+      "tags": [
+        "sport",
+        "bold",
+        "geometric",
+        "condensed",
+        "athletic",
+        "energy",
+        "diagonal",
+        "high-contrast",
+        "performance",
+        "fitness"
+      ],
+      "pairs_with": [
+        "industry.sports-fitness",
+        "industry.automotive-mobility",
+        "industry.gaming-esports",
+        "industry.events-conferences",
+        "archetype.hero",
+        "archetype.outlaw",
+        "audience.teens-gen-z",
+        "channel.social-media",
+        "channel.ooh-signage",
+        "channel.video-motion"
+      ],
+      "avoid_with": [
+        "archetype.caregiver",
+        "archetype.innocent",
+        "tier.ultra-luxury",
+        "industry.healthcare-provider",
+        "industry.legal-professional-services",
+        "audience.older-adults"
+      ],
+      "path": "styles/bold-geometric-sport.md"
+    },
+    {
+      "id": "style.civic-plain",
+      "axis": "style",
+      "name": "Civic Plain / Public Service",
+      "aliases": [
+        "government design",
+        "gov.uk style",
+        "uswds",
+        "public sector design",
+        "plain language ui",
+        "service design",
+        "civic design",
+        "accessible-first"
+      ],
+      "summary": "Task-first public-service design with plain language, large readable type, high contrast, strong focus states and proven patterns, as in the GOV.UK Design System and the US Web Design System.",
+      "tags": [
+        "civic",
+        "government",
+        "public-service",
+        "plain-language",
+        "accessible",
+        "forms",
+        "gov-uk",
+        "uswds",
+        "utilitarian",
+        "trust"
+      ],
+      "pairs_with": [
+        "industry.government-civic",
+        "industry.nonprofit-ngo",
+        "audience.low-literacy-plain-language",
+        "audience.older-adults",
+        "audience.disability-accessibility-first",
+        "audience.low-bandwidth-entry-devices",
+        "archetype.everyperson",
+        "channel.web-app",
+        "market.united-kingdom-ireland",
+        "market.united-states"
+      ],
+      "avoid_with": [
+        "archetype.outlaw",
+        "archetype.jester",
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "industry.fashion-apparel",
+        "industry.luxury-goods"
+      ],
+      "path": "styles/civic-plain.md"
+    },
+    {
+      "id": "style.classic-luxury-serif",
+      "axis": "style",
+      "name": "Classic Luxury Serif",
+      "aliases": [
+        "heritage luxury",
+        "maison style",
+        "old money",
+        "quiet luxury serif",
+        "fine jewelry style",
+        "haute couture serif",
+        "high-end traditional"
+      ],
+      "summary": "Centered, ceremonial heritage luxury - light serif or Roman capitals, deep jewel grounds with antique gold, hairline rules, slow fades and abundant space; price signaled through restraint.",
+      "tags": [
+        "luxury",
+        "serif",
+        "heritage",
+        "elegant",
+        "gold",
+        "centered",
+        "jewelry",
+        "maison"
+      ],
+      "pairs_with": [
+        "industry.luxury-goods",
+        "industry.hotels-travel",
+        "industry.fashion-apparel",
+        "industry.real-estate-proptech",
+        "audience.affluent-hnwi",
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "archetype.ruler",
+        "archetype.lover",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "tier.value",
+        "audience.teens-gen-z",
+        "archetype.jester",
+        "archetype.outlaw",
+        "audience.low-bandwidth-entry-devices",
+        "industry.gaming-esports"
+      ],
+      "path": "styles/classic-luxury-serif.md"
+    },
+    {
+      "id": "style.clinical-calm",
+      "axis": "style",
+      "name": "Clinical Calm",
+      "aliases": [
+        "healthcare ui",
+        "medical clean",
+        "calm health design",
+        "patient-friendly design",
+        "clinical clarity",
+        "care ui",
+        "wellbeing clean"
+      ],
+      "summary": "Reassuring healthcare clarity with soft teal-blue, warm neutrals, plain language, large targets and low-stimulation layouts that lower anxiety and prevent errors without feeling sterile.",
+      "tags": [
+        "healthcare",
+        "clinical",
+        "calm",
+        "clarity",
+        "patient",
+        "medical",
+        "reassuring",
+        "accessible",
+        "teal",
+        "plain-language"
+      ],
+      "pairs_with": [
+        "industry.healthcare-provider",
+        "industry.digital-health-wellness",
+        "industry.pharma-biotech",
+        "industry.insurance",
+        "audience.older-adults",
+        "audience.disability-accessibility-first",
+        "archetype.caregiver",
+        "archetype.sage",
+        "channel.web-app",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "archetype.outlaw",
+        "archetype.jester",
+        "industry.gaming-esports",
+        "tier.ultra-luxury"
+      ],
+      "path": "styles/clinical-calm.md"
+    },
+    {
+      "id": "style.collage-mixed-media",
+      "axis": "style",
+      "name": "Collage / Mixed Media",
+      "aliases": [
+        "collage",
+        "cut and paste",
+        "mixed media",
+        "paper cut-out",
+        "scrapbook design",
+        "photomontage",
+        "torn paper",
+        "analog collage",
+        "digital collage"
+      ],
+      "summary": "Layered cut-out photography, paper scraps, tape, halftone and mixed type arranged with deliberate tension; handmade, surprising and culturally literate, but easy to turn into scrapbook noise.",
+      "tags": [
+        "collage",
+        "mixed-media",
+        "cut-out",
+        "paper",
+        "halftone",
+        "layered",
+        "surreal",
+        "handmade",
+        "photomontage",
+        "texture"
+      ],
+      "pairs_with": [
+        "industry.creative-agencies-studios",
+        "industry.media-entertainment-streaming",
+        "industry.events-conferences",
+        "industry.fashion-apparel",
+        "archetype.creator",
+        "archetype.outlaw",
+        "archetype.jester",
+        "audience.teens-gen-z",
+        "channel.social-media",
+        "channel.print-collateral"
+      ],
+      "avoid_with": [
+        "industry.fintech-banking",
+        "industry.healthcare-provider",
+        "industry.government-civic",
+        "industry.insurance",
+        "tier.ultra-luxury",
+        "audience.expert-power-users"
+      ],
+      "path": "styles/collage-mixed-media.md"
+    },
+    {
+      "id": "style.corporate-modern",
+      "axis": "style",
+      "name": "Corporate Modern / Enterprise Clean",
+      "aliases": [
+        "enterprise clean",
+        "corporate clean",
+        "business modern",
+        "b2b clean",
+        "enterprise design system",
+        "professional modern"
+      ],
+      "summary": "Credible, systematized business design with one deep brand blue, cool neutrals, modular cards, restrained 6-8px radius and product-led imagery; trust through consistency rather than flair.",
+      "tags": [
+        "corporate",
+        "enterprise",
+        "b2b",
+        "clean",
+        "professional",
+        "blue",
+        "modular",
+        "trustworthy",
+        "saas"
+      ],
+      "pairs_with": [
+        "industry.saas-b2b",
+        "industry.fintech-banking",
+        "industry.insurance",
+        "industry.legal-professional-services",
+        "audience.b2b-buying-committee",
+        "archetype.ruler",
+        "archetype.sage",
+        "tier.mid-market",
+        "channel.presentation",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "archetype.outlaw",
+        "archetype.jester",
+        "audience.children-under-13",
+        "industry.gaming-esports",
+        "tier.ultra-luxury"
+      ],
+      "path": "styles/corporate-modern.md"
+    },
+    {
+      "id": "style.dark-tech-developer",
+      "axis": "style",
+      "name": "Dark Tech / Developer",
+      "aliases": [
+        "developer dark mode",
+        "dev tools aesthetic",
+        "terminal aesthetic",
+        "dark mode saas",
+        "hacker aesthetic",
+        "linear style",
+        "devtool dark"
+      ],
+      "summary": "Near-black canvas, hairline borders, monospace accents and one signal color; built for people who live in terminals and editors, with code and real product output as the hero visual.",
+      "tags": [
+        "dark",
+        "developer",
+        "terminal",
+        "code",
+        "monospace",
+        "devtools",
+        "technical",
+        "minimal",
+        "keyboard"
+      ],
+      "pairs_with": [
+        "industry.developer-tools",
+        "industry.ai-products",
+        "industry.crypto-web3",
+        "industry.gaming-esports",
+        "audience.expert-power-users",
+        "archetype.magician",
+        "archetype.explorer",
+        "channel.web-app",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "audience.older-adults",
+        "audience.children-under-13",
+        "industry.healthcare-provider",
+        "industry.government-civic",
+        "archetype.caregiver",
+        "tier.ultra-luxury"
+      ],
+      "path": "styles/dark-tech-developer.md"
+    },
+    {
+      "id": "style.data-dense-utilitarian",
+      "axis": "style",
+      "name": "Data-Dense / Utilitarian",
+      "aliases": [
+        "dense ui",
+        "terminal ui",
+        "trading ui",
+        "bloomberg style",
+        "ops dashboard",
+        "control room ui",
+        "information-dense",
+        "power-user interface"
+      ],
+      "summary": "Maximum information per screen for expert users, with tabular figures, small type, tight rows, semantic color only, keyboard control and tiled panels, as in trading terminals and ops tools.",
+      "tags": [
+        "dense",
+        "data",
+        "utilitarian",
+        "trading",
+        "dashboard",
+        "tables",
+        "terminal",
+        "ops",
+        "expert",
+        "monospace"
+      ],
+      "pairs_with": [
+        "audience.expert-power-users",
+        "industry.fintech-banking",
+        "industry.logistics-supply-chain",
+        "industry.industrial-manufacturing-construction",
+        "industry.energy-climate",
+        "industry.saas-b2b",
+        "industry.crypto-web3",
+        "channel.web-app",
+        "archetype.sage",
+        "tier.mid-market"
+      ],
+      "avoid_with": [
+        "audience.children-under-13",
+        "audience.older-adults",
+        "audience.low-literacy-plain-language",
+        "tier.luxury",
+        "archetype.lover",
+        "channel.native-app"
+      ],
+      "path": "styles/data-dense-utilitarian.md"
+    },
+    {
+      "id": "style.eco-natural-sustainable",
+      "axis": "style",
+      "name": "Eco / Natural / Sustainable",
+      "aliases": [
+        "eco design",
+        "natural branding",
+        "sustainable brand",
+        "earthy organic",
+        "green brand",
+        "botanical",
+        "low-impact design",
+        "regenerative"
+      ],
+      "summary": "Earth-tone palettes, warm serifs, organic shapes and honest material and process imagery that signal care for people and planet, backed by specific proof rather than green decoration.",
+      "tags": [
+        "eco",
+        "natural",
+        "sustainable",
+        "earthy",
+        "organic",
+        "botanical",
+        "green",
+        "kraft",
+        "regenerative",
+        "calm"
+      ],
+      "pairs_with": [
+        "industry.energy-climate",
+        "industry.nonprofit-ngo",
+        "industry.food-beverage-cpg",
+        "industry.beauty-cosmetics",
+        "industry.hotels-travel",
+        "archetype.caregiver",
+        "archetype.explorer",
+        "archetype.innocent",
+        "tier.premium",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "archetype.outlaw",
+        "industry.crypto-web3",
+        "industry.gaming-esports",
+        "tier.value"
+      ],
+      "path": "styles/eco-natural-sustainable.md"
+    },
+    {
+      "id": "style.editorial-magazine",
+      "axis": "style",
+      "name": "Editorial / Magazine",
+      "aliases": [
+        "editorial design",
+        "magazine layout",
+        "print editorial",
+        "longform editorial",
+        "publication design",
+        "magazine style"
+      ],
+      "summary": "Publication-grade hierarchy - high-contrast serif display, readable text serif, multi-column grids, pull quotes, strong crops and one spot color; design that makes reading feel curated.",
+      "tags": [
+        "editorial",
+        "serif",
+        "magazine",
+        "typographic",
+        "longform",
+        "columns",
+        "publication",
+        "grid"
+      ],
+      "pairs_with": [
+        "industry.media-entertainment-streaming",
+        "industry.fashion-apparel",
+        "industry.creative-agencies-studios",
+        "industry.nonprofit-ngo",
+        "archetype.sage",
+        "archetype.creator",
+        "tier.premium",
+        "channel.print-collateral",
+        "channel.email",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "channel.web-app",
+        "audience.low-bandwidth-entry-devices",
+        "industry.logistics-supply-chain"
+      ],
+      "path": "styles/editorial-magazine.md"
+    },
+    {
+      "id": "style.fashion-editorial-didone",
+      "axis": "style",
+      "name": "Fashion Editorial / Didone",
+      "aliases": [
+        "fashion editorial",
+        "didone",
+        "bodoni style",
+        "vogue style",
+        "runway editorial",
+        "high fashion layout",
+        "magazine luxury"
+      ],
+      "summary": "High-contrast Didone display type, vast white space, full-bleed fashion photography and hairline rules, in the lineage of Harper's Bazaar and Vogue; luxury through restraint, scale and crop.",
+      "tags": [
+        "fashion",
+        "didone",
+        "bodoni",
+        "editorial",
+        "luxury",
+        "serif",
+        "high-contrast",
+        "photography",
+        "whitespace",
+        "magazine"
+      ],
+      "pairs_with": [
+        "industry.fashion-apparel",
+        "industry.beauty-cosmetics",
+        "industry.luxury-goods",
+        "archetype.lover",
+        "archetype.creator",
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "audience.affluent-hnwi",
+        "channel.print-collateral",
+        "channel.ecommerce-store"
+      ],
+      "avoid_with": [
+        "tier.value",
+        "industry.government-civic",
+        "audience.low-literacy-plain-language",
+        "audience.low-bandwidth-entry-devices",
+        "archetype.everyperson",
+        "channel.web-app"
+      ],
+      "path": "styles/fashion-editorial-didone.md"
+    },
+    {
+      "id": "style.flat-material",
+      "axis": "style",
+      "name": "Flat / Material",
+      "aliases": [
+        "flat design",
+        "material design",
+        "material 3",
+        "material you",
+        "material expressive",
+        "google material",
+        "android design language"
+      ],
+      "summary": "Color-field, ornament-free flat design plus Google's Material system with tonal color, state layers, tiered elevation and spring motion; a predictable, highly implementable look for apps and tools.",
+      "tags": [
+        "flat",
+        "material",
+        "material-3",
+        "android",
+        "tonal",
+        "elevation",
+        "ui-kit",
+        "buttons",
+        "google",
+        "systematic"
+      ],
+      "pairs_with": [
+        "channel.native-app",
+        "channel.web-app",
+        "industry.saas-b2b",
+        "industry.marketplaces-platforms",
+        "audience.low-bandwidth-entry-devices",
+        "market.india-south-asia",
+        "market.southeast-asia",
+        "market.sub-saharan-africa",
+        "tier.value",
+        "archetype.everyperson"
+      ],
+      "avoid_with": [
+        "tier.ultra-luxury",
+        "tier.luxury",
+        "archetype.lover",
+        "industry.luxury-goods",
+        "industry.fashion-apparel"
+      ],
+      "path": "styles/flat-material.md"
+    },
+    {
+      "id": "style.glass-spatial",
+      "axis": "style",
+      "name": "Glass and Spatial UI",
+      "aliases": [
+        "glassmorphism",
+        "liquid glass",
+        "visionos glass",
+        "frosted glass",
+        "spatial ui",
+        "translucent ui",
+        "vibrancy",
+        "apple glass"
+      ],
+      "summary": "Translucent, layered interfaces from glassmorphism to visionOS glass and Apple's 2025 Liquid Glass; blur, light and depth build hierarchy, but legibility rules decide whether it works.",
+      "tags": [
+        "glass",
+        "translucent",
+        "blur",
+        "liquid-glass",
+        "visionos",
+        "spatial",
+        "depth",
+        "apple",
+        "vibrancy",
+        "frosted"
+      ],
+      "pairs_with": [
+        "channel.native-app",
+        "industry.ai-products",
+        "industry.automotive-mobility",
+        "industry.digital-health-wellness",
+        "industry.media-entertainment-streaming",
+        "archetype.magician",
+        "tier.premium",
+        "channel.video-motion"
+      ],
+      "avoid_with": [
+        "audience.low-bandwidth-entry-devices",
+        "audience.older-adults",
+        "audience.disability-accessibility-first",
+        "industry.government-civic",
+        "channel.print-collateral",
+        "channel.email"
+      ],
+      "path": "styles/glass-spatial.md"
+    },
+    {
+      "id": "style.grunge-punk-zine",
+      "axis": "style",
+      "name": "Grunge / Punk / DIY Zine",
+      "aliases": [
+        "punk",
+        "zine",
+        "diy",
+        "photocopy",
+        "xerox",
+        "ransom note",
+        "grunge",
+        "cut and paste",
+        "riot grrrl",
+        "underground press"
+      ],
+      "summary": "Photocopied, cut-and-paste, hand-made graphics - ransom-note lettering, torn paper, tape, marker scrawl, black-and-white with fluorescent hits; urgency, authenticity and refusal of polish.",
+      "tags": [
+        "punk",
+        "zine",
+        "grunge",
+        "diy",
+        "collage",
+        "photocopy",
+        "raw",
+        "underground"
+      ],
+      "pairs_with": [
+        "industry.media-entertainment-streaming",
+        "industry.fashion-apparel",
+        "industry.creative-agencies-studios",
+        "industry.nonprofit-ngo",
+        "audience.teens-gen-z",
+        "archetype.outlaw",
+        "archetype.creator",
+        "channel.social-media",
+        "channel.print-collateral",
+        "channel.ooh-signage"
+      ],
+      "avoid_with": [
+        "industry.fintech-banking",
+        "industry.healthcare-provider",
+        "industry.insurance",
+        "tier.luxury",
+        "archetype.ruler",
+        "archetype.caregiver"
+      ],
+      "path": "styles/grunge-punk-zine.md"
+    },
+    {
+      "id": "style.handcrafted-organic",
+      "axis": "style",
+      "name": "Handcrafted / Organic",
+      "aliases": [
+        "handmade",
+        "hand-drawn",
+        "artisan",
+        "craft",
+        "organic shapes",
+        "earthy",
+        "folk",
+        "arts and crafts",
+        "hand lettered",
+        "natural"
+      ],
+      "summary": "Warm, imperfect and human-made - hand-drawn lines, soft wobbly shapes, earthy dyes, paper and linen textures and a friendly soft serif; the maker's hand is visible and trusted.",
+      "tags": [
+        "handmade",
+        "organic",
+        "artisan",
+        "hand-drawn",
+        "earthy",
+        "warm",
+        "craft",
+        "textured"
+      ],
+      "pairs_with": [
+        "industry.food-beverage-cpg",
+        "industry.restaurants-hospitality",
+        "industry.beauty-cosmetics",
+        "industry.ecommerce-dtc",
+        "industry.nonprofit-ngo",
+        "archetype.caregiver",
+        "archetype.innocent",
+        "archetype.creator",
+        "tier.premium",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "industry.developer-tools",
+        "industry.crypto-web3",
+        "industry.logistics-supply-chain",
+        "audience.expert-power-users"
+      ],
+      "path": "styles/handcrafted-organic.md"
+    },
+    {
+      "id": "style.illustrative-narrative",
+      "axis": "style",
+      "name": "Illustrative / Narrative",
+      "aliases": [
+        "illustration-led",
+        "storybook",
+        "editorial illustration",
+        "hand-drawn brand",
+        "narrative design",
+        "picture book style",
+        "scrollytelling illustration"
+      ],
+      "summary": "Illustration carries the story and the brand through a consistent hand-made world of characters, scenes and lettering on warm paper tones, with type and layout supporting the narrative.",
+      "tags": [
+        "illustration",
+        "storybook",
+        "narrative",
+        "hand-drawn",
+        "warm",
+        "characters",
+        "editorial",
+        "scenes",
+        "lettering",
+        "story"
+      ],
+      "pairs_with": [
+        "industry.education-edtech",
+        "industry.kids-family",
+        "industry.nonprofit-ngo",
+        "industry.food-beverage-cpg",
+        "industry.hotels-travel",
+        "archetype.creator",
+        "archetype.innocent",
+        "archetype.explorer",
+        "channel.packaging",
+        "channel.marketing-website"
+      ],
+      "avoid_with": [
+        "industry.logistics-supply-chain",
+        "audience.expert-power-users",
+        "channel.web-app",
+        "industry.legal-professional-services"
+      ],
+      "path": "styles/illustrative-narrative.md"
+    },
+    {
+      "id": "style.kinetic-experimental-type",
+      "axis": "style",
+      "name": "Kinetic / Experimental Typography",
+      "aliases": [
+        "kinetic type",
+        "experimental typography",
+        "variable font motion",
+        "type-as-image",
+        "expressive typography",
+        "moving type",
+        "typographic motion"
+      ],
+      "summary": "Letterforms as the main image and behavior, using variable-font axes, scale extremes and motion that respond to scroll, pointer or sound, with a readable resting state and disciplined limits.",
+      "tags": [
+        "kinetic",
+        "typography",
+        "experimental",
+        "variable-fonts",
+        "motion",
+        "type-as-image",
+        "expressive",
+        "scroll",
+        "animation",
+        "poster"
+      ],
+      "pairs_with": [
+        "industry.creative-agencies-studios",
+        "industry.events-conferences",
+        "industry.media-entertainment-streaming",
+        "industry.fashion-apparel",
+        "archetype.magician",
+        "archetype.creator",
+        "archetype.outlaw",
+        "channel.video-motion",
+        "channel.marketing-website",
+        "channel.ooh-signage"
+      ],
+      "avoid_with": [
+        "audience.older-adults",
+        "audience.disability-accessibility-first",
+        "audience.neurodivergent",
+        "audience.low-bandwidth-entry-devices",
+        "industry.healthcare-provider",
+        "industry.government-civic"
+      ],
+      "path": "styles/kinetic-experimental-type.md"
+    },
+    {
+      "id": "style.maximalist-eclectic",
+      "axis": "style",
+      "name": "Maximalist / Eclectic",
+      "aliases": [
+        "maximalism",
+        "more is more",
+        "eclectic",
+        "pattern clash",
+        "jewel box",
+        "layered",
+        "curated chaos",
+        "kitchen sink design"
+      ],
+      "summary": "Controlled abundance - jewel colors, clashing patterns, layered type and imagery, mixed eras and shapes, held together by one repeated device; richness, humor and personality over restraint.",
+      "tags": [
+        "maximalist",
+        "eclectic",
+        "pattern",
+        "jewel-tones",
+        "layered",
+        "ornate",
+        "colorful",
+        "bold"
+      ],
+      "pairs_with": [
+        "industry.fashion-apparel",
+        "industry.restaurants-hospitality",
+        "industry.hotels-travel",
+        "industry.events-conferences",
+        "industry.beauty-cosmetics",
+        "archetype.jester",
+        "archetype.creator",
+        "archetype.magician",
+        "channel.packaging",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "industry.government-civic",
+        "industry.healthcare-provider",
+        "audience.neurodivergent",
+        "audience.low-bandwidth-entry-devices",
+        "audience.older-adults",
+        "channel.web-app"
+      ],
+      "path": "styles/maximalist-eclectic.md"
+    },
+    {
+      "id": "style.memphis-postmodern",
+      "axis": "style",
+      "name": "Memphis / Postmodern",
+      "aliases": [
+        "memphis",
+        "memphis milano",
+        "memphis group",
+        "80s postmodern",
+        "postmodernism",
+        "squiggle and confetti",
+        "terrazzo pop"
+      ],
+      "summary": "Playful 1980s postmodern geometry - squiggles, zigzags, confetti and terrazzo patterns, pastel-and-primary clashes, tilted shapes and wide geometric type; deliberate bad taste made joyful.",
+      "tags": [
+        "memphis",
+        "postmodern",
+        "playful",
+        "patterns",
+        "geometric",
+        "80s",
+        "colorful",
+        "shapes"
+      ],
+      "pairs_with": [
+        "industry.kids-family",
+        "industry.education-edtech",
+        "industry.food-beverage-cpg",
+        "industry.events-conferences",
+        "industry.creative-agencies-studios",
+        "audience.teens-gen-z",
+        "archetype.jester",
+        "archetype.creator",
+        "channel.packaging",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "industry.legal-professional-services",
+        "industry.healthcare-provider",
+        "tier.luxury",
+        "archetype.ruler",
+        "audience.neurodivergent",
+        "industry.insurance"
+      ],
+      "path": "styles/memphis-postmodern.md"
+    },
+    {
+      "id": "style.mid-century-modern",
+      "axis": "style",
+      "name": "Mid-Century Modern",
+      "aliases": [
+        "mcm",
+        "midcentury",
+        "atomic age",
+        "eames era",
+        "1950s modern",
+        "mad men style",
+        "cut-paper modernism"
+      ],
+      "summary": "Optimistic postwar modernism - organic and geometric shapes, cut-paper illustration, warm walnut, teal and burnt-orange palettes, and friendly gothic and slab type from c. 1945-1969.",
+      "tags": [
+        "midcentury",
+        "atomic",
+        "retro",
+        "organic-shapes",
+        "warm",
+        "cut-paper",
+        "1950s",
+        "modernist"
+      ],
+      "pairs_with": [
+        "industry.real-estate-proptech",
+        "industry.ecommerce-dtc",
+        "industry.restaurants-hospitality",
+        "industry.hotels-travel",
+        "archetype.creator",
+        "archetype.everyperson",
+        "tier.mid-market",
+        "tier.premium",
+        "channel.ecommerce-store",
+        "market.united-states"
+      ],
+      "avoid_with": [
+        "industry.gaming-esports",
+        "industry.crypto-web3",
+        "archetype.outlaw"
+      ],
+      "path": "styles/mid-century-modern.md"
+    },
+    {
+      "id": "style.neo-brutalist",
+      "axis": "style",
+      "name": "Neo-Brutalism",
+      "aliases": [
+        "neubrutalism",
+        "neobrutalism",
+        "neo brutalist ui",
+        "hard shadow ui",
+        "gumroad style",
+        "chunky outline ui"
+      ],
+      "summary": "Friendly, loud interfaces - thick black outlines, hard offset shadows, flat pastel and saturated fills, chunky grotesque type and snappy press states; playful structure, still highly legible.",
+      "tags": [
+        "neo-brutalist",
+        "thick-borders",
+        "hard-shadow",
+        "flat",
+        "playful",
+        "bold",
+        "ui",
+        "pastel"
+      ],
+      "pairs_with": [
+        "industry.saas-b2b",
+        "industry.developer-tools",
+        "industry.fintech-banking",
+        "industry.ecommerce-dtc",
+        "industry.creative-agencies-studios",
+        "audience.teens-gen-z",
+        "archetype.everyperson",
+        "archetype.jester",
+        "channel.marketing-website",
+        "tier.mid-market"
+      ],
+      "avoid_with": [
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "industry.healthcare-provider",
+        "industry.insurance",
+        "audience.older-adults",
+        "industry.legal-professional-services"
+      ],
+      "path": "styles/neo-brutalist.md"
+    },
+    {
+      "id": "style.playful-bubbly",
+      "axis": "style",
+      "name": "Playful / Bubbly",
+      "aliases": [
+        "playful",
+        "bubbly",
+        "friendly rounded",
+        "chunky ui",
+        "kawaii-adjacent",
+        "duolingo style",
+        "sticker ui",
+        "bouncy ui"
+      ],
+      "summary": "Round, chunky, saturated and bouncy, with pill buttons, blob shapes, mascots and springy motion that make products feel friendly and easy, provided contrast and seriousness are managed.",
+      "tags": [
+        "playful",
+        "bubbly",
+        "rounded",
+        "friendly",
+        "colorful",
+        "kids",
+        "mascot",
+        "chunky",
+        "bouncy",
+        "fun"
+      ],
+      "pairs_with": [
+        "industry.kids-family",
+        "industry.education-edtech",
+        "industry.food-beverage-cpg",
+        "audience.children-under-13",
+        "audience.teens-gen-z",
+        "archetype.jester",
+        "archetype.innocent",
+        "channel.native-app",
+        "channel.social-media",
+        "tier.value"
+      ],
+      "avoid_with": [
+        "tier.luxury",
+        "tier.ultra-luxury",
+        "industry.legal-professional-services",
+        "industry.pharma-biotech",
+        "archetype.ruler",
+        "industry.insurance"
+      ],
+      "path": "styles/playful-bubbly.md"
+    },
+    {
+      "id": "style.quiet-minimal",
+      "axis": "style",
+      "name": "Quiet Minimal / Japandi",
+      "aliases": [
+        "japandi",
+        "wabi-sabi",
+        "muji style",
+        "zen minimalism",
+        "soft minimalism",
+        "calm minimal",
+        "ma",
+        "japanese minimalism"
+      ],
+      "summary": "Calm, warm minimalism - low-chroma paper and stone tones, soft mincho or gentle sans type, vast negative space and near-still motion; emptiness is the feature, not the absence of one.",
+      "tags": [
+        "minimal",
+        "japandi",
+        "wabi-sabi",
+        "calm",
+        "neutral",
+        "whitespace",
+        "warm",
+        "japanese"
+      ],
+      "pairs_with": [
+        "industry.digital-health-wellness",
+        "industry.beauty-cosmetics",
+        "industry.hotels-travel",
+        "industry.ecommerce-dtc",
+        "market.japan",
+        "archetype.sage",
+        "archetype.innocent",
+        "tier.premium",
+        "channel.native-app",
+        "channel.ecommerce-store"
+      ],
+      "avoid_with": [
+        "industry.gaming-esports",
+        "archetype.jester",
+        "audience.older-adults",
+        "audience.low-literacy-plain-language"
+      ],
+      "path": "styles/quiet-minimal.md"
+    },
+    {
+      "id": "style.retro-futurism-synthwave",
+      "axis": "style",
+      "name": "Retro-Futurism / Synthwave",
+      "aliases": [
+        "synthwave",
+        "outrun",
+        "retrowave",
+        "vaporwave-adjacent",
+        "80s neon",
+        "googie",
+        "space age",
+        "raygun gothic",
+        "tron style"
+      ],
+      "summary": "The 1980s imagining the future - neon magenta and cyan on deep violet, sunset gradients, perspective grids, chrome-and-italic type and scanlines; nostalgic night-drive energy with a space-age lineage.",
+      "tags": [
+        "synthwave",
+        "retrowave",
+        "neon",
+        "80s",
+        "grid",
+        "sunset",
+        "futuristic",
+        "nostalgia"
+      ],
+      "pairs_with": [
+        "industry.gaming-esports",
+        "industry.media-entertainment-streaming",
+        "industry.events-conferences",
+        "industry.automotive-mobility",
+        "industry.crypto-web3",
+        "archetype.explorer",
+        "archetype.outlaw",
+        "archetype.magician",
+        "channel.video-motion",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "industry.healthcare-provider",
+        "industry.government-civic",
+        "industry.insurance",
+        "audience.older-adults",
+        "audience.neurodivergent",
+        "tier.luxury"
+      ],
+      "path": "styles/retro-futurism-synthwave.md"
+    },
+    {
+      "id": "style.risograph-print-texture",
+      "axis": "style",
+      "name": "Risograph / Print Texture",
+      "aliases": [
+        "risograph",
+        "riso print",
+        "screenprint look",
+        "two-color print",
+        "grain texture",
+        "overprint",
+        "indie print aesthetic",
+        "duplicator print"
+      ],
+      "summary": "Limited fluorescent and spot inks overprinted on uncoated paper with grain, halftone and slight misregistration; a tactile, indie-print look that works best when built from real ink separations.",
+      "tags": [
+        "risograph",
+        "riso",
+        "print",
+        "grain",
+        "halftone",
+        "overprint",
+        "texture",
+        "spot-color",
+        "zine",
+        "limited-palette"
+      ],
+      "pairs_with": [
+        "industry.creative-agencies-studios",
+        "industry.events-conferences",
+        "industry.food-beverage-cpg",
+        "industry.nonprofit-ngo",
+        "archetype.creator",
+        "archetype.outlaw",
+        "audience.teens-gen-z",
+        "channel.print-collateral",
+        "channel.packaging",
+        "channel.social-media"
+      ],
+      "avoid_with": [
+        "industry.fintech-banking",
+        "industry.insurance",
+        "industry.pharma-biotech",
+        "tier.luxury",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "path": "styles/risograph-print-texture.md"
+    },
+    {
+      "id": "style.scandinavian-nordic",
+      "axis": "style",
+      "name": "Scandinavian / Nordic",
+      "aliases": [
+        "scandi",
+        "nordic design",
+        "scandinavian design",
+        "hygge",
+        "lagom",
+        "democratic design",
+        "nordic minimalism"
+      ],
+      "summary": "Light, functional and friendly - pale grounds, birch and fjord tones, humanist sans with a soft serif, rounded but restrained shapes and practical clarity; design for everyday life.",
+      "tags": [
+        "scandinavian",
+        "nordic",
+        "functional",
+        "light",
+        "friendly",
+        "humanist",
+        "wood",
+        "democratic"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.kids-family",
+        "industry.education-edtech",
+        "industry.digital-health-wellness",
+        "industry.government-civic",
+        "market.dach-nordics",
+        "archetype.everyperson",
+        "archetype.caregiver",
+        "tier.mid-market",
+        "channel.native-app"
+      ],
+      "avoid_with": [
+        "industry.gaming-esports",
+        "archetype.outlaw",
+        "tier.ultra-luxury"
+      ],
+      "path": "styles/scandinavian-nordic.md"
+    },
+    {
+      "id": "style.seventies-psychedelic-groovy",
+      "axis": "style",
+      "name": "70s Psychedelic / Groovy",
+      "aliases": [
+        "70s",
+        "groovy",
+        "psychedelic",
+        "retro seventies",
+        "cooper black style",
+        "earth tones retro",
+        "flower power",
+        "disco-era",
+        "1970s revival"
+      ],
+      "summary": "Warm, curvy 1960s-70s optimism - fat soft serifs, wavy bands, sunbursts and concentric arcs in avocado, harvest gold, burnt orange and plum; sensual, sunny and a little trippy.",
+      "tags": [
+        "70s",
+        "groovy",
+        "psychedelic",
+        "retro",
+        "warm",
+        "curvy",
+        "earth-tones",
+        "soft-serif"
+      ],
+      "pairs_with": [
+        "industry.food-beverage-cpg",
+        "industry.restaurants-hospitality",
+        "industry.media-entertainment-streaming",
+        "industry.events-conferences",
+        "industry.beauty-cosmetics",
+        "industry.fashion-apparel",
+        "archetype.lover",
+        "archetype.creator",
+        "archetype.jester",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "industry.legal-professional-services",
+        "industry.fintech-banking",
+        "audience.neurodivergent",
+        "industry.government-civic"
+      ],
+      "path": "styles/seventies-psychedelic-groovy.md"
+    },
+    {
+      "id": "style.skeuomorphic-tactile",
+      "axis": "style",
+      "name": "Skeuomorphic / Tactile",
+      "aliases": [
+        "skeuomorphism",
+        "skeuomorphic design",
+        "tactile ui",
+        "realistic ui",
+        "material realism",
+        "hardware ui",
+        "ios 6 style"
+      ],
+      "summary": "Interfaces modeled on real materials and devices (leather, brass, felt, knobs, switches) with consistent top lighting, bevels and texture so controls explain themselves by looking physical.",
+      "tags": [
+        "skeuomorphic",
+        "tactile",
+        "realistic",
+        "texture",
+        "leather",
+        "knobs",
+        "hardware",
+        "bevel",
+        "metaphor",
+        "audio"
+      ],
+      "pairs_with": [
+        "industry.media-entertainment-streaming",
+        "industry.gaming-esports",
+        "industry.food-beverage-cpg",
+        "audience.older-adults",
+        "audience.low-literacy-plain-language",
+        "archetype.creator",
+        "archetype.everyperson",
+        "channel.native-app",
+        "channel.packaging"
+      ],
+      "avoid_with": [
+        "industry.saas-b2b",
+        "industry.fintech-banking",
+        "audience.expert-power-users",
+        "audience.low-bandwidth-entry-devices",
+        "channel.email"
+      ],
+      "path": "styles/skeuomorphic-tactile.md"
+    },
+    {
+      "id": "style.soft-ui-neumorphic",
+      "axis": "style",
+      "name": "Soft UI / Neumorphism",
+      "aliases": [
+        "neumorphism",
+        "soft ui",
+        "new skeuomorphism",
+        "extruded ui",
+        "soft shadows ui",
+        "clay ui"
+      ],
+      "summary": "Monochrome surfaces extruded or pressed with paired light and dark shadows; tactile and calm, but a frequent AI default with weak contrast and affordance unless engineered carefully.",
+      "tags": [
+        "neumorphism",
+        "soft-ui",
+        "shadows",
+        "monochrome",
+        "tactile",
+        "extruded",
+        "minimal",
+        "rounded",
+        "controls"
+      ],
+      "pairs_with": [
+        "industry.digital-health-wellness",
+        "industry.automotive-mobility",
+        "archetype.caregiver",
+        "archetype.innocent",
+        "channel.native-app",
+        "tier.mid-market"
+      ],
+      "avoid_with": [
+        "audience.older-adults",
+        "audience.disability-accessibility-first",
+        "audience.low-literacy-plain-language",
+        "industry.fintech-banking",
+        "industry.healthcare-provider",
+        "channel.web-app"
+      ],
+      "path": "styles/soft-ui-neumorphic.md"
+    },
+    {
+      "id": "style.swiss-international",
+      "axis": "style",
+      "name": "Swiss / International Typographic Style",
+      "aliases": [
+        "swiss style",
+        "international typographic style",
+        "international style",
+        "grid modernism",
+        "swiss design"
+      ],
+      "summary": "Objective, grid-driven design with asymmetric layouts, grotesque sans-serif type, flat color and photography; clarity itself is the aesthetic.",
+      "tags": [
+        "grid",
+        "sans-serif",
+        "typographic",
+        "modernist",
+        "objective",
+        "asymmetric",
+        "flat",
+        "systematic"
+      ],
+      "pairs_with": [
+        "industry.fintech-banking",
+        "industry.saas-b2b",
+        "industry.legal-professional-services",
+        "industry.events-conferences",
+        "archetype.sage",
+        "archetype.ruler",
+        "channel.presentation",
+        "channel.environmental-wayfinding"
+      ],
+      "avoid_with": [
+        "audience.children-under-13",
+        "archetype.jester",
+        "style.maximalist-eclectic"
+      ],
+      "path": "styles/swiss-international.md"
+    },
+    {
+      "id": "style.vibrant-gradient-saas",
+      "axis": "style",
+      "name": "Vibrant Gradient / Aurora SaaS",
+      "aliases": [
+        "aurora gradient",
+        "mesh gradient",
+        "gradient saas",
+        "startup gradient",
+        "ai startup look",
+        "purple gradient",
+        "glow ui",
+        "gradient hero"
+      ],
+      "summary": "Luminous mesh or aurora gradients behind clean product UI to signal energy and innovation; a very common SaaS and AI default that needs controlled hues, solid text surfaces and a distinctive concept.",
+      "tags": [
+        "gradient",
+        "aurora",
+        "mesh",
+        "saas",
+        "startup",
+        "glow",
+        "vibrant",
+        "ai",
+        "hero",
+        "colorful"
+      ],
+      "pairs_with": [
+        "industry.saas-b2b",
+        "industry.ai-products",
+        "industry.developer-tools",
+        "industry.marketplaces-platforms",
+        "channel.marketing-website",
+        "channel.social-media",
+        "tier.mid-market",
+        "archetype.magician",
+        "audience.b2b-buying-committee"
+      ],
+      "avoid_with": [
+        "industry.healthcare-provider",
+        "industry.government-civic",
+        "industry.legal-professional-services",
+        "industry.insurance",
+        "audience.older-adults",
+        "archetype.sage"
+      ],
+      "path": "styles/vibrant-gradient-saas.md"
+    },
+    {
+      "id": "style.vintage-heritage-americana",
+      "axis": "style",
+      "name": "Vintage Heritage / Americana",
+      "aliases": [
+        "americana",
+        "heritage branding",
+        "vintage badge",
+        "letterpress americana",
+        "wood type poster",
+        "workwear heritage",
+        "craft heritage",
+        "rustic vintage"
+      ],
+      "summary": "Turn-of-the-century to mid-century American print craft - wood-type slabs, badges and banners, letterpress ink, cream paper and barn-red, navy and mustard; authenticity from specific, earned detail.",
+      "tags": [
+        "vintage",
+        "heritage",
+        "americana",
+        "letterpress",
+        "wood-type",
+        "badge",
+        "craft",
+        "retro"
+      ],
+      "pairs_with": [
+        "industry.food-beverage-cpg",
+        "industry.restaurants-hospitality",
+        "industry.automotive-mobility",
+        "industry.sports-fitness",
+        "industry.industrial-manufacturing-construction",
+        "archetype.everyperson",
+        "archetype.hero",
+        "archetype.explorer",
+        "channel.packaging",
+        "market.united-states"
+      ],
+      "avoid_with": [
+        "industry.ai-products",
+        "industry.crypto-web3",
+        "tier.ultra-luxury",
+        "archetype.magician"
+      ],
+      "path": "styles/vintage-heritage-americana.md"
+    },
+    {
+      "id": "style.web-brutalist",
+      "axis": "style",
+      "name": "Raw Web Brutalism",
+      "aliases": [
+        "brutalist web design",
+        "brutalist websites",
+        "raw html",
+        "anti-design",
+        "default web aesthetic",
+        "unstyled web",
+        "raw brutalism"
+      ],
+      "summary": "Deliberately raw websites - system fonts, browser-blue links, hard black-and-white blocks and visible structure; honesty and speed over polish. Niche and risky; needs usability scaffolding.",
+      "tags": [
+        "brutalist",
+        "raw",
+        "anti-design",
+        "html",
+        "monospace",
+        "default",
+        "stark",
+        "web"
+      ],
+      "pairs_with": [
+        "industry.creative-agencies-studios",
+        "industry.media-entertainment-streaming",
+        "industry.nonprofit-ngo",
+        "industry.developer-tools",
+        "archetype.outlaw",
+        "archetype.creator",
+        "channel.marketing-website",
+        "audience.expert-power-users",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [
+        "industry.healthcare-provider",
+        "industry.fintech-banking",
+        "tier.luxury",
+        "audience.older-adults",
+        "audience.children-under-13",
+        "archetype.caregiver"
+      ],
+      "path": "styles/web-brutalist.md"
+    },
+    {
+      "id": "style.y2k-cyber",
+      "axis": "style",
+      "name": "Y2K / Cyber",
+      "aliases": [
+        "y2k",
+        "frutiger aero",
+        "cybercore",
+        "millennium",
+        "chrome and gloss",
+        "aqua ui",
+        "2000s futurism",
+        "web 1.0 futurism"
+      ],
+      "summary": "Millennium-era techno-optimism - glossy aqua buttons, chrome and bubble forms, sci-fi extended type, translucent panels and acid accents on icy or void grounds; nostalgic, glossy, energetic.",
+      "tags": [
+        "y2k",
+        "cyber",
+        "chrome",
+        "glossy",
+        "aqua",
+        "futuristic",
+        "nostalgia",
+        "2000s"
+      ],
+      "pairs_with": [
+        "audience.teens-gen-z",
+        "industry.fashion-apparel",
+        "industry.beauty-cosmetics",
+        "industry.gaming-esports",
+        "industry.media-entertainment-streaming",
+        "industry.events-conferences",
+        "archetype.jester",
+        "archetype.explorer",
+        "channel.social-media",
+        "channel.video-motion"
+      ],
+      "avoid_with": [
+        "industry.healthcare-provider",
+        "industry.insurance",
+        "industry.government-civic",
+        "audience.older-adults",
+        "tier.luxury",
+        "audience.neurodivergent"
+      ],
+      "path": "styles/y2k-cyber.md"
+    },
+    {
+      "id": "tier.luxury",
+      "axis": "tier",
+      "name": "Luxury",
+      "aliases": [
+        "luxury",
+        "high luxury",
+        "maison",
+        "heritage brand",
+        "prestige",
+        "fine",
+        "haute",
+        "couture",
+        "high jewelry",
+        "designer"
+      ],
+      "summary": "Desire, heritage and craft over features; dramatic negative space, high-contrast serif type, black-ivory-metal palettes, slow motion and ceremonial packaging, with price withheld or understated.",
+      "tags": [
+        "luxury",
+        "heritage",
+        "craftsmanship",
+        "prestige",
+        "serif",
+        "negative space",
+        "ceremony",
+        "couture",
+        "maison",
+        "scarcity"
+      ],
+      "pairs_with": [
+        "industry.luxury-goods",
+        "industry.fashion-apparel",
+        "industry.beauty-cosmetics",
+        "industry.hotels-travel",
+        "style.classic-luxury-serif",
+        "style.fashion-editorial-didone",
+        "style.art-deco",
+        "archetype.lover",
+        "archetype.ruler",
+        "audience.affluent-hnwi"
+      ],
+      "avoid_with": [
+        "style.playful-bubbly",
+        "style.memphis-postmodern",
+        "style.data-dense-utilitarian",
+        "archetype.jester"
+      ],
+      "path": "tiers/luxury.md"
+    },
+    {
+      "id": "tier.mid-market",
+      "axis": "tier",
+      "name": "Mid-Market",
+      "aliases": [
+        "mid-market",
+        "mid tier",
+        "mainstream",
+        "middle market",
+        "accessible",
+        "everyday brand",
+        "smart choice",
+        "good value"
+      ],
+      "summary": "The reliable, friendly, worth-it middle; clear benefits, humanist type, soft corners, warm photography and proof of quality, with a distinct personality so the brand is not squeezed between tiers.",
+      "tags": [
+        "mid-market",
+        "mainstream",
+        "friendly",
+        "approachable",
+        "reliable",
+        "benefits",
+        "reviews",
+        "family",
+        "smart choice"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.saas-b2b",
+        "industry.food-beverage-cpg",
+        "industry.digital-health-wellness",
+        "industry.hotels-travel",
+        "style.corporate-modern",
+        "style.flat-material",
+        "style.playful-bubbly",
+        "archetype.everyperson",
+        "archetype.caregiver"
+      ],
+      "avoid_with": [
+        "style.fashion-editorial-didone",
+        "industry.luxury-goods"
+      ],
+      "path": "tiers/mid-market.md"
+    },
+    {
+      "id": "tier.premium",
+      "axis": "tier",
+      "name": "Premium",
+      "aliases": [
+        "premium",
+        "upscale",
+        "high-end",
+        "super-premium",
+        "considered",
+        "artisan",
+        "boutique",
+        "quality-led",
+        "design-led"
+      ],
+      "summary": "Quality made visible; restrained palettes, refined type, generous space and tactile materials let evidence of craft, ingredients and expertise justify a higher price without luxury theatrics.",
+      "tags": [
+        "premium",
+        "upscale",
+        "quality",
+        "craft",
+        "restrained",
+        "materials",
+        "editorial",
+        "design-led",
+        "considered"
+      ],
+      "pairs_with": [
+        "industry.beauty-cosmetics",
+        "industry.ecommerce-dtc",
+        "industry.food-beverage-cpg",
+        "industry.automotive-mobility",
+        "style.quiet-minimal",
+        "style.scandinavian-nordic",
+        "style.editorial-magazine",
+        "style.eco-natural-sustainable",
+        "archetype.creator",
+        "archetype.sage"
+      ],
+      "avoid_with": [
+        "style.data-dense-utilitarian",
+        "style.y2k-cyber"
+      ],
+      "path": "tiers/premium.md"
+    },
+    {
+      "id": "tier.ultra-luxury",
+      "axis": "tier",
+      "name": "Ultra-Luxury / Bespoke",
+      "aliases": [
+        "ultra-luxury",
+        "bespoke",
+        "quiet luxury",
+        "stealth wealth",
+        "haute",
+        "made to order",
+        "private client",
+        "invitation only",
+        "atelier"
+      ],
+      "summary": "Discretion over display; near-silent layouts, material-true palettes, small calm type, no prices or promotions and access by relationship, so the work and the service speak instead of the logo.",
+      "tags": [
+        "ultra-luxury",
+        "bespoke",
+        "quiet luxury",
+        "discretion",
+        "atelier",
+        "private client",
+        "made to order",
+        "provenance",
+        "minimal"
+      ],
+      "pairs_with": [
+        "industry.luxury-goods",
+        "industry.hotels-travel",
+        "industry.real-estate-proptech",
+        "industry.automotive-mobility",
+        "style.quiet-minimal",
+        "style.classic-luxury-serif",
+        "style.handcrafted-organic",
+        "archetype.ruler",
+        "archetype.creator",
+        "audience.affluent-hnwi"
+      ],
+      "avoid_with": [
+        "style.vibrant-gradient-saas",
+        "style.playful-bubbly",
+        "style.y2k-cyber",
+        "archetype.jester",
+        "archetype.everyperson"
+      ],
+      "path": "tiers/ultra-luxury.md"
+    },
+    {
+      "id": "tier.value",
+      "axis": "tier",
+      "name": "Value / Mass Market",
+      "aliases": [
+        "value",
+        "mass market",
+        "budget",
+        "discount",
+        "low price",
+        "economy",
+        "everyday low price",
+        "private label",
+        "hard discount"
+      ],
+      "summary": "Price is the hero; the design signals savings, clarity and speed with loud color, heavy sans type, big numerals and dense, honest layouts that stay disciplined rather than cheap-looking.",
+      "tags": [
+        "value",
+        "budget",
+        "discount",
+        "mass market",
+        "price-led",
+        "private label",
+        "promotional",
+        "utility",
+        "savings"
+      ],
+      "pairs_with": [
+        "industry.ecommerce-dtc",
+        "industry.food-beverage-cpg",
+        "industry.marketplaces-platforms",
+        "industry.fashion-apparel",
+        "style.flat-material",
+        "style.playful-bubbly",
+        "style.data-dense-utilitarian",
+        "style.bold-geometric-sport",
+        "archetype.everyperson",
+        "audience.low-bandwidth-entry-devices"
+      ],
+      "avoid_with": [
+        "style.classic-luxury-serif",
+        "style.fashion-editorial-didone",
+        "industry.luxury-goods",
+        "audience.affluent-hnwi"
+      ],
+      "path": "tiers/value.md"
+    }
+  ]
+}

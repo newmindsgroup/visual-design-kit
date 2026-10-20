@@ -19,7 +19,7 @@ An industry association is one input, not a palette assignment. For a new brand,
 
 ## Build relationships and roles
 
-Explore hue, lightness/value and chroma/saturation independently. Monochromatic, analogous, complementary, split-complementary and triadic arrangements are starting relationships, not finished systems. Evaluate actual compositions with realistic imagery and copy, not swatches alone. Decide the relative prominence of neutral, primary, secondary and accent colors from the brand and content; no universal accent percentage applies to every client.
+Explore hue, lightness/value and chroma/saturation independently. Monochromatic, analogous, complementary, split-complementary and triadic arrangements are starting relationships, not finished systems. Evaluate actual compositions with realistic imagery and copy, not swatches alone. Start the relative prominence of neutral, primary, secondary and accent colors from the proportions in [palette architecture](../../../skills/color/references/palette-architecture.md), then adjust them to the brand and content.
 
 Separate brand primitives from semantic roles: canvas/surface, primary/secondary text, border, action, link, focus, selected, hover/pressed, success, warning, error, information and disabled as needed. Specify light/dark or high-contrast variants only when in scope; dark mode is not simple inversion. For charts, distinguish categorical, sequential and diverging scales and supply non-color cues. Never use a decorative brand sequence as an untested data scale.
 

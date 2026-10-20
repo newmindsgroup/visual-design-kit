@@ -1,0 +1,172 @@
+{
+  "$description": "Dark mode, designed rather than inverted: near-black tinted canvas (neutral.950, not #000), surfaces get lighter as they rise (900, then 850), off-white text (neutral.100), and accents move to lighter, lower-saturation steps (300) with dark text on them.",
+  "$extensions": {
+    "com.github.newmindsgroup.vdk": {
+      "name": "Dark",
+      "colorScheme": "dark"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "bg": {
+      "canvas": {
+        "$value": "{color.neutral.950}",
+        "$description": "Page background behind everything."
+      },
+      "surface": {
+        "$value": "{color.neutral.900}",
+        "$description": "Default container: cards, panels, table rows, inputs."
+      },
+      "surface-raised": {
+        "$value": "{color.neutral.850}",
+        "$description": "Floating layers: menus, popovers, dialogs, toasts. In dark mode it is lighter than surface (elevation reads as lightness)."
+      },
+      "sunken": {
+        "$value": "{color.neutral.975}",
+        "$description": "Recessed wells: code blocks, table headers, disabled inputs, progress tracks."
+      },
+      "inverse": {
+        "$value": "{color.neutral.100}",
+        "$description": "Inverted surfaces: tooltips, snackbars."
+      }
+    },
+    "fg": {
+      "default": {
+        "$value": "{color.neutral.100}",
+        "$description": "Body text, headings, icons with meaning."
+      },
+      "muted": {
+        "$value": "{color.neutral.300}",
+        "$description": "Secondary text: captions, metadata, helper text. Still 4.5:1 (7:1 in high contrast)."
+      },
+      "subtle": {
+        "$value": "{color.neutral.400}",
+        "$description": "Placeholders and non-essential text only (3:1). Never for information the user needs."
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}",
+        "$description": "Text on bg-inverse."
+      },
+      "on-accent": {
+        "$value": "{color.neutral.950}",
+        "$description": "Text and icons on accent-default, accent-hover and accent-active fills."
+      }
+    },
+    "border": {
+      "subtle": {
+        "$value": "{color.neutral.800}",
+        "$description": "Decorative dividers and card outlines (no contrast requirement)."
+      },
+      "default": {
+        "$value": "{color.neutral.700}",
+        "$description": "Component borders where the border is not the only cue."
+      },
+      "strong": {
+        "$value": "{color.neutral.500}",
+        "$description": "Borders that identify a control (inputs, checkboxes, radio rings): 3:1 on canvas, WCAG 1.4.11."
+      }
+    },
+    "accent": {
+      "default": {
+        "$value": "{color.accent.300}",
+        "$description": "Primary action fill, selected and checked states, brand moments. Scarce: one primary per view."
+      },
+      "hover": {
+        "$value": "{color.accent.200}",
+        "$description": "Hover on accent fills."
+      },
+      "active": {
+        "$value": "{color.accent.100}",
+        "$description": "Pressed accent fills."
+      },
+      "subtle": {
+        "$value": "{color.accent.900}",
+        "$description": "Tinted background: selected rows, accent badges, highlighted callouts."
+      },
+      "fg": {
+        "$value": "{color.accent.300}",
+        "$description": "Accent text and icons: links, active navigation. 4.5:1 on canvas, surface and accent-subtle."
+      }
+    },
+    "success": {
+      "fg": {
+        "$value": "{color.green.300}",
+        "$description": "Success text and icons; 4.5:1 on Success-bg, canvas and surface."
+      },
+      "bg": {
+        "$value": "{color.green.900}",
+        "$description": "Success alert and badge background."
+      },
+      "border": {
+        "$value": "{color.green.500}",
+        "$description": "Success boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
+      }
+    },
+    "warning": {
+      "fg": {
+        "$value": "{color.amber.300}",
+        "$description": "Warning text and icons; 4.5:1 on Warning-bg, canvas and surface."
+      },
+      "bg": {
+        "$value": "{color.amber.900}",
+        "$description": "Warning alert and badge background."
+      },
+      "border": {
+        "$value": "{color.amber.500}",
+        "$description": "Warning boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
+      }
+    },
+    "danger": {
+      "fg": {
+        "$value": "{color.red.300}",
+        "$description": "Danger text and icons; 4.5:1 on Danger-bg, canvas and surface."
+      },
+      "bg": {
+        "$value": "{color.red.900}",
+        "$description": "Danger alert and badge background."
+      },
+      "border": {
+        "$value": "{color.red.500}",
+        "$description": "Danger boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
+      }
+    },
+    "info": {
+      "fg": {
+        "$value": "{color.blue.300}",
+        "$description": "Info text and icons; 4.5:1 on Info-bg, canvas and surface."
+      },
+      "bg": {
+        "$value": "{color.blue.900}",
+        "$description": "Info alert and badge background."
+      },
+      "border": {
+        "$value": "{color.blue.500}",
+        "$description": "Info boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
+      }
+    },
+    "focus-ring": {
+      "$value": "{color.accent.300}",
+      "$description": "Focus outline (2px, offset 2px): 3:1 against canvas, surface and raised surfaces."
+    },
+    "overlay-scrim": {
+      "$value": "{color.alpha.black-64}",
+      "$description": "Modal backdrop."
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "$description": "Elevation. Pair with surface-raised; in dark mode lightness carries elevation and shadows only separate edges.",
+    "sm": {
+      "$value": "{elevation.deep.sm}"
+    },
+    "md": {
+      "$value": "{elevation.deep.md}"
+    },
+    "lg": {
+      "$value": "{elevation.deep.lg}"
+    },
+    "xl": {
+      "$value": "{elevation.deep.xl}"
+    }
+  }
+}

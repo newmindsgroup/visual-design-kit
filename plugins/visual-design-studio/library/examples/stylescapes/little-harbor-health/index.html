@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Harbor: Night Light | Stylescape 02</title>
+<meta name="description" content="Stylescape for Little Harbor, a fictional pediatric telehealth service for parents of young kids. Playful-bubbly meets clinical-calm. Visual Design Kit calibration set.">
+<!--
+  Visual Design Kit stylescape calibration set, brand 2 of 12 (fictional brand).
+  Direction: Night Light (playful-bubbly shapes on a clinical-calm system).
+  Atlas: style.playful-bubbly, style.clinical-calm, industry.digital-health-wellness,
+         audience.children-under-13, archetype.caregiver, tier.mid-market, channel.marketing-website
+  Fonts: Fredoka (OFL 1.1) display, Atkinson Hyperlegible Next (OFL 1.1) body; ../fonts/.
+  Version-Timestamp: 2026-10-20 02:03:12 UTC
+  Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:03:12 UTC
+-->
+<style>
+@font-face { font-family: "Fredoka"; src: url("../fonts/fredoka/fredoka-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: "Atkinson Hyperlegible Next"; src: url("../fonts/atkinson-hyperlegible-next/atkinson-hyperlegible-next-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 200 800; font-display: swap; }
+
+/* ---------- Token contract mapped to the Little Harbor palette ---------- */
+:root {
+  --lh-ink: #14304F;
+  --lh-fog: #F2F7FA;
+  --lh-night: #12375E;
+  --lh-night-deep: #0C2845;
+  --lh-teal: #1F7A74;
+  --lh-lamp: #FFC845;
+  --lh-coral: #FF8364;
+  --lh-foam: #CFEDE4;
+  --lh-sky: #DCEBFA;
+  --lh-cream: #FFF6E3;
+
+  --color-bg-canvas: var(--lh-fog);
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #E4EDF3;
+  --color-bg-inverse: var(--lh-night);
+  --color-fg-default: var(--lh-ink);
+  --color-fg-muted: #4A6075;
+  --color-fg-subtle: #6E8396;
+  --color-fg-inverse: var(--lh-cream);
+  --color-fg-on-accent: #FFFFFF;
+  --color-border-subtle: #D3DEE7;
+  --color-border-default: #B8C7D4;
+  --color-border-strong: #6E8396;
+  --color-accent-default: var(--lh-teal);
+  --color-accent-hover: #17645F;
+  --color-accent-active: #11504C;
+  --color-accent-subtle: #D5F0EA;
+  --color-accent-fg: #155E59;
+  --color-success-fg: #1E6B45; --color-success-bg: #DDF3E6; --color-success-border: #1E6B45;
+  --color-warning-fg: #7A4A00; --color-warning-bg: #FFF1CC; --color-warning-border: #7A4A00;
+  --color-danger-fg: #B3261E;  --color-danger-bg: #FDE8E6;  --color-danger-border: #B3261E;
+  --color-info-fg: #1F4F87;    --color-info-bg: #E0EDFB;    --color-info-border: #1F4F87;
+  --color-focus-ring: var(--lh-teal);
+  --color-overlay-scrim: rgb(12 40 69 / 0.55);
+
+  --font-family-display: "Fredoka", "Nunito", ui-rounded, system-ui, sans-serif;
+  --font-family-body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.06em;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --lh-radius-blob: 28px;   /* brand extension: cards */
+  --lh-radius-hero: 48px;   /* brand extension: hero container */
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-sm: 0 1px 2px rgb(20 48 79 / 0.08);
+  --shadow-md: 0 6px 18px -6px rgb(20 48 79 / 0.18);
+  --shadow-lg: 0 18px 40px -16px rgb(20 48 79 / 0.28);
+  --shadow-xl: 0 30px 60px -24px rgb(12 40 69 / 0.45);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-linear: linear;
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.125rem; line-height: 1.55; overflow-x: hidden; }
+h1, h2, h3, h4, p, figure { margin: 0; }
+svg { display: block; }
+a { color: var(--color-accent-fg); }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; border-radius: 12px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 10; background: var(--lh-ink); color: #fff; padding: 10px 14px; border-radius: 12px; }
+.skip:focus { left: 8px; }
+.display { font-family: var(--font-family-display); font-weight: 600; letter-spacing: -0.005em; }
+
+#direction a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+/* ---------- 1. Direction ---------- */
+#direction { padding-block: var(--space-6); border-bottom: 1px solid var(--color-border-subtle); background: #fff; }
+#direction .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "brand brief" "chips chips"; gap: var(--space-3) var(--space-10); align-items: center; }
+.dir-brand { grid-area: brand; display: flex; align-items: center; gap: 12px; }
+.dir-brand svg { width: 40px; height: 40px; }
+.dir-brand b { font-family: var(--font-family-display); font-size: 1.5rem; font-weight: 600; display: block; line-height: 1.1; }
+.dir-brand span { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.dir-brief { grid-area: brief; justify-self: end; max-width: 62ch; color: var(--color-fg-muted); font-size: 0.9375rem; text-align: right; }
+.chips { grid-area: chips; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 0.8125rem; font-weight: 600; padding: 4px 12px; border-radius: 99px; background: var(--color-bg-sunken); color: var(--lh-ink); }
+.chips li:nth-child(-n+2) { background: var(--color-accent-subtle); color: var(--color-accent-fg); }
+
+/* ---------- 2. Hero ---------- */
+#hero { padding-bottom: var(--space-12); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-5); }
+.logo { display: flex; align-items: center; gap: 10px; color: var(--lh-ink); text-decoration: none; }
+.logo svg { width: 44px; height: 44px; }
+.logo span { font-family: var(--font-family-display); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.01em; }
+.nav ul { display: flex; gap: var(--space-8); list-style: none; padding: 0; margin: 0; font-weight: 600; font-size: 1rem; }
+.nav ul a { color: var(--lh-ink); text-decoration: none; padding: 10px 0; }
+.nav-actions { display: flex; gap: var(--space-3); align-items: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 99px; border: 2px solid transparent; font: 700 1.0625rem/1 var(--font-family-body); text-decoration: none; cursor: pointer; transition: background-color var(--duration-moderate) var(--ease-standard), transform var(--duration-moderate) var(--ease-standard), box-shadow var(--duration-moderate) var(--ease-standard); }
+.btn svg { width: 22px; height: 22px; }
+.btn--primary { background: var(--color-accent-default); color: #fff; box-shadow: 0 4px 0 0 var(--color-accent-active); }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--primary:active { transform: translateY(3px); box-shadow: 0 1px 0 0 var(--color-accent-active); }
+.btn--lamp { background: var(--lh-lamp); color: var(--lh-ink); box-shadow: 0 4px 0 0 #D9A21C; }
+.btn--lamp:hover { background: #FFD266; }
+.btn--ghost { background: transparent; border-color: currentColor; color: var(--lh-cream); }
+.btn--secondary { background: #fff; border-color: var(--color-accent-default); color: var(--color-accent-fg); }
+.btn--secondary:hover { background: var(--color-accent-subtle); }
+.btn--quiet { background: transparent; color: var(--lh-ink); padding: 0 14px; }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #4E6276; box-shadow: none; cursor: not-allowed; border-color: transparent; }
+.btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 4px; }
+
+.harbor {
+  --color-focus-ring: var(--lh-lamp);
+  position: relative;
+  border-radius: var(--lh-radius-hero);
+  background: radial-gradient(90% 80% at 72% 0%, #1D4E7E 0%, var(--lh-night) 48%, var(--lh-night-deep) 100%);
+  color: var(--lh-cream);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  min-height: 720px;
+  isolation: isolate;
+}
+.scene-art { position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; z-index: -1; }
+.harbor-copy { padding: clamp(2rem, 5vw, 4.5rem); padding-right: 0; padding-bottom: clamp(6rem, 10vw, 9rem); align-self: center; position: relative; }
+.live { display: inline-flex; align-items: center; gap: 10px; background: rgb(255 246 227 / 0.1); border: 1px solid rgb(255 246 227 / 0.28); border-radius: 99px; padding: 6px 14px 6px 10px; font-size: 0.9375rem; font-weight: 600; }
+.live i { width: 10px; height: 10px; border-radius: 50%; background: #7BE0B2; box-shadow: 0 0 0 4px rgb(123 224 178 / 0.2); }
+.harbor h1 { font-family: var(--font-family-display); font-weight: 600; font-size: clamp(2.75rem, 5.4vw, 5rem); line-height: 1.0; letter-spacing: -0.012em; margin-top: var(--space-6); text-wrap: balance; }
+.harbor h1 em { font-style: normal; color: var(--lh-lamp); }
+.harbor .lede { margin-top: var(--space-6); font-size: clamp(1.125rem, 1.4vw, 1.3125rem); line-height: 1.5; color: #DCE6F0; max-width: 40ch; }
+.harbor .ctas { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8); }
+.harbor .facts { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-8); padding: 0; list-style: none; font-size: 0.9375rem; color: #DCE6F0; }
+.harbor .facts li { display: flex; align-items: center; gap: 8px; }
+.harbor .facts svg { width: 20px; height: 20px; color: var(--lh-lamp); }
+.scene { position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: clamp(1rem, 3vw, 2.5rem); }
+.beam { transform-origin: 770px 300px; animation: sweep 9s var(--ease-linear) infinite alternate; }
+@keyframes sweep { from { transform: rotate(-10deg); } to { transform: rotate(8deg); } }
+.boat { animation: bob 4.8s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes bob { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(6px) rotate(2deg); } }
+.twinkle { animation: tw 3.6s ease-in-out infinite alternate; }
+.twinkle:nth-of-type(2n) { animation-delay: -1.2s; }
+@keyframes tw { from { opacity: 0.35; } to { opacity: 1; } }
+
+.visit {
+  position: relative; z-index: 3;
+  width: min(360px, 100%);
+  background: #fff; color: var(--lh-ink);
+  border-radius: 28px; padding: 18px 18px 18px;
+  box-shadow: var(--shadow-xl);
+}
+.visit-top { display: flex; justify-content: space-between; align-items: center; font-size: 0.8125rem; font-weight: 700; color: var(--color-fg-muted); }
+.visit-top .tag { display: inline-flex; align-items: center; gap: 6px; background: var(--color-success-bg); color: var(--color-success-fg); border-radius: 99px; padding: 3px 10px; }
+.visit-top .tag i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.doc { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; margin-top: 12px; }
+.doc svg { width: 56px; height: 56px; }
+.doc b { font-family: var(--font-family-display); font-weight: 600; font-size: 1.1875rem; display: block; line-height: 1.15; }
+.doc span { font-size: 0.875rem; color: var(--color-fg-muted); }
+.for { margin-top: 14px; background: var(--lh-fog); border-radius: 18px; padding: 10px 14px; font-size: 0.9375rem; display: grid; gap: 2px; }
+.for b { font-weight: 700; }
+.queue { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 0.9375rem; font-weight: 600; }
+.queue .bar { flex: 1; height: 10px; border-radius: 99px; background: var(--color-bg-sunken); overflow: hidden; }
+.queue .bar i { display: block; width: 82%; height: 100%; border-radius: 99px; background: var(--lh-teal); }
+.visit .btn { width: 100%; margin-top: 14px; min-height: 50px; }
+
+.treat { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-8); }
+.treat > span { font-weight: 700; margin-right: var(--space-2); }
+.treat ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.treat li { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 8px; background: #fff; border-radius: 99px; font-weight: 600; font-size: 1rem; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border-subtle); }
+.treat li i { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; }
+.treat li svg { width: 20px; height: 20px; }
+
+/* ---------- Sections ---------- */
+.sec { padding-block: clamp(4rem, 8vw, 7rem); }
+.sec + .sec { border-top: 1px solid var(--color-border-subtle); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: end; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.sec-head h2 { display: flex; align-items: center; gap: 16px; font-family: var(--font-family-display); font-weight: 600; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.05; letter-spacing: -0.01em; }
+.bubble { flex: none; width: 1.3em; height: 1.3em; border-radius: 50%; display: grid; place-items: center; font-size: 0.5em; font-weight: 600; background: var(--lh-night); color: var(--lh-lamp); }
+.sec-head p { color: var(--color-fg-muted); max-width: 52ch; justify-self: end; }
+
+/* Palette: pebbles */
+.pebbles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
+.pebble { display: grid; gap: 14px; }
+.pebble .shape { aspect-ratio: 1.25; border-radius: 58% 42% 52% 48% / 52% 46% 54% 48%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px 22px; font-family: var(--font-family-display); font-weight: 600; font-size: 1.5rem; box-shadow: inset 0 -10px 0 0 rgb(0 0 0 / 0.06); }
+.pebble:nth-child(2n) .shape { border-radius: 46% 54% 40% 60% / 56% 44% 56% 44%; }
+.pebble:nth-child(3n) .shape { border-radius: 62% 38% 48% 52% / 44% 58% 42% 56%; }
+.pebble dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 0.9375rem; }
+.pebble dt { color: var(--color-fg-muted); }
+.pebble dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.pebble .role { font-weight: 700; font-size: 1rem; }
+.ok { display: inline-block; font-size: 0.75rem; font-weight: 700; border-radius: 99px; padding: 1px 8px; background: var(--color-success-bg); color: var(--color-success-fg); margin-left: 4px; }
+.ok.ui { background: var(--color-warning-bg); color: var(--color-warning-fg); }
+.note { margin-top: var(--space-8); background: #fff; border-radius: var(--lh-radius-blob); padding: 20px 24px; font-size: 1rem; color: var(--color-fg-muted); max-width: 90ch; }
+
+/* Type */
+.type-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: var(--space-6); }
+.card { background: #fff; border-radius: var(--lh-radius-blob); padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: var(--shadow-md); }
+.card + .card { margin-top: var(--space-6); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--space-5); }
+.meta span { font-size: 0.8125rem; font-weight: 600; background: var(--color-bg-sunken); border-radius: 99px; padding: 3px 10px; color: var(--color-fg-muted); }
+.t-display { font-family: var(--font-family-display); font-weight: 600; font-size: clamp(2.75rem, 5.4vw, 4.75rem); line-height: 1.02; letter-spacing: -0.012em; text-wrap: balance; }
+.t-h2 { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; margin-top: var(--space-6); text-wrap: balance; color: var(--color-accent-fg); }
+.t-body { font-size: 1.125rem; line-height: 1.6; max-width: 62ch; }
+.t-body + .t-body { margin-top: var(--space-3); }
+.t-caption { font-size: 0.875rem; line-height: 1.45; color: var(--color-fg-muted); }
+.glyphs { font-family: var(--font-family-body); font-size: 2.5rem; line-height: 1.2; letter-spacing: 0.04em; margin-bottom: var(--space-3); }
+.glyphs span { color: var(--color-accent-fg); }
+
+/* Components */
+.comp-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); }
+.comp-grid > .card { margin: 0; }
+.c-buttons { grid-column: span 7; }
+.c-input { grid-column: span 5; grid-row: span 2; }
+.c-card { grid-column: span 7; }
+.c-badges { grid-column: 1 / -1; }
+.card h3 { font-family: var(--font-family-display); font-weight: 600; font-size: 1.25rem; margin-bottom: var(--space-5); }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-6) var(--space-5); align-items: flex-start; }
+.btn-cap { display: grid; gap: 10px; justify-items: start; font-size: 0.875rem; color: var(--color-fg-muted); }
+.field { display: grid; gap: 6px; }
+.field + .field { margin-top: var(--space-6); }
+.field label { font-weight: 700; font-size: 1.0625rem; }
+.field .hint { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.input { min-height: 56px; border: 2px solid var(--color-border-strong); border-radius: 18px; padding: 0 18px; font: 400 1.125rem var(--font-family-body); color: var(--lh-ink); background: #fff; width: 100%; }
+.input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; border-color: var(--lh-teal); }
+.field--error .input { border-color: var(--color-danger-fg); }
+.err { display: flex; gap: 10px; align-items: flex-start; background: var(--color-danger-bg); color: var(--color-danger-fg); border-radius: 14px; padding: 10px 14px; font-size: 0.9375rem; font-weight: 600; }
+.err svg { flex: none; width: 20px; height: 20px; margin-top: 2px; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.seg label { display: grid; place-items: center; min-height: 52px; border: 2px solid var(--color-border-strong); border-radius: 16px; font-weight: 600; cursor: pointer; }
+.seg input { position: absolute; opacity: 0; }
+.seg input:checked + label { background: var(--color-accent-subtle); border-color: var(--lh-teal); color: var(--color-accent-fg); }
+.visit-item { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; padding: 14px; border-radius: 22px; background: var(--lh-fog); }
+.visit-item + .visit-item { margin-top: 12px; }
+.visit-item .av { width: 52px; height: 52px; }
+.visit-item b { display: block; font-weight: 700; }
+.visit-item .sub { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.visit-item .go { width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; color: var(--lh-teal); }
+.visit-item .go svg { width: 22px; height: 22px; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.badge { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 14px; border-radius: 99px; font-size: 0.9375rem; font-weight: 700; }
+.badge svg { width: 16px; height: 16px; }
+.b-teal { background: var(--color-accent-subtle); color: var(--color-accent-fg); }
+.b-lamp { background: #FFF1CC; color: #7A4A00; }
+.b-sky { background: var(--color-info-bg); color: var(--color-info-fg); }
+.b-coral { background: #FFE2D9; color: #9C3A22; }
+.b-night { background: var(--lh-night); color: var(--lh-cream); }
+.b-ok { background: var(--color-success-bg); color: var(--color-success-fg); }
+
+/* Applications */
+#applications { background: var(--lh-sky); }
+.apps { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.device { width: 340px; border-radius: 48px; background: var(--lh-ink); padding: 12px; box-shadow: var(--shadow-xl); }
+.screen { border-radius: 38px; background: #fff; overflow: hidden; height: 690px; display: flex; flex-direction: column; }
+.s-status { display: flex; justify-content: space-between; padding: 14px 26px 6px; font-size: 0.8125rem; font-weight: 700; }
+.s-head { display: flex; align-items: center; justify-content: space-between; padding: 8px 18px; }
+.s-head .back { width: 44px; height: 44px; border-radius: 50%; background: var(--lh-fog); display: grid; place-items: center; }
+.s-head .back svg { width: 20px; height: 20px; }
+.steps { display: flex; gap: 6px; }
+.steps i { width: 26px; height: 8px; border-radius: 99px; background: var(--color-bg-sunken); }
+.steps i.on { background: var(--lh-teal); }
+.s-body { padding: 6px 22px 0; flex: 1; display: flex; flex-direction: column; }
+.s-body h3 { font-family: var(--font-family-display); font-weight: 600; font-size: 1.75rem; line-height: 1.1; }
+.s-body p { font-size: 0.9375rem; color: var(--color-fg-muted); margin-top: 6px; }
+.body-map { position: relative; margin: 10px auto 0; width: 210px; height: 270px; }
+.body-map svg { width: 100%; height: 100%; }
+.sym { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.sym span { min-height: 40px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 99px; border: 2px solid var(--color-border-strong); font-size: 0.875rem; font-weight: 700; }
+.sym span.on { background: var(--color-accent-subtle); border-color: var(--lh-teal); color: var(--color-accent-fg); }
+.s-cta { margin: auto 18px 18px; }
+.s-cta .btn { width: 100%; }
+.badge-sheet { background: #fff; border-radius: 40px; padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: var(--shadow-lg); }
+.badge-sheet h3 { font-family: var(--font-family-display); font-weight: 600; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.05; }
+.badge-sheet > p { color: var(--color-fg-muted); margin-top: 8px; max-width: 48ch; }
+.stickers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-6); }
+.stickers figure { display: grid; justify-items: center; gap: 8px; text-align: center; font-weight: 700; font-size: 0.9375rem; }
+.stickers svg { width: 100%; max-width: 150px; height: auto; filter: drop-shadow(0 6px 10px rgb(20 48 79 / 0.18)); }
+.email { margin-top: var(--space-6); border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-subtle); }
+.email-top { background: var(--lh-night); color: var(--lh-cream); padding: 18px 22px; display: flex; align-items: center; gap: 12px; }
+.email-top svg { width: 36px; height: 36px; }
+.email-top b { font-family: var(--font-family-display); font-weight: 600; font-size: 1.25rem; }
+.email-body { background: #fff; padding: 18px 22px; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+.email-body p { font-size: 1rem; }
+.email-body small { display: block; color: var(--color-fg-muted); font-size: 0.875rem; }
+
+/* Imagery */
+.img-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-10); align-items: start; }
+.img-copy p { font-size: 1.125rem; max-width: 54ch; }
+.img-copy p + p { margin-top: var(--space-4); }
+.icon-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
+.icon-row figure { display: grid; justify-items: center; gap: 8px; font-size: 0.875rem; font-weight: 600; color: var(--color-fg-muted); text-align: center; }
+.icon-row .ic { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; color: var(--lh-ink); }
+.icon-row .ic svg { width: 34px; height: 34px; }
+.illo { border-radius: 40px; overflow: hidden; background: var(--lh-foam); }
+.illo svg { width: 100%; height: auto; }
+
+/* Motion */
+.motion-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); align-items: stretch; }
+.mlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.mlist li { background: #fff; border-radius: 22px; padding: 16px 20px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; }
+.mlist b { font-weight: 700; }
+.mlist code { grid-column: 1 / -1; font-family: var(--font-family-mono); font-size: 0.8125rem; color: var(--color-fg-muted); }
+.mlist .d { font-weight: 700; color: var(--color-accent-fg); font-variant-numeric: tabular-nums; }
+.breathe-stage { border-radius: 40px; background: var(--lh-night); color: var(--lh-cream); display: grid; place-items: center; min-height: 380px; position: relative; overflow: hidden; text-align: center; padding: 2rem; }
+.breathe { position: relative; width: 190px; height: 190px; display: grid; place-items: center; }
+.breathe i { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgb(255 200 69 / 0.6); animation: ripple 4s var(--ease-decelerate) infinite; }
+.breathe i:nth-child(2) { animation-delay: 1.33s; }
+.breathe i:nth-child(3) { animation-delay: 2.66s; }
+.breathe span { position: relative; width: 120px; height: 120px; border-radius: 50%; background: var(--lh-lamp); color: var(--lh-ink); display: grid; place-items: center; font-family: var(--font-family-display); font-weight: 600; font-size: 1.375rem; line-height: 1.05; animation: breathe 4s ease-in-out infinite; }
+.breathe-stage p { margin-top: 18px; color: #DCE6F0; font-size: 1rem; }
+@keyframes ripple { from { transform: scale(0.65); opacity: 1; } to { transform: scale(1.35); opacity: 0; } }
+@keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+
+/* Voice */
+.voice { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: var(--space-6); }
+.vline { background: #fff; border-radius: var(--lh-radius-blob); padding: 26px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 14px; }
+.vline .k { align-self: flex-start; font-size: 0.8125rem; font-weight: 700; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; color: var(--color-fg-muted); }
+.vline q { quotes: none; font-family: var(--font-family-display); font-weight: 600; font-size: clamp(1.5rem, 2.3vw, 2rem); line-height: 1.12; }
+.vline .why { margin-top: auto; font-size: 0.9375rem; color: var(--color-fg-muted); }
+.vline--night { background: var(--lh-night); color: var(--lh-cream); }
+.vline--night .k, .vline--night .why { color: #C9D8E8; }
+.vline--err q { font-family: var(--font-family-body); font-weight: 700; font-size: 1.25rem; line-height: 1.4; }
+.vline--err .msg { display: flex; gap: 12px; background: var(--color-danger-bg); color: var(--color-danger-fg); border-radius: 18px; padding: 14px 16px; }
+.vline--err .msg svg { flex: none; width: 24px; height: 24px; margin-top: 3px; }
+.vline--err .msg q { color: var(--lh-ink); font-weight: 600; font-size: 1.0625rem; }
+.vline--err .msg b { display: block; color: var(--color-danger-fg); }
+
+/* Rationale */
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.rat article { background: #fff; border-radius: var(--lh-radius-blob); padding: 28px; box-shadow: var(--shadow-sm); }
+.rat h3 { font-family: var(--font-family-display); font-weight: 600; font-size: 1.5rem; margin-bottom: var(--space-4); display: flex; align-items: center; gap: 10px; }
+.rat h3 i { width: 14px; height: 14px; border-radius: 50%; }
+.rat ul { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; font-size: 1rem; }
+.rat p { font-size: 1rem; }
+.rat .fine { margin-top: var(--space-4); font-size: 0.9375rem; color: var(--color-fg-muted); background: var(--lh-fog); border-radius: 16px; padding: 14px 16px; }
+footer { padding-block: var(--space-10); font-size: 0.9375rem; color: var(--color-fg-muted); border-top: 1px solid var(--color-border-subtle); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .beam, .boat, .twinkle, .breathe i, .breathe span { animation: none !important; }
+  .breathe i:nth-child(1) { transform: scale(1.12); opacity: 0.6; }
+  .breathe i:nth-child(2) { transform: scale(1.3); opacity: 0.3; }
+  .breathe i:nth-child(3) { display: none; }
+}
+
+@media (max-width: 1100px) {
+  .harbor { grid-template-columns: 1fr; }
+  .harbor-copy { padding: clamp(2rem, 6vw, 3.5rem); padding-bottom: 0; }
+  .harbor { background: linear-gradient(to top, #2A9488 0 300px, transparent 300px), radial-gradient(90% 60% at 72% 0%, #1D4E7E 0%, var(--lh-night) 48%, var(--lh-night-deep) 100%); }
+  .scene-art { bottom: 296px; height: 520px; }
+  .scene { padding-top: 470px; justify-content: center; }
+  .pebbles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .type-grid, .img-grid, .motion-grid, .apps { grid-template-columns: 1fr; }
+  .c-buttons, .c-input, .c-card, .c-badges { grid-column: 1 / -1; grid-row: auto; }
+  .voice, .rat { grid-template-columns: 1fr; }
+  .device { margin-inline: auto; }
+  .sec-head { grid-template-columns: 1fr; }
+  .sec-head p { justify-self: start; }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: 1fr; grid-template-areas: "brand" "brief" "chips"; }
+  .dir-brief { justify-self: start; text-align: left; }
+  .nav ul, .nav-actions .btn--quiet { display: none; }
+  .harbor { border-radius: 32px; }
+  .scene-art { bottom: 296px; height: 420px; }
+  .scene { padding: 360px 1rem 1rem; }
+  .visit { width: 100%; }
+  .icon-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stickers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .device { width: 100%; max-width: 340px; }
+  .email-body { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .pebbles { gap: var(--space-6) var(--space-4); }
+  .pebble .shape { font-size: 1.5rem; padding: 10px; line-height: 1.05; }
+  .pebble dl { font-size: 0.8125rem; grid-template-columns: 1fr; }
+  .harbor .ctas .btn { flex: 1 1 100%; }
+  .treat > span { width: 100%; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to the key visual</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Icons: 24px grid, 2px stroke, round caps and joins, one tint circle behind -->
+    <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M10 4.5a2 2 0 0 1 4 0v9.2a4 4 0 1 1-4 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="17" r="1.6" fill="currentColor"/><path d="M12 15.4V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9.5a5 5 0 0 1 10 0c0 3-3 3.6-3 6.5a3 3 0 0 1-5.6 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10a2 2 0 0 1 4 0c0 1.2-1 1.6-1.4 2.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-tummy" viewBox="0 0 24 24"><path d="M8 3.5c0 3 1 4-1 7s-1.5 9.5 5 9.5 7.5-5 5.5-8.5S13 8 13 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14c1 1 3 1 4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-bandage" viewBox="0 0 24 24"><rect x="2.8" y="8.2" width="18.4" height="7.6" rx="3.8" transform="rotate(-35 12 12)" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="11" cy="11.5" r="0.9" fill="currentColor"/><circle cx="13" cy="12.5" r="0.9" fill="currentColor"/><circle cx="11.7" cy="13.6" r="0.9" fill="currentColor"/><circle cx="12.4" cy="10.4" r="0.9" fill="currentColor"/></symbol>
+    <symbol id="i-cough" viewBox="0 0 24 24"><path d="M4 12h9a3 3 0 1 0-3-3M4 16h12a2.5 2.5 0 1 1-2.5 2.5M4 8h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-rx" viewBox="0 0 24 24"><rect x="6" y="7" width="12" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 3.5h8v3.5H8zM12 11v6M9 14h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6.5" width="12.5" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15.5 10.5 5-3v9l-5-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5v5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="16.3" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="logo" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#12375E"/><path d="M18 33l2-15h4l2 15z" fill="#FFF6E3"/><path d="M18.6 28.5h6.8M19.2 24h5.6" stroke="#FF8364" stroke-width="2.2"/><rect x="18.5" y="13" width="7" height="5" rx="2" fill="#FFC845"/><path d="M22 9.5l4 3.5h-8z" fill="#FFF6E3"/><path d="M7 34c3-2.4 5.5-2.4 8 0s5.5 2.4 8 0 5.5-2.4 8 0 5 2.4 6 1.4" fill="none" stroke="#5FC4B8" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="doc-av" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#CFEDE4"/><path d="M12 52c2-9 8-13 16-13s14 4 16 13" fill="#1F7A74"/><path d="M23 39h10l-5 6z" fill="#FFFFFF"/><circle cx="28" cy="25" r="10" fill="#8D5A3B"/><path d="M17.5 24c0-8 4.5-12 10.5-12s10.5 4 10.5 12c-2-3-5-4.5-10.5-4.5S19.5 21 17.5 24z" fill="#22160F"/><circle cx="24.5" cy="26" r="1.2" fill="#22160F"/><circle cx="31.5" cy="26" r="1.2" fill="#22160F"/><path d="M25 30c1.6 1.4 4.4 1.4 6 0" fill="none" stroke="#22160F" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="kid-av" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="#FFE2D9"/><path d="M14 52c2-8 7-11 14-11s12 3 14 11" fill="#FFC845"/><circle cx="28" cy="27" r="11" fill="#E9B48F"/><path d="M17 25c0-7 5-11 11-11s11 4 11 10c-3-2-6-3.5-11-3s-8 1.5-11 4z" fill="#6B3B1F"/><circle cx="24" cy="28" r="1.2" fill="#3A2216"/><circle cx="32" cy="28" r="1.2" fill="#3A2216"/><path d="M25 32c1.6 1.2 4.4 1.2 6 0" fill="none" stroke="#3A2216" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. DIRECTION -->
+<header id="direction">
+  <div class="wrap">
+    <div class="dir-brand"><svg aria-hidden="true"><use href="#logo"/></svg><div><b>Little Harbor</b><span>Stylescape 02 / 12 · Night Light · <a href="../index.html">All stylescapes</a></span></div></div>
+    <p class="dir-brief">Pediatric telehealth for parents of young kids. Rounded, buoyant shapes and a lamplit harbor carry the warmth; a calm, legible clinical system carries the trust.</p>
+    <ul class="chips" aria-label="Atlas IDs"><li>style.playful-bubbly</li><li>style.clinical-calm</li><li>industry.digital-health-wellness</li><li>audience.children-under-13</li><li>archetype.caregiver</li><li>tier.mid-market</li><li>channel.marketing-website</li></ul>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO: marketing-site landing hero -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#hero"><svg aria-hidden="true"><use href="#logo"/></svg><span>Little Harbor</span></a>
+      <ul><li><a href="#hero">How it works</a></li><li><a href="#hero">What we treat</a></li><li><a href="#hero">Pricing</a></li><li><a href="#hero">For clinics</a></li></ul>
+      <div class="nav-actions"><a class="btn btn--quiet" href="#hero">Sign in</a><a class="btn btn--primary" href="#hero" style="min-height:46px;padding:0 20px">Start a visit</a></div>
+    </nav>
+
+    <div class="harbor">
+      <div class="harbor-copy">
+        <span class="live"><i aria-hidden="true"></i>14 pediatricians online now</span>
+        <h1 id="hero-title">Fevers don't keep office hours. <em>Neither do we.</em></h1>
+        <p class="lede">Video visits with board-certified pediatricians, day and night. Most families are talking to a doctor in under 15 minutes, from the couch, in pajamas.</p>
+        <div class="ctas">
+          <a class="btn btn--lamp" href="#components"><svg aria-hidden="true"><use href="#i-video"/></svg>Start a visit</a>
+          <a class="btn btn--ghost" href="#applications">See what we treat</a>
+        </div>
+        <ul class="facts">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>$39 a visit, or covered by many plans</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Prescriptions sent to your pharmacy</li>
+        </ul>
+      </div>
+
+      <svg class="scene-art" viewBox="0 0 1216 760" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Illustration: a harbor at night. A lighthouse on a rock sweeps its beam over gentle waves; a dotted line runs from its lamp to the lit window of a small house on the cliff, and a little sailboat bobs in the water.">
+        <defs>
+          <linearGradient id="beamG" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FFC845" stop-opacity="0.7"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFC845" stop-opacity="0.55"/><stop offset="1" stop-color="#FFC845" stop-opacity="0"/></radialGradient>
+          <mask id="moonM"><rect width="1216" height="760" fill="#fff"/><circle cx="946" cy="104" r="36" fill="#000"/></mask>
+        </defs>
+        <g fill="#FFF6E3">
+          <path class="twinkle" d="M700 90c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9z"/>
+          <path class="twinkle" d="M1130 70c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <path class="twinkle" d="M1040 190c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <path class="twinkle" d="M500 60c1 4 2 5 6 6-4 1-5 2-6 6-1-4-2-5-6-6 4-1 5-2 6-6z"/>
+          <circle class="twinkle" cx="640" cy="200" r="2.4"/><circle class="twinkle" cx="1180" cy="150" r="2"/><circle class="twinkle" cx="860" cy="230" r="2"/><circle class="twinkle" cx="1100" cy="250" r="2.4"/><circle class="twinkle" cx="590" cy="130" r="1.8"/><circle class="twinkle" cx="380" cy="40" r="1.8"/>
+        </g>
+        <circle cx="926" cy="118" r="40" fill="#FFF6E3" mask="url(#moonM)"/>
+        <g class="beam"><path d="M770 300 L1080 190 L1080 390 Z" fill="url(#beamG)" opacity="0.55"/></g>
+        <!-- distant hills -->
+        <path d="M240 760 C340 690 470 642 600 628 C700 616 800 630 880 616 S1100 566 1216 572 V760z" fill="#17466F"/>
+        <!-- cliff with house (right) -->
+        <path d="M930 760 C944 600 980 420 1060 352 C1100 330 1160 326 1216 330 V760z" fill="#1C5582"/>
+        <g transform="translate(1076 270)">
+          <path d="M0 62 V28 L36 0 L72 28 V62z" fill="#FFF6E3"/>
+          <path d="M-8 32 L36 -6 L80 32" fill="none" stroke="#FF8364" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="14" y="32" width="18" height="18" rx="5" fill="#FFC845"/>
+          <rect x="44" y="36" width="14" height="26" rx="6" fill="#1C5582"/>
+          <circle cx="23" cy="41" r="30" fill="url(#glow)"/>
+        </g>
+        <path d="M1092 306 C1010 230 880 236 792 300" fill="none" stroke="#FFC845" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+        <!-- rock + lighthouse (center) -->
+        <path d="M650 620 C664 578 712 560 770 562 C830 564 878 584 892 620z" fill="#1C5582"/>
+        <path d="M754 568 L760 330 H780 L786 568z" fill="#FFF6E3"/>
+        <path d="M757.7 452 H782.3 L783.5 496 H756.5z" fill="#FF8364"/>
+        <path d="M759.3 372 H780.7 L781.5 406 H758.5z" fill="#FF8364"/>
+        <rect x="746" y="316" width="48" height="16" rx="6" fill="#0C2845"/>
+        <rect x="754" y="280" width="32" height="36" rx="9" fill="#FFC845"/>
+        <circle cx="770" cy="298" r="50" fill="url(#glow)"/>
+        <path d="M748 282 Q770 252 792 282z" fill="#FF8364"/>
+        <!-- waves, lower on the left so the copy stays on calm sky -->
+        <path d="M0 690 C60 678 110 678 170 690 S290 702 350 690 470 660 540 650 650 640 720 620 840 604 920 618 1060 640 1216 610 V760 H0z" fill="#1F5F86"/>
+        <g class="boat">
+          <path d="M560 646 h86 c-6 16-18 22-43 22 s-37-6-43-22z" fill="#FF8364"/>
+          <path d="M604 644 V580 L640 638z" fill="#FFF6E3"/>
+          <path d="M600 644 V592 L574 636z" fill="#FFC845"/>
+        </g>
+        <path d="M0 716 C60 704 120 704 180 716 S300 728 360 716 480 700 540 696 660 690 720 676 840 664 900 676 1060 692 1216 664 V760 H0z" fill="#1F7A74"/>
+        <path d="M0 742 C60 732 120 732 180 742 S300 752 360 742 480 730 560 728 700 724 780 714 900 708 980 718 1120 726 1216 708 V760 H0z" fill="#2A9488"/>
+        <path d="M120 730 c10-6 20-6 30 0 M420 722 c10-6 20-6 30 0 M840 700 c10-6 20-6 30 0" fill="none" stroke="#CFEDE4" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+      </svg>
+
+      <div class="scene">
+        <aside class="visit" aria-label="Example visit status card">
+          <div class="visit-top"><span>Video visit</span><span class="tag"><i aria-hidden="true"></i>You're next</span></div>
+          <div class="doc"><svg aria-hidden="true"><use href="#doc-av"/></svg><div><b>Dr. Amara Osei, MD</b><span>Pediatrics · 11 years · speaks EN, FR</span></div></div>
+          <div class="for"><span><b>For Milo, age 4</b></span><span>Fever 102.1°F since 9 p.m., tugging at left ear</span></div>
+          <div class="queue"><span class="bar" aria-hidden="true"><i></i></span><span>About 3 min</span></div>
+          <a class="btn btn--primary" href="#components"><svg aria-hidden="true"><use href="#i-video"/></svg>Join video visit</a>
+        </aside>
+      </div>
+    </div>
+
+    <div class="treat">
+      <span>Most common tonight:</span>
+      <ul>
+        <li><i style="background:#FFE2D9"><svg aria-hidden="true"><use href="#i-thermo"/></svg></i>Fever</li>
+        <li><i style="background:var(--lh-sky)"><svg aria-hidden="true"><use href="#i-ear"/></svg></i>Ear pain</li>
+        <li><i style="background:var(--lh-foam)"><svg aria-hidden="true"><use href="#i-cough"/></svg></i>Coughs and colds</li>
+        <li><i style="background:#FFF1CC"><svg aria-hidden="true"><use href="#i-bandage"/></svg></i>Rashes</li>
+        <li><i style="background:var(--color-bg-sunken)"><svg aria-hidden="true"><use href="#i-tummy"/></svg></i>Tummy trouble</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PALETTE -->
+<section id="palette" class="sec" aria-labelledby="palette-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="palette-title"><span class="bubble">3</span>Palette</h2><p>Harbor night for reassurance, lamplight for the one thing to do next, sea-glass teal for every action in the product. Ratios computed with WCAG 2 relative luminance.</p></div>
+    <div class="pebbles">
+      <figure class="pebble"><div class="shape" style="background:#12375E;color:#FFF6E3">Harbor night</div><dl><dt class="role">Role</dt><dd>Hero ground, inverse</dd><dt>Hex</dt><dd>#12375E</dd><dt>OKLCH</dt><dd>oklch(0.33 0.081 253)</dd><dt>Contrast</dt><dd>Cream text 11.27:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#FFC845;color:#14304F">Lamplight</div><dl><dt class="role">Role</dt><dd>Primary CTA on night</dd><dt>Hex</dt><dd>#FFC845</dd><dt>OKLCH</dt><dd>oklch(0.86 0.154 85)</dd><dt>Contrast</dt><dd>Ink text 8.69:1; on night 7.84:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#1F7A74;color:#FFFFFF">Sea glass</div><dl><dt class="role">Role</dt><dd>Accent, product actions</dd><dt>Hex</dt><dd>#1F7A74</dd><dt>OKLCH</dt><dd>oklch(0.53 0.082 188)</dd><dt>Contrast</dt><dd>White text 5.13:1; on Fog 4.75:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#14304F;color:#FFF6E3">Deep ink</div><dl><dt class="role">Role</dt><dd>Body text</dd><dt>Hex</dt><dd>#14304F</dd><dt>OKLCH</dt><dd>oklch(0.30 0.066 253)</dd><dt>Contrast</dt><dd>On Fog 12.43:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#F2F7FA;color:#14304F;box-shadow:inset 0 0 0 2px #D3DEE7">Morning fog</div><dl><dt class="role">Role</dt><dd>Canvas</dd><dt>Hex</dt><dd>#F2F7FA</dd><dt>OKLCH</dt><dd>oklch(0.97 0.007 234)</dd><dt>Contrast</dt><dd>Ground for Deep ink 12.43:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#FF8364;color:#14304F">Buoy coral</div><dl><dt class="role">Role</dt><dd>Illustration, kid moments</dd><dt>Hex</dt><dd>#FF8364</dd><dt>OKLCH</dt><dd>oklch(0.74 0.158 35)</dd><dt>Contrast</dt><dd>Ink text 5.55:1 <span class="ok">AA</span> · never white text</dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#CFEDE4;color:#14304F">Sea foam</div><dl><dt class="role">Role</dt><dd>Tints, illustration ground</dd><dt>Hex</dt><dd>#CFEDE4</dd><dt>OKLCH</dt><dd>oklch(0.92 0.034 176)</dd><dt>Contrast</dt><dd>Ink text 10.79:1 <span class="ok">AA</span></dd></dl></figure>
+      <figure class="pebble"><div class="shape" style="background:#6E8396;color:#FFFFFF">Driftwood</div><dl><dt class="role">Role</dt><dd>Input borders, subtle text</dd><dt>Hex</dt><dd>#6E8396</dd><dt>OKLCH</dt><dd>oklch(0.60 0.038 246)</dd><dt>Contrast</dt><dd>On Fog 3.64:1 <span class="ok ui">UI / large only</span></dd></dl></figure>
+    </div>
+    <p class="note">No red in the brand palette: parents scanning a screen at 2 a.m. should never confuse brand color with a warning. Danger red (#B3261E on #FDE8E6, 5.56:1) is reserved for real errors and urgent-care redirects, always with an icon and words.</p>
+  </div>
+</section>
+
+<!-- 4. TYPE -->
+<section id="type" class="sec" aria-labelledby="type-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="type-title"><span class="bubble">4</span>Type</h2><p>Fredoka's rounded terminals do the smiling; Atkinson Hyperlegible Next does the reading, with letterforms built to stay distinct for tired eyes and low vision (1, l and I never collapse).</p></div>
+    <div class="type-grid">
+      <div class="card">
+        <div class="meta"><span>Display</span><span>Fredoka 600</span><span>clamp(44px, 5.4vw, 76px) / 1.02</span><span>tracking −0.012em</span></div>
+        <p class="t-display">Little fevers, big worries? A&nbsp;real doctor is up.</p>
+        <p class="t-h2">Fredoka 500 for section titles, 24-32px / 1.15</p>
+      </div>
+      <div>
+        <div class="card">
+          <div class="meta"><span>Body</span><span>Atkinson Hyperlegible Next 400</span><span>18px / 1.6</span><span>≤ 62ch</span></div>
+          <p class="glyphs" aria-hidden="true">Il1 0O <span>rn m</span> 5S</p>
+          <p class="t-body">Tell us what's going on and how long it has been happening. A pediatrician will look, listen and ask questions, just like an office visit. If your child needs to be seen in person, we'll tell you where to go and send notes ahead.</p>
+        </div>
+        <div class="card">
+          <div class="meta"><span>Caption</span><span>Atkinson Hyperlegible Next 400</span><span>14px / 1.45</span></div>
+          <p class="t-caption">For emergencies like trouble breathing, a seizure or a blue tint to the lips, call 911 now. Little Harbor is not for emergencies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMPONENTS -->
+<section id="components" class="sec" aria-labelledby="components-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="components-title"><span class="bubble">5</span>Components</h2><p>Pill buttons with a soft 4px "lip" that presses down; inputs 56px tall with 18px text, because thumbs and worry make people miss.</p></div>
+    <div class="comp-grid">
+      <div class="card c-buttons">
+        <h3>Buttons</h3>
+        <div class="btn-row">
+          <div class="btn-cap"><button class="btn btn--primary" type="button">Start a visit</button>Primary</div>
+          <div class="btn-cap"><button class="btn btn--secondary" type="button">Check my coverage</button>Secondary</div>
+          <div class="btn-cap"><button class="btn" type="button" disabled>Join video visit</button>Disabled</div>
+          <div class="btn-cap"><button class="btn btn--primary is-focus" type="button">Start a visit</button>Focus visible</div>
+        </div>
+      </div>
+      <div class="card c-input">
+        <h3>Text input</h3>
+        <div class="field">
+          <label for="kid">Child's first name</label>
+          <span class="hint" id="kid-hint">So the doctor can talk to them, not about them.</span>
+          <input class="input" id="kid" type="text" value="Milo" aria-describedby="kid-hint">
+        </div>
+        <div class="field">
+          <span id="age-l" style="font-weight:700;font-size:1.0625rem">Age</span>
+          <div class="seg" role="radiogroup" aria-labelledby="age-l">
+            <input type="radio" name="age" id="a1"><label for="a1">Under 1</label>
+            <input type="radio" name="age" id="a2" checked><label for="a2">1 to 5</label>
+            <input type="radio" name="age" id="a3"><label for="a3">6 to 12</label>
+          </div>
+        </div>
+        <div class="field field--error">
+          <label for="temp">Highest temperature</label>
+          <span class="hint" id="temp-hint">In °F. A guess is fine.</span>
+          <input class="input" id="temp" type="text" value="1021" aria-invalid="true" aria-describedby="temp-hint temp-err">
+          <p class="err" id="temp-err"><svg aria-hidden="true"><use href="#i-alert"/></svg>That looks like 102.1°F with the dot missing. Check the number and try again.</p>
+        </div>
+      </div>
+      <div class="card c-card">
+        <h3>List items</h3>
+        <div class="visit-item"><svg class="av" aria-hidden="true"><use href="#doc-av"/></svg><div><b>Dr. Amara Osei</b><span class="sub">Ear infection · Tue 11:48 p.m. · Notes ready</span></div><a class="go" href="#components" aria-label="Open visit notes from Tuesday"><svg aria-hidden="true"><use href="#i-chev"/></svg></a></div>
+        <div class="visit-item"><svg class="av" aria-hidden="true"><use href="#kid-av"/></svg><div><b>Milo's profile</b><span class="sub">Age 4 · No known allergies · CVS on Elm St</span></div><a class="go" href="#components" aria-label="Edit Milo's profile"><svg aria-hidden="true"><use href="#i-chev"/></svg></a></div>
+      </div>
+      <div class="card c-badges">
+        <h3>Badges</h3>
+        <div class="badges">
+          <span class="badge b-ok"><svg aria-hidden="true"><use href="#i-check"/></svg>Covered by your plan</span>
+          <span class="badge b-teal">Ages 0 to 17</span>
+          <span class="badge b-night"><svg aria-hidden="true"><use href="#i-moon"/></svg>Open all night</span>
+          <span class="badge b-lamp">About 6 min wait</span>
+          <span class="badge b-sky">Spanish-speaking doctor</span>
+          <span class="badge b-coral">Bravery badge earned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. APPLICATIONS -->
+<section id="applications" class="sec" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="apps-title"><span class="bubble">6</span>Applications</h2><p>The intake screen is the parent's moment; the bravery badge after the call is the kid's. The visit-summary email carries the night palette into the inbox.</p></div>
+    <div class="apps">
+      <div class="device" role="img" aria-label="Mobile intake screen, step 2 of 4: Where does it hurt? A friendly body outline with the left ear highlighted and symptom chips for fever, ear pain and fussy.">
+        <div class="screen" aria-hidden="true">
+          <div class="s-status"><span>11:42</span><span>5G</span></div>
+          <div class="s-head"><span class="back"><svg><use href="#i-back"/></svg></span><span class="steps"><i class="on"></i><i class="on"></i><i></i><i></i></span><span style="width:44px"></span></div>
+          <div class="s-body">
+            <h3>Where does it hurt, Milo?</h3>
+            <p>Tap the spot, or ask Milo to point.</p>
+            <div class="body-map">
+              <svg viewBox="0 0 210 270">
+                <circle cx="105" cy="56" r="38" fill="#CFEDE4" stroke="#14304F" stroke-width="3"/>
+                <path d="M66 58c-8 0-10 14 0 16M144 58c8 0 10 14 0 16" fill="#CFEDE4" stroke="#14304F" stroke-width="3"/>
+                <circle cx="146" cy="66" r="16" fill="#FFC845" opacity="0.55"/>
+                <circle cx="146" cy="66" r="7" fill="#FF8364" stroke="#14304F" stroke-width="2.5"/>
+                <circle cx="92" cy="54" r="3.5" fill="#14304F"/><circle cx="118" cy="54" r="3.5" fill="#14304F"/>
+                <path d="M94 70c6 5 16 5 22 0" fill="none" stroke="#14304F" stroke-width="3" stroke-linecap="round"/>
+                <path d="M62 140c0-28 18-44 43-44s43 16 43 44v54c0 10-6 16-16 16H78c-10 0-16-6-16-16z" fill="#CFEDE4" stroke="#14304F" stroke-width="3"/>
+                <path d="M64 128 36 172M146 128l28 44" stroke="#14304F" stroke-width="22" stroke-linecap="round"/>
+                <path d="M64 128 36 172M146 128l28 44" stroke="#CFEDE4" stroke-width="16" stroke-linecap="round"/>
+                <path d="M86 210v40M124 210v40" stroke="#14304F" stroke-width="24" stroke-linecap="round"/>
+                <path d="M86 210v40M124 210v40" stroke="#CFEDE4" stroke-width="18" stroke-linecap="round"/>
+                <path d="M164 34h34" stroke="#14304F" stroke-width="0"/>
+                <path d="M158 58 176 30" stroke="#14304F" stroke-width="2"/><text x="206" y="24" text-anchor="end" font-family="Atkinson Hyperlegible Next, sans-serif" font-size="13" font-weight="700" fill="#14304F">Left ear</text>
+              </svg>
+            </div>
+            <div class="sym"><span class="on">Fever</span><span class="on">Ear pain</span><span>Cough</span><span>Fussy</span><span>Rash</span></div>
+          </div>
+          <div class="s-cta"><span class="btn btn--primary">Next: how long?</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="badge-sheet">
+          <h3>Milo was brave today.</h3>
+          <p>After every visit, the doctor sends a sticker to the child's profile. Kids pick one; parents can print the sheet.</p>
+          <div class="stickers">
+            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="#FFC845" stroke="#fff" stroke-width="8"/><path d="M62 112 66 54h18l4 58z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M64.6 92h20.8M65.6 74h18.8" stroke="#FF8364" stroke-width="8"/><rect x="62" y="40" width="26" height="16" rx="5" fill="#14304F"/><path d="M60 42 75 26l15 16z" fill="#FF8364" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M90 46l22-8M90 52l22 4" stroke="#14304F" stroke-width="4" stroke-linecap="round"/><path d="M28 118c10-6 20-6 30 0s20 6 30 0 20-6 30 0" fill="none" stroke="#1F7A74" stroke-width="6" stroke-linecap="round"/></svg><figcaption>Lighthouse keeper</figcaption></figure>
+            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><path d="M75 8c14 0 18 14 30 18s26 2 30 16-8 22-6 34 12 24 4 36-24 6-34 14-14 18-26 18-16-12-26-18-26-2-34-14 4-24 4-36-12-22-8-34 18-10 30-16S61 8 75 8z" fill="#CFEDE4" stroke="#fff" stroke-width="8"/><path d="M42 92h66c-4 14-16 20-33 20s-29-6-33-20z" fill="#FF8364" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/><path d="M78 90V42l26 46z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/></svg><figcaption>Brave sailor</figcaption></figure>
+            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><rect x="10" y="10" width="130" height="130" rx="40" fill="#12375E" stroke="#fff" stroke-width="8"/><path d="M98 88A30 30 0 0 1 60 50a30 30 0 1 0 38 38z" fill="#FFC845"/><circle cx="104" cy="44" r="4" fill="#FFF6E3"/><circle cx="40" cy="104" r="3" fill="#FFF6E3"/></svg><figcaption>Night owl</figcaption></figure>
+            <figure><svg viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="70" fill="#FF8364" stroke="#fff" stroke-width="8"/><path d="M75 34l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z" fill="#FFF6E3" stroke="#14304F" stroke-width="4" stroke-linejoin="round"/></svg><figcaption>Super patient</figcaption></figure>
+          </div>
+          <div class="email" role="img" aria-label="Email header: Your visit notes are ready.">
+            <div class="email-top" aria-hidden="true"><svg><use href="#logo"/></svg><b>Your visit notes are ready</b></div>
+            <div class="email-body" aria-hidden="true"><p>Dr. Osei saw Milo for ear pain at 11:48 p.m.<small>Amoxicillin was sent to CVS on Elm St. Pickup after 8 a.m.</small></p><span class="btn btn--primary" style="min-height:44px">Read notes</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. IMAGERY -->
+<section id="imagery" class="sec" aria-labelledby="imagery-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="imagery-title"><span class="bubble">7</span>Imagery and icons</h2><p>A small harbor world: lighthouse, boats, buoys and waves. Doctors are shown as real photographs on profile pages, where trust beats charm.</p></div>
+    <div class="img-grid">
+      <div class="img-copy">
+        <p>Illustration uses round joins, no outlines on large shapes, and a two-step wave rhythm. Characters have minimal faces and a range of skin tones; no anthropomorphic germs, no syringes, no frightening red crosses.</p>
+        <p>Icons sit on a 24px grid with a 2px stroke, round caps and joins, inside a 72px tint circle. Symptoms are drawn as the body part or the sensation, never as a sick, crying child.</p>
+        <div class="icon-row">
+          <figure><span class="ic" style="background:#FFE2D9"><svg aria-hidden="true"><use href="#i-thermo"/></svg></span>Fever</figure>
+          <figure><span class="ic" style="background:var(--lh-sky)"><svg aria-hidden="true"><use href="#i-ear"/></svg></span>Ear</figure>
+          <figure><span class="ic" style="background:var(--lh-foam)"><svg aria-hidden="true"><use href="#i-cough"/></svg></span>Cough</figure>
+          <figure><span class="ic" style="background:#FFF1CC"><svg aria-hidden="true"><use href="#i-bandage"/></svg></span>Skin</figure>
+          <figure><span class="ic" style="background:var(--color-bg-sunken)"><svg aria-hidden="true"><use href="#i-rx"/></svg></span>Pharmacy</figure>
+          <figure><span class="ic" style="background:#12375E;color:#FFC845"><svg aria-hidden="true"><use href="#i-moon"/></svg></span>Night</figure>
+        </div>
+      </div>
+      <div class="illo" role="img" aria-label="Pattern sample: rows of rounded waves, buoys and small boats on sea foam">
+        <svg viewBox="0 0 640 400" aria-hidden="true">
+          <defs>
+            <pattern id="waves" width="80" height="40" patternUnits="userSpaceOnUse"><path d="M0 26c10-12 30-12 40 0s30 12 40 0" fill="none" stroke="#1F7A74" stroke-width="5" stroke-linecap="round" opacity="0.45"/></pattern>
+          </defs>
+          <rect width="640" height="400" fill="#CFEDE4"/>
+          <rect width="640" height="400" fill="url(#waves)"/>
+          <g transform="translate(90 120)"><path d="M0 40h96c-6 18-20 26-48 26S6 58 0 40z" fill="#FF8364"/><path d="M50 38V-30l40 66z" fill="#FFF6E3"/><path d="M44 38V-14L16 34z" fill="#FFC845"/></g>
+          <g transform="translate(330 210)"><ellipse cx="40" cy="70" rx="44" ry="10" fill="#1F7A74" opacity="0.35"/><path d="M14 66 26 10h28l12 56z" fill="#FF8364"/><path d="M18 46h44" stroke="#FFF6E3" stroke-width="10"/><rect x="28" y="-6" width="24" height="18" rx="8" fill="#12375E"/><circle cx="40" cy="-14" r="8" fill="#FFC845"/></g>
+          <g transform="translate(470 70)"><circle cx="60" cy="60" r="56" fill="#12375E"/><path d="M84 74A28 28 0 0 1 46 36a28 28 0 1 0 38 38z" fill="#FFC845"/></g>
+          <g transform="translate(160 290)"><path d="M0 30h70c-4 12-16 18-35 18S4 42 0 30z" fill="#12375E"/><path d="M36 28V-20l28 46z" fill="#FFF6E3"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MOTION -->
+<section id="motion" class="sec" aria-labelledby="motion-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="motion-title"><span class="bubble">8</span>Motion</h2><p>Slow and buoyant. Things float in and settle; nothing snaps, flashes or shakes. Waiting is the most animated state, because waiting is when parents worry most.</p></div>
+    <div class="motion-grid">
+      <ul class="mlist">
+        <li><b>Buttons, chips, toggles</b><span class="d">200ms</span><code>cubic-bezier(0.2, 0, 0, 1) · press: translateY(3px)</code></li>
+        <li><b>Cards and sheets entering</b><span class="d">320ms</span><code>cubic-bezier(0, 0, 0, 1) · translateY(12px) and fade</code></li>
+        <li><b>Waiting room breath</b><span class="d">4s loop</span><code>ease-in-out · scale 1 to 1.07, ripples every 1.33s</code></li>
+        <li><b>Lighthouse beam (hero)</b><span class="d">9s alternate</span><code>linear · rotate −10° to 8°</code></li>
+        <li><b>Reduced motion</b><span class="d">0ms</span><code>All loops stop; rings render as static halos; content still appears.</code></li>
+      </ul>
+      <div class="breathe-stage" role="img" aria-label="Motion demo: a lamplight circle that breathes slowly with ripples, labeled You're next.">
+        <div>
+          <div class="breathe" aria-hidden="true"><i></i><i></i><i></i><span>You're<br>next</span></div>
+          <p aria-hidden="true">Breathe with the light. Dr. Osei is finishing up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VOICE -->
+<section id="voice" class="sec" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="voice-title"><span class="bubble">9</span>Voice</h2><p>A calm nurse friend: names the worry, gives the next step, adds a time. Talks to kids by name, to parents as capable adults. Reading grade 6-7.</p></div>
+    <div class="voice">
+      <div class="vline vline--night"><span class="k">Headline</span><q>Fevers don't keep office hours. Neither do we.</q><p class="why">Acknowledges the 2 a.m. situation before selling anything.</p></div>
+      <div class="vline"><span class="k">CTA</span><q>Start a visit</q><p class="why">Verb plus the real thing that happens. Not "Get care now", which sounds like an ER.</p></div>
+      <div class="vline vline--err"><span class="k">Error</span><div class="msg"><svg aria-hidden="true"><use href="#i-alert"/></svg><div><b>Video didn't connect</b><q>Your place in line is saved. Try again, or we can call you at (555) 014-2290 instead.</q></div></div><p class="why">Reassure first (place saved), then two ways forward, one of them low-tech.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RATIONALE -->
+<section id="rationale" class="sec" aria-labelledby="rationale-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="rationale-title"><span class="bubble">10</span>Rationale</h2><p>Why this direction, where it could go wrong, and the safe option we chose not to make.</p></div>
+    <div class="rat">
+      <article><h3><i style="background:var(--lh-teal)"></i>Why it fits</h3><ul><li>The real competitor is "wait until morning". A night-harbor world says "we're awake" faster than any headline.</li><li>Playful shapes give kids something friendly to look at during the call; the clinical system (Atkinson, 56px inputs, one action per screen) keeps tired parents from making mistakes.</li><li>Caregiver archetype: lamplight is a promise of someone watching over, without hands-and-hearts clichés.</li></ul></article>
+      <article><h3><i style="background:var(--lh-lamp)"></i>What it risks</h3><ul><li>Illustration can read as less clinical. Real doctor photos, credentials and licensure states must appear on doctor profiles and pricing.</li><li>Night palette could be mistaken for a sleep app; daytime pages flip to Fog and Sea foam with the same shapes.</li><li>Kid-facing stickers must not become engagement mechanics; no streaks, no collecting pressure.</li></ul></article>
+      <article><h3><i style="background:var(--lh-coral)"></i>Category-expected alternative</h3><p>White and medical blue, a stock photo of a smiling doctor on a laptop and a mom holding a child, a red cross icon (<code>style.clinical-calm</code> + <code>style.corporate-modern</code>). Trustworthy, forgettable, and slightly scary to a four-year-old.</p><p class="fine">Before launch, confirm with counsel: HIPAA for visit data, COPPA for anything a child interacts with directly (accounts belong to parents), state telehealth licensing and prescribing rules, and claims like "board-certified" and wait times.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Little Harbor is a fictional brand made for the Visual Design Kit stylescape set. All artwork is CSS and inline SVG.</span><span>Type: Fredoka and Atkinson Hyperlegible Next (SIL OFL 1.1). <a href="../index.html">All stylescapes</a></span></div>
+</footer>
+</body>
+</html>

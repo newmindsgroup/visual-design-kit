@@ -23,7 +23,7 @@ Compare x-height, width, apertures, stroke contrast, spacing, weight range, true
 
 ## Specify and implement
 
-Fill the [typography decision](../../templates/typography-decision.md). Define roles, family/files, weights, sizes and responsive bounds, line height, line length, tracking, capitalization and OpenType features. Pick numbers from actual content and scale tests; do not claim one modular ratio or line length is mandatory. Use tabular numerals when columns require alignment and test the actual glyph feature. Record variable axes only when the selected file has them. Avoid synthetic bold/italic and browser-simulated substitutions.
+Fill the [typography decision](../../templates/typography-decision.md). Define roles, family/files, weights, sizes and responsive bounds, line height, line length, tracking, capitalization and OpenType features. Start from [typography defaults](../../../skills/typography/references/defaults.md), then tune the numbers with actual content and scale tests; record any override and its reason. Use tabular numerals when columns require alignment and test the actual glyph feature. Record variable axes only when the selected file has them. Avoid synthetic bold/italic and browser-simulated substitutions.
 
 Confirm the exact file/version/license and required desktop, web, app, embedding, modification and redistribution uses before delivery. Free download does not mean unrestricted redistribution. Preserve required license notices and record how the recipient obtains fonts if bundling is not permitted. Do not install fonts globally or download untrusted executables to build a specimen.
 

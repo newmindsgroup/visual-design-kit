@@ -1,0 +1,7 @@
+{
+  "color": {
+    "$type": "color",
+    "gray": {"100": {"$value": "{color.gray.900}"}},
+    "accent": {"600": {"$value": "#ff0000"}}
+  }
+}

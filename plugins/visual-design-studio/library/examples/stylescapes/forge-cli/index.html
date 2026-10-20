@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forge: Shop Drawing | Stylescape 12</title>
+<meta name="description" content="Stylescape for Forge, a fictional CLI and cloud for deploying AI agents. Direction: Shop Drawing. Dark developer aesthetic without the clichés: real code annotated like an engineering drawing, Magician archetype that shows the method.">
+<style>
+@font-face { font-family: "Martian Mono"; src: url("../fonts/martian-mono/martian-mono-latin-wdth-wght-normal.woff2") format("woff2"); font-weight: 100 800; font-stretch: 75% 112.5%; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans/instrument-sans-latin-wdth-wght-normal.woff2") format("woff2"); font-weight: 400 700; font-stretch: 75% 100%; font-style: normal; font-display: swap; }
+
+:root, [data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg-canvas: #121110;          /* Graphite */
+  --color-bg-surface: #1A1917;         /* Slate */
+  --color-bg-surface-raised: #23211E;
+  --color-bg-sunken: #0C0B0A;
+  --color-bg-inverse: #EDE9E1;
+  --color-fg-default: #EDE9E1;         /* Paper white, never #FFF */
+  --color-fg-muted: #A39E94;           /* Pencil */
+  --color-fg-subtle: #8A847A;
+  --color-fg-inverse: #121110;
+  --color-fg-on-accent: #121110;
+  --color-border-subtle: #2C2A26;
+  --color-border-default: #3A3732;
+  --color-border-strong: #6F6A61;      /* 3.51:1: control outlines */
+  --color-accent-default: #F5A524;     /* Forge amber, the one signal color */
+  --color-accent-hover: #FFB84D;
+  --color-accent-active: #E09412;
+  --color-accent-subtle: #2E2414;
+  --color-accent-fg: #F5A524;
+  --color-success-fg: #A8C69F; --color-success-bg: #1C2A1B; --color-success-border: #A8C69F;
+  --color-warning-fg: #E9B872; --color-warning-bg: #2E2414; --color-warning-border: #E9B872;
+  --color-danger-fg: #FF7A6B;  --color-danger-bg: #2E1714;  --color-danger-border: #FF7A6B;
+  --color-info-fg: #8FB8DE;    --color-info-bg: #16222E;    --color-info-border: #8FB8DE;
+  --color-focus-ring: #EDE9E1;
+  --color-overlay-scrim: rgb(0 0 0 / 0.6);
+  --brand-syn-key: #E9B872; --brand-syn-str: #A8C69F; --brand-syn-num: #8FB8DE; --brand-syn-com: #8A847A; --brand-syn-fn: #EDE9E1;
+  --brand-grid-line: rgb(237 233 225 / 0.045);
+}
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg-canvas: #F4F1EA;
+  --color-bg-surface: #FBFAF6;
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #E9E5DC;
+  --color-bg-inverse: #1A1917;
+  --color-fg-default: #1A1917;
+  --color-fg-muted: #5E584F;
+  --color-fg-subtle: #6F6A61;
+  --color-fg-inverse: #F4F1EA;
+  --color-border-subtle: #E0DBD0;
+  --color-border-default: #C9C3B7;
+  --color-border-strong: #857F75;
+  --color-accent-fg: #A15C00;
+  --color-accent-subtle: #FBEBD0;
+  --color-success-fg: #3D6B35; --color-success-bg: #E3EDE0; --color-danger-fg: #B2341F; --color-danger-bg: #F8E2DD; --color-info-fg: #2F5D88; --color-info-bg: #E2EAF2; --color-warning-fg: #7A4A00; --color-warning-bg: #FBEBD0;
+  --color-focus-ring: #1A1917;
+  --brand-syn-key: #8A4B00; --brand-syn-str: #3D6B35; --brand-syn-num: #2F5D88; --brand-syn-com: #6F6A61; --brand-syn-fn: #1A1917;
+  --brand-grid-line: rgb(26 25 23 / 0.06);
+}
+:root {
+  --font-family-display: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-family-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "Martian Mono", ui-monospace, Menlo, monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem; --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.03em; --letter-spacing-caps: 0.06em;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 3px; --radius-md: 6px; --radius-lg: 8px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-md: 0 1px 0 rgb(255 255 255 / 0.03) inset;
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-linear: linear;
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --brand-code-line: 24px;
+}
+@media (prefers-reduced-motion: reduce) { :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; transition: background-color var(--duration-moderate) var(--ease-standard), color var(--duration-moderate) var(--ease-standard); }
+svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.mono { font-family: var(--font-family-mono); font-stretch: 87.5%; }
+.lbl { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-fg-muted); }
+kbd { font-family: var(--font-family-mono); font-size: 0.6875rem; padding: 2px 6px; border: 1px solid var(--color-border-default); border-bottom-width: 2px; border-radius: var(--radius-sm); color: var(--color-fg-muted); }
+
+/* ---------- 1. Direction ---------- */
+#direction { border-bottom: 1px solid var(--color-border-subtle); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-8); align-items: center; padding-block: var(--space-4) var(--space-5); }
+#direction h1 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
+#direction h1 span { color: var(--color-fg-muted); font-weight: 400; }
+#direction .brief { grid-column: 1 / -1; margin: 0; color: var(--color-fg-muted); font-size: 0.9375rem; max-width: 96ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; padding: 3px 8px; border: 1px solid var(--color-border-default); border-radius: var(--radius-sm); color: var(--color-fg-default); }
+.back { font-size: 0.875rem; padding-block: 10px; text-underline-offset: 4px; }
+
+/* ---------- 2. Hero ---------- */
+#hero { background: linear-gradient(var(--brand-grid-line) 1px, transparent 1px) 0 0 / 100% 24px, var(--color-bg-canvas); border-bottom: 1px solid var(--color-border-subtle); }
+.nav { display: flex; align-items: center; gap: var(--space-6); padding-block: var(--space-4); border-bottom: 1px solid var(--color-border-subtle); }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+.logo svg { width: 26px; height: 26px; color: var(--color-accent-default); }
+.nav ul { display: flex; gap: var(--space-6); list-style: none; margin: 0; padding: 0; font-size: 0.9375rem; color: var(--color-fg-muted); }
+.nav ul a { text-decoration: none; display: inline-block; padding-block: 10px; }
+.nav ul a:hover { color: var(--color-fg-default); }
+.nav .right { margin-inline-start: auto; display: flex; align-items: center; gap: var(--space-3); }
+.search { display: inline-flex; align-items: center; gap: 24px; min-height: 36px; padding: 0 8px 0 12px; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); font-size: 0.875rem; color: var(--color-fg-muted); background: var(--color-bg-surface); font-family: inherit; cursor: pointer; }
+.search .mag { display: none; width: 16px; height: 16px; }
+.icon-btn { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: transparent; color: var(--color-fg-default); cursor: pointer; }
+.icon-btn svg { width: 16px; height: 16px; }
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: var(--radius-md); border: 1px solid transparent; font-family: var(--font-family-body); font-weight: 600; font-size: 0.9375rem; text-decoration: none; cursor: pointer; transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); white-space: nowrap; }
+.btn-lg { min-height: 48px; padding: 0 20px; font-size: 1rem; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-primary:active { background: var(--color-accent-active); }
+.btn-secondary { background: transparent; color: var(--color-fg-default); border-color: var(--color-border-strong); }
+.btn-secondary:hover { background: var(--color-bg-surface-raised); border-color: var(--color-fg-muted); }
+.btn[disabled] { background: var(--color-bg-surface-raised); color: var(--color-fg-subtle); border-color: var(--color-border-default); cursor: not-allowed; }
+.btn:focus-visible, .btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.btn kbd { border-color: rgb(18 17 16 / 0.35); color: inherit; padding: 1px 5px; }
+
+.hero-grid { display: grid; grid-template-columns: minmax(0, 4.6fr) minmax(0, 7.4fr); gap: var(--space-12); padding-block: var(--space-16) var(--space-12); align-items: start; }
+.release { display: inline-flex; align-items: center; gap: 10px; min-height: 32px; padding: 0 12px 0 6px; border: 1px solid var(--color-border-default); border-radius: var(--radius-full); font-size: 0.8125rem; text-decoration: none; color: var(--color-fg-muted); }
+.release b { font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 500; font-size: 0.6875rem; color: var(--color-fg-on-accent); background: var(--color-accent-default); padding: 2px 7px; border-radius: var(--radius-full); }
+.hero-copy h2 { margin: var(--space-6) 0 var(--space-5); font-family: var(--font-family-display); font-weight: 600; font-stretch: 88%; font-size: clamp(3rem, 5.2vw, 4.75rem); line-height: 0.98; letter-spacing: -0.035em; }
+.hero-copy h2 span { display: block; color: var(--color-fg-muted); text-wrap: balance; }
+.hero-copy .lead { margin: 0 0 var(--space-8); font-size: 1.1875rem; line-height: 1.55; color: var(--color-fg-muted); max-width: 40ch; }
+.hero-copy .lead b { color: var(--color-fg-default); font-weight: 500; }
+.hero-copy .lead code { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.875em; color: var(--color-fg-default); }
+.install { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); background: var(--color-bg-surface); margin-bottom: var(--space-6); max-width: 480px; }
+.install [role="tablist"] { display: flex; gap: 2px; padding: 6px 6px 0; border-bottom: 1px solid var(--color-border-subtle); }
+.install [role="tab"] { appearance: none; border: 0; background: none; color: var(--color-fg-muted); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; padding: 8px 12px; min-height: 36px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.install [role="tab"][aria-selected="true"] { color: var(--color-fg-default); border-bottom-color: var(--color-accent-default); }
+.install .cmd { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 8px 10px 16px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.875rem; }
+.install .cmd span::before { content: "$ "; color: var(--color-fg-subtle); }
+.copy { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 10px; border: 1px solid var(--color-border-default); border-radius: var(--radius-sm); background: transparent; color: var(--color-fg-muted); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; cursor: pointer; }
+.copy svg { width: 14px; height: 14px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.proof { margin-top: var(--space-8); font-size: 0.875rem; color: var(--color-fg-muted); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.proof b { color: var(--color-fg-default); font-weight: 500; }
+
+/* The shop drawing */
+.sheet { position: relative; border: 1px solid var(--color-border-strong); padding: 28px; background: var(--color-bg-canvas); }
+.sheet::before { content: ""; position: absolute; inset: 9px; border: 1px solid var(--color-border-default); pointer-events: none; }
+.zones { position: absolute; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 9px; color: var(--color-fg-subtle); display: flex; justify-content: space-around; pointer-events: none; }
+.zones.top { inset-inline: 9px; top: -1px; height: 10px; line-height: 10px; }
+.zones.side { inset-block: 9px; inset-inline-start: 0; width: 9px; flex-direction: column; align-items: center; }
+.sheet-inner { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 188px; gap: 0 26px; }
+.pane { border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-surface); overflow: hidden; }
+.pane-h { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--color-border-subtle); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; color: var(--color-fg-muted); }
+.pane-h b { color: var(--color-fg-default); font-weight: 500; }
+pre { margin: 0; }
+.code { padding: 12px 0; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 12px; line-height: var(--brand-code-line); counter-reset: ln; overflow-x: auto; }
+.code .l { display: block; padding-inline: 0 16px; white-space: pre; }
+.code .l::before { counter-increment: ln; content: counter(ln); display: inline-block; width: 3.2em; padding-inline-end: 1.2em; text-align: end; color: var(--color-fg-subtle); opacity: 0.8; }
+.code .l.hl { background: var(--color-accent-subtle); box-shadow: inset 2px 0 0 var(--color-accent-default); }
+.k { color: var(--brand-syn-key); } .s { color: var(--brand-syn-str); } .n { color: var(--brand-syn-num); } .c { color: var(--brand-syn-com); } .f { color: var(--brand-syn-fn); font-weight: 600; }
+.out { margin-top: 18px; }
+.term { padding: 12px 16px 14px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 12.5px; line-height: var(--brand-code-line); }
+.term .row { display: grid; grid-template-columns: 18px 64px 1fr auto; gap: 8px; align-items: center; white-space: nowrap; }
+.term .row.cmd { grid-template-columns: 1fr; color: var(--color-fg-default); }
+.term .row.cmd::before { content: "$ forge deploy"; }
+.term .ok { width: 14px; height: 14px; color: var(--color-success-fg); }
+.term .t { color: var(--color-fg-subtle); text-align: end; font-variant-numeric: tabular-nums; }
+.term .d { color: var(--color-fg-muted); overflow: hidden; text-overflow: ellipsis; }
+.term .live { color: var(--color-accent-fg); }
+.term .url { color: var(--color-fg-default); text-decoration: underline; text-decoration-color: var(--color-border-strong); text-underline-offset: 3px; }
+.notes { list-style: none; margin: 0; padding: 0; position: relative; }
+.note { position: absolute; inset-inline: 0; font-size: 0.8125rem; line-height: 1.4; color: var(--color-fg-muted); display: grid; grid-template-columns: 22px 1fr; gap: 10px; }
+.note b { color: var(--color-fg-default); font-weight: 600; display: block; }
+.bub { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--color-accent-default); color: var(--color-accent-fg); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 10px; display: grid; place-items: center; background: var(--color-bg-canvas); position: relative; z-index: 2; }
+.leaders { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+.leaders path { fill: none; stroke: var(--color-border-strong); stroke-width: 1; stroke-dasharray: 3 3; }
+.leaders circle { fill: var(--color-accent-default); }
+.title-block { display: grid; grid-template-columns: 1.4fr 1fr 0.7fr 0.6fr; margin-top: 20px; border: 1px solid var(--color-border-default); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 10px; }
+.title-block div { padding: 6px 10px; border-inline-start: 1px solid var(--color-border-default); color: var(--color-fg-default); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.title-block div:first-child { border-inline-start: 0; }
+.title-block span { display: block; font-size: 8.5px; color: var(--color-fg-subtle); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.spec-strip { border-top: 1px solid var(--color-border-subtle); }
+.spec-strip dl { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; }
+.spec-strip dl > div { padding: 18px 20px 20px; border-inline-start: 1px solid var(--color-border-subtle); }
+.spec-strip dl > div:first-child { border-inline-start: 0; padding-inline-start: 0; }
+.spec-strip dt { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; text-transform: uppercase; color: var(--color-fg-muted); }
+.spec-strip dd { margin: 6px 0 0; font-size: 1.75rem; font-weight: 600; font-stretch: 88%; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.spec-strip dd small { font-size: 0.875rem; font-weight: 400; color: var(--color-fg-muted); letter-spacing: 0; }
+.spec-foot { padding-bottom: 18px; font-size: 0.75rem; color: var(--color-fg-subtle); }
+.spec-foot a { color: var(--color-fg-muted); }
+
+/* ---------- Section frame ---------- */
+.section { padding-block: clamp(4rem, 7vw, 6.5rem); border-bottom: 1px solid var(--color-border-subtle); }
+.s-head { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: var(--space-8); margin-bottom: var(--space-10); align-items: baseline; }
+.s-head .no { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.8125rem; color: var(--color-accent-fg); }
+.s-head h2 { margin: 0 0 var(--space-3); font-size: clamp(2rem, 3.4vw, 2.75rem); font-weight: 600; font-stretch: 88%; letter-spacing: -0.03em; line-height: 1.05; }
+.s-head p { margin: 0; color: var(--color-fg-muted); max-width: 64ch; font-size: 1.0625rem; }
+.body-grid { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: var(--space-8); }
+.body-grid > .side { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; color: var(--color-fg-subtle); line-height: 1.6; }
+
+/* ---------- 3. Palette ---------- */
+.pal { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.pal th, .pal td { text-align: start; padding: 10px 12px; border-bottom: 1px solid var(--color-border-subtle); vertical-align: middle; }
+.pal thead th { font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 400; font-size: 0.6875rem; text-transform: uppercase; color: var(--color-fg-muted); border-bottom-color: var(--color-border-strong); }
+.pal td.sw { width: 140px; padding-inline-start: 0; }
+.pal td.sw span { display: block; height: 40px; border-radius: var(--radius-sm); border: 1px solid var(--color-border-default); }
+.pal td.mono, .pal td .mono { font-size: 0.8125rem; }
+.pal .name { font-weight: 600; }
+.ratio { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.8125rem; }
+.ratio i { width: 8px; height: 8px; border-radius: 50%; background: var(--color-success-fg); }
+.syn { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-6); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; }
+.syn span { padding: 6px 10px; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-sm); background: var(--color-bg-surface); }
+
+/* ---------- 4. Type ---------- */
+.specimens { display: grid; gap: 0; border-top: 1px solid var(--color-border-strong); }
+.sp { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: var(--space-8); padding-block: var(--space-6); border-bottom: 1px solid var(--color-border-subtle); align-items: center; }
+.sp .meta { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; color: var(--color-fg-muted); line-height: 1.7; }
+.sp .meta b { color: var(--color-fg-default); font-weight: 500; }
+.t-display { margin: 0; font-size: clamp(2.75rem, 5.6vw, 4.75rem); font-weight: 600; font-stretch: 88%; letter-spacing: -0.035em; line-height: 1; }
+.t-display span { color: var(--color-fg-muted); }
+.t-body { margin: 0; font-size: 1.0625rem; line-height: 1.65; max-width: 64ch; }
+.t-body code, .t-code { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.875em; background: var(--color-bg-surface-raised); padding: 1px 5px; border-radius: var(--radius-sm); }
+.t-caption { margin: 0; font-size: 0.8125rem; line-height: 1.5; color: var(--color-fg-muted); }
+.t-mono { margin: 0; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.8125rem; line-height: 1.7; }
+.widths { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-family: var(--font-family-mono); font-size: 1.125rem; }
+.widths span small { display: block; font-size: 0.625rem; color: var(--color-fg-subtle); }
+
+/* ---------- 5. Components ---------- */
+.comp { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-5); }
+.cell { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); background: var(--color-bg-surface); padding: var(--space-6); }
+.cell > .lbl { display: block; margin-bottom: var(--space-5); }
+.c4 { grid-column: span 4; } .c8 { grid-column: span 8; } .c12 { grid-column: span 12; }
+.btns { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+.btns p { flex-basis: 100%; margin: var(--space-2) 0 0; font-size: 0.8125rem; color: var(--color-fg-muted); }
+.field { display: grid; gap: 6px; margin-bottom: var(--space-5); }
+.field label { font-size: 0.875rem; font-weight: 600; }
+.field .hint { font-size: 0.8125rem; color: var(--color-fg-muted); }
+.field .ctl { display: flex; align-items: center; border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); background: var(--color-bg-canvas); min-height: 40px; }
+.field .ctl:focus-within { outline: 2px solid var(--color-focus-ring); outline-offset: 1px; }
+.field .pre { padding: 0 0 0 12px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.8125rem; color: var(--color-fg-subtle); white-space: nowrap; }
+.field input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--color-fg-default); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.8125rem; padding: 0 12px 0 2px; min-height: 38px; outline: none; }
+.field.err .ctl { border-color: var(--color-danger-border); }
+.field .error { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; line-height: 1.6; color: var(--color-danger-fg); }
+.field .error b { font-weight: 600; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; min-height: 24px; padding: 0 8px; border-radius: var(--radius-sm); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; border: 1px solid currentColor; }
+.badge i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.b-live { color: var(--color-success-fg); background: var(--color-success-bg); }
+.b-build { color: var(--color-warning-fg); background: var(--color-warning-bg); }
+.b-fail { color: var(--color-danger-fg); background: var(--color-danger-bg); }
+.b-beta { color: var(--color-info-fg); background: var(--color-info-bg); }
+.deploys { list-style: none; margin: 0; padding: 0; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); overflow: hidden; }
+.deploys li { display: grid; grid-template-columns: 1.5fr 1fr 1.3fr 0.8fr 32px; gap: 12px; align-items: center; min-height: 52px; padding: 0 12px; border-top: 1px solid var(--color-border-subtle); font-size: 0.875rem; }
+.deploys li:first-child { border-top: 0; }
+.deploys li.head { min-height: 34px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; text-transform: uppercase; color: var(--color-fg-subtle); background: var(--color-bg-canvas); }
+.deploys li:not(.head):hover { background: var(--color-bg-surface-raised); }
+.deploys .nm b { display: block; font-weight: 600; }
+.deploys .nm span, .deploys .sha { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; color: var(--color-fg-muted); }
+.deploys .rg { display: flex; gap: 4px; flex-wrap: wrap; }
+.deploys .rg span { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; padding: 1px 5px; border: 1px solid var(--color-border-default); border-radius: var(--radius-sm); color: var(--color-fg-muted); }
+.deploys .more { width: 32px; height: 32px; display: grid; place-items: center; border-radius: var(--radius-sm); color: var(--color-fg-muted); }
+
+/* ---------- 6. Applications ---------- */
+.apps { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-8); align-items: start; }
+.docs { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-bg-canvas); }
+.docs-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-bottom: 1px solid var(--color-border-subtle); font-size: 0.8125rem; }
+.docs-top .logo { font-size: 0.9375rem; }
+.docs-top .logo svg { width: 18px; height: 18px; }
+.docs-body { display: grid; grid-template-columns: 170px minmax(0, 1fr) 130px; min-height: 460px; }
+.docs-nav { border-inline-end: 1px solid var(--color-border-subtle); padding: 14px 12px; font-size: 0.8125rem; color: var(--color-fg-muted); }
+.docs-nav p { margin: 10px 0 4px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; text-transform: uppercase; color: var(--color-fg-subtle); }
+.docs-nav span { display: block; padding: 3px 8px; border-radius: var(--radius-sm); text-decoration: none; }
+.docs-nav span.on { background: var(--color-bg-surface-raised); color: var(--color-fg-default); box-shadow: inset 2px 0 0 var(--color-accent-default); }
+.docs-main { padding: 20px 24px; font-size: 0.875rem; }
+.docs-main .crumb { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; color: var(--color-fg-subtle); }
+.docs-main h4 { margin: 6px 0 8px; font-size: 1.5rem; font-weight: 600; font-stretch: 88%; letter-spacing: -0.02em; line-height: 1.15; }
+.docs-main p { margin: 0 0 12px; color: var(--color-fg-muted); line-height: 1.6; }
+.docs-main .pane { margin: 12px 0; }
+.docs-main .code { font-size: 11px; line-height: 20px; padding: 8px 0; }
+.callout { border: 1px solid var(--color-border-default); border-inline-start: 3px solid var(--color-accent-default); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 0.8125rem; color: var(--color-fg-muted); }
+.callout b { color: var(--color-fg-default); }
+.docs-toc { border-inline-start: 1px solid var(--color-border-subtle); padding: 14px 12px; font-size: 0.75rem; color: var(--color-fg-muted); }
+.docs-toc p { margin: 0 0 8px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; text-transform: uppercase; color: var(--color-fg-subtle); }
+.docs-toc span { display: block; padding: 2px 0; text-decoration: none; }
+.docs-toc span.on { color: var(--color-accent-fg); }
+.help { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); background: var(--color-bg-sunken); }
+.help pre { padding: 16px 18px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 11.5px; line-height: 1.75; color: var(--color-fg-default); overflow-x: auto; }
+.help .h { color: var(--color-fg-muted); }
+.help .cmdname { color: var(--color-accent-fg); }
+.cap { margin: 10px 0 0; font-size: 0.8125rem; color: var(--color-fg-muted); }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-10); align-items: start; }
+.img-grid p { margin: 0 0 var(--space-5); color: var(--color-fg-muted); max-width: 54ch; }
+.img-grid p b { color: var(--color-fg-default); font-weight: 600; }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; list-style: none; margin: var(--space-6) 0 0; padding: 0; }
+.icons li { display: grid; justify-items: center; gap: 8px; padding: 14px 4px 10px; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); background: var(--color-bg-surface); font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.625rem; color: var(--color-fg-muted); text-transform: uppercase; }
+.icons svg { width: 32px; height: 32px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
+.icons svg .a { stroke: var(--color-accent-default); }
+.diagram { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); background: radial-gradient(circle, var(--color-border-default) 1px, transparent 1.2px) 0 0 / 16px 16px, var(--color-bg-canvas); padding: 16px; }
+.diagram svg { width: 100%; height: auto; }
+.diagram text { font-family: "Martian Mono", monospace; font-stretch: 87.5%; font-size: 11px; fill: var(--color-fg-default); }
+.diagram .sm { font-size: 9.5px; fill: var(--color-fg-muted); }
+.diagram .box { fill: var(--color-bg-surface); stroke: var(--color-border-strong); }
+.diagram .wire { fill: none; stroke: var(--color-border-strong); stroke-width: 1; }
+.diagram .hot { fill: none; stroke: var(--color-accent-default); stroke-width: 1.5; }
+.diagram .dim { stroke: var(--color-fg-subtle); stroke-width: 0.8; fill: none; }
+
+/* ---------- 8. Motion ---------- */
+.motion { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-10); align-items: start; }
+.mt { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.mt th, .mt td { text-align: start; padding: 9px 10px 9px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.mt th { font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 400; font-size: 0.6875rem; text-transform: uppercase; color: var(--color-fg-muted); border-bottom-color: var(--color-border-strong); }
+.mt code { font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.75rem; color: var(--color-accent-fg); white-space: nowrap; }
+.trace { border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); background: var(--color-bg-surface); overflow: hidden; }
+.trace .pane-h { padding: 10px 14px; }
+.spans { list-style: none; margin: 0; padding: 10px 14px 14px; font-family: var(--font-family-mono); font-stretch: 87.5%; font-size: 0.6875rem; }
+.spans li { display: grid; grid-template-columns: 150px 1fr 56px; gap: 10px; align-items: center; min-height: 28px; }
+.spans .nm { color: var(--color-fg-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spans .nm b { color: var(--color-fg-default); font-weight: 500; }
+.spans .track { position: relative; height: 12px; border-inline-start: 1px solid var(--color-border-default); }
+.spans .bar { position: absolute; top: 0; bottom: 0; left: var(--x); width: var(--w); background: var(--color-fg-muted); border-radius: 2px; transform-origin: left; }
+.spans .bar.tool { background: var(--color-info-fg); }
+.spans .bar.model { background: var(--color-accent-default); }
+.spans .ms { text-align: end; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.trace.play .bar { animation: grow var(--dur) var(--ease-linear) both; animation-delay: var(--delay); }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .trace.play .bar { animation: none; } }
+.trace-ctl { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--color-border-subtle); font-size: 0.8125rem; color: var(--color-fg-muted); }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+.voice figure { margin: 0; border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); padding: var(--space-6); background: var(--color-bg-surface); display: flex; flex-direction: column; gap: var(--space-4); }
+.voice blockquote { margin: 0; font-size: 1.75rem; font-weight: 600; font-stretch: 88%; letter-spacing: -0.025em; line-height: 1.1; }
+.voice blockquote.err { font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 400; font-size: 0.8125rem; letter-spacing: 0; line-height: 1.7; color: var(--color-fg-default); background: var(--color-bg-sunken); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 12px 14px; }
+.voice blockquote.err .e { color: var(--color-danger-fg); }
+.voice blockquote.err .h { color: var(--color-fg-muted); }
+.voice figcaption { margin-top: auto; font-size: 0.875rem; color: var(--color-fg-muted); }
+
+/* ---------- 10. Rationale ---------- */
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.rat h3 { margin: 0 0 var(--space-3); font-size: 1.125rem; font-weight: 600; }
+.rat h3::before { content: attr(data-n) "  "; font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 400; font-size: 0.75rem; color: var(--color-accent-fg); }
+.rat p, .rat li { color: var(--color-fg-muted); font-size: 0.9375rem; line-height: 1.65; }
+.rat p { margin: 0 0 var(--space-3); }
+.rat ul { margin: 0; padding-inline-start: 1.1em; }
+.rat li { margin-bottom: 6px; }
+.rat b { color: var(--color-fg-default); font-weight: 600; }
+.cliche { margin-top: var(--space-10); width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.cliche caption { text-align: start; font-weight: 600; padding-bottom: 10px; }
+.cliche th, .cliche td { text-align: start; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.cliche thead th { font-family: var(--font-family-mono); font-stretch: 87.5%; font-weight: 400; font-size: 0.6875rem; text-transform: uppercase; color: var(--color-fg-muted); border-bottom-color: var(--color-border-strong); }
+.cliche td:first-child { color: var(--color-fg-muted); text-decoration: line-through; text-decoration-color: var(--color-danger-fg); }
+.colophon { margin-top: var(--space-12); padding-top: var(--space-4); border-top: 1px solid var(--color-border-subtle); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); font-size: 0.8125rem; color: var(--color-fg-subtle); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1180px) {
+  .nav ul { display: none; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .spec-strip dl { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .spec-strip dl > div:nth-child(4) { border-inline-start: 0; padding-inline-start: 0; }
+  .s-head, .body-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+  .c4, .c8 { grid-column: span 12; }
+  .apps, .img-grid, .motion { grid-template-columns: minmax(0, 1fr); }
+  .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: 1fr; }
+  .nav { gap: var(--space-3); }
+  .search span, .search kbd, .nav .signin { display: none; }
+  .search { padding: 0; width: 36px; justify-content: center; }
+  .search .mag { display: block; }
+  .hero-grid { padding-top: var(--space-10); }
+  .hero-copy h2 { font-size: clamp(2.5rem, 12vw, 3.25rem); }
+  .sheet { padding: 16px 14px; }
+  .sheet::before, .zones { display: none; }
+  .sheet-inner { grid-template-columns: minmax(0, 1fr); }
+  .leaders { display: none; }
+  .notes { display: grid; gap: 12px; margin-top: 16px; }
+  .note { position: static; }
+  .code .l::before { width: 2.4em; padding-inline-end: 0.8em; }
+  .term .row { grid-template-columns: 16px 52px 1fr; }
+  .term .t { display: none; }
+  .title-block { grid-template-columns: 1fr 1fr; }
+  .title-block div:nth-child(3) { border-inline-start: 0; border-top: 1px solid var(--color-border-default); }
+  .title-block div:nth-child(4) { border-top: 1px solid var(--color-border-default); }
+  .spec-strip dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spec-strip dl > div { padding: 14px 12px; }
+  .spec-strip dl > div:nth-child(odd) { border-inline-start: 0; padding-inline-start: 0; }
+  .spec-strip dl > div:nth-child(4) { border-inline-start: 1px solid var(--color-border-subtle); padding-inline-start: 12px; }
+  .spec-strip dl > div:last-child { grid-column: span 2; }
+  .pal td.sw { width: 56px; }
+  .pal .hide-sm { display: none; }
+  .sp { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+  .cell { padding: var(--space-5) var(--space-4); }
+  .deploys li { grid-template-columns: 1.4fr 1fr 32px; }
+  .deploys .rg, .deploys .sha { display: none; }
+  .deploys li.head span:nth-child(3), .deploys li.head span:nth-child(4) { display: none; }
+  .docs-body { grid-template-columns: minmax(0, 1fr); }
+  .docs-nav, .docs-toc { display: none; }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .spans li { grid-template-columns: 96px 1fr 44px; }
+  .mt code { white-space: normal; overflow-wrap: anywhere; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Forge mark: an anvil reduced to three bars; the top bar is the work -->
+    <symbol id="fg-mark" viewBox="0 0 26 26"><path d="M3 7h20v4H3z" fill="currentColor"/><path d="M8 13h10v3H8z" fill="currentColor" opacity=".7"/><path d="M5 18h16v3H5z" fill="currentColor" opacity=".45"/></symbol>
+    <symbol id="ok" viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></symbol>
+    <symbol id="copy" viewBox="0 0 14 14"><path d="M4.5 4.5h7v7h-7zM2.5 9.5v-7h7" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  </defs>
+</svg>
+
+<header id="direction">
+  <div class="wrap">
+    <span class="lbl">Stylescape 12 / 12</span>
+    <h1>Forge <span>&middot; Shop Drawing</span></h1>
+    <a class="back" href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.dark-tech-developer</li><li>industry.developer-tools</li><li>audience.expert-power-users</li><li>archetype.magician</li><li>channel.marketing-website</li>
+    </ul>
+    <p class="brief">A CLI and cloud for deploying AI agents. Developers distrust magic they cannot inspect, so this Magician shows the method: real code, annotated like an engineering drawing, with the deploy output and the numbers beside it. Warm graphite, one amber signal, no glow, no fake terminal.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO ================= -->
+<section id="hero" aria-labelledby="hero-t">
+  <div class="wrap">
+    <nav class="nav" aria-label="Site (sample)">
+      <a class="logo" href="#hero"><svg aria-hidden="true"><use href="#fg-mark"/></svg>forge</a>
+      <ul><li><a href="#hero">Docs</a></li><li><a href="#hero">Pricing</a></li><li><a href="#hero">Changelog</a></li><li><a href="#hero">Status</a></li><li><a href="#hero">GitHub</a></li></ul>
+      <div class="right">
+        <button class="search" type="button" aria-label="Search docs"><svg class="mag" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.3"/></svg><span>Search docs</span><kbd>/</kbd></button>
+        <button class="icon-btn" type="button" id="fg-theme" aria-pressed="false" aria-label="Light theme"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6L13 13M13 3l-1.4 1.4M4.4 11.6L3 13" stroke="currentColor" stroke-width="1.3"/></svg></button>
+        <a class="btn btn-secondary signin" href="#hero">Sign in</a>
+        <a class="btn btn-primary" href="#hero">Start free</a>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <a class="release" href="#hero"><b>v2.6</b>Durable memory is generally available</a>
+        <h2 id="hero-t">One file in.<span>A running agent out.</span></h2>
+        <p class="lead">Forge is a CLI and runtime for AI agents: <b>typed tools, durable state and replayable traces</b>. <code>forge deploy</code> ships the agent to the regions you choose and gives you a URL.</p>
+        <div class="install">
+          <div role="tablist" aria-label="Install with">
+            <button role="tab" aria-selected="true" id="t-brew" type="button">brew</button>
+            <button role="tab" aria-selected="false" id="t-npm" type="button" tabindex="-1">npm</button>
+            <button role="tab" aria-selected="false" id="t-cargo" type="button" tabindex="-1">cargo</button>
+          </div>
+          <div class="cmd" role="tabpanel" aria-labelledby="t-brew"><span id="fg-cmd">brew install forge-cli</span><button class="copy" type="button" id="fg-copy"><svg aria-hidden="true"><use href="#copy"/></svg>Copy</button></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="#applications">Read the 5-minute quickstart</a>
+          <a class="btn btn-secondary btn-lg" href="#hero">Talk to an engineer</a>
+        </div>
+        <p class="proof"><span><b>Apache-2.0</b> CLI and SDK</span><span><b>SOC 2 Type II</b> report on request</span><span><b>DO_NOT_TRACK</b> respected</span></p>
+      </div>
+      <figure class="sheet" style="margin:0" aria-label="Annotated drawing: an agent defined in support.ts, the output of forge deploy, and four numbered notes">
+        <div class="zones top" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+        <div class="zones side" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+        <div class="sheet-inner" id="fg-sheet">
+          <div>
+            <div class="pane">
+              <div class="pane-h"><b>agents/support.ts</b><span>TypeScript</span></div>
+<pre class="code" aria-label="Source of agents/support.ts"><span class="l"><span class="k">import</span> { agent, tool, env } <span class="k">from</span> <span class="s">"@forge/sdk"</span>;</span><span class="l"><span class="k">import</span> { z } <span class="k">from</span> <span class="s">"zod"</span>;</span><span class="l"> </span><span class="l hl" id="ln-4"><span class="k">export const</span> <span class="f">refund</span> = tool({</span><span class="l">  input: z.object({ orderId: z.string() }),</span><span class="l">  run: (i) =&gt; billing.refund(i.orderId),</span><span class="l">});</span><span class="l"> </span><span class="l"><span class="k">export default</span> <span class="f">agent</span>({</span><span class="l">  model: env.<span class="f">MODEL</span>,</span><span class="l">  tools: [refund, lookupOrder],</span><span class="l hl" id="ln-12">  memory: <span class="s">"durable"</span>,</span><span class="l hl" id="ln-13">  budget: { usd: <span class="n">0.50</span> },  <span class="c">// per run</span></span><span class="l">});</span></pre>
+            </div>
+            <div class="pane out">
+              <div class="pane-h"><b>zsh</b><span>~/acme/support</span></div>
+              <div class="term" aria-label="Output of forge deploy">
+                <div class="row cmd"></div>
+                <div class="row"><svg class="ok" aria-hidden="true"><use href="#ok"/></svg><span>build</span><span class="d">14 files, 212 KB</span><span class="t">1.8s</span></div>
+                <div class="row"><svg class="ok" aria-hidden="true"><use href="#ok"/></svg><span>types</span><span class="d">2 tools checked</span><span class="t">0.2s</span></div>
+                <div class="row" id="ln-out"><svg class="ok" aria-hidden="true"><use href="#ok"/></svg><span>deploy</span><span class="d">iad1 fra1 sin1</span><span class="t">9.4s</span></div>
+                <div class="row"><span></span><span class="live">live</span><span class="url">support.acme.forge.example</span><span class="t">11.4s</span></div>
+              </div>
+            </div>
+          </div>
+          <ol class="notes" id="fg-notes">
+            <li class="note" data-for="ln-4"><span class="bub">1</span><span><b>Typed tools</b>Inputs are validated against the schema before the model sees them.</span></li>
+            <li class="note" data-for="ln-12"><span class="bub">2</span><span><b>Durable memory</b>State survives restarts, deploys and region failover.</span></li>
+            <li class="note" data-for="ln-13"><span class="bub">3</span><span><b>Hard budget</b>Runs stop at the cap. No surprise invoices.</span></li>
+            <li class="note" data-for="ln-out"><span class="bub">4</span><span><b>Three regions</b>Commit to live URL in 11.4&nbsp;s, measured.</span></li>
+          </ol>
+          <svg class="leaders" id="fg-leaders" aria-hidden="true"></svg>
+        </div>
+        <div class="title-block" aria-hidden="true">
+          <div><span>Drawing</span>support.ts to live URL</div>
+          <div><span>Project</span>acme/support</div>
+          <div><span>Rev</span>2.6.0</div>
+          <div><span>Sheet</span>1 of 1</div>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <div class="spec-strip">
+    <div class="wrap">
+      <dl>
+        <div><dt>Cold start p50</dt><dd>180<small> ms</small></dd></div>
+        <div><dt>Regions</dt><dd>14</dd></div>
+        <div><dt>Trace retention</dt><dd>30<small> days</small></dd></div>
+        <div><dt>Free tier</dt><dd>10k<small> runs / mo</small></dd></div>
+        <div><dt>Then</dt><dd>$0.20<small> / 1k runs</small></dd></div>
+      </dl>
+      <p class="spec-foot">Illustrative figures for a fictional product. On a real site every number links to its method: hardware, region, sample size and date. <a href="#rationale">Benchmark methodology</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="pal-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;3 palette</span><div><h2 id="pal-t">Palette</h2><p>Warm graphite instead of blue-black, paper white instead of #FFF, and one amber that means &ldquo;this is the action&rdquo;. A light theme ships from day one; try the sun button in the hero.</p></div></div>
+    <table class="pal">
+      <thead><tr><th>Swatch</th><th>Name &middot; role</th><th>Hex</th><th class="hide-sm">OKLCH</th><th>Contrast</th></tr></thead>
+      <tbody>
+        <tr><td class="sw"><span style="background:#121110"></span></td><td><span class="name">Graphite</span><br><span class="lbl">bg-canvas</span></td><td class="mono">#121110</td><td class="mono hide-sm">oklch(0.18 0.003 68)</td><td><span class="ratio"><i></i>Paper 15.58:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#1A1917"></span></td><td><span class="name">Slate</span><br><span class="lbl">bg-surface</span></td><td class="mono">#1A1917</td><td class="mono hide-sm">oklch(0.21 0.004 85)</td><td><span class="ratio"><i></i>Pencil 6.59:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#EDE9E1"></span></td><td><span class="name">Paper</span><br><span class="lbl">fg-default</span></td><td class="mono">#EDE9E1</td><td class="mono hide-sm">oklch(0.93 0.012 85)</td><td><span class="ratio"><i></i>on Graphite 15.58:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#A39E94"></span></td><td><span class="name">Pencil</span><br><span class="lbl">fg-muted</span></td><td class="mono">#A39E94</td><td class="mono hide-sm">oklch(0.70 0.015 85)</td><td><span class="ratio"><i></i>on Graphite 7.07:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#F5A524"></span></td><td><span class="name">Forge amber</span><br><span class="lbl">accent-default</span></td><td class="mono">#F5A524</td><td class="mono hide-sm">oklch(0.78 0.158 72)</td><td><span class="ratio"><i></i>Graphite on it 9.24:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#6F6A61"></span></td><td><span class="name">Rule</span><br><span class="lbl">border-strong</span></td><td class="mono">#6F6A61</td><td class="mono hide-sm">oklch(0.53 0.015 82)</td><td><span class="ratio"><i></i>UI 3.51:1</span></td></tr>
+        <tr><td class="sw"><span style="background:#F4F1EA"></span></td><td><span class="name">Light canvas</span><br><span class="lbl">bg-canvas, light</span></td><td class="mono">#F4F1EA</td><td class="mono hide-sm">oklch(0.96 0.010 87)</td><td><span class="ratio"><i></i>Slate 15.57:1 &middot; amber text #A15C00 4.60:1</span></td></tr>
+      </tbody>
+    </table>
+    <div class="syn" aria-label="Syntax colors">
+      <span><span class="k">keyword</span> #E9B872 9.67:1</span><span><span class="s">"string"</span> #A8C69F 9.41:1</span><span><span class="n">0.50</span> #8FB8DE 8.43:1</span><span><span class="c">// comment</span> #8A847A 4.74:1</span><span style="color:var(--color-danger-fg)">E_ error #FF7A6B 6.90:1</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;4 type</span><div><h2 id="type-t">Type</h2><p>Instrument Sans for prose and headlines, Martian Mono for anything a developer would copy, type or grep. Mono runs at 87.5% width so code stays compact without shrinking.</p></div></div>
+    <div class="specimens">
+      <div class="sp"><p class="t-display">Ship the agent. <span>Keep the receipts.</span></p><div class="meta"><b>Display</b><br>Instrument Sans 600 &middot; wdth 88<br>clamp(44px, 5.6vw, 76px) / 1.0<br>tracking &minus;0.035em</div></div>
+      <div class="sp"><p class="t-body">Every run writes a trace: the prompt, each tool call with its typed input and output, tokens and cost. Replay any trace locally with <code>forge replay &lt;id&gt;</code> and step through it like a debugger.</p><div class="meta"><b>Body</b><br>Instrument Sans 400 &middot; 17px / 1.65<br>measure 64ch &middot; docs 16px</div></div>
+      <div class="sp"><p class="t-caption">Last deployed 2 min ago by mara &middot; a41f9c2 &middot; iad1, fra1, sin1</p><div class="meta"><b>Caption</b><br>Instrument Sans 400 &middot; 13px / 1.5<br>Pencil #A39E94, 7.07:1</div></div>
+      <div class="sp"><div><p class="t-mono">forge logs support --follow --since 10m</p><div class="widths" aria-hidden="true"><span style="font-stretch:75%">wdth75<small>labels</small></span><span style="font-stretch:87.5%">wdth87<small>code</small></span><span style="font-stretch:112.5%">wdth112<small>never</small></span></div></div><div class="meta"><b>Mono</b><br>Martian Mono 400&ndash;500 &middot; wdth 87.5<br>code 12.5&ndash;13px / 24px grid<br>labels 11px caps</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="comp-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;5 components</span><div><h2 id="comp-t">Components</h2><p>Borders over shadows, 6px radius, keyboard hints on every primary action. Errors read like good compiler output: code, cause, fix, link.</p></div></div>
+    <div class="comp">
+      <div class="cell c4">
+        <span class="lbl">Buttons</span>
+        <div class="btns">
+          <button class="btn btn-primary" type="button">Deploy <kbd>&#8984;&#9166;</kbd></button>
+          <button class="btn btn-secondary" type="button">View trace</button>
+          <button class="btn btn-primary" type="button" disabled>Deploying&hellip;</button>
+          <button class="btn btn-primary is-focus" type="button">Focus state</button>
+          <p>Focus: 2px Paper ring, 2px offset, on every control. Hover changes fill in 120ms; nothing glows.</p>
+        </div>
+      </div>
+      <form class="cell c4" onsubmit="return false" novalidate>
+        <span class="lbl">Text input</span>
+        <div class="field err">
+          <label for="fg-name">Project name</label>
+          <span class="hint" id="fg-name-hint">Lowercase letters, numbers and dashes. Used in your URL.</span>
+          <div class="ctl"><span class="pre">acme/</span><input id="fg-name" type="text" value="Support Bot" aria-invalid="true" aria-describedby="fg-name-hint fg-name-err" spellcheck="false"></div>
+          <span class="error" id="fg-name-err"><b>E_NAME_INVALID</b>: contains a space and capitals. Try <b>support-bot</b>.</span>
+        </div>
+      </form>
+      <div class="cell c4">
+        <span class="lbl">Status badges</span>
+        <div class="badges">
+          <span class="badge b-live"><i></i>live</span>
+          <span class="badge b-build"><i></i>building</span>
+          <span class="badge b-fail"><i></i>failed</span>
+          <span class="badge b-beta">beta</span>
+        </div>
+        <p style="margin:16px 0 0;font-size:0.8125rem;color:var(--color-fg-muted)">Each status has a word and a dot shape; color is never the only signal. <kbd>G</kbd> then <kbd>D</kbd> opens deployments.</p>
+      </div>
+      <div class="cell c12">
+        <span class="lbl">Deployment list</span>
+        <ul class="deploys">
+          <li class="head"><span>Agent</span><span>Status</span><span>Regions</span><span>Commit</span><span></span></li>
+          <li><span class="nm"><b>support</b><span>main &middot; 2 min ago</span></span><span><span class="badge b-live"><i></i>live</span></span><span class="rg"><span>iad1</span><span>fra1</span><span>sin1</span></span><span class="sha">a41f9c2</span><span class="more" aria-hidden="true">&middot;&middot;&middot;</span></li>
+          <li><span class="nm"><b>triage</b><span>pr-482 &middot; building</span></span><span><span class="badge b-build"><i></i>building</span></span><span class="rg"><span>iad1</span></span><span class="sha">77c0d1e</span><span class="more" aria-hidden="true">&middot;&middot;&middot;</span></li>
+          <li><span class="nm"><b>billing-sync</b><span>main &middot; 1 h ago</span></span><span><span class="badge b-fail"><i></i>failed</span></span><span class="rg"><span>fra1</span></span><span class="sha">0be52aa</span><span class="more" aria-hidden="true">&middot;&middot;&middot;</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="app-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;6 applications</span><div><h2 id="app-t">Applications</h2><p>The docs are the product&rsquo;s real homepage, and the CLI&rsquo;s help text is its most-read copy. Both get the same care as the hero.</p></div></div>
+    <div class="apps">
+      <div>
+        <div class="docs" role="img" aria-label="Docs page: Quickstart, with a left navigation, a code block, a callout and an on-page table of contents">
+          <div class="docs-top"><span class="logo"><svg aria-hidden="true"><use href="#fg-mark"/></svg>forge docs</span><span class="lbl">v2.6 &middot; <kbd>/</kbd> search</span></div>
+          <div class="docs-body">
+            <div class="docs-nav"><p>Start</p><span class="on">Quickstart</span><span>Install the CLI</span><span>Concepts</span><p>Build</p><span>Tools</span><span>Memory</span><span>Budgets</span><span>Evals</span><p>Operate</p><span>Traces</span><span>Regions</span><span>Limits</span></div>
+            <div class="docs-main">
+              <span class="crumb">docs / start / quickstart &middot; 5 min</span>
+              <h4>Deploy your first agent</h4>
+              <p>Create a project, add one tool and deploy. You need Node 20 or later and a model API key.</p>
+              <div class="pane"><div class="pane-h"><b>terminal</b><span class="copy" style="min-height:24px">Copy</span></div>
+<pre class="code"><span class="l">forge init support --template refunds</span><span class="l">cd support &amp;&amp; forge dev</span><span class="l">forge deploy --region iad1,fra1</span></pre></div>
+              <div class="callout"><b>Note:</b> <code class="t-code">forge dev</code> runs the agent locally with the same sandbox as production, so traces match.</div>
+            </div>
+            <div class="docs-toc"><p>On this page</p><span class="on">Create a project</span><span>Add a tool</span><span>Run locally</span><span>Deploy</span><span>Next steps</span></div>
+          </div>
+        </div>
+        <p class="cap">Docs: 240/720/200 split at desktop, search on <kbd>/</kbd>, copy on every block.</p>
+      </div>
+      <div>
+        <div class="help">
+<pre aria-label="Output of forge --help"><span class="cmdname">forge</span> 2.6.0
+<span class="h">Build, run and deploy AI agents.</span>
+
+<span class="h">USAGE</span>
+  forge &lt;command&gt; [flags]
+
+<span class="h">COMMANDS</span>
+  init      Create a project from a template
+  dev       Run locally with hot reload
+  deploy    Ship to one or more regions
+  logs      Stream logs and traces
+  replay    Re-run a trace step by step
+  budget    Show and set spend limits
+
+<span class="h">FLAGS</span>
+  -r, --region   Regions, comma separated
+  -j, --json     Machine-readable output
+      --no-color Respect NO_COLOR as well
+
+<span class="h">Docs:</span> forge.example/docs
+<span class="h">Telemetry:</span> off when DO_NOT_TRACK=1</pre>
+        </div>
+        <p class="cap">CLI help: verbs first, aligned columns, one line each, docs and telemetry stated at the bottom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="img-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;7 imagery</span><div><h2 id="img-t">Imagery &amp; icons</h2><p>No stock, no orbs, no robots. Pictures are schematics of the real system, drawn with the same hairlines and labels as the code annotations.</p></div></div>
+    <div class="img-grid">
+      <div>
+        <p><b>Diagrams</b> use a 16px dot grid, 1px boxes, mono labels and dimension lines for real measurements (latency, size). One path, the one being explained, is amber.</p>
+        <p><b>Icons</b> are 1.5px square-cap strokes on a 16px grid, drawn like schematic symbols. No rockets, lightning bolts, sparkles or brains.</p>
+        <ul class="icons">
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="3.5" r="1.8"/><circle cx="3.5" cy="12" r="1.8"/><circle cx="12.5" cy="12" r="1.8"/><path d="M7 5L4.5 10.3M9 5l2.5 5.3" class="a"/></svg>Agent</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 2.5H3.5v11H5M11 2.5h1.5v11H11"/><path d="M6.5 8h3" class="a"/></svg>Tool</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><ellipse cx="8" cy="4" rx="5" ry="1.8"/><path d="M3 4v8c0 1 2.2 1.8 5 1.8s5-.8 5-1.8V4"/><path d="M3 8c0 1 2.2 1.8 5 1.8s5-.8 5-1.8" class="a"/></svg>Memory</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h7M4 7h9M3 10.5h5M6 14h7"/><path d="M4 7h4" class="a"/></svg>Trace</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5c-2 2-2 9 0 11M8 2.5c2 2 2 9 0 11"/><circle cx="11" cy="5" r="1" class="a"/></svg>Region</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13.5h10M5 13.5V8h6v5.5"/><path d="M8 2v6M5.5 4.5L8 2l2.5 2.5" class="a"/></svg>Deploy</li>
+        </ul>
+      </div>
+      <figure class="diagram" style="margin:0">
+        <svg viewBox="0 0 640 300" role="img" aria-label="Schematic: an HTTP trigger feeds the support agent in three regions; the agent calls the refund tool and lookupOrder tool and reads durable memory; the highlighted path is trigger to agent to refund tool, 640 milliseconds p95">
+          <rect class="box" x="16" y="118" width="112" height="56" rx="4"/><text x="30" y="142">POST /run</text><text class="sm" x="30" y="160">trigger</text>
+          <rect class="box" x="214" y="96" width="168" height="100" rx="4"/><text x="230" y="122">support</text><text class="sm" x="230" y="140">agent &middot; 2 tools</text><text class="sm" x="230" y="156">budget $0.50/run</text>
+          <rect x="230" y="168" width="34" height="16" rx="2" fill="none" stroke="currentColor" style="stroke:var(--color-border-strong)"/><text class="sm" x="235" y="180">iad1</text>
+          <rect x="270" y="168" width="34" height="16" rx="2" fill="none" style="stroke:var(--color-border-strong)"/><text class="sm" x="275" y="180">fra1</text>
+          <rect x="310" y="168" width="34" height="16" rx="2" fill="none" style="stroke:var(--color-border-strong)"/><text class="sm" x="315" y="180">sin1</text>
+          <rect class="box" x="472" y="40" width="148" height="48" rx="4"/><text x="486" y="62">refund</text><text class="sm" x="486" y="78">tool &middot; typed</text>
+          <rect class="box" x="472" y="122" width="148" height="48" rx="4"/><text x="486" y="144">lookupOrder</text><text class="sm" x="486" y="160">tool &middot; typed</text>
+          <rect class="box" x="472" y="212" width="148" height="56" rx="4"/><text x="486" y="236">memory</text><text class="sm" x="486" y="254">durable &middot; 30 d</text>
+          <path class="hot" d="M128 146H214"/><path class="hot" d="M382 120H430V64H472"/>
+          <path class="wire" d="M382 146H472"/><path class="wire" d="M382 172H430V240H472" stroke-dasharray="3 3"/>
+          <circle cx="214" cy="146" r="3" style="fill:var(--color-accent-default)"/><circle cx="472" cy="64" r="3" style="fill:var(--color-accent-default)"/>
+          <path class="dim" d="M128 30V100M472 30V36M128 34H472"/><path class="dim" d="M128 34l6-3v6zM472 34l-6-3v6z" style="fill:var(--color-fg-subtle)"/>
+          <rect x="230" y="24" width="140" height="18" style="fill:var(--color-bg-canvas)"/><text class="sm" x="238" y="37">p95 640 ms, end to end</text>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="mo-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;8 motion</span><div><h2 id="mo-t">Motion</h2><p>Instant for interface, truthful for data. Animations replay what really happened, at its real relative timing, or they do not run.</p></div></div>
+    <div class="motion">
+      <table class="mt">
+        <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Hover, focus, toggle</td><td><code>--duration-fast</code> 120ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Menus, command palette</td><td><code>--duration-moderate</code> 200ms</td><td>opacity + 4px, <code>--ease-decelerate</code></td></tr>
+          <tr><td>Trace replay</td><td>Recorded span times, 1:1</td><td><code>--ease-linear</code>: time is linear</td></tr>
+          <tr><td>Never</td><td colspan="2">Typing effects, looping heroes, parallax, glow pulses</td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">Spans render at full length immediately</td></tr>
+        </tbody>
+      </table>
+      <div class="trace play" id="fg-trace">
+        <div class="pane-h"><b>trace 7f3a&hellip;c21</b><span>support &middot; iad1 &middot; 1,284 ms &middot; $0.004</span></div>
+        <ol class="spans" aria-label="Trace spans">
+          <li><span class="nm"><b>run</b> support</span><span class="track"><span class="bar" style="--x:0%;--w:100%;--dur:1284ms;--delay:0ms"></span></span><span class="ms">1,284</span></li>
+          <li><span class="nm">&nbsp;&nbsp;model plan</span><span class="track"><span class="bar model" style="--x:1%;--w:31%;--dur:398ms;--delay:12ms"></span></span><span class="ms">398</span></li>
+          <li><span class="nm">&nbsp;&nbsp;tool <b>lookupOrder</b></span><span class="track"><span class="bar tool" style="--x:33%;--w:9%;--dur:116ms;--delay:424ms"></span></span><span class="ms">116</span></li>
+          <li><span class="nm">&nbsp;&nbsp;tool <b>refund</b></span><span class="track"><span class="bar tool" style="--x:43%;--w:19%;--dur:244ms;--delay:552ms"></span></span><span class="ms">244</span></li>
+          <li><span class="nm">&nbsp;&nbsp;memory write</span><span class="track"><span class="bar" style="--x:63%;--w:4%;--dur:51ms;--delay:808ms"></span></span><span class="ms">51</span></li>
+          <li><span class="nm">&nbsp;&nbsp;model reply</span><span class="track"><span class="bar model" style="--x:68%;--w:31%;--dur:402ms;--delay:872ms"></span></span><span class="ms">402</span></li>
+        </ol>
+        <div class="trace-ctl"><span>Bars grow at their recorded durations.</span><button class="btn btn-secondary" type="button" id="fg-replay">Replay trace</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="vo-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;9 voice</span><div><h2 id="vo-t">Voice</h2><p>A senior engineer in code review: precise, calm, specific. Show the command before the adjective. Admit limits in the docs.</p></div></div>
+    <div class="voice">
+      <figure><span class="lbl">Headline</span><blockquote>One file in. A running agent out.</blockquote><figcaption>The transformation, stated as input and output. No &ldquo;10x&rdquo;, no &ldquo;supercharge&rdquo;.</figcaption></figure>
+      <figure><span class="lbl">Call to action</span><blockquote>Read the 5-minute quickstart</blockquote><figcaption>Developers want to evaluate before they sign up; the time cost is stated and true.</figcaption></figure>
+      <figure><span class="lbl">Error message</span><blockquote class="err"><span class="e">E_TOOL_SCHEMA</span> refund.input.orderId: expected string, got number<br><span class="h">at agents/support.ts:5</span><br>Fix: pass String(orderId), or widen the schema.<br><span class="h">docs: forge.example/e/tool-schema</span></blockquote><figcaption>Code, cause, location, fix, link. Errors are part of the brand.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="ra-t">
+  <div class="wrap">
+    <div class="s-head"><span class="no">&sect;10 rationale</span><div><h2 id="ra-t">Rationale</h2><p>Why a shop drawing, and not a light show.</p></div></div>
+    <div class="rat">
+      <div><h3 data-n="10.1">Why it fits</h3><p>Expert developers buy what they can inspect. The Magician here is the kind who explains the trick: the hero is a real agent definition, the real deploy output and numbered notes tying the two together, like a technical drawing. Dark, because that is where developers read code, but warm and quiet, with a light theme built in.</p></div>
+      <div><h3 data-n="10.2">What it risks</h3><ul><li>Density. Non-engineering buyers may bounce; give them a separate &ldquo;for teams&rdquo; page.</li><li>Every number in the hero becomes a promise; benchmarks need a public method and a date.</li><li>Annotations must stay true as the SDK changes; generate the hero code from a tested example.</li></ul></div>
+      <div><h3 data-n="10.3">The expected alternative</h3><p>Black page, purple-to-blue radial glow, centered &ldquo;Build AI agents 10x faster&rdquo;, a terminal that types <code class="t-code">npm install</code> forever, glass cards with fake metrics. Recognizable, interchangeable and slightly untrustworthy to the people who matter most.</p></div>
+    </div>
+    <table class="cliche">
+      <caption>Cliché audit</caption>
+      <thead><tr><th scope="col">Cliché</th><th scope="col">What this page does instead</th></tr></thead>
+      <tbody>
+        <tr><td>Neon glow, glowing orbs</td><td>Flat amber on warm graphite; hierarchy from contrast and space</td></tr>
+        <tr><td>Purple-to-blue gradients</td><td>No gradients in the interface at all</td></tr>
+        <tr><td>Fake terminal typing loop</td><td>One real command, five lines of honest output, static</td></tr>
+        <tr><td>Rocket, lightning and sparkle icons</td><td>Schematic symbols for agent, tool, memory, trace, region</td></tr>
+        <tr><td>&ldquo;Ship 10x faster&rdquo;</td><td>&ldquo;One file in. A running agent out.&rdquo; plus measured numbers</td></tr>
+      </tbody>
+    </table>
+    <div class="colophon"><span>Fictional product for the Visual Design Kit stylescape set. Figures, customers and URLs are invented (.example domains).</span><span>Type: Instrument Sans and Martian Mono, SIL Open Font License (<a href="../fonts/instrument-sans/OFL.txt">OFL</a>, <a href="../fonts/martian-mono/OFL.txt">OFL</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  /* Leader lines from each note to its code line, recomputed on resize */
+  var sheet = document.getElementById('fg-sheet'), svg = document.getElementById('fg-leaders'), notes = document.getElementById('fg-notes');
+  function layout() {
+    var mobile = window.matchMedia('(max-width: 760px)').matches;
+    var sb = sheet.getBoundingClientRect();
+    var items = notes.querySelectorAll('.note'), paths = '', prevBottom = -Infinity;
+    items.forEach(function (n) {
+      if (mobile) { n.style.top = ''; return; }
+      var t = document.getElementById(n.dataset.for).getBoundingClientRect();
+      var y = t.top + t.height / 2 - sb.top;
+      var top = Math.max(y - 11, prevBottom + 10);
+      n.style.top = top + 'px';
+      prevBottom = top + n.offsetHeight;
+      var nb = n.querySelector('.bub').getBoundingClientRect();
+      var pane = document.getElementById(n.dataset.for).closest('.pane').getBoundingClientRect();
+      var x1 = pane.right - sb.left, x2 = nb.left - sb.left, y2 = nb.top + nb.height / 2 - sb.top;
+      paths += '<path d="M' + x1 + ' ' + y + 'H' + (x2 - 14) + 'L' + x2 + ' ' + y2 + '"/><circle cx="' + x1 + '" cy="' + y + '" r="2.5"/>';
+    });
+    svg.innerHTML = paths;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout); else layout();
+  window.addEventListener('resize', layout);
+
+  /* Theme toggle: the light theme ships in the same token contract */
+  var tb = document.getElementById('fg-theme');
+  tb.addEventListener('click', function () {
+    var light = document.documentElement.dataset.theme !== 'light';
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+    tb.setAttribute('aria-pressed', String(light));
+    tb.setAttribute('aria-label', light ? 'Dark theme' : 'Light theme');
+    layout();
+  });
+
+  /* Install tabs */
+  var cmds = { 't-brew': 'brew install forge-cli', 't-npm': 'npm i -g forge-cli', 't-cargo': 'cargo install forge-cli' };
+  var tabs = document.querySelectorAll('.install [role="tab"]'), out = document.getElementById('fg-cmd'), panel = document.querySelector('.install [role="tabpanel"]');
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; select(n); n.focus(); }
+    });
+  });
+  function select(t) { tabs.forEach(function (x) { x.setAttribute('aria-selected', String(x === t)); x.tabIndex = x === t ? 0 : -1; }); out.textContent = cmds[t.id]; panel.setAttribute('aria-labelledby', t.id); }
+  document.getElementById('fg-copy').addEventListener('click', function (e) {
+    var b = e.currentTarget;
+    try { navigator.clipboard.writeText(out.textContent); } catch (err) {}
+    b.lastChild.textContent = 'Copied'; setTimeout(function () { b.lastChild.textContent = 'Copy'; }, 1500);
+  });
+
+  /* Trace replay */
+  var tr = document.getElementById('fg-trace');
+  document.getElementById('fg-replay').addEventListener('click', function () { tr.classList.remove('play'); void tr.offsetWidth; tr.classList.add('play'); });
+})();
+</script>
+</body>
+</html>

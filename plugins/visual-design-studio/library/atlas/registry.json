@@ -1,0 +1,666 @@
+{
+  "Version-Timestamp": "2026-10-20 01:42:00 UTC",
+  "description": "Every Design Space Atlas ID. Add an ID here before writing its entry.",
+  "axes": {
+    "style": {
+      "directory": "styles",
+      "entries": [
+        {
+          "id": "style.swiss-international",
+          "name": "Swiss / International Typographic Style",
+          "path": "styles/swiss-international.md"
+        },
+        {
+          "id": "style.bauhaus-constructivist",
+          "name": "Bauhaus and Constructivist",
+          "path": "styles/bauhaus-constructivist.md"
+        },
+        {
+          "id": "style.art-deco",
+          "name": "Art Deco",
+          "path": "styles/art-deco.md"
+        },
+        {
+          "id": "style.art-nouveau-ornamental",
+          "name": "Art Nouveau and Ornamental",
+          "path": "styles/art-nouveau-ornamental.md"
+        },
+        {
+          "id": "style.mid-century-modern",
+          "name": "Mid-Century Modern",
+          "path": "styles/mid-century-modern.md"
+        },
+        {
+          "id": "style.editorial-magazine",
+          "name": "Editorial / Magazine",
+          "path": "styles/editorial-magazine.md"
+        },
+        {
+          "id": "style.classic-luxury-serif",
+          "name": "Classic Luxury Serif",
+          "path": "styles/classic-luxury-serif.md"
+        },
+        {
+          "id": "style.quiet-minimal",
+          "name": "Quiet Minimal / Japandi",
+          "path": "styles/quiet-minimal.md"
+        },
+        {
+          "id": "style.scandinavian-nordic",
+          "name": "Scandinavian / Nordic",
+          "path": "styles/scandinavian-nordic.md"
+        },
+        {
+          "id": "style.web-brutalist",
+          "name": "Raw Web Brutalism",
+          "path": "styles/web-brutalist.md"
+        },
+        {
+          "id": "style.neo-brutalist",
+          "name": "Neo-Brutalism",
+          "path": "styles/neo-brutalist.md"
+        },
+        {
+          "id": "style.maximalist-eclectic",
+          "name": "Maximalist / Eclectic",
+          "path": "styles/maximalist-eclectic.md"
+        },
+        {
+          "id": "style.memphis-postmodern",
+          "name": "Memphis / Postmodern",
+          "path": "styles/memphis-postmodern.md"
+        },
+        {
+          "id": "style.y2k-cyber",
+          "name": "Y2K / Cyber",
+          "path": "styles/y2k-cyber.md"
+        },
+        {
+          "id": "style.retro-futurism-synthwave",
+          "name": "Retro-Futurism / Synthwave",
+          "path": "styles/retro-futurism-synthwave.md"
+        },
+        {
+          "id": "style.vintage-heritage-americana",
+          "name": "Vintage Heritage / Americana",
+          "path": "styles/vintage-heritage-americana.md"
+        },
+        {
+          "id": "style.seventies-psychedelic-groovy",
+          "name": "70s Psychedelic / Groovy",
+          "path": "styles/seventies-psychedelic-groovy.md"
+        },
+        {
+          "id": "style.grunge-punk-zine",
+          "name": "Grunge / Punk / DIY Zine",
+          "path": "styles/grunge-punk-zine.md"
+        },
+        {
+          "id": "style.handcrafted-organic",
+          "name": "Handcrafted / Organic",
+          "path": "styles/handcrafted-organic.md"
+        },
+        {
+          "id": "style.corporate-modern",
+          "name": "Corporate Modern / Enterprise Clean",
+          "path": "styles/corporate-modern.md"
+        },
+        {
+          "id": "style.dark-tech-developer",
+          "name": "Dark Tech / Developer",
+          "path": "styles/dark-tech-developer.md"
+        },
+        {
+          "id": "style.glass-spatial",
+          "name": "Glass and Spatial UI",
+          "path": "styles/glass-spatial.md"
+        },
+        {
+          "id": "style.soft-ui-neumorphic",
+          "name": "Soft UI / Neumorphism",
+          "path": "styles/soft-ui-neumorphic.md"
+        },
+        {
+          "id": "style.skeuomorphic-tactile",
+          "name": "Skeuomorphic / Tactile",
+          "path": "styles/skeuomorphic-tactile.md"
+        },
+        {
+          "id": "style.flat-material",
+          "name": "Flat / Material",
+          "path": "styles/flat-material.md"
+        },
+        {
+          "id": "style.playful-bubbly",
+          "name": "Playful / Bubbly",
+          "path": "styles/playful-bubbly.md"
+        },
+        {
+          "id": "style.illustrative-narrative",
+          "name": "Illustrative / Narrative",
+          "path": "styles/illustrative-narrative.md"
+        },
+        {
+          "id": "style.data-dense-utilitarian",
+          "name": "Data-Dense / Utilitarian",
+          "path": "styles/data-dense-utilitarian.md"
+        },
+        {
+          "id": "style.bold-geometric-sport",
+          "name": "Bold Geometric / Sport Energy",
+          "path": "styles/bold-geometric-sport.md"
+        },
+        {
+          "id": "style.fashion-editorial-didone",
+          "name": "Fashion Editorial / Didone",
+          "path": "styles/fashion-editorial-didone.md"
+        },
+        {
+          "id": "style.eco-natural-sustainable",
+          "name": "Eco / Natural / Sustainable",
+          "path": "styles/eco-natural-sustainable.md"
+        },
+        {
+          "id": "style.clinical-calm",
+          "name": "Clinical Calm",
+          "path": "styles/clinical-calm.md"
+        },
+        {
+          "id": "style.civic-plain",
+          "name": "Civic Plain / Public Service",
+          "path": "styles/civic-plain.md"
+        },
+        {
+          "id": "style.collage-mixed-media",
+          "name": "Collage / Mixed Media",
+          "path": "styles/collage-mixed-media.md"
+        },
+        {
+          "id": "style.risograph-print-texture",
+          "name": "Risograph / Print Texture",
+          "path": "styles/risograph-print-texture.md"
+        },
+        {
+          "id": "style.kinetic-experimental-type",
+          "name": "Kinetic / Experimental Typography",
+          "path": "styles/kinetic-experimental-type.md"
+        },
+        {
+          "id": "style.vibrant-gradient-saas",
+          "name": "Vibrant Gradient / Aurora SaaS",
+          "path": "styles/vibrant-gradient-saas.md"
+        }
+      ]
+    },
+    "industry": {
+      "directory": "industries",
+      "entries": [
+        {
+          "id": "industry.saas-b2b",
+          "name": "B2B SaaS",
+          "path": "industries/saas-b2b.md"
+        },
+        {
+          "id": "industry.developer-tools",
+          "name": "Developer Tools",
+          "path": "industries/developer-tools.md"
+        },
+        {
+          "id": "industry.ai-products",
+          "name": "AI Products",
+          "path": "industries/ai-products.md"
+        },
+        {
+          "id": "industry.fintech-banking",
+          "name": "Fintech and Banking",
+          "path": "industries/fintech-banking.md"
+        },
+        {
+          "id": "industry.insurance",
+          "name": "Insurance",
+          "path": "industries/insurance.md"
+        },
+        {
+          "id": "industry.crypto-web3",
+          "name": "Crypto and Web3",
+          "path": "industries/crypto-web3.md"
+        },
+        {
+          "id": "industry.healthcare-provider",
+          "name": "Healthcare Providers",
+          "path": "industries/healthcare-provider.md"
+        },
+        {
+          "id": "industry.digital-health-wellness",
+          "name": "Digital Health and Wellness",
+          "path": "industries/digital-health-wellness.md"
+        },
+        {
+          "id": "industry.pharma-biotech",
+          "name": "Pharma and Biotech",
+          "path": "industries/pharma-biotech.md"
+        },
+        {
+          "id": "industry.ecommerce-dtc",
+          "name": "E-commerce and DTC Retail",
+          "path": "industries/ecommerce-dtc.md"
+        },
+        {
+          "id": "industry.fashion-apparel",
+          "name": "Fashion and Apparel",
+          "path": "industries/fashion-apparel.md"
+        },
+        {
+          "id": "industry.beauty-cosmetics",
+          "name": "Beauty and Cosmetics",
+          "path": "industries/beauty-cosmetics.md"
+        },
+        {
+          "id": "industry.food-beverage-cpg",
+          "name": "Food, Beverage and CPG",
+          "path": "industries/food-beverage-cpg.md"
+        },
+        {
+          "id": "industry.restaurants-hospitality",
+          "name": "Restaurants and Food Service",
+          "path": "industries/restaurants-hospitality.md"
+        },
+        {
+          "id": "industry.hotels-travel",
+          "name": "Hotels and Travel",
+          "path": "industries/hotels-travel.md"
+        },
+        {
+          "id": "industry.real-estate-proptech",
+          "name": "Real Estate and PropTech",
+          "path": "industries/real-estate-proptech.md"
+        },
+        {
+          "id": "industry.education-edtech",
+          "name": "Education and EdTech",
+          "path": "industries/education-edtech.md"
+        },
+        {
+          "id": "industry.kids-family",
+          "name": "Kids and Family",
+          "path": "industries/kids-family.md"
+        },
+        {
+          "id": "industry.nonprofit-ngo",
+          "name": "Nonprofits and NGOs",
+          "path": "industries/nonprofit-ngo.md"
+        },
+        {
+          "id": "industry.government-civic",
+          "name": "Government and Civic",
+          "path": "industries/government-civic.md"
+        },
+        {
+          "id": "industry.legal-professional-services",
+          "name": "Legal and Professional Services",
+          "path": "industries/legal-professional-services.md"
+        },
+        {
+          "id": "industry.industrial-manufacturing-construction",
+          "name": "Industrial, Manufacturing and Construction",
+          "path": "industries/industrial-manufacturing-construction.md"
+        },
+        {
+          "id": "industry.energy-climate",
+          "name": "Energy and Climate Tech",
+          "path": "industries/energy-climate.md"
+        },
+        {
+          "id": "industry.automotive-mobility",
+          "name": "Automotive and Mobility",
+          "path": "industries/automotive-mobility.md"
+        },
+        {
+          "id": "industry.gaming-esports",
+          "name": "Gaming and Esports",
+          "path": "industries/gaming-esports.md"
+        },
+        {
+          "id": "industry.media-entertainment-streaming",
+          "name": "Media, Entertainment and Streaming",
+          "path": "industries/media-entertainment-streaming.md"
+        },
+        {
+          "id": "industry.sports-fitness",
+          "name": "Sports and Fitness",
+          "path": "industries/sports-fitness.md"
+        },
+        {
+          "id": "industry.luxury-goods",
+          "name": "Luxury Goods",
+          "path": "industries/luxury-goods.md"
+        },
+        {
+          "id": "industry.events-conferences",
+          "name": "Events and Conferences",
+          "path": "industries/events-conferences.md"
+        },
+        {
+          "id": "industry.creative-agencies-studios",
+          "name": "Creative Agencies and Studios",
+          "path": "industries/creative-agencies-studios.md"
+        },
+        {
+          "id": "industry.marketplaces-platforms",
+          "name": "Marketplaces and Platforms",
+          "path": "industries/marketplaces-platforms.md"
+        },
+        {
+          "id": "industry.logistics-supply-chain",
+          "name": "Logistics and Supply Chain",
+          "path": "industries/logistics-supply-chain.md"
+        }
+      ]
+    },
+    "market": {
+      "directory": "markets",
+      "entries": [
+        {
+          "id": "market.united-states",
+          "name": "United States",
+          "path": "markets/united-states.md"
+        },
+        {
+          "id": "market.canada",
+          "name": "Canada",
+          "path": "markets/canada.md"
+        },
+        {
+          "id": "market.us-hispanic-puerto-rico-caribbean",
+          "name": "US Hispanic, Puerto Rico and the Caribbean",
+          "path": "markets/us-hispanic-puerto-rico-caribbean.md"
+        },
+        {
+          "id": "market.latin-america-spanish",
+          "name": "Spanish-speaking Latin America",
+          "path": "markets/latin-america-spanish.md"
+        },
+        {
+          "id": "market.brazil-portuguese",
+          "name": "Brazil",
+          "path": "markets/brazil-portuguese.md"
+        },
+        {
+          "id": "market.united-kingdom-ireland",
+          "name": "United Kingdom and Ireland",
+          "path": "markets/united-kingdom-ireland.md"
+        },
+        {
+          "id": "market.western-europe",
+          "name": "Western Europe (France, Iberia, Italy, Benelux)",
+          "path": "markets/western-europe.md"
+        },
+        {
+          "id": "market.dach-nordics",
+          "name": "DACH and the Nordics",
+          "path": "markets/dach-nordics.md"
+        },
+        {
+          "id": "market.middle-east-north-africa-arabic",
+          "name": "Middle East and North Africa (Arabic)",
+          "path": "markets/middle-east-north-africa-arabic.md"
+        },
+        {
+          "id": "market.israel-hebrew",
+          "name": "Israel (Hebrew)",
+          "path": "markets/israel-hebrew.md"
+        },
+        {
+          "id": "market.india-south-asia",
+          "name": "India and South Asia",
+          "path": "markets/india-south-asia.md"
+        },
+        {
+          "id": "market.china-mainland",
+          "name": "Mainland China",
+          "path": "markets/china-mainland.md"
+        },
+        {
+          "id": "market.japan",
+          "name": "Japan",
+          "path": "markets/japan.md"
+        },
+        {
+          "id": "market.korea",
+          "name": "South Korea",
+          "path": "markets/korea.md"
+        },
+        {
+          "id": "market.southeast-asia",
+          "name": "Southeast Asia",
+          "path": "markets/southeast-asia.md"
+        },
+        {
+          "id": "market.sub-saharan-africa",
+          "name": "Sub-Saharan Africa",
+          "path": "markets/sub-saharan-africa.md"
+        },
+        {
+          "id": "market.australia-new-zealand",
+          "name": "Australia and New Zealand",
+          "path": "markets/australia-new-zealand.md"
+        }
+      ]
+    },
+    "audience": {
+      "directory": "audiences",
+      "entries": [
+        {
+          "id": "audience.children-under-13",
+          "name": "Children under 13",
+          "path": "audiences/children-under-13.md"
+        },
+        {
+          "id": "audience.teens-gen-z",
+          "name": "Teens and Gen Z",
+          "path": "audiences/teens-gen-z.md"
+        },
+        {
+          "id": "audience.older-adults",
+          "name": "Older Adults (65+)",
+          "path": "audiences/older-adults.md"
+        },
+        {
+          "id": "audience.low-literacy-plain-language",
+          "name": "Low Literacy / Plain Language",
+          "path": "audiences/low-literacy-plain-language.md"
+        },
+        {
+          "id": "audience.disability-accessibility-first",
+          "name": "Disability and Accessibility-First",
+          "path": "audiences/disability-accessibility-first.md"
+        },
+        {
+          "id": "audience.neurodivergent",
+          "name": "Neurodivergent Users",
+          "path": "audiences/neurodivergent.md"
+        },
+        {
+          "id": "audience.expert-power-users",
+          "name": "Expert and Power Users",
+          "path": "audiences/expert-power-users.md"
+        },
+        {
+          "id": "audience.b2b-buying-committee",
+          "name": "B2B Buying Committees",
+          "path": "audiences/b2b-buying-committee.md"
+        },
+        {
+          "id": "audience.low-bandwidth-entry-devices",
+          "name": "Low Bandwidth and Entry-Level Devices",
+          "path": "audiences/low-bandwidth-entry-devices.md"
+        },
+        {
+          "id": "audience.affluent-hnwi",
+          "name": "Affluent and High-Net-Worth",
+          "path": "audiences/affluent-hnwi.md"
+        }
+      ]
+    },
+    "archetype": {
+      "directory": "archetypes",
+      "entries": [
+        {
+          "id": "archetype.innocent",
+          "name": "Innocent",
+          "path": "archetypes/innocent.md"
+        },
+        {
+          "id": "archetype.sage",
+          "name": "Sage",
+          "path": "archetypes/sage.md"
+        },
+        {
+          "id": "archetype.explorer",
+          "name": "Explorer",
+          "path": "archetypes/explorer.md"
+        },
+        {
+          "id": "archetype.outlaw",
+          "name": "Outlaw",
+          "path": "archetypes/outlaw.md"
+        },
+        {
+          "id": "archetype.magician",
+          "name": "Magician",
+          "path": "archetypes/magician.md"
+        },
+        {
+          "id": "archetype.hero",
+          "name": "Hero",
+          "path": "archetypes/hero.md"
+        },
+        {
+          "id": "archetype.lover",
+          "name": "Lover",
+          "path": "archetypes/lover.md"
+        },
+        {
+          "id": "archetype.jester",
+          "name": "Jester",
+          "path": "archetypes/jester.md"
+        },
+        {
+          "id": "archetype.everyperson",
+          "name": "Everyperson",
+          "path": "archetypes/everyperson.md"
+        },
+        {
+          "id": "archetype.caregiver",
+          "name": "Caregiver",
+          "path": "archetypes/caregiver.md"
+        },
+        {
+          "id": "archetype.ruler",
+          "name": "Ruler",
+          "path": "archetypes/ruler.md"
+        },
+        {
+          "id": "archetype.creator",
+          "name": "Creator",
+          "path": "archetypes/creator.md"
+        }
+      ]
+    },
+    "tier": {
+      "directory": "tiers",
+      "entries": [
+        {
+          "id": "tier.value",
+          "name": "Value / Mass Market",
+          "path": "tiers/value.md"
+        },
+        {
+          "id": "tier.mid-market",
+          "name": "Mid-Market",
+          "path": "tiers/mid-market.md"
+        },
+        {
+          "id": "tier.premium",
+          "name": "Premium",
+          "path": "tiers/premium.md"
+        },
+        {
+          "id": "tier.luxury",
+          "name": "Luxury",
+          "path": "tiers/luxury.md"
+        },
+        {
+          "id": "tier.ultra-luxury",
+          "name": "Ultra-Luxury / Bespoke",
+          "path": "tiers/ultra-luxury.md"
+        }
+      ]
+    },
+    "channel": {
+      "directory": "channels",
+      "entries": [
+        {
+          "id": "channel.marketing-website",
+          "name": "Marketing Website",
+          "path": "channels/marketing-website.md"
+        },
+        {
+          "id": "channel.web-app",
+          "name": "Web Application",
+          "path": "channels/web-app.md"
+        },
+        {
+          "id": "channel.native-app",
+          "name": "Native Mobile App",
+          "path": "channels/native-app.md"
+        },
+        {
+          "id": "channel.ecommerce-store",
+          "name": "E-commerce Store",
+          "path": "channels/ecommerce-store.md"
+        },
+        {
+          "id": "channel.social-media",
+          "name": "Social Media",
+          "path": "channels/social-media.md"
+        },
+        {
+          "id": "channel.email",
+          "name": "Email",
+          "path": "channels/email.md"
+        },
+        {
+          "id": "channel.print-collateral",
+          "name": "Print Collateral",
+          "path": "channels/print-collateral.md"
+        },
+        {
+          "id": "channel.packaging",
+          "name": "Packaging",
+          "path": "channels/packaging.md"
+        },
+        {
+          "id": "channel.ooh-signage",
+          "name": "Out-of-Home and Digital Signage",
+          "path": "channels/ooh-signage.md"
+        },
+        {
+          "id": "channel.presentation",
+          "name": "Presentations and Decks",
+          "path": "channels/presentation.md"
+        },
+        {
+          "id": "channel.video-motion",
+          "name": "Video and Motion",
+          "path": "channels/video-motion.md"
+        },
+        {
+          "id": "channel.environmental-wayfinding",
+          "name": "Environmental Graphics and Wayfinding",
+          "path": "channels/environmental-wayfinding.md"
+        }
+      ]
+    }
+  }
+}

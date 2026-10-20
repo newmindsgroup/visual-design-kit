@@ -1,0 +1,22 @@
+/*
+ * Version-Timestamp: 2026-10-20 02:52:00 UTC
+ * Entry stylesheet. tokens.css and tailwind.css are byte-for-byte copies of library/tokens/dist/
+ * (scripts/sync-tokens.mjs keeps them fresh); never edit them here.
+ */
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./tailwind.css";
+@import "./fonts.css";
+@import "./system.css";
+
+/* Specimen-only decoration: a dotted grid behind static state renders, drawn from token colors.
+   High contrast drops the pattern: it is decoration, and that theme's borders are strong enough to read as noise. */
+@utility specimen-grid {
+  background-color: var(--color-bg-canvas);
+  background-image: radial-gradient(var(--color-border-default) var(--border-width-thin), transparent var(--border-width-thin));
+  background-size: var(--space-4) var(--space-4);
+  background-position: center;
+  @variant hc {
+    background-image: none;
+  }
+}

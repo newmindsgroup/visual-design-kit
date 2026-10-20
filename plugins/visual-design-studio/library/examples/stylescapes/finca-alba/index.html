@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finca Alba: Carved at Dawn | Stylescape 06</title>
+<meta name="description" content="Stylescape for Finca Alba, a fictional single-origin Puerto Rican coffee with bilingual Spanish and English packaging. Vintage heritage meets handcrafted linocut. Visual Design Kit calibration set.">
+<!--
+  Visual Design Kit stylescape calibration set, brand 6 of 12 (fictional brand).
+  Direction: Carved at Dawn (vintage heritage packaging, handcrafted linocut, two- and three-color print).
+  Atlas: style.vintage-heritage-americana, style.handcrafted-organic, industry.food-beverage-cpg,
+         market.us-hispanic-puerto-rico-caribbean, archetype.creator, tier.premium, channel.packaging
+  Fonts: Young Serif, Big Shoulders Display, Libre Franklin, La Belle Aurore (all OFL 1.1), ../fonts/.
+  Version-Timestamp: 2026-10-20 02:03:12 UTC
+  Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:03:12 UTC
+-->
+<style>
+@font-face { font-family: "Young Serif"; src: url("../fonts/young-serif/young-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Big Shoulders Display"; src: url("../fonts/big-shoulders-display/big-shoulders-display-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Libre Franklin"; src: url("../fonts/libre-franklin/libre-franklin-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "La Belle Aurore"; src: url("../fonts/la-belle-aurore/la-belle-aurore-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+:root {
+  --fa-kraft-light: #E6D5BA;
+  --fa-crema: #F3E6CF;
+  --fa-kraft: #C69C6D;
+  --fa-ink: #2B1A12;
+  --fa-maga: #A8302A;   /* flor de maga red */
+  --fa-alba: #E2A03A;   /* dawn gold */
+  --fa-monte: #24493A;  /* Cordillera green */
+  --fa-night: #1C3529;
+
+  --color-bg-canvas: var(--fa-kraft-light);
+  --color-bg-surface: var(--fa-crema);
+  --color-bg-surface-raised: #FAF2E3;
+  --color-bg-sunken: #D9C5A5;
+  --color-bg-inverse: var(--fa-night);
+  --color-fg-default: var(--fa-ink);
+  --color-fg-muted: #5E4636;
+  --color-fg-subtle: #7E6450;
+  --color-fg-inverse: var(--fa-crema);
+  --color-fg-on-accent: #FFF6E6;
+  --color-border-subtle: #CDB797;
+  --color-border-default: #A88A66;
+  --color-border-strong: #7E6450;
+  --color-accent-default: var(--fa-maga);
+  --color-accent-hover: #922722;
+  --color-accent-active: #7A1F1B;
+  --color-accent-subtle: #F2D9CF;
+  --color-accent-fg: #8E2822;
+  --color-success-fg: #24493A; --color-success-bg: #DDE8DC; --color-success-border: #24493A;
+  --color-warning-fg: #6E4A0C; --color-warning-bg: #F6E3BC; --color-warning-border: #6E4A0C;
+  --color-danger-fg: #9E2A22;  --color-danger-bg: #F6DDD5;  --color-danger-border: #9E2A22;
+  --color-info-fg: #24493A;    --color-info-bg: #DDE8DC;    --color-info-border: #24493A;
+  --color-focus-ring: var(--fa-monte);
+  --color-overlay-scrim: rgb(28 53 41 / 0.6);
+
+  --font-family-display: "Young Serif", "Georgia", serif;
+  --font-family-body: "Libre Franklin", "Franklin Gothic", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, Menlo, monospace;
+  --fa-font-label: "Big Shoulders Display", "Arial Narrow", sans-serif; /* brand extension: condensed label caps */
+  --fa-font-hand: "La Belle Aurore", cursive; /* brand extension: roaster's hand */
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.06em;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-sm: 0 1px 2px rgb(43 26 18 / 0.15); --shadow-md: 0 8px 20px -10px rgb(43 26 18 / 0.45); --shadow-lg: 0 24px 40px -20px rgb(43 26 18 / 0.55); --shadow-xl: 0 40px 70px -30px rgb(0 0 0 / 0.7);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-linear: linear;
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.0625rem; line-height: 1.6; overflow-x: hidden; position: relative; }
+body::before { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.45; mix-blend-mode: multiply; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.05' numOctaves='2' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.32 0 0 0 0 0.2 0 0 0 0.5 -0.1'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E"); }
+body > * { position: relative; z-index: 1; }
+h1, h2, h3, p, figure, dl, dd { margin: 0; }
+svg { display: block; }
+a { color: var(--color-accent-fg); }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 10; background: var(--fa-ink); color: var(--fa-crema); padding: 8px 12px; }
+.skip:focus { left: 8px; }
+.wrap { max-width: calc(var(--container-xl) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.caps { font-family: var(--fa-font-label); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.en { color: var(--color-fg-muted); }
+
+#direction a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+/* ---------- 1. Direction ---------- */
+#direction { background: var(--fa-ink); color: var(--fa-crema); }
+#direction .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px var(--space-8); padding-block: var(--space-5); align-items: center; }
+.dir-name { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.dir-name b { font-family: var(--font-family-display); font-weight: 400; font-size: 1.75rem; line-height: 1; }
+.dir-name span { font-size: 0.875rem; color: #D9C5A5; }
+.dir-brief { justify-self: end; text-align: right; font-size: 0.875rem; color: #E6D5BA; max-width: 72ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.chips li { font: 600 0.8125rem/1 var(--fa-font-label); letter-spacing: 0.08em; text-transform: uppercase; border: 1.5px solid #A88A66; color: var(--fa-crema); padding: 5px 9px 4px; border-radius: 2px; }
+.chips li:nth-child(-n+2) { background: var(--fa-maga); border-color: var(--fa-maga); color: #FFF6E6; }
+
+/* ---------- 2. Hero: packaging line-up ---------- */
+#hero { position: relative; overflow: hidden; color: var(--fa-crema); background: var(--fa-night); }
+.dawn { position: absolute; inset: 0; background:
+  radial-gradient(42% 58% at 66% 74%, rgb(226 160 58 / 0.95) 0%, rgb(226 160 58 / 0.55) 30%, rgb(168 48 42 / 0.25) 55%, transparent 75%),
+  repeating-conic-gradient(from 270deg at 66% 92%, rgb(226 160 58 / 0.07) 0deg 4deg, transparent 4deg 10deg),
+  linear-gradient(180deg, #14281F 0%, var(--fa-night) 45%, #24493A 100%); }
+.ridge { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; }
+.ridge svg { width: 100%; height: 100%; }
+.hero-in { position: relative; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--space-8); align-items: center; min-height: 780px; padding-block: var(--space-12) var(--space-16); }
+.topline { position: relative; display: flex; justify-content: space-between; align-items: center; padding-top: var(--space-6); }
+.mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fa-crema); }
+.mark svg { width: 44px; height: 44px; }
+.mark span { font-family: var(--font-family-display); font-size: 1.625rem; line-height: 1; }
+.lang { font: 600 0.875rem var(--fa-font-label); letter-spacing: 0.12em; }
+.lang b { border-bottom: 2px solid var(--fa-alba); }
+.kicker { font: 700 0.9375rem var(--fa-font-label); letter-spacing: 0.2em; text-transform: uppercase; color: var(--fa-alba); display: flex; align-items: center; gap: 12px; }
+.kicker::before { content: ""; width: 36px; height: 2px; background: currentColor; }
+.hero-copy h1 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(2.75rem, 5.2vw, 4.75rem); line-height: 1.02; letter-spacing: -0.01em; margin-top: var(--space-5); text-wrap: balance; }
+.hero-copy .h1-en { font-family: var(--font-family-display); font-size: clamp(1.375rem, 2.3vw, 2rem); line-height: 1.2; color: #E6D5BA; margin-top: var(--space-4); text-wrap: balance; }
+.hero-copy p.lede { margin-top: var(--space-6); max-width: 42ch; color: #E6D5BA; font-size: 1.0625rem; }
+.ctas { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; font: 700 1.0625rem/1 var(--fa-font-label); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 2px solid transparent; border-radius: 3px; cursor: pointer; transition: background-color var(--duration-moderate) var(--ease-standard); }
+.btn small { font-family: var(--font-family-body); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 0.8125rem; opacity: 0.9; }
+.btn--primary { background: var(--fa-maga); color: #FFF6E6; box-shadow: inset 0 0 0 2px var(--fa-maga), inset 0 0 0 4px #FFF6E6; }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--primary:active { background: var(--color-accent-active); }
+.btn--ghost { color: var(--fa-crema); border-color: var(--fa-crema); }
+.btn--secondary { background: transparent; color: var(--fa-ink); border-color: var(--fa-ink); }
+.btn--secondary:hover { background: var(--fa-ink); color: var(--fa-crema); }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #5E4636; box-shadow: none; border-color: #A88A66; cursor: not-allowed; }
+.btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 4px; }
+
+.lineup { position: relative; height: 640px; }
+.bag { position: absolute; left: 14%; bottom: 4%; width: 380px; height: 560px; border-radius: 10px 10px 18px 18px; background:
+  linear-gradient(90deg, rgb(0 0 0 / 0.28) 0%, rgb(255 255 255 / 0.08) 12%, transparent 30%, transparent 70%, rgb(255 255 255 / 0.06) 86%, rgb(0 0 0 / 0.3) 100%),
+  linear-gradient(180deg, #CDA676 0%, #C69C6D 40%, #B88D5E 100%);
+  box-shadow: var(--shadow-xl); transform: rotate(-2deg); }
+.bag::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 44px; border-radius: 10px 10px 0 0; background: repeating-linear-gradient(180deg, rgb(43 26 18 / 0.18) 0 2px, transparent 2px 5px), linear-gradient(180deg, #B98E60, #C69C6D); border-bottom: 2px solid rgb(43 26 18 / 0.25); }
+.bag::after { content: ""; position: absolute; inset: 0; border-radius: inherit; opacity: 0.5; mix-blend-mode: multiply; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.22 0 0 0 0 0.1 0 0 0 0.7 -0.15'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23f)'/%3E%3C/svg%3E"); }
+.valve { position: absolute; right: 34px; top: 66px; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle, #8A6440 0 3px, #B88D5E 3px 7px, #8A6440 7px 8px, #C69C6D 8px); z-index: 2; }
+.label { position: absolute; left: 34px; right: 34px; top: 92px; bottom: 30px; background: var(--fa-crema); z-index: 2; padding: 14px 16px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; color: var(--fa-ink); box-shadow: 0 1px 0 rgb(0 0 0 / 0.1); }
+.label::before { content: ""; position: absolute; inset: 6px; border: 1.5px solid var(--fa-maga); outline: 1px solid var(--fa-maga); outline-offset: -5px; pointer-events: none; }
+.label .arc { width: 100%; height: auto; margin-top: 2px; }
+.label .brand { font-family: var(--font-family-display); font-size: 2.6rem; line-height: 0.95; margin-top: 2px; }
+.label .place { font: 700 0.75rem var(--fa-font-label); letter-spacing: 0.3em; margin-top: 6px; }
+.label .band { margin: 10px -16px 0; align-self: stretch; background: var(--fa-maga); color: #FFF6E6; font: 700 0.875rem/1 var(--fa-font-label); letter-spacing: 0.16em; padding: 7px 0 6px; }
+.label .notes { margin-top: 10px; font-size: 0.75rem; line-height: 1.35; }
+.label .notes b { font-family: var(--font-family-display); font-weight: 400; font-size: 0.9375rem; display: block; }
+.label .meta { margin-top: auto; align-self: stretch; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid var(--fa-ink); padding-top: 6px; font: 700 0.6875rem/1.25 var(--fa-font-label); letter-spacing: 0.08em; text-align: left; }
+.label .meta span:last-child { text-align: right; }
+.stamp { position: absolute; z-index: 3; left: -26px; top: 210px; transform: rotate(-12deg); border: 2.5px solid var(--fa-maga); color: var(--fa-maga); padding: 5px 9px 4px; font: 800 0.875rem/1.15 var(--fa-font-label); letter-spacing: 0.1em; text-align: center; background: rgb(243 230 207 / 0.6); filter: url(#ink); }
+.tin { position: absolute; right: 6%; bottom: 4%; width: 220px; height: 300px; border-radius: 10px / 22px; background: linear-gradient(90deg, #12261C 0%, #24493A 18%, #3B6A55 34%, #24493A 55%, #173326 85%, #0E1F17 100%); box-shadow: var(--shadow-xl); z-index: 3; }
+.tin::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 34px; border-radius: 50%; background: linear-gradient(90deg, #8E8E86 0%, #E7E4DA 35%, #A9A79E 60%, #6E6D66 100%); box-shadow: inset 0 -5px 0 rgb(0 0 0 / 0.25); }
+.tin-label { position: absolute; left: 0; right: 0; top: 70px; height: 170px; background: linear-gradient(90deg, rgb(0 0 0 / 0.35) 0%, transparent 22%, rgb(255 255 255 / 0.12) 36%, transparent 55%, rgb(0 0 0 / 0.35) 100%), var(--fa-crema); color: var(--fa-ink); text-align: center; padding: 14px 18px 0; }
+.tin-label .t1 { font: 700 0.6875rem var(--fa-font-label); letter-spacing: 0.24em; color: var(--fa-maga); }
+.tin-label .t2 { font-family: var(--font-family-display); font-size: 1.75rem; line-height: 1; margin-top: 4px; }
+.tin-label .t3 { font-family: var(--font-family-display); font-size: 1rem; color: var(--fa-monte); }
+.tin-label .t4 { margin: 10px -18px 0; background: var(--fa-monte); color: var(--fa-crema); font: 700 0.75rem/1 var(--fa-font-label); letter-spacing: 0.16em; padding: 6px 0; }
+.tin-label .t5 { font: 700 0.6875rem var(--fa-font-label); letter-spacing: 0.1em; margin-top: 8px; }
+.tag { position: absolute; z-index: 4; left: 58%; top: 70px; width: 150px; padding: 26px 14px 14px; background: #D8B98F; color: var(--fa-ink); transform: rotate(9deg); clip-path: polygon(16% 0, 84% 0, 100% 14%, 100% 100%, 0 100%, 0 14%); box-shadow: var(--shadow-md); }
+.tag::before { content: ""; position: absolute; left: 50%; top: 9px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--fa-night); }
+.tag p { font-family: var(--fa-font-hand); font-size: 1.25rem; line-height: 1.2; }
+.tag small { display: block; font: 700 0.625rem var(--fa-font-label); letter-spacing: 0.16em; margin-top: 6px; }
+.string { position: absolute; z-index: 3; left: 52%; top: 40px; width: 140px; height: 90px; }
+
+/* ---------- Sections ---------- */
+.sec { padding-block: clamp(4rem, 8vw, 7rem); }
+.sec + .sec { border-top: 2px solid var(--fa-ink); }
+.sec-head { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: end; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.seal { width: 72px; height: 72px; flex: none; }
+.sec-head h2 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1; letter-spacing: -0.01em; }
+.sec-head h2 small { display: block; font: 700 0.875rem var(--fa-font-label); letter-spacing: 0.2em; text-transform: uppercase; color: var(--fa-maga); margin-bottom: 8px; }
+.sec-head p { color: var(--color-fg-muted); max-width: 54ch; justify-self: end; }
+
+/* Palette: printer's ink cans */
+.inks { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--space-5); }
+.ink { display: grid; gap: 12px; }
+.ink .chip { aspect-ratio: 3 / 4; border-radius: 4px; position: relative; overflow: hidden; box-shadow: var(--shadow-md); }
+.ink .chip::after { content: ""; position: absolute; inset: 0; opacity: 0.35; mix-blend-mode: multiply; background-image: radial-gradient(rgb(0 0 0 / 0.5) 0.8px, transparent 1px); background-size: 4px 4px; }
+.ink .chip span { position: absolute; left: 10px; bottom: 10px; font-family: var(--font-family-display); font-size: 1.25rem; line-height: 1; z-index: 1; }
+.ink dl { display: grid; gap: 2px; font-size: 0.8125rem; line-height: 1.4; }
+.ink dt { font: 700 0.8125rem var(--fa-font-label); letter-spacing: 0.1em; text-transform: uppercase; }
+.ink dd { color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.ink dd.c { color: var(--fa-ink); font-weight: 600; }
+.pal-note { margin-top: var(--space-10); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); font-size: 0.9375rem; }
+.pal-note p { border-top: 1px solid var(--fa-ink); padding-top: 10px; }
+.pal-note b { font-family: var(--fa-font-label); font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; }
+
+/* Type */
+.type-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--space-8); }
+.spec { background: var(--fa-crema); padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: var(--shadow-md); position: relative; }
+.spec::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--color-border-default); pointer-events: none; }
+.spec + .spec { margin-top: var(--space-6); }
+.spec .k { font: 700 0.75rem var(--fa-font-label); letter-spacing: 0.16em; text-transform: uppercase; color: var(--fa-maga); display: block; margin-bottom: var(--space-4); }
+.t-disp { font-family: var(--font-family-display); font-size: clamp(3rem, 6vw, 5.25rem); line-height: 1; letter-spacing: -0.015em; text-wrap: balance; }
+.t-disp-en { font-family: var(--font-family-display); font-size: clamp(1.5rem, 2.6vw, 2.25rem); line-height: 1.15; color: var(--color-fg-muted); margin-top: 10px; }
+.t-label { font: 800 clamp(1.5rem, 2.4vw, 2rem)/1.05 var(--fa-font-label); letter-spacing: 0.18em; text-transform: uppercase; margin-top: var(--space-6); }
+.t-hand { font-family: var(--fa-font-hand); font-size: 2rem; line-height: 1.1; color: var(--fa-maga); margin-top: var(--space-5); }
+.t-body { font-size: 1.0625rem; line-height: 1.6; max-width: 58ch; }
+.t-body + .t-body { margin-top: 10px; }
+.t-cap { font-size: 0.8125rem; line-height: 1.45; color: var(--color-fg-muted); }
+
+/* Components */
+.comp-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); align-items: start; }
+.panel { background: var(--fa-crema); padding: clamp(1.25rem, 2.5vw, 1.75rem); box-shadow: var(--shadow-md); }
+.panel h3 { font: 700 0.9375rem var(--fa-font-label); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--space-5); padding-bottom: 8px; border-bottom: 1px solid var(--fa-ink); }
+.c-btns { grid-column: span 7; }
+.c-input { grid-column: span 5; grid-row: span 2; }
+.c-card { grid-column: span 7; }
+.c-badges { grid-column: 1 / -1; }
+.btn-grid { display: grid; grid-template-columns: repeat(2, max-content); gap: 18px 22px; }
+.btn-cap { display: grid; gap: 8px; justify-items: start; font-size: 0.8125rem; color: var(--color-fg-muted); }
+.field { display: grid; gap: 6px; }
+.field + .field { margin-top: var(--space-6); }
+.field label { font-weight: 700; font-size: 1rem; }
+.field label span { font-weight: 400; color: var(--color-fg-muted); }
+.field .hint { font-size: 0.875rem; color: var(--color-fg-muted); }
+.input { min-height: 52px; border: 2px solid var(--color-border-strong); border-radius: 3px; background: #FFFBF3; padding: 0 14px; font: 400 1.0625rem var(--font-family-body); color: var(--fa-ink); width: 100%; }
+.input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; }
+.field--err .input { border-color: var(--color-danger-fg); background: #FFF6F2; }
+.err { display: flex; gap: 8px; font-size: 0.9375rem; color: var(--color-danger-fg); font-weight: 600; line-height: 1.4; }
+.err svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+.prod { display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 12px 0; border-top: 1px dashed var(--color-border-default); }
+.prod:first-of-type { border-top: 0; padding-top: 0; }
+.prod .mini { height: 120px; border-radius: 4px; position: relative; overflow: hidden; display: grid; place-items: center; }
+.prod .mini svg { width: 70%; height: auto; }
+.prod b { font-family: var(--font-family-display); font-weight: 400; font-size: 1.375rem; line-height: 1.1; display: block; }
+.prod .sub { font-size: 0.875rem; color: var(--color-fg-muted); }
+.prod .pr { font-family: var(--font-family-display); font-size: 1.375rem; text-align: right; }
+.prod .pr small { display: block; font: 600 0.75rem var(--font-family-body); color: var(--color-fg-muted); }
+.badges { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.bdg { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; font: 700 0.875rem/1 var(--fa-font-label); letter-spacing: 0.1em; text-transform: uppercase; border: 1.5px solid currentColor; border-radius: 2px; }
+.bdg--red { background: var(--fa-maga); color: #FFF6E6; border-color: var(--fa-maga); }
+.bdg--green { background: var(--fa-monte); color: var(--fa-crema); border-color: var(--fa-monte); }
+.bdg--gold { background: var(--fa-alba); color: var(--fa-ink); border-color: var(--fa-ink); }
+.bdg--ink { color: var(--fa-ink); }
+.roundel { width: 108px; height: 108px; }
+
+/* Applications */
+#applications { background: var(--fa-night); color: var(--fa-crema); }
+#applications .sec-head h2 small { color: var(--fa-alba); }
+#applications .sec-head p { color: #D9C5A5; }
+.apps { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.back { background: var(--fa-crema); color: var(--fa-ink); aspect-ratio: 380 / 520; padding: 26px; position: relative; display: flex; flex-direction: column; gap: 14px; box-shadow: var(--shadow-xl); max-width: 440px; width: 100%; margin-inline: auto; }
+.back::before { content: ""; position: absolute; inset: 8px; border: 1.5px solid var(--fa-maga); pointer-events: none; }
+.back h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 1.5rem; line-height: 1.1; }
+.back .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; font-size: 0.75rem; line-height: 1.45; }
+.back .cols p:first-child { border-right: 1px solid var(--color-border-default); padding-right: 12px; }
+.back .cols b { font: 700 0.75rem var(--fa-font-label); letter-spacing: 0.14em; display: block; margin-bottom: 2px; color: var(--fa-maga); }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--fa-ink); margin: 0; }
+.facts div { padding: 8px 6px; text-align: center; display: flex; flex-direction: column; }
+.facts div + div { border-left: 1px solid var(--color-border-default); }
+.facts dt { font: 700 0.625rem var(--fa-font-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--fa-maga); order: 1; }
+.facts dt:last-child { order: 3; color: var(--color-fg-muted); }
+.facts dd { margin: 2px 0; font-family: var(--font-family-display); font-size: 0.9375rem; order: 2; }
+.brew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center; font: 700 0.6875rem/1.3 var(--fa-font-label); letter-spacing: 0.08em; }
+.brew svg { width: 44px; height: 44px; margin: 0 auto 4px; }
+.brew span { display: block; font-family: var(--font-family-body); font-weight: 500; letter-spacing: 0; font-size: 0.6875rem; color: var(--color-fg-muted); }
+.back .foot { margin-top: auto; display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: end; border-top: 1px solid var(--fa-ink); padding-top: 10px; font-size: 0.625rem; line-height: 1.35; }
+.qr { width: 64px; height: 64px; }
+.bars { width: 92px; height: 52px; background: repeating-linear-gradient(90deg, #2B1A12 0 2px, transparent 2px 3px, #2B1A12 3px 4px, transparent 4px 6px, #2B1A12 6px 9px, transparent 9px 10px); }
+.mailer { position: relative; aspect-ratio: 5 / 3.4; background: linear-gradient(160deg, #CDA676, #B88D5E); box-shadow: var(--shadow-xl); border-radius: 4px; overflow: hidden; }
+.mailer .tape { position: absolute; left: 0; right: 0; top: 42%; height: 64px; background: var(--fa-maga); display: flex; align-items: center; gap: 28px; white-space: nowrap; color: #FFF6E6; font: 700 1.125rem var(--fa-font-label); letter-spacing: 0.2em; overflow: hidden; padding-left: 20px; }
+.mailer .tape span::after { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--fa-alba); border-radius: 50%; margin-left: 28px; vertical-align: middle; }
+.mailer .addr { position: absolute; right: 7%; top: 9%; width: 42%; background: #FFFBF3; color: var(--fa-ink); padding: 10px 12px; font-size: 0.75rem; line-height: 1.4; transform: rotate(1deg); }
+.mailer .addr b { font: 700 0.6875rem var(--fa-font-label); letter-spacing: 0.14em; color: var(--fa-maga); display: block; }
+.mailer .hand { position: absolute; left: 6%; bottom: 9%; font-family: var(--fa-font-hand); font-size: 1.75rem; color: var(--fa-ink); transform: rotate(-4deg); line-height: 1.1; }
+.mailer .big-seal { position: absolute; left: 6%; top: 8%; width: 110px; height: 110px; filter: url(#ink); }
+.app-cap { color: #D9C5A5; font-size: 0.875rem; margin-top: 14px; }
+.app-cap b { color: var(--fa-crema); }
+
+/* Imagery */
+.img-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--space-10); align-items: start; }
+.img-copy p { max-width: 56ch; }
+.img-copy p + p { margin-top: var(--space-4); color: var(--color-fg-muted); }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; margin-top: var(--space-8); }
+.icons figure { display: grid; justify-items: center; gap: 8px; font: 700 0.75rem var(--fa-font-label); letter-spacing: 0.12em; text-transform: uppercase; text-align: center; }
+.icons figure span { width: 72px; height: 72px; border-radius: 50%; background: var(--fa-crema); display: grid; place-items: center; box-shadow: var(--shadow-sm); }
+.icons svg { width: 44px; height: 44px; }
+.lino { background: var(--fa-crema); box-shadow: var(--shadow-lg); padding: 18px; position: relative; }
+.lino svg { width: 100%; height: auto; }
+.lino figcaption { font-size: 0.8125rem; color: var(--color-fg-muted); margin-top: 10px; }
+
+/* Motion */
+.motion-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-10); align-items: center; }
+.mlist { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--fa-ink); }
+.mlist li { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 12px 0; border-bottom: 1px solid var(--color-border-default); }
+.mlist b { font-weight: 700; }
+.mlist .d { font-family: var(--font-family-display); font-size: 1.125rem; }
+.mlist code { grid-column: 1 / -1; font-family: var(--font-family-mono); font-size: 0.8125rem; color: var(--color-fg-muted); }
+.cup-stage { background: var(--fa-night); border-radius: 4px; min-height: 380px; display: grid; place-items: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); }
+.cup-stage::before { content: ""; position: absolute; inset: 0; background: radial-gradient(50% 50% at 50% 85%, rgb(226 160 58 / 0.45), transparent 70%); }
+.cup-stage svg { position: relative; width: 260px; height: auto; }
+.steam path { animation: rise 3.6s var(--ease-decelerate) infinite; opacity: 0; }
+.steam path:nth-child(2) { animation-delay: 1.2s; }
+.steam path:nth-child(3) { animation-delay: 2.4s; }
+@keyframes rise { 0% { transform: translateY(16px); opacity: 0; } 30% { opacity: 0.85; } 100% { transform: translateY(-26px); opacity: 0; } }
+.cup-stage p { position: absolute; left: 16px; bottom: 12px; font-size: 0.75rem; color: #D9C5A5; }
+
+/* Voice */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.vl { background: var(--fa-crema); padding: 24px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 12px; }
+.vl .k { font: 700 0.8125rem var(--fa-font-label); letter-spacing: 0.18em; text-transform: uppercase; color: var(--fa-maga); }
+.vl .es { font-family: var(--font-family-display); font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.1; }
+.vl .en { font-family: var(--font-family-display); font-size: 1.125rem; line-height: 1.25; }
+.vl .why { font-size: 0.875rem; color: var(--color-fg-muted); margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--color-border-default); }
+.vl--err .box { border-left: 4px solid var(--color-danger-fg); background: var(--color-danger-bg); padding: 12px 14px; display: grid; gap: 6px; }
+.vl--err .es, .vl--err .en { font-family: var(--font-family-body); font-size: 1rem; line-height: 1.45; }
+.vl--err .es { font-weight: 700; color: var(--color-danger-fg); }
+
+/* Rationale */
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.rat h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 1.625rem; line-height: 1.1; margin-bottom: var(--space-4); padding-bottom: 10px; border-bottom: 2px solid var(--fa-maga); }
+.rat ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; font-size: 0.9375rem; }
+.rat p { font-size: 0.9375rem; }
+.rat .fine { margin-top: var(--space-4); font-size: 0.875rem; background: var(--fa-crema); padding: 14px; }
+footer { border-top: 2px solid var(--fa-ink); padding-block: var(--space-8); font-size: 0.875rem; color: var(--color-fg-muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .steam path { animation: none !important; opacity: 0.7; }
+}
+@media (max-width: 1100px) {
+  .hero-in { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .lineup { max-width: 640px; width: 100%; margin-inline: auto; }
+  .inks { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .pal-note { grid-template-columns: minmax(0, 1fr); }
+  .type-grid, .img-grid, .motion-grid, .apps { grid-template-columns: minmax(0, 1fr); }
+  .c-btns, .c-input, .c-card, .c-badges { grid-column: 1 / -1; grid-row: auto; }
+  .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+  .sec-head { grid-template-columns: auto minmax(0, 1fr); }
+  .sec-head p { grid-column: 1 / -1; justify-self: start; }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dir-brief { justify-self: start; text-align: left; }
+  .lineup { height: 520px; }
+  .bag { left: 0; width: 300px; height: 450px; bottom: 30px; }
+  .label { left: 24px; right: 24px; top: 74px; bottom: 22px; padding: 10px 12px 10px; }
+  .label .brand { font-size: 2rem; }
+  .label .notes { font-size: 0.6875rem; }
+  .label .band { margin-inline: -12px; font-size: 0.75rem; }
+  .stamp { left: -10px; top: 170px; font-size: 0.75rem; }
+  .tin { width: 128px; height: 186px; right: -4px; bottom: 6px; }
+  .tin-label { top: 40px; height: 118px; padding: 8px 8px 0; }
+  .tin-label .t2 { font-size: 1.25rem; }
+  .tin-label .t3 { font-size: 0.8125rem; }
+  .tin-label .t4 { margin-inline: -8px; font-size: 0.5625rem; letter-spacing: 0.08em; }
+  .tag { display: none; }
+  .tag p { font-size: 1.0625rem; }
+  .string { display: none; }
+  .inks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn-grid { grid-template-columns: 1fr; }
+  .prod { grid-template-columns: 80px minmax(0, 1fr); }
+  .prod .mini { height: 90px; }
+  .prod .pr { grid-column: 2; text-align: left; }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .back { padding: 20px; aspect-ratio: auto; }
+  .seal { width: 56px; height: 56px; }
+  .mailer { aspect-ratio: 1 / 1; }
+  .mailer .addr { width: 58%; top: 6%; }
+  .mailer .big-seal { width: 84px; height: 84px; top: 6%; }
+  .mailer .tape { top: 50%; height: 52px; font-size: 0.9375rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to the key visual</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="5" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.5" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>
+    <filter id="carve" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="9" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <!-- Linocut dawn: sun, Cordillera ridges, coffee branch. Three inks: café, maga red, alba gold. -->
+    <g id="dawn-art">
+      <g fill="#E2A03A"><path d="M70.1 115.6 L40.4 109.6 L70.6 110.0ZM71.7 105.2 L55.3 97.0 L73.4 99.9ZM75.4 95.5 L50.7 78.0 L78.2 90.6ZM81.0 86.7 L69.5 72.5 L84.8 82.5ZM88.4 79.3 L73.0 53.3 L92.9 76.0ZM97.1 73.5 L92.3 55.9 L102.2 71.3ZM106.9 69.7 L103.4 39.7 L112.4 68.6ZM117.2 68.1 L120.0 50.0 L122.8 68.1ZM127.6 68.6 L136.6 39.7 L133.1 69.7ZM137.8 71.3 L147.7 55.9 L142.9 73.5ZM147.1 76.0 L167.0 53.3 L151.6 79.3ZM155.2 82.5 L170.5 72.5 L159.0 86.7ZM161.8 90.6 L189.3 78.0 L164.6 95.5ZM166.6 99.9 L184.7 97.0 L168.3 105.2ZM169.4 110.0 L199.6 109.6 L169.9 115.6Z"/></g>
+      <path d="M76 118 a44 44 0 0 1 88 0z" fill="#A8302A"/>
+      <path d="M86 108h68M90 99h60M97 90h46M106 82h28" stroke="#F3E6CF" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="10 6"/>
+      <path d="M8 132 L46 98 L66 112 L92 86 L124 116 L150 94 L176 112 L200 92 L232 128 L232 150 L8 150z" fill="#2B1A12"/>
+      <path d="M46 104 l-6 8M52 108l-6 9M92 93l-8 10M98 98l-7 9M150 101l-7 9M156 104l-6 8M200 99l-7 9M207 104l-6 8M70 118l-6 8M180 118l-6 8" stroke="#F3E6CF" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M8 150 L40 132 L78 142 L120 128 L162 142 L200 130 L232 146 L232 166 L8 166z" fill="#24493A"/>
+      <path d="M30 152h18M64 150h22M110 146h26M150 152h20M190 148h22" stroke="#F3E6CF" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- branch -->
+      <path d="M14 168 C60 150 110 158 150 146 S210 128 236 116" fill="none" stroke="#2B1A12" stroke-width="4" stroke-linecap="round"/>
+      <g fill="#2B1A12">
+        <path d="M58 156 c-8 -18 -2 -30 12 -36 c4 14 0 28 -12 36z"/>
+        <path d="M104 152 c4 -20 16 -28 32 -28 c-4 16 -16 26 -32 28z"/>
+        <path d="M178 136 c-10 -14 -8 -28 4 -36 c8 12 6 26 -4 36z"/>
+        <path d="M206 128 c8 -16 20 -20 32 -16 c-6 12 -18 18 -32 16z"/>
+      </g>
+      <path d="M60 150 c0-10 4-18 9-26M108 149 c8-10 16-17 26-22M179 130 c0-10 1-18 4-26M210 126 c9-6 17-10 26-12" fill="none" stroke="#F3E6CF" stroke-width="1.3" stroke-linecap="round"/>
+      <g fill="#A8302A"><circle cx="84" cy="160" r="7"/><circle cx="95" cy="163" r="6.5"/><circle cx="88" cy="170" r="6"/><circle cx="152" cy="150" r="6.5"/><circle cx="162" cy="146" r="6"/><circle cx="158" cy="156" r="5.5"/></g>
+      <g fill="#F3E6CF"><circle cx="82" cy="157.5" r="1.6"/><circle cx="93" cy="160.5" r="1.5"/><circle cx="150" cy="147.5" r="1.5"/><circle cx="160" cy="143.5" r="1.4"/></g>
+    </g>
+    <symbol id="roundel" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="57" fill="#F3E6CF" stroke="#A8302A" stroke-width="3"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#A8302A" stroke-width="1.5"/>
+      <path id="rtext" d="M60 60 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0" fill="none"/>
+      <text font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.4" fill="#A8302A"><textPath href="#rtext" startOffset="2%">CULTIVADO Y TOSTADO · GROWN AND ROASTED · </textPath></text>
+      <text x="60" y="58" text-anchor="middle" font-family="Young Serif, serif" font-size="20" fill="#2B1A12">PR</text>
+      <text x="60" y="76" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="10" letter-spacing="2" fill="#2B1A12">JAYUYA</text>
+    </symbol>
+    <symbol id="mark" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" fill="#A8302A"/><path d="M8 30 a14 14 0 0 1 28 0z" fill="#E2A03A"/><path d="M4 30 L14 22 L20 26 L27 19 L40 30z" fill="#2B1A12"/><path d="M4 30h36" stroke="#F3E6CF" stroke-width="1.5"/></symbol>
+    <!-- Linocut icons: filled shapes with carved highlights -->
+    <symbol id="ic-cherry" viewBox="0 0 48 48"><path d="M24 6c-2 6-6 10-10 12M24 6c2 7 7 11 12 12" fill="none" stroke="#2B1A12" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="28" r="10" fill="#A8302A"/><circle cx="32" cy="30" r="10" fill="#A8302A"/><path d="M11 25c1-3 3-4 6-5M27 27c1-3 3-4 6-5" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-leaf" viewBox="0 0 48 48"><path d="M8 40C8 18 22 6 42 6c0 22-14 34-34 34z" fill="#24493A"/><path d="M11 37C18 28 26 20 37 11M20 28l-2-8M26 22l-2-7M20 28l8 1M26 22l8 1" fill="none" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-mountain" viewBox="0 0 48 48"><path d="M2 40 18 14l8 10 6-8 14 24z" fill="#2B1A12"/><path d="M18 14l-4 8M18 14l3 7M32 16l-3 6M10 32l-3 4M24 30l-3 5" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="10" r="5" fill="#E2A03A"/></symbol>
+    <symbol id="ic-sun" viewBox="0 0 48 48"><path d="M8 34a16 16 0 0 1 32 0z" fill="#A8302A"/><path d="M24 4v8M10 10l5 6M38 10l-5 6M2 24h8M38 24h8" stroke="#E2A03A" stroke-width="4" stroke-linecap="round"/><path d="M4 38h40" stroke="#2B1A12" stroke-width="4" stroke-linecap="round"/><path d="M15 30h18M18 25h12" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-pour" viewBox="0 0 48 48"><path d="M8 10h32L28 30h-8z" fill="#2B1A12"/><path d="M14 14h20M18 19h12" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/><path d="M18 30h12v4H18z" fill="#2B1A12"/><path d="M12 36h24l-3 8H15z" fill="#A8302A"/></symbol>
+    <symbol id="ic-moka" viewBox="0 0 48 48"><path d="M14 4h20l-3 16H17z" fill="#2B1A12"/><path d="M12 20h24l-4 6H16z" fill="#A8302A"/><path d="M16 26h16l4 18H12z" fill="#2B1A12"/><path d="M34 8h6v8l-6 2" fill="none" stroke="#2B1A12" stroke-width="3"/><path d="M20 9h8M19 32h10M18 38h12" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-press" viewBox="0 0 48 48"><rect x="12" y="10" width="22" height="32" rx="2" fill="#2B1A12"/><path d="M23 2v10M16 2h14M34 18h6v14h-6" fill="none" stroke="#2B1A12" stroke-width="3"/><path d="M16 16v20" stroke="#F3E6CF" stroke-width="2" stroke-linecap="round"/><path d="M10 42h26" stroke="#A8302A" stroke-width="4" stroke-linecap="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v6.5M12 16.5v.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. DIRECTION -->
+<header id="direction">
+  <div class="wrap">
+    <div class="dir-name"><b>Finca Alba</b><span>Stylescape 06 / 12 · Carved at Dawn · <a href="../index.html">All stylescapes</a></span></div>
+    <p class="dir-brief">Single-origin coffee from the mountains of Jayuya, Puerto Rico, sold in bilingual packaging. Heritage label craft (badges, bands, two-color print) carved by hand like a linocut, with the island's dawn instead of borrowed mainland nostalgia.</p>
+    <ul class="chips" aria-label="Atlas IDs"><li>style.vintage-heritage-americana</li><li>style.handcrafted-organic</li><li>industry.food-beverage-cpg</li><li>market.us-hispanic-puerto-rico-caribbean</li><li>archetype.creator</li><li>tier.premium</li><li>channel.packaging</li></ul>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO: packaging line-up at dawn -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="dawn" aria-hidden="true"></div>
+  <div class="ridge" aria-hidden="true"><svg viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0 180 L120 120 L210 160 L330 90 L470 170 L600 110 L720 150 L860 80 L1000 160 L1120 110 L1260 150 L1440 100 V300 H0z" fill="#16291F" opacity="0.85"/><path d="M0 240 L180 200 L320 230 L520 190 L700 230 L900 200 L1100 236 L1300 206 L1440 230 V300 H0z" fill="#0F1E16"/></svg></div>
+  <div class="wrap topline">
+    <a class="mark" href="#hero"><svg aria-hidden="true"><use href="#mark"/></svg><span>Finca Alba</span></a>
+    <span class="lang"><b lang="es">ES</b> / EN</span>
+  </div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="kicker" lang="es">Café de altura · Jayuya, PR</p>
+      <h1 id="hero-title" lang="es">Del monte a tu taza, al amanecer.</h1>
+      <p class="h1-en">From the mountain to your cup, at first light.</p>
+      <p class="lede">Grown at 900 meters in the Cordillera Central, picked by hand, roasted the same week. One farm, one lot per bag, roast date stamped on every one.</p>
+      <div class="ctas">
+        <a class="btn btn--primary" href="#applications" lang="es">Comprar café <small lang="en">Shop coffee</small></a>
+        <a class="btn btn--ghost" href="#imagery" lang="es">La finca <small lang="en">The farm</small></a>
+      </div>
+    </div>
+    <div class="lineup" role="img" aria-label="Packaging line-up: a 12 ounce kraft stand-up bag with a cream label printed in brown, red and gold, showing a linocut sunrise over mountains and a coffee branch, the name Finca Alba, Jayuya Puerto Rico, a red band reading Tueste medio, Medium roast, and a red roast-date stamp. Beside it a green Espresso tin and a kraft hang tag with a handwritten note.">
+      <svg class="string" viewBox="0 0 140 90" aria-hidden="true"><path d="M4 86 C30 40 60 20 120 30" fill="none" stroke="#E6D5BA" stroke-width="2"/></svg>
+      <div class="bag" aria-hidden="true">
+        <span class="valve"></span>
+        <div class="label">
+          <svg class="arc" viewBox="0 0 240 172">
+            <path id="arcpath" d="M30 62 A124 124 0 0 1 210 62" fill="none"/>
+            <text font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="12" letter-spacing="3" fill="#A8302A" text-anchor="middle"><textPath href="#arcpath" startOffset="50%">CAFÉ DE ALTURA · HIGH-GROWN</textPath></text>
+            <g transform="translate(0 6)"><use href="#dawn-art"/></g>
+          </svg>
+          <p class="brand">Finca Alba</p>
+          <p class="place">JAYUYA · PUERTO RICO</p>
+          <p class="band">TUESTE MEDIO · MEDIUM ROAST</p>
+          <p class="notes" lang="es"><b>Guayaba · Caña · Cacao</b><span lang="en">Guava · Cane sugar · Cacao</span></p>
+          <p class="meta"><span lang="es">GRANO ENTERO<br>WHOLE BEAN</span><span>PESO NETO · NET WT<br>12 OZ (340 g)</span></p>
+        </div>
+        <span class="stamp">TOSTADO · ROASTED<br>03 · OCT · 2026<br>LOTE 14</span>
+      </div>
+      <div class="tag" aria-hidden="true"><p lang="es">Lote 14, del lado de la quebrada. ¡Que lo disfruten!<br>— Alba</p><small>FINCA ALBA · JAYUYA</small></div>
+      <div class="tin" aria-hidden="true"><div class="tin-label"><p class="t1">FINCA ALBA</p><p class="t2" lang="es">Espresso</p><p class="t3" lang="es">de la finca</p><p class="t4">TUESTE OSCURO · DARK ROAST</p><p class="t5">8 OZ (227 g)</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PALETTE -->
+<section id="palette" class="sec" aria-labelledby="palette-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="palette-title"><small>03 · Tintas / Inks</small>Palette</h2><p>Three printing inks (café, maga red, dawn gold) on two papers (kraft and crema), plus Cordillera green for the espresso line. Specified as spot colors for print; ratios computed with WCAG 2 relative luminance for the web store.</p></div>
+    <div class="inks">
+      <figure class="ink"><div class="chip" style="background:#2B1A12;color:#F3E6CF"><span>Café</span></div><dl><dt>Ink · text</dt><dd>#2B1A12</dd><dd>oklch(0.24 0.031 46)</dd><dd class="c">13.52:1 on crema AA</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#A8302A;color:#FFF6E6"><span>Flor de maga</span></div><dl><dt>Accent · CTA</dt><dd>#A8302A</dd><dd>oklch(0.49 0.157 27)</dd><dd class="c">5.46:1 on crema; light text 6.27:1 AA</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#E2A03A;color:#2B1A12"><span>Alba</span></div><dl><dt>Dawn gold · rays</dt><dd>#E2A03A</dd><dd>oklch(0.75 0.138 74)</dd><dd class="c">Café text 7.40:1 AA</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#24493A;color:#F3E6CF"><span>Monte</span></div><dl><dt>Espresso line</dt><dd>#24493A</dd><dd>oklch(0.37 0.050 165)</dd><dd class="c">Crema text 8.15:1 AA</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#F3E6CF;color:#2B1A12;box-shadow:inset 0 0 0 1px #CDB797"><span>Crema</span></div><dl><dt>Label paper</dt><dd>#F3E6CF</dd><dd>oklch(0.93 0.034 82)</dd><dd class="c">Ground for café 13.52:1</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#C69C6D;color:#2B1A12"><span>Kraft</span></div><dl><dt>Bag stock</dt><dd>#C69C6D</dd><dd>oklch(0.72 0.080 69)</dd><dd class="c">Café text 6.65:1 AA</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#E6D5BA;color:#2B1A12;box-shadow:inset 0 0 0 1px #CDB797"><span>Estraza</span></div><dl><dt>Web canvas</dt><dd>#E6D5BA</dd><dd>oklch(0.88 0.041 79)</dd><dd class="c">Café 11.59:1; maga 4.67:1</dd></dl></figure>
+      <figure class="ink"><div class="chip" style="background:#1C3529;color:#F3E6CF"><span>Madrugada</span></div><dl><dt>Night · hero</dt><dd>#1C3529</dd><dd>oklch(0.30 0.038 162)</dd><dd class="c">Crema 10.71:1; gold 5.86:1</dd></dl></figure>
+    </div>
+    <div class="pal-note">
+      <p><b>Print</b>Specify as three spot inks plus kraft; match to physical ink drawdowns on the actual kraft and label stock, not to screen values.</p>
+      <p><b>No flag colors</b>The red is the flor de maga (Puerto Rico's national flower), not the flag. The flag stays off the pack; its colors carry political meaning on the island.</p>
+      <p><b>Gold is never text</b>on crema or kraft. It is rays, rules and fills behind café-colored type.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TYPE -->
+<section id="type" class="sec" aria-labelledby="type-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="type-title"><small>04 · Letras / Type</small>Type</h2><p>Young Serif has the warm, slightly wobbly weight of old wood and metal type. Big Shoulders Display sets the condensed label caps. Libre Franklin keeps ingredients and brew guides readable. One hand, Alba's, for notes.</p></div>
+    <div class="type-grid">
+      <div class="spec">
+        <span class="k">Display · Young Serif 400 · 84px / 1.0 · tracking −0.015em</span>
+        <p class="t-disp" lang="es">Café de altura, tostado en casa.</p>
+        <p class="t-disp-en">High-grown coffee, roasted at home.</p>
+        <p class="t-label">Tueste medio · Lote 14</p>
+        <p class="t-cap">Label caps: Big Shoulders Display 800 · 32px · tracking 0.18em · accents kept on capitals (CAFÉ, not CAFE)</p>
+        <p class="t-hand" lang="es">¡Que lo disfruten! — Alba</p>
+      </div>
+      <div>
+        <div class="spec">
+          <span class="k">Body · Libre Franklin 400 · 17px / 1.6</span>
+          <p class="t-body" lang="es">Sembramos café a la sombra de guamá y guineo, en la ladera que mira al este. Por eso le llamamos Alba: el sol llega primero a nuestras matas.</p>
+          <p class="t-body">We grow under the shade of guamá and banana trees, on the slope that faces east. That is why we call it Alba: the sun reaches our trees first.</p>
+        </div>
+        <div class="spec">
+          <span class="k">Caption · Libre Franklin 500 · 13px / 1.45</span>
+          <p class="t-cap" lang="es">Ingredientes: 100% café arábica de Puerto Rico. Consérvese en un lugar fresco y seco.</p>
+          <p class="t-cap" style="margin-top:4px">Ingredients: 100% Puerto Rican arabica coffee. Store in a cool, dry place.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMPONENTS -->
+<section id="components" class="sec" aria-labelledby="components-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="components-title"><small>05 · Tienda / Store</small>Components</h2><p>The online store borrows the pack: label caps on buttons, a double rule inside the primary, crema cards. Spanish first, English beside it, never smaller than 80%.</p></div>
+    <div class="comp-grid">
+      <div class="panel c-btns">
+        <h3>Buttons / Botones</h3>
+        <div class="btn-grid">
+          <div class="btn-cap"><button class="btn btn--primary" type="button" lang="es">Añadir <small lang="en">Add to cart</small></button>Primary</div>
+          <div class="btn-cap"><button class="btn btn--secondary" type="button" lang="es">Suscribirme <small lang="en">Subscribe</small></button>Secondary</div>
+          <div class="btn-cap"><button class="btn" type="button" disabled lang="es">Agotado <small lang="en">Sold out</small></button>Disabled</div>
+          <div class="btn-cap"><button class="btn btn--primary is-focus" type="button" lang="es">Añadir <small lang="en">Add to cart</small></button>Focus visible</div>
+        </div>
+      </div>
+      <div class="panel c-input">
+        <h3>Shipping / Envío</h3>
+        <div class="field"><label for="nm" lang="es">Nombre completo <span lang="en">/ Full name</span></label><input class="input" id="nm" type="text" value="María Rivera Santiago" aria-describedby="nm-h"><span class="hint" id="nm-h" lang="es">Incluye ambos apellidos si los usas. <span lang="en">Include both last names if you use them.</span></span></div>
+        <div class="field"><label for="ad" lang="es">Dirección <span lang="en">/ Address</span></label><input class="input" id="ad" type="text" value="Urb. Villa Carolina, Calle 12 #234"></div>
+        <div class="field field--err"><label for="zp" lang="es">Código postal <span lang="en">/ ZIP code</span></label><input class="input" id="zp" type="text" value="0098" aria-invalid="true" aria-describedby="zp-e"><p class="err" id="zp-e"><svg aria-hidden="true"><use href="#i-alert"/></svg><span lang="es">El código postal tiene 5 dígitos, por ejemplo 00985. <span lang="en">ZIP codes have 5 digits, for example 00985.</span></span></p></div>
+      </div>
+      <div class="panel c-card">
+        <h3>Products / Productos</h3>
+        <div class="prod"><div class="mini" style="background:#C69C6D"><svg viewBox="0 0 240 172" aria-hidden="true"><use href="#dawn-art"/></svg></div><div><b lang="es">Finca Alba · Tueste medio</b><span class="sub">Guayaba, caña, cacao · 12 oz (340 g) · grano o molido</span></div><span class="pr">$22<small>envío gratis +$40</small></span></div>
+        <div class="prod"><div class="mini" style="background:#24493A"><svg viewBox="0 0 48 48" aria-hidden="true" style="width:46%"><use href="#ic-moka"/></svg></div><div><b lang="es">Espresso de la finca</b><span class="sub">Tueste oscuro · 8 oz (227 g) · lata reutilizable</span></div><span class="pr">$19<small>dark roast</small></span></div>
+      </div>
+      <div class="panel c-badges">
+        <h3>Badges / Sellos</h3>
+        <div class="badges">
+          <svg class="roundel" aria-label="Seal: grown and roasted in Jayuya, Puerto Rico" role="img"><use href="#roundel"/></svg>
+          <span class="bdg bdg--red">Lote 14</span>
+          <span class="bdg bdg--green">900 m</span>
+          <span class="bdg bdg--gold">Cosecha 2026</span>
+          <span class="bdg bdg--ink">Grano entero / Whole bean</span>
+          <span class="bdg bdg--ink">Tostado 03·10·26</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. APPLICATIONS -->
+<section id="applications" class="sec" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="apps-title"><small>06 · Empaque / Packaging</small>Applications</h2><p>The back panel does the explaining (story, brew guide, legal) in two columns; the mailer box is the unboxing moment for subscribers in the diaspora.</p></div>
+    <div class="apps">
+      <figure>
+        <div class="back" role="img" aria-label="Back panel of the bag: the story in Spanish and English side by side, a brew guide for pour-over, French press and moka with ratios, a QR code to meet the farm, a barcode, and the roaster's address in Jayuya.">
+          <h3 lang="es" aria-hidden="true">Una finca, un lote, una mañana.</h3>
+          <div class="cols" aria-hidden="true">
+            <p lang="es"><b>LA FINCA</b>La familia Rivera cultiva café en las montañas de Jayuya. Recogemos a mano solo la cereza madura y tostamos en lotes de 12 kilos.</p>
+            <p><b>THE FARM</b>The Rivera family grows coffee in the mountains of Jayuya. We hand-pick only ripe cherries and roast in 12-kilo batches.</p>
+          </div>
+          <dl class="facts" aria-hidden="true">
+            <div><dt lang="es">Variedad</dt><dd>Típica · Borbón</dd><dt>Variety</dt></div>
+            <div><dt lang="es">Proceso</dt><dd lang="es">Lavado</dd><dt>Washed</dt></div>
+            <div><dt lang="es">Altitud</dt><dd>900 m</dd><dt>Altitude</dt></div>
+            <div><dt lang="es">Cosecha</dt><dd>2026</dd><dt>Harvest</dt></div>
+          </dl>
+          <div class="brew" aria-hidden="true">
+            <div><svg><use href="#ic-pour"/></svg>COLADOR<span>Pour-over 1:16 · 94 °C</span></div>
+            <div><svg><use href="#ic-press"/></svg>PRENSA<span>French press 1:15 · 4 min</span></div>
+            <div><svg><use href="#ic-moka"/></svg>GRECA<span>Moka pot · medium heat</span></div>
+          </div>
+          <div class="foot" aria-hidden="true">
+            <svg class="qr" viewBox="0 0 29 29"><rect width="29" height="29" fill="#F3E6CF"/><path d="M1 1h7v7H1zM21 1h7v7h-7zM1 21h7v7H1z" fill="none" stroke="#2B1A12" stroke-width="2"/><path d="M3 3h3v3H3zM23 3h3v3h-3zM3 23h3v3H3zM10 2h2v2h-2zM14 4h2v3h-2zM10 9h3v2h-3zM16 10h2v2h-2zM19 12h3v2h-3zM10 14h2v3h-2zM13 16h4v2h-4zM22 16h3v3h-3zM12 21h2v2h-2zM16 20h2v4h-2zM20 22h3v2h-3zM24 25h3v2h-3zM11 25h3v2h-3zM2 11h3v2H2zM6 14h2v3H6zM25 10h2v3h-2z" fill="#2B1A12"/></svg>
+            <span lang="es"><b>Escanea para conocer la finca.</b><br>Scan to meet the farm.<br>Tostado por Finca Alba, Jayuya, PR</span>
+            <span class="bars"></span>
+          </div>
+        </div>
+        <figcaption class="app-cap" style="text-align:center"><b>Back panel, 12 oz pouch.</b> Parallel columns give both languages equal standing; the brew guide works without words.</figcaption>
+      </figure>
+      <figure>
+        <div class="mailer" role="img" aria-label="Kraft subscription mailer box with a red tape band printed Del monte a tu taza, a cream address label, the roundel seal stamped in red ink, and a handwritten note: Lote 14 te espera.">
+          <svg class="big-seal" aria-hidden="true"><use href="#roundel"/></svg>
+          <div class="addr" aria-hidden="true"><b>PARA / TO</b>Ana Torres Vega<br>1450 Example Ave, Apt 3B<br>Orlando, FL 32801</div>
+          <div class="tape" aria-hidden="true"><span lang="es">DEL MONTE A TU TAZA</span><span>FROM THE MOUNTAIN TO YOUR CUP</span><span lang="es">DEL MONTE A TU TAZA</span><span>FROM THE MOUNTAIN TO YOUR CUP</span></div>
+          <p class="hand" lang="es" aria-hidden="true">Lote 14 te espera.<br>— A.</p>
+        </div>
+        <figcaption class="app-cap"><b>Subscription mailer.</b> Printed one color on kraft, plus a red tape band that is the only full-color element. Handwritten notes on every box are the creator archetype in practice: real hands, not a script font pretending.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7. IMAGERY -->
+<section id="imagery" class="sec" aria-labelledby="imagery-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="imagery-title"><small>07 · Grabado / Imagery</small>Imagery and icons</h2><p>Everything looks cut from linoleum and printed in at most three inks: chunky shapes, carved white lines, slightly uneven edges.</p></div>
+    <div class="img-grid">
+      <div class="img-copy">
+        <p>Commission a Puerto Rican printmaker for the master illustrations (sunrise, ridges, branch) and build the icon set from their carving marks. Photography is documentary: the actual pickers, hands, mud, the drying patio at 6 a.m. in warm low light. No beach, no flag, no generic "tropical" palm.</p>
+        <p>Icons are solid silhouettes with two to four carved highlights each, never outlines. Red is reserved for the fruit and the flower; gold for light.</p>
+        <div class="icons" role="list" aria-label="Linocut icon set">
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-cherry"/></svg></span>Cereza</figure>
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-leaf"/></svg></span>Hoja</figure>
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-mountain"/></svg></span>Monte</figure>
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-sun"/></svg></span>Alba</figure>
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-pour"/></svg></span>Colador</figure>
+          <figure role="listitem"><span><svg aria-hidden="true"><use href="#ic-moka"/></svg></span>Greca</figure>
+        </div>
+      </div>
+      <figure class="lino">
+        <svg viewBox="0 0 240 172" role="img" aria-label="Master linocut illustration: a red sun with gold rays rising behind dark mountain ridges, a green foothill, and a coffee branch with leaves and red cherries." style="filter:url(#carve)"><use href="#dawn-art"/></svg>
+        <figcaption>Master illustration, three spot inks. Vector placeholder for the commissioned linocut; keep the carving marks when it is redrawn.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MOTION -->
+<section id="motion" class="sec" aria-labelledby="motion-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="motion-title"><small>08 · Ritmo / Motion</small>Motion</h2><p>The pace of a slow pour. Things settle rather than snap; ambient motion is steam and light, never bouncing beans.</p></div>
+    <div class="motion-grid">
+      <ul class="mlist">
+        <li><b>Add to cart: bag drops into the cart icon</b><span class="d">480ms</span><code>cubic-bezier(0.05, 0.7, 0.1, 1)</code></li>
+        <li><b>Hover on cards and buttons</b><span class="d">200ms</span><code>cubic-bezier(0.2, 0, 0, 1) · color and 2px lift</code></li>
+        <li><b>Steam loop on product pages</b><span class="d">3.6s</span><code>cubic-bezier(0, 0, 0, 1) · three wisps, staggered 1.2s</code></li>
+        <li><b>Reduced motion</b><span class="d">0ms</span><code>steam rendered static; transitions instant</code></li>
+      </ul>
+      <div class="cup-stage" role="img" aria-label="Motion demo: steam rises slowly from a red enamel cup of coffee.">
+        <svg viewBox="0 0 260 240" aria-hidden="true">
+          <g class="steam" fill="none" stroke="#F3E6CF" stroke-width="5" stroke-linecap="round">
+            <path d="M104 96 c-12 -16 12 -26 0 -44"/>
+            <path d="M130 92 c-12 -16 12 -26 0 -46"/>
+            <path d="M156 96 c-12 -16 12 -26 0 -44"/>
+          </g>
+          <ellipse cx="130" cy="214" rx="96" ry="14" fill="#0F1E16"/>
+          <path d="M62 112 h136 l-12 82 a20 20 0 0 1 -20 16 h-72 a20 20 0 0 1 -20 -16z" fill="#A8302A"/>
+          <path d="M198 128 c26 0 30 40 -8 46" fill="none" stroke="#A8302A" stroke-width="10"/>
+          <ellipse cx="130" cy="112" rx="68" ry="10" fill="#2B1A12"/>
+          <path d="M80 140h100M84 160h92" stroke="#F3E6CF" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 8"/>
+          <path d="M40 210h180" stroke="#E2A03A" stroke-width="3"/>
+        </svg>
+        <p>Live demo · static with reduced motion</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VOICE -->
+<section id="voice" class="sec" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="voice-title"><small>09 · Voz / Voice</small>Voice</h2><p>A farmer who is proud and specific: altitude, lot, roast date, who picked it. Warm "tú" in Spanish for the store; transcreated English, never machine-translated.</p></div>
+    <div class="voice">
+      <div class="vl"><span class="k">Headline</span><p class="es" lang="es">Del monte a tu taza, al amanecer.</p><p class="en">From the mountain to your cup, at first light.</p><p class="why">Ties the name (alba = dawn) to a physical truth: the farm faces east.</p></div>
+      <div class="vl"><span class="k">CTA (on pack)</span><p class="es" lang="es">Escanea para conocer la finca.</p><p class="en">Scan to meet the farm.</p><p class="why">The packaging CTA is an invitation, not a sale; the store CTA is plain "Comprar café / Shop coffee".</p></div>
+      <div class="vl vl--err"><span class="k">Error</span><div class="box"><p class="es" lang="es">Todavía no enviamos a ese código postal. Déjanos tu email y te avisamos.</p><p class="en">We don't ship to that ZIP code yet. Leave your email and we'll let you know.</p></div><p class="why">Honest limit, then a way to stay in touch. Same message, both languages, same size.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RATIONALE -->
+<section id="rationale" class="sec" aria-labelledby="rationale-title">
+  <div class="wrap">
+    <div class="sec-head"><svg class="seal" aria-hidden="true"><use href="#roundel"/></svg><h2 id="rationale-title"><small>10 · Razón / Rationale</small>Rationale</h2><p>Why this direction fits, what it risks, and the default the category would reach for.</p></div>
+    <div class="rat">
+      <article><h3>Why it fits</h3><ul><li>Premium coffee is judged on provenance. Heritage label grammar (badges, bands, stamped dates) reads as "small, real, specific" at a $20+ price.</li><li>Creator archetype: the linocut, the handwritten notes and the stamped lot are visible handwork, not decoration.</li><li>Localizes Americana to Puerto Rico: maga red, the Cordillera, bilingual labels, Spanish first.</li></ul></article>
+      <article><h3>What it risks</h3><ul><li>Americana can drift into mainland cowboy nostalgia; every motif must come from the island and the farm.</li><li>Heritage cues invite fake history. No "Est." date unless it is true.</li><li>Two languages on a 12 oz front get crowded; keep the front to name, origin, roast, notes and net weight, and move the rest to the back.</li></ul></article>
+      <article><h3>Category-expected alternative</h3><p>A matte black specialty pouch with a small sans-serif sticker (third-wave minimalism), or a tourist pack with the flag, a coquí and a beach (<code>style.quiet-minimal</code> or souvenir kitsch). One is anonymous, the other is not respectful.</p><p class="fine">Before print: confirm FDA food labeling and the Fair Packaging and Labeling Act net-quantity statement (both units, bottom 30% of the main panel), bilingual consistency, origin claims and any certification marks with a regulatory specialist.</p></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Finca Alba is a fictional brand made for the Visual Design Kit stylescape set. All artwork is CSS and inline SVG; names and addresses are invented.</span><span>Type: Young Serif, Big Shoulders Display, Libre Franklin, La Belle Aurore (SIL OFL 1.1). <a href="../index.html">All stylescapes</a></span></div></footer>
+</body>
+</html>

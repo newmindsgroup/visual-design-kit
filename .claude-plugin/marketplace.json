@@ -1,0 +1,29 @@
+{
+  "name": "visual-design-team",
+  "owner": {
+    "name": "New Minds Group",
+    "url": "https://github.com/newmindsgroup"
+  },
+  "metadata": {
+    "description": "New Minds Group design plugins for Claude Code, claude.ai and Claude Desktop.",
+    "version": "0.5.0"
+  },
+  "plugins": [
+    {
+      "name": "visual-design-studio",
+      "source": "./plugins/visual-design-studio",
+      "description": "Brief-to-direction design director, Design Space Atlas, discipline skills with concrete defaults, DTCG tokens and a render-and-critique quality loop.",
+      "version": "0.5.0",
+      "category": "design",
+      "keywords": ["design", "branding", "ux", "ui", "design systems", "motion"]
+    },
+    {
+      "name": "astro-website-studio",
+      "source": "./extras/astro-website-studio",
+      "description": "Standalone Astro website delivery skill. Install it only on hosts that do not have visual-design-studio, which already includes Astro guidance.",
+      "version": "0.1.0",
+      "category": "development",
+      "keywords": ["astro", "website"]
+    }
+  ]
+}

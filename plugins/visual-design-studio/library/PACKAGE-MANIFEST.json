@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-14 15:15:59 AST",
-  "candidate": "0.4.1",
+  "Version-Timestamp": "2026-10-20 04:00:00 UTC",
+  "candidate": "0.5.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.4.1"
+    "version": "0.5.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -82,7 +82,7 @@
     },
     {
       "destination": "DESIGN-CRAFT.md",
-      "sha256": "74658270a8c8a9783f1dc082cdd947ddc2f213dbe9ad212724567202c24e93d2",
+      "sha256": "f594ef76eafc5d1decdaabc6f02731881effceb34b9239ab5ede3197cae9a405",
       "source": "curated-plugin-source/DESIGN-CRAFT.md",
       "status": "versioned-evaluation-input"
     },
@@ -196,7 +196,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "3fb01ca0eba5249aef7a86e535bd3e90b71c42b04a8b7b0d3cc99a3c23ac472e",
+      "sha256": "0bf53a439491c18f6138d6152435166a22d710c0c92cf6546121d3cb160f0f8f",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -333,6 +333,774 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "atlas/README.md",
+      "sha256": "f749b18340c0fe0b52983aa8d0ffd37b59ff87e448d56d44c60b42ac86e1b81e",
+      "source": "curated-plugin-source/atlas/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/caregiver.md",
+      "sha256": "9638748de478ce0d68a001db2e0ff41321cec0f8c33a79554c2e0bf0f639d85c",
+      "source": "curated-plugin-source/atlas/archetypes/caregiver.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/creator.md",
+      "sha256": "2518c8eb046e21fd0c734f69bada838f6f822400a1f317111cc53f1aec25de72",
+      "source": "curated-plugin-source/atlas/archetypes/creator.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/everyperson.md",
+      "sha256": "42dc0b06976154faa20fbc21e7a33c5f1c1732dd9c13a793f0a83f422bea11bb",
+      "source": "curated-plugin-source/atlas/archetypes/everyperson.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/explorer.md",
+      "sha256": "f2a8b63a39ff940742c2974cf9cb64b94a9ebcf039becac31080b715e335ee77",
+      "source": "curated-plugin-source/atlas/archetypes/explorer.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/hero.md",
+      "sha256": "ab8382477c40c9a2a5162bcfe41a4324ed169223c49aae05f9d6a451aedf449b",
+      "source": "curated-plugin-source/atlas/archetypes/hero.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/innocent.md",
+      "sha256": "efe51a109c0306bd6b5ca519154fa4380302e0418466475a8f25e98cece5b92d",
+      "source": "curated-plugin-source/atlas/archetypes/innocent.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/jester.md",
+      "sha256": "fd256e4f7c19b17cb00ea2235388e03c43ed2413d45b83935454689b83a657fe",
+      "source": "curated-plugin-source/atlas/archetypes/jester.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/lover.md",
+      "sha256": "1a71c922e3222667db3e2b85039e0ae3cf4bce2596e0a51013106104b394418d",
+      "source": "curated-plugin-source/atlas/archetypes/lover.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/magician.md",
+      "sha256": "03e0268c8776c939ae5d23dac7450493ee513c6dee4d290cadc78d059bb393f6",
+      "source": "curated-plugin-source/atlas/archetypes/magician.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/outlaw.md",
+      "sha256": "76de890fb23666ca3f74732b8722f760b4a321e2eeea68c988a37b2a3b7ae5cd",
+      "source": "curated-plugin-source/atlas/archetypes/outlaw.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/ruler.md",
+      "sha256": "2ee8358fc5c88a08893ed58701389b0edbfd2d28704b56b76d4fef61a10cd51c",
+      "source": "curated-plugin-source/atlas/archetypes/ruler.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/archetypes/sage.md",
+      "sha256": "0a15bd305ad51db10a0aae7dcfd35ee6a8ad5e944bf862dfc9d7b3661c4e35e3",
+      "source": "curated-plugin-source/atlas/archetypes/sage.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/affluent-hnwi.md",
+      "sha256": "ae1c5be5aabd131125edc278e41cf3bfb99fe410e346d397da2ba1b912dca134",
+      "source": "curated-plugin-source/atlas/audiences/affluent-hnwi.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/b2b-buying-committee.md",
+      "sha256": "88838f5e6dc61ce6206b9bb3ab322f9a780da41179accca1042b5b01fb94e100",
+      "source": "curated-plugin-source/atlas/audiences/b2b-buying-committee.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/children-under-13.md",
+      "sha256": "5a90f124dc0141d62da1773a7e61e0b650ba2264ac8e6529b604057f53fb9e08",
+      "source": "curated-plugin-source/atlas/audiences/children-under-13.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/disability-accessibility-first.md",
+      "sha256": "19e98f355ae51a2f87c831f5eff36bd163c5f8214734fd70e7f72f5fba5a89b2",
+      "source": "curated-plugin-source/atlas/audiences/disability-accessibility-first.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/expert-power-users.md",
+      "sha256": "cbd8b41df27265aa8fb0eab755ed212a339b9bf449e338110c98baf2ce761f40",
+      "source": "curated-plugin-source/atlas/audiences/expert-power-users.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/low-bandwidth-entry-devices.md",
+      "sha256": "229dfc6e34ae7b0a0160e71c5a99455dfd8698fb9bf0e8369cf46e341ea61529",
+      "source": "curated-plugin-source/atlas/audiences/low-bandwidth-entry-devices.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/low-literacy-plain-language.md",
+      "sha256": "5fbb50b93c5f4d6315a0bb679574d962054b784e393c032e24c545bcde10910e",
+      "source": "curated-plugin-source/atlas/audiences/low-literacy-plain-language.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/neurodivergent.md",
+      "sha256": "d8414cb87e7354de38e1c52961466f13b935c61606c8688e0e08db96f23113da",
+      "source": "curated-plugin-source/atlas/audiences/neurodivergent.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/older-adults.md",
+      "sha256": "b7bf2ca833571cb11b49f8c755a80b1c9667502af2e61eefeb12024fd31822f9",
+      "source": "curated-plugin-source/atlas/audiences/older-adults.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/audiences/teens-gen-z.md",
+      "sha256": "03a3406a3965d7a883926b62825063de7bef76d4c90dbca6f99b167c0a01cc83",
+      "source": "curated-plugin-source/atlas/audiences/teens-gen-z.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/ecommerce-store.md",
+      "sha256": "ac9963c0c11c94cf5dce62243543509d93806154dd6cf9549e93b09d9f5c44c2",
+      "source": "curated-plugin-source/atlas/channels/ecommerce-store.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/email.md",
+      "sha256": "0ef2c36ce94be36b316da033a06387d39d8129899dd91b6141916afbba2d1095",
+      "source": "curated-plugin-source/atlas/channels/email.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/environmental-wayfinding.md",
+      "sha256": "f39ab7c2c044cee294069d1b28714c957886ecf13641bd585b1060eb8c20ad34",
+      "source": "curated-plugin-source/atlas/channels/environmental-wayfinding.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/marketing-website.md",
+      "sha256": "ad9ca1dccd01b53c23b8c62e8a80832ecad46dfaad4a1e09e0f4fe0825129f7a",
+      "source": "curated-plugin-source/atlas/channels/marketing-website.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/native-app.md",
+      "sha256": "7c713e777cda1a611ed9cb985e404f41f5540ad654ea93d0a9fdca67071eebfc",
+      "source": "curated-plugin-source/atlas/channels/native-app.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/ooh-signage.md",
+      "sha256": "ae8f13049fb2361330850c6f77b8acb980acb2d5c4f87115a5d3eb22ae3dea3e",
+      "source": "curated-plugin-source/atlas/channels/ooh-signage.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/packaging.md",
+      "sha256": "3184636372dec005eaddaf83ac8b0a1bde508ffd42c587612654c68af569b911",
+      "source": "curated-plugin-source/atlas/channels/packaging.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/presentation.md",
+      "sha256": "bcb11bcb0e2a73e60bec078b9f0d69edf97cc3461b41462fce6a53f0caf30299",
+      "source": "curated-plugin-source/atlas/channels/presentation.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/print-collateral.md",
+      "sha256": "b41bc8060ebfc97243cf7eea6b357d673258d411f6471eb5af629e39303af356",
+      "source": "curated-plugin-source/atlas/channels/print-collateral.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/social-media.md",
+      "sha256": "1a741cc0721eb8b64bad1c321df4384bb3f288475dff87e2f8c12644455208b5",
+      "source": "curated-plugin-source/atlas/channels/social-media.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/video-motion.md",
+      "sha256": "1aed2502260707c154ecd834c92b226305c25bf66dcb88e9f4d0eaf00e141218",
+      "source": "curated-plugin-source/atlas/channels/video-motion.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/channels/web-app.md",
+      "sha256": "6b22587d78480271d331d5bcd4eeb8e646b122636e703801047a103f29a1da8b",
+      "source": "curated-plugin-source/atlas/channels/web-app.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/index.json",
+      "sha256": "e3a34cfd37be5cc84fc943720d9f41f232e7139bfe677beea38e8951476dc5d0",
+      "source": "curated-plugin-source/atlas/index.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/ai-products.md",
+      "sha256": "69e2ba8c31ad7e6999a8fa0f37f27e4abf5a38597d86870615d2fd14a23a7dbf",
+      "source": "curated-plugin-source/atlas/industries/ai-products.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/automotive-mobility.md",
+      "sha256": "673eecfcd8ea9c4d63d8adf644b37737c5d74c94803349f45bc8ce10e196f323",
+      "source": "curated-plugin-source/atlas/industries/automotive-mobility.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/beauty-cosmetics.md",
+      "sha256": "3955f56679f79d8cefd4403eecd62317c887fbb092dfc88f63d41f8865dd9aac",
+      "source": "curated-plugin-source/atlas/industries/beauty-cosmetics.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/creative-agencies-studios.md",
+      "sha256": "12e0a7374336cf4e80e0351ab881243a11e24b0af645124c80f318205e35e3b2",
+      "source": "curated-plugin-source/atlas/industries/creative-agencies-studios.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/crypto-web3.md",
+      "sha256": "8dcc3cbb507856622faa72edccc41c38ae87c189a9caba9982ebad636399bbef",
+      "source": "curated-plugin-source/atlas/industries/crypto-web3.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/developer-tools.md",
+      "sha256": "0ecdf58e4005b15beab92081ee977e757934d81a31827498353aaa4bbc7b22cc",
+      "source": "curated-plugin-source/atlas/industries/developer-tools.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/digital-health-wellness.md",
+      "sha256": "9d4824aaba8a3ff9c794e1a808fdbbf098196b1013cca3f68a32178dede6f808",
+      "source": "curated-plugin-source/atlas/industries/digital-health-wellness.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/ecommerce-dtc.md",
+      "sha256": "c2b56df274122d6e65d34732ae9d2579092dc04166a958e45cb8149495c3240d",
+      "source": "curated-plugin-source/atlas/industries/ecommerce-dtc.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/education-edtech.md",
+      "sha256": "dedded9ef6cefb2234a0f7f87a273e7a15cf2acc8993b20b0ca4c816e31dbb7d",
+      "source": "curated-plugin-source/atlas/industries/education-edtech.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/energy-climate.md",
+      "sha256": "6c43e1b57f7265342a2ad38d1ab1b573358302ace3c65517fa3b40e4346f3fae",
+      "source": "curated-plugin-source/atlas/industries/energy-climate.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/events-conferences.md",
+      "sha256": "fa2a971bac58c8c739d046965cb8e59de51ec148404540ef4d03a91d2556534c",
+      "source": "curated-plugin-source/atlas/industries/events-conferences.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/fashion-apparel.md",
+      "sha256": "426b4ce99805ba732da686f869364e019cd11f5582f7431a79f0dd2725c509dc",
+      "source": "curated-plugin-source/atlas/industries/fashion-apparel.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/fintech-banking.md",
+      "sha256": "9561a74aeaeda9a2b0079750f3b0ce8efbba74a604f39fa3fd5d1a7340733c17",
+      "source": "curated-plugin-source/atlas/industries/fintech-banking.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/food-beverage-cpg.md",
+      "sha256": "9d37254dffc8f40f168a6954df8272f9065aa40aff735b121afd174f6a6c2613",
+      "source": "curated-plugin-source/atlas/industries/food-beverage-cpg.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/gaming-esports.md",
+      "sha256": "e58e207bbdaa367420f98cb419ab03ddf0eabe98c3518169f741e1cb962a9831",
+      "source": "curated-plugin-source/atlas/industries/gaming-esports.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/government-civic.md",
+      "sha256": "a5f71f00506c5531b4af28b52ed209de3fd9ab8caf83efb73a529828b3fbdc20",
+      "source": "curated-plugin-source/atlas/industries/government-civic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/healthcare-provider.md",
+      "sha256": "968573ea9f66e13f6f28fb21d4648d2a520d8318e3e5d4574d241d8146aa323b",
+      "source": "curated-plugin-source/atlas/industries/healthcare-provider.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/hotels-travel.md",
+      "sha256": "44dd7c8f8778d17c46006c6e2c3874d1f82ec1c57f084f2be1e8b5bc1d410952",
+      "source": "curated-plugin-source/atlas/industries/hotels-travel.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/industrial-manufacturing-construction.md",
+      "sha256": "9c1610ec4a6e4f7052023addfd2b92d9e996e47dc985b795b89ba9c3265c2224",
+      "source": "curated-plugin-source/atlas/industries/industrial-manufacturing-construction.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/insurance.md",
+      "sha256": "5663456430d52c6f10ae1aa46fcb89451f3be1f4f6b55b349f1e7df7c46b1b9b",
+      "source": "curated-plugin-source/atlas/industries/insurance.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/kids-family.md",
+      "sha256": "d464944ad9b0acb34fb7c1fd8f6ee53d484f7001d9987a03ee3470130f29ed9d",
+      "source": "curated-plugin-source/atlas/industries/kids-family.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/legal-professional-services.md",
+      "sha256": "134433f32fb25e820257dba7b0bd1a18b298e42560fed6f662a9470edae73cae",
+      "source": "curated-plugin-source/atlas/industries/legal-professional-services.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/logistics-supply-chain.md",
+      "sha256": "455576e789dfdc0c60f781a43c8c0dc5335150697a41291a2c6a4c3f18d8feb5",
+      "source": "curated-plugin-source/atlas/industries/logistics-supply-chain.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/luxury-goods.md",
+      "sha256": "e19a3f96543a5f952057a3ee7288ab9573945497e4abe5d26382d6aa3eaba5df",
+      "source": "curated-plugin-source/atlas/industries/luxury-goods.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/marketplaces-platforms.md",
+      "sha256": "1adf7a1f79363541583b7661bc6c4a92bf7539ba81d8a5066229edab7b37527b",
+      "source": "curated-plugin-source/atlas/industries/marketplaces-platforms.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/media-entertainment-streaming.md",
+      "sha256": "317b307c107415405cdb2f3e2cc0b1b9f56258d5b94e50fedca1fc2f1ac5722b",
+      "source": "curated-plugin-source/atlas/industries/media-entertainment-streaming.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/nonprofit-ngo.md",
+      "sha256": "2885e36204d2b216c8fcf40293dbd675a1e045138580a38935446c8bdba5ac3e",
+      "source": "curated-plugin-source/atlas/industries/nonprofit-ngo.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/pharma-biotech.md",
+      "sha256": "664f05f58b6172fc7a5eabe2222e9efe0c72e2e9dc085a07b9ad15287b5c9223",
+      "source": "curated-plugin-source/atlas/industries/pharma-biotech.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/real-estate-proptech.md",
+      "sha256": "1d29ee8b52d4c0f82b0bcc813da8731af87bb3a771f4e2d0ad0e794b59981b1d",
+      "source": "curated-plugin-source/atlas/industries/real-estate-proptech.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/restaurants-hospitality.md",
+      "sha256": "5d93f786c152f19b04ba90e883dfc725cef2f562b02b67d297d0a021f624a0dd",
+      "source": "curated-plugin-source/atlas/industries/restaurants-hospitality.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/saas-b2b.md",
+      "sha256": "3aab8c20796f52aed06ae0e86f1ccf930dd9ff097639562ce884785ea65cedff",
+      "source": "curated-plugin-source/atlas/industries/saas-b2b.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/industries/sports-fitness.md",
+      "sha256": "765137992d19a20daf397e2ac462daa7441c001ca273d347b3792a712380f51e",
+      "source": "curated-plugin-source/atlas/industries/sports-fitness.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/australia-new-zealand.md",
+      "sha256": "a65e6b9fee62c02a2c33e1bfa71e8b89838b30d8bf94b8434aa329dc6f02bae8",
+      "source": "curated-plugin-source/atlas/markets/australia-new-zealand.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/brazil-portuguese.md",
+      "sha256": "7a628f4311898e23b8d5e37a7028c181e4649fb30d81bb72da44c0d86f858961",
+      "source": "curated-plugin-source/atlas/markets/brazil-portuguese.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/canada.md",
+      "sha256": "b28b111dbb8a1dabe45a20a4ff9fea6c469a4903d66329b147afc856746d11b9",
+      "source": "curated-plugin-source/atlas/markets/canada.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/china-mainland.md",
+      "sha256": "22defe80cb47775df7a9fc94224e23df515b9dd7e355c6c20c7cfa043e8852d6",
+      "source": "curated-plugin-source/atlas/markets/china-mainland.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/dach-nordics.md",
+      "sha256": "f60892fc2324c76ce2ec9858adda6a953e6c28ecb06f9aa0ae160f7485f31966",
+      "source": "curated-plugin-source/atlas/markets/dach-nordics.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/india-south-asia.md",
+      "sha256": "22834e81758f9391e462354ebf2aed64b22e07b06497daf622c868962c156538",
+      "source": "curated-plugin-source/atlas/markets/india-south-asia.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/israel-hebrew.md",
+      "sha256": "96eb3ea87615c2c344b5befb115b6667f211912ea633222abff88520b6296f6b",
+      "source": "curated-plugin-source/atlas/markets/israel-hebrew.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/japan.md",
+      "sha256": "334e8b573af55fd60fe9e8a964487a6b88ff6729d3acfb2b632f03029884ebd5",
+      "source": "curated-plugin-source/atlas/markets/japan.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/korea.md",
+      "sha256": "d083c5c20ff86ccae38226710f4d027b306852bcf80ed70b89be2220ea2c49a5",
+      "source": "curated-plugin-source/atlas/markets/korea.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/latin-america-spanish.md",
+      "sha256": "08a371299a48f653c5964abb376108ad845a861c83016cf2fef8167b776ed04b",
+      "source": "curated-plugin-source/atlas/markets/latin-america-spanish.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/middle-east-north-africa-arabic.md",
+      "sha256": "8f8d57f75be2d3acca7a5b45dbd4e325951e1e094a51a69a4fa99f3e0727355a",
+      "source": "curated-plugin-source/atlas/markets/middle-east-north-africa-arabic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/southeast-asia.md",
+      "sha256": "a19ae6e2d8e66557bfb26d23f7ef9e37e046d016add144526749d91d102a214d",
+      "source": "curated-plugin-source/atlas/markets/southeast-asia.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/sub-saharan-africa.md",
+      "sha256": "8ac1853075d1b2d65c69981d35f484b4480f3a6b67710be304a7c31b6807a61f",
+      "source": "curated-plugin-source/atlas/markets/sub-saharan-africa.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/united-kingdom-ireland.md",
+      "sha256": "cecf6db1e0df462298ce946be6dd1c35915acc40976384a0f66a5b4b3a6f1f39",
+      "source": "curated-plugin-source/atlas/markets/united-kingdom-ireland.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/united-states.md",
+      "sha256": "8acd332cd57f91db2324962d64d947e9d930d5624df1e6e12797d733bd306d12",
+      "source": "curated-plugin-source/atlas/markets/united-states.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/us-hispanic-puerto-rico-caribbean.md",
+      "sha256": "0dc0fc152829a3543a277f1f6a97876a8b3a088f7c527b3507eea277e6d699d3",
+      "source": "curated-plugin-source/atlas/markets/us-hispanic-puerto-rico-caribbean.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/markets/western-europe.md",
+      "sha256": "d883d68fa122c9b685a895ee30e2e26b4f449c074d8ba97345f48613ee5e93de",
+      "source": "curated-plugin-source/atlas/markets/western-europe.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/registry.json",
+      "sha256": "c5fdbbf14e8ec69e0d38746b05ff7f528e7d69eb88c1b6f7105f8a52fe506915",
+      "source": "curated-plugin-source/atlas/registry.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/art-deco.md",
+      "sha256": "b29347103d8ae77e4f5575b107c75ce721b5d94b726bf461264fe48faf896e31",
+      "source": "curated-plugin-source/atlas/styles/art-deco.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/art-nouveau-ornamental.md",
+      "sha256": "78396d93ae6563ed24db546bac776005d2185cd1ec23b33e20124ccba7a49f27",
+      "source": "curated-plugin-source/atlas/styles/art-nouveau-ornamental.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/bauhaus-constructivist.md",
+      "sha256": "870dff000d219c118792dfe6c7a460a7074a02c3d1f475a2c1a4d498fc2ef1aa",
+      "source": "curated-plugin-source/atlas/styles/bauhaus-constructivist.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/bold-geometric-sport.md",
+      "sha256": "c248fb251a175b69289471e89a9632afb7e5755fdfd05a6f8227ce2682813eb1",
+      "source": "curated-plugin-source/atlas/styles/bold-geometric-sport.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/civic-plain.md",
+      "sha256": "d544110fc8e68241e1599e64f1b525d880f5084bcae44cd722b37e45e18ed016",
+      "source": "curated-plugin-source/atlas/styles/civic-plain.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/classic-luxury-serif.md",
+      "sha256": "af051c1edba3f7ed9f555a0c44d12ec9523f209159565e4e4d7b2adfdf012139",
+      "source": "curated-plugin-source/atlas/styles/classic-luxury-serif.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/clinical-calm.md",
+      "sha256": "10a4052a9b4cc6919aefc3f0eea4afd171a2052fd5bddda9f62d85530ad4c6fa",
+      "source": "curated-plugin-source/atlas/styles/clinical-calm.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/collage-mixed-media.md",
+      "sha256": "6565a158acab47ace2d078169af1328eb31eb73c78c14e1ffb214d96c54a1e09",
+      "source": "curated-plugin-source/atlas/styles/collage-mixed-media.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/corporate-modern.md",
+      "sha256": "36a8642d0d1d2829c2836cfbaed20d719f2c3e9fe913c41b7605cdae98d98c17",
+      "source": "curated-plugin-source/atlas/styles/corporate-modern.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/dark-tech-developer.md",
+      "sha256": "6d8aa8dea3d2fb96a7c48778216d6146d31660b0db2b36164c1cf04f8be63b53",
+      "source": "curated-plugin-source/atlas/styles/dark-tech-developer.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/data-dense-utilitarian.md",
+      "sha256": "c1403b414e014732cc1b0d3a559b8befdf38d6f990ece3256f71a29198199251",
+      "source": "curated-plugin-source/atlas/styles/data-dense-utilitarian.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/eco-natural-sustainable.md",
+      "sha256": "a28fd287909ddd3535433c3c5165fef79a99f748952141b522351e1a7f5586a3",
+      "source": "curated-plugin-source/atlas/styles/eco-natural-sustainable.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/editorial-magazine.md",
+      "sha256": "15ff42459a5089361856674e33333a7538542643b4aac73aff0124eb6059b2b3",
+      "source": "curated-plugin-source/atlas/styles/editorial-magazine.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/fashion-editorial-didone.md",
+      "sha256": "704e2e0314474816e6f70d2cbd4b9c364f4fa6c2c3c6cc0093b532b5428a85a8",
+      "source": "curated-plugin-source/atlas/styles/fashion-editorial-didone.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/flat-material.md",
+      "sha256": "089bce3d33077fe27126edee1c6e1c5fd7988119c6c4741d06292e189eda4859",
+      "source": "curated-plugin-source/atlas/styles/flat-material.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/glass-spatial.md",
+      "sha256": "ee31bb0f7542ecab4a9b3c3dab0acc7ddfe13a55e989d098568c536463f4017e",
+      "source": "curated-plugin-source/atlas/styles/glass-spatial.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/grunge-punk-zine.md",
+      "sha256": "3d7eea49aa78c4989dac596b97cb2bdfe8df4c2d77a1406ac3a8c527a4ad441e",
+      "source": "curated-plugin-source/atlas/styles/grunge-punk-zine.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/handcrafted-organic.md",
+      "sha256": "ca5abb87d15ae0f119a74ccdde017496185854cc6685028cb18e0305e2431e3c",
+      "source": "curated-plugin-source/atlas/styles/handcrafted-organic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/illustrative-narrative.md",
+      "sha256": "7d4ef64fe8b237e681dc4c566cf55c2de1c3696b0f2d463a40d317ae074757dd",
+      "source": "curated-plugin-source/atlas/styles/illustrative-narrative.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/kinetic-experimental-type.md",
+      "sha256": "699e416df1f47391270bdd4e761965f534d799ba343ad1b001491f1fc6578696",
+      "source": "curated-plugin-source/atlas/styles/kinetic-experimental-type.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/maximalist-eclectic.md",
+      "sha256": "f6a4e55dce57950f8cc060b9d94a5b39dfe13f992abf4da74b91ef36d0f3add7",
+      "source": "curated-plugin-source/atlas/styles/maximalist-eclectic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/memphis-postmodern.md",
+      "sha256": "4be3feeb9d91731e85388e894fd6e17e931dadeaf722c2ac99b15fd0820acb26",
+      "source": "curated-plugin-source/atlas/styles/memphis-postmodern.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/mid-century-modern.md",
+      "sha256": "f5b3effb7edf9738801fc3a46a7fcd6744f222a89779bdc0d91fe83c17a836b1",
+      "source": "curated-plugin-source/atlas/styles/mid-century-modern.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/neo-brutalist.md",
+      "sha256": "87647db1bf1dc65f41875e6a3c67668ad68d348684f3bd1f5682084b1acf8bae",
+      "source": "curated-plugin-source/atlas/styles/neo-brutalist.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/playful-bubbly.md",
+      "sha256": "b4b0d3ca88ff138df8623395a6c2dd9c6024d74acac7de081f86913f06df32a1",
+      "source": "curated-plugin-source/atlas/styles/playful-bubbly.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/quiet-minimal.md",
+      "sha256": "b24bb482a06140f78517e77be145db1cfaf936f480b3ea1e4e9124ed28b7e10e",
+      "source": "curated-plugin-source/atlas/styles/quiet-minimal.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/retro-futurism-synthwave.md",
+      "sha256": "e905440f29d36fd38535e6eb731b33c7aa8fb8ec200e75f924f06b34e821a6be",
+      "source": "curated-plugin-source/atlas/styles/retro-futurism-synthwave.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/risograph-print-texture.md",
+      "sha256": "590c5e14a88a839b39ba597e5e517465283add44fa55e5dcd76b73b18ed31bb9",
+      "source": "curated-plugin-source/atlas/styles/risograph-print-texture.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/scandinavian-nordic.md",
+      "sha256": "0acf706b5e71d29b8c1153a1bfa4d302266c32f574635ed613941eb521de478b",
+      "source": "curated-plugin-source/atlas/styles/scandinavian-nordic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/seventies-psychedelic-groovy.md",
+      "sha256": "f3a1603fa4f0feb19e15373a5a8e1f5990756fbde87f72b065e506bf1b429d43",
+      "source": "curated-plugin-source/atlas/styles/seventies-psychedelic-groovy.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/skeuomorphic-tactile.md",
+      "sha256": "31975355ba18224c7deb44f0eef525d0e7c50ce9a6beaf8bfc3b13ab8d026b23",
+      "source": "curated-plugin-source/atlas/styles/skeuomorphic-tactile.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/soft-ui-neumorphic.md",
+      "sha256": "e229be8446e3d3b444a1e4f0da7d177ba09909657c4cfd18a9900ec4b1a313e0",
+      "source": "curated-plugin-source/atlas/styles/soft-ui-neumorphic.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/swiss-international.md",
+      "sha256": "85cdd95d56317d668e15478c0644fcf90baff33d0e90f7c078aa7adce6549c67",
+      "source": "curated-plugin-source/atlas/styles/swiss-international.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/vibrant-gradient-saas.md",
+      "sha256": "a7cc9db7242eb6442c35f30d50669133de394f4d0c4129028d89bda9a5875d9d",
+      "source": "curated-plugin-source/atlas/styles/vibrant-gradient-saas.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/vintage-heritage-americana.md",
+      "sha256": "ee80113549bf89372dd7da9540330a6ab3310650e18bb01f6206af15eff54376",
+      "source": "curated-plugin-source/atlas/styles/vintage-heritage-americana.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/web-brutalist.md",
+      "sha256": "719fc9125e93170638a45ec5479cdc57683f3a5433f724a37403187122d2c009",
+      "source": "curated-plugin-source/atlas/styles/web-brutalist.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/styles/y2k-cyber.md",
+      "sha256": "a2435d6c8479e633d51086c399c4497107580ec9d3d7ff7dda2b237dd728303e",
+      "source": "curated-plugin-source/atlas/styles/y2k-cyber.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/tiers/luxury.md",
+      "sha256": "4a0dc3584d64c314a39080acee6f8d167a194beb448feeb1a6f461c08b08999c",
+      "source": "curated-plugin-source/atlas/tiers/luxury.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/tiers/mid-market.md",
+      "sha256": "e667e8bea5a3cb222203b0ab9cc77c9a9994e2fd37ee2e5b59e9f8fbba3eed0f",
+      "source": "curated-plugin-source/atlas/tiers/mid-market.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/tiers/premium.md",
+      "sha256": "13b582f9ab1dc22c7e1e824aef79d1f4b73fecda4a4a68f57b1954efff90f074",
+      "source": "curated-plugin-source/atlas/tiers/premium.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/tiers/ultra-luxury.md",
+      "sha256": "b91fe6e1c28112dae0fad3c9f37068123b6733b5458b60cac5198c8c4609e6fe",
+      "source": "curated-plugin-source/atlas/tiers/ultra-luxury.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "atlas/tiers/value.md",
+      "sha256": "54e1eb26ff030cb32a81ba349f8a7317061e17b3ab5d123ae460c4c66e51005f",
+      "source": "curated-plugin-source/atlas/tiers/value.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "capabilities.json",
       "sha256": "97f05cf624feb21b936335b580373fe59b8fdbe4d46ff7c89714d24ec21ed525",
       "source": "curated-plugin-source/capabilities.json",
@@ -406,7 +1174,7 @@
     },
     {
       "destination": "draft-skills/design-color-system/SKILL.md",
-      "sha256": "39e8b8186dd40e3c8a5d0b46591d008b7be0ac996a8cbcbb721a49a2c17a9ac8",
+      "sha256": "a4b3f350d9754810ca44181eed8c7facd9e9e5b352c34dee61f09c4529c944a0",
       "source": "curated-plugin-source/draft-skills/design-color-system/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -538,7 +1306,7 @@
     },
     {
       "destination": "draft-skills/design-foundations/references/critique-calibration.md",
-      "sha256": "d313ff0f7c75eb43e1f0b954a892b1203a9ac16b05d9150437ef1254bf67c488",
+      "sha256": "20861899a06c1dac8e6e6d68bb0479a3c4f85c77ff8c4cdfb3d05ea47345b500",
       "source": "curated-plugin-source/draft-skills/design-foundations/references/critique-calibration.md",
       "status": "versioned-evaluation-input"
     },
@@ -580,7 +1348,7 @@
     },
     {
       "destination": "draft-skills/design-identity-system/references/symbol-families.md",
-      "sha256": "13a1053660febcac4dfc3e0d1d0a5197f134a362a300dd70aac88f3a0595a91d",
+      "sha256": "89b631fd7a83199972e159af8786a689d635bfafa07ff7c57f2ad2c87d6c4082",
       "source": "curated-plugin-source/draft-skills/design-identity-system/references/symbol-families.md",
       "status": "versioned-evaluation-input"
     },
@@ -634,7 +1402,7 @@
     },
     {
       "destination": "draft-skills/design-logo-refinement/references/lettering-and-optics.md",
-      "sha256": "3fc3a7a4ad70257e1afb11c8110dd55f79717d3c6d1e2cf58201acb7b9359384",
+      "sha256": "bd83a15bdfd9480bae362de1fd9416b97dc1dc929a1f7efd6c8305672b0033e9",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/references/lettering-and-optics.md",
       "status": "versioned-evaluation-input"
     },
@@ -1108,7 +1876,7 @@
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
-      "sha256": "76fe69de74f583fdff99cb5dbfa0bd4071d6d907cdd30b414ec5268dd544cdcf",
+      "sha256": "79ed27a61c8ed1c5fe5c862a15250bdaad300c32c95b4c2ea7d1fbf767cf4612",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1120,7 +1888,7 @@
     },
     {
       "destination": "draft-skills/design-typography/references/editorial-reading.md",
-      "sha256": "aaa6e54af402843c893bcd8691e89f1c4caa77998d4ebb41aa5b2a26b2db5bda",
+      "sha256": "ec69130ab570de1255631051e7e3663cac9b832970241fbe762289452d88d518",
       "source": "curated-plugin-source/draft-skills/design-typography/references/editorial-reading.md",
       "status": "versioned-evaluation-input"
     },
@@ -1419,6 +2187,144 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/ai-tells/README.md",
+      "sha256": "68052eb3ae6a9506e0f3ad9dd2311a98c771cf5a2bd5803041e097a71c24b0ad",
+      "source": "curated-plugin-source/examples/ai-tells/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/anton/OFL.txt",
+      "sha256": "9267baca92b7a7ce9db6dd9e6cc32c9fe3ddf1ac96e421d5f87c5746b9089d6a",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/anton/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/anton/anton-latin-400-normal.woff2",
+      "sha256": "d0fa07ff63dd60cbc0e2f58e29c802dca2a5ae0276c999f59c6111ab7bbaec3b",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/anton/anton-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/archivo/OFL.txt",
+      "sha256": "c3c8402eec0e31dc9a76851235b1c02a0bb821488b2db8e35bcc2ab60ca8fc2b",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/archivo/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/archivo/archivo-latin-standard-normal.woff2",
+      "sha256": "e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/archivo/archivo-latin-standard-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/bodoni-moda/OFL.txt",
+      "sha256": "6c64f717433eadd29b058d6254fe25c1ee2d249ce3772f843bb21f73285779c2",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/bodoni-moda/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/bodoni-moda/bodoni-moda-latin-opsz-italic.woff2",
+      "sha256": "b737328c13b92784ee78d99e62e3bcc38eeef0f2dba41d107637b3acea46781f",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/bodoni-moda/bodoni-moda-latin-opsz-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/bodoni-moda/bodoni-moda-latin-opsz-normal.woff2",
+      "sha256": "c032219ef636f7b4932f7d1dc91bdab602c970f090770b546bea4effaab3463c",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/bodoni-moda/bodoni-moda-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/bricolage-grotesque/OFL.txt",
+      "sha256": "923f4ddf0fd39f9b7794ab0df7332f3d95dc43e8ad7ec2289d6d9e8491177f51",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/bricolage-grotesque/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/bricolage-grotesque/bricolage-grotesque-latin-opsz-normal.woff2",
+      "sha256": "a79fdb52d4a5c76552452f69202add96e287401fff03d3e8c0e38b4dcb5a99cd",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/bricolage-grotesque/bricolage-grotesque-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/fraunces/OFL.txt",
+      "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/fraunces/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/fraunces/fraunces-latin-opsz-italic.woff2",
+      "sha256": "066710ce7ed235a339d3d6cdcc8b55c0bea5632232662d83aacea25852108271",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/fraunces/fraunces-latin-opsz-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/jetbrains-mono/OFL.txt",
+      "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/jetbrains-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/newsreader/OFL.txt",
+      "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/newsreader/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/newsreader/newsreader-latin-wght-italic.woff2",
+      "sha256": "48bc8861b9b2ca9300747cad4fd6a3b4ac3028d364df00bd1b72097baa75e509",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/newsreader/newsreader-latin-wght-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/newsreader/newsreader-latin-wght-normal.woff2",
+      "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/newsreader/newsreader-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/public-sans/OFL.txt",
+      "sha256": "705a497c781f6463ff819abb513bb495f3fb05256f1d20321e3275813c0bafa5",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/public-sans/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/public-sans/public-sans-latin-wght-normal.woff2",
+      "sha256": "5ed4d31c988e73b258894244f209069ebe77dc7e564861954b21198b6de90d68",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/public-sans/public-sans-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/space-grotesk/OFL.txt",
+      "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/space-grotesk/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/fonts/space-grotesk/space-grotesk-latin-wght-normal.woff2",
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+      "source": "curated-plugin-source/examples/ai-tells/fonts/space-grotesk/space-grotesk-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/ai-tells/index.html",
+      "sha256": "9de98eb019d791ecba4fbbaea65f48b22d4c1315c8b2c79b2a56f4b99927575d",
+      "source": "curated-plugin-source/examples/ai-tells/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/astro-motion/DESIGN.md",
       "sha256": "642d7ab089b6fba9bbe4eeab209bd616b80afadf83f40738c739458a071cc103",
       "source": "curated-plugin-source/examples/astro-motion/DESIGN.md",
@@ -1624,7 +2530,7 @@
     },
     {
       "destination": "examples/component-specs/button.md",
-      "sha256": "5081d881a923651e88ae24045503dbc92b0d08ecc528f36044b342d89b253fb3",
+      "sha256": "f6f6316fc3592ce1d0e08c7ecbd9e9063b3271b10898c6b2978bfc063ef4b429",
       "source": "curated-plugin-source/examples/component-specs/button.md",
       "status": "versioned-evaluation-input"
     },
@@ -1888,7 +2794,7 @@
     },
     {
       "destination": "examples/quality-benchmark/index.html",
-      "sha256": "e9375997a4f11d9034e07ac23410a2eac4e92bf4e4863937d2e871ac2ed5008d",
+      "sha256": "901890a59c913e0b224c48cf3f2c6cc589946e2fa4832fd9f1af03e67859e4b3",
       "source": "curated-plugin-source/examples/quality-benchmark/index.html",
       "status": "versioned-evaluation-input"
     },
@@ -1944,6 +2850,444 @@
       "destination": "examples/quality-benchmark/verification.json",
       "sha256": "81307c1af582fe2844c2b47a0953c49742acb6137fffa2fba76a2193a3353498",
       "source": "curated-plugin-source/examples/quality-benchmark/verification.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/.gitignore",
+      "sha256": "70342b708bcec080d4f540f7ae633cca59117e1e129521ad23f81e48464c5195",
+      "source": "curated-plugin-source/examples/react-system/.gitignore",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/README.md",
+      "sha256": "c2bb6a3f1d06bcb8ff854478b4a7444b6e9268c67cafe721fdb566f1c31061ed",
+      "source": "curated-plugin-source/examples/react-system/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/billing.html",
+      "sha256": "e8280d60ce73f4bfef18e299f42b1143233411c74e86ecb17aea25821aa4d489",
+      "source": "curated-plugin-source/examples/react-system/billing.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/index.html",
+      "sha256": "0c435bab8911296b33479d00536935df3dcdf241c43cdc4534c56cd600a55f05",
+      "source": "curated-plugin-source/examples/react-system/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/package-lock.json",
+      "sha256": "2224cc774b16d474d4caad6a5372cfe4ac9e81da7bb73ce18111c5a5d32903b6",
+      "source": "curated-plugin-source/examples/react-system/package-lock.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/package.json",
+      "sha256": "d5d44f107399e3be39b8953b6b96e8545821b937898749a30a981348ec1e8840",
+      "source": "curated-plugin-source/examples/react-system/package.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/scripts/sync-tokens.mjs",
+      "sha256": "f48242a79292eb28e471b8f92d59987ab6cfacbe3b21c49f044a82713899a1ab",
+      "source": "curated-plugin-source/examples/react-system/scripts/sync-tokens.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/billing/BillingApp.tsx",
+      "sha256": "062140b80fcc95cf13b8fc1627695a04352a27bb8f9d4789c74ada0f19691271",
+      "source": "curated-plugin-source/examples/react-system/src/billing/BillingApp.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/billing/dialogs.tsx",
+      "sha256": "5ae614bc7533cba73101babc72a6b7899b8188b16d47800e66e2f075560d6cca",
+      "source": "curated-plugin-source/examples/react-system/src/billing/dialogs.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/billing/main.tsx",
+      "sha256": "10a2a76e97f2439e41a9bc9d2b50bc37cdc09ed92790db1b62266edd42376457",
+      "source": "curated-plugin-source/examples/react-system/src/billing/main.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/billing/payment-details.tsx",
+      "sha256": "62f897df06ee18d6c35c26314dbf1ac17618cacbb16fd169dfbbffabc4e8c7fe",
+      "source": "curated-plugin-source/examples/react-system/src/billing/payment-details.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/alert.tsx",
+      "sha256": "94413f4e5c6b739fa0e29b929ac0e8703b5295d3064f37020ad3fb0d7891dbe2",
+      "source": "curated-plugin-source/examples/react-system/src/components/alert.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/badge.tsx",
+      "sha256": "1a30362f6534c4be8b74405ea0f342eea2115314395e52f579a830201ce99706",
+      "source": "curated-plugin-source/examples/react-system/src/components/badge.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/button.tsx",
+      "sha256": "05119c6fd796069696572cbf403385204876f2df2379c2b744db0e9b9b2ceff0",
+      "source": "curated-plugin-source/examples/react-system/src/components/button.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/card.tsx",
+      "sha256": "4ccf1a8133d749fc29eef2d4734c8c02a062eb0b3746b6b03f12c263ee44119f",
+      "source": "curated-plugin-source/examples/react-system/src/components/card.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/checkbox.tsx",
+      "sha256": "064c5c9c5190d487bcebddfb9ca518979aef2276dbe7fabd3ade9df16106d7c2",
+      "source": "curated-plugin-source/examples/react-system/src/components/checkbox.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/data-table.tsx",
+      "sha256": "ca2cea277a4e6dc1cf1ed939677f5a18ac62ad7a072c68feddbc5769fda2190c",
+      "source": "curated-plugin-source/examples/react-system/src/components/data-table.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/dialog.tsx",
+      "sha256": "5d132d0bfa4aa6464c2ea63b30a8e0580fad4e5fe55f5bcb835286a21ada9735",
+      "source": "curated-plugin-source/examples/react-system/src/components/dialog.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/empty-state.tsx",
+      "sha256": "6d3f85cc6ac91953020f65ed337162fe64297d7ccb5fed7919c4dad999345f25",
+      "source": "curated-plugin-source/examples/react-system/src/components/empty-state.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/field.tsx",
+      "sha256": "943afb73e3e6582a2285363a4592bf35e6e09ecaf03ea6132c33df3124a696fc",
+      "source": "curated-plugin-source/examples/react-system/src/components/field.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/icons.tsx",
+      "sha256": "7079ff359061509f2bc2969ea4b30b525b51cd7ff8045586fef75381eb3e7235",
+      "source": "curated-plugin-source/examples/react-system/src/components/icons.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/index.ts",
+      "sha256": "e3eb2ee38781bd20e84d31f027aae44cef9de61c040fada65e89da20ee8ddf5e",
+      "source": "curated-plugin-source/examples/react-system/src/components/index.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/radio-group.tsx",
+      "sha256": "bb57413d8a7d6417891cf44c18c30860d481bcf73b1ccb961be619b26923055b",
+      "source": "curated-plugin-source/examples/react-system/src/components/radio-group.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/select.tsx",
+      "sha256": "ea81c191d8ad8520b6509f77c76a222865b6ec6877bd1b997363ef195d4387b0",
+      "source": "curated-plugin-source/examples/react-system/src/components/select.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/skeleton.tsx",
+      "sha256": "bb7a8687aad07e84155cc2e0994fa0236613c886c573d3ab72f1f23fdea0bf24",
+      "source": "curated-plugin-source/examples/react-system/src/components/skeleton.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/spinner.tsx",
+      "sha256": "77ad359fade0cf2801068d102b36e6b28fbe675b133a4ac5eb46e4dc36f893b3",
+      "source": "curated-plugin-source/examples/react-system/src/components/spinner.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/switch.tsx",
+      "sha256": "de1923452721a5f9d4f288a9a5e28ecff27e3eb6f11a27de54e954ec39761085",
+      "source": "curated-plugin-source/examples/react-system/src/components/switch.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/tabs.tsx",
+      "sha256": "dc862da648e3c11a29db83776cae56a451e789d08c14e1ba09f41c4b4b33f354",
+      "source": "curated-plugin-source/examples/react-system/src/components/tabs.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/text-field.tsx",
+      "sha256": "1a720a80756c8eb22c2635aedb3a61b1d480a861b8c8b67ba59f22c626a5c5cc",
+      "source": "curated-plugin-source/examples/react-system/src/components/text-field.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/toast.tsx",
+      "sha256": "191cefa69ec45a7db483256178d61ae0752aeef1dfd98751570dd3d26c1e9685",
+      "source": "curated-plugin-source/examples/react-system/src/components/toast.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/tooltip.tsx",
+      "sha256": "157553bc1f9a289a58bec15d6decf866a745ac945a44cabc215bea796f4a4958",
+      "source": "curated-plugin-source/examples/react-system/src/components/tooltip.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/components/types.ts",
+      "sha256": "c23a051b8a518cc6910b2cb810924faa8803cacbb32cd0d317d84142a5c59a99",
+      "source": "curated-plugin-source/examples/react-system/src/components/types.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/figtree/OFL.txt",
+      "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/figtree/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/fraunces/OFL.txt",
+      "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/fraunces/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/ibm-plex-mono/OFL.txt",
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/ibm-plex-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/jetbrains-mono/OFL.txt",
+      "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/jetbrains-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/schibsted-grotesk/OFL.txt",
+      "sha256": "15222412a95d70042e66e79bfb3b985653e0693e4d41703bc131bee9c5aa1aa7",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/schibsted-grotesk/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "sha256": "4c8b93f431d462c696e12b9d6a033feb3394d36e66e781357c496b95d8a75e05",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/source-sans-3/OFL.txt",
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/source-sans-3/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "sha256": "7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda",
+      "source": "curated-plugin-source/examples/react-system/src/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/cx.ts",
+      "sha256": "2c8f838c0d3598724705ae911618199d2fe1f7d4386ddb93562c82c9310b766c",
+      "source": "curated-plugin-source/examples/react-system/src/lib/cx.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/layer.tsx",
+      "sha256": "10d94989394639edc49b9d6facd84ca8e935f78a2df42d649f392fdf20a7e0f9",
+      "source": "curated-plugin-source/examples/react-system/src/lib/layer.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/refs.ts",
+      "sha256": "ccbd9006b4f3416ae338b28fd635116b6c639386634af86665f7b3a1b1e1b47e",
+      "source": "curated-plugin-source/examples/react-system/src/lib/refs.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/sort.ts",
+      "sha256": "39a47bd2cd02fbbdb7553e975866b2a9c16587893fa96d03b79088359d25a354",
+      "source": "curated-plugin-source/examples/react-system/src/lib/sort.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/use-controllable.ts",
+      "sha256": "05967012cb39d92b3ad2845957527b4b12d02bfa64f8c22ed3a77fd13f9da09d",
+      "source": "curated-plugin-source/examples/react-system/src/lib/use-controllable.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/lib/use-overflow.ts",
+      "sha256": "5450d9d299b9ba21c83f69c0ae7c434c09f69aa5e7c4775b7d91377a9da85bdc",
+      "source": "curated-plugin-source/examples/react-system/src/lib/use-overflow.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/main.tsx",
+      "sha256": "0f99b73934b006ffeac1509ae1cc0c0210da00ac32c223eca2cb35ce91f9d21a",
+      "source": "curated-plugin-source/examples/react-system/src/main.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/shared/data.ts",
+      "sha256": "aa9d27095f4c4423f4851e755307692e2405d435bc5d12caee1434f297239d74",
+      "source": "curated-plugin-source/examples/react-system/src/shared/data.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/shared/display.ts",
+      "sha256": "401dfb6a7d115aa1636bb289a29a884b9a5b7053fbcfd655da4b09ac91764a16",
+      "source": "curated-plugin-source/examples/react-system/src/shared/display.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/shared/invoice-columns.tsx",
+      "sha256": "816c773b701f5d7498f8a24f00a384c31f8366a9101abdab107319c29a5e4d3e",
+      "source": "curated-plugin-source/examples/react-system/src/shared/invoice-columns.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/shared/shell.tsx",
+      "sha256": "573beaf31531667e14d4e5959c6544044c0c3c4ef118b040964c2f51b6dc6e46",
+      "source": "curated-plugin-source/examples/react-system/src/shared/shell.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/App.tsx",
+      "sha256": "60e71346cd325264a14b3ba755d920643ce495377e47f89d7c233fc4e8d4771a",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/App.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/doc.tsx",
+      "sha256": "1fc9b46012a2fde13f04ad9a95b97fd83bfc8dbb9491e9b49bc864a36e750869",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/doc.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/sections-actions.tsx",
+      "sha256": "fc21860d088edb3446caf1ad760899c8ddef5baa46a9749415f73c978f44581f",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/sections-actions.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/sections-display.tsx",
+      "sha256": "9e388525020892f8b6977922947993eec299435ffa87db272ebb1605466a0a37",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/sections-display.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/sections-inputs.tsx",
+      "sha256": "86ac0bfe003ad6728db7c08c22f2ec22ae912ad1dce4988eaf5f829509b04096",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/sections-inputs.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/specimen/sections-overlays.tsx",
+      "sha256": "b0b28c528e8702466f7f26b81ef7652207d74f0cdcdfd11445701e4a46296a1e",
+      "source": "curated-plugin-source/examples/react-system/src/specimen/sections-overlays.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/styles/fonts.css",
+      "sha256": "66e9511c3ef606d9fa291bd938500b2ef671131800ab485d0c643a248f7f09e0",
+      "source": "curated-plugin-source/examples/react-system/src/styles/fonts.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/styles/index.css",
+      "sha256": "7abff6afbd2749a47b1f781ef28ddf3d32aa99b95151d163d707867873d8f126",
+      "source": "curated-plugin-source/examples/react-system/src/styles/index.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/styles/system.css",
+      "sha256": "70b98f8b79e505676a842ada0694eeaac184b9e7a869910e0ee5798a3f44ac03",
+      "source": "curated-plugin-source/examples/react-system/src/styles/system.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/styles/tailwind.css",
+      "sha256": "e7a9f3794d3a10f079e3adbbda550808338d21d6a3bcd946c5d6a8aad3f0e54b",
+      "source": "curated-plugin-source/examples/react-system/src/styles/tailwind.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/src/styles/tokens.css",
+      "sha256": "5378dc6874e73b913db8e4d8d14b05f238a7159e295ee54b97a0e728dcbd170a",
+      "source": "curated-plugin-source/examples/react-system/src/styles/tokens.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/tests/browser.mjs",
+      "sha256": "8e864ca9f99a7ebdd8e6e420b56de2e32341377356dcb018797a4541c123d656",
+      "source": "curated-plugin-source/examples/react-system/tests/browser.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/tests/props.typecheck.tsx",
+      "sha256": "f28d8d64a2b229f5a0ad1a6ad9b1c4b9f17a9c6934d4200eda1e8be5dac0c2ed",
+      "source": "curated-plugin-source/examples/react-system/tests/props.typecheck.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/tests/static-server.mjs",
+      "sha256": "f61b8caf305acea8fb266e0fcc7f2fc8474a65c7be0883dd436f51a181103745",
+      "source": "curated-plugin-source/examples/react-system/tests/static-server.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/tests/unit.test.mjs",
+      "sha256": "57ada8e4384d7228763007ca936c70a83868f5713fb3cec3aa8b4dc7d6fe894e",
+      "source": "curated-plugin-source/examples/react-system/tests/unit.test.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/tsconfig.json",
+      "sha256": "e02974b143285aee0d85dbec13ba0a73baab25c61699707078ec0a50bd5388ba",
+      "source": "curated-plugin-source/examples/react-system/tsconfig.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/react-system/vite.config.ts",
+      "sha256": "ec79c81f407cebc6bb3c48401412f3005590b2c102297340d1ce72e76036a427",
+      "source": "curated-plugin-source/examples/react-system/vite.config.ts",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2022,6 +3366,486 @@
       "destination": "examples/screen-production/render-v1/wide.svg",
       "sha256": "e1deb6426a818ac5d0e4c84be4621d51c67e1784f715cd13094de03da3b65b0a",
       "source": "curated-plugin-source/examples/screen-production/render-v1/wide.svg",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/README.md",
+      "sha256": "c82d5a3817c35eeb943c8af034ce85f6ece085939c06603be60487f2598b0f98",
+      "source": "curated-plugin-source/examples/stylescapes/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/_template/stylescape.html",
+      "sha256": "92502c521af968b3cc430faf073cd5a460e45243f03254e89c0fce5b23b0588c",
+      "source": "curated-plugin-source/examples/stylescapes/_template/stylescape.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/apex-wolves/index.html",
+      "sha256": "4798f665e2cd509f34d9e03a6be8c8364f0fa5b0235620c00f1722060088efdb",
+      "source": "curated-plugin-source/examples/stylescapes/apex-wolves/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/brands.json",
+      "sha256": "1191b00334a8ce6da7028e233224641cbd1aed7b859e747abbd01d50fb296e9c",
+      "source": "curated-plugin-source/examples/stylescapes/brands.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/carefill/index.html",
+      "sha256": "55c9d5131dd56b4c96ca1bdfa908ec165b33ed1bf17f263ad97cfa61784c15a0",
+      "source": "curated-plugin-source/examples/stylescapes/carefill/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/finca-alba/index.html",
+      "sha256": "2a1f47385d1d08126efbffc59021d1f8a789c5a42bbef5bf42d90a3f7467ab45",
+      "source": "curated-plugin-source/examples/stylescapes/finca-alba/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/amiri/OFL.txt",
+      "sha256": "1833b55414d413b07e5b4ea64710c2832ad4cb2a24484d30febdf992819b09ed",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/amiri/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/amiri/amiri-arabic-400-subset.woff2",
+      "sha256": "fbb0b90d86ff9fdaa3c4f5b7696e53682f32512a0d24b87f5d3cb776e3bbb411",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/amiri/amiri-arabic-400-subset.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/amiri/amiri-arabic-700-subset.woff2",
+      "sha256": "ff2df90f22bf3366c4cadccce7f9b346e8e9662245cf49e711f25bb0b4b6cd1b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/amiri/amiri-arabic-700-subset.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/anton/OFL.txt",
+      "sha256": "9267baca92b7a7ce9db6dd9e6cc32c9fe3ddf1ac96e421d5f87c5746b9089d6a",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/anton/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/anton/anton-latin-400-normal.woff2",
+      "sha256": "d0fa07ff63dd60cbc0e2f58e29c802dca2a5ae0276c999f59c6111ab7bbaec3b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/anton/anton-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/archivo/OFL.txt",
+      "sha256": "c3c8402eec0e31dc9a76851235b1c02a0bb821488b2db8e35bcc2ab60ca8fc2b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/archivo/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/archivo/archivo-latin-wdth-wght-normal.woff2",
+      "sha256": "e3a28eade21a900c7155a247757f4b2834c07bb7ef07ad7efa55cebaac1e8f5e",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/archivo/archivo-latin-wdth-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/atkinson-hyperlegible-next/OFL.txt",
+      "sha256": "474a034e99845062f661855caaa505880d0e9009deddc2727a92795eab374955",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/atkinson-hyperlegible-next/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/atkinson-hyperlegible-next/atkinson-hyperlegible-next-latin-wght-normal.woff2",
+      "sha256": "18b2a1a39a2fa298b0ba5390aca68462669826c90925656f1c1f6796e0e1bbaf",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/atkinson-hyperlegible-next/atkinson-hyperlegible-next-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/big-shoulders-display/OFL.txt",
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/big-shoulders-display/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/big-shoulders-display/big-shoulders-display-latin-wght-normal.woff2",
+      "sha256": "075292b13a638821b34726b33e49b3b711c4b9bee9b42f2bb68fa3b6ec888f2b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/big-shoulders-display/big-shoulders-display-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/bodoni-moda/OFL.txt",
+      "sha256": "6c64f717433eadd29b058d6254fe25c1ee2d249ce3772f843bb21f73285779c2",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/bodoni-moda/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/bodoni-moda/bodoni-moda-latin-opsz-wght-subset.woff2",
+      "sha256": "2f44944d356dc35a371f7677586bfa07103a89f2107e12609507c457fbc7c376",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/bodoni-moda/bodoni-moda-latin-opsz-wght-subset.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/bricolage-grotesque/OFL.txt",
+      "sha256": "923f4ddf0fd39f9b7794ab0df7332f3d95dc43e8ad7ec2289d6d9e8491177f51",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/bricolage-grotesque/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/bricolage-grotesque/bricolage-grotesque-latin-standard-normal.woff2",
+      "sha256": "a756882d8a7802ebd4663b4544a62ebedafc7227c1c159ab95eea61393af3f8e",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/bricolage-grotesque/bricolage-grotesque-latin-standard-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/courier-prime/OFL.txt",
+      "sha256": "195bfcfb42f32343efc8475e902c3c4936cda7a9c435c39634e03c1e85fa862b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/courier-prime/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/courier-prime/courier-prime-latin-400-normal.woff2",
+      "sha256": "f09844e1f4fe9e67df2cc77474519e68756d559b4648278b9dd4f03c8ac9c31f",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/courier-prime/courier-prime-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/courier-prime/courier-prime-latin-700-normal.woff2",
+      "sha256": "5c7ae1cc9aae183453565c836b74a1b988f5f2e52b65098decb909b3930957ec",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/courier-prime/courier-prime-latin-700-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/fredoka/OFL.txt",
+      "sha256": "9bbd4f5f107895d5a213579b73821fadd05105241cf4360e86050199fcfd6034",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/fredoka/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/fredoka/fredoka-latin-wght-normal.woff2",
+      "sha256": "99d6c78e043710d4f83ed90716779798b7b04eb690f73e0ad0e8f32d1f0e98c2",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/fredoka/fredoka-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-mono/OFL.txt",
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-arabic/OFL.txt",
+      "sha256": "1c32ddc3fc6efd167cdcbe475195287f2dc26ed1a4c92fbe31c87ceaffe44f98",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-arabic/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-400-subset.woff2",
+      "sha256": "3520c6fc7ce4a3951be88b11080d833e349eee70cab115d5d1a19715088637b4",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-400-subset.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-600-subset.woff2",
+      "sha256": "a2892a3f1ce89059af11a4f6aa081851e43f81f237ad90c60c831ce0c60df99d",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-600-subset.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-400-normal.woff2",
+      "sha256": "9ed8dcb02e6c7246de4c120295fafa39a7bb73085f4951a4524a07dc911069f2",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-600-normal.woff2",
+      "sha256": "63f4757271e403f7baec0862f284ffaa4560ea6096ba9fe8bc6e585ca656e724",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-600-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-condensed/OFL.txt",
+      "sha256": "251faa58c24c53a1855818116292bf449d591937cf5143fafc23e0be5e26ddc6",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-condensed/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-400-normal.woff2",
+      "sha256": "456bf5cda9c0b1f1ead43f01b80df5ba5af7cb41d7cbc0543091537c39fb4c89",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-500-normal.woff2",
+      "sha256": "e3b4fd97fd20bc70fda66d8d5f0745d8d6958068a024cb4724bbc1ffb6cbc183",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-500-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-600-normal.woff2",
+      "sha256": "3d72a0923c5830358b0a8e25b258aecadbecbf542b6ee9a25f387803e37d56b9",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/ibm-plex-sans-condensed/ibm-plex-sans-condensed-latin-600-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/instrument-sans/OFL.txt",
+      "sha256": "c27a3c53c3beed7f5c26853afa15991478ff7145d3754a36b0382f84e10c0d03",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/instrument-sans/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/instrument-sans/instrument-sans-latin-wdth-wght-normal.woff2",
+      "sha256": "8b74e9bc6e415d564a5ffd32125c92ffd50b1635043e77543cb871e0a3cfcaf2",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/instrument-sans/instrument-sans-latin-wdth-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/la-belle-aurore/OFL.txt",
+      "sha256": "974d229d083921c6ed420026a45857eb3d2277f2656b156e0d233f175b382d60",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/la-belle-aurore/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/la-belle-aurore/la-belle-aurore-latin-400-normal.woff2",
+      "sha256": "54da154868e2237e6a2323ede6a4db035be01f0547692c66b0fd7e83a0867047",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/la-belle-aurore/la-belle-aurore-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-display/OFL.txt",
+      "sha256": "78c9f56e0d8a7ad7b9d26842a8eae728337a8671d8ddc6e889fa10645935dc7b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-display/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-display/libre-caslon-display-latin-400-normal.woff2",
+      "sha256": "84267e937417f10dff37df818c5ef7f1e9f2e6a703e03c2dd286d3320af53269",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-display/libre-caslon-display-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-text/OFL.txt",
+      "sha256": "f655e804b05a2ed71ec88ef3006394e51972ec20546d4a14328a43c53ccd2607",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-text/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-400-italic.woff2",
+      "sha256": "20eac03c053229ce982a337fce41f12e42e18d33c4e29d8e89188ef4fa970425",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-400-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-400-normal.woff2",
+      "sha256": "29310efc1007f608549e29ff78fa5ce8dffe0c1aa82c21b082d1de9dfc7334f0",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-700-normal.woff2",
+      "sha256": "2819c345e64c715cc4235a5e9c3576351d28b4c0bbbeb934fcbd50ceab0406a0",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-caslon-text/libre-caslon-text-latin-700-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-franklin/OFL.txt",
+      "sha256": "7e982e27dc99e50b47daf19c27bb32419bee58ddc371f073520dc823e7882940",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-franklin/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/libre-franklin/libre-franklin-latin-wght-normal.woff2",
+      "sha256": "52e605852c72cc2df1473df1fb7f26a3a0be58e31835bc8f33f29b1918c82cbd",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/libre-franklin/libre-franklin-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/martian-mono/OFL.txt",
+      "sha256": "bd7d799f6a67b704f9546422ee83d69b4dc5e4ae289d5eabc22581251dd7150a",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/martian-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/martian-mono/martian-mono-latin-wdth-wght-normal.woff2",
+      "sha256": "f9c1655c2c9d1ed5bb8b301a57d1169a1123ffef1a588dc50a7a487810f7d732",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/martian-mono/martian-mono-latin-wdth-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/newsreader/OFL.txt",
+      "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/newsreader/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/newsreader/newsreader-latin-opsz-wght-italic.woff2",
+      "sha256": "3029d82ee2ff3275e07de5e6c98fd80308ba59703503bf60ffd3f9a9f4a444db",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/newsreader/newsreader-latin-opsz-wght-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/newsreader/newsreader-latin-opsz-wght-normal.woff2",
+      "sha256": "9035df5259811fb85d84336ce27710e28c773cdd872b1b3ccd608966d02d96b5",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/newsreader/newsreader-latin-opsz-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/public-sans/OFL.txt",
+      "sha256": "705a497c781f6463ff819abb513bb495f3fb05256f1d20321e3275813c0bafa5",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/public-sans/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/public-sans/public-sans-latin-wght-normal.woff2",
+      "sha256": "5ed4d31c988e73b258894244f209069ebe77dc7e564861954b21198b6de90d68",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/public-sans/public-sans-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/saira/OFL.txt",
+      "sha256": "15698e92b26e825870a67c019d40fad6ba526931cf02fc1e7d050814203f498c",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/saira/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/saira/saira-latin-wdth-wght-italic.woff2",
+      "sha256": "ff62faec90bbc6ca908b86dceab910a9283814787b38f8d288f05d43facae4ec",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/saira/saira-latin-wdth-wght-italic.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/saira/saira-latin-wdth-wght-normal.woff2",
+      "sha256": "d5f1ee1ce85a2f6611d76bcd98738132f4706b099dc167f02c2093a1ec5eb975",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/saira/saira-latin-wdth-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/shippori-mincho/OFL.txt",
+      "sha256": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/shippori-mincho/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/shippori-mincho/shippori-mincho-kiyomi-subset-400.woff2",
+      "sha256": "e6be4293e420be2cea5b8d6e4a9547818b189ecb657e1c5d0b84222dec83d87b",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/shippori-mincho/shippori-mincho-kiyomi-subset-400.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/shippori-mincho/shippori-mincho-kiyomi-subset-500.woff2",
+      "sha256": "058946875f23dc515528727dffa8f46ab2be5d1785d2ffb589ca4b2d559ec336",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/shippori-mincho/shippori-mincho-kiyomi-subset-500.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/unbounded/OFL.txt",
+      "sha256": "48a780bc857729859e54d1e691b05792894a26634edc1c4b5dbeabffe6941758",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/unbounded/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/unbounded/unbounded-latin-wght-normal.woff2",
+      "sha256": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/unbounded/unbounded-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/young-serif/OFL.txt",
+      "sha256": "ea3081eef60700a513afba76c1b7130facee06be5d221b19a20b75aa52665e06",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/young-serif/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/young-serif/young-serif-latin-400-normal.woff2",
+      "sha256": "6ba68b9927ad2a640d32cbea050ffc2b5d0ae6cbaa785afe470da9d6bf0ef39f",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/young-serif/young-serif-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/zen-kaku-gothic-new/OFL.txt",
+      "sha256": "0fac78a235c98d640cb06332eb5362c211d86fa03c011df438c35005d22ad2c7",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/zen-kaku-gothic-new/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-400.woff2",
+      "sha256": "d624c141e0e949a93a1f8307945ed50958ec92ead4f55c6c505ca85d41e49d1d",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-400.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-500.woff2",
+      "sha256": "37accce3aa44323e88a243ae0d926de7075517bacf49284d3d954f065ccefee2",
+      "source": "curated-plugin-source/examples/stylescapes/fonts/zen-kaku-gothic-new/zen-kaku-gothic-new-kiyomi-subset-500.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/forge-cli/index.html",
+      "sha256": "0a150fcc2df88f03f774655c4f841e208d1c1720d12e1d110467f56c6d4a3ab2",
+      "source": "curated-plugin-source/examples/stylescapes/forge-cli/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/gridline-ops/index.html",
+      "sha256": "c1eec5a6e338282b32ad1360efb529d3c566be1c1fe80ad7b518d70127028c57",
+      "source": "curated-plugin-source/examples/stylescapes/gridline-ops/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/harlow-vance/index.html",
+      "sha256": "3d13b948e64e20e4c56b0923c0b1b8afdd0a6b955d613aff9313f1a827b48f3b",
+      "source": "curated-plugin-source/examples/stylescapes/harlow-vance/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/index.html",
+      "sha256": "5bad962eda92d62bb3c6cb31d0f930469862b4d86db59eae2222ea0601c2707f",
+      "source": "curated-plugin-source/examples/stylescapes/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/kiyomi-house/index.html",
+      "sha256": "049c9c53636bd2895663250d5bc5978727272f1e71028a9e9fd2117d7ae9f07b",
+      "source": "curated-plugin-source/examples/stylescapes/kiyomi-house/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/little-harbor-health/index.html",
+      "sha256": "e683fcca48c81bed0d063098178a428e56882b344ff64cff8f94dbc992e3a8ec",
+      "source": "curated-plugin-source/examples/stylescapes/little-harbor-health/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/noor-atelier/index.html",
+      "sha256": "dda4e18bbf4a60bb923fb2c37696da2649692064bd1ec0a7d8f844a9fa8a57cd",
+      "source": "curated-plugin-source/examples/stylescapes/noor-atelier/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/static-drop/index.html",
+      "sha256": "642a00190dae20f5fc1e0eff28a68c08b82924b15d155ad033b68919089d7bb4",
+      "source": "curated-plugin-source/examples/stylescapes/static-drop/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/tidewater-collective/index.html",
+      "sha256": "40bc39e87c039700cf34abcc58975e5dc02e607999e7e31ee98460b1ebd122b0",
+      "source": "curated-plugin-source/examples/stylescapes/tidewater-collective/index.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/stylescapes/vibra-neobank/index.html",
+      "sha256": "cefd75fc5f2fd109a7dbd5224c46553d3023953da52d0e372a6b213b939bc597",
+      "source": "curated-plugin-source/examples/stylescapes/vibra-neobank/index.html",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2176,13 +4000,13 @@
     },
     {
       "destination": "knowledge/screen-content-and-motion.md",
-      "sha256": "39064fdaccbf3ecaa19cd54552c1a35631958e0edba3d4495b9bc544c461bb23",
+      "sha256": "e384714337c4e8b7926836f6b2568c91e6eb905509c0671d9674bf0caedc2124",
       "source": "curated-plugin-source/knowledge/screen-content-and-motion.md",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "knowledge/typography-and-composition.md",
-      "sha256": "aabc7d607e9e7e33815237af146ffee24872deab3fde3b3357efe2f91063bc80",
+      "sha256": "88cd3c1e86ee73b8e115cef0ceaaaba28b50a4b4b3c0199d3055170a683c876a",
       "source": "curated-plugin-source/knowledge/typography-and-composition.md",
       "status": "versioned-evaluation-input"
     },
@@ -2196,6 +4020,18 @@
       "destination": "scripts/adopt_template.py",
       "sha256": "8e51583f322fb65371b3d839edd52a28851d1653684fa25d734a49883456b59f",
       "source": "curated-plugin-source/scripts/adopt_template.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/atlas.py",
+      "sha256": "e95e30a1ea98e99ddf67ba821dcd93aabc5c35d2d3ba9fc4bf45befba6ca2382",
+      "source": "curated-plugin-source/scripts/atlas.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/color_tools.py",
+      "sha256": "ac2e1a5523a4a7b9712e808a65ada0a9c02831b9857ebaa6fdfc92b614544751",
+      "source": "curated-plugin-source/scripts/color_tools.py",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2220,6 +4056,18 @@
       "destination": "scripts/screen_campaign.py",
       "sha256": "7f9ae34c6e33ae00d72d2f4d249b6b441a9045a26d61d111018be3710da150f0",
       "source": "curated-plugin-source/scripts/screen_campaign.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/tokens.py",
+      "sha256": "43613f0d57c15cec193e2f974a284619d83a043ff9f9c33809337b42cbd63c4a",
+      "source": "curated-plugin-source/scripts/tokens.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/type_scale.py",
+      "sha256": "f09d8886c36eb11726019ee95943f4d1d5126d8e89dd016b02367fe71040a876",
+      "source": "curated-plugin-source/scripts/type_scale.py",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2469,9 +4317,45 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "tests/fixtures/tokens-broken/brands/bad.tokens.json",
+      "sha256": "f3e6a5f607a7cac7271c3c253a6265287c718f20c4bc67966bc5587decfa78f0",
+      "source": "curated-plugin-source/tests/fixtures/tokens-broken/brands/bad.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/fixtures/tokens-broken/components.tokens.json",
+      "sha256": "0fcb02b792fd8349b71ed609de95ba6b0b53e8ec806022e1833c8a64fd74a3c1",
+      "source": "curated-plugin-source/tests/fixtures/tokens-broken/components.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/fixtures/tokens-broken/primitives.tokens.json",
+      "sha256": "6c8863076bcbfd9b1f95b11c9a73719cbccad70c4a2084ada805d820416bd7b2",
+      "source": "curated-plugin-source/tests/fixtures/tokens-broken/primitives.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/fixtures/tokens-broken/semantic.light.tokens.json",
+      "sha256": "1379cff03b0ce5637a668a644dbe4b51f795ee7891bb2da0e5616af298db563e",
+      "source": "curated-plugin-source/tests/fixtures/tokens-broken/semantic.light.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "tests/test_adopt_template.py",
       "sha256": "433397e4bc038e42887a560b608fb21aa8ef2b3b53f6d9ed38f8d42e4f2c2239",
       "source": "curated-plugin-source/tests/test_adopt_template.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_atlas.py",
+      "sha256": "fdd287d9db99b232f84aa32665612f12d42951216999ce019db562894dc5f3fd",
+      "source": "curated-plugin-source/tests/test_atlas.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_color_tools.py",
+      "sha256": "801646b9d6f6ba837241afc4e6e376d1b278a9c7f08502e52fa7eac711623c3f",
+      "source": "curated-plugin-source/tests/test_color_tools.py",
       "status": "versioned-evaluation-input"
     },
     {
@@ -2496,6 +4380,96 @@
       "destination": "tests/test_selection.py",
       "sha256": "cb1757cbc575a709547e221f6a35f486c42204f4db6e6456b5facf1aa858b26c",
       "source": "curated-plugin-source/tests/test_selection.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_tokens.py",
+      "sha256": "2195d6f407da942a467ccb04d8d2a2d63ca524ef48092d0cb99441833244788e",
+      "source": "curated-plugin-source/tests/test_tokens.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_type_scale.py",
+      "sha256": "87fb738345eb513332c3b3641aa787677816a2568573158d4fa2b372e19f55ee",
+      "source": "curated-plugin-source/tests/test_type_scale.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/README.md",
+      "sha256": "69737a8fb909ced60acc85366b60170e78a57123223016b214864b5c9400b9e8",
+      "source": "curated-plugin-source/tokens/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/dist/figma-variables.json",
+      "sha256": "0bb7384b1c5efe8ac182d94e8d9142332937508b6c92c2c8dbccc5657143a43a",
+      "source": "curated-plugin-source/tokens/dist/figma-variables.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/dist/tailwind.css",
+      "sha256": "e7a9f3794d3a10f079e3adbbda550808338d21d6a3bcd946c5d6a8aad3f0e54b",
+      "source": "curated-plugin-source/tokens/dist/tailwind.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/dist/tokens.css",
+      "sha256": "5378dc6874e73b913db8e4d8d14b05f238a7159e295ee54b97a0e728dcbd170a",
+      "source": "curated-plugin-source/tokens/dist/tokens.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/dist/tokens.resolved.json",
+      "sha256": "55719988654953df8ea152351f2d7f1b519770b7ae5e3e7f968dfbd8e47d3f95",
+      "source": "curated-plugin-source/tokens/dist/tokens.resolved.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/figma-import.js",
+      "sha256": "fe5abb873fd60c83a7d2d76aaf7c839bcb3a9de7bc81cdba88d519af77564c5d",
+      "source": "curated-plugin-source/tokens/figma-import.js",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/specimen.html",
+      "sha256": "3905850da2b0983b4d5ff00e898f1adf067825480cd7eb296a776bb58d27a323",
+      "source": "curated-plugin-source/tokens/specimen.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/brands/ember.tokens.json",
+      "sha256": "373b6037b1d2687dfca67b063fa64949d6ed056d596f94491e91a314f5c6e582",
+      "source": "curated-plugin-source/tokens/src/brands/ember.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/components.tokens.json",
+      "sha256": "5d9d3691cfb6e3c95ccfad08b907d826989168b1481fb13f072fabf03fc5b59f",
+      "source": "curated-plugin-source/tokens/src/components.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/primitives.tokens.json",
+      "sha256": "412d74bfc5ecb105b1e57305d271f363f5cb92e07e252a4345cda5b4ae8a1543",
+      "source": "curated-plugin-source/tokens/src/primitives.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/semantic.dark.tokens.json",
+      "sha256": "bbed0e4f90861dd949fdf23762d190ef378cb602d12af2d97889c88ca6e8d535",
+      "source": "curated-plugin-source/tokens/src/semantic.dark.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/semantic.high-contrast.tokens.json",
+      "sha256": "5bab7822c1a2b14d5da9b951cdae89d865289f5594598acb076888c68639e8d7",
+      "source": "curated-plugin-source/tokens/src/semantic.high-contrast.tokens.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tokens/src/semantic.light.tokens.json",
+      "sha256": "e2da3fb5d7254cd103a745c9a74816a4d96055f8e6139a253528e2f90cb97eb6",
+      "source": "curated-plugin-source/tokens/src/semantic.light.tokens.json",
       "status": "versioned-evaluation-input"
     },
     {

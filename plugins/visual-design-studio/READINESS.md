@@ -1,15 +1,27 @@
 # Package readiness
 
-Version-Timestamp: 2026-09-27T14:26:33-04:00
+Version-Timestamp: 2026-10-20 02:05:00 UTC
 
-Edition: 0.3.0, public supervised evaluation. This edition adds eight original applied method cards, explicit standalone/local-library selection and a tested offline reference preflight. It retains the existing 130 capabilities. This page describes package scope, not the installation state of the current computer. Check the host's plugin list and exact installed payload hash. Repository release evidence records authoring-machine installation separately. A fresh session must prove which edition it reads; no host inherits another host's authentication or approvals.
+Edition: 0.5.0, public supervised evaluation. This page describes package scope, not the installation state of any computer.
 
-One entry skill selects from 130 reference capabilities. The [applied methods](library/knowledge/README.md) work without private books. The preflight reports availability separately from consultation and preserves source-dependent holds. Existing candidate-bound handoff checks, scoped selection validation, safe template adoption, RESUME.md guidance and rendered craft examples remain in place. See [project launch](PROJECT-LAUNCH.md), [handoff contract](library/HANDOFF-CONTRACT.md), [selection contract](library/SELECTION-CONTRACT.md) and [visual examples and limits](library/examples/quality-benchmark/README.md).
+## What 0.5.0 adds
 
-The older installed 0.1.0 edition and source commit 412e628 are a distinct preserved baseline. Its payload hash does not verify this edition. Historical Candidate 11/12, README and workflow acceptance statements inside the library remain version-scoped records, never current installation claims. The current manifests bind this edition's bytes. No passing checksum proves visual quality or 130 executed production workflows.
+- Native Claude packaging (`.claude-plugin/plugin.json` and the repository marketplace) alongside Codex packaging, with versions kept in sync.
+- 16 registered skills: `design-director` (brief to scored, rendered directions), 13 discipline skills with concrete defaults, `design-critique` (render, score and revise), and `design-project-start` (client-project continuity).
+- The Design Space Atlas: 125 schema-validated entries across styles, industries, markets, audiences, archetypes, price tiers and channels, with a query tool.
+- DTCG design tokens with light, dark and high-contrast modes, two reference brands, CSS/Tailwind/JSON/Figma outputs, and a linter that enforces WCAG contrast.
+- A stylescape calibration set across 12 very different briefs, an AI-tells gallery, a render-review script and 12 `claude plugin eval` cases.
+- The earlier "no universal numbers" guidance is replaced by defaults with documented override conditions.
 
-Failed local-model revision-fidelity and touchscreen-recovery cases remain excluded from autonomous routing until the selected route passes a relevant new test. Photographic generation, native apps and provider use have only their explicitly recorded scope. The new graphic-motion example does not validate a prior OpenArt film, another provider or a physical display. PowerPoint and backup setup remain deferred.
+## What stays the same
 
-No hooks, bundled MCP server, credential, provider access or paid job is added. Book retrieval is optional and uses a separate owner-provided local library. Real tools and permissions are checked in each adopting project. Reuse accepted foundations, preserve rejected candidates and require actual evidence for the intended use. Client acceptance, target hardware and human aesthetic preference remain project-specific.
+The 133-capability process library, templates, continuity contracts (selection, handoff, resume), reference-book mode and feedback process are unchanged and remain available through `design-project-start` and links from the registered skills. Existing project pins are not affected; projects adopt 0.5.0 deliberately.
 
-`distribution_scope: public` describes the intended audience. `publication_review_required: true` means a build alone never clears publication. The maintainer still reviews the files and licenses. `production_accepted: false` keeps real-project acceptance separate. A repository visibility setting is checked on GitHub, not inferred from this manifest.
+## Limits
+
+- Automated checks prove structure, links, contrast math and builds, not aesthetic quality. Human art direction and client approval remain required for every deliverable.
+- Atlas regulatory notes are design guidance, not legal advice. Platform specs (social formats, store assets, OS conventions) are dated and must be confirmed before production.
+- claude.ai and Claude Desktop installation follows Anthropic's documented route; confirm it in the receiving workspace. Codex installation of 0.5.0 needs receiving-host verification.
+- Earlier known holds remain: the local-model revision-fidelity and touchscreen-recovery cases are excluded from autonomous routing; PowerPoint and backup setup remain deferred.
+
+No hooks, MCP servers, credentials, provider access or paid jobs are bundled. `distribution_scope: public`, `publication_review_required: true` and `production_accepted: false` in the package manifest keep publication review and real-project acceptance separate from a build.

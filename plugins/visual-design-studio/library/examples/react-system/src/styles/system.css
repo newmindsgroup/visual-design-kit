@@ -1,0 +1,183 @@
+/*
+ * Version-Timestamp: 2026-10-20 02:52:00 UTC
+ * Component-system layer on top of the kit tokens. Copy this file with any component you adopt.
+ * Everything here reads token variables; there are no raw colors, sizes or timings.
+ *
+ * Import order (src/styles/index.css):
+ *   @import "tailwindcss";  @import "./tokens.css";  @import "./tailwind.css";  @import "./system.css";
+ */
+
+/* Defaults Tailwind uses when a utility has no explicit duration or easing: point them at tokens so
+   prefers-reduced-motion (which collapses every --duration-* to 0.01ms) covers them too. */
+@theme inline {
+  --default-transition-duration: var(--duration-fast);
+  --default-transition-timing-function: var(--ease-standard);
+
+  --animate-scrim-in: vdk-fade-in var(--duration-moderate) var(--ease-decelerate) both;
+  --animate-scrim-out: vdk-fade-out var(--duration-moderate) var(--ease-accelerate) both;
+  --animate-dialog-in: vdk-dialog-in var(--dialog-duration) var(--dialog-easing) both;
+  --animate-dialog-out: vdk-dialog-out var(--duration-moderate) var(--ease-accelerate) both;
+  --animate-popover-in: vdk-popover-in var(--duration-moderate) var(--ease-decelerate) both;
+  --animate-popover-out: vdk-fade-out var(--duration-fast) var(--ease-accelerate) both;
+  --animate-toast-in: vdk-toast-in var(--duration-slow) var(--ease-emphasized-decelerate) both;
+  --animate-toast-out: vdk-fade-out var(--duration-moderate) var(--ease-accelerate) both;
+  --animate-toast-swipe-out: vdk-toast-swipe-out var(--duration-moderate) var(--ease-accelerate) both;
+  --animate-spinner: vdk-spin calc(var(--duration-slower) * 2) var(--ease-linear) infinite;
+  --animate-skeleton: vdk-pulse calc(var(--duration-slower) * 3) var(--ease-standard) infinite;
+
+  @keyframes vdk-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes vdk-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes vdk-dialog-in {
+    from { opacity: 0; transform: translateY(var(--space-3)) scale(0.97); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes vdk-dialog-out {
+    from { opacity: 1; transform: none; }
+    to { opacity: 0; transform: scale(0.98); }
+  }
+  @keyframes vdk-popover-in {
+    from { opacity: 0; transform: translateY(calc(var(--space-1) * -1)) scale(0.98); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes vdk-toast-in {
+    from { opacity: 0; transform: translateY(var(--space-6)); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes vdk-toast-swipe-out {
+    from { transform: translateX(var(--radix-toast-swipe-end-x)); }
+    to { transform: translateX(calc(var(--radix-toast-swipe-end-x) * 3)); opacity: 0; }
+  }
+  @keyframes vdk-spin {
+    to { transform: rotate(1turn); }
+  }
+  @keyframes vdk-pulse {
+    50% { opacity: 0.45; }
+  }
+}
+
+/* Interaction variants that also respond to data-preview-state, so documentation and visual tests can render
+   hover, focus and pressed statically: <Button data-preview-state="hover">. Real interaction is unchanged, and
+   components copied without this file fall back to Tailwind's built-in variants. */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+  &[data-preview-state~="hover"] {
+    @slot;
+  }
+}
+@custom-variant focus-visible {
+  &:focus-visible {
+    @slot;
+  }
+  &[data-preview-state~="focus"] {
+    @slot;
+  }
+}
+@custom-variant focus-within {
+  &:focus-within {
+    @slot;
+  }
+  &[data-preview-state~="focus"] {
+    @slot;
+  }
+}
+@custom-variant active {
+  &:active {
+    @slot;
+  }
+  &[data-preview-state~="active"] {
+    @slot;
+  }
+}
+
+/* Focus indicator: 2px --focus-ring-color outline, 2px offset (3px wide in high contrast). Use on :focus-visible. */
+@utility focus-ring {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+/* Inset variant for elements inside scroll containers, where an outset ring would be clipped. */
+@utility focus-ring-inset {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: calc(var(--focus-ring-width) * -1);
+}
+
+[data-theme="high-contrast"],
+[data-theme="high-contrast"] [data-brand] {
+  --focus-ring-width: calc(var(--border-width-thick) + var(--border-width-thin));
+}
+@media (prefers-contrast: more) {
+  :root:not([data-theme]) {
+    --focus-ring-width: calc(var(--border-width-thick) + var(--border-width-thin));
+  }
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg-canvas);
+    color: var(--color-fg-default);
+    font-family: var(--font-family-body);
+    line-height: var(--line-height-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    /* Keeps focused elements clear of the sticky header (WCAG 2.4.11). */
+    scroll-padding-block: var(--space-24) var(--space-6);
+  }
+  body {
+    min-block-size: 100dvh;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-family-display);
+    text-wrap: balance;
+  }
+  p,
+  li,
+  dd,
+  figcaption {
+    text-wrap: pretty;
+  }
+  code,
+  kbd,
+  samp {
+    font-family: var(--font-family-mono);
+  }
+  ::selection {
+    background-color: var(--color-accent-subtle);
+    color: var(--color-fg-default);
+  }
+  /* Links and any element without its own focus style still get the kit ring. */
+  :where(a, summary, [tabindex]):focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset);
+  }
+}
+
+/* Windows forced colors: parts drawn with background color only get a system color. */
+@media (forced-colors: active) {
+  [data-slot="switch-thumb"],
+  [data-slot="radio-dot"],
+  [data-slot="skeleton"] {
+    background-color: CanvasText;
+  }
+  [data-slot="switch"][data-state="checked"],
+  [data-slot="checkbox-box"],
+  [data-slot="radio-circle"] {
+    border-color: CanvasText;
+  }
+  [data-slot="table-row"][data-selected] {
+    outline: var(--border-width-thick) solid Highlight;
+    outline-offset: calc(var(--border-width-thick) * -1);
+  }
+}

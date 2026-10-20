@@ -1,0 +1,15 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "canvas": {"$value": "{color.white}"},
+      "surface": {"$value": "{color.white}"},
+      "surface-raised": {"$value": "#ffffff"}
+    },
+    "fg": {
+      "default": {"$value": "{color.gray.900}"},
+      "muted": {"$value": "{color.gray.400}"},
+      "subtle": {"$value": "{color.gray.missing}"}
+    }
+  }
+}

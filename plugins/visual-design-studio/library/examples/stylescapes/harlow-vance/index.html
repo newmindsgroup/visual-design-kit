@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harlow &amp; Vance: The Record | Stylescape 07</title>
+<meta name="description" content="Stylescape for Harlow & Vance, a fictional litigation and appeals firm. Direction: The Record. Classic luxury serif, Ruler archetype, premium marketing website.">
+<style>
+@font-face { font-family: "Libre Caslon Display"; src: url("../fonts/libre-caslon-display/libre-caslon-display-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("../fonts/libre-caslon-text/libre-caslon-text-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("../fonts/libre-caslon-text/libre-caslon-text-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("../fonts/libre-caslon-text/libre-caslon-text-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* Token contract (semantic names) mapped to the Harlow & Vance brand */
+:root {
+  --color-bg-canvas: #F3EFE6;          /* Vellum */
+  --color-bg-surface: #FBF9F4;         /* Bond */
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #E6E0D3;          /* Manila */
+  --color-bg-inverse: #1F2B24;         /* Library green */
+  --color-fg-default: #17150F;         /* Iron-gall ink */
+  --color-fg-muted: #5B554A;           /* Docket gray */
+  --color-fg-subtle: #7A746A;
+  --color-fg-inverse: #F3EFE6;
+  --color-fg-on-accent: #FBF9F4;
+  --color-border-subtle: #DDD6C7;
+  --color-border-default: #8A8478;
+  --color-border-strong: #17150F;
+  --color-accent-default: #862519;     /* Sealing wax */
+  --color-accent-hover: #6A1C13;
+  --color-accent-active: #521510;
+  --color-accent-subtle: #EFE3DA;
+  --color-accent-fg: #862519;
+  --brand-brass: #C9B27A;              /* Brass, on library green only */
+  --brand-brass-text: #6E5A2A;         /* Brass, text-safe on vellum */
+  --color-success-fg: #2F5A3F; --color-success-bg: #E3EBE3; --color-success-border: #2F5A3F;
+  --color-warning-fg: #6E5A2A; --color-warning-bg: #F2EAD3; --color-warning-border: #6E5A2A;
+  --color-danger-fg: #8F1D14;  --color-danger-bg: #F6E4DF;  --color-danger-border: #8F1D14;
+  --color-info-fg: #1F3A5C;    --color-info-bg: #E4E8EE;    --color-info-border: #1F3A5C;
+  --color-focus-ring: #17150F;
+  --color-overlay-scrim: rgb(23 21 15 / 0.55);
+
+  --font-family-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+  --font-family-body: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --font-family-mono: "Libre Caslon Text", Georgia, serif; /* tabular lining figures stand in for mono */
+
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.12em;
+  --measure-narrow: 45ch; --measure-body: 66ch;
+
+  --space-0: 0; --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
+  --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 2px; --radius-md: 2px; --radius-lg: 2px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-sm: none; --shadow-md: 0 1px 0 rgb(23 21 15 / 0.08);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --brand-rule-line: 32px;                    /* pleading-paper line pitch */
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default);
+  font-family: var(--font-family-body); font-size: 1.125rem; line-height: var(--line-height-relaxed);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; box-shadow: 0 0 0 6px var(--color-bg-canvas), 0 0 0 7px var(--color-accent-default); }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.caps { font-family: var(--font-family-body); font-weight: 700; font-size: 0.75rem; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; line-height: 1.4; font-variant-numeric: lining-nums; }
+.lining { font-variant-numeric: lining-nums tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- 1. Direction strip ---------- */
+#direction { border-bottom: 1px solid var(--color-border-subtle); background: var(--color-bg-canvas); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-2) var(--space-8); align-items: baseline; padding-block: var(--space-4); }
+#direction .kicker { color: var(--color-fg-muted); }
+#direction h1 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: 1.375rem; line-height: 1.2; }
+#direction h1 em { font-family: var(--font-family-body); font-style: italic; color: var(--color-accent-default); }
+#direction .brief { grid-column: 1 / -1; margin: 0; font-size: 0.9375rem; color: var(--color-fg-muted); max-width: 90ch; line-height: 1.5; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; grid-column: 1 / -1; }
+.chips li { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--color-border-default); color: var(--color-fg-muted); font-variant-numeric: lining-nums; }
+.back { font-size: 0.875rem; text-decoration: none; border-bottom: 1px solid var(--color-border-default); padding-block: 4px; display: inline-block; }
+.back:hover { border-color: var(--color-accent-default); color: var(--color-accent-default); }
+
+/* ---------- 2. Hero: the landing page ---------- */
+#hero { position: relative; background: var(--color-bg-surface); border-bottom: 1px solid var(--color-border-strong); overflow: hidden; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-5); border-bottom: 1px solid var(--color-border-subtle); }
+.wordmark { display: inline-flex; align-items: baseline; gap: 0.32em; text-decoration: none; font-family: var(--font-family-display); font-size: 1.25rem; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+.wordmark .amp { font-family: var(--font-family-body); font-style: italic; text-transform: none; letter-spacing: 0; color: var(--color-accent-default); font-size: 1.45em; line-height: 0; position: relative; top: 0.06em; }
+.site-nav ul { display: flex; gap: var(--space-8); list-style: none; margin: 0; padding: 0; }
+.site-nav ul a { text-decoration: none; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding-block: 12px; display: inline-block; background: linear-gradient(currentColor, currentColor) 0 calc(100% - 6px) / 0 1px no-repeat; transition: background-size var(--duration-slow) var(--ease-standard); }
+.site-nav ul a:hover, .site-nav ul a[aria-current] { background-size: 100% 1px; }
+.menu-btn { display: none; }
+
+.pleading { position: relative; padding-inline-start: 64px; }
+.pleading::before, .pleading::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 64px; width: 1px; background: var(--color-accent-default); }
+.pleading::after { inset-inline-start: 68px; }
+.line-nos { position: absolute; inset-block: 0; inset-inline-start: 0; width: 64px; overflow: hidden; list-style: none; margin: 0; padding: var(--space-12) 0 0; text-align: end; padding-inline-end: 16px; font-size: 0.75rem; line-height: var(--brand-rule-line); color: var(--color-fg-subtle); font-variant-numeric: lining-nums tabular-nums; user-select: none; }
+.hero-body { display: grid; grid-template-columns: minmax(0, 7.2fr) minmax(0, 4.8fr); gap: var(--space-16); padding: var(--space-12) 0 var(--space-12) var(--space-12); }
+.eyebrow { display: flex; align-items: center; gap: var(--space-3); color: var(--color-accent-default); margin: 0 0 var(--space-8); }
+.eyebrow::before { content: "§"; font-family: var(--font-family-body); font-weight: 400; font-size: 1.25rem; letter-spacing: 0; line-height: 1; }
+.hero-title { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(4.25rem, 10.4vw, 10.5rem); line-height: 0.9; letter-spacing: -0.025em; margin: 0; font-variant-numeric: lining-nums; }
+.hero-title .l2 { display: block; padding-inline-start: 0.62em; }
+.hero-title em { font-family: var(--font-family-display); font-style: italic; color: var(--color-accent-default); }
+.hero-title .it { font-family: "Libre Caslon Text", serif; font-style: italic; font-size: 0.86em; letter-spacing: -0.03em; color: var(--color-accent-default); }
+.deck { font-size: clamp(1.1875rem, 1.6vw, 1.375rem); line-height: 1.55; max-width: 36ch; margin: var(--space-10) 0 var(--space-8); }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-8); }
+.footnote { margin: var(--space-12) 0 0; font-size: 0.8125rem; line-height: 1.5; color: var(--color-fg-muted); max-width: 62ch; border-top: 1px solid var(--color-border-subtle); padding-top: var(--space-3); }
+
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.6em; min-height: 52px; padding: 0 28px; border: 1px solid transparent; border-radius: var(--radius-sm); font-family: var(--font-family-body); font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color var(--duration-moderate) var(--ease-standard), color var(--duration-moderate) var(--ease-standard), border-color var(--duration-moderate) var(--ease-standard); font-variant-numeric: lining-nums; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-primary:active { background: var(--color-accent-active); }
+.btn-secondary { background: transparent; color: var(--color-fg-default); border-color: var(--color-border-strong); }
+.btn-secondary:hover { background: var(--color-fg-default); color: var(--color-bg-surface); }
+.btn[disabled] { background: var(--color-bg-sunken); color: var(--color-fg-subtle); border-color: transparent; cursor: not-allowed; }
+.btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; box-shadow: 0 0 0 6px var(--color-bg-surface), 0 0 0 7px var(--color-accent-default); }
+.textlink { font-size: 1.0625rem; font-style: italic; text-decoration: none; border-bottom: 1px solid currentColor; padding-block: 6px 2px; display: inline-flex; align-items: center; gap: 8px; }
+.textlink svg { width: 22px; height: 10px; transition: transform var(--duration-slow) var(--ease-standard); }
+.textlink:hover svg { transform: translateX(4px); }
+
+/* The Record ledger */
+.record { display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-12); }
+.record-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--color-border-strong); padding-bottom: var(--space-2); }
+.record-head span:last-child { color: var(--color-fg-muted); }
+.ledger { list-style: none; margin: 0 0 var(--space-6); padding: 0; }
+.ledger li { display: grid; grid-template-columns: 1fr auto; gap: 2px var(--space-4); padding: 14px 0 13px; border-bottom: 1px solid var(--color-border-subtle); }
+.ledger .case { font-style: italic; font-size: 1.0625rem; line-height: 1.3; }
+.ledger .meta { grid-column: 1; font-size: 0.8125rem; color: var(--color-fg-muted); font-variant-numeric: lining-nums tabular-nums; letter-spacing: 0.02em; }
+.ledger .tag { grid-row: 1 / span 2; grid-column: 2; align-self: center; }
+.tally { display: grid; grid-template-columns: auto 1fr; gap: var(--space-5); align-items: end; }
+.tally .num { font-family: var(--font-family-display); font-size: clamp(4.5rem, 7vw, 6.5rem); line-height: 0.8; letter-spacing: -0.03em; font-variant-numeric: lining-nums; }
+.tally .num small { font-size: 0.42em; color: var(--color-fg-muted); letter-spacing: 0; }
+.tally p { margin: 0; font-size: 0.9375rem; line-height: 1.45; max-width: 24ch; }
+
+.seal { width: 232px; height: 232px; margin-inline-start: auto; margin-inline-end: 8px; color: var(--color-accent-default); transform: rotate(-8deg); }
+
+/* Tags / badges */
+.tag { display: inline-flex; align-items: center; gap: 6px; min-height: 26px; padding: 2px 10px; border: 1px solid currentColor; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1; white-space: nowrap; font-variant-numeric: lining-nums; }
+.tag-reversed { color: var(--color-accent-default); background: var(--color-accent-subtle); }
+.tag-affirmed { color: var(--color-success-fg); background: var(--color-success-bg); }
+.tag-argued { color: var(--color-fg-default); background: transparent; }
+.tag-pending { color: var(--color-warning-fg); background: var(--color-warning-bg); border-style: dashed; }
+
+/* ---------- Shared section frame ---------- */
+.section { padding-block: clamp(4rem, 8vw, 7.5rem); border-bottom: 1px solid var(--color-border-subtle); }
+.section-head { display: grid; grid-template-columns: 64px 1fr auto; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-12); border-bottom: 1px solid var(--color-border-strong); padding-bottom: var(--space-3); }
+.section-head .no { font-family: var(--font-family-display); font-size: 1.5rem; color: var(--color-accent-default); font-variant-numeric: lining-nums; }
+.section-head h2 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.05; letter-spacing: -0.01em; }
+.section-head p { margin: 0; color: var(--color-fg-muted); font-style: italic; font-size: 1rem; text-align: end; max-width: 46ch; text-wrap: pretty; }
+
+/* ---------- 3. Palette ---------- */
+.swatches { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
+.swatch { display: flex; flex-direction: column; border: 1px solid var(--color-border-default); background: var(--color-bg-surface); }
+.swatch .chip { aspect-ratio: 3 / 4; position: relative; display: flex; align-items: flex-end; padding: 12px; }
+.swatch .chip span { font-family: var(--font-family-display); font-size: 2.5rem; line-height: 1; }
+.swatch .info { padding: 12px 12px 14px; font-size: 0.8125rem; line-height: 1.45; font-variant-numeric: lining-nums tabular-nums; border-top: 1px solid var(--color-border-default); }
+.swatch .info b { display: block; font-size: 1rem; font-weight: 400; font-style: italic; margin-bottom: 2px; }
+.swatch .role { display: block; font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); margin-bottom: 6px; }
+.swatch .ratio { display: block; margin-top: 6px; padding-top: 6px; border-top: 1px dotted var(--color-border-default); }
+.proportion { display: flex; height: 18px; margin-top: var(--space-8); border: 1px solid var(--color-border-strong); }
+.proportion span { display: block; }
+.proportion-note { font-size: 0.875rem; color: var(--color-fg-muted); margin: var(--space-2) 0 0; }
+
+/* ---------- 4. Type ---------- */
+.type-grid { display: grid; grid-template-columns: 64px minmax(0, 1fr); row-gap: var(--space-12); }
+.type-grid > .label { grid-column: 1; }
+.spec-row { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-12); align-items: start; padding-bottom: var(--space-12); border-bottom: 1px solid var(--color-border-subtle); }
+.spec-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.spec-meta { font-size: 0.875rem; line-height: 1.55; color: var(--color-fg-muted); font-variant-numeric: lining-nums tabular-nums; border-inline-start: 1px solid var(--color-accent-default); padding-inline-start: var(--space-4); }
+.spec-meta b { display: block; color: var(--color-fg-default); font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.t-display { font-family: var(--font-family-display); font-size: clamp(3rem, 6.6vw, 6rem); line-height: 0.95; letter-spacing: -0.02em; margin: 0; }
+.t-display em { font-style: italic; color: var(--color-accent-default); }
+.t-body { font-size: 1.1875rem; line-height: 1.6; max-width: 62ch; margin: 0; hanging-punctuation: first; }
+.t-body + .t-body { text-indent: 1.5em; }
+.t-caption { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5; margin: 0; font-variant-numeric: lining-nums; }
+.t-caption + .t-cap2 { margin-top: 8px; font-size: 0.875rem; font-style: italic; color: var(--color-fg-muted); }
+.alphabet { font-family: var(--font-family-display); font-size: 1.75rem; line-height: 1.3; letter-spacing: 0.02em; margin: var(--space-6) 0 0; color: var(--color-fg-muted); word-break: break-all; }
+
+/* ---------- 5. Components ---------- */
+.comp-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-8); }
+.panel { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); padding: var(--space-8); }
+.panel > .caps { color: var(--color-fg-muted); margin: 0 0 var(--space-6); display: block; }
+.p-buttons { grid-column: span 5; }
+.p-form { grid-column: span 7; }
+.p-card { grid-column: span 7; }
+.p-tags { grid-column: span 5; }
+.btn-stack { display: grid; gap: var(--space-4); justify-items: start; }
+.btn-stack .note { font-size: 0.8125rem; color: var(--color-fg-muted); font-style: italic; margin: -6px 0 0; }
+.field { display: grid; gap: 6px; margin-bottom: var(--space-6); }
+.field:last-child { margin-bottom: 0; }
+.field label { font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.field .hint { font-size: 0.9375rem; color: var(--color-fg-muted); font-style: italic; line-height: 1.4; }
+.field input, .field textarea { font: inherit; font-size: 1.0625rem; color: var(--color-fg-default); background: var(--color-bg-surface-raised); border: 0; border-bottom: 2px solid var(--color-border-strong); border-radius: 0; padding: 12px 2px 10px; min-height: 52px; width: 100%; transition: border-color var(--duration-moderate) var(--ease-standard), background-color var(--duration-moderate) var(--ease-standard); }
+.field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; box-shadow: none; }
+.field textarea { background-image: repeating-linear-gradient(transparent 0 31px, var(--color-border-subtle) 31px 32px); min-height: 128px; line-height: 32px; padding-top: 0; resize: vertical; }
+.field.is-error input { border-bottom-color: var(--color-danger-border); background-color: var(--color-danger-bg); }
+.field .error { display: flex; gap: 8px; align-items: flex-start; color: var(--color-danger-fg); font-size: 0.9375rem; line-height: 1.4; }
+.field .error svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+.counsel { display: grid; grid-template-columns: 132px 1fr; gap: var(--space-6); align-items: start; }
+.portrait { aspect-ratio: 4 / 5; background: var(--color-bg-inverse); color: var(--brand-brass); display: grid; place-items: center; align-content: center; gap: 10px; border: 1px solid var(--color-border-strong); box-shadow: inset 0 0 0 5px var(--color-bg-inverse), inset 0 0 0 6px rgb(201 178 122 / 0.6); }
+.portrait b { font-family: var(--font-family-display); font-weight: 400; font-size: 2.75rem; line-height: 1; letter-spacing: 0.02em; }
+.portrait b i { font-family: var(--font-family-body); font-size: 0.8em; }
+.portrait small { font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; line-height: 1.4; }
+.counsel h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 2rem; line-height: 1.05; margin: 0 0 4px; }
+.counsel .role { font-style: italic; color: var(--color-fg-muted); margin: 0 0 var(--space-4); }
+.counsel dl { display: grid; grid-template-columns: auto 1fr; gap: 6px var(--space-4); margin: 0 0 var(--space-5); font-size: 0.9375rem; line-height: 1.45; }
+.counsel dt { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); padding-top: 3px; }
+.counsel dd { margin: 0; font-variant-numeric: lining-nums; }
+.tag-list { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-8); }
+.list-item { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-4); align-items: center; padding: var(--space-4) 0; border-top: 1px solid var(--color-border-subtle); text-decoration: none; min-height: 64px; }
+.list-item:last-child { border-bottom: 1px solid var(--color-border-subtle); }
+.list-item .n { font-family: var(--font-family-display); font-size: 1.75rem; color: var(--color-accent-default); width: 2ch; font-variant-numeric: lining-nums; }
+.list-item .t { font-size: 1.0625rem; line-height: 1.3; }
+.list-item .t small { display: block; font-size: 0.8125rem; color: var(--color-fg-muted); font-style: italic; }
+.list-item:hover .t { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* ---------- 6. Applications ---------- */
+.apps { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-16); align-items: center; }
+.phone { width: 340px; max-width: 100%; margin-inline: auto; border: 1px solid var(--color-border-strong); border-radius: 44px; padding: 12px; background: #11110D; }
+.phone-screen { border-radius: 34px; overflow: hidden; background: var(--color-bg-surface); height: 680px; position: relative; }
+.m-bar { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px 14px; border-bottom: 1px solid var(--color-border-subtle); }
+.m-bar .wordmark { font-size: 0.875rem; letter-spacing: 0.12em; }
+.m-burger { width: 44px; height: 44px; display: grid; place-content: center; gap: 6px; border: 0; background: none; padding: 0; }
+.m-burger span { display: block; width: 22px; height: 1px; background: var(--color-fg-default); }
+.m-pleading { display: grid; grid-template-columns: 28px 1fr; position: relative; }
+.m-pleading::before, .m-pleading::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 28px; width: 1px; background: var(--color-accent-default); }
+.m-pleading::after { inset-inline-start: 31px; }
+.m-pleading ol { list-style: none; margin: 0; padding: 22px 6px 0 0; text-align: end; font-size: 9px; line-height: 24px; color: var(--color-fg-subtle); font-variant-numeric: lining-nums tabular-nums; }
+.m-body { padding: 22px 20px 0 22px; }
+.m-body .caps { color: var(--color-accent-default); font-size: 0.625rem; }
+.m-body h4 { font-family: var(--font-family-display); font-weight: 400; font-size: 2.625rem; line-height: 0.95; letter-spacing: -0.02em; margin: 10px 0 12px; }
+.m-body h4 em { font-style: italic; color: var(--color-accent-default); }
+.m-body p { font-size: 0.9375rem; line-height: 1.5; margin: 0 0 16px; }
+.m-body .btn { min-height: 48px; width: 100%; font-size: 0.6875rem; letter-spacing: 0.08em; padding: 0 12px; }
+.m-ledger { list-style: none; margin: 18px 0 0; padding: 0; border-top: 2px solid var(--color-border-strong); }
+.m-ledger li { display: flex; justify-content: space-between; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--color-border-subtle); font-size: 0.8125rem; font-style: italic; line-height: 1.25; }
+.m-ledger .tag { font-style: normal; font-size: 0.5625rem; min-height: 22px; padding: 2px 6px; }
+.cards { display: grid; gap: var(--space-8); justify-items: center; }
+.bcard { width: min(100%, 504px); aspect-ratio: 3.5 / 2; position: relative; box-shadow: 0 1px 0 rgb(23 21 15 / 0.08), 0 18px 40px -24px rgb(23 21 15 / 0.45); }
+.bcard-front { background: var(--color-bg-inverse); color: var(--color-fg-inverse); display: grid; place-items: center; }
+.bcard-front .seal-sm { width: 46%; color: var(--brand-brass); }
+.bcard-back { background: var(--color-bg-surface-raised); display: grid; grid-template-columns: 28px 1fr; transform: rotate(-1.6deg) translateX(24px); }
+.bcard-back::before, .bcard-back::after { content: ""; position: absolute; inset-block: 0; inset-inline-start: 28px; width: 1px; background: var(--color-accent-default); }
+.bcard-back::after { inset-inline-start: 31px; }
+.bcard-back .inner { grid-column: 2; padding: 9% 9% 8% 11%; display: flex; flex-direction: column; justify-content: space-between; }
+.bcard-back .name { font-family: var(--font-family-display); font-size: clamp(1.25rem, 2.6vw, 1.875rem); line-height: 1; margin: 0; }
+.bcard-back .title { font-style: italic; font-size: clamp(0.75rem, 1.2vw, 0.9375rem); color: var(--color-fg-muted); margin: 4px 0 0; }
+.bcard-back .contact { font-size: clamp(0.625rem, 1vw, 0.8125rem); line-height: 1.55; font-variant-numeric: lining-nums tabular-nums; margin: 0; }
+.bcard-back .wm { font-family: var(--font-family-display); font-size: clamp(0.5625rem, 0.9vw, 0.75rem); letter-spacing: 0.16em; text-transform: uppercase; }
+.app-caption { font-size: 0.875rem; font-style: italic; color: var(--color-fg-muted); text-align: center; margin: var(--space-4) 0 0; }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-16); }
+.img-copy p { margin: 0 0 var(--space-5); max-width: 52ch; }
+.icons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; list-style: none; margin: var(--space-8) 0 0; padding: 0; border-top: 1px solid var(--color-border-strong); border-inline-start: 1px solid var(--color-border-subtle); }
+.icons li { display: grid; justify-items: center; gap: 10px; padding: var(--space-5) var(--space-2); border-inline-end: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle); }
+.icons svg { width: 40px; height: 40px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.25; stroke-linecap: butt; stroke-linejoin: miter; }
+.icons span { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); }
+.engraving { position: relative; background: var(--color-bg-inverse); color: var(--brand-brass); aspect-ratio: 7 / 5; overflow: hidden; border: 1px solid var(--color-border-strong); }
+.engraving svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.engraving figcaption { position: absolute; inset-inline: 0; bottom: 0; padding: 14px 18px; font-size: clamp(0.6875rem, 1.6vw, 0.8125rem); font-style: italic; color: var(--color-fg-inverse); background: linear-gradient(transparent, rgb(31 43 36 / 0.92) 40%); }
+
+/* ---------- 8. Motion ---------- */
+.motion-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-16); align-items: start; }
+.tokens-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; font-variant-numeric: lining-nums tabular-nums; }
+.tokens-table th, .tokens-table td { text-align: start; padding: 10px 8px 10px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.tokens-table th { font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-fg-muted); border-bottom: 2px solid var(--color-border-strong); }
+.tokens-table code { font-family: var(--font-family-body); font-size: 0.8125rem; background: var(--color-bg-sunken); padding: 1px 5px; white-space: nowrap; display: inline-block; margin-bottom: 2px; }
+.demo { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); padding: var(--space-8); }
+.demo-stage { display: grid; grid-template-columns: 40px 1fr; position: relative; min-height: 256px; }
+.demo-stage .rule { position: absolute; inset-block: 0; inset-inline-start: 40px; width: 5px; border-inline: 1px solid var(--color-accent-default); transform-origin: top; }
+.demo-stage ol { list-style: none; margin: 0; padding: 0 12px 0 0; text-align: end; font-size: 0.75rem; line-height: 32px; color: var(--color-fg-subtle); font-variant-numeric: lining-nums tabular-nums; }
+.demo-lines { padding-inline-start: 28px; }
+.demo-lines p { margin: 0; line-height: 32px; font-size: 1.0625rem; }
+.demo-lines .verdict { margin-top: 16px; }
+.demo.play .rule { animation: draw var(--duration-slower) var(--ease-standard) both; }
+.demo.play ol li { animation: fade var(--duration-slow) var(--ease-standard) both; animation-delay: calc(var(--i) * 40ms); }
+.demo.play .demo-lines p { animation: rise var(--duration-slow) var(--ease-standard) both; animation-delay: calc(240ms + var(--i) * 90ms); }
+.demo.play .verdict { animation: stamp var(--duration-slow) var(--ease-standard) both; animation-delay: 820ms; }
+@keyframes draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes stamp { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .demo.play * { animation: none !important; } }
+.demo-controls { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border-subtle); font-size: 0.875rem; color: var(--color-fg-muted); font-style: italic; }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--color-border-strong); }
+.voice > div { padding: var(--space-6) var(--space-8) var(--space-8) 0; border-inline-end: 1px solid var(--color-border-subtle); }
+.voice > div + div { padding-inline-start: var(--space-8); }
+.voice > div:last-child { border-inline-end: 0; }
+.voice .caps { color: var(--color-accent-default); display: block; margin-bottom: var(--space-5); }
+.voice blockquote { margin: 0; font-family: var(--font-family-display); font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; }
+.voice blockquote.cta { font-family: var(--font-family-body); font-weight: 700; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.5; }
+.voice blockquote.err { font-family: var(--font-family-body); font-size: 1.1875rem; line-height: 1.5; }
+.voice .why { margin: var(--space-5) 0 0; font-size: 0.9375rem; color: var(--color-fg-muted); font-style: italic; line-height: 1.5; }
+
+/* ---------- 10. Rationale ---------- */
+#rationale { background: var(--color-bg-inverse); color: var(--color-fg-inverse); border-bottom: 0; }
+#rationale .section-head { border-bottom-color: var(--brand-brass); }
+#rationale .section-head .no { color: var(--brand-brass); }
+#rationale .section-head p { color: #B9C2BC; }
+.rat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-12); }
+.rat-grid h3 { font-family: var(--font-family-display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0 0 var(--space-4); color: var(--brand-brass); }
+.rat-grid p { margin: 0 0 var(--space-4); font-size: 1.0625rem; line-height: 1.6; }
+.rat-grid ul { margin: 0; padding-inline-start: 1.1em; font-size: 1rem; line-height: 1.55; }
+.rat-grid li { margin-bottom: 8px; }
+.colophon { margin-top: var(--space-16); padding-top: var(--space-4); border-top: 1px solid rgb(201 178 122 / 0.5); font-size: 0.8125rem; color: #B9C2BC; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
+.colophon a { color: var(--color-fg-inverse); }
+#rationale :focus-visible { outline-color: var(--brand-brass); box-shadow: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .hero-body { grid-template-columns: 1fr; gap: var(--space-12); }
+  .seal { width: 168px; height: 168px; margin-inline: 0 auto; }
+  .swatches { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .p-buttons, .p-form, .p-card, .p-tags { grid-column: span 12; }
+  .apps, .img-grid, .motion-grid { grid-template-columns: 1fr; }
+  .rat-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+}
+@media (max-width: 760px) {
+  body { font-size: 1.0625rem; }
+  #direction .wrap { grid-template-columns: 1fr; }
+  .site-nav ul, .site-nav .btn { display: none; }
+  .menu-btn { display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; gap: 8px; background: none; border: 1px solid var(--color-border-strong); padding: 0 12px; font: 700 0.75rem/1 var(--font-family-body); letter-spacing: 0.12em; text-transform: uppercase; color: inherit; border-radius: var(--radius-sm); }
+  .wordmark { font-size: 1rem; letter-spacing: 0.1em; }
+  .pleading { padding-inline-start: 28px; }
+  .line-nos { width: 28px; }
+  .pleading::before { inset-inline-start: 28px; } .pleading::after { inset-inline-start: 31px; }
+  .line-nos { font-size: 0.5625rem; padding-inline-end: 6px; padding-top: var(--space-8); }
+  .hero-body { padding: var(--space-8) 0 var(--space-10) var(--space-5); }
+  .hero-title { font-size: clamp(3.4rem, 17vw, 4.5rem); }
+  .hero-title .l2 { padding-inline-start: 0.4em; }
+  .eyebrow { margin-bottom: var(--space-6); }
+  .deck { margin-top: var(--space-6); }
+  .cta-row .btn { width: 100%; padding: 0 12px; letter-spacing: 0.09em; }
+  .section-head { grid-template-columns: 40px 1fr; }
+  .section-head p { grid-column: 1 / -1; text-align: start; }
+  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+  .swatch .chip { aspect-ratio: 4 / 3; }
+  .type-grid { grid-template-columns: 1fr; }
+  .spec-row { grid-template-columns: 1fr; gap: var(--space-5); }
+  .panel { padding: var(--space-5); }
+  .counsel { grid-template-columns: 88px 1fr; gap: var(--space-4); }
+  .counsel h3 { font-size: 1.5rem; }
+  .portrait b { font-size: 1.75rem; }
+  .portrait small { font-size: 0.5rem; }
+  .btn { letter-spacing: 0.08em; padding: 0 16px; }
+  .counsel dl { grid-template-columns: 1fr; gap: 0; }
+  .counsel dd { margin-bottom: 8px; }
+  .icons { grid-template-columns: repeat(3, 1fr); }
+  .voice { grid-template-columns: 1fr; }
+  .voice > div, .voice > div + div { padding: var(--space-6) 0; border-inline-end: 0; border-bottom: 1px solid var(--color-border-subtle); }
+  .bcard-back { transform: rotate(-1.6deg) translateX(8px); }
+  .seal { display: none; }
+  .record { gap: 0; }
+  .phone-screen { height: 640px; }
+}
+</style>
+</head>
+<body>
+
+<header id="direction">
+  <div class="wrap">
+    <span class="caps kicker">Stylescape 07 / 12</span>
+    <h1>Harlow <em>&amp;</em> Vance &middot; The Record</h1>
+    <a class="back" href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.classic-luxury-serif</li><li>industry.legal-professional-services</li><li>archetype.ruler</li><li>tier.premium</li><li>channel.marketing-website</li>
+    </ul>
+    <p class="brief">Harlow &amp; Vance tries and appeals high-stakes commercial disputes. General counsel choose appellate lawyers on judgment and record, so the site reads like a well-made brief: pleading-paper margins, Caslon, and outcomes stated plainly.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO ================= -->
+<section id="hero" aria-labelledby="hero-t">
+  <div class="wrap">
+    <nav class="site-nav" aria-label="Firm site (sample)">
+      <a class="wordmark" href="#hero">Harlow <span class="amp">&amp;</span> Vance</a>
+      <ul>
+        <li><a href="#hero" aria-current="page">Appeals</a></li>
+        <li><a href="#hero">Trials</a></li>
+        <li><a href="#hero">Counsel</a></li>
+        <li><a href="#hero">The Record</a></li>
+        <li><a href="#hero">Insights</a></li>
+      </ul>
+      <a class="btn btn-secondary" href="#components">Request a conflicts check</a>
+      <button class="menu-btn" type="button" aria-label="Open menu">Menu</button>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="pleading">
+      <ol class="line-nos" aria-hidden="true">
+        <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li><li>30</li><li>31</li><li>32</li><li>33</li><li>34</li><li>35</li><li>36</li><li>37</li><li>38</li><li>39</li><li>40</li><li>41</li><li>42</li><li>43</li><li>44</li><li>45</li><li>46</li><li>47</li><li>48</li><li>49</li><li>50</li><li>51</li><li>52</li><li>53</li><li>54</li><li>55</li><li>56</li><li>57</li><li>58</li><li>59</li><li>60</li>
+      </ol>
+      <div class="hero-body">
+        <div>
+          <p class="caps eyebrow">Commercial litigation &amp; appeals &middot; New York</p>
+          <h2 class="hero-title" id="hero-t">Decided,<span class="l2"><span class="it">not</span> settled.</span></h2>
+          <p class="deck">We try and appeal the disputes that cannot be allowed to go wrong, in federal and state courts across the country. When the record matters, a partner writes it.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#components">Request a conflicts check</a>
+            <a class="textlink" href="#hero">Read the record <svg viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></a>
+          </div>
+          <p class="footnote"><sup>1</sup> Appellate arguments by Harlow &amp; Vance partners, 2021 to 2026, counted as a ruling for our client on the issues appealed. Prior results do not guarantee a similar outcome. Attorney Advertising.</p>
+        </div>
+        <aside class="record" aria-label="Recent matters">
+          <svg class="seal" viewBox="0 0 240 240" aria-hidden="true">
+    <defs><path id="sealpath" d="M120 120 m-97 0 a97 97 0 1 1 194 0 a97 97 0 1 1 -194 0"/></defs>
+    <circle cx="120" cy="120" r="116" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="120" cy="120" r="112" fill="none" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="120" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="0.75"/>
+    <text font-family="Libre Caslon Text, serif" font-weight="700" font-size="11.5" letter-spacing="3.1" fill="currentColor"><textPath href="#sealpath">HARLOW &amp; VANCE &#183; COUNSEL AT LAW &#183; NEW YORK &#183; MCMXCVIII &#183;</textPath></text>
+    <path fill="none" stroke="currentColor" stroke-width="0.45" opacity="0.9" d="M190.0 120.0L197.0 123.0L199.8 126.3L196.5 129.1L189.1 131.0L181.7 132.3L178.3 134.0L180.6 137.1L186.6 141.6L192.3 146.7L193.9 150.6L190.0 152.3L182.4 151.8L174.9 150.7L171.2 151.3L172.3 155.0L176.6 161.1L180.5 167.7L180.8 172.0L176.6 172.3L169.5 169.5L162.7 166.2L159.0 165.6L159.0 169.4L161.1 176.6L162.8 184.1L161.8 188.2L157.7 187.2L151.8 182.4L146.3 177.1L143.0 175.4L141.8 179.0L141.6 186.6L140.9 194.2L138.7 197.8L135.0 195.6L131.0 189.1L127.4 182.5L124.7 179.8L122.5 182.9L120.0 190.0L117.0 197.0L113.7 199.8L110.9 196.5L109.0 189.1L107.7 181.7L106.0 178.3L102.9 180.6L98.4 186.6L93.3 192.3L89.4 193.9L87.7 190.0L88.2 182.4L89.3 174.9L88.7 171.2L85.0 172.3L78.9 176.6L72.3 180.5L68.0 180.8L67.7 176.6L70.5 169.5L73.8 162.7L74.4 159.0L70.6 159.0L63.4 161.1L55.9 162.8L51.8 161.8L52.8 157.7L57.6 151.8L62.9 146.3L64.6 143.0L61.0 141.8L53.4 141.6L45.8 140.9L42.2 138.7L44.4 135.0L50.9 131.0L57.5 127.4L60.2 124.7L57.1 122.5L50.0 120.0L43.0 117.0L40.2 113.7L43.5 110.9L50.9 109.0L58.3 107.7L61.7 106.0L59.4 102.9L53.4 98.4L47.7 93.3L46.1 89.4L50.0 87.7L57.6 88.2L65.1 89.3L68.8 88.7L67.7 85.0L63.4 78.9L59.5 72.3L59.2 68.0L63.4 67.7L70.5 70.5L77.3 73.8L81.0 74.4L81.0 70.6L78.9 63.4L77.2 55.9L78.2 51.8L82.3 52.8L88.2 57.6L93.7 62.9L97.0 64.6L98.2 61.0L98.4 53.4L99.1 45.8L101.3 42.2L105.0 44.4L109.0 50.9L112.6 57.5L115.3 60.2L117.5 57.1L120.0 50.0L123.0 43.0L126.3 40.2L129.1 43.5L131.0 50.9L132.3 58.3L134.0 61.7L137.1 59.4L141.6 53.4L146.7 47.7L150.6 46.1L152.3 50.0L151.8 57.6L150.7 65.1L151.3 68.8L155.0 67.7L161.1 63.4L167.7 59.5L172.0 59.2L172.3 63.4L169.5 70.5L166.2 77.3L165.6 81.0L169.4 81.0L176.6 78.9L184.1 77.2L188.2 78.2L187.2 82.3L182.4 88.2L177.1 93.7L175.4 97.0L179.0 98.2L186.6 98.4L194.2 99.1L197.8 101.3L195.6 105.0L189.1 109.0L182.5 112.6L179.8 115.3L182.9 117.5L190.0 120.0ZM198.7 120.0L199.6 123.1L194.8 125.9L186.9 127.9L180.6 129.6L179.2 131.8L183.2 135.2L189.9 139.7L194.8 144.3L194.7 147.6L189.3 148.7L181.2 148.2L174.7 147.8L172.6 149.5L175.4 154.0L180.4 160.3L183.6 166.2L182.6 169.3L177.0 168.7L169.5 165.8L163.4 163.4L161.0 164.3L162.2 169.4L164.9 177.0L166.2 183.6L164.3 186.2L159.2 183.9L152.9 178.8L147.8 174.7L145.3 174.8L144.9 180.1L145.1 188.1L144.3 194.8L141.6 196.7L137.5 192.9L133.2 186.1L129.6 180.6L127.1 179.9L125.1 184.8L122.8 192.5L120.0 198.7L116.9 199.6L114.1 194.8L112.1 186.9L110.4 180.6L108.2 179.2L104.8 183.2L100.3 189.9L95.7 194.8L92.4 194.7L91.3 189.3L91.8 181.2L92.2 174.7L90.5 172.6L86.0 175.4L79.7 180.4L73.8 183.6L70.7 182.6L71.3 177.0L74.2 169.5L76.6 163.4L75.7 161.0L70.6 162.2L63.0 164.9L56.4 166.2L53.8 164.3L56.1 159.2L61.2 152.9L65.3 147.8L65.2 145.3L59.9 144.9L51.9 145.1L45.2 144.3L43.3 141.6L47.1 137.5L53.9 133.2L59.4 129.6L60.1 127.1L55.2 125.1L47.5 122.8L41.3 120.0L40.4 116.9L45.2 114.1L53.1 112.1L59.4 110.4L60.8 108.2L56.8 104.8L50.1 100.3L45.2 95.7L45.3 92.4L50.7 91.3L58.8 91.8L65.3 92.2L67.4 90.5L64.6 86.0L59.6 79.7L56.4 73.8L57.4 70.7L63.0 71.3L70.5 74.2L76.6 76.6L79.0 75.7L77.8 70.6L75.1 63.0L73.8 56.4L75.7 53.8L80.8 56.1L87.1 61.2L92.2 65.3L94.7 65.2L95.1 59.9L94.9 51.9L95.7 45.2L98.4 43.3L102.5 47.1L106.8 53.9L110.4 59.4L112.9 60.1L114.9 55.2L117.2 47.5L120.0 41.3L123.1 40.4L125.9 45.2L127.9 53.1L129.6 59.4L131.8 60.8L135.2 56.8L139.7 50.1L144.3 45.2L147.6 45.3L148.7 50.7L148.2 58.8L147.8 65.3L149.5 67.4L154.0 64.6L160.3 59.6L166.2 56.4L169.3 57.4L168.7 63.0L165.8 70.5L163.4 76.6L164.3 79.0L169.4 77.8L177.0 75.1L183.6 73.8L186.2 75.7L183.9 80.8L178.8 87.1L174.7 92.2L174.8 94.7L180.1 95.1L188.1 94.9L194.8 95.7L196.7 98.4L192.9 102.5L186.1 106.8L180.6 110.4L179.9 112.9L184.8 114.9L192.5 117.2L198.7 120.0ZM198.7 120.0L192.5 122.8L184.8 125.1L179.9 127.1L180.6 129.6L186.1 133.2L192.9 137.5L196.7 141.6L194.8 144.3L188.1 145.1L180.1 144.9L174.8 145.3L174.7 147.8L178.8 152.9L183.9 159.2L186.2 164.3L183.6 166.2L177.0 164.9L169.4 162.2L164.3 161.0L163.4 163.4L165.8 169.5L168.7 177.0L169.3 182.6L166.2 183.6L160.3 180.4L154.0 175.4L149.5 172.6L147.8 174.7L148.2 181.2L148.7 189.3L147.6 194.7L144.3 194.8L139.7 189.9L135.2 183.2L131.8 179.2L129.6 180.6L127.9 186.9L125.9 194.8L123.1 199.6L120.0 198.7L117.2 192.5L114.9 184.8L112.9 179.9L110.4 180.6L106.8 186.1L102.5 192.9L98.4 196.7L95.7 194.8L94.9 188.1L95.1 180.1L94.7 174.8L92.2 174.7L87.1 178.8L80.8 183.9L75.7 186.2L73.8 183.6L75.1 177.0L77.8 169.4L79.0 164.3L76.6 163.4L70.5 165.8L63.0 168.7L57.4 169.3L56.4 166.2L59.6 160.3L64.6 154.0L67.4 149.5L65.3 147.8L58.8 148.2L50.7 148.7L45.3 147.6L45.2 144.3L50.1 139.7L56.8 135.2L60.8 131.8L59.4 129.6L53.1 127.9L45.2 125.9L40.4 123.1L41.3 120.0L47.5 117.2L55.2 114.9L60.1 112.9L59.4 110.4L53.9 106.8L47.1 102.5L43.3 98.4L45.2 95.7L51.9 94.9L59.9 95.1L65.2 94.7L65.3 92.2L61.2 87.1L56.1 80.8L53.8 75.7L56.4 73.8L63.0 75.1L70.6 77.8L75.7 79.0L76.6 76.6L74.2 70.5L71.3 63.0L70.7 57.4L73.8 56.4L79.7 59.6L86.0 64.6L90.5 67.4L92.2 65.3L91.8 58.8L91.3 50.7L92.4 45.3L95.7 45.2L100.3 50.1L104.8 56.8L108.2 60.8L110.4 59.4L112.1 53.1L114.1 45.2L116.9 40.4L120.0 41.3L122.8 47.5L125.1 55.2L127.1 60.1L129.6 59.4L133.2 53.9L137.5 47.1L141.6 43.3L144.3 45.2L145.1 51.9L144.9 59.9L145.3 65.2L147.8 65.3L152.9 61.2L159.2 56.1L164.3 53.8L166.2 56.4L164.9 63.0L162.2 70.6L161.0 75.7L163.4 76.6L169.5 74.2L177.0 71.3L182.6 70.7L183.6 73.8L180.4 79.7L175.4 86.0L172.6 90.5L174.7 92.2L181.2 91.8L189.3 91.3L194.7 92.4L194.8 95.7L189.9 100.3L183.2 104.8L179.2 108.2L180.6 110.4L186.9 112.1L194.8 114.1L199.6 116.9L198.7 120.0ZM190.0 120.0L182.9 122.5L179.8 124.7L182.5 127.4L189.1 131.0L195.6 135.0L197.8 138.7L194.2 140.9L186.6 141.6L179.0 141.8L175.4 143.0L177.1 146.3L182.4 151.8L187.2 157.7L188.2 161.8L184.1 162.8L176.6 161.1L169.4 159.0L165.6 159.0L166.2 162.7L169.5 169.5L172.3 176.6L172.0 180.8L167.7 180.5L161.1 176.6L155.0 172.3L151.3 171.2L150.7 174.9L151.8 182.4L152.3 190.0L150.6 193.9L146.7 192.3L141.6 186.6L137.1 180.6L134.0 178.3L132.3 181.7L131.0 189.1L129.1 196.5L126.3 199.8L123.0 197.0L120.0 190.0L117.5 182.9L115.3 179.8L112.6 182.5L109.0 189.1L105.0 195.6L101.3 197.8L99.1 194.2L98.4 186.6L98.2 179.0L97.0 175.4L93.7 177.1L88.2 182.4L82.3 187.2L78.2 188.2L77.2 184.1L78.9 176.6L81.0 169.4L81.0 165.6L77.3 166.2L70.5 169.5L63.4 172.3L59.2 172.0L59.5 167.7L63.4 161.1L67.7 155.0L68.8 151.3L65.1 150.7L57.6 151.8L50.0 152.3L46.1 150.6L47.7 146.7L53.4 141.6L59.4 137.1L61.7 134.0L58.3 132.3L50.9 131.0L43.5 129.1L40.2 126.3L43.0 123.0L50.0 120.0L57.1 117.5L60.2 115.3L57.5 112.6L50.9 109.0L44.4 105.0L42.2 101.3L45.8 99.1L53.4 98.4L61.0 98.2L64.6 97.0L62.9 93.7L57.6 88.2L52.8 82.3L51.8 78.2L55.9 77.2L63.4 78.9L70.6 81.0L74.4 81.0L73.8 77.3L70.5 70.5L67.7 63.4L68.0 59.2L72.3 59.5L78.9 63.4L85.0 67.7L88.7 68.8L89.3 65.1L88.2 57.6L87.7 50.0L89.4 46.1L93.3 47.7L98.4 53.4L102.9 59.4L106.0 61.7L107.7 58.3L109.0 50.9L110.9 43.5L113.7 40.2L117.0 43.0L120.0 50.0L122.5 57.1L124.7 60.2L127.4 57.5L131.0 50.9L135.0 44.4L138.7 42.2L140.9 45.8L141.6 53.4L141.8 61.0L143.0 64.6L146.3 62.9L151.8 57.6L157.7 52.8L161.8 51.8L162.8 55.9L161.1 63.4L159.0 70.6L159.0 74.4L162.7 73.8L169.5 70.5L176.6 67.7L180.8 68.0L180.5 72.3L176.6 78.9L172.3 85.0L171.2 88.7L174.9 89.3L182.4 88.2L190.0 87.7L193.9 89.4L192.3 93.3L186.6 98.4L180.6 102.9L178.3 106.0L181.7 107.7L189.1 109.0L196.5 110.9L199.8 113.7L197.0 117.0L190.0 120.0ZM181.3 120.0L180.3 122.4L184.8 125.1L192.1 128.5L197.7 132.3L198.1 135.5L192.9 137.5L184.9 138.3L178.3 139.0L176.6 140.9L180.1 144.9L185.9 150.4L190.1 155.7L189.5 158.9L183.9 159.2L176.1 157.5L169.6 156.1L167.4 157.4L169.4 162.2L173.3 169.3L175.6 175.6L174.1 178.5L168.7 177.0L161.7 172.9L156.1 169.6L153.5 170.2L154.0 175.4L155.5 183.3L155.7 190.1L153.4 192.3L148.7 189.3L143.3 183.2L139.0 178.3L136.4 178.1L135.2 183.2L134.2 191.2L132.3 197.7L129.4 199.1L125.9 194.8L122.6 187.4L120.0 181.3L117.6 180.3L114.9 184.8L111.5 192.1L107.7 197.7L104.5 198.1L102.5 192.9L101.7 184.9L101.0 178.3L99.1 176.6L95.1 180.1L89.6 185.9L84.3 190.1L81.1 189.5L80.8 183.9L82.5 176.1L83.9 169.6L82.6 167.4L77.8 169.4L70.7 173.3L64.4 175.6L61.5 174.1L63.0 168.7L67.1 161.7L70.4 156.1L69.8 153.5L64.6 154.0L56.7 155.5L49.9 155.7L47.7 153.4L50.7 148.7L56.8 143.3L61.7 139.0L61.9 136.4L56.8 135.2L48.8 134.2L42.3 132.3L40.9 129.4L45.2 125.9L52.6 122.6L58.7 120.0L59.7 117.6L55.2 114.9L47.9 111.5L42.3 107.7L41.9 104.5L47.1 102.5L55.1 101.7L61.7 101.0L63.4 99.1L59.9 95.1L54.1 89.6L49.9 84.3L50.5 81.1L56.1 80.8L63.9 82.5L70.4 83.9L72.6 82.6L70.6 77.8L66.7 70.7L64.4 64.4L65.9 61.5L71.3 63.0L78.3 67.1L83.9 70.4L86.5 69.8L86.0 64.6L84.5 56.7L84.3 49.9L86.6 47.7L91.3 50.7L96.7 56.8L101.0 61.7L103.6 61.9L104.8 56.8L105.8 48.8L107.7 42.3L110.6 40.9L114.1 45.2L117.4 52.6L120.0 58.7L122.4 59.7L125.1 55.2L128.5 47.9L132.3 42.3L135.5 41.9L137.5 47.1L138.3 55.1L139.0 61.7L140.9 63.4L144.9 59.9L150.4 54.1L155.7 49.9L158.9 50.5L159.2 56.1L157.5 63.9L156.1 70.4L157.4 72.6L162.2 70.6L169.3 66.7L175.6 64.4L178.5 65.9L177.0 71.3L172.9 78.3L169.6 83.9L170.2 86.5L175.4 86.0L183.3 84.5L190.1 84.3L192.3 86.6L189.3 91.3L183.2 96.7L178.3 101.0L178.1 103.6L183.2 104.8L191.2 105.8L197.7 107.7L199.1 110.6L194.8 114.1L187.4 117.4L181.3 120.0ZM181.3 120.0L187.4 122.6L194.8 125.9L199.1 129.4L197.7 132.3L191.2 134.2L183.2 135.2L178.1 136.4L178.3 139.0L183.2 143.3L189.3 148.7L192.3 153.4L190.1 155.7L183.3 155.5L175.4 154.0L170.2 153.5L169.6 156.1L172.9 161.7L177.0 168.7L178.5 174.1L175.6 175.6L169.3 173.3L162.2 169.4L157.4 167.4L156.1 169.6L157.5 176.1L159.2 183.9L158.9 189.5L155.7 190.1L150.4 185.9L144.9 180.1L140.9 176.6L139.0 178.3L138.3 184.9L137.5 192.9L135.5 198.1L132.3 197.7L128.5 192.1L125.1 184.8L122.4 180.3L120.0 181.3L117.4 187.4L114.1 194.8L110.6 199.1L107.7 197.7L105.8 191.2L104.8 183.2L103.6 178.1L101.0 178.3L96.7 183.2L91.3 189.3L86.6 192.3L84.3 190.1L84.5 183.3L86.0 175.4L86.5 170.2L83.9 169.6L78.3 172.9L71.3 177.0L65.9 178.5L64.4 175.6L66.7 169.3L70.6 162.2L72.6 157.4L70.4 156.1L63.9 157.5L56.1 159.2L50.5 158.9L49.9 155.7L54.1 150.4L59.9 144.9L63.4 140.9L61.7 139.0L55.1 138.3L47.1 137.5L41.9 135.5L42.3 132.3L47.9 128.5L55.2 125.1L59.7 122.4L58.7 120.0L52.6 117.4L45.2 114.1L40.9 110.6L42.3 107.7L48.8 105.8L56.8 104.8L61.9 103.6L61.7 101.0L56.8 96.7L50.7 91.3L47.7 86.6L49.9 84.3L56.7 84.5L64.6 86.0L69.8 86.5L70.4 83.9L67.1 78.3L63.0 71.3L61.5 65.9L64.4 64.4L70.7 66.7L77.8 70.6L82.6 72.6L83.9 70.4L82.5 63.9L80.8 56.1L81.1 50.5L84.3 49.9L89.6 54.1L95.1 59.9L99.1 63.4L101.0 61.7L101.7 55.1L102.5 47.1L104.5 41.9L107.7 42.3L111.5 47.9L114.9 55.2L117.6 59.7L120.0 58.7L122.6 52.6L125.9 45.2L129.4 40.9L132.3 42.3L134.2 48.8L135.2 56.8L136.4 61.9L139.0 61.7L143.3 56.8L148.7 50.7L153.4 47.7L155.7 49.9L155.5 56.7L154.0 64.6L153.5 69.8L156.1 70.4L161.7 67.1L168.7 63.0L174.1 61.5L175.6 64.4L173.3 70.7L169.4 77.8L167.4 82.6L169.6 83.9L176.1 82.5L183.9 80.8L189.5 81.1L190.1 84.3L185.9 89.6L180.1 95.1L176.6 99.1L178.3 101.0L184.9 101.7L192.9 102.5L198.1 104.5L197.7 107.7L192.1 111.5L184.8 114.9L180.3 117.6L181.3 120.0Z"/>
+    <circle cx="120" cy="120" r="56" fill="var(--color-bg-surface)" stroke="currentColor" stroke-width="0.75"/>
+    <text x="120" y="133" text-anchor="middle" font-family="Libre Caslon Display, serif" font-size="40" fill="currentColor">H<tspan font-family="Libre Caslon Text, serif" font-style="italic" font-size="34" dx="1" dy="-1">&amp;</tspan><tspan dx="1" dy="1">V</tspan></text>
+  </svg>
+          <div>
+          <div class="record-head caps"><span>The Record</span><span>2026 Term</span></div>
+          <ol class="ledger">
+            <li><span class="case">Castellan Re v. Meridian Holdings</span><span class="meta">No. 24-1187 &middot; 2d Cir.</span><span class="tag tag-reversed">Reversed</span></li>
+            <li><span class="case">In re Ashford Freight Securities</span><span class="meta">No. 25-0412 &middot; 3d Cir.</span><span class="tag tag-affirmed">Affirmed</span></li>
+            <li><span class="case">Okafor Logistics v. State of New York</span><span class="meta">Index 651190 &middot; App. Div. 1st Dept.</span><span class="tag tag-reversed">Reversed</span></li>
+            <li><span class="case">Lindqvist v. Halvorsen Marine</span><span class="meta">No. 25-2031 &middot; 9th Cir.</span><span class="tag tag-argued">Argued</span></li>
+          </ol>
+          <div class="tally">
+            <span class="num">32<small>&thinsp;/41</small></span>
+            <p>appellate arguments decided for our clients since 2021.<sup>1</sup></p>
+          </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="palette-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">ii.</span><h2 id="palette-t">Palette</h2><p>A law library, not a bank: ink, vellum and one red used like sealing wax.</p></div>
+    <ul class="swatches">
+      <li class="swatch"><div class="chip" style="background:#F3EFE6"><span style="color:#17150F">Aa</span></div><div class="info"><span class="role">bg-canvas</span><b>Vellum</b>#F3EFE6<br>oklch(0.95 0.013 87)<span class="ratio">Ink on it 15.90:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#FBF9F4"><span style="color:#5B554A">Aa</span></div><div class="info"><span class="role">bg-surface</span><b>Bond</b>#FBF9F4<br>oklch(0.98 0.007 89)<span class="ratio">Docket gray on it 7.02:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#17150F"><span style="color:#F3EFE6">Aa</span></div><div class="info"><span class="role">fg-default</span><b>Iron-gall ink</b>#17150F<br>oklch(0.20 0.012 92)<span class="ratio">On Vellum 15.90:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#5B554A"><span style="color:#FBF9F4">Aa</span></div><div class="info"><span class="role">fg-muted</span><b>Docket gray</b>#5B554A<br>oklch(0.45 0.019 83)<span class="ratio">On Vellum 6.44:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#862519"><span style="color:#FBF9F4">Aa</span></div><div class="info"><span class="role">accent-default</span><b>Sealing wax</b>#862519<br>oklch(0.42 0.134 30)<span class="ratio">On Vellum 7.98:1 &middot; Bond on it 8.71:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#1F2B24"><span style="color:#C9B27A">Aa</span></div><div class="info"><span class="role">bg-inverse</span><b>Library green</b>#1F2B24<br>oklch(0.28 0.021 159)<span class="ratio">Vellum on it 12.80:1</span></div></li>
+      <li class="swatch"><div class="chip" style="background:#C9B27A"><span style="color:#1F2B24">Aa</span></div><div class="info"><span class="role">accent on inverse</span><b>Brass</b>#C9B27A<br>oklch(0.77 0.078 88)<span class="ratio">On Library green 7.09:1 &middot; never on Vellum (1.81:1)</span></div></li>
+    </ul>
+    <div class="proportion" aria-hidden="true"><span style="flex:52;background:#F3EFE6"></span><span style="flex:22;background:#FBF9F4"></span><span style="flex:14;background:#17150F"></span><span style="flex:7;background:#1F2B24"></span><span style="flex:4;background:#862519"></span><span style="flex:1;background:#C9B27A"></span></div>
+    <p class="proportion-note">Proportion: vellum and bond about 74%, ink 14%, library green 7%, sealing wax 4% (rules, the ampersand, one action per view), brass 1% and only on green. Text-safe brass on vellum is #6E5A2A (5.79:1).</p>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">iii.</span><h2 id="type-t">Type</h2><p>One Caslon family in two optical cuts. Hierarchy comes from size and italic, never from a second typeface.</p></div>
+    <div class="spec-row">
+      <p class="t-display">The appeal is won in the <em>record</em>.</p>
+      <div class="spec-meta"><b>Display</b>Libre Caslon Display 400 (OFL)<br>clamp(48px, 6.6vw, 96px) / 0.95<br>Tracking &minus;0.02em; italic accent from Libre Caslon Text Italic<br>Only above 40px; the hairlines break up below that.</div>
+    </div>
+    <div class="spec-row">
+      <div>
+        <p class="t-body">An appeal is not a second trial. The court reads the record that was made below, and the brief tells it what that record means. We are retained early, while that record is still being written, so that the questions that decide a case are preserved, briefed and argued by the same partner.</p>
+        <p class="t-body">Our associates draft; our partners argue. Clients receive a written assessment of the appeal within ten business days of instruction.</p>
+      </div>
+      <div class="spec-meta"><b>Body</b>Libre Caslon Text 400, 400 italic, 700 (OFL)<br>19px / 1.6 (30.4px), measure 62ch<br>Old-style figures in prose; lining tabular figures in the ledger, docket numbers and forms. Paragraph indent 1.5em, no space between.</div>
+    </div>
+    <div class="spec-row">
+      <div>
+        <p class="t-caption">Exhibit 4 &middot; Brief for appellant, filed 14 March 2026</p>
+        <p class="t-cap2">Footnotes, captions and legal notices: 13px italic, Docket gray.</p>
+        <p class="alphabet" aria-hidden="true">ABCDEFGHIJKLM &amp; abcdefghijklm 0123456789 &sect; &para;</p>
+      </div>
+      <div class="spec-meta"><b>Caption and label</b>Libre Caslon Text 700, uppercase<br>12px / 1.5, tracking +0.12em<br>Used for navigation, labels, tags and buttons. Never for sentences.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="components-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">iv.</span><h2 id="components-t">Components</h2><p>Square corners, ruled inputs and one filled action per view.</p></div>
+    <div class="comp-grid">
+      <div class="panel p-buttons">
+        <span class="caps">Buttons</span>
+        <div class="btn-stack">
+          <button class="btn btn-primary" type="button">Request a conflicts check</button>
+          <button class="btn btn-secondary" type="button">Download the brief</button>
+          <button class="btn btn-primary" type="button" disabled>Submitted</button>
+          <button class="btn btn-primary is-focus" type="button">Focus state</button>
+          <p class="note">Focus: 2px ink outline, 3px offset, wax hairline outside. Tab through this page to see it live.</p>
+        </div>
+      </div>
+      <form class="panel p-form" onsubmit="return false" novalidate>
+        <span class="caps">Conflicts check</span>
+        <div class="field">
+          <label for="hv-matter">Parties to the matter</label>
+          <span class="hint" id="hv-matter-hint">Names of every party, so we can confirm we have no conflict. Do not describe the facts yet.</span>
+          <textarea id="hv-matter" aria-describedby="hv-matter-hint">Castellan Re; Meridian Holdings LLC</textarea>
+        </div>
+        <div class="field is-error">
+          <label for="hv-email">Email for a partner&rsquo;s reply</label>
+          <input id="hv-email" type="email" value="m.okafor@meridian" aria-invalid="true" aria-describedby="hv-email-err">
+          <span class="error" id="hv-email-err"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.25"/><path d="M9 4.5v6M9 12.5v1.5" stroke="currentColor" stroke-width="1.5"/></svg>This address is missing its domain ending, such as .com. A partner replies within one business day.</span>
+        </div>
+      </form>
+      <article class="panel p-card" aria-label="Counsel card">
+        <span class="caps">Counsel card</span>
+        <div class="counsel">
+          <div class="portrait" role="img" aria-label="Portrait placeholder: monogram EV until the black-and-white eye-level portrait is shot"><b>EV</b><small>Portrait<br>to come</small></div>
+          <div>
+            <h3>Eleanor Vance</h3>
+            <p class="role">Partner, chair of the appellate practice</p>
+            <dl>
+              <dt>Argued</dt><dd>41 appeals in five circuits and the New York Court of Appeals</dd>
+              <dt>Admitted</dt><dd>New York; District of Columbia; U.S. Supreme Court</dd>
+              <dt>Clerked</dt><dd>U.S. Court of Appeals for the Second Circuit</dd>
+            </dl>
+            <a class="textlink" href="#components">Read Eleanor&rsquo;s record <svg viewBox="0 0 22 10" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.25"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <div class="panel p-tags">
+        <span class="caps">Tags and list items</span>
+        <div class="tag-list">
+          <span class="tag tag-reversed">Reversed</span>
+          <span class="tag tag-affirmed">Affirmed</span>
+          <span class="tag tag-argued">Argued</span>
+          <span class="tag tag-pending">Pending decision</span>
+        </div>
+        <a class="list-item" href="#components"><span class="n">1</span><span class="t">Preserving the issue at trial<small>Insight &middot; 9 min read</small></span><span class="tag tag-argued">Note</span></a>
+        <a class="list-item" href="#components"><span class="n">2</span><span class="t">What the Second Circuit asked in May<small>Insight &middot; 6 min read</small></span><span class="tag tag-argued">Note</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="applications-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">v.</span><h2 id="applications-t">Applications</h2><p>The appeals page on a phone, and the card a partner hands across the table.</p></div>
+    <div class="apps">
+      <div>
+        <div class="phone" role="img" aria-label="Mobile appeals page: headline Reversal is a craft, a short paragraph, a Request a conflicts check button and three recent outcomes">
+          <div class="phone-screen">
+            <div class="m-bar"><span class="wordmark">Harlow <span class="amp">&amp;</span> Vance</span><span class="m-burger" aria-hidden="true"><span></span><span></span><span></span></span></div>
+            <div class="m-pleading">
+              <ol aria-hidden="true"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li></ol>
+              <div class="m-body">
+                <span class="caps">&sect; Appeals</span>
+                <h4>Reversal is a <em>craft.</em></h4>
+                <p>Most appeals are lost in the trial record. We join early, preserve the questions that matter and argue them ourselves.</p>
+                <span class="btn btn-primary">Request a conflicts check</span>
+                <ul class="m-ledger">
+                  <li>Castellan Re v. Meridian <span class="tag tag-reversed">Reversed</span></li>
+                  <li>In re Ashford Freight <span class="tag tag-affirmed">Affirmed</span></li>
+                  <li>Okafor Logistics v. State <span class="tag tag-reversed">Reversed</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="app-caption">Appeals practice page, 390px. Pleading margin narrows to 28px but stays.</p>
+      </div>
+      <div class="cards">
+        <div class="bcard bcard-front" role="img" aria-label="Business card front: brass seal on library green">
+          <svg class="seal-sm" viewBox="0 0 240 240" aria-hidden="true">
+            <defs><path id="sealpath2" d="M120 120 m-97 0 a97 97 0 1 1 194 0 a97 97 0 1 1 -194 0"/></defs>
+            <circle cx="120" cy="120" r="116" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="120" cy="120" r="84" fill="none" stroke="currentColor" stroke-width="0.75"/>
+            <text font-family="Libre Caslon Text, serif" font-weight="700" font-size="11.5" letter-spacing="3.1" fill="currentColor"><textPath href="#sealpath2">HARLOW &amp; VANCE &#183; COUNSEL AT LAW &#183; NEW YORK &#183; MCMXCVIII &#183;</textPath></text>
+            <path fill="none" stroke="currentColor" stroke-width="0.45" d="M190.0 120.0L197.0 123.0L199.8 126.3L196.5 129.1L189.1 131.0L181.7 132.3L178.3 134.0L180.6 137.1L186.6 141.6L192.3 146.7L193.9 150.6L190.0 152.3L182.4 151.8L174.9 150.7L171.2 151.3L172.3 155.0L176.6 161.1L180.5 167.7L180.8 172.0L176.6 172.3L169.5 169.5L162.7 166.2L159.0 165.6L159.0 169.4L161.1 176.6L162.8 184.1L161.8 188.2L157.7 187.2L151.8 182.4L146.3 177.1L143.0 175.4L141.8 179.0L141.6 186.6L140.9 194.2L138.7 197.8L135.0 195.6L131.0 189.1L127.4 182.5L124.7 179.8L122.5 182.9L120.0 190.0L117.0 197.0L113.7 199.8L110.9 196.5L109.0 189.1L107.7 181.7L106.0 178.3L102.9 180.6L98.4 186.6L93.3 192.3L89.4 193.9L87.7 190.0L88.2 182.4L89.3 174.9L88.7 171.2L85.0 172.3L78.9 176.6L72.3 180.5L68.0 180.8L67.7 176.6L70.5 169.5L73.8 162.7L74.4 159.0L70.6 159.0L63.4 161.1L55.9 162.8L51.8 161.8L52.8 157.7L57.6 151.8L62.9 146.3L64.6 143.0L61.0 141.8L53.4 141.6L45.8 140.9L42.2 138.7L44.4 135.0L50.9 131.0L57.5 127.4L60.2 124.7L57.1 122.5L50.0 120.0L43.0 117.0L40.2 113.7L43.5 110.9L50.9 109.0L58.3 107.7L61.7 106.0L59.4 102.9L53.4 98.4L47.7 93.3L46.1 89.4L50.0 87.7L57.6 88.2L65.1 89.3L68.8 88.7L67.7 85.0L63.4 78.9L59.5 72.3L59.2 68.0L63.4 67.7L70.5 70.5L77.3 73.8L81.0 74.4L81.0 70.6L78.9 63.4L77.2 55.9L78.2 51.8L82.3 52.8L88.2 57.6L93.7 62.9L97.0 64.6L98.2 61.0L98.4 53.4L99.1 45.8L101.3 42.2L105.0 44.4L109.0 50.9L112.6 57.5L115.3 60.2L117.5 57.1L120.0 50.0L123.0 43.0L126.3 40.2L129.1 43.5L131.0 50.9L132.3 58.3L134.0 61.7L137.1 59.4L141.6 53.4L146.7 47.7L150.6 46.1L152.3 50.0L151.8 57.6L150.7 65.1L151.3 68.8L155.0 67.7L161.1 63.4L167.7 59.5L172.0 59.2L172.3 63.4L169.5 70.5L166.2 77.3L165.6 81.0L169.4 81.0L176.6 78.9L184.1 77.2L188.2 78.2L187.2 82.3L182.4 88.2L177.1 93.7L175.4 97.0L179.0 98.2L186.6 98.4L194.2 99.1L197.8 101.3L195.6 105.0L189.1 109.0L182.5 112.6L179.8 115.3L182.9 117.5L190.0 120.0ZM198.7 120.0L199.6 123.1L194.8 125.9L186.9 127.9L180.6 129.6L179.2 131.8L183.2 135.2L189.9 139.7L194.8 144.3L194.7 147.6L189.3 148.7L181.2 148.2L174.7 147.8L172.6 149.5L175.4 154.0L180.4 160.3L183.6 166.2L182.6 169.3L177.0 168.7L169.5 165.8L163.4 163.4L161.0 164.3L162.2 169.4L164.9 177.0L166.2 183.6L164.3 186.2L159.2 183.9L152.9 178.8L147.8 174.7L145.3 174.8L144.9 180.1L145.1 188.1L144.3 194.8L141.6 196.7L137.5 192.9L133.2 186.1L129.6 180.6L127.1 179.9L125.1 184.8L122.8 192.5L120.0 198.7L116.9 199.6L114.1 194.8L112.1 186.9L110.4 180.6L108.2 179.2L104.8 183.2L100.3 189.9L95.7 194.8L92.4 194.7L91.3 189.3L91.8 181.2L92.2 174.7L90.5 172.6L86.0 175.4L79.7 180.4L73.8 183.6L70.7 182.6L71.3 177.0L74.2 169.5L76.6 163.4L75.7 161.0L70.6 162.2L63.0 164.9L56.4 166.2L53.8 164.3L56.1 159.2L61.2 152.9L65.3 147.8L65.2 145.3L59.9 144.9L51.9 145.1L45.2 144.3L43.3 141.6L47.1 137.5L53.9 133.2L59.4 129.6L60.1 127.1L55.2 125.1L47.5 122.8L41.3 120.0L40.4 116.9L45.2 114.1L53.1 112.1L59.4 110.4L60.8 108.2L56.8 104.8L50.1 100.3L45.2 95.7L45.3 92.4L50.7 91.3L58.8 91.8L65.3 92.2L67.4 90.5L64.6 86.0L59.6 79.7L56.4 73.8L57.4 70.7L63.0 71.3L70.5 74.2L76.6 76.6L79.0 75.7L77.8 70.6L75.1 63.0L73.8 56.4L75.7 53.8L80.8 56.1L87.1 61.2L92.2 65.3L94.7 65.2L95.1 59.9L94.9 51.9L95.7 45.2L98.4 43.3L102.5 47.1L106.8 53.9L110.4 59.4L112.9 60.1L114.9 55.2L117.2 47.5L120.0 41.3L123.1 40.4L125.9 45.2L127.9 53.1L129.6 59.4L131.8 60.8L135.2 56.8L139.7 50.1L144.3 45.2L147.6 45.3L148.7 50.7L148.2 58.8L147.8 65.3L149.5 67.4L154.0 64.6L160.3 59.6L166.2 56.4L169.3 57.4L168.7 63.0L165.8 70.5L163.4 76.6L164.3 79.0L169.4 77.8L177.0 75.1L183.6 73.8L186.2 75.7L183.9 80.8L178.8 87.1L174.7 92.2L174.8 94.7L180.1 95.1L188.1 94.9L194.8 95.7L196.7 98.4L192.9 102.5L186.1 106.8L180.6 110.4L179.9 112.9L184.8 114.9L192.5 117.2L198.7 120.0ZM198.7 120.0L192.5 122.8L184.8 125.1L179.9 127.1L180.6 129.6L186.1 133.2L192.9 137.5L196.7 141.6L194.8 144.3L188.1 145.1L180.1 144.9L174.8 145.3L174.7 147.8L178.8 152.9L183.9 159.2L186.2 164.3L183.6 166.2L177.0 164.9L169.4 162.2L164.3 161.0L163.4 163.4L165.8 169.5L168.7 177.0L169.3 182.6L166.2 183.6L160.3 180.4L154.0 175.4L149.5 172.6L147.8 174.7L148.2 181.2L148.7 189.3L147.6 194.7L144.3 194.8L139.7 189.9L135.2 183.2L131.8 179.2L129.6 180.6L127.9 186.9L125.9 194.8L123.1 199.6L120.0 198.7L117.2 192.5L114.9 184.8L112.9 179.9L110.4 180.6L106.8 186.1L102.5 192.9L98.4 196.7L95.7 194.8L94.9 188.1L95.1 180.1L94.7 174.8L92.2 174.7L87.1 178.8L80.8 183.9L75.7 186.2L73.8 183.6L75.1 177.0L77.8 169.4L79.0 164.3L76.6 163.4L70.5 165.8L63.0 168.7L57.4 169.3L56.4 166.2L59.6 160.3L64.6 154.0L67.4 149.5L65.3 147.8L58.8 148.2L50.7 148.7L45.3 147.6L45.2 144.3L50.1 139.7L56.8 135.2L60.8 131.8L59.4 129.6L53.1 127.9L45.2 125.9L40.4 123.1L41.3 120.0L47.5 117.2L55.2 114.9L60.1 112.9L59.4 110.4L53.9 106.8L47.1 102.5L43.3 98.4L45.2 95.7L51.9 94.9L59.9 95.1L65.2 94.7L65.3 92.2L61.2 87.1L56.1 80.8L53.8 75.7L56.4 73.8L63.0 75.1L70.6 77.8L75.7 79.0L76.6 76.6L74.2 70.5L71.3 63.0L70.7 57.4L73.8 56.4L79.7 59.6L86.0 64.6L90.5 67.4L92.2 65.3L91.8 58.8L91.3 50.7L92.4 45.3L95.7 45.2L100.3 50.1L104.8 56.8L108.2 60.8L110.4 59.4L112.1 53.1L114.1 45.2L116.9 40.4L120.0 41.3L122.8 47.5L125.1 55.2L127.1 60.1L129.6 59.4L133.2 53.9L137.5 47.1L141.6 43.3L144.3 45.2L145.1 51.9L144.9 59.9L145.3 65.2L147.8 65.3L152.9 61.2L159.2 56.1L164.3 53.8L166.2 56.4L164.9 63.0L162.2 70.6L161.0 75.7L163.4 76.6L169.5 74.2L177.0 71.3L182.6 70.7L183.6 73.8L180.4 79.7L175.4 86.0L172.6 90.5L174.7 92.2L181.2 91.8L189.3 91.3L194.7 92.4L194.8 95.7L189.9 100.3L183.2 104.8L179.2 108.2L180.6 110.4L186.9 112.1L194.8 114.1L199.6 116.9L198.7 120.0ZM190.0 120.0L182.9 122.5L179.8 124.7L182.5 127.4L189.1 131.0L195.6 135.0L197.8 138.7L194.2 140.9L186.6 141.6L179.0 141.8L175.4 143.0L177.1 146.3L182.4 151.8L187.2 157.7L188.2 161.8L184.1 162.8L176.6 161.1L169.4 159.0L165.6 159.0L166.2 162.7L169.5 169.5L172.3 176.6L172.0 180.8L167.7 180.5L161.1 176.6L155.0 172.3L151.3 171.2L150.7 174.9L151.8 182.4L152.3 190.0L150.6 193.9L146.7 192.3L141.6 186.6L137.1 180.6L134.0 178.3L132.3 181.7L131.0 189.1L129.1 196.5L126.3 199.8L123.0 197.0L120.0 190.0L117.5 182.9L115.3 179.8L112.6 182.5L109.0 189.1L105.0 195.6L101.3 197.8L99.1 194.2L98.4 186.6L98.2 179.0L97.0 175.4L93.7 177.1L88.2 182.4L82.3 187.2L78.2 188.2L77.2 184.1L78.9 176.6L81.0 169.4L81.0 165.6L77.3 166.2L70.5 169.5L63.4 172.3L59.2 172.0L59.5 167.7L63.4 161.1L67.7 155.0L68.8 151.3L65.1 150.7L57.6 151.8L50.0 152.3L46.1 150.6L47.7 146.7L53.4 141.6L59.4 137.1L61.7 134.0L58.3 132.3L50.9 131.0L43.5 129.1L40.2 126.3L43.0 123.0L50.0 120.0L57.1 117.5L60.2 115.3L57.5 112.6L50.9 109.0L44.4 105.0L42.2 101.3L45.8 99.1L53.4 98.4L61.0 98.2L64.6 97.0L62.9 93.7L57.6 88.2L52.8 82.3L51.8 78.2L55.9 77.2L63.4 78.9L70.6 81.0L74.4 81.0L73.8 77.3L70.5 70.5L67.7 63.4L68.0 59.2L72.3 59.5L78.9 63.4L85.0 67.7L88.7 68.8L89.3 65.1L88.2 57.6L87.7 50.0L89.4 46.1L93.3 47.7L98.4 53.4L102.9 59.4L106.0 61.7L107.7 58.3L109.0 50.9L110.9 43.5L113.7 40.2L117.0 43.0L120.0 50.0L122.5 57.1L124.7 60.2L127.4 57.5L131.0 50.9L135.0 44.4L138.7 42.2L140.9 45.8L141.6 53.4L141.8 61.0L143.0 64.6L146.3 62.9L151.8 57.6L157.7 52.8L161.8 51.8L162.8 55.9L161.1 63.4L159.0 70.6L159.0 74.4L162.7 73.8L169.5 70.5L176.6 67.7L180.8 68.0L180.5 72.3L176.6 78.9L172.3 85.0L171.2 88.7L174.9 89.3L182.4 88.2L190.0 87.7L193.9 89.4L192.3 93.3L186.6 98.4L180.6 102.9L178.3 106.0L181.7 107.7L189.1 109.0L196.5 110.9L199.8 113.7L197.0 117.0L190.0 120.0ZM181.3 120.0L180.3 122.4L184.8 125.1L192.1 128.5L197.7 132.3L198.1 135.5L192.9 137.5L184.9 138.3L178.3 139.0L176.6 140.9L180.1 144.9L185.9 150.4L190.1 155.7L189.5 158.9L183.9 159.2L176.1 157.5L169.6 156.1L167.4 157.4L169.4 162.2L173.3 169.3L175.6 175.6L174.1 178.5L168.7 177.0L161.7 172.9L156.1 169.6L153.5 170.2L154.0 175.4L155.5 183.3L155.7 190.1L153.4 192.3L148.7 189.3L143.3 183.2L139.0 178.3L136.4 178.1L135.2 183.2L134.2 191.2L132.3 197.7L129.4 199.1L125.9 194.8L122.6 187.4L120.0 181.3L117.6 180.3L114.9 184.8L111.5 192.1L107.7 197.7L104.5 198.1L102.5 192.9L101.7 184.9L101.0 178.3L99.1 176.6L95.1 180.1L89.6 185.9L84.3 190.1L81.1 189.5L80.8 183.9L82.5 176.1L83.9 169.6L82.6 167.4L77.8 169.4L70.7 173.3L64.4 175.6L61.5 174.1L63.0 168.7L67.1 161.7L70.4 156.1L69.8 153.5L64.6 154.0L56.7 155.5L49.9 155.7L47.7 153.4L50.7 148.7L56.8 143.3L61.7 139.0L61.9 136.4L56.8 135.2L48.8 134.2L42.3 132.3L40.9 129.4L45.2 125.9L52.6 122.6L58.7 120.0L59.7 117.6L55.2 114.9L47.9 111.5L42.3 107.7L41.9 104.5L47.1 102.5L55.1 101.7L61.7 101.0L63.4 99.1L59.9 95.1L54.1 89.6L49.9 84.3L50.5 81.1L56.1 80.8L63.9 82.5L70.4 83.9L72.6 82.6L70.6 77.8L66.7 70.7L64.4 64.4L65.9 61.5L71.3 63.0L78.3 67.1L83.9 70.4L86.5 69.8L86.0 64.6L84.5 56.7L84.3 49.9L86.6 47.7L91.3 50.7L96.7 56.8L101.0 61.7L103.6 61.9L104.8 56.8L105.8 48.8L107.7 42.3L110.6 40.9L114.1 45.2L117.4 52.6L120.0 58.7L122.4 59.7L125.1 55.2L128.5 47.9L132.3 42.3L135.5 41.9L137.5 47.1L138.3 55.1L139.0 61.7L140.9 63.4L144.9 59.9L150.4 54.1L155.7 49.9L158.9 50.5L159.2 56.1L157.5 63.9L156.1 70.4L157.4 72.6L162.2 70.6L169.3 66.7L175.6 64.4L178.5 65.9L177.0 71.3L172.9 78.3L169.6 83.9L170.2 86.5L175.4 86.0L183.3 84.5L190.1 84.3L192.3 86.6L189.3 91.3L183.2 96.7L178.3 101.0L178.1 103.6L183.2 104.8L191.2 105.8L197.7 107.7L199.1 110.6L194.8 114.1L187.4 117.4L181.3 120.0ZM181.3 120.0L187.4 122.6L194.8 125.9L199.1 129.4L197.7 132.3L191.2 134.2L183.2 135.2L178.1 136.4L178.3 139.0L183.2 143.3L189.3 148.7L192.3 153.4L190.1 155.7L183.3 155.5L175.4 154.0L170.2 153.5L169.6 156.1L172.9 161.7L177.0 168.7L178.5 174.1L175.6 175.6L169.3 173.3L162.2 169.4L157.4 167.4L156.1 169.6L157.5 176.1L159.2 183.9L158.9 189.5L155.7 190.1L150.4 185.9L144.9 180.1L140.9 176.6L139.0 178.3L138.3 184.9L137.5 192.9L135.5 198.1L132.3 197.7L128.5 192.1L125.1 184.8L122.4 180.3L120.0 181.3L117.4 187.4L114.1 194.8L110.6 199.1L107.7 197.7L105.8 191.2L104.8 183.2L103.6 178.1L101.0 178.3L96.7 183.2L91.3 189.3L86.6 192.3L84.3 190.1L84.5 183.3L86.0 175.4L86.5 170.2L83.9 169.6L78.3 172.9L71.3 177.0L65.9 178.5L64.4 175.6L66.7 169.3L70.6 162.2L72.6 157.4L70.4 156.1L63.9 157.5L56.1 159.2L50.5 158.9L49.9 155.7L54.1 150.4L59.9 144.9L63.4 140.9L61.7 139.0L55.1 138.3L47.1 137.5L41.9 135.5L42.3 132.3L47.9 128.5L55.2 125.1L59.7 122.4L58.7 120.0L52.6 117.4L45.2 114.1L40.9 110.6L42.3 107.7L48.8 105.8L56.8 104.8L61.9 103.6L61.7 101.0L56.8 96.7L50.7 91.3L47.7 86.6L49.9 84.3L56.7 84.5L64.6 86.0L69.8 86.5L70.4 83.9L67.1 78.3L63.0 71.3L61.5 65.9L64.4 64.4L70.7 66.7L77.8 70.6L82.6 72.6L83.9 70.4L82.5 63.9L80.8 56.1L81.1 50.5L84.3 49.9L89.6 54.1L95.1 59.9L99.1 63.4L101.0 61.7L101.7 55.1L102.5 47.1L104.5 41.9L107.7 42.3L111.5 47.9L114.9 55.2L117.6 59.7L120.0 58.7L122.6 52.6L125.9 45.2L129.4 40.9L132.3 42.3L134.2 48.8L135.2 56.8L136.4 61.9L139.0 61.7L143.3 56.8L148.7 50.7L153.4 47.7L155.7 49.9L155.5 56.7L154.0 64.6L153.5 69.8L156.1 70.4L161.7 67.1L168.7 63.0L174.1 61.5L175.6 64.4L173.3 70.7L169.4 77.8L167.4 82.6L169.6 83.9L176.1 82.5L183.9 80.8L189.5 81.1L190.1 84.3L185.9 89.6L180.1 95.1L176.6 99.1L178.3 101.0L184.9 101.7L192.9 102.5L198.1 104.5L197.7 107.7L192.1 111.5L184.8 114.9L180.3 117.6L181.3 120.0Z"/>
+            <circle cx="120" cy="120" r="56" fill="#1F2B24" stroke="currentColor" stroke-width="0.75"/>
+            <text x="120" y="133" text-anchor="middle" font-family="Libre Caslon Display, serif" font-size="40" fill="currentColor">H<tspan font-family="Libre Caslon Text, serif" font-style="italic" font-size="34" dx="1" dy="-1">&amp;</tspan><tspan dx="1" dy="1">V</tspan></text>
+          </svg>
+        </div>
+        <div class="bcard bcard-back" role="img" aria-label="Business card back: Eleanor Vance, Partner, with contact details on pleading-paper margin">
+          <div class="inner">
+            <div><p class="name">Eleanor Vance</p><p class="title">Partner, Appellate</p></div>
+            <p class="contact">+1 212 555 0148<br>evance@harlowvance.example<br>14 Pine Street, New York, NY 10005</p>
+            <span class="wm">Harlow &amp; Vance</span>
+          </div>
+        </div>
+        <p class="app-caption">Business card, 3.5 &times; 2 in, 600gsm cotton. Front: blind deboss with brass foil seal. Back: letterpress ink, wax-red double rule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="imagery-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">vi.</span><h2 id="imagery-t">Imagery &amp; iconography</h2><p>Architecture and paper, never gavels.</p></div>
+    <div class="img-grid">
+      <div class="img-copy">
+        <p>Photography is black and white, shot in raking daylight: courthouse stone, stair rails, a bound volume with its spine cracked, a partner at eye level with no props. No gavels, scales, handshakes or skylines. Where a photograph is not available, use a line engraving in brass on library green.</p>
+        <p>Icons are drawn on a 24px grid with a 1.25px stroke, butt caps and mitred corners, like a ruled form. Every icon is paired with a label.</p>
+        <ul class="icons">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10.5v17H7z"/><path d="M5 3.5v17M4 3.5v17" stroke-width="0.75"/><path d="M9.5 8h5.5M9.5 11h5.5M9.5 14h5.5M9.5 17h3"/></svg><span>Brief</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20.5h14M6 18.5h12M7 18.5V7.5M17 18.5V7.5M10.3 18.5V7.5M13.7 18.5V7.5M5 7.5h14M12 3l8 3H4z"/></svg><span>Court</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5l-4.5-7L12 3l4.5 10.5z"/><path d="M12 20.5V12"/><circle cx="12" cy="11" r="1.2"/></svg><span>Draft</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v15H4zM4 9.5h16M8 3.5v4M16 3.5v4"/><path d="M10.5 13.5l1.5-1v5" /></svg><span>Docket</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h5.5a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 0-1.5-1.5H5zM19 4.5h-5.5A1.5 1.5 0 0 0 12 6v14a1.5 1.5 0 0 1 1.5-1.5H19z"/></svg><span>Reporter</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5.5" stroke-width="0.75"/><path d="M9.5 12l1.8 1.8 3.4-3.6"/></svg><span>Decided</span></li>
+        </ul>
+      </div>
+      <figure class="engraving" style="margin:0">
+        <svg viewBox="0 0 700 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)"><path d="M0 0v5" stroke="currentColor" stroke-width="0.9"/></pattern>
+            <pattern id="hatch2" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(52)"><path d="M0 0v3.2" stroke="currentColor" stroke-width="0.7"/></pattern>
+            <pattern id="vflute" width="9" height="10" patternUnits="userSpaceOnUse"><path d="M2 0v10" stroke="currentColor" stroke-width="0.8"/><path d="M5.5 0v10" stroke="currentColor" stroke-width="0.4"/></pattern>
+          </defs>
+          <path fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.32" d="M650.0 250.0L699.4 259.8L719.4 270.7L698.3 279.4L648.1 283.6L598.0 285.0L576.8 288.5L595.7 298.9L642.5 316.8L688.4 337.3L705.5 352.4L683.0 356.1L633.2 349.1L584.0 339.3L562.5 338.0L578.7 352.3L620.3 380.2L660.5 410.4L673.8 429.0L651.0 427.6L604.0 409.6L558.3 389.2L537.6 383.1L550.2 400.6L584.5 437.0L617.0 475.5L625.9 496.5L604.0 490.1L562.1 462.1L522.1 432.0L503.3 421.5L511.6 441.4L537.0 484.5L560.2 529.3L564.1 551.8L544.2 540.6L509.6 504.0L477.3 465.8L461.3 451.3L465.0 472.6L480.2 520.3L492.8 569.0L491.6 591.8L474.6 576.5L449.1 533.2L426.1 488.7L413.7 471.0L412.6 492.6L416.8 542.5L418.2 592.8L412.0 614.8L398.9 596.1L383.6 548.1L371.1 499.6L362.9 479.6L357.0 500.4L350.0 550.0L340.2 599.4L329.3 619.4L320.6 598.3L316.4 548.1L315.0 498.0L311.5 476.8L301.1 495.7L283.2 542.5L262.7 588.4L247.6 605.5L243.9 583.0L250.9 533.2L260.7 484.0L262.0 462.5L247.7 478.7L219.8 520.3L189.6 560.5L171.0 573.8L172.4 551.0L190.4 504.0L210.8 458.3L216.9 437.6L199.4 450.2L163.0 484.5L124.5 517.0L103.5 525.9L109.9 504.0L137.9 462.1L168.0 422.1L178.5 403.3L158.6 411.6L115.5 437.0L70.7 460.2L48.2 464.1L59.4 444.2L96.0 409.6L134.2 377.3L148.7 361.3L127.4 365.0L79.7 380.2L31.0 392.8L8.2 391.6L23.5 374.6L66.8 349.1L111.3 326.1L129.0 313.7L107.4 312.6L57.5 316.8L7.2 318.2L-14.8 312.0L3.9 298.9L51.9 283.6L100.4 271.1L120.4 262.9L99.6 257.0L50.0 250.0L0.6 240.2L-19.4 229.3L1.7 220.6L51.9 216.4L102.0 215.0L123.2 211.5L104.3 201.1L57.5 183.2L11.6 162.7L-5.5 147.6L17.0 143.9L66.8 150.9L116.0 160.7L137.5 162.0L121.3 147.7L79.7 119.8L39.5 89.6L26.2 71.0L49.0 72.4L96.0 90.4L141.7 110.8L162.4 116.9L149.8 99.4L115.5 63.0L83.0 24.5L74.1 3.5L96.0 9.9L137.9 37.9L177.9 68.0L196.7 78.5L188.4 58.6L163.0 15.5L139.8 -29.3L135.9 -51.8L155.8 -40.6L190.4 -4.0L222.7 34.2L238.7 48.7L235.0 27.4L219.8 -20.3L207.2 -69.0L208.4 -91.8L225.4 -76.5L250.9 -33.2L273.9 11.3L286.3 29.0L287.4 7.4L283.2 -42.5L281.8 -92.8L288.0 -114.8L301.1 -96.1L316.4 -48.1L328.9 0.4L337.1 20.4L343.0 -0.4L350.0 -50.0L359.8 -99.4L370.7 -119.4L379.4 -98.3L383.6 -48.1L385.0 2.0L388.5 23.2L398.9 4.3L416.8 -42.5L437.3 -88.4L452.4 -105.5L456.1 -83.0L449.1 -33.2L439.3 16.0L438.0 37.5L452.3 21.3L480.2 -20.3L510.4 -60.5L529.0 -73.8L527.6 -51.0L509.6 -4.0L489.2 41.7L483.1 62.4L500.6 49.8L537.0 15.5L575.5 -17.0L596.5 -25.9L590.1 -4.0L562.1 37.9L532.0 77.9L521.5 96.7L541.4 88.4L584.5 63.0L629.3 39.8L651.8 35.9L640.6 55.8L604.0 90.4L565.8 122.7L551.3 138.7L572.6 135.0L620.3 119.8L669.0 107.2L691.8 108.4L676.5 125.4L633.2 150.9L588.7 173.9L571.0 186.3L592.6 187.4L642.5 183.2L692.8 181.8L714.8 188.0L696.1 201.1L648.1 216.4L599.6 228.9L579.6 237.1L600.4 243.0L650.0 250.0ZM716.6 250.0L712.2 260.2L671.1 268.0L617.3 272.5L582.0 276.1L585.3 283.2L624.4 296.6L675.4 314.7L707.4 331.6L700.9 340.5L659.1 339.0L605.6 331.5L570.3 327.1L572.0 334.7L607.2 356.5L652.8 385.5L680.3 409.1L671.9 416.3L631.5 405.6L581.0 386.3L547.6 374.2L547.6 382.0L577.0 411.1L615.1 449.5L636.6 478.6L626.9 483.8L589.8 464.3L544.9 434.3L515.1 415.1L513.3 422.7L535.5 457.6L564.1 503.5L578.6 536.6L567.9 539.5L536.1 512.3L499.0 473.0L474.2 447.6L470.7 454.7L484.7 493.6L502.3 544.8L509.1 580.3L498.0 580.8L473.1 547.1L445.7 500.6L427.1 470.3L422.2 476.4L427.1 517.5L432.9 571.3L431.6 607.4L420.7 605.4L403.9 567.1L387.5 515.6L376.1 482.0L370.0 486.8L365.6 527.9L359.3 581.6L350.0 616.6L339.8 612.2L332.0 571.1L327.5 517.3L323.9 482.0L316.8 485.3L303.4 524.4L285.3 575.4L268.4 607.4L259.5 600.9L261.0 559.1L268.5 505.6L272.9 470.3L265.3 472.0L243.5 507.2L214.5 552.8L190.9 580.3L183.7 571.9L194.4 531.5L213.7 481.0L225.8 447.6L218.0 447.6L188.9 477.0L150.5 515.1L121.4 536.6L116.2 526.9L135.7 489.8L165.7 444.9L184.9 415.1L177.3 413.3L142.4 435.5L96.5 464.1L63.4 478.6L60.5 467.9L87.7 436.1L127.0 399.0L152.4 374.2L145.3 370.7L106.4 384.7L55.2 402.3L19.7 409.1L19.2 398.0L52.9 373.1L99.4 345.7L129.7 327.1L123.6 322.2L82.5 327.1L28.7 332.9L-7.4 331.6L-5.4 320.7L32.9 303.9L84.4 287.5L118.0 276.1L113.2 270.0L72.1 265.6L18.4 259.3L-16.6 250.0L-12.2 239.8L28.9 232.0L82.7 227.5L118.0 223.9L114.7 216.8L75.6 203.4L24.6 185.3L-7.4 168.4L-0.9 159.5L40.9 161.0L94.4 168.5L129.7 172.9L128.0 165.3L92.8 143.5L47.2 114.5L19.7 90.9L28.1 83.7L68.5 94.4L119.0 113.7L152.4 125.8L152.4 118.0L123.0 88.9L84.9 50.5L63.4 21.4L73.1 16.2L110.2 35.7L155.1 65.7L184.9 84.9L186.7 77.3L164.5 42.4L135.9 -3.5L121.4 -36.6L132.1 -39.5L163.9 -12.3L201.0 27.0L225.8 52.4L229.3 45.3L215.3 6.4L197.7 -44.8L190.9 -80.3L202.0 -80.8L226.9 -47.1L254.3 -0.6L272.9 29.7L277.8 23.6L272.9 -17.5L267.1 -71.3L268.4 -107.4L279.3 -105.4L296.1 -67.1L312.5 -15.6L323.9 18.0L330.0 13.2L334.4 -27.9L340.7 -81.6L350.0 -116.6L360.2 -112.2L368.0 -71.1L372.5 -17.3L376.1 18.0L383.2 14.7L396.6 -24.4L414.7 -75.4L431.6 -107.4L440.5 -100.9L439.0 -59.1L431.5 -5.6L427.1 29.7L434.7 28.0L456.5 -7.2L485.5 -52.8L509.1 -80.3L516.3 -71.9L505.6 -31.5L486.3 19.0L474.2 52.4L482.0 52.4L511.1 23.0L549.5 -15.1L578.6 -36.6L583.8 -26.9L564.3 10.2L534.3 55.1L515.1 84.9L522.7 86.7L557.6 64.5L603.5 35.9L636.6 21.4L639.5 32.1L612.3 63.9L573.0 101.0L547.6 125.8L554.7 129.3L593.6 115.3L644.8 97.7L680.3 90.9L680.8 102.0L647.1 126.9L600.6 154.3L570.3 172.9L576.4 177.8L617.5 172.9L671.3 167.1L707.4 168.4L705.4 179.3L667.1 196.1L615.6 212.5L582.0 223.9L586.8 230.0L627.9 234.4L681.6 240.7L716.6 250.0ZM691.1 250.0L638.9 258.1L593.0 263.6L580.0 269.4L607.2 279.0L657.9 293.5L701.6 309.7L712.0 322.0L682.6 325.9L629.9 322.2L583.9 317.4L570.0 320.1L594.3 335.5L640.5 360.9L679.5 386.5L686.9 400.8L657.4 398.0L606.8 382.7L563.0 367.7L548.8 367.3L569.2 387.7L608.5 422.8L640.9 456.4L644.9 472.0L616.7 462.7L570.8 436.5L531.5 412.2L517.8 408.6L533.0 433.0L563.6 476.0L587.6 515.9L588.2 532.0L562.7 516.7L523.8 481.0L490.8 448.5L478.3 442.0L487.7 469.2L508.0 517.8L522.5 562.1L519.4 578.0L498.0 557.4L468.1 513.8L443.1 474.8L432.3 465.7L435.5 494.3L444.4 546.3L448.7 592.7L442.2 607.4L425.9 582.6L406.4 533.5L390.8 489.9L382.3 478.6L379.0 507.2L376.1 559.9L370.0 606.1L360.4 619.0L350.0 591.1L341.9 538.9L336.4 493.0L330.6 480.0L321.0 507.2L306.5 557.9L290.3 601.6L278.0 612.0L274.1 582.6L277.8 529.9L282.6 483.9L279.9 470.0L264.5 494.3L239.1 540.5L213.5 579.5L199.2 586.9L202.0 557.4L217.3 506.8L232.3 463.0L232.7 448.8L212.3 469.2L177.2 508.5L143.6 540.9L128.0 544.9L137.3 516.7L163.5 470.8L187.8 431.5L191.4 417.8L167.0 433.0L124.0 463.6L84.1 487.6L68.0 488.2L83.3 462.7L119.0 423.8L151.5 390.8L158.0 378.3L130.8 387.7L82.2 408.0L37.9 422.5L22.0 419.4L42.6 398.0L86.2 368.1L125.2 343.1L134.3 332.3L105.7 335.5L53.7 344.4L7.3 348.7L-7.4 342.2L17.4 325.9L66.5 306.4L110.1 290.8L121.4 282.3L92.8 279.0L40.1 276.1L-6.1 270.0L-19.0 260.4L8.9 250.0L61.1 241.9L107.0 236.4L120.0 230.6L92.8 221.0L42.1 206.5L-1.6 190.3L-12.0 178.0L17.4 174.1L70.1 177.8L116.1 182.6L130.0 179.9L105.7 164.5L59.5 139.1L20.5 113.5L13.1 99.2L42.6 102.0L93.2 117.3L137.0 132.3L151.2 132.7L130.8 112.3L91.5 77.2L59.1 43.6L55.1 28.0L83.3 37.3L129.2 63.5L168.5 87.8L182.2 91.4L167.0 67.0L136.4 24.0L112.4 -15.9L111.8 -32.0L137.3 -16.7L176.2 19.0L209.2 51.5L221.7 58.0L212.3 30.8L192.0 -17.8L177.5 -62.1L180.6 -78.0L202.0 -57.4L231.9 -13.8L256.9 25.2L267.7 34.3L264.5 5.7L255.6 -46.3L251.3 -92.7L257.8 -107.4L274.1 -82.6L293.6 -33.5L309.2 10.1L317.7 21.4L321.0 -7.2L323.9 -59.9L330.0 -106.1L339.6 -119.0L350.0 -91.1L358.1 -38.9L363.6 7.0L369.4 20.0L379.0 -7.2L393.5 -57.9L409.7 -101.6L422.0 -112.0L425.9 -82.6L422.2 -29.9L417.4 16.1L420.1 30.0L435.5 5.7L460.9 -40.5L486.5 -79.5L500.8 -86.9L498.0 -57.4L482.7 -6.8L467.7 37.0L467.3 51.2L487.7 30.8L522.8 -8.5L556.4 -40.9L572.0 -44.9L562.7 -16.7L536.5 29.2L512.2 68.5L508.6 82.2L533.0 67.0L576.0 36.4L615.9 12.4L632.0 11.8L616.7 37.3L581.0 76.2L548.5 109.2L542.0 121.7L569.2 112.3L617.8 92.0L662.1 77.5L678.0 80.6L657.4 102.0L613.8 131.9L574.8 156.9L565.7 167.7L594.3 164.5L646.3 155.6L692.7 151.3L707.4 157.8L682.6 174.1L633.5 193.6L589.9 209.2L578.6 217.7L607.2 221.0L659.9 223.9L706.1 230.0L719.0 239.6L691.1 250.0ZM608.9 250.0L580.8 256.5L593.0 263.6L638.0 274.3L689.0 288.2L715.5 301.6L701.6 309.7L655.0 310.7L602.4 307.6L573.5 307.7L583.9 317.4L625.4 337.8L672.0 362.7L694.9 381.6L679.5 386.5L633.8 377.0L583.2 362.3L555.1 356.0L563.0 367.7L599.0 396.9L638.9 431.5L656.9 455.1L640.9 456.4L598.5 437.0L552.4 411.4L526.4 398.9L531.5 412.2L560.0 448.6L591.2 491.2L603.6 518.2L587.6 515.9L550.6 487.6L511.4 452.4L488.8 434.5L490.8 448.5L510.6 490.3L531.5 538.9L537.6 567.9L522.5 562.1L492.7 526.3L462.3 483.2L444.3 460.7L443.1 474.8L453.1 520.0L462.7 572.0L462.1 601.7L448.7 592.7L427.7 551.1L407.6 502.4L395.0 476.4L390.8 489.9L390.4 536.2L388.2 589.0L381.0 617.8L370.0 606.1L358.7 560.8L350.0 508.9L343.5 480.8L336.4 493.0L325.7 538.0L311.8 589.0L298.4 615.5L290.3 601.6L289.3 555.0L292.4 502.4L292.3 473.5L282.6 483.9L262.2 525.4L237.3 572.0L218.4 594.9L213.5 579.5L223.0 533.8L237.7 483.2L244.0 455.1L232.3 463.0L203.1 499.0L168.5 538.9L144.9 556.9L143.6 540.9L163.0 498.5L188.6 452.4L201.1 426.4L187.8 431.5L151.4 460.0L108.8 491.2L81.8 503.6L84.1 487.6L112.4 450.6L147.6 411.4L165.5 388.8L151.5 390.8L109.7 410.6L61.1 431.5L32.1 437.6L37.9 422.5L73.7 392.7L116.8 362.3L139.3 344.3L125.2 343.1L80.0 353.1L28.0 362.7L-1.7 362.1L7.3 348.7L48.9 327.7L97.6 307.6L123.6 295.0L110.1 290.8L63.8 290.4L11.0 288.2L-17.8 281.0L-6.1 270.0L39.2 258.7L91.1 250.0L119.2 243.5L107.0 236.4L62.0 225.7L11.0 211.8L-15.5 198.4L-1.6 190.3L45.0 189.3L97.6 192.4L126.5 192.3L116.1 182.6L74.6 162.2L28.0 137.3L5.1 118.4L20.5 113.5L66.2 123.0L116.8 137.7L144.9 144.0L137.0 132.3L101.0 103.1L61.1 68.5L43.1 44.9L59.1 43.6L101.5 63.0L147.6 88.6L173.6 101.1L168.5 87.8L140.0 51.4L108.8 8.8L96.4 -18.2L112.4 -15.9L149.4 12.4L188.6 47.6L211.2 65.5L209.2 51.5L189.4 9.7L168.5 -38.9L162.4 -67.9L177.5 -62.1L207.3 -26.3L237.7 16.8L255.7 39.3L256.9 25.2L246.9 -20.0L237.3 -72.0L237.9 -101.7L251.3 -92.7L272.3 -51.1L292.4 -2.4L305.0 23.6L309.2 10.1L309.6 -36.2L311.8 -89.0L319.0 -117.8L330.0 -106.1L341.3 -60.8L350.0 -8.9L356.5 19.2L363.6 7.0L374.3 -38.0L388.2 -89.0L401.6 -115.5L409.7 -101.6L410.7 -55.0L407.6 -2.4L407.7 26.5L417.4 16.1L437.8 -25.4L462.7 -72.0L481.6 -94.9L486.5 -79.5L477.0 -33.8L462.3 16.8L456.0 44.9L467.7 37.0L496.9 1.0L531.5 -38.9L555.1 -56.9L556.4 -40.9L537.0 1.5L511.4 47.6L498.9 73.6L512.2 68.5L548.6 40.0L591.2 8.8L618.2 -3.6L615.9 12.4L587.6 49.4L552.4 88.6L534.5 111.2L548.5 109.2L590.3 89.4L638.9 68.5L667.9 62.4L662.1 77.5L626.3 107.3L583.2 137.7L560.7 155.7L574.8 156.9L620.0 146.9L672.0 137.3L701.7 137.9L692.7 151.3L651.1 172.3L602.4 192.4L576.4 205.0L589.9 209.2L636.2 209.6L689.0 211.8L717.8 219.0L706.1 230.0L660.8 241.3L608.9 250.0ZM583.4 250.0L618.1 257.5L671.1 268.0L711.1 280.5L714.3 291.0L678.5 296.4L624.4 296.6L583.1 296.4L577.6 301.9L609.7 317.0L659.1 339.0L695.3 360.0L696.0 371.1L660.0 368.3L607.2 356.5L566.9 347.1L560.3 351.3L588.3 373.1L631.5 405.6L662.1 434.1L660.4 445.0L625.9 434.3L577.0 411.1L539.9 392.9L532.5 395.5L554.9 423.0L589.8 464.3L613.3 498.9L609.2 509.2L577.9 491.1L535.5 457.6L503.3 431.6L495.5 432.5L511.3 464.3L536.1 512.3L551.3 551.3L545.0 560.4L518.6 535.8L484.7 493.6L459.1 461.1L451.3 460.3L459.6 494.8L473.1 547.1L479.2 588.5L471.1 596.0L450.8 566.1L427.1 517.5L409.4 480.1L401.9 477.6L402.3 513.1L403.9 567.1L400.7 608.8L391.0 614.3L377.9 580.6L365.6 527.9L356.7 487.5L350.0 483.4L342.5 518.1L332.0 571.1L319.5 611.1L309.0 614.3L303.6 578.5L303.4 524.4L303.6 483.1L298.1 477.6L283.0 509.7L261.0 559.1L240.0 595.3L228.9 596.0L231.7 560.0L243.5 507.2L252.9 466.9L248.7 460.3L226.9 488.3L194.4 531.5L165.9 562.1L155.0 560.4L165.7 525.9L188.9 477.0L207.1 439.9L204.5 432.5L177.0 454.9L135.7 489.8L101.1 513.3L90.8 509.2L108.9 477.9L142.4 435.5L168.4 403.3L167.5 395.5L135.7 411.3L87.7 436.1L48.7 451.3L39.6 445.0L64.2 418.6L106.4 384.7L138.9 359.1L139.7 351.3L105.2 359.6L52.9 373.1L11.5 379.2L4.0 371.1L33.9 350.8L82.5 327.1L119.9 309.4L122.4 301.9L86.9 302.3L32.9 303.9L-8.8 300.7L-14.3 291.0L19.4 277.9L72.1 265.6L112.5 256.7L116.6 250.0L81.9 242.5L28.9 232.0L-11.1 219.5L-14.3 209.0L21.5 203.6L75.6 203.4L116.9 203.6L122.4 198.1L90.3 183.0L40.9 161.0L4.7 140.0L4.0 128.9L40.0 131.7L92.8 143.5L133.1 152.9L139.7 148.7L111.7 126.9L68.5 94.4L37.9 65.9L39.6 55.0L74.1 65.7L123.0 88.9L160.1 107.1L167.5 104.5L145.1 77.0L110.2 35.7L86.7 1.1L90.8 -9.2L122.1 8.9L164.5 42.4L196.7 68.4L204.5 67.5L188.7 35.7L163.9 -12.3L148.7 -51.3L155.0 -60.4L181.4 -35.8L215.3 6.4L240.9 38.9L248.7 39.7L240.4 5.2L226.9 -47.1L220.8 -88.5L228.9 -96.0L249.2 -66.1L272.9 -17.5L290.6 19.9L298.1 22.4L297.7 -13.1L296.1 -67.1L299.3 -108.8L309.0 -114.3L322.1 -80.6L334.4 -27.9L343.3 12.5L350.0 16.6L357.5 -18.1L368.0 -71.1L380.5 -111.1L391.0 -114.3L396.4 -78.5L396.6 -24.4L396.4 16.9L401.9 22.4L417.0 -9.7L439.0 -59.1L460.0 -95.3L471.1 -96.0L468.3 -60.0L456.5 -7.2L447.1 33.1L451.3 39.7L473.1 11.7L505.6 -31.5L534.1 -62.1L545.0 -60.4L534.3 -25.9L511.1 23.0L492.9 60.1L495.5 67.5L523.0 45.1L564.3 10.2L598.9 -13.3L609.2 -9.2L591.1 22.1L557.6 64.5L531.6 96.7L532.5 104.5L564.3 88.7L612.3 63.9L651.3 48.7L660.4 55.0L635.8 81.4L593.6 115.3L561.1 140.9L560.3 148.7L594.8 140.4L647.1 126.9L688.5 120.8L696.0 128.9L666.1 149.2L617.5 172.9L580.1 190.6L577.6 198.1L613.1 197.7L667.1 196.1L708.8 199.3L714.3 209.0L680.6 222.1L627.9 234.4L587.5 243.3L583.4 250.0Z"/>
+          <g transform="translate(150 70)">
+            <path d="M0 110L200 30l200 80z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M40 104L200 44l160 60z" fill="url(#hatch2)" opacity="0.55"/>
+            <rect x="-10" y="110" width="420" height="16" fill="none" stroke="currentColor"/>
+            <rect x="-10" y="110" width="420" height="16" fill="url(#hatch)" opacity="0.6"/>
+            <rect x="-4" y="126" width="408" height="8" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <g>
+              <rect x="10" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="10" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+              <rect x="84" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="84" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+              <rect x="158" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="158" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+              <rect x="206" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="206" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+              <rect x="280" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="280" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+              <rect x="354" y="134" width="36" height="210" fill="url(#vflute)"/><rect x="354" y="134" width="36" height="210" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            </g>
+            <rect x="46" y="134" width="38" height="210" fill="url(#hatch)" opacity="0.85"/>
+            <rect x="120" y="134" width="38" height="210" fill="url(#hatch)" opacity="0.85"/>
+            <rect x="242" y="134" width="38" height="210" fill="url(#hatch)" opacity="0.85"/>
+            <rect x="316" y="134" width="38" height="210" fill="url(#hatch)" opacity="0.85"/>
+            <path d="M-20 344h440v10h-440zM-34 354h468v10h-468zM-48 364h496v10h-496z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M-48 374h496v14h-496z" fill="url(#hatch2)" opacity="0.6"/>
+          </g>
+        </svg>
+        <figcaption>Engraving fallback: portico in brass hatching over a guilloche field. Replace with a commissioned black-and-white photograph when one exists.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="motion-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">vii.</span><h2 id="motion-t">Motion</h2><p>Deliberate. Nothing bounces; the rule is drawn, the verdict is set.</p></div>
+    <div class="motion-grid">
+      <div>
+        <p style="margin-top:0;max-width:46ch">Motion behaves like a pen on paper: rules draw downward, lines of text arrive in reading order, and outcomes appear without flourish. It is used on first view and on state change only, never on scroll loops.</p>
+        <table class="tokens-table">
+          <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+          <tbody>
+            <tr><td>Link underline, hover</td><td><code>--duration-slow</code> 320ms</td><td><code>--ease-standard</code></td></tr>
+            <tr><td>Button color</td><td><code>--duration-moderate</code> 200ms</td><td><code>--ease-standard</code></td></tr>
+            <tr><td>Margin rule draw</td><td><code>--duration-slower</code> 480ms</td><td>cubic-bezier(0.2, 0, 0, 1)</td></tr>
+            <tr><td>Line stagger</td><td>90ms per line</td><td>opacity + 8px rise</td></tr>
+            <tr><td>Reduced motion</td><td colspan="2">Final state shown at once; no transforms</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo play" id="hv-demo">
+        <div class="demo-stage" aria-hidden="true">
+          <div class="rule"></div>
+          <ol><li style="--i:0">1</li><li style="--i:1">2</li><li style="--i:2">3</li><li style="--i:3">4</li><li style="--i:4">5</li><li style="--i:5">6</li><li style="--i:6">7</li><li style="--i:7">8</li></ol>
+          <div class="demo-lines">
+            <p class="caps" style="--i:0; line-height:32px">Castellan Re v. Meridian</p>
+            <p style="--i:1">The district court excluded the expert</p>
+            <p style="--i:2">without the hearing Rule 702 requires.</p>
+            <p style="--i:3"><em>We reverse and remand.</em></p>
+            <p class="verdict"><span class="tag tag-reversed">Reversed</span></p>
+          </div>
+        </div>
+        <div class="demo-controls"><span>Margin rule 480ms, line stagger 90ms, verdict at 820ms</span><button class="btn btn-secondary" type="button" id="hv-replay" style="min-height:44px;padding:0 18px">Replay</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="voice-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">viii.</span><h2 id="voice-t">Voice</h2><p>Measured, specific, in complete sentences. Authority is shown by the record, not adjectives.</p></div>
+    <div class="voice">
+      <div><span class="caps">Headline</span><blockquote>Decided, not settled.</blockquote><p class="why">Three words, a claim the ledger beneath it substantiates.</p></div>
+      <div><span class="caps">Call to action</span><blockquote class="cta">Request a conflicts check</blockquote><p class="why">The real first step with any firm. It respects the reader&rsquo;s process instead of asking for a &ldquo;free consultation&rdquo;.</p></div>
+      <div><span class="caps">Error message</span><blockquote class="err">We could not send your request. Nothing you entered was stored. Please try again, or call the duty partner on +1&nbsp;212&nbsp;555&nbsp;0148.</blockquote><p class="why">States what happened, what it means for confidentiality and the next step, with a human on the line.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="rationale-t">
+  <div class="wrap">
+    <div class="section-head"><span class="no">ix.</span><h2 id="rationale-t">Rationale</h2><p>Why the record, and not the skyline.</p></div>
+    <div class="rat-grid">
+      <div>
+        <h3>Why it fits</h3>
+        <p>Appellate clients are general counsel and trial firms buying judgment. The pleading-paper margin and Caslon (the face of the 1776 Dunlap printing of the Declaration of Independence) borrow the authority of the court document itself, so the Ruler archetype comes from order and restraint rather than gold and crests.</p>
+        <p>The ledger turns the firm&rsquo;s strongest evidence, outcomes, into the hero, with the required past-results disclaimer built into the layout instead of hidden in the footer.</p>
+      </div>
+      <div>
+        <h3>What it risks</h3>
+        <ul>
+          <li>Antiquarian drift: without the hard grid and plain copy it becomes a costume. Keep the modern 12-column structure and short sentences.</li>
+          <li>Outcome numbers are attorney advertising. Rules on past-results claims and disclaimers vary by state (New York requires &ldquo;Prior results do not guarantee a similar outcome&rdquo;); confirm with ethics counsel before launch.</li>
+          <li>Caslon Display hairlines fail below 40px and on low-DPI screens; the system switches to Caslon Text there.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The expected alternative</h3>
+        <p>Navy and gold, a skyline or glass-tower photograph, a scales-of-justice icon and the headline &ldquo;Experience. Integrity. Results.&rdquo; It is safe and indistinguishable from the other 200 firms a general counsel will shortlist. Corporate-modern sans with a single bold claim would be the adjacent option; this direction keeps that clarity but owns a document-native signature.</p>
+      </div>
+    </div>
+    <div class="colophon"><span>Fictional brand for the Visual Design Kit stylescape set. Cases, people and numbers are invented.</span><span>Type: Libre Caslon Display and Libre Caslon Text, SIL Open Font License (<a href="../fonts/libre-caslon-text/OFL.txt">OFL.txt</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+  (function () {
+    var demo = document.getElementById('hv-demo');
+    document.getElementById('hv-replay').addEventListener('click', function () {
+      demo.classList.remove('play'); void demo.offsetWidth; demo.classList.add('play');
+    });
+  })();
+</script>
+</body>
+</html>

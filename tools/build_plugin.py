@@ -1,5 +1,5 @@
 """Build or verify deterministic Visual Design Studio package metadata."""
-# Version-Timestamp: 2026-10-14 11:18:14 AST
+# Version-Timestamp: 2026-10-20 02:05:00 UTC
 import argparse
 import hashlib
 import json
@@ -36,9 +36,15 @@ def digest(content):
     return hashlib.sha256(content).hexdigest()
 
 
+BUILT_EXAMPLES = {"astro-motion", "react-system"}
+
+
 def ignored(relative):
     parts = relative.parts
-    if parts[:3] == ("library", "examples", "astro-motion") and any(part in {"dist", "qa-output"} for part in parts[3:]):
+    if parts[:2] == ("library", "examples") and len(parts) > 3 and parts[2] in BUILT_EXAMPLES and any(
+            part in {"dist", "qa-output", "test-results", "playwright-report"} for part in parts[3:]):
+        return True
+    if parts[:1] == ("evals",) and "results" in parts[1:]:
         return True
     return (any(part in {".git", "private", "__pycache__", "tmp", "temp", "node_modules", ".astro", ".vite"} for part in parts)
             or relative.name.startswith(".build-plugin-") or relative.name == ".DS_Store" or relative.name.endswith((".pyc", ".tmp", "~")))
@@ -122,6 +128,14 @@ def expected_files(plugin_root, source_root, version, timestamp):
         raise BuildError("unreadable plugin.json") from exc
     if metadata.get("version") != version:
         raise BuildError("--version must exactly match .codex-plugin/plugin.json")
+    claude_json = output_path(plugin_root, ".claude-plugin/plugin.json")
+    if claude_json.exists():
+        try:
+            claude_metadata = json.loads(claude_json.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            raise BuildError("unreadable .claude-plugin/plugin.json") from exc
+        if claude_metadata.get("version") != version:
+            raise BuildError("--version must exactly match .claude-plugin/plugin.json")
     source_bytes = {}
     for target, relative in CANONICAL_SOURCES.items():
         source = source_root / relative

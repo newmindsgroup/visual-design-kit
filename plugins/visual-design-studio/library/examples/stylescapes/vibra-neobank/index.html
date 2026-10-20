@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibra: Loud and Honest | Stylescape 01</title>
+<meta name="description" content="Stylescape for Vibra, a fictional no-fee Pix-first neobank for Gen Z in Brazil. Neo-brutalist direction. Visual Design Kit calibration set.">
+<!--
+  Visual Design Kit stylescape calibration set, brand 1 of 12 (fictional brand).
+  Direction: Loud and Honest (neo-brutalism for a value neobank).
+  Atlas: style.neo-brutalist, industry.fintech-banking, market.brazil-portuguese,
+         audience.teens-gen-z, archetype.everyperson, tier.value, channel.native-app
+  Fonts: Bricolage Grotesque (OFL 1.1), self-hosted in ../fonts/bricolage-grotesque/.
+  Version-Timestamp: 2026-10-20 02:03:12 UTC
+  Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:03:12 UTC
+-->
+<style>
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../fonts/bricolage-grotesque/bricolage-grotesque-latin-standard-normal.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+
+/* ---------- Token contract (semantic names) mapped to the Vibra palette ---------- */
+:root {
+  /* Brand primitives */
+  --vibra-ink: #0E0E0E;
+  --vibra-paper: #FFF8EC;
+  --vibra-lime: #C6F135;
+  --vibra-coral: #FF5B3A;
+  --vibra-sky: #7CC6FF;
+  --vibra-banana: #FFD84D;
+  --vibra-anil: #2B44FF;
+  --vibra-erro: #C4231B;
+
+  --color-bg-canvas: var(--vibra-paper);
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #EDE7DB;
+  --color-bg-inverse: var(--vibra-ink);
+  --color-fg-default: var(--vibra-ink);
+  --color-fg-muted: #4D4A44;
+  --color-fg-subtle: #7A766E;
+  --color-fg-inverse: #FFFFFF;
+  --color-fg-on-accent: var(--vibra-ink);
+  --color-border-subtle: #D8D0C0;
+  --color-border-default: var(--vibra-ink);
+  --color-border-strong: var(--vibra-ink);
+  --color-accent-default: var(--vibra-lime);
+  --color-accent-hover: #B5E21F;
+  --color-accent-active: #A2CC12;
+  --color-accent-subtle: #EEFBC4;
+  --color-accent-fg: #3A4A0A;
+  --color-success-fg: #1E6B30; --color-success-bg: #E2F7CF; --color-success-border: #1E6B30;
+  --color-warning-fg: #7A4B00; --color-warning-bg: #FFF0C2; --color-warning-border: #7A4B00;
+  --color-danger-fg: #B01E16;  --color-danger-bg: #FFE3DC;  --color-danger-border: #B01E16;
+  --color-info-fg: #0B4F8A;    --color-info-bg: #DDEFFF;    --color-info-border: #0B4F8A;
+  --color-focus-ring: var(--vibra-anil);
+  --color-overlay-scrim: rgb(14 14 14 / 0.6);
+
+  --font-family-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --font-family-body: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.06em;
+
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  /* Neo-brutalist signature: 3px ink outline and hard, unblurred offset shadow */
+  --vibra-stroke: 3px;
+  --shadow-sm: 3px 3px 0 0 var(--vibra-ink);
+  --shadow-md: 5px 5px 0 0 var(--vibra-ink);
+  --shadow-lg: 8px 8px 0 0 var(--vibra-ink);
+  --shadow-xl: 12px 12px 0 0 var(--vibra-ink);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-linear: linear;
+  --vibra-ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1); /* brand extension: success overshoot */
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-bg-canvas);
+  color: var(--color-fg-default);
+  font-family: var(--font-family-body);
+  font-size: 1.0625rem;
+  line-height: var(--line-height-normal);
+  font-variation-settings: "opsz" 14;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, h4, p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--vibra-ink); color: #fff; padding: 8px 12px; z-index: 10; border-radius: 8px; }
+.skip:focus { left: 8px; }
+.num { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+#direction a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+/* ---------- 1. Direction strip ---------- */
+#direction {
+  background: var(--vibra-ink);
+  color: #fff;
+  border-bottom: var(--vibra-stroke) solid var(--vibra-ink);
+}
+#direction .wrap { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "brand brief" "chips chips"; gap: var(--space-4) var(--space-8); align-items: center; padding-block: var(--space-5); }
+.dir-brand { grid-area: brand; }
+#direction .chips { grid-area: chips; justify-content: flex-start; }
+#direction .dir-meta { grid-area: brief; }
+.dir-brand { display: flex; align-items: baseline; gap: var(--space-3); }
+.dir-brand b { font-family: var(--font-family-display); font-size: 1.75rem; font-weight: 800; font-variation-settings: "opsz" 96; letter-spacing: -0.03em; color: var(--vibra-lime); }
+.dir-brand span { font-size: var(--font-size-sm); color: #D9D9D9; }
+.dir-meta { display: grid; gap: var(--space-2); justify-items: end; text-align: right; }
+.dir-meta p { justify-self: end; }
+.dir-meta p { font-size: var(--font-size-sm); color: #E6E6E6; max-width: 62ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 0.75rem; font-weight: 600; line-height: 1; padding: 6px 9px; border-radius: var(--radius-full); border: 2px solid #fff; color: #fff; font-variant-numeric: tabular-nums; }
+.chips li:first-child { background: var(--vibra-lime); color: var(--vibra-ink); border-color: var(--vibra-lime); }
+
+/* ---------- 2. Hero ---------- */
+#hero {
+  position: relative;
+  background-color: var(--vibra-lime);
+  background-image: radial-gradient(rgb(14 14 14 / 0.13) 1.4px, transparent 1.6px);
+  background-size: 18px 18px;
+  border-bottom: var(--vibra-stroke) solid var(--vibra-ink);
+  overflow: hidden;
+}
+.nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-5); }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.logo svg { width: 40px; height: 40px; }
+.logo span { font-family: var(--font-family-display); font-weight: 800; font-size: 1.9rem; letter-spacing: -0.04em; font-variation-settings: "opsz" 96; line-height: 1; }
+.nav ul { display: flex; gap: var(--space-6); list-style: none; margin: 0; padding: 0; font-weight: 600; }
+.nav ul a { text-decoration: none; padding: 10px 2px; }
+.nav ul a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: var(--space-8); align-items: center; padding-block: var(--space-8) var(--space-20); }
+.hero-kicker { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-full); padding: 6px 14px 6px 8px; font-weight: 700; font-size: var(--font-size-sm); box-shadow: var(--shadow-sm); }
+.hero-kicker i { width: 22px; height: 22px; border-radius: 50%; background: var(--vibra-coral); border: 2px solid var(--vibra-ink); display: inline-block; }
+.hero h1, #hero h1 {
+  margin-top: var(--space-6);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-stretch: 84%;
+  font-variation-settings: "opsz" 96;
+  font-size: clamp(3.75rem, 9.2vw, 9.25rem);
+  line-height: 0.88;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+#hero h1 .hl {
+  display: inline-block;
+  background: var(--vibra-ink);
+  color: var(--vibra-lime);
+  padding: 0.02em 0.14em 0.08em;
+  margin-top: 0.08em;
+  transform: rotate(-2deg);
+  border-radius: 6px;
+}
+.hero-lede { margin-top: var(--space-8); font-size: clamp(1.1rem, 1.5vw, 1.375rem); line-height: 1.4; max-width: 34ch; font-weight: 500; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8); }
+.hero-proof { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); margin-top: var(--space-8); font-weight: 700; font-size: var(--font-size-sm); list-style: none; padding: 0; }
+.hero-proof li { display: flex; align-items: center; gap: 8px; }
+.hero-proof svg { width: 20px; height: 20px; }
+
+/* Buttons (shared with components) */
+.btn {
+  --btn-bg: var(--vibra-ink); --btn-fg: #fff;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px; padding: 0 26px;
+  font: 700 1.0625rem/1 var(--font-family-body);
+  background: var(--btn-bg); color: var(--btn-fg);
+  border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-decoration: none; cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard);
+}
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 6px 6px 0 0 var(--vibra-ink); }
+.btn:active { transform: translate(5px, 5px); box-shadow: 0 0 0 0 var(--vibra-ink); }
+.btn svg { width: 20px; height: 20px; }
+.btn--secondary { --btn-bg: #fff; --btn-fg: var(--vibra-ink); }
+.btn--accent { --btn-bg: var(--vibra-lime); --btn-fg: var(--vibra-ink); }
+.btn--coral { --btn-bg: var(--vibra-coral); --btn-fg: var(--vibra-ink); }
+.btn[aria-disabled="true"], .btn:disabled {
+  --btn-bg: var(--color-bg-sunken); --btn-fg: #6B675F;
+  border-color: #8E8A82; box-shadow: none; cursor: not-allowed;
+  background-image: repeating-linear-gradient(-45deg, transparent 0 6px, rgb(14 14 14 / 0.06) 6px 12px);
+}
+.btn[aria-disabled="true"]:hover { transform: none; }
+.btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 4px; }
+
+/* Phones */
+.phones { position: relative; min-height: 640px; }
+.phone {
+  position: absolute;
+  width: 18.5em; font-size: 14.5px;
+  background: var(--vibra-paper);
+  border: var(--vibra-stroke) solid var(--vibra-ink);
+  border-radius: 2.6em;
+  box-shadow: 14px 14px 0 0 var(--vibra-ink);
+  padding: 0.7em 0.85em 0.9em;
+  overflow: hidden;
+}
+.phone--home { left: -8px; top: 10px; transform: rotate(-4deg); z-index: 1; }
+.phone--pix { right: -12px; top: 78px; transform: rotate(5deg); z-index: 2; background: #fff; }
+.status { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.78em; padding: 0.15em 0.6em 0.6em; }
+.status svg { width: 3.6em; height: 0.9em; }
+.ph-head { display: flex; align-items: center; justify-content: space-between; gap: 0.6em; margin-bottom: 0.8em; }
+.ph-hi { display: flex; align-items: center; gap: 0.55em; font-weight: 700; font-size: 0.95em; }
+.avatar { width: 2.3em; height: 2.3em; border-radius: 50%; background: var(--vibra-coral); border: 2px solid var(--vibra-ink); display: grid; place-items: center; font-weight: 800; font-size: 0.95em; }
+.icon-btn { width: 2.3em; height: 2.3em; border: 2px solid var(--vibra-ink); border-radius: 0.7em; display: grid; place-items: center; background: #fff; }
+.icon-btn svg { width: 1.2em; height: 1.2em; }
+.balance { background: var(--vibra-lime); border: 2px solid var(--vibra-ink); border-radius: 1.1em; padding: 0.85em 0.95em; box-shadow: 4px 4px 0 0 var(--vibra-ink); }
+.balance small { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.78em; color: #3A4A0A; }
+.balance small svg { width: 1.4em; height: 1.4em; }
+.balance strong { display: block; font-family: var(--font-family-display); font-variation-settings: "opsz" 60; font-weight: 800; font-size: 2.05em; letter-spacing: -0.03em; line-height: 1.05; margin-top: 0.1em; font-variant-numeric: tabular-nums; }
+.balance strong sup { font-size: 0.45em; vertical-align: 0.95em; margin-right: 0.15em; letter-spacing: 0; }
+.balance p { font-size: 0.74em; font-weight: 600; margin-top: 0.3em; }
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5em; margin-top: 0.9em; }
+.act { display: grid; justify-items: center; gap: 0.3em; font-size: 0.72em; font-weight: 700; text-align: center; }
+.act span { width: 3.4em; height: 3.4em; border: 2px solid var(--vibra-ink); border-radius: 1em; display: grid; place-items: center; box-shadow: 3px 3px 0 0 var(--vibra-ink); }
+.act span svg { width: 1.7em; height: 1.7em; }
+.list-title { display: flex; justify-content: space-between; font-weight: 800; font-size: 0.85em; margin: 1em 0 0.4em; }
+.list-title a { font-weight: 600; color: var(--color-fg-muted); text-decoration: underline; }
+.tx { display: grid; grid-template-columns: auto 1fr auto; gap: 0.6em; align-items: center; padding: 0.55em 0; border-top: 2px solid var(--vibra-ink); font-size: 0.8em; }
+.tx:last-of-type { border-bottom: 2px solid var(--vibra-ink); }
+.tx i { width: 2.2em; height: 2.2em; border-radius: 0.6em; border: 2px solid var(--vibra-ink); display: grid; place-items: center; font-style: normal; }
+.tx i svg { width: 1.2em; height: 1.2em; }
+.tx b { display: block; font-weight: 700; }
+.tx em { font-style: normal; color: var(--color-fg-muted); font-size: 0.9em; }
+.tx .amt { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tx .amt.in { color: var(--color-success-fg); }
+.tabbar { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 0.9em; border: 2px solid var(--vibra-ink); border-radius: 1.2em; background: #fff; padding: 0.4em; font-size: 0.66em; font-weight: 700; text-align: center; }
+.tabbar span { display: grid; justify-items: center; gap: 0.15em; padding: 0.3em 0; border-radius: 0.8em; }
+.tabbar span.on { background: var(--vibra-ink); color: var(--vibra-lime); }
+.tabbar svg { width: 1.7em; height: 1.7em; }
+
+.pix-top { display: flex; align-items: center; gap: 0.6em; font-weight: 800; font-size: 1em; margin-bottom: 1em; }
+.pix-amt { text-align: center; padding: 0.8em 0 1em; border-bottom: 2px dashed var(--vibra-ink); }
+.pix-amt small { font-weight: 600; font-size: 0.78em; color: var(--color-fg-muted); }
+.pix-amt strong { display: block; font-family: var(--font-family-display); font-variation-settings: "opsz" 96; font-weight: 800; font-size: 3em; letter-spacing: -0.04em; line-height: 1; margin-top: 0.15em; font-variant-numeric: tabular-nums; }
+.pix-to { display: flex; align-items: center; gap: 0.7em; padding: 0.9em 0; }
+.pix-to .avatar { background: var(--vibra-sky); }
+.pix-to b { display: block; font-size: 0.95em; }
+.pix-to em { font-style: normal; font-size: 0.78em; color: var(--color-fg-muted); }
+.rows { border: 2px solid var(--vibra-ink); border-radius: 1em; overflow: hidden; font-size: 0.8em; }
+.rows div { display: flex; justify-content: space-between; align-items: center; gap: 0.5em; padding: 0.7em 0.85em; }
+.rows div + div { border-top: 2px solid var(--vibra-ink); }
+.rows dt, .rows dd { margin: 0; }
+.rows dt { color: var(--color-fg-muted); font-weight: 600; }
+.rows dd { font-weight: 800; font-variant-numeric: tabular-nums; display: flex; gap: 0.4em; align-items: center; }
+.free { background: var(--vibra-lime); border: 2px solid var(--vibra-ink); border-radius: 99px; padding: 0.1em 0.5em; font-size: 0.85em; }
+.pix-send { margin-top: 1.1em; display: flex; justify-content: center; align-items: center; gap: 0.5em; background: var(--vibra-ink); color: var(--vibra-lime); border-radius: 1em; min-height: 3.4em; font-weight: 800; font-size: 0.95em; box-shadow: 4px 4px 0 0 var(--vibra-coral); border: 2px solid var(--vibra-ink); }
+.pix-send svg { width: 1.3em; height: 1.3em; }
+.pix-note { text-align: center; font-size: 0.72em; color: var(--color-fg-muted); margin-top: 0.8em; font-weight: 600; }
+
+.sticker { position: absolute; z-index: 3; font-family: var(--font-family-display); font-weight: 800; font-variation-settings: "opsz" 48; line-height: 0.95; text-align: center; color: var(--vibra-ink); }
+.sticker--burst { width: 150px; height: 150px; left: -70px; bottom: 10px; transform: rotate(-12deg); display: grid; place-items: center; }
+.sticker--burst svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sticker--burst span { position: relative; font-size: 1.35rem; letter-spacing: -0.02em; }
+.sticker--burst span small { display: block; font-size: 0.62em; font-weight: 700; letter-spacing: 0.02em; }
+.sticker--tag { right: -10px; top: 4px; background: var(--vibra-coral); border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-full); padding: 10px 18px; font-size: 1.05rem; transform: rotate(8deg); box-shadow: var(--shadow-sm); }
+
+/* ---------- Section frame ---------- */
+.sec { padding-block: clamp(3.5rem, 7vw, 6.5rem); border-bottom: var(--vibra-stroke) solid var(--vibra-ink); }
+.sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-4); margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.sec-head h2 { display: flex; align-items: center; gap: 14px; font-family: var(--font-family-display); font-weight: 800; font-variation-settings: "opsz" 96; font-stretch: 88%; font-size: clamp(2.25rem, 5vw, 4rem); line-height: 0.95; letter-spacing: -0.02em; }
+.sec-head h2 span.n { font-size: 0.42em; letter-spacing: 0; background: var(--vibra-ink); color: var(--vibra-lime); border-radius: 10px; padding: 8px 10px 9px; font-stretch: 100%; font-variant-numeric: tabular-nums; }
+.sec-head p { max-width: 52ch; color: var(--color-fg-muted); font-size: 1rem; }
+
+/* ---------- 3. Palette ---------- */
+.swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); }
+.sw { border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); background: #fff; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; }
+.sw-chip { height: 132px; border-bottom: var(--vibra-stroke) solid var(--vibra-ink); padding: 14px; display: flex; justify-content: space-between; align-items: flex-start; font-weight: 800; font-family: var(--font-family-display); font-variation-settings: "opsz" 48; font-size: 1.6rem; letter-spacing: -0.02em; }
+.sw-chip em { font-style: normal; font-size: 0.75rem; font-weight: 700; letter-spacing: 0; font-family: var(--font-family-body); border: 2px solid currentColor; border-radius: 99px; padding: 3px 8px; }
+.sw-info { padding: 14px 16px 16px; display: grid; gap: 4px; font-size: 0.875rem; }
+.sw-info b { font-size: 1.05rem; }
+.sw-info code { font-family: var(--font-family-mono); font-size: 0.8125rem; }
+.sw-info .ratio { margin-top: 6px; font-weight: 700; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pass { font-size: 0.75rem; font-weight: 800; border: 2px solid var(--vibra-ink); border-radius: 99px; padding: 1px 7px; background: var(--color-success-bg); color: var(--color-success-fg); border-color: var(--color-success-fg); }
+.pass.ui { background: var(--color-warning-bg); color: var(--color-warning-fg); border-color: var(--color-warning-fg); }
+.ratio-note { margin-top: var(--space-6); font-size: 0.9375rem; color: var(--color-fg-muted); max-width: 90ch; }
+
+/* ---------- 4. Type ---------- */
+.type-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-6); }
+.spec { border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); background: #fff; padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow-md); }
+.spec + .spec { margin-top: var(--space-6); }
+.spec-label { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.8125rem; font-weight: 700; color: var(--color-fg-muted); margin-bottom: var(--space-4); }
+.spec-label span { border: 2px solid var(--color-border-subtle); border-radius: 99px; padding: 2px 9px; }
+.spec--display { background: var(--vibra-coral); grid-row: span 2; display: flex; flex-direction: column; justify-content: space-between; }
+.spec--display .spec-label { color: var(--vibra-ink); }
+.spec--display .spec-label span { border-color: var(--vibra-ink); }
+.t-display { font-family: var(--font-family-display); font-weight: 800; font-stretch: 84%; font-variation-settings: "opsz" 96; font-size: clamp(3.5rem, 8vw, 7.5rem); line-height: 0.88; letter-spacing: -0.022em; text-wrap: balance; }
+.t-display-sub { font-family: var(--font-family-display); font-weight: 700; font-variation-settings: "opsz" 48; font-size: clamp(1.5rem, 2.6vw, 2.25rem); line-height: 1.05; letter-spacing: -0.01em; margin-top: var(--space-6); max-width: 22ch; text-wrap: balance; }
+.t-body { font-size: 1.0625rem; line-height: 1.5; max-width: 60ch; }
+.t-body + .t-body { margin-top: var(--space-3); }
+.t-caption { font-size: 0.8125rem; line-height: 1.35; font-weight: 600; letter-spacing: 0.01em; }
+.t-num { font-family: var(--font-family-display); font-variation-settings: "opsz" 72; font-weight: 800; font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.t-num-row { display: grid; gap: 6px; }
+.t-num-row div { display: flex; justify-content: space-between; border-top: 2px solid var(--vibra-ink); padding-top: 6px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ---------- 5. Components ---------- */
+.comp-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); }
+.panel { border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); background: #fff; padding: clamp(1.25rem, 2.5vw, 1.75rem); box-shadow: var(--shadow-md); }
+.panel h3 { font-size: 0.8125rem; font-weight: 800; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; margin-bottom: var(--space-5); }
+.p-buttons { grid-column: span 7; }
+.p-input { grid-column: span 5; }
+.p-card { grid-column: span 7; }
+.p-badges { grid-column: span 5; }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; }
+.btn-cap { display: grid; gap: 10px; justify-items: start; font-size: 0.75rem; font-weight: 700; color: var(--color-fg-muted); }
+.field { display: grid; gap: 8px; }
+.field + .field { margin-top: var(--space-5); }
+.field label { font-weight: 800; font-size: 0.9375rem; }
+.field .hint { font-size: 0.8125rem; color: var(--color-fg-muted); font-weight: 500; }
+.input { min-height: 54px; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-lg); background: var(--vibra-paper); padding: 0 16px; font: 600 1.0625rem var(--font-family-body); color: var(--vibra-ink); width: 100%; box-shadow: inset 3px 3px 0 0 rgb(14 14 14 / 0.08); }
+.input::placeholder { color: #7A766E; }
+.input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.field--error .input { border-color: var(--color-danger-fg); background: var(--color-danger-bg); }
+.err { display: flex; gap: 8px; align-items: flex-start; color: var(--color-danger-fg); font-weight: 700; font-size: 0.875rem; }
+.err svg { flex: none; width: 18px; height: 18px; margin-top: 2px; }
+.card-ex { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); padding: 16px 18px; background: var(--vibra-paper); box-shadow: var(--shadow-sm); }
+.card-ex + .card-ex { margin-top: 14px; }
+.card-ex .ico { width: 48px; height: 48px; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: 14px; display: grid; place-items: center; }
+.card-ex .ico svg { width: 26px; height: 26px; }
+.card-ex b { font-size: 1.0625rem; display: block; font-weight: 800; color: var(--color-fg-default); }
+.card-ex .meta { font-size: 0.875rem; color: var(--color-fg-muted); font-weight: 500; }
+.card-ex .amt { font-weight: 800; font-size: 1.125rem; font-variant-numeric: tabular-nums; text-align: right; }
+.card-ex .amt small { display: block; font-size: 0.75rem; color: var(--color-fg-muted); font-weight: 600; }
+.card-ex .amt.in { color: var(--color-success-fg); }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border: 2px solid var(--vibra-ink); border-radius: var(--radius-full); font-weight: 800; font-size: 0.875rem; }
+.badge svg { width: 16px; height: 16px; }
+.badge--lime { background: var(--vibra-lime); }
+.badge--coral { background: var(--vibra-coral); }
+.badge--sky { background: var(--vibra-sky); }
+.badge--banana { background: var(--vibra-banana); }
+.badge--ink { background: var(--vibra-ink); color: var(--vibra-lime); }
+.badge--status { background: var(--color-success-bg); color: var(--color-success-fg); border-color: var(--color-success-fg); }
+.badges-note { margin-top: var(--space-5); font-size: 0.875rem; color: var(--color-fg-muted); }
+
+/* ---------- 6. Applications ---------- */
+#applications { background: var(--vibra-ink); color: #fff; }
+#applications .sec-head h2 span.n { background: var(--vibra-lime); color: var(--vibra-ink); }
+#applications .sec-head p { color: #D6D6D6; }
+.apps { display: grid; grid-template-columns: 0.8fr 1fr 1.1fr; gap: var(--space-8); align-items: center; }
+.apps figure:first-child .app-cap { margin-top: var(--space-10); }
+.app-cap { margin-top: var(--space-4); font-size: 0.875rem; color: #D6D6D6; font-weight: 500; }
+.app-cap b { color: #fff; }
+.card3d { width: min(100%, 290px); aspect-ratio: 54 / 85.6; margin-inline: auto; border-radius: 18px; background: var(--vibra-lime); border: var(--vibra-stroke) solid #fff; position: relative; padding: 22px; color: var(--vibra-ink); transform: rotate(-6deg); box-shadow: 12px 12px 0 0 var(--vibra-coral); overflow: hidden; }
+.card3d .chip { width: 46px; height: 36px; border-radius: 8px; border: 2px solid var(--vibra-ink); background: repeating-linear-gradient(90deg, var(--vibra-banana) 0 9px, var(--vibra-ink) 9px 11px); margin-top: 30px; }
+.card3d .wm { position: absolute; left: 18px; bottom: 16px; font-family: var(--font-family-display); font-variation-settings: "opsz" 96; font-weight: 800; font-stretch: 80%; font-size: 5.2rem; line-height: 0.8; letter-spacing: -0.02em; writing-mode: vertical-rl; transform: rotate(180deg); }
+.card3d .nfc { position: absolute; right: 20px; top: 22px; width: 30px; height: 30px; }
+.card3d .debit { position: absolute; right: 20px; bottom: 20px; font-weight: 800; font-size: 0.8rem; text-align: right; line-height: 1.2; }
+.card3d .zig { position: absolute; right: -20px; top: 40%; width: 160px; }
+
+.story { width: min(100%, 300px); aspect-ratio: 9 / 16; margin-inline: auto; border-radius: 22px; background: var(--vibra-coral); border: var(--vibra-stroke) solid #fff; position: relative; overflow: hidden; color: var(--vibra-ink); padding: 18px; display: flex; flex-direction: column; }
+.story .bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.story .bars i { height: 3px; border-radius: 2px; background: rgb(14 14 14 / 0.3); }
+.story .bars i:first-child { background: var(--vibra-ink); }
+.story .who { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.8rem; margin-top: 10px; }
+.story .who i { width: 26px; height: 26px; border-radius: 50%; background: var(--vibra-lime); border: 2px solid var(--vibra-ink); }
+.story h3 { font-family: var(--font-family-display); font-weight: 800; font-variation-settings: "opsz" 96; font-stretch: 86%; font-size: 2.5rem; line-height: 0.9; letter-spacing: -0.015em; margin-top: 26px; }
+.story .slice { position: relative; margin: auto 0 0; height: 150px; }
+.story .slice svg { width: 100%; height: 100%; }
+.story .cta { margin-top: 12px; background: #fff; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: 99px; text-align: center; font-weight: 800; padding: 10px; font-size: 0.9rem; box-shadow: var(--shadow-sm); }
+
+.lock { width: min(100%, 360px); margin-inline: auto; border-radius: 28px; border: var(--vibra-stroke) solid #fff; background: var(--vibra-sky); padding: 26px 16px 18px; color: var(--vibra-ink); background-image: radial-gradient(rgb(14 14 14 / 0.14) 1.3px, transparent 1.5px); background-size: 16px 16px; }
+.lock .time { text-align: center; font-family: var(--font-family-display); font-variation-settings: "opsz" 96; font-weight: 700; font-size: 4.25rem; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.lock .date { text-align: center; font-weight: 700; font-size: 0.875rem; margin-bottom: 22px; }
+.notif { background: #fff; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: 18px; padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; gap: 12px; box-shadow: var(--shadow-sm); }
+.notif + .notif { margin-top: 10px; }
+.notif .ai { width: 38px; height: 38px; border-radius: 10px; background: var(--vibra-lime); border: 2px solid var(--vibra-ink); display: grid; place-items: center; }
+.notif .ai svg { width: 26px; height: 26px; }
+.notif p { font-size: 0.875rem; line-height: 1.35; }
+.notif p b { display: flex; justify-content: space-between; font-size: 0.8125rem; }
+.notif p b span { font-weight: 600; color: var(--color-fg-muted); }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
+.img-copy p { font-size: 1.125rem; line-height: 1.55; max-width: 52ch; }
+.img-copy p + p { margin-top: var(--space-4); }
+.rules { margin-top: var(--space-6); display: grid; gap: 8px; padding: 0; list-style: none; font-weight: 600; font-size: 0.9375rem; }
+.rules li { display: flex; gap: 10px; }
+.rules li::before { content: ""; flex: none; width: 14px; height: 14px; margin-top: 5px; background: var(--vibra-coral); border: 2px solid var(--vibra-ink); border-radius: 3px; }
+.icons { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.icons figure { margin: 0; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-lg); background: #fff; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; box-shadow: var(--shadow-sm); }
+.icons figure svg { width: 42%; height: 42%; }
+.icons figcaption { text-align: center; font-size: 0.75rem; font-weight: 700; line-height: 1; }
+.illo { margin-top: var(--space-6); border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); background: var(--vibra-banana); box-shadow: var(--shadow-md); overflow: hidden; }
+.illo svg { width: 100%; height: auto; }
+
+/* ---------- 8. Motion ---------- */
+.motion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
+.mtable { width: 100%; border-collapse: separate; border-spacing: 0; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); overflow: hidden; background: #fff; font-size: 0.9375rem; box-shadow: var(--shadow-md); }
+.mtable th, .mtable td { text-align: left; padding: 12px 14px; vertical-align: top; }
+.mtable th { background: var(--vibra-ink); color: var(--vibra-lime); font-size: 0.75rem; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; }
+.mtable tr + tr td { border-top: 2px solid var(--vibra-ink); }
+.mtable code { font-family: var(--font-family-mono); font-size: 0.75rem; background: var(--color-bg-sunken); padding: 1px 5px; border-radius: 4px; white-space: nowrap; }
+.mtable td:first-child { width: 38%; }
+.stage { border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); background: var(--vibra-sky); min-height: 340px; display: grid; place-items: center; position: relative; box-shadow: var(--shadow-md); overflow: hidden; background-image: radial-gradient(rgb(14 14 14 / 0.14) 1.3px, transparent 1.5px); background-size: 16px 16px; }
+.receipt { background: #fff; border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: 18px; padding: 18px 22px; width: 272px; box-shadow: var(--shadow-md); animation: drop var(--duration-slower) var(--vibra-ease-pop) both; animation-delay: 300ms; }
+.receipt b { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; }
+.receipt b i { width: 28px; height: 28px; border-radius: 50%; background: var(--vibra-lime); border: 2px solid var(--vibra-ink); display: grid; place-items: center; }
+.receipt b i svg { width: 16px; height: 16px; }
+.receipt strong { display: block; font-family: var(--font-family-display); font-variation-settings: "opsz" 96; font-weight: 800; font-size: 2.75rem; letter-spacing: -0.04em; line-height: 1; margin: 10px 0 4px; font-variant-numeric: tabular-nums; }
+.receipt span { font-size: 0.875rem; color: var(--color-fg-muted); font-weight: 600; }
+.stamp { position: absolute; right: 16%; top: 16%; background: var(--vibra-banana); border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: 99px; padding: 8px 14px; font-weight: 800; transform: rotate(10deg); animation: stamp var(--duration-slow) var(--vibra-ease-pop) both; animation-delay: 760ms; box-shadow: var(--shadow-sm); }
+.stage:hover .receipt, .stage:focus-within .receipt { animation-name: drop2; }
+.stage:hover .stamp, .stage:focus-within .stamp { animation-name: stamp2; }
+@keyframes drop { from { transform: translateY(-120px) rotate(-8deg); } to { transform: translateY(0) rotate(-2deg); } }
+@keyframes drop2 { from { transform: translateY(-120px) rotate(-8deg); } to { transform: translateY(0) rotate(-2deg); } }
+@keyframes stamp { from { transform: scale(2.2) rotate(30deg); opacity: 0; } to { transform: scale(1) rotate(10deg); opacity: 1; } }
+@keyframes stamp2 { from { transform: scale(2.2) rotate(30deg); opacity: 0; } to { transform: scale(1) rotate(10deg); opacity: 1; } }
+.replay { position: absolute; left: 14px; bottom: 14px; font-size: 0.8125rem; font-weight: 700; background: #fff; border: 2px solid var(--vibra-ink); border-radius: 99px; padding: 6px 12px; }
+@media (prefers-reduced-motion: reduce) {
+  .receipt, .stamp { animation: none !important; }
+  .receipt { transform: rotate(-2deg); }
+  .btn, .btn:hover, .btn:active { transition: none; }
+}
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.line { border: var(--vibra-stroke) solid var(--vibra-ink); border-radius: var(--radius-xl); padding: 22px; background: #fff; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 14px; }
+.line .k { align-self: flex-start; font-size: 0.75rem; font-weight: 800; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; border: 2px solid var(--vibra-ink); border-radius: 99px; padding: 3px 10px; }
+.line q { quotes: none; font-family: var(--font-family-display); font-variation-settings: "opsz" 60; font-weight: 800; font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1.02; letter-spacing: -0.025em; }
+.line .gloss { font-size: 0.875rem; color: var(--color-fg-muted); margin-top: auto; border-top: 2px dashed var(--color-border-subtle); padding-top: 12px; }
+.line--h { background: var(--vibra-lime); }
+.line--c q { display: inline-flex; }
+.line--e { background: var(--color-danger-bg); }
+.line--e .k { border-color: var(--color-danger-fg); color: var(--color-danger-fg); }
+.line--e q { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.15; }
+.voice-rules { margin-top: var(--space-8); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); font-size: 0.9375rem; }
+.voice-rules b { display: block; margin-bottom: 4px; }
+
+/* ---------- 10. Rationale ---------- */
+.rat { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.rat article { border-top: 6px solid var(--vibra-ink); padding-top: var(--space-5); }
+.rat h3 { font-family: var(--font-family-display); font-variation-settings: "opsz" 48; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: var(--space-4); }
+.rat p, .rat li { font-size: 1rem; line-height: 1.55; }
+.rat ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; }
+.rat .alt { background: var(--color-bg-sunken); border: 2px solid var(--vibra-ink); border-radius: var(--radius-lg); padding: 16px; margin-top: var(--space-4); font-size: 0.9375rem; }
+footer.foot { padding-block: var(--space-10); font-size: 0.875rem; color: var(--color-fg-muted); }
+footer.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); }
+footer.foot a { font-weight: 700; color: var(--vibra-ink); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .phones { min-height: 600px; max-width: 640px; margin-inline: auto; width: 100%; }
+  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .type-grid, .img-grid, .motion-grid { grid-template-columns: 1fr; }
+  .spec--display { grid-row: auto; }
+  .p-buttons, .p-input, .p-card, .p-badges { grid-column: 1 / -1; }
+  .apps { grid-template-columns: 1fr 1fr; }
+  .apps > :last-child { grid-column: 1 / -1; }
+  .voice, .rat, .voice-rules { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  #direction .wrap { grid-template-columns: 1fr; grid-template-areas: "brand" "brief" "chips"; }
+  .dir-meta { justify-items: start; text-align: left; }
+  .chips { justify-content: flex-start; }
+  .nav ul { display: none; }
+  #hero h1 { font-size: clamp(3.5rem, 17vw, 5rem); }
+  .phones { min-height: 430px; }
+  .phone { font-size: 10px; box-shadow: 8px 8px 0 0 var(--vibra-ink); }
+  .phone--home { left: -6px; }
+  .phone--pix { right: -6px; top: 48px; }
+  .sticker--burst { width: 112px; height: 112px; left: auto; right: 34%; bottom: -8px; }
+  .sticker--burst span { font-size: 1rem; }
+  .sticker--tag { font-size: 0.875rem; padding: 8px 12px; right: 4px; top: -6px; }
+  .hero-grid { padding-bottom: var(--space-16); }
+  .icons { grid-template-columns: repeat(3, 1fr); }
+  .apps { grid-template-columns: 1fr; }
+  .apps > :last-child { grid-column: auto; }
+  .btn-row { gap: var(--space-4); }
+  .mtable code { white-space: normal; }
+  .mtable th, .mtable td { padding: 10px; }
+  .mtable td:first-child { width: auto; }
+  .sw-chip { height: 104px; }
+}
+@media (max-width: 480px) {
+  .hero-ctas .btn { flex: 1 1 100%; }
+  .swatches { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sw-info { padding: 12px; font-size: 0.8125rem; }
+  .sw-chip { font-size: 1.25rem; flex-direction: column; gap: 8px; }
+  .card-ex { grid-template-columns: auto 1fr; }
+  .card-ex .amt { grid-column: 2; text-align: left; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to the key visual</a>
+
+<!-- Inline SVG icon sprite: 24px grid, 2.5px stroke, square caps, mitre joins -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="M4 8h13l-4-4M20 16H7l4 4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-boleto" viewBox="0 0 24 24"><path d="M3 5v14M6.5 5v14M9 5v14M12.5 5v14M15 5v14M18.5 5v14M21 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></symbol>
+    <symbol id="i-pote" viewBox="0 0 24 24"><path d="M7 4h10M8 4v3l-2 3v9.5h12V10l-2-3V4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/><circle cx="12" cy="14" r="2.6" fill="currentColor"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M3 10h18M6.5 15h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM14 18.5h2v1.5h-2zM18.5 14H20v2h-1.5z" fill="currentColor"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M12 21v-7L5 7M12 14l7-7M3 3h6M3 3v6M21 3h-6M21 3v6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15zM10 21h4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-5v-6h-6v6H4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M4 21c1-4.5 4-6.5 8-6.5s7 2 8 6.5" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2.5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 7v6M12 16v1.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></symbol>
+    <symbol id="i-bread" viewBox="0 0 24 24"><path d="M4 11a8 5 0 0 1 16 0v1.5h-1.5V19h-13v-6.5H4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="miter"/></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12zM9 21v-6h6v6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="miter"/></symbol>
+    <symbol id="logo-mark" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="10" fill="#0E0E0E"/><path d="M7 21h5l3-9 5 17 4-13 3 5h6" fill="none" stroke="#C6F135" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. DIRECTION -->
+<header id="direction">
+  <div class="wrap">
+    <div class="dir-brand"><b>vibra</b><span>Stylescape 01 / 12 · <strong>Loud and Honest</strong> · <a href="../index.html">All stylescapes</a></span></div>
+    <div class="dir-meta">
+      <p>A no-fee neobank for Gen Z in Brazil that lives on Pix. Neo-brutalist outlines and flat, loud color on the marketing layer; calm, conventional money screens underneath.</p>
+    </div>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.neo-brutalist</li><li>industry.fintech-banking</li><li>market.brazil-portuguese</li><li>audience.teens-gen-z</li><li>archetype.everyperson</li><li>tier.value</li><li>channel.native-app</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO: landing hero for the app, Portuguese copy -->
+<section id="hero" lang="pt-BR" aria-labelledby="hero-title">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="logo" href="#hero" aria-label="Vibra, início"><svg aria-hidden="true"><use href="#logo-mark"/></svg><span>vibra</span></a>
+      <ul>
+        <li><a href="#hero">Conta</a></li>
+        <li><a href="#hero">Cartão</a></li>
+        <li><a href="#hero">Pix</a></li>
+        <li><a href="#hero">Ajuda</a></li>
+      </ul>
+      <a class="btn btn--secondary" href="#hero" style="min-height:48px;padding:0 18px;font-size:0.9375rem">Baixar o app</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <span class="hero-kicker"><i aria-hidden="true"></i>Conta digital gratuita · 100% no app</span>
+        <h1 id="hero-title">Mandou, chegou. <span class="hl">Tarifa zero.</span></h1>
+        <p class="hero-lede">A conta pra quem vive no Pix. Sem mensalidade, sem anuidade, sem letra miúda. Abre em 5 minutos com seu CPF.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#components">Abrir minha conta <svg aria-hidden="true"><use href="#i-pix"/></svg></a>
+          <a class="btn btn--secondary" href="#applications">Ver como funciona</a>
+        </div>
+        <ul class="hero-proof">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pix ilimitado</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cartão de débito sem anuidade</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Rende todo dia</li>
+        </ul>
+      </div>
+
+      <div class="phones" role="img" aria-label="Duas telas do app Vibra: a tela inicial com saldo de R$ 1.284,50 e atalhos de Pix, e a revisão de um Pix de R$ 45,00 com tarifa de R$ 0,00.">
+        <span class="sticker sticker--tag" aria-hidden="true">Pix ilimitado</span>
+        <div class="phone phone--home" aria-hidden="true">
+          <div class="status"><span class="num">9:41</span><svg viewBox="0 0 56 14"><rect x="0" y="8" width="3" height="6" fill="#0E0E0E"/><rect x="5" y="5" width="3" height="9" fill="#0E0E0E"/><rect x="10" y="2" width="3" height="12" fill="#0E0E0E"/><rect x="30" y="1" width="22" height="12" rx="3" fill="none" stroke="#0E0E0E" stroke-width="2"/><rect x="33" y="4" width="14" height="6" fill="#0E0E0E"/></svg></div>
+          <div class="ph-head">
+            <div class="ph-hi"><span class="avatar">D</span>E aí, Duda</div>
+            <span class="icon-btn"><svg><use href="#i-bell"/></svg></span>
+          </div>
+          <div class="balance">
+            <small>Saldo disponível <svg><use href="#i-eye"/></svg></small>
+            <strong><sup>R$</sup>1.284,50</strong>
+            <p>+ R$ 0,38 rendeu hoje</p>
+          </div>
+          <div class="actions">
+            <div class="act"><span style="background:var(--vibra-coral)"><svg><use href="#i-pix"/></svg></span>Pix</div>
+            <div class="act"><span style="background:var(--vibra-banana)"><svg><use href="#i-boleto"/></svg></span>Pagar</div>
+            <div class="act"><span style="background:var(--vibra-sky)"><svg><use href="#i-pote"/></svg></span>Potinho</div>
+            <div class="act"><span style="background:#fff"><svg><use href="#i-split"/></svg></span>Dividir</div>
+          </div>
+          <div class="list-title"><span>Hoje</span><a>Ver extrato</a></div>
+          <div class="tx"><i style="background:var(--vibra-lime)"><svg><use href="#i-pix"/></svg></i><span><b>Pix recebido</b><em>Lucas M.</em></span><span class="amt in">+ R$ 25,00</span></div>
+          <div class="tx"><i style="background:var(--vibra-banana)"><svg><use href="#i-bread"/></svg></i><span><b>Padaria Estrela</b><em>Débito</em></span><span class="amt">− R$ 12,90</span></div>
+          <div class="tx"><i style="background:var(--vibra-sky)"><svg><use href="#i-house"/></svg></i><span><b>Pix enviado</b><em>Rep 402 · aluguel</em></span><span class="amt">− R$ 180,00</span></div>
+          <div class="tabbar"><span class="on"><svg><use href="#i-home"/></svg>Início</span><span><svg><use href="#i-pix"/></svg>Pix</span><span><svg><use href="#i-card"/></svg>Cartão</span><span><svg><use href="#i-user"/></svg>Você</span></div>
+        </div>
+
+        <div class="phone phone--pix" aria-hidden="true">
+          <div class="status"><span class="num">9:42</span><svg viewBox="0 0 56 14"><rect x="0" y="8" width="3" height="6" fill="#0E0E0E"/><rect x="5" y="5" width="3" height="9" fill="#0E0E0E"/><rect x="10" y="2" width="3" height="12" fill="#0E0E0E"/><rect x="30" y="1" width="22" height="12" rx="3" fill="none" stroke="#0E0E0E" stroke-width="2"/><rect x="33" y="4" width="14" height="6" fill="#0E0E0E"/></svg></div>
+          <div class="pix-top"><span class="icon-btn"><svg><use href="#i-back"/></svg></span>Revisar Pix</div>
+          <div class="pix-amt"><small>Você vai enviar</small><strong>R$ 45,00</strong></div>
+          <div class="pix-to"><span class="avatar">B</span><span><b>Bia Santos</b><em>Celular •••• 4417 · Banco Exemplo</em></span></div>
+          <dl class="rows">
+            <div><dt>Tarifa</dt><dd>R$ 0,00 <span class="free">grátis</span></dd></div>
+            <div><dt>Chega em</dt><dd>segundos</dd></div>
+            <div><dt>Mensagem</dt><dd>pizza de sexta</dd></div>
+          </dl>
+          <div class="pix-send"><svg><use href="#i-lock"/></svg>Enviar Pix</div>
+          <p class="pix-note">Você confirma com sua digital.</p>
+        </div>
+
+        <div class="sticker sticker--burst" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><polygon points="50,2 59,17 76,8 77,27 96,28 86,44 99,57 82,64 88,82 70,80 64,97 50,86 36,97 30,80 12,82 18,64 1,57 14,44 4,28 23,27 24,8 41,17" fill="#FFD84D" stroke="#0E0E0E" stroke-width="3" stroke-linejoin="miter"/></svg>
+          <span>R$&nbsp;0<small>de tarifa. Sério.</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PALETTE -->
+<section id="palette" class="sec" aria-labelledby="palette-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="palette-title"><span class="n">03</span>Palette</h2>
+      <p>Flat, saturated fills always carry ink text and a 3px ink outline. Color never sits on color without the outline between. Ratios computed with WCAG 2 relative luminance.</p>
+    </div>
+    <div class="swatches">
+      <article class="sw"><div class="sw-chip" style="background:#0E0E0E;color:#C6F135">Tinta <em>text, outline, shadow</em></div><div class="sw-info"><b>Ink</b><code>#0E0E0E</code><code>oklch(0.16 0 0)</code><span class="ratio">18.28:1 on Papel <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#FFF8EC;color:#0E0E0E">Papel <em>canvas</em></div><div class="sw-info"><b>Paper</b><code>#FFF8EC</code><code>oklch(0.98 0.016 82)</code><span class="ratio">Ground for Tinta 18.28:1 <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#C6F135;color:#0E0E0E">Limão <em>accent, primary fill</em></div><div class="sw-info"><b>Lime</b><code>#C6F135</code><code>oklch(0.90 0.204 122)</code><span class="ratio">Tinta on it 14.74:1 <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#FF5B3A;color:#0E0E0E">Pitanga <em>secondary fill</em></div><div class="sw-info"><b>Coral</b><code>#FF5B3A</code><code>oklch(0.69 0.205 33)</code><span class="ratio">Tinta on it 6.26:1 <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#7CC6FF;color:#0E0E0E">Piscina <em>info fill</em></div><div class="sw-info"><b>Sky</b><code>#7CC6FF</code><code>oklch(0.80 0.110 243)</code><span class="ratio">Tinta on it 10.46:1 <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#FFD84D;color:#0E0E0E">Banana <em>stickers, highlights</em></div><div class="sw-info"><b>Banana</b><code>#FFD84D</code><code>oklch(0.89 0.157 93)</code><span class="ratio">Tinta on it 13.96:1 <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#2B44FF;color:#FFFFFF">Anil <em>focus ring, links</em></div><div class="sw-info"><b>Electric blue</b><code>#2B44FF</code><code>oklch(0.52 0.271 268)</code><span class="ratio">5.90:1 on Papel, 4.75:1 on Limão <span class="pass">AA</span></span></div></article>
+      <article class="sw"><div class="sw-chip" style="background:#C4231B;color:#FFFFFF">Erro <em>danger text</em></div><div class="sw-info"><b>Error red</b><code>#C4231B</code><code>oklch(0.53 0.197 29)</code><span class="ratio">5.52:1 on Papel <span class="pass">AA</span></span></div></article>
+    </div>
+    <p class="ratio-note">Proportion: Papel 55%, Tinta 20%, Limão 15%, everything else 10%. Pitanga is never used for errors (errors use Erro plus an icon and text), so a loud coral sticker can never be mistaken for a failed Pix. White on Pitanga is 3.0:1, so Pitanga always takes Tinta text.</p>
+  </div>
+</section>
+
+<!-- 4. TYPE -->
+<section id="type" class="sec" aria-labelledby="type-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="type-title"><span class="n">04</span>Type</h2>
+      <p>One variable family does everything. Bricolage Grotesque's optical-size axis gives the display its ink traps and quirk at 96, and calms down into a readable text face at 14.</p>
+    </div>
+    <div class="type-grid" lang="pt-BR">
+      <div class="spec spec--display">
+        <div class="spec-label" lang="en"><span>Display</span><span>Bricolage Grotesque 800</span><span>wdth 84 · opsz 96</span><span>clamp(60px, 9.2vw, 148px) / 0.88</span><span>tracking −0.022em</span></div>
+        <div>
+          <p class="t-display">Sua grana, sem pedágio.</p>
+          <p class="t-display-sub">Pix na hora, todo dia, de graça.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="spec-label" lang="en"><span>Body</span><span>Bricolage Grotesque 400 · opsz 14</span><span>17px / 1.5</span><span>measure ≤ 60ch</span></div>
+        <p class="t-body">Na Vibra você não paga pra ter conta. Pix, boleto, transferência e cartão de débito saem de graça, sem pegadinha. Se um dia a gente cobrar alguma coisa, você vai saber antes, com o valor escrito em reais.</p>
+        <p class="t-body">Seu saldo rende todo dia útil e você pode tirar quando quiser.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-label" lang="en"><span>Caption + numerals</span><span>600 · 13px / 1.35</span><span>tabular figures for every amount</span></div>
+        <div class="t-num-row">
+          <p class="t-num">R$ 1.284,50</p>
+          <div><span>Pix recebido · Lucas M.</span><span>+ R$ 25,00</span></div>
+          <div><span>Padaria Estrela · débito</span><span>− R$ 12,90</span></div>
+        </div>
+        <p class="t-caption" style="margin-top:14px">Valores em reais. Atualizado às 9:41 de 20 de outubro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMPONENTS -->
+<section id="components" class="sec" aria-labelledby="components-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="components-title"><span class="n">05</span>Components</h2>
+      <p>Buttons press down into their own shadow (translate 5px, shadow to 0). Focus is a separate Anil ring with 4px offset, so it never disappears into the black outline.</p>
+    </div>
+    <div class="comp-grid" lang="pt-BR">
+      <div class="panel p-buttons">
+        <h3 lang="en">Buttons</h3>
+        <div class="btn-row">
+          <div class="btn-cap"><button class="btn btn--accent" type="button">Abrir conta</button><span lang="en">Primary</span></div>
+          <div class="btn-cap"><button class="btn btn--secondary" type="button">Agora não</button><span lang="en">Secondary</span></div>
+          <div class="btn-cap"><button class="btn" type="button" aria-disabled="true">Enviar Pix</button><span lang="en">Disabled (hatched)</span></div>
+          <div class="btn-cap"><button class="btn btn--accent is-focus" type="button">Abrir conta</button><span lang="en">Focus visible</span></div>
+        </div>
+      </div>
+      <div class="panel p-input">
+        <h3 lang="en">Text input</h3>
+        <div class="field">
+          <label for="chave">Chave Pix</label>
+          <span class="hint" id="chave-hint">CPF, celular, e-mail ou chave aleatória</span>
+          <input class="input" id="chave" type="text" placeholder="ex.: bia@email.com" aria-describedby="chave-hint">
+        </div>
+        <div class="field field--error">
+          <label for="valor">Valor</label>
+          <input class="input num" id="valor" type="text" value="R$ 2.000,00" aria-invalid="true" aria-describedby="valor-err">
+          <p class="err" id="valor-err"><svg aria-hidden="true"><use href="#i-alert"/></svg>Seu saldo é R$ 1.284,50. Diminui o valor ou adiciona grana antes.</p>
+        </div>
+      </div>
+      <div class="panel p-card">
+        <h3 lang="en">List items / cards</h3>
+        <div class="card-ex"><span class="ico" style="background:var(--vibra-lime)"><svg aria-hidden="true"><use href="#i-pix"/></svg></span><span><b>Pix recebido de Lucas M.</b><span class="meta">Hoje, 8:12 · "metade do uber"</span></span><span class="amt in">+ R$ 25,00<small>tarifa R$ 0,00</small></span></div>
+        <div class="card-ex"><span class="ico" style="background:var(--vibra-sky)"><svg aria-hidden="true"><use href="#i-pote"/></svg></span><span><b>Potinho: Show em março</b><span class="meta">R$ 312 de R$ 480 · 65%</span></span><span class="amt">R$ 312,00<small>rende todo dia</small></span></div>
+      </div>
+      <div class="panel p-badges">
+        <h3 lang="en">Badges and tags</h3>
+        <div class="badges">
+          <span class="badge badge--lime">Sem tarifa</span>
+          <span class="badge badge--ink"><svg aria-hidden="true"><use href="#i-bolt"/></svg>Pix</span>
+          <span class="badge badge--coral">Novo</span>
+          <span class="badge badge--sky">Rende todo dia</span>
+          <span class="badge badge--banana">Dividido em 4</span>
+          <span class="badge badge--status"><svg aria-hidden="true"><use href="#i-check"/></svg>Pago</span>
+        </div>
+        <p class="badges-note" lang="en">Status badges add an icon and a word; color is never the only signal. 32px minimum height keeps them above the 24px target size when tappable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. APPLICATIONS -->
+<section id="applications" class="sec" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="apps-title"><span class="n">06</span>Applications</h2>
+      <p>The debit card is the brand's billboard in every bar and bakery; stories and push notifications are where Gen Z actually meets the bank.</p>
+    </div>
+    <div class="apps" lang="pt-BR">
+      <figure style="margin:0">
+        <div class="card3d" role="img" aria-label="Cartão de débito Vibra vertical, verde-limão com a marca na lateral">
+          <svg class="nfc" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6c2 3.6 2 8.4 0 12M12 4c3 5 3 11 0 16M16 2.5c3.8 6 3.8 13 0 19" fill="none" stroke="#0E0E0E" stroke-width="2.4" stroke-linecap="square"/></svg>
+          <div class="chip" aria-hidden="true"></div>
+          <svg class="zig" viewBox="0 0 160 40" aria-hidden="true"><path d="M0 22h30l8-16 14 30 12-26 10 12h86" fill="none" stroke="#0E0E0E" stroke-width="4" stroke-linecap="square"/></svg>
+          <span class="wm" aria-hidden="true">vibra</span>
+          <span class="debit">DÉBITO<br>sem anuidade</span>
+        </div>
+        <figcaption class="app-cap" lang="en"><b>Vertical debit card.</b> Printed lime with black edge paint; brand set vertically so it reads in the hand at the till.</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="story" role="img" aria-label="Story do Instagram em coral: Dividiu a pizza? Racha no Pix em 3 toques.">
+          <div class="bars" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="who" aria-hidden="true"><i></i>vibra · Patrocinado</div>
+          <h3 aria-hidden="true">Dividiu a pizza? Racha no Pix em 3&nbsp;toques.</h3>
+          <div class="slice" aria-hidden="true">
+            <svg viewBox="0 0 220 150"><path d="M20 140 110 10l90 130z" fill="#FFD84D" stroke="#0E0E0E" stroke-width="4" stroke-linejoin="miter"/><path d="M20 140 110 10l90 130" fill="none"/><path d="M14 136h192" stroke="#0E0E0E" stroke-width="12" stroke-linecap="square"/><circle cx="104" cy="70" r="12" fill="#FF5B3A" stroke="#0E0E0E" stroke-width="3"/><circle cx="136" cy="108" r="10" fill="#FF5B3A" stroke="#0E0E0E" stroke-width="3"/><circle cx="78" cy="112" r="9" fill="#FF5B3A" stroke="#0E0E0E" stroke-width="3"/><path d="M110 10v130M65 76l90 0" stroke="#0E0E0E" stroke-width="3" stroke-dasharray="6 6"/></svg>
+          </div>
+          <div class="cta" aria-hidden="true">Baixar a Vibra</div>
+        </div>
+        <figcaption class="app-cap" lang="en"><b>Instagram story, 1080 × 1920.</b> One idea, one illustration, CTA kept above the bottom 250px reply zone.</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div class="lock" role="img" aria-label="Tela de bloqueio com duas notificações da Vibra: Pix recebido de R$ 25,00 e potinho atingiu 65%.">
+          <p class="time" aria-hidden="true">9:41</p>
+          <p class="date" aria-hidden="true">segunda-feira, 20 de outubro</p>
+          <div class="notif" aria-hidden="true"><span class="ai"><svg><use href="#logo-mark"/></svg></span><p><b>Vibra <span>agora</span></b>Caiu R$ 25,00 do Lucas M. no Pix. Tarifa: R$ 0,00, como sempre.</p></div>
+          <div class="notif" aria-hidden="true"><span class="ai"><svg><use href="#logo-mark"/></svg></span><p><b>Vibra <span>8 min</span></b>Potinho "Show em março" chegou em 65%. Faltam R$ 168.</p></div>
+        </div>
+        <figcaption class="app-cap" lang="en"><b>Push notifications.</b> Amount first, fee always stated, no exclamation marks on money.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7. IMAGERY -->
+<section id="imagery" class="sec" aria-labelledby="imagery-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="imagery-title"><span class="n">07</span>Imagery and icons</h2>
+      <p>Drawn, not photographed. The brand looks like a sticker sheet, never like a stock photo of a smiling couple at a laptop.</p>
+    </div>
+    <div class="img-grid">
+      <div class="img-copy">
+        <p>Icons are drawn on a 24px grid with a 2.5px stroke, square caps and mitre joins, and they sit inside outlined tiles filled with one palette color. Illustration is flat sticker art: thick ink outline, no gradients, no 3D coins, no shields or padlocks as decoration.</p>
+        <p>When photography appears (campaigns, not the app) it is flash-lit phone photography of real friend groups in real places in São Paulo, Recife and Belém, cropped hard and placed inside an outlined frame with a hard shadow.</p>
+        <ul class="rules">
+          <li>One fill per icon tile; never two saturated colors touching without ink between.</li>
+          <li>Money metaphors stay literal: a pote, a split, a receipt. No piggy banks, no rockets.</li>
+          <li>Stickers rotate between −12° and +12°; UI elements never rotate.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="icons" role="list" aria-label="Icon set">
+          <figure role="listitem" style="background:var(--vibra-lime)"><svg aria-hidden="true"><use href="#i-pix"/></svg><figcaption>Pix</figcaption></figure>
+          <figure role="listitem" style="background:var(--vibra-banana)"><svg aria-hidden="true"><use href="#i-boleto"/></svg><figcaption>Boleto</figcaption></figure>
+          <figure role="listitem" style="background:var(--vibra-sky)"><svg aria-hidden="true"><use href="#i-pote"/></svg><figcaption>Potinho</figcaption></figure>
+          <figure role="listitem" style="background:var(--vibra-coral)"><svg aria-hidden="true"><use href="#i-card"/></svg><figcaption>Cartão</figcaption></figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-qr"/></svg><figcaption>QR</figcaption></figure>
+          <figure role="listitem" style="background:var(--vibra-lime)"><svg aria-hidden="true"><use href="#i-split"/></svg><figcaption>Dividir</figcaption></figure>
+        </div>
+        <div class="illo" role="img" aria-label="Sticker sheet illustration: a receipt, a split arrow, a lime starburst and a halftone field">
+          <svg viewBox="0 0 640 260" aria-hidden="true">
+            <defs><pattern id="ht" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r="2.4" fill="#0E0E0E" opacity="0.85"/></pattern></defs>
+            <rect x="0" y="0" width="640" height="260" fill="#FFD84D"/>
+            <path d="M0 260 L0 170 Q160 120 300 190 T640 160 L640 260z" fill="url(#ht)" opacity="0.35"/>
+            <g transform="rotate(-8 140 130)"><path d="M70 40h140v170l-17-12-18 12-17-12-18 12-17-12-18 12-17-12-18 12z" fill="#fff" stroke="#0E0E0E" stroke-width="5" stroke-linejoin="miter"/><path d="M92 78h96M92 104h70M92 130h86" stroke="#0E0E0E" stroke-width="7" stroke-linecap="square"/><path d="M92 160h40" stroke="#C4231B" stroke-width="0"/><text x="92" y="182" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="30" fill="#0E0E0E">R$ 0,00</text></g>
+            <g transform="translate(300 40)"><polygon points="80,0 94,26 122,12 122,44 152,48 134,72 152,98 122,102 122,134 94,120 80,146 66,120 38,134 38,102 8,98 26,72 8,48 38,44 38,12 66,26" fill="#C6F135" stroke="#0E0E0E" stroke-width="5" stroke-linejoin="miter"/><text x="80" y="82" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="30" fill="#0E0E0E">grátis</text></g>
+            <g transform="translate(500 54) rotate(10)"><rect x="0" y="0" width="104" height="104" rx="18" fill="#FF5B3A" stroke="#0E0E0E" stroke-width="5"/><path d="M52 92V62L24 34M52 62l28-28M18 22h22M18 22v22M86 22H64M86 22v22" fill="none" stroke="#0E0E0E" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MOTION -->
+<section id="motion" class="sec" aria-labelledby="motion-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="motion-title"><span class="n">08</span>Motion</h2>
+      <p>Snappy and physical, like pressing a real button. Overshoot is reserved for one moment: money arriving.</p>
+    </div>
+    <div class="motion-grid">
+      <table class="mtable">
+        <thead><tr><th scope="col">Moment</th><th scope="col">Duration</th><th scope="col">Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Button press (translate 5px into shadow)</td><td>120ms</td><td><code>cubic-bezier(0.2, 0, 0, 1)</code></td></tr>
+          <tr><td>Screen push, sheet open</td><td>200ms</td><td><code>cubic-bezier(0.05, 0.7, 0.1, 1)</code></td></tr>
+          <tr><td>Pix enviado: receipt drop + stamp</td><td>480ms + 320ms</td><td><code>cubic-bezier(0.34, 1.56, 0.64, 1)</code></td></tr>
+          <tr><td>Errors and declines</td><td>0ms (instant), no shake</td><td><code>linear</code></td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">All transforms removed; states change instantly; receipt appears in place.</td></tr>
+        </tbody>
+      </table>
+      <div class="stage" tabindex="0" aria-label="Motion demo: Pix sent receipt. Hover or focus to replay." lang="pt-BR">
+        <div class="receipt">
+          <b><i><svg aria-hidden="true"><use href="#i-check"/></svg></i>Pix enviado</b>
+          <strong>R$ 45,00</strong>
+          <span>pra Bia Santos · chegou em 2&nbsp;s</span>
+        </div>
+        <span class="stamp">tarifa R$ 0</span>
+        <span class="replay" lang="en">Hover or focus to replay</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VOICE -->
+<section id="voice" class="sec" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="voice-title"><span class="n">09</span>Voice</h2>
+      <p>Talks like a friend who is good with money: "você", "grana", short sentences. Never jokes about debt, fraud or a failed payment.</p>
+    </div>
+    <div class="voice">
+      <div class="line line--h"><span class="k">Headline</span><q lang="pt-BR">Sua grana, sem pedágio.</q><p class="gloss">"Your money, no tolls." Brazilians know the pain of toll booths; the metaphor needs no explanation.</p></div>
+      <div class="line line--c"><span class="k">CTA</span><q lang="pt-BR">Abrir minha conta</q><p class="gloss">"Open my account." First person, verb first, no "Saiba mais".</p></div>
+      <div class="line line--e"><span class="k">Error</span><q lang="pt-BR">Esse Pix não saiu. Sua grana continua na conta. Tenta de novo em 1 minuto ou fala com a gente.</q><p class="gloss">"This Pix didn't go through. Your money is still in your account. Try again in 1 minute or talk to us." Says what happened, that money is safe, and what to do.</p></div>
+    </div>
+    <div class="voice-rules">
+      <p><b>Say the number.</b>"Tarifa: R$ 0,00" beats "sem custos". Every fee in reais, before confirmation.</p>
+      <p><b>Use "você", never "o cliente".</b>Informal second person is normal for youth banking in Brazil; keep slang light so it ages well.</p>
+      <p><b>Drop the volume on money screens.</b>Review, confirm and error states are plain and calm; the loud voice lives in marketing and stickers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RATIONALE -->
+<section id="rationale" class="sec" aria-labelledby="rationale-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="rationale-title"><span class="n">10</span>Rationale</h2>
+      <p>Why this direction, what could go wrong, and what we deliberately did not do.</p>
+    </div>
+    <div class="rat">
+      <article>
+        <h3>Why it fits</h3>
+        <ul>
+          <li>Gen Z in Brazil already banks on their phone; the differentiator is attitude and transparency, not features. Neo-brutalism reads as "nothing hidden": every box is outlined, every fee is printed.</li>
+          <li>Value tier plus everyperson archetype: cheap-to-produce flat color, no photography budget needed, works on entry-level Android screens.</li>
+          <li>Lime, coral and sky stand apart from the purple, orange and yellow that dominate Brazilian digital banking shelves.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>What it risks</h3>
+        <ul>
+          <li>Can feel unserious when balances grow. Mitigation: transaction review, Pix confirmation and errors use calm white surfaces, no stickers, no rotation.</li>
+          <li>Neo-brutalism is fashionable; it may date in 3-4 years. The 3px outline and lime are the only must-keeps; the stickers can retire.</li>
+          <li>Hard shadows double visual weight on small screens; cap them at 4px inside the app.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Category-expected alternative</h3>
+        <p>A purple or navy flat-minimal neobank (<code>style.corporate-modern</code> + <code>archetype.ruler</code>): rounded sans, soft cards, a glowing card in 3D. Credible, but indistinguishable from the incumbents Vibra is positioned against.</p>
+        <p class="alt"><b>Before production:</b> confirm Banco Central disclosure wording, LGPD consent flows and the Pix brand-usage rules for the "Pix" name and mark with counsel.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Vibra is a fictional brand made for the Visual Design Kit stylescape set. All artwork is CSS and inline SVG.</span>
+    <span>Type: Bricolage Grotesque (SIL OFL 1.1). <a href="../index.html">All stylescapes</a></span>
+  </div>
+</footer>
+</body>
+</html>

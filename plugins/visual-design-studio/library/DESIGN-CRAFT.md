@@ -25,7 +25,7 @@ For a selected candidate, record the artifact/version, inspected viewport or pri
 
 1. Specificity: can each major visual choice be explained from this audience, content and brand? A name-swap thought experiment can reveal a generic structure, but is a heuristic, not proof of originality.
 2. Concept: does imagery/layout tell this story rather than merely fill space? Compare genuinely different directions using the same core content when direction is open. An already approved direction needs careful execution, not artificial alternatives.
-3. Hierarchy: is there a clear entry point and useful rhythm? Repeated cards, badges, centered headings, gradients or oversized type require a purpose when they dominate. None is banned solely for popularity.
+3. Hierarchy: is there a clear entry point and useful rhythm? Repeated cards, badges, centered headings, gradients or oversized type require a purpose when they dominate. None is banned, but each is a known generic-AI tell when used by default; check the [AI-tells catalog](../skills/design-critique/references/ai-tells.md) and either justify the pattern from the brief or replace it.
 4. Typography: distinctive where useful, comfortable where reading matters; accurate glyphs, good spacing, no fake weights or accidental fallback.
 5. Color: roles remain clear across states and contexts; combinations, not isolated swatches, meet the selected accessibility target.
 6. Composition and assets: coherent grid, optical alignment, meaningful whitespace, crop/lighting/icon consistency, truthful product representation and no unexplained decorative clutter.

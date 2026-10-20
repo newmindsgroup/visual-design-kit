@@ -1,1 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc"><title id="title">Visual Design Kit: one library, independent projects</title><desc id="desc">A shared library supports existing and new brand projects. Each project keeps its assets and decisions. Sanitized lessons return through review.</desc><!-- Version-Timestamp: 2026-09-14T15:19:22.465999-04:00 --><rect width="1200" height="550" fill="#f5f3ec"/><text x="60" y="62" font-family="Arial,sans-serif" font-size="14" letter-spacing="3" fill="#315e52">RESEARCH / DIRECTION / PRODUCTION / LEARNING</text><text x="60" y="127" font-family="Georgia,serif" font-size="54" fill="#183d32">Visual Design Kit</text><text x="60" y="164" font-family="Arial,sans-serif" font-size="19" fill="#38594f">One shared method. Separate brands. Deliberate design decisions.</text><rect x="60" y="215" width="330" height="210" rx="12" fill="#183d32"/><text x="85" y="259" font-family="Arial,sans-serif" font-size="25" fill="white">Shared library</text><g font-family="Arial,sans-serif" font-size="18" fill="#e0ebe4"><text x="85" y="300">130 reference capabilities</text><text x="85" y="332">One project starting skill</text><text x="85" y="364">Templates and quality checks</text><text x="85" y="396">Versioned, reviewed updates</text></g><path d="M400 310 H470 M455 298 L470 310 L455 322" fill="none" stroke="#315e52" stroke-width="3"/><rect x="495" y="215" width="305" height="210" rx="12" fill="white" stroke="#b9c9bf"/><rect x="825" y="215" width="315" height="210" rx="12" fill="white" stroke="#b9c9bf"/><g font-family="Arial,sans-serif" fill="#183d32"><text x="519" y="259" font-size="23">Existing brand project</text><text x="849" y="259" font-size="23">New brand project</text><g font-size="17"><text x="519" y="305">Preserve approved identity</text><text x="519" y="338">Extend the visual language</text><text x="519" y="371">Produce the chosen deliverable</text><text x="849" y="305">Research and positioning</text><text x="849" y="338">Explore identity directions</text><text x="849" y="371">Build and apply the system</text></g></g><path d="M980 443 V475 H228 V443 M218 456 L228 443 L238 456" fill="none" stroke="#315e52" stroke-width="2"/><rect x="435" y="457" width="405" height="34" fill="#f5f3ec"/><text x="450" y="480" font-family="Arial,sans-serif" font-size="17" fill="#315e52">Sanitized lessons → review → versioned improvement</text><text x="60" y="526" font-family="Arial,sans-serif" font-size="14" fill="#38594f">Client assets, private evidence and approvals stay inside their own project.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Visual Design Kit 0.5.0: any brief to the best design direction</title>
+  <desc id="desc">A brief goes to the design director, which asks qualifying questions and queries the Design Space Atlas of 125 entries across seven axes. It renders three to five distinct directions, scores them and recommends one. Discipline skills produce the work and a critique loop renders, scores and revises until the rubric passes.</desc>
+  <!-- Version-Timestamp: 2026-10-20 02:05:00 UTC -->
+  <style>
+    .label { font: 600 13px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; letter-spacing: .12em; fill: #245E62; }
+    .title { font: 700 44px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; letter-spacing: -.02em; fill: #0E1A1D; }
+    .sub { font: 400 19px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #33474A; }
+    .node { font: 650 19px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #0E1A1D; }
+    .nodeInv { font: 650 19px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #FFFFFF; }
+    .small { font: 400 14px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #33474A; }
+    .smallInv { font: 400 14px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #D6EDED; }
+    .chip { font: 600 14px system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #025959; }
+    .score { font: 700 15px ui-monospace, "SF Mono", Menlo, Consolas, monospace; fill: #0E1A1D; }
+  </style>
+  <rect width="1200" height="600" fill="#F3F6F6"/>
+  <text x="64" y="70" class="label">VISUAL DESIGN KIT 0.5.0</text>
+  <text x="64" y="124" class="title">Any brief. The best design direction.</text>
+  <text x="64" y="160" class="sub">Claude as design director: explore deliberately different options, render them, score them, then build and critique.</text>
+
+  <!-- Pipeline -->
+  <g>
+    <rect x="64" y="214" width="150" height="128" rx="10" fill="#FFFFFF" stroke="#B9CFD0"/>
+    <text x="84" y="252" class="node">Brief</text>
+    <text x="84" y="280" class="small">Any style,</text>
+    <text x="84" y="300" class="small">industry, market,</text>
+    <text x="84" y="320" class="small">audience, channel</text>
+
+    <path d="M222 278 H252" stroke="#245E62" stroke-width="2.5" fill="none"/><path d="M246 271 L254 278 L246 285" stroke="#245E62" stroke-width="2.5" fill="none"/>
+
+    <rect x="262" y="214" width="208" height="128" rx="10" fill="#025959"/>
+    <text x="282" y="252" class="nodeInv">Design director</text>
+    <text x="282" y="280" class="smallInv">Variables + 2-4 questions</text>
+    <text x="282" y="300" class="smallInv">Category scan</text>
+    <text x="282" y="320" class="smallInv">Atlas query</text>
+
+    <path d="M478 278 H508" stroke="#245E62" stroke-width="2.5" fill="none"/><path d="M502 271 L510 278 L502 285" stroke="#245E62" stroke-width="2.5" fill="none"/>
+
+    <rect x="518" y="214" width="250" height="128" rx="10" fill="#FFFFFF" stroke="#B9CFD0"/>
+    <text x="538" y="252" class="node">3-5 directions</text>
+    <rect x="538" y="268" width="62" height="56" rx="6" fill="#0E1A1D"/>
+    <rect x="612" y="268" width="62" height="56" rx="6" fill="#D95737"/>
+    <rect x="686" y="268" width="62" height="56" rx="6" fill="#D6EDED" stroke="#B9CFD0"/>
+    <text x="551" y="302" font-family="Georgia, serif" font-size="22" fill="#FFFFFF">Aa</text>
+    <text x="627" y="303" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#0E1A1D">Aa</text>
+    <text x="700" y="302" font-family="ui-monospace, monospace" font-size="20" fill="#025959">Aa</text>
+
+    <path d="M776 278 H806" stroke="#245E62" stroke-width="2.5" fill="none"/><path d="M800 271 L808 278 L800 285" stroke="#245E62" stroke-width="2.5" fill="none"/>
+
+    <rect x="816" y="214" width="150" height="128" rx="10" fill="#FFFFFF" stroke="#B9CFD0"/>
+    <text x="836" y="252" class="node">Score</text>
+    <text x="836" y="282" class="score">A 3.95</text>
+    <text x="836" y="304" class="score">B 4.15 ✓</text>
+    <text x="836" y="326" class="score">C 3.40</text>
+
+    <path d="M974 278 H1004" stroke="#245E62" stroke-width="2.5" fill="none"/><path d="M998 271 L1006 278 L998 285" stroke="#245E62" stroke-width="2.5" fill="none"/>
+
+    <rect x="1014" y="214" width="122" height="128" rx="10" fill="#FFFFFF" stroke="#B9CFD0"/>
+    <text x="1032" y="252" class="node">Build</text>
+    <text x="1032" y="280" class="small">13 discipline</text>
+    <text x="1032" y="300" class="small">skills, tokens,</text>
+    <text x="1032" y="320" class="small">reference code</text>
+
+    <!-- critique loop -->
+    <path d="M1075 350 V392 H892 V350" stroke="#D95737" stroke-width="2.5" fill="none"/>
+    <path d="M885 358 L892 348 L899 358" stroke="#D95737" stroke-width="2.5" fill="none"/>
+    <text x="983" y="420" text-anchor="middle" class="small">Critique loop: render, score, revise</text>
+  </g>
+
+  <!-- Atlas axes -->
+  <text x="64" y="476" class="label">DESIGN SPACE ATLAS: 125 ENTRIES</text>
+  <g>
+    <rect x="64" y="494" width="126" height="40" rx="20" fill="#D6EDED"/><text x="84" y="519" class="chip">37 styles</text>
+    <rect x="200" y="494" width="150" height="40" rx="20" fill="#D6EDED"/><text x="220" y="519" class="chip">32 industries</text>
+    <rect x="360" y="494" width="132" height="40" rx="20" fill="#D6EDED"/><text x="380" y="519" class="chip">17 markets</text>
+    <rect x="502" y="494" width="146" height="40" rx="20" fill="#D6EDED"/><text x="522" y="519" class="chip">10 audiences</text>
+    <rect x="658" y="494" width="156" height="40" rx="20" fill="#D6EDED"/><text x="678" y="519" class="chip">12 archetypes</text>
+    <rect x="824" y="494" width="140" height="40" rx="20" fill="#D6EDED"/><text x="844" y="519" class="chip">5 price tiers</text>
+    <rect x="974" y="494" width="140" height="40" rx="20" fill="#D6EDED"/><text x="994" y="519" class="chip">12 channels</text>
+  </g>
+  <text x="64" y="572" class="small">Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Client work stays in its own project.</text>
+</svg>

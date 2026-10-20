@@ -58,3 +58,18 @@ Astro Motion Atlas local 0.4.0 is installed/enabled and 440 cache files match so
 Version-Timestamp: 2026-10-14 14:06:55 AST
 
 Headless UI local 0.4.1 installed/enabled; 444 files match owner source. Final10 changed-path groups, regression40, typecheck/build/audit and Fable review findings disposition recorded in private/headless-ui-20261014. Preview retained for user review at localhost:17731. Public/client release pins unchanged.
+
+
+## 0.5.0 candidate
+
+Version-Timestamp: 2026-10-20 04:00:00 UTC
+
+Package version: 0.5.0 candidate on branch `feat/claude-native-design-studio` (PR #5). Not merged, tagged or released. Built with `tools/build_plugin.py --version 0.5.0 --timestamp "2026-10-20 04:00:00 UTC"`.
+
+SHA-256 of plugins/visual-design-studio/PAYLOAD.sha256:
+
+```text
+97e259e821061fe98d9c82bddfc1515692c8851eb3fba0be21b8bae4429e4658
+```
+
+All 898 listed payload files verified locally with `sha256sum -c`; the payload file set matches the git-tracked plugin files exactly. This pin establishes exact candidate bytes, not production or aesthetic approval. A maintainer should re-verify on a receiving machine before relying on it; existing project pins are unaffected. Evidence: [edition record](RELEASE-050.md).

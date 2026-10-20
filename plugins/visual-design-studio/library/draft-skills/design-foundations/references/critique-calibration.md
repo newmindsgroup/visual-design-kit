@@ -17,7 +17,7 @@ Use the existing [design-work record](../../../templates/design-work.md) and [st
 
 ## Automated findings and house style
 
-Treat a pattern detector as a lead with its source snippet and known limits. Separate measured requirement failures from aesthetic preferences and verify each finding in context. A named color, gradient, symmetrical layout or font genre is not inherently defective; approved brand intent governs unless a real requirement fails. Maintain explicit exceptions with rationale rather than letting a generic style ban override the brand. Reopen missing evidence instead of treating an absence of lint findings as proof of quality. See Open Design assessment (optional provenance in the pinned source version; not bundled).
+Treat a pattern detector as a lead with its source snippet and known limits. Separate measured requirement failures from aesthetic preferences and verify each finding in context. A named color, gradient, symmetrical layout or font genre is not inherently defective, but generic defaults are a quality failure: check the [AI-tells catalog](../../../../skills/design-critique/references/ai-tells.md). Approved brand intent governs unless a real requirement fails. Maintain explicit exceptions with rationale rather than letting a generic style ban override the brand. Reopen missing evidence instead of treating an absence of lint findings as proof of quality. See Open Design assessment (optional provenance in the pinned source version; not bundled).
 
 ## Shared rendered calibration
 
