@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater Collective: Field Report | Stylescape 08</title>
+<meta name="description" content="Stylescape for Tidewater Collective, a fictional coastal climate-resilience nonprofit. Direction: Field Report. Editorial magazine meets eco-natural, Hero archetype, marketing website with a donation flow.">
+<style>
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader/newsreader-latin-opsz-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader/newsreader-latin-opsz-wght-italic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../fonts/archivo/archivo-latin-wdth-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; font-style: normal; font-display: swap; }
+
+:root {
+  --color-bg-canvas: #F3F5F0;          /* Salt */
+  --color-bg-surface: #FFFFFF;         /* Paper */
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #E3D6B8;          /* Sand */
+  --color-bg-inverse: #0B2E35;         /* Deep channel */
+  --color-fg-default: #0B2E35;
+  --color-fg-muted: #4A5F63;           /* Estuary */
+  --color-fg-subtle: #7A8E90;
+  --color-fg-inverse: #F3F5F0;
+  --color-fg-on-accent: #FFFFFF;
+  --color-border-subtle: #D5DDD8;
+  --color-border-default: #7A8E90;
+  --color-border-strong: #0B2E35;
+  --color-accent-default: #C73A24;     /* Life-ring */
+  --color-accent-hover: #B5361F;
+  --color-accent-active: #9E2F1B;
+  --color-accent-subtle: #F8E3DE;
+  --color-accent-fg: #A9321D;
+  --color-marsh: #3F6B3A;              /* Spartina */
+  --color-shallows: #9CC3C9;
+  --color-gold: #F2B544;               /* Marsh gold, on Deep channel only */
+  --color-success-fg: #3F6B3A; --color-success-bg: #E4EDE1; --color-success-border: #3F6B3A;
+  --color-warning-fg: #7A5300; --color-warning-bg: #FBEFD3; --color-warning-border: #7A5300;
+  --color-danger-fg: #A9321D;  --color-danger-bg: #F8E3DE;  --color-danger-border: #A9321D;
+  --color-info-fg: #0F4A52;    --color-info-bg: #DCE9E6;    --color-info-border: #0F4A52;
+  --color-focus-ring: #0B2E35;
+  --color-overlay-scrim: rgb(11 46 53 / 0.6);
+
+  --font-family-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-family-body: "Newsreader", Georgia, serif;
+  --font-family-ui: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem; --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-caps: 0.06em;
+  --measure-body: 66ch;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 2px; --radius-md: 4px; --radius-lg: 8px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-md: 0 1px 2px rgb(11 46 53 / 0.08), 0 8px 24px -12px rgb(11 46 53 / 0.25);
+  --shadow-lg: 0 2px 4px rgb(11 46 53 / 0.06), 0 24px 48px -20px rgb(11 46 53 / 0.35);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --duration-tide: 1600ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-tide: cubic-bezier(0.45, 0, 0.55, 1);   /* sine in-out: water, not machines */
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) { :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; --duration-tide: 0.01ms; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.1875rem; line-height: 1.6; font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.ui { font-family: var(--font-family-ui); }
+.kicker { font-family: var(--font-family-ui); font-stretch: 85%; font-weight: 700; font-size: 0.8125rem; letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; line-height: 1.3; }
+
+/* ---------- 1. Direction ---------- */
+#direction { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-8); align-items: center; padding-block: var(--space-4) var(--space-5); }
+#direction h1 { margin: 0; font-weight: 500; font-size: 1.375rem; line-height: 1.2; }
+#direction h1 em { color: var(--color-gold); }
+#direction .no { color: var(--color-shallows); }
+#direction .brief { grid-column: 1 / -1; margin: 0; font-size: 1rem; line-height: 1.5; color: #C9D6D6; max-width: 92ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-family: var(--font-family-ui); font-size: 0.75rem; font-weight: 500; padding: 3px 10px; border-radius: var(--radius-full); border: 1px solid rgb(156 195 201 / 0.6); color: #DCE9E6; }
+.back { font-family: var(--font-family-ui); font-size: 0.875rem; font-weight: 600; color: var(--color-fg-inverse); text-underline-offset: 4px; padding-block: 8px; }
+#direction :focus-visible { outline-color: var(--color-gold); }
+
+/* ---------- 2. Hero ---------- */
+#hero { position: relative; background: var(--color-bg-canvas); overflow: hidden; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-5); }
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo svg { width: 38px; height: 38px; flex: none; }
+.logo .t1 { display: block; font-family: var(--font-family-display); font-style: italic; font-weight: 600; font-size: 1.5rem; line-height: 0.9; letter-spacing: -0.01em; }
+.logo .t2 { display: block; font-family: var(--font-family-ui); font-stretch: 125%; font-weight: 600; font-size: 0.5625rem; letter-spacing: 0.32em; text-transform: uppercase; margin-top: 4px; }
+.site-nav ul { display: flex; gap: var(--space-8); list-style: none; margin: 0; padding: 0; font-family: var(--font-family-ui); font-weight: 500; font-size: 0.9375rem; }
+.site-nav ul a { text-decoration: none; padding-block: 10px; display: inline-block; }
+.site-nav ul a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nav-right { display: flex; gap: var(--space-3); align-items: center; }
+.menu-btn { display: none; }
+
+.masthead-rule { display: flex; justify-content: space-between; gap: var(--space-4); border-top: 6px solid var(--color-border-strong); border-bottom: 1px solid var(--color-border-strong); padding-block: 8px; margin-bottom: var(--space-10); color: var(--color-fg-default); }
+.masthead-rule span:nth-child(2) { color: var(--color-fg-muted); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--space-12); position: relative; z-index: 2; }
+.hero-title { margin: 0; font-family: var(--font-family-display); font-weight: 300; font-size: clamp(4.5rem, 13.6vw, 13.5rem); line-height: 0.82; letter-spacing: -0.045em; font-variation-settings: "opsz" 72; }
+.hero-title em { font-weight: 400; font-style: italic; color: var(--color-accent-default); letter-spacing: -0.035em; }
+.hero-title .l1 { display: block; }
+.hero-title .l2 { display: block; padding-inline-start: 0.9em; }
+.deck { font-size: clamp(1.25rem, 1.8vw, 1.625rem); line-height: 1.4; max-width: 30ch; margin: var(--space-8) 0 var(--space-4); font-variation-settings: "opsz" 24; }
+.deck b { font-weight: 600; }
+.byline { font-family: var(--font-family-ui); font-size: 0.875rem; color: var(--color-fg-muted); margin: 0; }
+.byline b { color: var(--color-fg-default); font-weight: 600; }
+.hero-copy { display: grid; grid-template-columns: minmax(0, 1fr); }
+.hero-copy .deck-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--space-8); }
+
+/* Donation module */
+.give { background: var(--color-bg-surface); border: 1px solid var(--color-border-strong); box-shadow: var(--shadow-lg); padding: var(--space-6); font-family: var(--font-family-ui); align-self: start; margin-top: var(--space-2); }
+.give h2 { margin: 0 0 4px; font-family: var(--font-family-display); font-weight: 500; font-size: 1.75rem; line-height: 1.1; letter-spacing: -0.01em; }
+.give .sub { margin: 0 0 var(--space-5); font-size: 0.9375rem; line-height: 1.45; color: var(--color-fg-muted); }
+.freq { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--color-border-strong); border-radius: var(--radius-full); padding: 3px; margin: 0 0 var(--space-4); }
+.freq label { display: grid; place-items: center; min-height: 40px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9375rem; cursor: pointer; }
+.freq input { position: absolute; opacity: 0; pointer-events: none; }
+.freq input:checked + label { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+.freq input:focus-visible + label { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; }
+.amounts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; border: 0; padding: 0; margin: 0 0 var(--space-4); }
+.amounts legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.amt { position: relative; }
+.amt input { position: absolute; opacity: 0; }
+.amt label { display: grid; gap: 2px; min-height: 72px; padding: 10px 12px; border: 1px solid var(--color-border-default); border-radius: var(--radius-md); cursor: pointer; transition: border-color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard); }
+.amt label b { font-family: var(--font-family-display); font-weight: 500; font-size: 1.625rem; line-height: 1; font-variant-numeric: lining-nums; }
+.amt label span { font-size: 0.8125rem; line-height: 1.3; color: var(--color-fg-muted); }
+.amt input:checked + label { border: 2px solid var(--color-accent-default); padding: 9px 11px; background: var(--color-accent-subtle); }
+.amt input:checked + label span { color: var(--color-fg-default); }
+.amt input:focus-visible + label { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; }
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: var(--radius-full); border: 2px solid transparent; font-family: var(--font-family-ui); font-weight: 700; font-size: 1rem; letter-spacing: 0.01em; text-decoration: none; cursor: pointer; transition: background-color var(--duration-moderate) var(--ease-standard), transform var(--duration-moderate) var(--ease-standard); }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-primary:active { background: var(--color-accent-active); transform: translateY(1px); }
+.btn-secondary { background: transparent; color: var(--color-fg-default); border-color: var(--color-border-strong); }
+.btn-secondary:hover { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+.btn[disabled] { background: #E6EAE6; color: #6B7C7E; border-color: transparent; cursor: not-allowed; }
+.btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.btn svg { width: 18px; height: 18px; }
+.give .btn { width: 100%; }
+.give .fine { margin: var(--space-3) 0 0; font-size: 0.75rem; line-height: 1.45; color: var(--color-fg-muted); }
+.give .secure { display: flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--color-fg-muted); margin: var(--space-3) 0 0; justify-content: center; }
+
+/* Cross-section */
+.section-art { position: relative; margin-top: calc(var(--space-12) * -1); z-index: 1; }
+.section-art svg { width: 100%; height: auto; }
+.section-art .lbl { font-family: "Archivo", sans-serif; font-stretch: 85%; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.section-art .lbl-n { font-family: "Archivo", sans-serif; font-weight: 500; font-size: 12px; }
+.art-caption { display: flex; justify-content: space-between; gap: var(--space-4); padding-block: var(--space-3); font-family: var(--font-family-ui); font-size: 0.8125rem; color: var(--color-fg-muted); }
+.stats { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+.stats ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 0; padding: var(--space-10) 0; gap: var(--space-8); }
+.stats li { border-inline-start: 1px solid rgb(156 195 201 / 0.4); padding-inline-start: var(--space-5); }
+.stats b { display: block; font-family: var(--font-family-display); font-weight: 300; font-size: clamp(2.75rem, 4.6vw, 4.25rem); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: lining-nums; color: #FFFFFF; }
+.stats b small { font-size: 0.45em; font-style: italic; color: var(--color-gold); letter-spacing: 0; }
+.stats span { display: block; margin-top: 8px; font-family: var(--font-family-ui); font-size: 0.9375rem; line-height: 1.4; color: #DCE9E6; max-width: 26ch; }
+.stats a { color: var(--color-gold); font-family: var(--font-family-ui); font-size: 0.8125rem; text-underline-offset: 3px; }
+.stats :focus-visible { outline-color: var(--color-gold); }
+
+/* ---------- Department heads ---------- */
+.section { padding-block: clamp(4rem, 8vw, 7rem); }
+.dept { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-4) var(--space-12); align-items: end; border-top: 6px solid var(--color-border-strong); padding-top: var(--space-3); margin-bottom: var(--space-12); }
+.dept .folio { grid-column: 1 / -1; display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border-strong); padding-bottom: 8px; margin-bottom: var(--space-6); }
+.dept h2 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-style: italic; font-size: clamp(2.75rem, 5.6vw, 5rem); line-height: 0.9; letter-spacing: -0.03em; }
+.dept p { margin: 0; font-size: clamp(1.125rem, 1.5vw, 1.375rem); line-height: 1.45; max-width: 46ch; color: var(--color-fg-muted); }
+
+/* ---------- 3. Palette ---------- */
+.pal { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: minmax(120px, auto); gap: 6px; list-style: none; margin: 0; padding: 0; }
+.pal li { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: var(--space-4); font-family: var(--font-family-ui); font-size: 0.8125rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.pal li b { font-family: var(--font-family-display); font-weight: 500; font-style: italic; font-size: 1.5rem; line-height: 1.1; display: block; }
+.pal .role { font-stretch: 85%; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.6875rem; display: block; margin-bottom: 4px; opacity: 0.9; }
+.pal .p1 { grid-column: span 5; grid-row: span 2; background: #0B2E35; color: #F3F5F0; }
+.pal .p2 { grid-column: span 4; grid-row: span 2; background: #F3F5F0; color: #0B2E35; border: 1px solid var(--color-border-default); }
+.pal .p3 { grid-column: span 3; grid-row: span 2; background: #C73A24; color: #FFFFFF; }
+.pal .p4 { grid-column: span 3; background: #FFFFFF; color: #4A5F63; border: 1px solid var(--color-border-subtle); }
+.pal .p5 { grid-column: span 3; background: #3F6B3A; color: #FFFFFF; }
+.pal .p6 { grid-column: span 3; background: #9CC3C9; color: #0B2E35; }
+.pal .p7 { grid-column: span 3; background: #E3D6B8; color: #0B2E35; }
+.pal .p8 { grid-column: span 12; min-height: 0; flex-direction: row; align-items: center; gap: var(--space-4); background: #0B2E35; color: #F2B544; padding-block: var(--space-3); }
+.pal .p8 b { font-size: 1.25rem; }
+.pal-note { font-family: var(--font-family-ui); font-size: 0.875rem; color: var(--color-fg-muted); margin: var(--space-4) 0 0; max-width: 100ch; }
+
+/* ---------- 4. Type ---------- */
+.spread { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-12); }
+.spec { border-top: 1px solid var(--color-border-strong); padding-top: var(--space-3); margin-bottom: var(--space-10); }
+.spec .kicker { display: flex; justify-content: space-between; color: var(--color-fg-muted); margin-bottom: var(--space-4); }
+.s-display { margin: 0; font-family: var(--font-family-display); font-weight: 300; font-size: clamp(3rem, 7vw, 6.25rem); line-height: 0.92; letter-spacing: -0.04em; font-variation-settings: "opsz" 72; }
+.s-display em { font-weight: 400; color: var(--color-accent-default); }
+.s-body { margin: 0; font-size: 1.1875rem; line-height: 1.6; max-width: 60ch; font-variation-settings: "opsz" 16; }
+.s-body:first-of-type::first-letter { float: left; font-family: var(--font-family-display); font-weight: 400; font-size: 4.6em; line-height: 0.82; margin: 0.06em 0.08em 0 0; color: var(--color-accent-default); font-variation-settings: "opsz" 72; }
+.s-body + .s-body { margin-top: 1em; }
+.pull { margin: 0; padding: var(--space-6) 0; border-block: 2px solid var(--color-accent-default); font-family: var(--font-family-display); font-style: italic; font-weight: 400; font-size: clamp(1.75rem, 2.8vw, 2.375rem); line-height: 1.15; letter-spacing: -0.015em; }
+.pull cite { display: block; margin-top: var(--space-4); font-family: var(--font-family-ui); font-style: normal; font-size: 0.875rem; font-weight: 600; color: var(--color-fg-muted); }
+.caption-spec { font-family: var(--font-family-ui); font-size: 0.8125rem; line-height: 1.45; color: var(--color-fg-muted); margin: 0; }
+.caption-spec b { color: var(--color-fg-default); }
+.meta-table { width: 100%; border-collapse: collapse; font-family: var(--font-family-ui); font-size: 0.875rem; }
+.meta-table th, .meta-table td { text-align: start; padding: 10px 8px 10px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.meta-table th { font-weight: 700; width: 28%; }
+
+/* ---------- 5. Components ---------- */
+.comp { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); }
+.cell { background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); padding: var(--space-8); font-family: var(--font-family-ui); }
+.cell > .kicker { display: block; color: var(--color-fg-muted); margin-bottom: var(--space-6); padding-bottom: 8px; border-bottom: 1px solid var(--color-border-subtle); }
+.c-btn { grid-column: span 4; }
+.c-form { grid-column: span 4; }
+.c-badge { grid-column: span 4; }
+.c-card { grid-column: span 12; display: grid; grid-template-columns: minmax(0, 1fr); }
+.btns { display: grid; gap: var(--space-4); justify-items: start; }
+.btns .note { font-size: 0.8125rem; color: var(--color-fg-muted); margin: 0; line-height: 1.4; }
+.field { display: grid; gap: 6px; margin-bottom: var(--space-5); }
+.field label { font-weight: 600; font-size: 1rem; }
+.field .hint { font-size: 0.875rem; color: var(--color-fg-muted); line-height: 1.4; }
+.field input { font: inherit; font-size: 1.0625rem; min-height: 52px; padding: 0 14px; border: 1.5px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-surface); color: var(--color-fg-default); width: 100%; }
+.field input:hover { border-color: var(--color-border-strong); }
+.field input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 1px; border-color: var(--color-border-strong); }
+.field.err input { border: 2px solid var(--color-danger-border); }
+.field .error { display: flex; gap: 8px; color: var(--color-danger-fg); font-size: 0.9375rem; font-weight: 500; line-height: 1.4; }
+.field .error svg { flex: none; width: 20px; height: 20px; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: var(--space-6); }
+.badge { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 3px 12px; border-radius: var(--radius-full); font-size: 0.8125rem; font-weight: 600; line-height: 1; }
+.badge svg { width: 14px; height: 14px; }
+.b-report { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+.b-data { background: var(--color-info-bg); color: var(--color-info-fg); }
+.b-urgent { background: var(--color-accent-subtle); color: var(--color-accent-fg); }
+.b-funded { background: var(--color-success-bg); color: var(--color-success-fg); }
+.progress { margin-top: var(--space-2); }
+.progress .row { display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 8px; }
+.progress .row b { font-family: var(--font-family-display); font-size: 1.375rem; font-weight: 500; }
+.bar { height: 12px; background: #E6EAE6; border-radius: var(--radius-full); overflow: hidden; position: relative; }
+.bar i { position: absolute; inset: 0 auto 0 0; width: 68%; background: repeating-linear-gradient(-45deg, var(--color-marsh) 0 6px, #4C7A46 6px 12px); border-radius: inherit; }
+.bar::after { content: ""; position: absolute; inset-block: -4px; inset-inline-start: 80%; width: 2px; background: var(--color-fg-default); }
+.progress .goal { font-size: 0.8125rem; color: var(--color-fg-muted); margin: 8px 0 0; }
+.story { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); align-items: stretch; text-decoration: none; }
+.story .thumb { position: relative; min-height: 260px; background: #DCE9E6; overflow: hidden; }
+.story .thumb svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.story .body { display: flex; flex-direction: column; gap: var(--space-3); padding-block: var(--space-2); }
+.story h3 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 3vw, 2.75rem); line-height: 1.02; letter-spacing: -0.025em; }
+.story:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.story p { margin: 0; font-family: var(--font-family-body); font-size: 1.125rem; line-height: 1.5; max-width: 52ch; }
+.story .by { margin-top: auto; font-size: 0.875rem; color: var(--color-fg-muted); }
+
+/* ---------- 6. Applications ---------- */
+.apps { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-12); align-items: start; }
+.phone { width: 330px; max-width: 100%; margin-inline: auto; padding: 10px; border-radius: 46px; background: #0B2E35; box-shadow: var(--shadow-lg); }
+.phone .scr { border-radius: 37px; overflow: hidden; background: var(--color-bg-canvas); height: 660px; font-family: var(--font-family-ui); position: relative; }
+.ph-top { display: flex; justify-content: space-between; align-items: center; padding: 18px 18px 10px; }
+.ph-top .logo svg { width: 26px; height: 26px; }
+.ph-top .logo .t1 { font-size: 1.0625rem; }
+.ph-top .logo .t2 { font-size: 0.4375rem; }
+.ph-x { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-default); display: grid; place-items: center; }
+.ph-hero { position: relative; height: 150px; background: var(--color-shallows); overflow: hidden; }
+.ph-hero svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ph-body { padding: 16px 18px; }
+.ph-body h4 { margin: 0 0 6px; font-family: var(--font-family-display); font-weight: 400; font-size: 1.75rem; line-height: 1.02; letter-spacing: -0.02em; }
+.ph-body h4 em { color: var(--color-accent-default); }
+.ph-body p { margin: 0 0 12px; font-size: 0.8125rem; line-height: 1.4; color: var(--color-fg-muted); }
+.ph-body .amounts { gap: 6px; }
+.ph-body .amt label { min-height: 58px; padding: 7px 10px; }
+.ph-body .amt label b { font-size: 1.25rem; }
+.ph-body .amt label span { font-size: 0.6875rem; }
+.ph-body .amt input:checked + label { padding: 6px 9px; }
+.ph-body .btn { width: 100%; min-height: 50px; font-size: 0.9375rem; }
+.email { background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); box-shadow: var(--shadow-md); max-width: 680px; margin-inline: auto; }
+.email-chrome { display: flex; gap: var(--space-4); justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid var(--color-border-subtle); font-family: var(--font-family-ui); font-size: 0.8125rem; color: var(--color-fg-muted); }
+.email-chrome b { color: var(--color-fg-default); }
+.email-head { background: var(--color-bg-inverse); color: var(--color-fg-inverse); padding: 28px 36px 0; position: relative; overflow: hidden; }
+.email-head .logo { color: var(--color-fg-inverse); }
+.email-head .issue { display: flex; justify-content: space-between; border-top: 1px solid rgb(156 195 201 / 0.5); border-bottom: 1px solid rgb(156 195 201 / 0.5); padding: 6px 0; margin: 20px 0 22px; color: #DCE9E6; }
+.email-head h4 { margin: 0; font-family: var(--font-family-display); font-weight: 300; font-size: clamp(2.5rem, 6vw, 4.25rem); line-height: 0.9; letter-spacing: -0.04em; max-width: 9ch; }
+.email-head h4 em { color: var(--color-gold); font-weight: 400; }
+.email-head svg.wave { width: calc(100% + 72px); margin: 22px -36px 0; height: 70px; }
+.email-body { padding: 26px 36px 32px; }
+.email-body p { margin: 0 0 16px; font-size: 1.0625rem; line-height: 1.55; max-width: 56ch; }
+.app-cap { font-family: var(--font-family-ui); font-size: 0.8125rem; color: var(--color-fg-muted); margin: var(--space-3) 0 0; text-align: center; }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-12); }
+.img-grid p { margin: 0 0 var(--space-5); max-width: 54ch; }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-3); list-style: none; padding: 0; margin: var(--space-8) 0 0; }
+.icons li { display: grid; justify-items: center; gap: 8px; padding: var(--space-4) 4px; background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); font-family: var(--font-family-ui); font-size: 0.75rem; font-weight: 600; text-align: center; }
+.icons svg { width: 40px; height: 40px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.icons svg .acc { stroke: var(--color-accent-default); }
+.contour { position: relative; background: var(--color-bg-inverse); color: var(--color-shallows); border-radius: var(--radius-lg); overflow: hidden; min-height: 420px; }
+.contour svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.contour figcaption { position: absolute; inset-inline: 20px; bottom: 16px; font-family: var(--font-family-ui); font-size: 0.8125rem; color: #DCE9E6; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-3); }
+.duo div { height: 120px; border-radius: var(--radius-lg); position: relative; overflow: hidden; font-family: var(--font-family-ui); font-size: 0.75rem; font-weight: 600; padding: 10px 12px; display: flex; align-items: flex-end; }
+.duo .yes { background:
+   linear-gradient(transparent 55%, rgb(11 46 53 / 0.75)),
+   radial-gradient(120% 60% at 30% 100%, #6F8E5A 0 40%, transparent 41%),
+   linear-gradient(#C9D9D3 0 48%, #9CC3C9 48% 62%, #8A9E73 62%);
+   color: #FFFFFF; }
+.duo .no { background: repeating-linear-gradient(90deg, #8B8F94 0 2px, #A3A7AB 2px 6px); color: #FFFFFF; filter: saturate(0); }
+.duo .no::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgb(0 0 0 / 0.7)); }
+.duo span { position: relative; }
+
+/* ---------- 8. Motion ---------- */
+.motion { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
+.mt { width: 100%; border-collapse: collapse; font-family: var(--font-family-ui); font-size: 0.9375rem; }
+.mt th, .mt td { text-align: start; padding: 10px 10px 10px 0; border-bottom: 1px solid var(--color-border-subtle); vertical-align: top; }
+.mt th { font-stretch: 85%; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 2px solid var(--color-border-strong); }
+.mt code { font-family: var(--font-family-mono); font-size: 0.8125rem; }
+.gauge { position: relative; height: 340px; background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); overflow: hidden; font-family: var(--font-family-ui); }
+.gauge .water { position: absolute; inset-inline: 0; bottom: 0; height: 32%; background: linear-gradient(var(--color-shallows), #6FA3AC); transition: height var(--duration-tide) var(--ease-tide); }
+.gauge .water::before { content: ""; position: absolute; inset-inline: 0; top: -8px; height: 10px; background: radial-gradient(14px 9px at 50% 100%, var(--color-shallows) 98%, transparent) 0 0 / 28px 10px repeat-x; }
+.gauge.high .water { height: 74%; }
+.gauge .marks { position: absolute; inset: 0; }
+.gauge .mark { position: absolute; inset-inline: 0; border-top: 1.5px dashed var(--color-fg-default); display: flex; justify-content: space-between; padding: 4px 16px 0; font-size: 0.8125rem; font-weight: 600; }
+.gauge .mark span:last-child { font-weight: 400; color: var(--color-fg-muted); }
+.gauge .marsh { position: absolute; inset-inline-end: 0; bottom: 0; width: 46%; height: 44%; background: #8A9E73; clip-path: polygon(0 40%, 100% 22%, 100% 100%, 0 100%); }
+.gauge .count { position: absolute; inset-block-start: 16px; inset-inline-start: 16px; background: var(--color-bg-inverse); color: var(--color-fg-inverse); padding: 8px 12px; border-radius: var(--radius-md); }
+.gauge .count b { font-family: var(--font-family-display); font-size: 1.75rem; font-weight: 400; font-variant-numeric: tabular-nums lining-nums; }
+.gauge-ctl { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-top: var(--space-4); font-family: var(--font-family-ui); font-size: 0.875rem; color: var(--color-fg-muted); }
+.gauge-ctl .btn { min-height: 44px; font-size: 0.9375rem; }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.voice figure { margin: 0; padding: var(--space-6); background: var(--color-bg-surface); border-top: 6px solid var(--color-border-strong); display: flex; flex-direction: column; gap: var(--space-4); }
+.voice figure:nth-child(2) { border-top-color: var(--color-accent-default); }
+.voice figure:nth-child(3) { border-top-color: var(--color-danger-border); }
+.voice blockquote { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 2.6vw, 2.5rem); line-height: 1.05; letter-spacing: -0.02em; }
+.voice blockquote.cta { font-family: var(--font-family-ui); font-weight: 700; font-size: 1.5rem; letter-spacing: 0; }
+.voice blockquote.err { font-family: var(--font-family-ui); font-size: 1.125rem; line-height: 1.45; font-weight: 500; letter-spacing: 0; color: var(--color-danger-fg); }
+.voice figcaption { font-family: var(--font-family-ui); font-size: 0.875rem; color: var(--color-fg-muted); line-height: 1.45; margin-top: auto; }
+
+/* ---------- 10. Rationale ---------- */
+#rationale { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+#rationale .dept { border-top-color: var(--color-gold); }
+#rationale .dept .folio { border-bottom-color: rgb(156 195 201 / 0.5); }
+#rationale .dept p { color: #C9D6D6; }
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-10); }
+.rat h3 { margin: 0 0 var(--space-4); font-family: var(--font-family-ui); font-stretch: 85%; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-gold); }
+.rat p, .rat li { font-size: 1.0625rem; line-height: 1.6; }
+.rat p { margin: 0 0 var(--space-4); }
+.rat ul { margin: 0; padding-inline-start: 1.1em; }
+.colophon { margin-top: var(--space-16); padding-top: var(--space-4); border-top: 1px solid rgb(156 195 201 / 0.4); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); font-family: var(--font-family-ui); font-size: 0.8125rem; color: #C9D6D6; }
+#rationale a { color: var(--color-gold); }
+#rationale :focus-visible { outline-color: var(--color-gold); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .give { max-width: 520px; }
+  .section-art { margin-top: var(--space-8); }
+  .stats ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spread, .apps, .img-grid, .motion { grid-template-columns: minmax(0, 1fr); }
+  .c-btn, .c-form, .c-badge { grid-column: span 12; }
+  .rat { grid-template-columns: minmax(0, 1fr); }
+  .voice { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  body { font-size: 1.125rem; }
+  #direction .wrap { grid-template-columns: 1fr; }
+  .site-nav ul, .nav-right .btn-secondary { display: none; }
+  .menu-btn { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--color-border-strong); background: none; color: inherit; }
+  .nav-right .btn-primary { min-height: 48px; padding: 0 18px; }
+  .logo svg { width: 32px; height: 32px; }
+  .logo .t1 { font-size: 1.25rem; }
+  .masthead-rule span:nth-child(2) { display: none; }
+  .masthead-rule { margin-bottom: var(--space-6); }
+  .hero-title { font-size: clamp(4rem, 22vw, 6rem); line-height: 0.84; }
+  .hero-title .l2 { padding-inline-start: 0.5em; }
+  .hero-copy .deck-row { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+  .give { padding: var(--space-5); }
+  .section-art svg { width: 220%; margin-inline-start: -85%; }
+  .art-caption { flex-direction: column; gap: 2px; }
+  .stats ul { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); padding-block: var(--space-8); }
+  .dept { grid-template-columns: minmax(0, 1fr); }
+  .pal { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: minmax(116px, auto); }
+  .pal .p1, .pal .p2, .pal .p3 { grid-column: span 2; grid-row: span 1; min-height: 150px; }
+  .pal .p4, .pal .p5, .pal .p6, .pal .p7 { grid-column: span 1; }
+  .pal .p8 { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .cell { padding: var(--space-5); }
+  .story { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .story .thumb { min-height: 200px; }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .email-head, .email-body { padding-inline: 20px; }
+  .email-head svg.wave { width: calc(100% + 40px); margin-inline: -20px; }
+  .email-chrome { flex-direction: column; gap: 2px; }
+  .duo { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="tw-mark" viewBox="0 0 40 40">
+      <rect x="1" y="1" width="38" height="38" rx="19" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M8 15c2.4-2 4.8-2 7.2 0s4.8 2 7.2 0 4.8-2 7.2 0 2.4 1.4 3.4 1" fill="none" stroke="#C73A24" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M7 21.5c2.4-2 4.8-2 7.2 0s4.8 2 7.2 0 4.8-2 7.2 0 3 1.6 4.4 1.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M8 28c2.4-2 4.8-2 7.2 0s4.8 2 7.2 0 4.8-2 7.2 0 2.4 1.4 3.4 1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header id="direction">
+  <div class="wrap">
+    <span class="kicker no">Stylescape 08 / 12</span>
+    <h1>Tidewater Collective &middot; <em>Field Report</em></h1>
+    <a class="back" href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.eco-natural-sustainable</li><li>style.editorial-magazine</li><li>industry.nonprofit-ngo</li><li>industry.energy-climate</li><li>archetype.hero</li><li>channel.marketing-website</li>
+    </ul>
+    <p class="brief">A coastal climate-resilience nonprofit that builds living shorelines with volunteers and needs recurring donations. The site behaves like a field magazine: every appeal is a report with a place, a number, a date and a source.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO ================= -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <nav class="site-nav" aria-label="Site (sample)">
+      <a class="logo" href="#hero" aria-label="Tidewater Collective home"><svg aria-hidden="true"><use href="#tw-mark"/></svg><span><span class="t1">Tidewater</span><span class="t2">Collective</span></span></a>
+      <ul>
+        <li><a href="#hero">Our shorelines</a></li>
+        <li><a href="#hero">Field reports</a></li>
+        <li><a href="#hero">Volunteer</a></li>
+        <li><a href="#hero">Data</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="btn btn-secondary" href="#hero" style="min-height:44px">Sign up to dig</a>
+        <a class="btn btn-primary" href="#hero" style="min-height:44px">Donate</a>
+        <button class="menu-btn" type="button" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 6h16M2 14h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </nav>
+    <div class="masthead-rule kicker"><span>Field report No. 14</span><span>Pell Island Marsh &middot; Winter 2026</span><span>8 min read</span></div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h2 class="hero-title" id="hero-title"><span class="l1">Hold</span><span class="l2">the <em>line.</em></span></h2>
+        <div class="deck-row">
+          <p class="deck">Fourteen towns now sit behind living shorelines that volunteers built by hand. <b>This winter the water reaches three more.</b></p>
+        </div>
+        <p class="byline">Reported by <b>Ama Mensah</b> &middot; Cross-section by the Tidewater field team</p>
+      </div>
+      <form class="give" aria-labelledby="give-title" onsubmit="return false">
+        <h2 id="give-title">Build a foot of shoreline</h2>
+        <p class="sub">Oyster reef and marsh grass slow storm waves before they reach Pell Road.</p>
+        <div class="freq" role="radiogroup" aria-label="Gift frequency">
+          <input type="radio" name="freq" id="f-m" checked><label for="f-m">Monthly</label>
+          <input type="radio" name="freq" id="f-o"><label for="f-o">One time</label>
+        </div>
+        <fieldset class="amounts">
+          <legend>Gift amount</legend>
+          <div class="amt"><input type="radio" name="amt" id="a1"><label for="a1"><b>$25</b><span>40 marsh-grass plugs</span></label></div>
+          <div class="amt"><input type="radio" name="amt" id="a2" checked><label for="a2"><b>$75</b><span>1 ft of oyster reef</span></label></div>
+          <div class="amt"><input type="radio" name="amt" id="a3"><label for="a3"><b>$150</b><span>A volunteer day for 10</span></label></div>
+          <div class="amt"><input type="radio" name="amt" id="a4"><label for="a4"><b>Other</b><span>Any amount helps</span></label></div>
+        </fieldset>
+        <button class="btn btn-primary" type="submit">Give $75 monthly <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4.5L14.5 9 10 13.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="fine">Tidewater Collective is a 501(c)(3) nonprofit (EIN XX-XXXXXXX). Gifts are tax-deductible to the extent allowed by law. Change or cancel a monthly gift in one click, any time.</p>
+      </form>
+    </div>
+  </div>
+  <figure class="section-art" style="margin-bottom:0" aria-labelledby="xs-cap">
+    <svg viewBox="0 0 1440 380" role="img" aria-label="Cross-section of Pell Island: open water on the left, an oyster-reef breakwater, a restored salt marsh and homes on higher ground. Dashed lines show mean high water today, plus 0.3 metres by 2050 and plus 1.0 metre by 2100.">
+      <defs>
+        <pattern id="sand" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="0.8" fill="#C9B88F"/><circle cx="4.5" cy="4.5" r="0.6" fill="#BFAE85"/></pattern>
+      </defs>
+      <path d="M0 380V176h760v204z" fill="#9CC3C9"/>
+      <path d="M0 380V246h760v134z" fill="#76A9B1"/>
+      <path d="M0 380V310h760v70z" fill="#4F8790"/>
+      <path d="M0 380L0 0 176.0L12 178.4L24 177.5L36 174.5L48 173.6L60 176.0L72 178.4L84 177.5L96 174.5L108 173.6L120 176.0L132 178.4L144 177.5L156 174.5L168 173.6L180 176.0L192 178.4L204 177.5L216 174.5L228 173.6L240 176.0L252 178.4L264 177.5L276 174.5L288 173.6L300 176.0L312 178.4L324 177.5L336 174.5L348 173.6L360 176.0L372 178.4L384 177.5L396 174.5L408 173.6L420 176.0L432 178.4L444 177.5L456 174.5L468 173.6L480 176.0L492 178.4L504 177.5L516 174.5L528 173.6L540 176.0L552 178.4L564 177.5L576 174.5L588 173.6L600 176.0L612 178.4L624 177.5L636 174.5L648 173.6L660 176.0L672 178.4L684 177.5L696 174.5L708 173.6L720 176.0L732 178.4L744 177.5L756 174.5L760 380Z" fill="#9CC3C9"/>
+      <path d="M0 380L0 360L20 357L40 353L60 350L80 346L100 343L120 340L140 336L160 333L180 329L200 326L220 323L240 319L260 316L280 312L300 309L320 306L340 302L360 299L380 296L400 292L420 289L440 285L460 282L480 279L500 275L520 272L540 268L560 265L580 255L600 245L620 235L640 225L660 215L680 205L700 192L720 193L740 194L760 195L780 197L800 198L820 198L840 198L860 196L880 195L900 194L920 192L940 192L960 192L980 193L1000 195L1020 196L1040 195L1060 188L1080 180L1100 172L1120 165L1140 158L1160 150L1180 150L1200 150L1220 150L1240 150L1260 150L1280 150L1300 150L1320 150L1340 150L1360 150L1380 150L1400 150L1420 150L1440 150L1440 380Z" fill="#E3D6B8"/>
+      <path d="M0 380L0 360L20 357L40 353L60 350L80 346L100 343L120 340L140 336L160 333L180 329L200 326L220 323L240 319L260 316L280 312L300 309L320 306L340 302L360 299L380 296L400 292L420 289L440 285L460 282L480 279L500 275L520 272L540 268L560 265L580 255L600 245L620 235L640 225L660 215L680 205L700 192L720 193L740 194L760 195L780 197L800 198L820 198L840 198L860 196L880 195L900 194L920 192L940 192L960 192L980 193L1000 195L1020 196L1040 195L1060 188L1080 180L1100 172L1120 165L1140 158L1160 150L1180 150L1200 150L1220 150L1240 150L1260 150L1280 150L1300 150L1320 150L1340 150L1360 150L1380 150L1400 150L1420 150L1440 150L1440 380Z" fill="url(#sand)"/>
+      <path d="M690 380L700 199 1040 199 1170 150 1440 150 1440 380z" fill="#8A9E73" opacity="0.0"/>
+      <g fill="#E3D6B8" stroke="#0B2E35" stroke-width="1.5">
+        <ellipse cx="520" cy="252" rx="16" ry="9"/><ellipse cx="545" cy="244" rx="15" ry="10"/><ellipse cx="572" cy="240" rx="17" ry="11"/><ellipse cx="600" cy="236" rx="14" ry="9"/>
+        <ellipse cx="532" cy="234" rx="12" ry="8"/><ellipse cx="560" cy="226" rx="14" ry="9"/><ellipse cx="588" cy="222" rx="12" ry="8"/>
+        <ellipse cx="548" cy="212" rx="11" ry="7"/><ellipse cx="574" cy="208" rx="11" ry="7"/>
+      </g>
+      <path d="M700 200L1040 200 1160 152 1440 150 1440 162 1160 166 1040 212 700 212z" fill="#7F9567"/>
+      <path d="M810 200q1 -7 3 -13M725 195q-1 -11 -2 -21M720 195q-2 -11 -8 -20M847 199q-2 -6 -7 -11M844 199q-2 -15 -7 -27M776 199q2 -12 8 -23M896 196q3 -10 9 -18M716 195q-1 -15 -4 -27M749 197q-1 -7 -3 -12M977 195q0 -7 1 -14M917 195q0 -10 1 -17M721 195q-2 -6 -5 -11M931 194q-1 -10 -3 -19M899 196q-1 -10 -4 -19M970 195q-1 -13 -5 -24M895 196q2 -11 7 -21M948 194q3 -9 9 -16M740 196q1 -10 5 -18M752 197q-2 -11 -8 -20M927 194q0 -14 1 -25M998 196q1 -9 4 -16M902 195q-0 -12 -1 -22M986 196q-0 -16 -0 -29M926 194q1 -6 4 -11M920 194q2 -16 6 -30M797 200q1 -10 3 -18M708 194q-2 -11 -6 -19M740 196q1 -6 5 -11M744 196q-1 -8 -2 -15M996 196q-0 -6 -1 -12M887 196q2 -15 6 -28M994 196q-0 -9 -2 -16M822 200q2 -15 8 -28M751 197q-1 -7 -5 -14M779 199q0 -11 2 -20M789 199q-0 -6 -1 -10M826 200q2 -12 8 -21M935 194q1 -11 2 -20M930 194q2 -6 7 -11M965 194q2 -15 5 -27M833 200q-2 -10 -7 -18M916 195q-2 -6 -8 -11M771 198q-1 -7 -3 -13M718 195q-2 -6 -6 -10M734 196q-3 -9 -9 -17M997 196q-2 -12 -6 -22M786 199q-1 -9 -2 -17M742 196q3 -15 9 -27M858 199q-2 -11 -7 -20M735 196q-1 -9 -4 -17M982 195q-3 -7 -9 -13M1023 198q-2 -11 -6 -21M885 197q0 -6 1 -11M1033 199q1 -15 4 -27M789 199q-2 -10 -6 -17M962 194q2 -11 5 -21M812 200q2 -8 6 -14M1035 199q2 -15 6 -27M978 195q-1 -14 -5 -25M876 197q-3 -9 -8 -17M709 194q-1 -9 -4 -16M935 194q-0 -16 -1 -29M1019 198q2 -16 8 -30M824 200q-1 -8 -5 -14M767 198q1 -8 2 -14M1006 197q-0 -15 -0 -27M922 194q-2 -14 -7 -26M925 194q2 -16 5 -28M955 194q-2 -11 -6 -20M968 195q2 -9 5 -17M1030 199q-1 -10 -2 -18M1022 198q-2 -13 -6 -24M743 196q2 -7 7 -13M974 195q2 -7 6 -13M1033 199q-1 -13 -3 -23M887 196q-3 -7 -9 -13M1030 199q0 -13 0 -23M1017 198q2 -10 7 -19M981 195q-1 -8 -4 -14M800 200q0 -8 2 -15M788 199q-2 -10 -7 -18M1009 197q-0 -9 -1 -17M898 196q-0 -15 -1 -28M1012 198q0 -11 1 -20M878 197q-0 -6 -1 -10M762 198q2 -6 5 -10M759 197q1 -11 4 -19M889 196q0 -9 0 -17M889 196q-2 -14 -7 -26M891 196q-1 -8 -4 -15M963 194q0 -11 1 -20M958 194q-0 -16 -1 -28M908 195q0 -11 0 -20M936 194q0 -10 1 -19M863 198q1 -16 4 -29M998 196q-1 -16 -4 -29M890 196q2 -16 6 -29M747 196q-0 -7 -1 -12M725 195q-2 -8 -8 -15M928 194q2 -14 7 -26M753 197q1 -13 3 -24M749 197q3 -15 8 -28M775 198q-1 -16 -2 -29M866 198q2 -16 6 -30M755 197q0 -10 0 -19M815 200q-1 -8 -3 -14M946 194q0 -6 1 -10M850 199q-1 -6 -3 -10M912 195q-2 -11 -8 -20M1035 199q3 -14 8 -26M736 196q-2 -8 -8 -15M965 194q-2 -8 -7 -15M844 199q2 -16 6 -28M788 199q2 -7 8 -13M894 196q-2 -13 -7 -24M720 195q-0 -13 -1 -24M725 195q1 -16 2 -29M973 195q2 -6 6 -12M723 195q-0 -15 -1 -27M815 200q2 -12 8 -21M791 199q0 -7 0 -13M781 199q-2 -7 -6 -12M717 195q-1 -8 -3 -14M804 200q-1 -14 -4 -25M870 198q-1 -7 -3 -14M706 194q-3 -8 -9 -15M949 194q-2 -12 -6 -21M861 198q-2 -16 -7 -29M978 195q-0 -10 -0 -19M984 195q0 -10 0 -18M934 194q-1 -16 -3 -30M983 195q1 -13 2 -24M838 200q-2 -9 -8 -17M744 196q1 -6 4 -11M787 199q-2 -7 -7 -13M986 196q1 -15 3 -27M796 200q-1 -8 -4 -15M856 199q-0 -7 -1 -13M790 199q3 -16 9 -29M886 197q3 -8 8 -15M805 200q-3 -9 -9 -17M830 200q0 -11 0 -19M768 198q-3 -11 -9 -20M790 199q-1 -6 -2 -12M714 194q-1 -6 -4 -10M779 199q0 -12 1 -22M955 194q1 -13 4 -23M999 197q-1 -10 -3 -18M1035 199q1 -7 4 -13M919 195q2 -6 6 -11M1003 197q1 -12 4 -23M976 195q0 -7 0 -13M871 198q2 -15 5 -27M981 195q2 -12 7 -22M932 194q-1 -13 -5 -24M711 194q-1 -7 -3 -13M736 196q0 -15 1 -27M913 195q1 -12 3 -23M866 198q2 -6 5 -10M954 194q0 -11 1 -20M924 194q1 -6 4 -11M786 199q-1 -6 -4 -11M948 194q1 -8 4 -14M1032 199q-1 -11 -2 -20M863 198q1 -13 5 -24M910 195q-2 -13 -8 -23M750 197q1 -8 4 -15M804 200q-3 -12 -9 -21M721 195q1 -8 3 -15M935 194q-1 -13 -4 -24M876 197q-0 -11 -1 -19M740 196q-2 -15 -5 -28M1033 199q-3 -16 -9 -29M856 199q3 -15 8 -26M853 199q-2 -8 -5 -15M1021 198q0 -8 1 -14M748 197q2 -11 8 -20M745 196q0 -15 0 -26M1002 197q-1 -13 -5 -24M1005 197q-3 -11 -9 -20M701 194q-0 -11 -1 -20M803 200q-1 -7 -3 -13M807 200q-3 -15 -9 -27M955 194q-2 -15 -7 -27M1015 198q2 -13 7 -24M799 200q-1 -10 -2 -17M1040 199q-1 -12 -3 -22M846 199q-2 -9 -8 -16M735 196q-1 -15 -4 -27M1018 198q-1 -8 -4 -15M874 197q-1 -8 -2 -14M1025 198q2 -15 6 -28M915 195q2 -16 8 -28M887 196q-2 -13 -8 -24M949 194q1 -10 5 -19M919 194q-2 -9 -8 -16M1015 198q-0 -7 -1 -13M817 200q1 -9 4 -16M1032 199q1 -8 3 -15M802 200q-1 -12 -2 -21M757 197q-2 -7 -5 -13M1008 197q-2 -11 -5 -20M1008 197q-0 -16 -1 -30M747 197q-2 -8 -7 -14M816 200q-1 -7 -5 -12M788 199q2 -12 7 -21M955 194q-0 -10 -2 -18M878 197q-1 -10 -3 -18M721 195q3 -9 8 -16M743 196q1 -11 2 -20M993 196q-1 -8 -4 -14M784 199q-0 -10 -1 -18M1024 198q2 -15 7 -27M707 194q1 -6 4 -11M1005 197q0 -11 2 -19M700 194q2 -10 8 -18M981 195q3 -15 9 -27M784 199q-2 -7 -6 -12M878 197q2 -13 8 -24M945 194q1 -13 5 -23M855 199q-2 -12 -8 -21M966 195q2 -8 8 -15M919 194q-2 -9 -7 -16M786 199q1 -12 4 -23M738 196q0 -6 0 -11M898 196q-1 -10 -5 -18M904 195q-1 -6 -4 -10M857 199q1 -16 3 -29M1000 197q-1 -11 -5 -20M784 199q1 -16 4 -29M805 200q-0 -6 -0 -10M929 194q-1 -10 -4 -18M927 194q-1 -16 -5 -29M712 194q-0 -9 -1 -17M932 194q2 -8 5 -14M951 194q-2 -11 -5 -20M1030 199q2 -9 6 -16M778 199q1 -8 5 -14M800 200q-0 -16 -0 -29M764 198q-0 -8 -1 -14M926 194q-2 -16 -6 -29M834 200q3 -8 9 -14M748 197q-2 -6 -8 -11M834 200q2 -15 7 -28M949 194q2 -16 8 -30M812 200q2 -8 8 -14M954 194q1 -6 3 -11M829 200q-1 -10 -3 -17M758 197q-1 -6 -4 -10M819 200q-2 -16 -7 -29M1028 199q-1 -8 -3 -14M979 195q-0 -15 -1 -26M717 195q-1 -11 -2 -19M1013 198q-1 -8 -2 -14M1005 197q-0 -6 -2 -11M976 195q-2 -14 -8 -25M712 194q2 -6 8 -11M787 199q2 -14 7 -25M815 200q2 -8 8 -15M910 195q1 -8 4 -15" fill="none" stroke="#3F6B3A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M1167 152q-3 -5 -9 -9M1342 152q1 -8 2 -15M1417 152q-1 -3 -5 -6M1230 152q2 -9 8 -16M1195 152q-0 -5 -1 -9M1237 152q-2 -8 -6 -15M1361 152q2 -7 6 -13M1349 152q-1 -7 -3 -12M1168 152q2 -5 5 -10M1072 185q1 -4 5 -8M1139 160q-3 -4 -8 -7M1261 152q3 -5 9 -9M1393 152q-1 -9 -4 -16M1074 184q-0 -4 -0 -7M1324 152q-1 -6 -5 -10M1207 152q1 -7 3 -12M1339 152q1 -8 3 -14M1088 179q-1 -8 -4 -14M1267 152q1 -5 4 -10M1120 167q-1 -5 -5 -8M1101 174q0 -8 1 -15M1171 152q3 -5 9 -10M1243 152q2 -5 6 -8M1301 152q-2 -9 -7 -16M1230 152q2 -8 6 -14M1406 152q-1 -4 -4 -6M1088 179q3 -4 9 -8M1273 152q-1 -8 -2 -15M1386 152q-1 -6 -4 -10M1351 152q-2 -9 -7 -15M1278 152q-2 -7 -5 -12M1187 152q-2 -4 -5 -7M1142 159q1 -7 3 -12M1121 166q-1 -3 -3 -6M1311 152q-1 -4 -3 -8M1121 166q0 -8 1 -14M1065 188q-1 -4 -2 -7M1260 152q-2 -7 -7 -12M1105 172q-0 -7 -2 -13M1153 155q2 -5 8 -9M1165 152q-1 -6 -3 -12M1207 152q3 -8 9 -15M1186 152q1 -4 4 -8M1121 166q2 -3 7 -6M1210 152q-1 -8 -2 -14M1393 152q-2 -6 -6 -11M1046 195q1 -6 3 -12M1404 152q1 -4 2 -7M1188 152q-2 -6 -6 -11M1153 155q2 -6 8 -11M1084 181q2 -6 5 -11M1427 152q-2 -4 -7 -8M1417 152q-0 -9 -0 -16M1061 189q-1 -8 -2 -15M1402 152q2 -7 6 -12M1104 173q-2 -8 -5 -14M1202 152q2 -8 6 -14M1113 170q-1 -4 -2 -8M1247 152q-2 -5 -7 -10M1139 160q2 -7 7 -13M1056 191q1 -6 5 -12M1055 191q-2 -8 -7 -14M1280 152q1 -6 2 -12M1162 152q0 -6 1 -10M1210 152q-0 -7 -1 -13M1215 152q1 -3 2 -6M1236 152q1 -5 5 -8M1352 152q-2 -6 -6 -11M1229 152q-2 -4 -7 -7M1212 152q-0 -4 -1 -7M1244 152q1 -4 2 -6M1073 185q1 -7 5 -13M1245 152q0 -4 0 -7M1191 152q-2 -9 -7 -16M1383 152q1 -9 4 -16M1366 152q3 -4 9 -8M1237 152q2 -9 7 -16M1106 172q2 -8 8 -14M1066 187q1 -5 5 -10M1104 173q-1 -8 -4 -15M1366 152q0 -4 0 -7M1408 152q-1 -4 -4 -8M1242 152q-3 -5 -8 -9M1113 170q2 -4 8 -8M1312 152q-2 -8 -6 -15M1354 152q0 -4 1 -7M1295 152q2 -5 7 -10M1262 152q2 -6 7 -12M1082 181q1 -9 2 -16M1198 152q-1 -8 -4 -14" fill="none" stroke="#5D7F49" stroke-width="1.6" stroke-linecap="round"/>
+      <g transform="translate(1210 74)" fill="none" stroke="#0B2E35" stroke-width="2" stroke-linejoin="round">
+        <path d="M0 40L32 12 64 40V76H0z" fill="#F3F5F0"/><path d="M24 76V54h16v22"/><path d="M8 76v8M56 76v8M32 76v8" stroke-width="3"/><rect x="44" y="46" width="12" height="10"/>
+      </g>
+      <g transform="translate(1320 92)" fill="none" stroke="#0B2E35" stroke-width="2" stroke-linejoin="round">
+        <path d="M0 30L24 10 48 30V58H0z" fill="#F3F5F0"/><path d="M18 58V44h12v14"/>
+      </g>
+      <g stroke="#0B2E35" stroke-width="1.5" fill="none">
+        <path d="M0 176H1440" stroke-dasharray="2 5"/>
+        <path d="M0 160H1440" stroke-dasharray="8 6"/>
+        <path d="M0 128H1440" stroke-dasharray="14 8" stroke="#C73A24" stroke-width="2"/>
+      </g>
+      <g>
+        <rect x="24" y="117" width="292" height="22" fill="#C73A24"/><text class="lbl" x="34" y="132" fill="#FFFFFF">+1.0 m by 2100 &#183; intermediate scenario</text>
+        <rect x="24" y="149" width="164" height="22" fill="#0B2E35"/><text class="lbl" x="34" y="164" fill="#F3F5F0">+0.3 m by 2050</text>
+        <text class="lbl" x="34" y="196" fill="#0B2E35">Mean high water today</text>
+      </g>
+      <g font-family="Archivo, sans-serif" fill="#0B2E35">
+        <path d="M560 205V96" stroke="#0B2E35" stroke-width="1.2"/><circle cx="560" cy="205" r="3.5" fill="#0B2E35"/>
+        <text class="lbl" x="568" y="96">Oyster-reef breakwater</text><text class="lbl-n" x="568" y="112">Built 2024 &#183; 1,180 ft</text>
+        <path d="M880 196V250" stroke="#0B2E35" stroke-width="1.2"/><circle cx="880" cy="196" r="3.5"/>
+        <text class="lbl" x="888" y="262">Restored salt marsh</text><text class="lbl-n" x="888" y="278">Spartina alterniflora, 42 acres</text>
+        <text class="lbl" x="1214" y="60">Homes on Pell Road</text>
+      </g>
+    </svg>
+    <figcaption class="wrap art-caption" id="xs-cap"><span>Cross-section, Pell Island. Vertical scale exaggerated; sea-level lines after the NOAA 2022 Sea Level Rise Technical Report (US average).</span><span>Fig. 1</span></figcaption>
+  </figure>
+  <div class="stats">
+    <div class="wrap">
+      <ul>
+        <li><b>14</b><span>towns behind a living shoreline we built with residents</span></li>
+        <li><b>6.2<small> miles</small></b><span>of reef and marsh restored since 2019</span></li>
+        <li><b>2,431</b><span>volunteers in the water in 2025</span></li>
+        <li><b>87<small>&cent;</small></b><span>of every dollar spent on fieldwork. <a href="#hero">Audited statements 2025</a></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="pal-t">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>03 &middot; Palette</span><span>Tidewater Collective</span></div><h2 id="pal-t">Palette</h2><p>Colors taken from the marsh at low tide, plus one life-ring red that only ever means &ldquo;act now&rdquo;.</p></div>
+    <ul class="pal">
+      <li class="p1"><span><span class="role">fg-default &middot; bg-inverse</span><b>Deep channel</b></span><span>#0B2E35 &middot; oklch(0.28 0.041 213)<br>Salt on it 13.13:1</span></li>
+      <li class="p2"><span><span class="role">bg-canvas</span><b>Salt</b></span><span>#F3F5F0 &middot; oklch(0.97 0.007 124)<br>Deep channel on it 13.13:1</span></li>
+      <li class="p3"><span><span class="role">accent-default</span><b>Life-ring</b></span><span>#C73A24 &middot; oklch(0.56 0.181 32)<br>White on it 5.17:1 &middot; on Salt 4.71:1</span></li>
+      <li class="p4"><span><span class="role">fg-muted on surface</span><b>Estuary</b></span><span>#4A5F63 &middot; oklch(0.47 0.026 211)<br>On white 6.76:1 &middot; on Salt 6.15:1</span></li>
+      <li class="p5"><span><span class="role">success &middot; eco</span><b>Spartina</b></span><span>#3F6B3A &middot; oklch(0.48 0.090 142)<br>White on it 6.20:1</span></li>
+      <li class="p6"><span><span class="role">illustration water</span><b>Shallows</b></span><span>#9CC3C9 &middot; oklch(0.79 0.042 208)<br>Deep channel on it 7.60:1</span></li>
+      <li class="p7"><span><span class="role">bg-sunken &middot; land</span><b>Sand</b></span><span>#E3D6B8 &middot; oklch(0.88 0.042 87)<br>Deep channel on it 10.01:1</span></li>
+      <li class="p8"><b>Marsh gold #F2B544</b><span>oklch(0.81 0.144 79) &middot; highlights on Deep channel only, 7.87:1. Never on Salt.</span></li>
+    </ul>
+    <p class="pal-note">Proportion: Salt and white 60%, Deep channel 25%, the illustration naturals (Shallows, Sand, Spartina) 12%, Life-ring 3%. Life-ring is reserved for the donate action, the 2100 line and urgent appeals, so it keeps its meaning.</p>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>04 &middot; Type</span><span>Tidewater Collective</span></div><h2 id="type-t">Type</h2><p>A newspaper serif with optical sizes for the story, a sturdy grotesque with a width axis for everything you tap.</p></div>
+    <div class="spread">
+      <div>
+        <div class="spec"><div class="kicker"><span>Display</span><span>Newsreader Light 300 &middot; opsz 72</span></div>
+          <p class="s-display">The marsh is the <em>sea wall.</em></p>
+          <p class="caption-spec" style="margin-top:12px"><b>clamp(48px, 7vw, 100px)</b> / 0.92 &middot; tracking &minus;0.04em &middot; italic 400 in Life-ring for the turn of the sentence</p>
+        </div>
+        <div class="spec"><div class="kicker"><span>Body</span><span>Newsreader 400 &middot; opsz 16 &middot; 19px / 1.6</span></div>
+          <p class="s-body">Low tide at Pell Island comes at 6:40 this morning, and by seven there are forty people in waders on the mud flat. They are setting bags of recycled oyster shell in a line that, in three years, will be a living reef: a structure that grows as the water rises, which no concrete wall can do.</p>
+          <p class="s-body">Behind the reef, the marsh grass they planted last spring is already trapping sediment. The ground is building itself up.</p>
+        </div>
+      </div>
+      <div>
+        <div class="spec"><div class="kicker"><span>Pull quote</span><span>Newsreader Italic 400 &middot; 38px / 1.15</span></div>
+          <blockquote class="pull">&ldquo;We can&rsquo;t stop the tide. We can decide where it stops.&rdquo;<cite>Rosa Delgado, Pell Island resident and reef captain</cite></blockquote>
+        </div>
+        <div class="spec"><div class="kicker"><span>Interface &amp; caption</span><span>Archivo 400&ndash;700 &middot; wdth 85&ndash;125</span></div>
+          <table class="meta-table">
+            <tr><th>Kicker</th><td><span class="kicker">Field report No. 14</span><br>13px, wdth 85, 700, +0.06em caps</td></tr>
+            <tr><th>UI</th><td>16px / 1.4, 500&ndash;700. Buttons, forms, amounts.</td></tr>
+            <tr><th>Caption</th><td>13px / 1.45, 400, Estuary. Sources and figure notes.</td></tr>
+            <tr><th>Wordmark</th><td>Newsreader 600 italic over Archivo wdth 125, +0.32em caps</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="comp-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>05 &middot; Components</span><span>Tidewater Collective</span></div><h2 id="comp-t">Components</h2><p>Pill buttons that read as action; editorial cards that read as reporting. Every number carries its unit.</p></div>
+    <div class="comp">
+      <div class="cell c-btn">
+        <span class="kicker">Buttons</span>
+        <div class="btns">
+          <button class="btn btn-primary" type="button">Donate now</button>
+          <button class="btn btn-secondary" type="button">Read the field report</button>
+          <button class="btn btn-primary" type="button" disabled>Goal reached</button>
+          <button class="btn btn-primary is-focus" type="button">Focus state</button>
+          <p class="note">Focus: 3px Deep channel ring, 3px offset, on every surface. On Deep channel it switches to Marsh gold.</p>
+        </div>
+      </div>
+      <form class="cell c-form" onsubmit="return false" novalidate>
+        <span class="kicker">Text input</span>
+        <div class="field">
+          <label for="tw-name">First name</label>
+          <input id="tw-name" type="text" value="Rosa" autocomplete="given-name">
+        </div>
+        <div class="field err">
+          <label for="tw-email">Email for field reports</label>
+          <span class="hint" id="tw-email-hint">One letter a month from the marsh. Leave in one click.</span>
+          <input id="tw-email" type="email" value="rosa.delgado@" aria-invalid="true" aria-describedby="tw-email-hint tw-email-err">
+          <span class="error" id="tw-email-err"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="currentColor"/><path d="M10 5.5v5.5M10 13.6v.9" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Add the part after the @, for example rosa@example.org.</span>
+        </div>
+      </form>
+      <div class="cell c-badge">
+        <span class="kicker">Badges and progress</span>
+        <div class="badges">
+          <span class="badge b-report">Field report</span>
+          <span class="badge b-data">Data</span>
+          <span class="badge b-urgent"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1.5l6 11H1z" fill="currentColor"/></svg>Storm appeal</span>
+          <span class="badge b-funded"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Funded</span>
+        </div>
+        <div class="progress">
+          <div class="row"><span><b>$54,400</b> raised</span><span>of $80,000</span></div>
+          <div class="bar" role="img" aria-label="68 percent of the $80,000 goal raised; marker at 80 percent for the matching gift"><i></i></div>
+          <p class="goal">Reaching $64,000 unlocks a $16,000 match from the Harbor Fund. Closes 31 January.</p>
+        </div>
+      </div>
+      <a class="cell c-card story" href="#components">
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="500" height="300" fill="#DCE9E6"/>
+            <circle cx="390" cy="78" r="38" fill="#F2B544"/>
+            <path d="M0 170h500v130H0z" fill="#9CC3C9"/>
+            <path d="M0 196c40-6 80 6 120 0s80-6 120 0 80 6 120 0 80-6 140 0v104H0z" fill="#76A9B1"/>
+            <path d="M0 240c60-8 110 8 170 0s120-6 330 4v56H0z" fill="#4F8790"/>
+            <path d="M210 182c30-30 80-34 140-28 60 6 110 20 150 22v26H190z" fill="#7F9567"/>
+            <g stroke="#3F6B3A" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M240 170q-2-14 4-26M256 166q2-16-4-30M274 162q-3-12 2-24M292 160q1-14 7-26M312 158q-2-18-8-30M330 158q2-12 0-24M350 158q-3-16 3-28M370 160q2-12-4-24M392 162q-1-14 5-26M414 166q2-12-2-22M436 170q-2-14 4-24M460 172q1-12-3-22"/></g>
+            <g fill="#0B2E35"><rect x="120" y="150" width="9" height="34" rx="4"/><circle cx="124.5" cy="142" r="6"/><rect x="146" y="154" width="9" height="30" rx="4"/><circle cx="150.5" cy="146" r="5.5"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="badges" style="margin:0"><span class="badge b-report">Field report No. 13</span><span class="badge b-data">With data</span></div>
+          <h3>The reef that grew eleven centimetres in a year</h3>
+          <p>We measured every bag on the Kessel Point reef in October. Here is what the numbers say about building with, not against, the water.</p>
+          <span class="by">Ama Mensah &middot; 12 Nov 2025 &middot; 9 min read</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="app-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>06 &middot; Applications</span><span>Tidewater Collective</span></div><h2 id="app-t">Applications</h2><p>The donate page on a phone, where most gifts happen, and the monthly field-report email that keeps donors giving.</p></div>
+    <div class="apps">
+      <div>
+        <div class="phone" role="img" aria-label="Mobile donate page: illustration of a reef, headline Build a foot of shoreline, four amounts with impact labels and a Give 75 dollars monthly button">
+          <div class="scr">
+            <div class="ph-top"><span class="logo"><svg aria-hidden="true"><use href="#tw-mark"/></svg><span><span class="t1">Tidewater</span><span class="t2">Collective</span></span></span><span class="ph-x" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="#0B2E35" stroke-width="1.8" stroke-linecap="round"/></svg></span></div>
+            <div class="ph-hero" aria-hidden="true">
+              <svg viewBox="0 0 330 150" preserveAspectRatio="xMidYMid slice"><rect width="330" height="150" fill="#DCE9E6"/><path d="M0 70h330v80H0z" fill="#9CC3C9"/><path d="M0 92c30-5 60 5 90 0s60-5 90 0 60 5 150 0v58H0z" fill="#76A9B1"/><g fill="#E3D6B8" stroke="#0B2E35" stroke-width="1.2"><ellipse cx="120" cy="118" rx="16" ry="9"/><ellipse cx="146" cy="112" rx="15" ry="10"/><ellipse cx="172" cy="114" rx="16" ry="9"/><ellipse cx="134" cy="102" rx="12" ry="8"/><ellipse cx="160" cy="98" rx="12" ry="8"/></g><path d="M0 70H330" stroke="#C73A24" stroke-width="2" stroke-dasharray="10 6"/><text x="12" y="62" font-family="Archivo, sans-serif" font-weight="700" font-size="10" letter-spacing="0.6" fill="#0B2E35">+0.3 M BY 2050</text></svg>
+            </div>
+            <div class="ph-body">
+              <h4>Build a foot of <em>shoreline.</em></h4>
+              <p>Each foot of reef breaks storm waves before they reach Pell Road.</p>
+              <div class="amounts" aria-hidden="true">
+                <div class="amt"><input type="radio" name="pamt" id="p1" tabindex="-1"><label for="p1"><b>$25</b><span>40 grass plugs</span></label></div>
+                <div class="amt"><input type="radio" name="pamt" id="p2" checked tabindex="-1"><label for="p2"><b>$75</b><span>1 ft of reef</span></label></div>
+                <div class="amt"><input type="radio" name="pamt" id="p3" tabindex="-1"><label for="p3"><b>$150</b><span>Volunteer day</span></label></div>
+                <div class="amt"><input type="radio" name="pamt" id="p4" tabindex="-1"><label for="p4"><b>Other</b><span>Any amount</span></label></div>
+              </div>
+              <span class="btn btn-primary">Give $75 monthly</span>
+              <p style="margin:10px 0 0;font-size:0.6875rem;text-align:center">Apple Pay &middot; Google Pay &middot; Card &middot; Bank transfer</p>
+            </div>
+          </div>
+        </div>
+        <p class="app-cap">Donate page, 390px: the amount grid stays 2 &times; 2 with impact labels.</p>
+      </div>
+      <div>
+        <div class="email" role="img" aria-label="Email newsletter header: Field report number 15, headline The water came. The marsh held., with a wave illustration">
+          <div class="email-chrome"><span><b>Tidewater Collective</b> &lt;reports@tidewater.example&gt;</span><span>Subject: The marsh held on Saturday night</span></div>
+          <div class="email-head">
+            <span class="logo"><svg aria-hidden="true" style="color:#F3F5F0"><use href="#tw-mark"/></svg><span><span class="t1">Tidewater</span><span class="t2">Collective</span></span></span>
+            <div class="issue kicker"><span>Field report No. 15</span><span>February 2026</span></div>
+            <h4>The water came. The marsh <em>held.</em></h4>
+            <svg class="wave" viewBox="0 0 680 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c40-14 80-14 120 0s80 14 120 0 80-14 120 0 80 14 120 0 80-14 120 0 60 10 80 6V70H0z" fill="#9CC3C9"/><path d="M0 46c40-10 80-10 120 0s80 10 120 0 80-10 120 0 80 10 120 0 80-10 120 0 60 8 80 4V70H0z" fill="#76A9B1"/><path d="M0 60c60-6 120 6 180 0s120-6 180 0 120 6 180 0 100-4 140 0V70H0z" fill="#4F8790"/></svg>
+          </div>
+          <div class="email-body">
+            <p>Saturday&rsquo;s nor&rsquo;easter pushed the tide 0.8 m above normal at Pell Island. The reef you funded took the first hit. Pell Road stayed dry.</p>
+            <a class="btn btn-primary" href="#applications">See the before-and-after</a>
+          </div>
+        </div>
+        <p class="app-cap">Monthly field-report email, 680px max width, live text over a CSS/SVG header so it survives image blocking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="img-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>07 &middot; Imagery</span><span>Tidewater Collective</span></div><h2 id="img-t">Imagery &amp; iconography</h2><p>Documentary, wide and wet. Named people at work in their own landscape; data drawn as part of the place.</p></div>
+    <div class="img-grid">
+      <div>
+        <p>Photograph volunteers and residents mid-task, at low tide, wide enough to show the coast they are protecting. Name every person and place in the caption, with consent. Never use flooded houses as spectacle, a lone polar bear, or a seedling in cupped hands.</p>
+        <p>Illustrations are cross-sections and maps in the palette&rsquo;s naturals, always with a labelled sea-level line and a source. Icons use a 1.75px round stroke on a 24px grid with one Life-ring detail where it carries meaning.</p>
+        <ul class="icons">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0" class="acc"/><path d="M3 14c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0M3 19c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0"/></svg>Tide</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c0-5 4-9 9-9 4 0 7 3 7 6.5 0 4.5-4.5 8.5-10 8.5-3.5 0-6-2.5-6-6z"/><path d="M8 15c2-3 5-5.5 9-6.5M9 12c1-1.5 2.5-3 4.5-4"/></svg>Oyster</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M8 20q-1-7 2-14M12 20q0-9 0-16M16 20q1-7-2-13M5 20q-1-4 0-8M19 20q1-4 0-7"/></svg>Marsh</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v18H8z"/><path d="M8 7h3M8 11h5M8 15h3M8 19h5"/><path d="M4 13h16" class="acc"/></svg>Gauge</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20l7-16M12 4l3 6M9 13l6 2"/><path d="M15 10l4 1-3 9-4-1z"/></svg>Dig</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" class="acc"/></svg>Site</li>
+        </ul>
+      </div>
+      <div>
+        <figure class="contour" style="margin:0">
+          <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path d="M319 210L319 211L318 212L318 213L318 214L317 215L317 216L317 217L317 218L316 219L316 220L315 221L315 222L314 223L313 224L312 225L310 226L309 226L307 226L306 226L304 226L302 226L301 225L299 224L298 224L297 223L296 222L295 222L294 221L293 220L292 220L291 219L291 219L290 218L289 218L289 217L288 216L288 216L287 215L286 214L286 214L285 213L284 212L283 212L282 211L281 210L280 209L279 208L279 207L278 205L278 204L278 203L279 202L280 201L281 200L282 199L283 198L285 198L287 197L288 197L290 197L291 197L293 197L294 197L296 197L297 197L298 197L299 196L301 197L302 197L303 197L304 197L305 198L306 198L307 199L308 199L309 200L310 201L311 201L312 202L313 202L313 203L314 203L315 204L316 205L317 205L318 206L318 207L318 208L319 209L319 210ZM341 210L341 212L340 214L340 216L339 218L339 220L338 223L338 225L337 227L336 230L336 232L335 235L333 237L331 240L329 242L326 244L323 245L320 246L316 247L312 246L309 246L305 245L302 243L298 242L296 240L293 239L291 237L289 235L287 234L285 233L283 231L281 230L280 229L278 228L277 227L275 226L274 224L272 223L271 222L269 220L268 219L266 217L264 216L262 214L260 212L258 210L256 208L254 205L253 203L252 200L252 197L252 194L253 192L255 189L257 187L260 185L264 184L267 183L271 182L274 182L278 181L281 181L284 181L287 181L290 181L293 180L296 180L299 180L301 180L304 180L307 181L310 181L312 182L315 183L317 184L319 186L321 187L322 189L324 190L326 191L328 193L329 194L331 196L333 197L335 198L337 200L338 202L339 204L340 206L341 208L341 210ZM363 210L363 213L362 217L362 220L361 223L360 226L359 230L359 233L358 237L357 241L356 245L354 249L352 253L349 256L345 260L341 263L336 265L331 266L325 267L319 267L313 266L308 264L302 262L298 259L293 256L290 254L286 251L283 249L280 246L277 244L275 243L272 241L269 239L266 238L264 236L261 234L259 232L256 230L254 228L251 226L249 224L246 221L244 219L241 216L238 213L235 210L232 206L229 203L227 199L226 194L225 190L226 186L228 182L231 178L234 175L239 172L244 170L249 168L255 167L260 167L266 166L271 166L276 166L280 165L285 165L289 164L293 164L298 163L302 163L307 163L311 164L315 165L319 166L323 168L327 170L330 172L333 174L335 177L338 179L340 181L343 184L345 186L348 188L351 190L353 192L356 195L358 198L360 201L361 204L362 207L363 210ZM384 210L385 214L385 219L384 223L383 228L382 232L381 237L380 242L379 247L378 252L376 257L374 263L370 268L367 273L362 278L356 282L349 285L342 287L334 287L326 287L318 285L310 283L303 280L297 276L291 272L286 268L282 265L277 261L274 258L270 256L266 253L262 251L259 249L255 247L251 245L247 243L243 241L240 238L236 235L233 232L230 229L226 226L222 222L219 218L215 214L211 210L207 205L204 200L202 195L200 189L200 183L201 177L203 172L207 167L212 163L218 159L225 156L232 154L239 153L247 152L254 151L261 150L267 150L273 150L279 149L285 148L291 147L297 147L303 146L309 146L315 147L321 148L326 150L332 152L336 155L341 158L345 161L348 164L351 168L354 171L357 174L361 177L364 180L367 184L371 187L374 190L377 194L380 197L382 201L384 206L384 210ZM406 210L407 216L407 221L407 227L406 232L405 238L404 244L402 250L401 257L399 263L397 270L393 277L389 284L384 290L378 296L371 301L362 304L353 307L343 308L333 307L323 305L313 302L304 298L296 293L289 288L283 283L277 278L272 274L267 270L263 267L258 264L253 261L248 259L243 257L238 255L233 252L228 249L223 246L218 242L214 239L209 234L205 230L200 226L196 221L191 216L187 210L183 204L179 197L177 191L175 183L175 176L176 169L179 162L184 156L190 151L197 146L206 143L215 140L224 138L233 137L242 136L251 135L259 134L267 134L274 133L281 132L289 131L296 130L304 129L312 129L319 129L327 131L334 133L341 136L347 139L352 143L357 148L361 152L365 157L368 161L372 165L375 169L379 173L383 177L387 181L391 185L395 190L399 194L402 199L404 205L406 210ZM427 210L429 217L430 224L430 230L429 237L428 245L427 252L425 259L423 267L421 275L418 283L414 291L409 299L402 307L395 314L385 320L375 324L364 327L352 328L339 327L327 324L316 320L305 315L295 309L287 303L279 297L273 291L267 286L261 281L256 277L250 274L244 271L238 269L231 267L225 264L218 261L211 258L205 254L199 250L193 245L188 240L183 235L178 229L173 223L168 217L163 210L159 203L155 195L152 187L150 178L150 170L152 161L155 153L161 146L168 139L177 134L187 129L198 126L209 123L220 122L230 121L241 120L250 119L260 118L269 117L277 115L286 114L295 112L305 111L314 111L323 112L333 113L341 115L350 119L357 123L364 128L369 134L374 140L378 146L382 151L386 157L390 162L394 167L398 171L403 176L408 181L413 186L417 192L421 197L425 204L427 210ZM449 210L451 218L453 226L454 234L453 243L452 251L451 260L449 269L446 278L443 287L439 296L434 306L428 315L420 324L411 332L400 338L388 343L374 346L360 347L346 346L332 343L318 338L306 332L295 325L285 318L276 310L269 303L262 297L255 292L249 288L242 284L235 282L227 279L219 276L211 274L203 270L195 267L187 262L179 258L172 252L166 246L160 240L155 233L149 226L144 218L139 210L135 201L131 192L128 183L126 173L127 163L129 153L133 144L139 135L147 128L157 121L168 116L181 112L193 109L206 107L218 105L230 104L242 103L252 101L263 100L273 98L284 96L295 95L305 94L317 93L328 93L339 95L349 98L359 102L368 107L375 114L382 120L387 127L392 135L396 141L400 148L404 154L408 160L413 166L418 171L424 177L430 182L435 189L441 195L445 202L449 210ZM470 210L474 219L477 228L478 238L478 248L477 258L476 268L473 278L470 289L466 299L461 310L455 321L447 331L438 341L427 350L415 357L400 362L385 366L369 367L352 365L336 362L321 356L307 349L294 341L283 332L273 324L264 316L257 309L249 303L242 298L234 295L226 292L217 289L207 286L197 283L187 280L177 276L168 271L159 266L151 259L144 252L137 245L131 237L125 228L120 219L115 210L111 200L107 190L105 179L103 168L104 157L106 146L111 135L118 126L127 117L138 109L150 103L164 98L178 94L192 91L206 89L220 88L233 86L245 85L257 83L269 81L281 79L294 77L306 75L319 75L332 75L345 77L357 80L368 85L378 92L387 99L394 107L400 115L405 124L409 132L413 140L417 147L422 154L427 160L433 166L439 172L446 179L453 186L459 193L465 201L470 210ZM492 210L497 220L501 231L503 242L504 253L503 265L501 276L498 288L494 300L489 312L483 324L476 336L466 347L456 358L443 367L429 375L413 381L395 385L377 386L359 384L340 380L323 373L307 365L293 356L281 347L270 337L260 328L251 321L243 314L235 309L226 305L216 302L206 299L195 297L183 294L171 290L160 286L148 280L138 274L129 266L120 258L113 250L107 240L101 231L96 221L92 210L88 199L85 188L82 176L81 164L82 151L85 139L90 127L97 116L107 106L119 97L132 90L147 84L162 79L178 76L194 73L209 71L223 69L238 68L251 65L265 63L279 61L293 58L307 57L322 56L336 57L351 59L365 63L377 68L388 76L398 84L406 93L413 103L418 113L422 123L426 132L430 140L435 148L440 155L447 162L454 169L462 176L470 183L478 191L486 200L492 210ZM514 210L521 221L526 234L529 246L530 259L530 272L528 285L524 298L519 311L513 325L505 338L496 350L486 363L473 374L459 384L442 393L424 399L405 403L385 404L365 402L345 397L326 390L308 382L292 372L279 361L267 351L256 341L246 332L237 325L228 320L218 316L207 312L195 310L182 307L169 304L155 300L141 295L128 289L117 282L106 274L97 265L89 255L83 244L77 233L73 222L69 210L65 198L62 185L61 172L60 159L61 146L64 132L69 119L77 107L87 95L100 85L114 77L130 70L146 64L164 60L181 57L197 54L214 52L230 50L245 47L261 45L276 42L292 40L308 38L324 38L341 38L357 41L372 45L386 52L399 60L409 70L418 80L425 92L430 103L435 114L438 124L443 133L447 142L453 150L460 157L468 165L477 172L487 181L497 190L506 199L514 210ZM537 210L545 223L552 236L556 250L558 265L558 279L555 294L551 309L545 323L537 338L528 352L517 365L505 378L490 390L474 401L456 410L436 416L415 420L393 421L370 419L349 414L328 407L309 398L292 387L277 375L263 364L252 354L241 344L231 337L220 331L209 326L197 323L184 320L169 318L154 315L138 311L123 305L108 299L95 291L83 282L73 271L65 260L59 248L53 236L49 223L46 210L43 197L41 183L40 169L40 155L41 140L44 126L50 111L57 98L68 85L81 74L96 64L112 56L130 49L149 44L167 40L186 37L204 34L222 31L239 29L256 26L274 23L291 21L309 19L327 19L345 20L363 23L380 28L395 35L409 45L420 56L430 68L437 80L442 93L447 105L451 116L455 127L459 136L465 145L473 153L482 161L493 169L504 178L516 188L527 198L537 210Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.75"/>
+            <path d="M0 330c90-20 160 10 240-10s150-60 230-50 130 30 130 30" fill="none" stroke="#C73A24" stroke-width="2.5" stroke-dasharray="12 8"/>
+            <circle cx="302" cy="210" r="5" fill="#F2B544"/>
+          </svg>
+          <figcaption>Texture: bathymetric contours of Pell Sound, 1 m intervals, with the 2050 shoreline dashed in Life-ring. Use behind data callouts at 60&ndash;80% opacity.</figcaption>
+        </figure>
+        <div class="duo">
+          <div class="yes"><span>Yes: wide, wet, working, named.</span></div>
+          <div class="no"><span>No: disaster spectacle, desaturated despair.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="mo-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>08 &middot; Motion</span><span>Tidewater Collective</span></div><h2 id="mo-t">Motion</h2><p>Tidal: slow in, slow out, never springy. Motion shows change over time in the data, not decoration.</p></div>
+    <div class="motion">
+      <table class="mt">
+        <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Data reveal (water level, bars)</td><td><code>--duration-tide</code> 1600ms</td><td>sine in-out <code>cubic-bezier(0.45, 0, 0.55, 1)</code></td></tr>
+          <tr><td>Amount select, toggles</td><td><code>--duration-fast</code> 120ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Card hover, panels</td><td><code>--duration-moderate</code> 200ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Counters</td><td>Count in 1600ms with the water</td><td>Tabular figures, so digits do not jitter</td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">Water and counters show the final value at once</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="gauge" id="tw-gauge" aria-hidden="true">
+          <div class="marsh"></div>
+          <div class="water"></div>
+          <div class="marks">
+            <div class="mark" style="bottom:32%"><span>Mean high water today</span><span>0.0 m</span></div>
+            <div class="mark" style="bottom:46%"><span>2050</span><span>+0.3 m</span></div>
+            <div class="mark" style="bottom:74%; border-top-color:#C73A24"><span style="color:#A9321D">2100, intermediate</span><span>+1.0 m</span></div>
+          </div>
+          <div class="count">Year <b id="tw-year">2026</b></div>
+        </div>
+        <div class="gauge-ctl"><span>Water rises over 1600ms with sine easing; the year counts with it.</span><button class="btn btn-secondary" type="button" id="tw-play">Play the tide</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="vo-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>09 &middot; Voice</span><span>Tidewater Collective</span></div><h2 id="vo-t">Voice</h2><p>A reporter with mud on their boots: specific, calm, brave. The donor is the reinforcement, the residents are the heroes.</p></div>
+    <div class="voice">
+      <figure><span class="kicker">Headline</span><blockquote>Hold the line.</blockquote><figcaption>Three words that are literally true (a tide line, a reef line) and ask for courage without panic.</figcaption></figure>
+      <figure><span class="kicker">Call to action</span><blockquote class="cta">Build a foot of shoreline &mdash; $75</blockquote><figcaption>A concrete unit, not &ldquo;make a difference&rdquo;. The price and the result sit in the same sentence.</figcaption></figure>
+      <figure><span class="kicker">Error message</span><blockquote class="err">Your card was declined. Nothing was charged. Try another card, or give by bank transfer.</blockquote><figcaption>Reassure first (no charge), then give two ways forward. Never blame the donor.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="ra-t">
+  <div class="wrap">
+    <div class="dept"><div class="folio kicker"><span>10 &middot; Rationale</span><span>Tidewater Collective</span></div><h2 id="ra-t">Rationale</h2><p>Why a field magazine, and not another green leaf.</p></div>
+    <div class="rat">
+      <div>
+        <h3>Why it fits</h3>
+        <p>Climate donors are fatigued by alarm and suspicious of vague impact. An editorial system lets every appeal arrive as reporting: a named place, a dated event, a sourced projection and a price per foot. The Hero archetype lives in the residents and volunteers doing the work; the donor joins them.</p>
+        <p>The cross-section turns the sea-level projection into the key visual, so the most important fact on the page is also the most beautiful thing on it.</p>
+      </div>
+      <div>
+        <h3>What it risks</h3>
+        <ul>
+          <li>Editorial pace can bury the ask. The donation module stays in the first viewport on desktop and directly under the headline on phones.</li>
+          <li>Data must stay honest: projections need the scenario, baseline and source next to the line, and audited figures must be current.</li>
+          <li>Life-ring red reads as alarm if it spreads. Keep it to 3% of the surface.</li>
+          <li>Donation forms carry legal text (501(c)(3) status, recurring-gift terms, state solicitation disclosures); confirm with counsel.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The expected alternative</h3>
+        <p>Leaf-green gradient, a seedling in cupped hands, a sad photograph of a flooded street and &ldquo;Together we can make a difference&rdquo; over a $1-a-day ask. It reads as worthy and interchangeable. The adjacent option is a purely documentary photo site; it is strong, but needs a photo budget this brief does not assume.</p>
+      </div>
+    </div>
+    <div class="colophon"><span>Fictional organisation for the Visual Design Kit stylescape set. People, places and figures are invented, except the cited NOAA scenario.</span><span>Type: Newsreader and Archivo, SIL Open Font License (<a href="../fonts/newsreader/OFL.txt">OFL</a>, <a href="../fonts/archivo/OFL.txt">OFL</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var g = document.getElementById('tw-gauge'), y = document.getElementById('tw-year'), btn = document.getElementById('tw-play');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run() {
+    var rising = !g.classList.contains('high');
+    g.classList.toggle('high');
+    btn.textContent = rising ? 'Reset to today' : 'Play the tide';
+    var from = rising ? 2026 : 2100, to = rising ? 2100 : 2026;
+    if (reduce) { y.textContent = to; return; }
+    var t0 = performance.now(), dur = 1600;
+    function ease(t) { return -(Math.cos(Math.PI * t) - 1) / 2; }
+    (function step(now) {
+      var t = Math.min(1, (now - t0) / dur);
+      y.textContent = Math.round(from + (to - from) * ease(t));
+      if (t < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+  btn.addEventListener('click', run);
+})();
+</script>
+</body>
+</html>

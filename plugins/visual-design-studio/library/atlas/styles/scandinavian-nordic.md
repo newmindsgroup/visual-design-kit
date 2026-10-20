@@ -40,7 +40,7 @@ Democratic design: well-made, useful things for ordinary homes and public life, 
 | Verified pairs | Charcoal on Snow 13.42:1; Charcoal on Mist 11.44:1; Charcoal on Birch 8.02:1; Fjord on Snow 5.54:1 and Snow on Fjord 5.54:1; Lingon on Snow 6.14:1 and Snow on Lingon 6.14:1; Moss on Snow 5.38:1; Fjord on Mist 4.72:1; Birch on Snow 1.67:1 is a surface, not a text color |
 | Accent proportion | Fjord as primary action color (5-10%); Lingon for highlights and sale or error (2-5%); Birch and Mist as supportive surfaces |
 | Radius | 8-16px (cards 12px, buttons 10px or pill, inputs 8px); keep one family of radii |
-| Borders | 1px Mist-darker (#C6D4DC) hairlines on cards; 1px Charcoal at 40% for inputs (verify 3:1) |
+| Borders | 1px Mist-darker (#C6D4DC) hairlines on cards; 1px #767C82 (oklch 0.58 0.012 248) on inputs, 3.97:1 on Snow |
 | Shadow / elevation | Soft and low: 0 2px 8px rgba(38, 43, 48, 0.08); modals 0 12px 32px rgba(38, 43, 48, 0.14) |
 | Spacing density | Comfortable: 4px base, 24-32px inside cards, 80-128px between sections |
 | Grid | 12 columns, max container 1200px, 24px gutters; image and text alternate 5/7 splits; single column mobile |

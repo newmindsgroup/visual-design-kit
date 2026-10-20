@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Duration and easing tokens from the Visual Design Kit token contract, played side by side, with reduced motion respected.">
+<!-- Version-Timestamp: 2026-10-20 01:59:37 UTC -->
+<!-- Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 01:59:37 UTC -->
+<title>Motion token specimen</title>
+<style>
+  /* Motion tokens: values copied from the kit token contract (library/tokens). Keep them in sync. */
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 120ms;
+    --duration-moderate: 200ms;
+    --duration-slow: 320ms;
+    --duration-slower: 480ms;
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+    --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+    --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+    --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+    --ease-linear: linear;
+    /* Project extensions (not in the base contract) */
+    --ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-spring-gentle: linear(0, 0.089 6%, 0.282 12%, 0.496 19%, 0.688 25%, 0.837 31%, 0.94 38%, 1.003 44%, 1.035 50%, 1.046 56%, 1.044 62%, 1.036 69%, 1.026 75%, 1.017 81%, 1.009 88%, 1.004 94%, 1);
+
+    --color-bg-canvas: #F5F7F7;
+    --color-bg-surface: #FFFFFF;
+    --color-fg-default: #0F1A1C;
+    --color-fg-muted: #4A5A5E;
+    --color-border-subtle: #C8D3D5;
+    --color-border-strong: #7D9196;
+    --color-accent-default: #0E6F78;
+    --color-fg-on-accent: #FFFFFF;
+    --color-focus-ring: #0E6F78;
+    --font-family-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    --plot: 88px;
+    --dot: 18px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --color-bg-canvas: #0C1316;
+      --color-bg-surface: #141E22;
+      --color-fg-default: #E6EEEF;
+      --color-fg-muted: #A3B3B6;
+      --color-border-subtle: #2A3A3F;
+      --color-border-strong: #5D7479;
+      --color-accent-default: #5CC6CC;
+      --color-fg-on-accent: #06272B;
+      --color-focus-ring: #5CC6CC;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --color-bg-canvas: #0C1316;
+    --color-bg-surface: #141E22;
+    --color-fg-default: #E6EEEF;
+    --color-fg-muted: #A3B3B6;
+    --color-border-subtle: #2A3A3F;
+    --color-border-strong: #5D7479;
+    --color-accent-default: #5CC6CC;
+    --color-fg-on-accent: #06272B;
+    --color-focus-ring: #5CC6CC;
+    color-scheme: dark;
+  }
+  /* Same rule as the token contract: reduced motion zeroes every duration except instant. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --duration-fast: 0.01ms;
+      --duration-moderate: 0.01ms;
+      --duration-slow: 0.01ms;
+      --duration-slower: 0.01ms;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-bg-canvas);
+    color: var(--color-fg-default);
+    font: 16px/1.5 var(--font-family-body);
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 1.25rem; line-height: 1.25; margin: 0; }
+  p { margin: 0 0 12px; max-width: 66ch; }
+  .lede { color: var(--color-fg-muted); }
+  code, .mono { font-family: var(--font-family-mono); font-size: 0.875rem; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin: 24px 0 8px; }
+  button {
+    font: inherit; font-weight: 600; min-height: 44px; padding: 0 18px; border-radius: 8px;
+    border: 2px solid var(--color-accent-default); cursor: pointer;
+    background: var(--color-accent-default); color: var(--color-fg-on-accent);
+  }
+  button.secondary { background: transparent; color: var(--color-accent-default); }
+  button:focus-visible, input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; }
+  label.check { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; cursor: pointer; }
+  label.check input { width: 20px; height: 20px; accent-color: var(--color-accent-default); }
+  .notice {
+    border-left: 4px solid var(--color-accent-default); background: var(--color-bg-surface);
+    padding: 12px 16px; margin: 16px 0; border-radius: 0 8px 8px 0;
+  }
+  .notice[hidden] { display: none; }
+  .status { min-height: 1.5em; color: var(--color-fg-muted); font-size: 0.875rem; }
+
+  section { background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: 12px; padding: 20px 16px; margin-top: 24px; }
+  .section-head { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .row { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 8px 20px; align-items: center; padding: 14px 0; border-top: 1px solid var(--color-border-subtle); }
+  .row:first-of-type { border-top: 0; }
+  .meta strong { display: block; font-family: var(--font-family-mono); font-size: 0.875rem; }
+  .meta span { display: block; color: var(--color-fg-muted); font-size: 0.8125rem; }
+  .row.with-plot { grid-template-columns: minmax(0, 15rem) var(--plot) minmax(0, 1fr); }
+
+  .track { position: relative; height: 28px; border-radius: 14px; background: linear-gradient(var(--color-border-subtle), var(--color-border-subtle)) center / 100% 2px no-repeat; }
+  .track::after { content: ""; position: absolute; right: 0; top: 4px; width: 2px; height: 20px; background: var(--color-border-strong); }
+  .runner { position: absolute; left: 0; top: 5px; width: calc(100% - var(--dot)); height: var(--dot); }
+  .dot { width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--color-accent-default); }
+
+  .plot { position: relative; width: var(--plot); height: var(--plot); }
+  .plot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .plot .axis { stroke: var(--color-border-strong); stroke-width: 1; fill: none; }
+  .plot .curve { stroke: var(--color-accent-default); stroke-width: 2.5; fill: none; }
+  .plot .px { position: absolute; left: -4px; bottom: -4px; width: 8px; height: 8px; }
+  .plot .py { width: 8px; height: 8px; border-radius: 50%; background: var(--color-fg-default); }
+
+  .stage { position: relative; height: 180px; border: 1px dashed var(--color-border-strong); border-radius: 12px; display: grid; place-items: center; overflow: hidden; margin-top: 12px; }
+  .card { width: min(280px, 80%); padding: 20px; border-radius: 12px; background: var(--color-bg-canvas); border: 1px solid var(--color-border-strong); }
+  .card[hidden] { display: none; }
+  .card p { margin: 0; }
+  .ext { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-fg-muted); }
+  footer { margin-top: 32px; color: var(--color-fg-muted); font-size: 0.875rem; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 1.75rem; }
+    .row, .row.with-plot { grid-template-columns: minmax(0, 1fr); }
+    .row.with-plot .plot { margin: 4px 0 8px 4px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Motion token specimen</h1>
+  <p class="lede">Every duration and easing token from the kit's token contract, played side by side. Durations all use <code>--ease-standard</code>; easings all run for <code>--duration-slower</code> (480ms). Nothing moves until you press Play.</p>
+
+  <div class="controls">
+    <button type="button" id="play-all">Play all</button>
+    <label class="check"><input type="checkbox" id="slow"> Slow motion (×4, for inspection only)</label>
+    <label class="check" id="preview-wrap" hidden><input type="checkbox" id="preview"> Preview motion anyway</label>
+  </div>
+  <p class="notice" id="rm-notice" hidden>Your system asks for reduced motion. As in the token contract, every duration except <code>--duration-instant</code> resolves to 0.01ms, so the dots jump straight to their end state. Tick "Preview motion anyway" to watch the timing.</p>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+
+  <section aria-labelledby="dur-title">
+    <div class="section-head">
+      <h2 id="dur-title">Durations</h2>
+      <button type="button" class="secondary" data-play="durations">Play durations</button>
+    </div>
+    <div id="durations"></div>
+  </section>
+
+  <section aria-labelledby="ease-title">
+    <div class="section-head">
+      <h2 id="ease-title">Easings</h2>
+      <button type="button" class="secondary" data-play="easings">Play easings</button>
+    </div>
+    <p class="lede">The plot shows progress (up) against time (right). The dark dot traces the curve while the accent dot travels the track.</p>
+    <div id="easings"></div>
+  </section>
+
+  <section aria-labelledby="ext-title">
+    <div class="section-head">
+      <h2 id="ext-title">Expressive extensions <span class="ext">Not in the base contract</span></h2>
+      <button type="button" class="secondary" data-play="extensions">Play extensions</button>
+    </div>
+    <p class="lede">Overshoot and spring curves for expressive or playful brands. Add them as project extensions; never rename contract tokens.</p>
+    <div id="extensions"></div>
+  </section>
+
+  <section aria-labelledby="ee-title">
+    <div class="section-head">
+      <h2 id="ee-title">Enter and exit asymmetry</h2>
+      <button type="button" class="secondary" id="toggle-card" aria-controls="card" aria-expanded="false">Show card</button>
+    </div>
+    <p class="lede">Enter: <code>--duration-slow</code> with <code>--ease-emphasized-decelerate</code>. Exit: <code>--duration-moderate</code> with <code>--ease-emphasized-accelerate</code>. The exit is shorter because the user already knows what is leaving.</p>
+    <div class="stage">
+      <div class="card" id="card" hidden>
+        <p><strong>Saved to your board</strong></p>
+        <p class="lede">Opacity, an 16px rise and scale 0.96 to 1.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Values from the Visual Design Kit token contract. See timing-and-easing.md in this folder for when to use each one.</footer>
+</main>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const rm = matchMedia('(prefers-reduced-motion: reduce)');
+  const slow = document.getElementById('slow');
+  const preview = document.getElementById('preview');
+  const previewWrap = document.getElementById('preview-wrap');
+  const notice = document.getElementById('rm-notice');
+  const status = document.getElementById('status');
+
+  const DURATIONS = [
+    ['--duration-instant', 0, 'State swaps, focus rings, reduced-motion fallback'],
+    ['--duration-fast', 120, 'Hover, press, switches, checkboxes'],
+    ['--duration-moderate', 200, 'Tooltips, menus, chips, tab indicator'],
+    ['--duration-slow', 320, 'Dialogs, accordions, side sheets, toasts'],
+    ['--duration-slower', 480, 'Full-screen sheets, page and shared-element transitions'],
+  ];
+  const EASINGS = [
+    ['--ease-standard', [0.2, 0, 0, 1], 'Movement on screen, resizing'],
+    ['--ease-decelerate', [0, 0, 0, 1], 'Elements entering'],
+    ['--ease-accelerate', [0.3, 0, 1, 1], 'Elements leaving for good'],
+    ['--ease-emphasized-decelerate', [0.05, 0.7, 0.1, 1], 'Hero entrances: dialogs, sheets'],
+    ['--ease-emphasized-accelerate', [0.3, 0, 0.8, 0.15], 'Hero exits'],
+    ['--ease-linear', 'linear', 'Opacity loops, progress, scroll scrubbing'],
+  ];
+  const SPRING = [0, [0.089, 6], [0.282, 12], [0.496, 19], [0.688, 25], [0.837, 31], [0.94, 38], [1.003, 44], [1.035, 50], [1.046, 56], [1.044, 62], [1.036, 69], [1.026, 75], [1.017, 81], [1.009, 88], [1.004, 94], 1];
+  const EXTENSIONS = [
+    ['--ease-overshoot', [0.34, 1.56, 0.64, 1], 'About 10% overshoot; playful brands', 480],
+    ['--ease-spring-gentle', SPRING, 'Spring approximation (damping ratio 0.7) via linear(); runs 600ms', 600],
+  ];
+
+  const cssVar = (name) => getComputedStyle(root).getPropertyValue(name).trim();
+  const reduced = () => rm.matches && !preview.checked;
+  const speed = () => (slow.checked ? 4 : 1);
+  const frames = (ms, fps) => Math.round((ms * fps) / 1000);
+  // Under reduced motion the live token (0.01ms) is used; otherwise the nominal value.
+  const playDuration = (name, nominal) => {
+    if (reduced()) { const v = parseFloat(cssVar(name)); return Number.isFinite(v) ? v : 0; }
+    return nominal * speed();
+  };
+  const easingFor = (name) => cssVar(name) || 'linear';
+  const linearSupported = CSS.supports('transition-timing-function', 'linear(0, 1)');
+
+  function metaHTML(name, line1, line2) {
+    return `<div class="meta"><strong>${name}</strong><span>${line1}</span><span>${line2}</span></div>`;
+  }
+  function trackHTML() {
+    return '<div class="track" aria-hidden="true"><div class="runner"><div class="dot"></div></div></div>';
+  }
+  function plotHTML(points) {
+    const ys = points.map((p) => p[1]);
+    const lo = Math.min(0, ...ys), hi = Math.max(1, ...ys);
+    const y = (v) => 100 - ((v - lo) / (hi - lo)) * 100;
+    const d = points.map((p, i) => `${i ? 'L' : 'M'}${(p[0] * 100).toFixed(2)},${y(p[1]).toFixed(2)}`).join(' ');
+    return `<div class="plot" aria-hidden="true" data-lo="${lo}" data-hi="${hi}"><svg viewBox="0 0 100 100" preserveAspectRatio="none">` +
+      `<path class="axis" d="M0,0 L0,100 L100,100" vector-effect="non-scaling-stroke"/>` +
+      `<path class="axis" d="M0,${y(1)} L100,${y(1)}" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>` +
+      `<path class="curve" d="${d}" vector-effect="non-scaling-stroke"/></svg>` +
+      `<div class="px"><div class="py"></div></div></div>`;
+  }
+  function bezierPoints(c) {
+    if (c === 'linear') return [[0, 0], [1, 1]];
+    if (typeof c[0] === 'number' && c.length === 4 && !Array.isArray(c[1])) {
+      const [x1, y1, x2, y2] = c, pts = [];
+      for (let i = 0; i <= 40; i++) {
+        const t = i / 40, mt = 1 - t;
+        pts.push([3 * mt * mt * t * x1 + 3 * mt * t * t * x2 + t ** 3, 3 * mt * mt * t * y1 + 3 * mt * t * t * y2 + t ** 3]);
+      }
+      return pts;
+    }
+    return c.map((s, i) => (Array.isArray(s) ? [s[1] / 100, s[0]] : [i === 0 ? 0 : 1, s]));
+  }
+
+  function buildRows() {
+    document.getElementById('durations').innerHTML = DURATIONS.map(([name, ms, use]) =>
+      `<div class="row" data-kind="duration" data-name="${name}" data-ms="${ms}">` +
+      metaHTML(name, `${ms}ms · ${frames(ms, 30)} frames at 30fps · ${frames(ms, 60)} at 60fps`, use) + trackHTML() + '</div>').join('');
+    document.getElementById('easings').innerHTML = EASINGS.map(([name, c, use]) =>
+      `<div class="row with-plot" data-kind="easing" data-name="${name}" data-ms="480">` +
+      metaHTML(name, c === 'linear' ? 'linear' : `cubic-bezier(${c.join(', ')})`, use) + plotHTML(bezierPoints(c)) + trackHTML() + '</div>').join('');
+    document.getElementById('extensions').innerHTML = EXTENSIONS.map(([name, c, use, ms]) => {
+      const unsupported = name === '--ease-spring-gentle' && !linearSupported;
+      const label = Array.isArray(c[1]) ? 'linear( … 17 stops … )' : `cubic-bezier(${c.join(', ')})`;
+      return `<div class="row with-plot" data-kind="easing" data-name="${name}" data-ms="${ms}"${unsupported ? ' data-unsupported' : ''}>` +
+        metaHTML(name, label, unsupported ? 'This browser does not support linear(); shown as a plot only.' : use) + plotHTML(bezierPoints(c)) + trackHTML() + '</div>';
+    }).join('');
+  }
+
+  function playRow(row) {
+    const name = row.dataset.name;
+    const nominal = Number(row.dataset.ms);
+    const kind = row.dataset.kind;
+    const duration = kind === 'duration' ? playDuration(name, nominal) : playDuration('--duration-slower', nominal);
+    const easing = kind === 'duration' ? easingFor('--ease-standard') : (row.hasAttribute('data-unsupported') ? 'linear' : easingFor(name));
+    const runner = row.querySelector('.runner');
+    const opts = { duration, easing, fill: 'both' };
+    runner.getAnimations().forEach((a) => a.cancel());
+    runner.animate([{ transform: 'translateX(0%)' }, { transform: 'translateX(100%)' }], opts);
+    const plot = row.querySelector('.plot');
+    if (plot) {
+      const lo = Number(plot.dataset.lo), hi = Number(plot.dataset.hi);
+      const size = plot.clientWidth;
+      const px = plot.querySelector('.px'), py = plot.querySelector('.py');
+      px.getAnimations().forEach((a) => a.cancel());
+      py.getAnimations().forEach((a) => a.cancel());
+      const yFor = (v) => -((v - lo) / (hi - lo)) * size;
+      px.animate([{ transform: 'translateX(0px)' }, { transform: `translateX(${size}px)` }], { duration, easing: 'linear', fill: 'both' });
+      py.animate([{ transform: `translateY(${yFor(0)}px)` }, { transform: `translateY(${yFor(1)}px)` }], opts);
+    }
+    return duration;
+  }
+
+  function play(group) {
+    const ids = group === 'all' ? ['durations', 'easings', 'extensions'] : [group];
+    let longest = 0;
+    ids.forEach((id) => document.querySelectorAll(`#${id} .row`).forEach((row) => { longest = Math.max(longest, playRow(row)); }));
+    const what = group === 'all' ? 'all tokens' : group;
+    status.textContent = reduced()
+      ? `Reduced motion: ${what} jumped to their end state.`
+      : `Playing ${what}${slow.checked ? ' at quarter speed' : ''}. Longest run ${Math.round(longest)}ms.`;
+  }
+
+  const card = document.getElementById('card');
+  const toggle = document.getElementById('toggle-card');
+  toggle.addEventListener('click', () => {
+    const opening = card.hidden;
+    card.getAnimations().forEach((a) => a.cancel());
+    toggle.setAttribute('aria-expanded', String(opening));
+    toggle.textContent = opening ? 'Hide card' : 'Show card';
+    if (opening) {
+      card.hidden = false;
+      card.animate(
+        [{ opacity: 0, transform: 'translateY(16px) scale(0.96)' }, { opacity: 1, transform: 'none' }],
+        { duration: playDuration('--duration-slow', 320), easing: easingFor('--ease-emphasized-decelerate'), fill: 'both' });
+      status.textContent = 'Card entering.';
+    } else {
+      const a = card.animate(
+        [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(8px) scale(0.98)' }],
+        { duration: playDuration('--duration-moderate', 200), easing: easingFor('--ease-emphasized-accelerate'), fill: 'both' });
+      a.finished.then(() => { card.hidden = true; a.cancel(); }).catch(() => {});
+      status.textContent = 'Card leaving.';
+    }
+  });
+
+  function syncPreference() {
+    previewWrap.hidden = !rm.matches;
+    notice.hidden = !rm.matches;
+  }
+
+  document.getElementById('play-all').addEventListener('click', (e) => { play('all'); e.currentTarget.textContent = 'Replay all'; });
+  document.querySelectorAll('[data-play]').forEach((b) => b.addEventListener('click', () => play(b.dataset.play)));
+  rm.addEventListener('change', syncPreference);
+  buildRows();
+  syncPreference();
+})();
+</script>
+</body>
+</html>
