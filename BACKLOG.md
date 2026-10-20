@@ -2,6 +2,24 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Claude-native design studio, 0.5.0
+
+Version-Timestamp: 2026-10-20 02:05:00 UTC
+
+- [x] Native Claude packaging (`.claude-plugin`) with a repository marketplace; versions synced with Codex packaging.
+- [x] `claude plugin validate` passes locally and in CI; local install and enable observed in Claude Code 2.1.304.
+- [x] Registered design-director, 13 discipline skills, design-critique and continuity skills with claude.ai-compatible frontmatter.
+- [x] Design Space Atlas: 125-entry registry, schema, query/combine/validate/build tool, body-ID checks.
+- [x] Replace "no universal numbers" guidance with defaults plus documented overrides.
+- [x] CI for Python 3.9 and 3.13 suites, validators, atlas, tokens, payload integrity, Claude validation and example builds.
+- [x] 12 `claude plugin eval` cases with a should-not-fire control.
+- [ ] Run the eval suite with ablation within an agreed cost cap; record the with/without score delta per case.
+- [ ] Confirm claude.ai and Claude Desktop marketplace install in a receiving workspace; verify Codex install of 0.5.0.
+- [ ] Native-speaker review of market entries and the Arabic, Japanese, Portuguese and Spanish stylescape copy.
+- [ ] Re-verify every atlas statement marked "verify" against primary sources before relying on it for a client.
+- [ ] Second wave (proposed): eval-driven improvement loop skill, parallel-agent divergence in design-director, specialist reviewer agents, Figma round-trip skill, design-to-build fidelity checks, scheduled spec and trend radar.
+- [ ] Private companion (proposed): studio taste profile, licensed visual reference library and client outcome records, kept out of this public repository.
+
 ## Standalone and reference portability, 0.3.0
 
 Version-Timestamp: 2026-09-27T14:35:39-04:00

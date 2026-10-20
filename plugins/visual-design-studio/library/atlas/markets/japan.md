@@ -96,7 +96,7 @@ version_timestamp: __TS__
 - **Advertising:** Premiums and Representations Act (景品表示法) prohibits misleading superiority or price claims; stealth-marketing rules (since October 2023) require ads by influencers to be identifiable (#PR, 広告). The Pharmaceutical and Medical Device Act (薬機法) strictly limits claims for cosmetics, supplements and health products.
 - **Accessibility:** Act for Eliminating Discrimination against Persons with Disabilities (private businesses must provide reasonable accommodation since April 2024); JIS X 8341-3:2016 (aligned with WCAG 2.0 AA) is the reference; many companies target WCAG 2.1/2.2 AA.
 - **Platforms:** the Mobile Software Competition Act (full effect December 2025) and the Act on Improving Transparency of Digital Platforms.
-- **Consumer:** cooling-off rules apply to certain sales; clear tax-inclusive prices.
+- **Consumer:** online sales have no general cooling-off period, but if return terms are not clearly stated buyers may return goods within a statutory window (8 days; verify); show tax-inclusive prices and clear return terms.
 - Confirm requirements with counsel for the specific product and jurisdiction.
 
 ## Localization pitfalls
@@ -116,5 +116,5 @@ version_timestamp: __TS__
 - Japan Digital Agency Design System and Digital Agency design guidelines (digital.go.jp)
 - Noto Sans/Serif JP and Source Han (OFL), M PLUS, Zen fonts, BIZ UDPGothic; Morisawa and Fontworks for commercial type
 - Kenya Hara (MUJI, *Designing Design*), Ikko Tanaka, Yusaku Kamekura (1964 Olympic posters), Tadanori Yokoo
-- LINE Design System (LINE Seed), Rakuten, MUJI, Uniqlo and Nintendo as public brand references
+- LINE's public design resources, Rakuten, MUJI, Uniqlo and Nintendo as public brand references
 - Personal Information Protection Commission (ppc.go.jp) guidance and Consumer Affairs Agency notices

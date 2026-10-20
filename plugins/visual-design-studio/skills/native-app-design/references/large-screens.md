@@ -48,7 +48,7 @@ Compose: `ListDetailPaneScaffold`, `SupportingPaneScaffold`, `NavigationSuiteSca
 - **Continuity**: unfolding moves the app from the cover screen to the inner screen; restore the same item and scroll position. Do not restart.
 - **Taskbar and multi-window**: tablets show a taskbar; apps run side by side in split screen and in resizable windows on desktop-style environments. Test at one-third, half and two-thirds widths.
 - **Keyboard and mouse**: Tab focus order, visible focus, Ctrl shortcuts (Ctrl-C/V/Z/F, Ctrl-Enter to send), right-click context menus, hover states, tooltips on icon buttons, and the keyboard shortcuts helper (Meta-/) listing your shortcuts. Stylus handwriting works in standard text fields.
-- **Orientation**: do not lock it. At API 36 the system ignores the lock on large screens anyway; a portrait-only layout will be pillarbox-free and stretched unless it adapts.
+- **Orientation**: do not lock it. At API 36 the system ignores the lock on large screens anyway, so a portrait-only layout fills the whole window (no pillarboxing) and looks stretched unless it adapts.
 
 ## Layout recipes by width
 

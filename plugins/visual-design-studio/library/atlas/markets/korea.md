@@ -78,7 +78,7 @@ version_timestamp: __TS__
 
 - Address search: use a postcode/address search widget (Kakao/Daum Postcode, Juso API) rather than free text; always add detail address (동/호수) field.
 - Prices include VAT (10%). Installments (할부, 2-12 months) are shown at checkout.
-- Holidays: Seollal and Chuseok (3-4 day breaks), Children's Day, Chuseok gift season; commerce peaks around Black Friday (Korea Sale Festa), 11.11 and Coupang's sale events.
+- Holidays: Seollal and Chuseok (3-4 day breaks) are the biggest gifting seasons; commerce also peaks around Black Friday sale festivals and platform sale days.
 
 ## Platforms, devices and payments
 
