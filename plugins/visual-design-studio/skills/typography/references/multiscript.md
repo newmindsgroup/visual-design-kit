@@ -31,7 +31,7 @@ Body size is relative to a 16px Latin body. Atlas market entries hold the local 
 | Thai | Noto Sans Thai (loopless), IBM Plex Sans Thai, Prompt, Kanit, Anuphan | Noto Sans Thai Looped, Sarabun (looped, formal and long text) | +10-15% | 1.6-1.8 | `market.southeast-asia` |
 | Khmer, Lao, Myanmar | Noto Sans Khmer / Lao / Myanmar | Noto Serif equivalents | +10-20% | 1.8-2.0 (Myanmar is very tall) | `market.southeast-asia` |
 | Vietnamese (Latin with stacked diacritics) | Families with full Vietnamese support: Noto Sans, Source Sans 3, IBM Plex Sans, Inter | Noto Serif, Source Serif 4 | same | 1.5+ | `market.southeast-asia` |
-| Cyrillic, Greek | Noto Sans, Source Sans 3, IBM Plex Sans, Inter, Manrope, Rubik | Noto Serif, Source Serif 4, Literata | same | same as Latin | `market.dach-nordics` and others for EU Greek and Cyrillic audiences |
+| Cyrillic, Greek | Noto Sans, Source Sans 3, IBM Plex Sans, Inter, Manrope, Rubik | Noto Serif, Source Serif 4, Literata | same | same as Latin | none in the atlas yet |
 | Ethiopic (Amharic, Tigrinya) | Noto Sans Ethiopic | Noto Serif Ethiopic | +10% | 1.6-1.8 | `market.sub-saharan-africa` |
 
 ## CJK specifics
@@ -50,7 +50,7 @@ Body size is relative to a 16px Latin body. Atlas market entries hold the local 
 - Never letter-space Arabic; it breaks the joins between letters. Justification uses kashida (tatweel) elongation, which the renderer or font applies; do not insert tatweel characters by hand in UI text.
 - No italics or all-caps equivalents; emphasize with weight, size or color.
 - Diacritics (harakat) need line-height 1.8+ in educational and religious text.
-- Numerals: Western Arabic digits (0-9) are standard in the Maghreb and common across the Gulf in digital products; Eastern Arabic digits (٠-٩) are common in Egypt, the Levant and the Gulf in print and formal contexts. Persian and Urdu use their own Extended Arabic-Indic digits. Pick per market and keep one system per surface.
+- Numerals: Western Arabic digits (0-9) are standard in the Maghreb and common across the Gulf in digital products; Eastern Arabic digits (٠-٩) are common in Egypt, the Levant and the Gulf in print and formal contexts. Persian and Urdu use their own Extended Arabic-Indic digits. Pick per market (confirm in the market entry and with native reviewers) and keep one system per surface.
 - Pair Arabic with a Latin face of similar weight and color: IBM Plex Sans Arabic with IBM Plex Sans, Noto Sans Arabic with Noto Sans, Readex Pro with Lexend.
 
 ## Indic and Thai specifics
@@ -83,7 +83,7 @@ Body size is relative to a 16px Latin body. Atlas market entries hold the local 
 
 ## Text expansion
 
-Plan layouts for translation before it arrives:
+Plan layouts for translation before it arrives. These are typical ranges from localization practice, not guarantees:
 
 | Source string (English) | Typical expansion in European languages |
 | --- | --- |

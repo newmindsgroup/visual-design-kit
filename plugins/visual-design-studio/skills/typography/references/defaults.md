@@ -97,7 +97,7 @@ Fonts with an optical-size axis or separate Display cuts already tighten at larg
 
 - Body 400. On dark backgrounds, light text looks heavier: drop 20-50 units on a variable font or use a grade axis if the font has one.
 - UI emphasis 500-600 (`--font-weight-medium`, `--font-weight-semibold`). Headings 600-700 (`--font-weight-bold`).
-- Contrast needs at least 200 units between body and heading weight, or 1.5x size difference, to read as hierarchy.
+- Rule of thumb: hierarchy needs at least 200 weight units between body and heading, or a 1.5x size difference, or both.
 - Thin weights (100-300) only at 32px+ and only in high-contrast color.
 - Load only the weights in use; 3-4 static files or one variable file.
 
