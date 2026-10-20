@@ -43,7 +43,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 3. **Query the atlas.** Run `python3 ../../library/scripts/atlas.py query "<brief in plain words>"` and read the top industry, market, audience, archetype, tier and channel entries. Read each industry entry's *Recommended directions* and *Category clichés* before inventing your own.
 4. **Scan the category.** Follow [category scan](references/category-scan.md): map 6-12 competitors on type, color, imagery, layout and voice; find the white space. Skip only if you have no web access, and say so.
 5. **Diverge on purpose.** Build 3-5 direction recipes using [divergence](references/divergence.md). Each recipe = 1-2 style IDs + archetype + tier signals + channel constraints, then concrete tokens. Check combinations with `python3 ../../library/scripts/atlas.py combine <ids...>` and resolve every listed conflict deliberately.
-6. **Render, don't describe.** Make a stylescape per direction ([stylescapes](references/stylescapes.md)). Then screenshot and inspect them with the `design-critique` skill's `scripts/render_review.mjs`. Fix generic-AI tells before anyone sees them.
+6. **Render, don't describe.** In Claude Code and Cowork, dispatch one `direction-explorer` subagent per direction in parallel ([parallel exploration](references/parallel-exploration.md)); in chat, build them in turn. Make a stylescape per direction ([stylescapes](references/stylescapes.md)). Then screenshot and inspect them with the `design-critique` skill's `scripts/render_review.mjs`. Fix generic-AI tells before anyone sees them.
 7. **Score.** Use the weighted matrix in [scoring](references/scoring.md) and compute it with `python3 scripts/score_directions.py scores.json` (presets: default, launch, regulated, rebrand, product-ui). It prints the table and the sensitivity check: if a plausible weight change flips the winner, say so.
 8. **Recommend.** Present: the directions side by side, the score table, the recommendation, the runner-up, risks, and what would change your mind. Keep it to one screen of text plus the visuals.
 9. **Converge and hand off.** After a choice, turn the direction into tokens and route to the discipline skills per [handoff](references/handoff.md). For client projects with records and approvals, also use `design-project-start`.
@@ -74,6 +74,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [Scoring](references/scoring.md): weighted matrix, weight presets by brief type, sensitivity check, recommendation format.
 - [Handoff](references/handoff.md): from chosen direction to tokens and discipline skills.
 - [Worked example](references/worked-example.md): a full run from brief to recommendation.
+- [Parallel exploration](references/parallel-exploration.md): one direction-explorer subagent per position in Claude Code and Cowork, the distinctness test on returns, single-context fallback for chat.
 - Atlas index and schema: `../../library/atlas/README.md`.
 - Calibration set of distinct directions: `../../library/examples/stylescapes/README.md`.
 - Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`.
