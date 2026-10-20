@@ -146,7 +146,7 @@ export function RadioCard({ value, label, description, meta, badge, disabled, cl
       className={cx(
         'group relative flex w-full cursor-pointer items-start gap-3 rounded-lg border border-default bg-surface p-4 text-start outline-none',
         'transition-colors duration-fast ease-standard hover:border-strong focus-visible:focus-ring',
-        'data-[state=checked]:border-accent data-[state=checked]:bg-accent-subtle data-[state=checked]:ring-1 data-[state=checked]:ring-accent data-[state=checked]:ring-inset',
+        'data-[state=checked]:border-accent data-[state=checked]:ring-1 data-[state=checked]:ring-accent data-[state=checked]:ring-inset',
         'disabled:cursor-not-allowed disabled:bg-sunken',
         className,
       )}
@@ -162,7 +162,7 @@ export function RadioCard({ value, label, description, meta, badge, disabled, cl
           {badge}
         </span>
         {description ? (
-          <span id={`${ids.id}-desc`} className="text-sm text-muted group-data-[state=checked]:text-default">
+          <span id={`${ids.id}-desc`} className="text-sm text-muted">
             {description}
           </span>
         ) : null}

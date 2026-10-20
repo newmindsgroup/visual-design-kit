@@ -2,7 +2,7 @@
 
 Version-Timestamp: 2026-10-20 02:08:24 UTC
 
-A component's API is its real interface: the names designers see in Figma, developers type in code and screen-reader users experience as behavior. Design it once, name it the same everywhere, and document the accessibility contract as part of the API. A React reference implementation of the kit's components is planned at `library/examples/react-system/`; the component specs in `library/examples/component-specs/` (button, text field, dialog, data table) already define states and behavior.
+A component's API is its real interface: the names designers see in Figma, developers type in code and screen-reader users experience as behavior. Design it once, name it the same everywhere, and document the accessibility contract as part of the API. The React reference implementation is [react-system](../../../library/examples/react-system/README.md) (16 components on Radix, wired to the tokens, axe-tested in every brand and mode); the component specs in `library/examples/component-specs/` (button, text field, dialog, data table) already define states and behavior.
 
 ## Prop naming defaults
 

@@ -85,6 +85,9 @@ export function TextFieldSection() {
     >
       <Plate title="States" note="Error keeps the focus ring visible on top of the danger border">
         <StateMatrix
+          layout="grid"
+          columns={4}
+          stretch
           states={['Empty', 'Hover', 'Focus', 'Filled', 'Invalid', 'Disabled', 'Read-only']}
           rows={[
             {
@@ -150,6 +153,9 @@ export function SelectSection() {
     >
       <Plate title="States">
         <StateMatrix
+          layout="grid"
+          columns={3}
+          stretch
           states={['Placeholder', 'Hover', 'Focus', 'Invalid', 'Disabled']}
           rows={[
             {
@@ -457,7 +463,7 @@ export function RadioSection() {
         <Plate title="Radio cards">
           <RadioGroup label="Plan" defaultValue="team">
             <RadioCard value="starter" label="Starter" description="Up to 10 seats, 50 GB storage." meta="$12 / seat" />
-            <RadioCard value="team" label="Team" description="Up to 50 seats, SSO and audit log." meta="$20 / seat" badge={<Badge tone="accent" size="sm">Current</Badge>} />
+            <RadioCard value="team" label="Team" description="Up to 50 seats, SSO and audit log." meta="$20 / seat" badge={<Badge tone="accent" variant="outline" size="sm">Current</Badge>} />
             <RadioCard value="business" label="Business" description="Unlimited seats, SCIM, priority support." meta="$32 / seat" />
           </RadioGroup>
         </Plate>

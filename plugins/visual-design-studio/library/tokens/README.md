@@ -193,7 +193,7 @@ To import with the Figma MCP server:
 Checked with the WCAG 2.x formula in every brand x mode (Meridian and Ember x light, dark, high contrast):
 
 - `fg-default` and `fg-muted` on `bg-canvas`, `bg-surface`, `bg-surface-raised`: 4.5:1; 7:1 in high contrast.
-- `fg-subtle` on the same three: 3:1. Use it for placeholders and non-essential text only.
+- `fg-subtle` on the same three: 3:1. Use it for decorative, non-essential text only; placeholders use `fg-muted` (4.5:1) because visible placeholder text must meet WCAG 1.4.3.
 - `fg-on-accent` on `accent-default`, `accent-hover`, `accent-active`: 4.5:1. `accent-fg` on `accent-subtle`: 4.5:1.
 - Each status `fg` on its `bg`: 4.5:1. `border-strong` and `focus-ring` on `bg-canvas`: 3:1.
 - Kit additions: `accent-fg` and status `fg` on canvas and surface 4.5:1 (links and inline status text); `fg-inverse` on `bg-inverse` 4.5:1; `fg-default` and `fg-muted` on `bg-sunken` 4.5:1; `border-strong` and `focus-ring` on surfaces 3:1.

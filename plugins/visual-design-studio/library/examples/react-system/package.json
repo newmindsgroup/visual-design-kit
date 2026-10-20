@@ -16,7 +16,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "pretest": "node scripts/sync-tokens.mjs",
-    "test": "node --test tests/unit.test.mjs",
+    "test": "node --test tests/unit.test.mjs && tsc --noEmit -p tsconfig.json",
     "test:browser": "node tests/browser.mjs"
   },
   "dependencies": {

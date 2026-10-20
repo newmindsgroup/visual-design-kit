@@ -49,15 +49,21 @@ export function CardEyebrow({ className, ...rest }: ComponentProps<'p'>) {
   return <p className={cx('text-xs font-semibold uppercase tracking-caps text-muted', className)} {...rest} />;
 }
 
-export type CardTitleProps = ComponentProps<'h3'> & { asChild?: boolean };
+export type CardTitleProps = ComponentProps<'h3'> & {
+  asChild?: boolean;
+  /** sm 16px, md 20px (default), lg 30px. Use this instead of a text-* class so sizes never conflict. */
+  size?: 'sm' | 'md' | 'lg';
+};
+
+const titleSizeClass = { sm: 'text-md', md: 'text-lg', lg: 'text-2xl' } as const;
 
 /** Defaults to h3; use asChild to render the heading level your page outline needs. */
-export function CardTitle({ asChild, className, ...rest }: CardTitleProps) {
+export function CardTitle({ asChild, size = 'md', className, ...rest }: CardTitleProps) {
   const Comp = asChild ? Slot : 'h3';
   return (
     <Comp
       data-slot="card-title"
-      className={cx('font-display text-lg font-semibold leading-snug tracking-tight text-default', className)}
+      className={cx('font-display font-semibold leading-snug tracking-tight text-default', titleSizeClass[size], className)}
       {...rest}
     />
   );

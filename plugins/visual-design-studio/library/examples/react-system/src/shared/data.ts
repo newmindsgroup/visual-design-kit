@@ -27,7 +27,11 @@ export const invoices: Invoice[] = [
 const currency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 const dateFormat = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
+const wholeCurrency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
 export const formatCurrency = (value: number) => currency.format(value);
+/** For headline figures: no cents when the amount is whole. */
+export const formatAmount = (value: number) => (Number.isInteger(value) ? wholeCurrency.format(value) : currency.format(value));
 export const formatDate = (iso: string) => dateFormat.format(new Date(`${iso}T00:00:00Z`));
 
 export const statusLabel: Record<InvoiceStatus, string> = {

@@ -1,7 +1,7 @@
 // Version-Timestamp: 2026-10-20 02:52:00 UTC
 // Badge: a short, non-interactive status or count. The text carries the meaning; tone only reinforces it.
 import type { ComponentProps, ReactNode } from 'react';
-import { cx, variants } from '../lib/cx';
+import { variants } from '../lib/cx';
 import type { Tone } from './types';
 
 export const badgeStyles = variants({

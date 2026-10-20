@@ -9,7 +9,7 @@ import type { PreviewState } from './types';
 
 export const buttonStyles = variants({
   base: [
-    'group/button relative inline-flex shrink-0 select-none items-center justify-center whitespace-nowrap',
+    'relative inline-flex shrink-0 select-none items-center justify-center whitespace-nowrap',
     'rounded-(--button-radius) border font-semibold leading-none no-underline',
     'transition duration-(--button-duration) ease-(--button-easing)',
     'outline-none focus-visible:focus-ring active:translate-y-px',

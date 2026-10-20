@@ -81,7 +81,7 @@ export function Select({
           data-preview-state={previewState}
           className={cx(
             fieldControlStyles({ size, state }),
-            'justify-between text-start outline-none focus-visible:focus-ring data-placeholder:text-(--input-placeholder)',
+            'justify-between text-start outline-none focus-visible:focus-ring data-placeholder:text-muted',
             'cursor-pointer disabled:cursor-not-allowed',
             hint ? 'mt-1' : null,
           )}
@@ -140,7 +140,7 @@ export function SelectItem({ value, children, description, disabled, textValue }
       disabled={disabled}
       textValue={textValue}
       className={cx(
-        'relative flex min-h-(--size-target-comfortable) cursor-pointer select-none flex-col justify-center rounded-sm py-2 ps-8 pe-3 text-md outline-none',
+        'relative flex min-h-10 cursor-pointer select-none flex-col justify-center rounded-sm py-2 ps-8 pe-3 text-md outline-none pointer-coarse:min-h-(--size-target-comfortable)',
         'data-highlighted:bg-accent-subtle data-highlighted:text-accent',
         'data-disabled:cursor-not-allowed data-disabled:text-subtle',
       )}

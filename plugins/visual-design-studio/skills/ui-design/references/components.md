@@ -116,7 +116,7 @@ Use the native `dialog` element or a proven headless library (Headless UI, Radix
 
 ## Theming through tokens
 
-Components consume semantic tokens only, never primitives or raw hex values. A primary button maps to `--color-accent-default`, `--color-accent-hover`, `--color-accent-active`, `--color-fg-on-accent` and `--color-focus-ring`; a text field to `--color-bg-surface`, `--color-border-default`, `--color-border-strong` (hover), `--color-fg-default`, `--color-fg-subtle` (placeholder) and `--color-danger-border` (error). Brands (`data-brand`) and modes (`data-theme`) then work without component changes.
+Components consume semantic tokens only, never primitives or raw hex values. A primary button maps to `--color-accent-default`, `--color-accent-hover`, `--color-accent-active`, `--color-fg-on-accent` and `--color-focus-ring`; a text field to `--color-bg-surface`, `--color-border-default`, `--color-border-strong` (hover), `--color-fg-default`, `--color-fg-muted` (placeholder, 4.5:1) and `--color-danger-border` (error). Brands (`data-brand`) and modes (`data-theme`) then work without component changes.
 
 Nested radius rule: inner radius = outer radius minus the padding between them (a 12px card with 4px padding holds 8px inner elements).
 

@@ -10,7 +10,7 @@ import type { StatusTone } from './types';
 export type AlertTone = Exclude<StatusTone, 'neutral'>;
 
 const alertStyles = variants({
-  base: 'flex items-start gap-3 text-default',
+  base: 'flex text-default',
   variants: {
     tone: {
       info: 'border-(--color-info-border) bg-info',
@@ -26,7 +26,7 @@ const alertStyles = variants({
   defaultVariants: { tone: 'info', layout: 'inline' },
 });
 
-const toneText: Record<AlertTone, string> = {
+const toneTextClass: Record<AlertTone, string> = {
   info: 'text-info',
   success: 'text-success',
   warning: 'text-warning',
@@ -84,24 +84,26 @@ function AlertImpl({
       data-tone={tone}
       className={alertStyles({ tone, layout, className })}
     >
-      <Icon className={cx('mt-0.5', toneText[tone])} />
-      <div
-        className={cx(
-          'flex min-w-0 flex-1 gap-x-4 gap-y-1',
-          layout === 'banner' ? 'flex-col sm:flex-row sm:flex-wrap sm:items-center' : 'flex-col',
-        )}
-      >
-        <p className={cx('font-semibold leading-snug', toneText[tone])}>{title}</p>
-        {children ? <div className="text-sm leading-normal text-default">{children}</div> : null}
-        {actions ? (
-          <div className={cx('flex flex-wrap items-center gap-2', layout === 'banner' ? 'sm:ms-auto' : 'mt-2')}>{actions}</div>
+      <div className={cx('flex min-w-0 flex-1 items-start gap-3', layout === 'banner' && 'mx-auto max-w-(--container-xl)')}>
+        <Icon className={cx('mt-0.5', toneTextClass[tone])} />
+        <div
+          className={cx(
+            'flex min-w-0 flex-1 gap-x-4 gap-y-1',
+            layout === 'banner' ? 'flex-col sm:flex-row sm:flex-wrap sm:items-center' : 'flex-col',
+          )}
+        >
+          <p className={cx('font-semibold leading-snug', toneTextClass[tone])}>{title}</p>
+          {children ? <div className="text-sm leading-normal text-default">{children}</div> : null}
+          {actions ? (
+            <div className={cx('flex flex-wrap items-center gap-2', layout === 'banner' ? 'sm:ms-auto' : 'mt-2')}>{actions}</div>
+          ) : null}
+        </div>
+        {onDismiss ? (
+          <button type="button" onClick={onDismiss} aria-label={dismissLabel} className={cx(closeButtonClass, '-me-1 -mt-1')}>
+            <IconX size="sm" />
+          </button>
         ) : null}
       </div>
-      {onDismiss ? (
-        <button type="button" onClick={onDismiss} aria-label={dismissLabel} className={cx(closeButtonClass, '-me-1 -mt-1')}>
-          <IconX size="sm" />
-        </button>
-      ) : null}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 # Visual Design Kit continuous integration
-# Version-Timestamp: 2026-10-20 02:05:00 UTC
+# Version-Timestamp: 2026-10-20 03:55:00 UTC
 # Third-party actions are pinned to major versions from GitHub's official `actions/` org.
 # For stricter supply-chain control, pin them to full commit SHAs.
 name: ci
@@ -90,3 +90,28 @@ jobs:
       - name: Touch session tests
         working-directory: plugins/visual-design-studio/library/examples/media-quality-recipes/touch-session
         run: node --test session.test.mjs
+
+  react-system:
+    name: React reference system
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plugins/visual-design-studio/library/examples/react-system
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Install (lockfile)
+        run: npm ci
+      - name: Token copies match library/tokens/dist
+        run: node scripts/sync-tokens.mjs --check
+      - name: Unit tests and type check
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Browser and axe checks in every brand, mode and direction
+        run: |
+          npm install --no-save playwright@1.48.2 axe-core@4.10.2
+          npx playwright install --with-deps chromium
+          PLAYWRIGHT_MODULE="$PWD/node_modules/playwright/index.js" AXE_SCRIPT="$PWD/node_modules/axe-core/axe.min.js" npm run test:browser

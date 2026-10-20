@@ -92,12 +92,12 @@
     },
     "placeholder": {
       "$type": "color",
-      "$value": "{color.fg.subtle}",
-      "$description": "Placeholder text; never the only label.",
+      "$value": "{color.fg.muted}",
+      "$description": "Placeholder text; never the only label. Uses fg.muted so visible placeholder text meets 4.5:1 (WCAG 1.4.3).",
       "$extensions": {
         "com.github.newmindsgroup.vdk": {
           "contrast": [
-            {"bg": "{input.bg}", "min": 3.0}
+            {"bg": "{input.bg}", "min": 4.5}
           ]
         }
       }

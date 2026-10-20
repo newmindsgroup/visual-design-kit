@@ -690,7 +690,7 @@
   --input-bg: var(--color-bg-surface);
   --input-bg-disabled: var(--color-bg-sunken);
   --input-fg: var(--color-fg-default);
-  --input-placeholder: var(--color-fg-subtle);
+  --input-placeholder: var(--color-fg-muted);
   --input-border: var(--color-border-strong);
   --input-border-focus: var(--color-focus-ring);
   --input-border-invalid: var(--color-danger-fg);

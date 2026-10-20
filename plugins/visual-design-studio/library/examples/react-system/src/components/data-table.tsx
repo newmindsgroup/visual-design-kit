@@ -60,7 +60,7 @@ export interface DataTableProps<Row> {
   className?: string;
 }
 
-const cellPadding: Record<Density, string> = {
+const cellPaddingClass: Record<Density, string> = {
   compact: 'h-8 py-1',
   default: 'h-10 py-2',
   comfortable: 'h-12 py-3',
@@ -114,7 +114,7 @@ export function DataTable<Row>({
   const selectable = selectionMode === 'multiple';
   const headerState = selectionState(visibleIds, selected);
   const columnCount = columns.length + (selectable ? 1 : 0);
-  const pad = cellPadding[density];
+  const pad = cellPaddingClass[density];
 
   const activateSort = (column: DataTableColumn<Row>) => {
     const next = nextSort(sort, column.id, column.firstSortDirection);

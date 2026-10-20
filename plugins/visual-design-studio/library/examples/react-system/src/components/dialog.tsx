@@ -70,10 +70,14 @@ export function DialogContent({
   className,
   children,
   onOpenAutoFocus,
+  onCloseAutoFocus,
   onPointerDownOutside,
   ...rest
 }: DialogContentProps) {
   const contentRef = useRef<HTMLDivElement | null>(null);
+  // Element that had focus when the dialog opened. Radix returns focus to <DialogTrigger>; dialogs opened
+  // from state (a menu item, a banner action) have no trigger, so focus goes back here instead (DLG-S4).
+  const returnFocus = useRef<HTMLElement | null>(null);
   return (
     <RadixDialog.Portal>
       <RadixDialog.Overlay
@@ -87,14 +91,26 @@ export function DialogContent({
           ref={contentRef}
           role={role}
           {...(description ? {} : { 'aria-describedby': undefined })}
+          aria-modal="true"
           data-slot="dialog"
           onOpenAutoFocus={(event) => {
+            const opener = document.activeElement;
+            returnFocus.current = opener instanceof HTMLElement && opener !== document.body ? opener : null;
             onOpenAutoFocus?.(event);
             if (event.defaultPrevented) return;
             const target =
               initialFocusRef?.current ??
               (role === 'alertdialog' ? contentRef.current?.querySelector<HTMLElement>('[data-slot="dialog-footer"] button') : null);
             if (target) {
+              event.preventDefault();
+              target.focus();
+            }
+          }}
+          onCloseAutoFocus={(event) => {
+            onCloseAutoFocus?.(event);
+            if (event.defaultPrevented) return;
+            const target = returnFocus.current;
+            if (target?.isConnected) {
               event.preventDefault();
               target.focus();
             }

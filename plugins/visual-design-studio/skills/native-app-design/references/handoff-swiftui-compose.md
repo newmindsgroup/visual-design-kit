@@ -31,7 +31,7 @@ Map the kit's DTCG tokens (names fixed by the token contract, built by `library/
 | `color.bg.inverse` / `color.fg.inverse` | `bg/inverse` / `fg/inverse` | `inverseSurface` / `inverseOnSurface` |
 | `color.fg.default` | `fg/default` | `onSurface` |
 | `color.fg.muted` | `fg/muted` | `onSurfaceVariant` |
-| `color.fg.subtle` | `fg/subtle` | extended token (placeholder text only) |
+| `color.fg.subtle` | `fg/subtle` | extended token (decorative, non-essential text; placeholders use `fg/muted`) |
 | `color.border.subtle` / `default` | `border/subtle` / `border/default` | `outlineVariant` / `outline` |
 | `color.border.strong` | `border/strong` | extended token |
 | `color.accent.default` | App accent color (`AccentColor`) | `primary` |

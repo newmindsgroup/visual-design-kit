@@ -7,7 +7,7 @@ import type { PreviewState, Size } from './types';
 
 export const fieldControlStyles = variants({
   base: [
-    'group/control relative flex w-full items-center gap-2 rounded-(--input-radius) border',
+    'relative flex w-full items-center gap-2 rounded-(--input-radius) border',
     'transition-colors duration-fast ease-standard focus-within:focus-ring',
   ],
   variants: {
@@ -119,7 +119,7 @@ export function TextField({
           aria-describedby={describedBy(hint ? ids.hintId : null, error ? ids.errorId : null, ariaDescribedBy)}
           onChange={handleChange}
           className={cx(
-            'h-full min-w-0 flex-1 bg-transparent text-inherit outline-none placeholder:text-(--input-placeholder)',
+            'h-full min-w-0 flex-1 bg-transparent text-inherit outline-none placeholder:text-muted',
             'disabled:cursor-not-allowed read-only:cursor-default',
             inputClassName,
           )}

@@ -136,7 +136,7 @@ TEXT_BGS = ("color.bg.canvas", "color.bg.surface", "color.bg.surface-raised")
 GUARANTEES = [
     ("color.fg.default", TEXT_BGS, 4.5, "contract", "body text", 7.0),
     ("color.fg.muted", TEXT_BGS, 4.5, "contract", "secondary text", 7.0),
-    ("color.fg.subtle", TEXT_BGS, 3.0, "contract", "non-essential text and placeholders", None),
+    ("color.fg.subtle", TEXT_BGS, 3.0, "contract", "decorative, non-essential text (placeholders use fg.muted)", None),
     ("color.fg.on-accent", ("color.accent.default", "color.accent.hover", "color.accent.active"), 4.5, "contract",
      "text on accent fills", None),
     ("color.accent.fg", ("color.accent.subtle",), 4.5, "contract", "accent text on accent-subtle", None),

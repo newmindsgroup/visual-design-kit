@@ -137,7 +137,7 @@ function Intro() {
         {[
           ['16', 'components with typed props'],
           ['6', 'brand and theme contexts'],
-          ['WCAG 2.2 AA', 'axe-checked in each context'],
+          ['AA', 'WCAG 2.2, axe-checked in every context'],
           ['0', 'raw colors in component code'],
         ].map(([value, label]) => (
           <div key={label} className="flex flex-col-reverse justify-end gap-1 bg-surface p-5">

@@ -10,7 +10,7 @@ import { IconArrowUp, IconCheckCircle, IconDanger, IconFolder, IconInfo, IconPlu
 import { SegmentedControl, SegmentedItem } from '../components/radio-group';
 import { Skeleton, SkeletonText } from '../components/skeleton';
 import type { Tone } from '../components/types';
-import { formatCurrency, invoices } from '../shared/data';
+import { formatAmount, invoices } from '../shared/data';
 import { invoiceColumns } from '../shared/invoice-columns';
 import { Example, Kbd, Plate, Section, Token } from './doc';
 
@@ -35,8 +35,8 @@ export function CardSection() {
               4.2%
             </Badge>
           </CardHeader>
-          <p className="font-display text-4xl font-semibold tracking-tight tabular-nums text-default">{formatCurrency(48210)}</p>
-          <CardDescription>Up from {formatCurrency(46268)} in September. Outlined: the default for dashboards.</CardDescription>
+          <p className="font-display text-4xl font-semibold tracking-tight text-default">{formatAmount(48210)}</p>
+          <CardDescription>Up from {formatAmount(46268)} in September. Outlined: the default for dashboards.</CardDescription>
         </Card>
         <Card variant="elevated" interactive>
           <CardEyebrow>Project · updated 2 h ago</CardEyebrow>

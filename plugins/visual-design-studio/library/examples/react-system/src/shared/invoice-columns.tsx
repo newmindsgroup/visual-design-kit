@@ -28,7 +28,7 @@ export const invoiceColumns: Array<DataTableColumn<Invoice>> = [
     id: 'id',
     header: 'Invoice',
     rowHeader: true,
-    cell: (row) => <span className="font-mono text-sm">{row.id}</span>,
+    cell: (row) => <span className="font-mono text-xs">{row.id}</span>,
     sortValue: (row) => row.id,
   },
   {

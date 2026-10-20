@@ -42,7 +42,7 @@ A good design system makes the brand's decisions once and compiles them everywhe
 4. **Theme**: modes, brands and density per [theming](references/theming.md); lint every mode x brand pair.
 5. **Specify components**: anatomy, props, states and accessibility contract per [component API](references/component-api.md), starting from the kit's [component specs](../../library/examples/component-specs/README.md).
 6. **Mirror in Figma** per [Figma](references/figma.md): import `library/tokens/dist/figma-variables.json`, build components with matching properties, connect them with Code Connect.
-7. **Implement**: web components on the chosen headless layer (a React reference system is being built at [react-system](../../library/examples/react-system/README.md)); native themes through the `native-app-design` skill's SwiftUI and Compose handoff.
+7. **Implement**: web components on the chosen headless layer (the React reference system at [react-system](../../library/examples/react-system/README.md) shows the pattern: Radix primitives, token-only styling, axe-tested in every brand and mode); native themes through the `native-app-design` skill's SwiftUI and Compose handoff.
 8. **Render and inspect**: a specimen page plus 4-5 reference screens (form, table, dialog, marketing section, error state) in every mode and brand. Screenshot and critique with the `design-critique` skill; run Storybook accessibility checks; fix before release.
 9. **Document** per [documentation](references/documentation.md).
 10. **Release and govern** per [governance and versioning](references/governance-and-versioning.md): changelog, semver, deprecations, adoption metrics.

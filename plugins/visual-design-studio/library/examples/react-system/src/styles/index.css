@@ -9,10 +9,14 @@
 @import "./fonts.css";
 @import "./system.css";
 
-/* Specimen-only decoration: a dotted grid behind static state renders, drawn from token colors. */
+/* Specimen-only decoration: a dotted grid behind static state renders, drawn from token colors.
+   High contrast drops the pattern: it is decoration, and that theme's borders are strong enough to read as noise. */
 @utility specimen-grid {
   background-color: var(--color-bg-canvas);
   background-image: radial-gradient(var(--color-border-default) var(--border-width-thin), transparent var(--border-width-thin));
   background-size: var(--space-4) var(--space-4);
   background-position: center;
+  @variant hc {
+    background-image: none;
+  }
 }

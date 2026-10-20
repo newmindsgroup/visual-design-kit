@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { cx } from '../lib/cx';
 
 export function Token({ children }: { children: ReactNode }) {
-  return <code className="rounded-sm bg-sunken px-1 py-0.5 font-mono text-xs text-default">{children}</code>;
+  return <code className="whitespace-nowrap rounded-sm bg-sunken px-1 py-0.5 font-mono text-xs text-default">{children}</code>;
 }
 
 export function Kbd({ children }: { children: ReactNode }) {
@@ -87,15 +87,48 @@ const colsClass: Record<number, string> = {
 /**
  * Static render of each state, side by side. Marked inert: these are pictures of states (forced with
  * data-preview-state), so they are skipped by Tab and by assistive technology. The live examples follow.
+ *
+ * layout "rows": one row per variant with state names as column headers (wide screens).
+ * layout "grid": every cell carries its own state name and wraps into `columns` columns (form controls).
  */
-export function StateMatrix({ states, rows }: { states: string[]; rows: Array<{ label: string; cells: ReactNode[] }> }) {
+export function StateMatrix({
+  states,
+  rows,
+  layout = 'rows',
+  columns,
+  stretch = false,
+}: {
+  states: string[];
+  rows: Array<{ label: string; cells: ReactNode[] }>;
+  layout?: 'rows' | 'grid';
+  columns?: number;
+  /** Let each specimen fill its cell (text fields, selects). */
+  stretch?: boolean;
+}) {
+  const cellClass = cx('flex min-w-0 flex-col justify-start gap-2 px-4 py-5', stretch ? 'items-stretch' : 'items-start');
+  if (layout === 'grid') {
+    return (
+      <div inert className="specimen-grid -m-5 sm:-m-6">
+        {rows.map((row) => (
+          <div key={row.label} className={cx('grid grid-cols-1 sm:grid-cols-2', colsClass[columns ?? states.length])}>
+            {row.cells.map((cell, i) => (
+              <div key={states[i]} className={cellClass}>
+                <span className="text-xs font-semibold uppercase tracking-caps text-muted">{states[i]}</span>
+                {cell}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
     <div inert className="specimen-grid -m-5 sm:-m-6">
       <div className="hidden border-b border-subtle bg-surface lg:flex">
         <div className="w-28 shrink-0" />
         <div className={cx('grid flex-1', colsClass[states.length])}>
           {states.map((state) => (
-            <div key={state} className="px-3 py-2 text-xs font-semibold uppercase tracking-caps text-muted">
+            <div key={state} className="px-4 py-2 text-xs font-semibold uppercase tracking-caps text-muted">
               {state}
             </div>
           ))}
@@ -108,7 +141,7 @@ export function StateMatrix({ states, rows }: { states: string[]; rows: Array<{ 
           </div>
           <div className={cx('grid flex-1 grid-cols-2 sm:grid-cols-3', colsClass[states.length])}>
             {row.cells.map((cell, i) => (
-              <div key={states[i]} className="flex min-h-24 flex-col items-start justify-center gap-2 px-3 py-4">
+              <div key={states[i]} className={cx(cellClass, 'lg:justify-center')}>
                 <span className="text-xs font-semibold uppercase tracking-caps text-muted lg:hidden">{states[i]}</span>
                 {cell}
               </div>
