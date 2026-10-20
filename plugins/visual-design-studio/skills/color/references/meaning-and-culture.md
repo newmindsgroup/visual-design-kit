@@ -33,6 +33,30 @@ These are widely documented starting points, not rules. The atlas market entries
 | Pink | Playfulness, care, beauty; gendered in some markets | Gender coding can exclude; check the audience | `market.korea`, `market.japan`, `market.brazil-portuguese` |
 | Brown and earth tones | Craft, coffee, natural, heritage | Can read dull without a bright accent | `market.latin-america-spanish`, `market.sub-saharan-africa` |
 
+## Context beats hue
+
+The same color reads differently by category and by what surrounds it:
+
+- Green on a bank's balance means "money in"; on a recycling label it means "environmental"; on a hospital wayfinding sign it often marks an exit or a safe condition.
+- Black on a perfume box reads luxury; on a children's toy box it reads serious or adult.
+- Orange in value retail reads "deal"; in a developer tool it can read "warning" because terminals and dashboards use it that way.
+- Saturation and lightness carry as much meaning as hue: a pale mint reads clinical or calm, a deep forest green reads heritage and wealth, a neon green reads tech or youth.
+
+Judge meaning in a composition with type, imagery and copy, never from a swatch.
+
+## Safety colors in physical environments
+
+Signage, packaging hazard labels, industrial and healthcare interfaces must not conflict with standardized safety colors. ISO 3864 (international) and ANSI Z535 (US) assign:
+
+| Color | Safety meaning |
+| --- | --- |
+| Red | Prohibition, danger, fire equipment, stop |
+| Yellow (with black) | Warning, caution |
+| Blue | Mandatory action (wear protection, follow instruction) |
+| Green | Safe condition, first aid, emergency exit |
+
+A brand that uses green for "no entry" or red for "safe" in a facility creates real risk. Confirm the applicable standard for the specific site and jurisdiction.
+
 ## Finance and data colors by market
 
 - US and European finance: green for gains, red for losses.

@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نور أتيليه | Noor Atelier: Quiet Light | Stylescape 11</title>
+<meta name="description" content="Stylescape for Noor Atelier, a fictional Arabic-first modest-fashion e-commerce house in the UAE. Direction: Quiet Light. Right-to-left, classic luxury serif adapted to Naskh, luxury tier.">
+<style>
+/* Arabic glyphs are subset to the copy on this page; Latin glyphs come from separate files via unicode-range */
+@font-face { font-family: "Amiri"; src: url("../fonts/amiri/amiri-arabic-400-subset.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F, U+25CC; }
+@font-face { font-family: "Amiri"; src: url("../fonts/amiri/amiri-arabic-700-subset.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F, U+25CC; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-400-subset.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F, U+25CC; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-arabic-600-subset.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200F, U+25CC; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/ibm-plex-sans-arabic/ibm-plex-sans-arabic-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Bodoni Moda"; src: url("../fonts/bodoni-moda/bodoni-moda-latin-opsz-wght-subset.woff2") format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
+
+:root {
+  --color-bg-canvas: #F7F1EC;          /* Pearl */
+  --color-bg-surface: #FCF9F6;         /* Ivory */
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #EFE4DA;          /* Linen */
+  --color-bg-inverse: #241A14;         /* Oud */
+  --color-fg-default: #241A14;
+  --color-fg-muted: #6B5B4E;           /* Taupe */
+  --color-fg-subtle: #8C7A6B;
+  --color-fg-inverse: #F7F1EC;
+  --color-fg-on-accent: #FCF9F6;
+  --color-border-subtle: #E2D5C8;
+  --color-border-default: #A08C7B;
+  --color-border-strong: #241A14;
+  --color-accent-default: #0E5A47;     /* Emerald */
+  --color-accent-hover: #0B4A3A;
+  --color-accent-active: #083A2D;
+  --color-accent-subtle: #E1ECE6;
+  --color-accent-fg: #0E5A47;
+  --color-sand: #D9BFA9;               /* Sand rose: fabric and light */
+  --color-gold: #C9A86A;               /* Gold thread: on Oud only (7.54:1) */
+  --color-gold-text: #7A5C2E;          /* Gold thread, text-safe on Pearl */
+  --color-success-fg: #0E5A47; --color-success-bg: #E1ECE6; --color-success-border: #0E5A47;
+  --color-warning-fg: #7A5C2E; --color-warning-bg: #F5E9D3; --color-warning-border: #7A5C2E;
+  --color-danger-fg: #8A3B2E;  --color-danger-bg: #F6E3DE;  --color-danger-border: #8A3B2E;
+  --color-info-fg: #3F4E63;    --color-info-bg: #E6E9EE;    --color-info-border: #3F4E63;
+  --color-focus-ring: #0E5A47;
+  --color-overlay-scrim: rgb(36 26 20 / 0.55);
+
+  --font-family-display: "Amiri", "Bodoni Moda", "Noto Naskh Arabic", serif;
+  --font-family-body: "IBM Plex Sans Arabic", "Noto Sans Arabic", Tahoma, sans-serif;
+  --font-family-latin: "Bodoni Moda", Didot, serif;
+  --font-family-mono: ui-monospace, Menlo, monospace;
+  --font-size-xs: 0.8125rem; --font-size-sm: 0.9375rem; --font-size-md: 1.0625rem; --font-size-lg: 1.25rem; --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.2; --line-height-snug: 1.4; --line-height-normal: 1.7; --line-height-relaxed: 1.85; /* Arabic needs more leading than Latin */
+  --font-weight-regular: 400; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-normal: 0;          /* never track Arabic: it breaks the joins */
+  --letter-spacing-caps: 0.24em;       /* Latin wordmark and labels only */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --radius-none: 0; --radius-sm: 2px; --radius-md: 2px; --radius-lg: 2px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-md: 0 24px 48px -32px rgb(36 26 20 / 0.45);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --duration-drape: 900ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-silk: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) { :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; --duration-drape: 0.01ms; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.0625rem; line-height: var(--line-height-normal); letter-spacing: 0; -webkit-font-smoothing: antialiased; }
+svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; }
+.wrap { max-width: var(--container-xl); margin-inline: auto; padding-inline: var(--gutter); }
+.latin { font-family: var(--font-family-latin); letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; }
+[lang="en"] { font-family: var(--font-family-body); }
+.num { font-family: "IBM Plex Sans Arabic", sans-serif; font-variant-numeric: tabular-nums; unicode-bidi: isolate; direction: ltr; display: inline-block; }
+
+/* ---------- 1. Direction (studio annotation, English) ---------- */
+#direction { background: var(--color-bg-canvas); border-block-end: 1px solid var(--color-border-subtle); }
+#direction .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-8); align-items: center; padding-block: var(--space-4) var(--space-5); }
+#direction .tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-fg-muted); }
+#direction h1 { margin: 0; font-weight: 400; font-size: 1.375rem; line-height: 1.3; }
+#direction h1 .ar { font-family: var(--font-family-display); font-size: 1.75rem; }
+#direction h1 .en { font-family: var(--font-family-latin); font-size: 1.125rem; letter-spacing: 0.06em; }
+#direction .brief { grid-column: 1 / -1; margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--color-fg-muted); max-width: 96ch; }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.chips li { font-size: 0.75rem; padding: 2px 10px; border: 1px solid var(--color-border-default); border-radius: var(--radius-full); color: var(--color-fg-muted); }
+.back { font-size: 0.875rem; font-weight: 600; padding-block: 10px; text-underline-offset: 4px; }
+
+/* ---------- 2. Hero: storefront ---------- */
+#hero { background: var(--color-bg-inverse); color: var(--color-fg-inverse); position: relative; overflow: hidden; }
+.promo { text-align: center; font-size: 0.875rem; padding: 8px var(--gutter); background: #1A120E; color: #E9DFD4; border-block-end: 1px solid rgb(201 168 106 / 0.3); }
+.store-head { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: var(--space-6); padding-block: var(--space-5); border-block-end: 1px solid rgb(201 168 106 / 0.35); }
+.store-head nav ul { display: flex; gap: var(--space-6); list-style: none; margin: 0; padding: 0; font-size: 0.9375rem; }
+.store-head nav a { text-decoration: none; display: inline-block; padding-block: 10px; border-block-end: 1px solid transparent; }
+.store-head nav a:hover, .store-head nav a[aria-current] { border-block-end-color: var(--color-gold); }
+.wordmark { display: grid; justify-items: center; gap: 6px; text-decoration: none; line-height: 1; }
+.wordmark .ar { font-family: var(--font-family-display); font-size: 2.5rem; line-height: 1.15; margin-block-start: -0.3em; }
+.wordmark .en { font-family: var(--font-family-latin); font-size: 0.6875rem; letter-spacing: 0.42em; padding-inline-start: 0.42em; text-transform: uppercase; color: var(--color-gold); }
+.tools { display: flex; justify-content: flex-end; gap: var(--space-2); }
+.tools a { display: inline-grid; place-items: center; width: 44px; height: 44px; position: relative; color: var(--color-fg-inverse); }
+.tools svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.tools .count { position: absolute; inset-block-start: 4px; inset-inline-end: 2px; min-width: 18px; height: 18px; border-radius: 9px; background: var(--color-gold); color: var(--color-bg-inverse); font-size: 0.6875rem; font-weight: 600; display: grid; place-items: center; line-height: 1; }
+.tools .lang { width: auto; padding-inline: 10px; font-family: var(--font-family-latin); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; }
+.menu-btn { display: none; }
+
+.hero-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-12); align-items: center; padding-block: var(--space-12) var(--space-16); }
+.hero-copy { position: relative; z-index: 2; }
+.kicker { display: flex; align-items: center; gap: 14px; margin: 0 0 var(--space-6); font-size: 1rem; color: var(--color-gold); }
+.kicker::after { content: ""; width: 72px; height: 1px; background: currentColor; }
+.hero-copy h2 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(4.5rem, 10.5vw, 9.5rem); line-height: 1.02; }
+.hero-copy h2 span { display: block; color: var(--color-sand); }
+.hero-copy .sub { font-size: 1.375rem; line-height: 1.75; max-width: 24em; margin: var(--space-6) 0 var(--space-8); color: #E9DFD4; }
+.cta { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+.btn { appearance: none; display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 32px; border: 1px solid transparent; border-radius: var(--radius-sm); font-family: var(--font-family-body); font-weight: 600; font-size: 1.0625rem; text-decoration: none; cursor: pointer; transition: background-color var(--duration-slow) var(--ease-standard), color var(--duration-slow) var(--ease-standard), border-color var(--duration-slow) var(--ease-standard); }
+.btn svg { width: 20px; height: 12px; }
+.btn-primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-primary:active { background: var(--color-accent-active); }
+.btn-secondary { background: transparent; color: var(--color-fg-default); border-color: var(--color-border-strong); }
+.btn-secondary:hover { background: var(--color-fg-default); color: var(--color-bg-canvas); }
+.on-dark .btn-secondary { color: var(--color-fg-inverse); border-color: var(--color-gold); }
+.on-dark .btn-secondary:hover { background: var(--color-gold); color: var(--color-bg-inverse); }
+.on-dark .btn-primary { background: var(--color-sand); color: var(--color-bg-inverse); }
+.on-dark .btn-primary:hover { background: #E7D3C2; }
+.on-dark :focus-visible { outline-color: var(--color-gold); }
+.btn[disabled] { background: var(--color-bg-sunken); color: #7E6E61; border-color: transparent; cursor: not-allowed; }
+.btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 3px; }
+
+.hero-art { position: relative; display: grid; grid-template-columns: 1fr 0.62fr; gap: var(--space-6); align-items: end; }
+.hero-art svg.big { width: 100%; height: auto; aspect-ratio: 400 / 640; }
+.hero-art .side { display: grid; gap: var(--space-6); align-content: end; padding-block-end: var(--space-6); }
+.hero-art .side svg { width: 100%; height: auto; aspect-ratio: 400 / 640; }
+.pin { position: absolute; inset-block-end: 14%; inset-inline-start: 46%; background: var(--color-bg-surface); color: var(--color-fg-default); padding: 12px 16px; min-width: 190px; box-shadow: var(--shadow-md); }
+.pin::before { content: ""; position: absolute; inset-block-start: 50%; inset-inline-start: -28px; width: 28px; height: 1px; background: var(--color-bg-surface); }
+.pin::after { content: ""; position: absolute; inset-block-start: calc(50% - 4px); inset-inline-start: -34px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-bg-surface); }
+.pin b { display: block; font-family: var(--font-family-display); font-weight: 700; font-size: 1.375rem; line-height: 1.3; }
+.pin span { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.price { font-weight: 600; color: var(--color-fg-default); }
+
+.rail { background: var(--color-bg-canvas); color: var(--color-fg-default); }
+.rail .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8); padding-block: var(--space-12); }
+.rail h3 { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: 2.25rem; line-height: 1.3; align-self: center; }
+.rail h3 small { display: block; font-family: var(--font-family-body); font-size: 1rem; color: var(--color-fg-muted); line-height: 1.6; }
+.prod { text-decoration: none; display: grid; gap: 10px; }
+.prod .img { position: relative; background: var(--color-bg-sunken); padding: 18px 26px 0; }
+.prod .img svg { width: 100%; height: auto; aspect-ratio: 400 / 640; }
+.prod .badge { position: absolute; inset-block-start: 12px; inset-inline-start: 12px; }
+.prod .wish { position: absolute; inset-block-start: 6px; inset-inline-end: 6px; width: 44px; height: 44px; display: grid; place-items: center; }
+.prod .wish svg { width: 22px; height: 22px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.4; }
+.prod .nm { font-family: var(--font-family-display); font-weight: 700; font-size: 1.25rem; line-height: 1.4; }
+.prod .mt { display: flex; justify-content: space-between; gap: 10px; font-size: 0.9375rem; color: var(--color-fg-muted); }
+.prod:hover .nm { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+.badge { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; font-size: 0.8125rem; font-weight: 600; line-height: 1; }
+.b-new { background: var(--color-bg-surface); color: var(--color-fg-default); }
+.b-ltd { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.b-last { background: var(--color-warning-bg); color: var(--color-warning-fg); }
+.b-out { background: transparent; color: var(--color-fg-muted); border: 1px solid var(--color-border-default); }
+
+/* ---------- Sections ---------- */
+.section { padding-block: clamp(4rem, 8vw, 7rem); border-block-start: 1px solid var(--color-border-subtle); }
+.s-head { display: grid; grid-template-columns: auto 1fr; gap: var(--space-2) var(--space-10); align-items: end; margin-block-end: var(--space-12); }
+.s-head .ar { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1.2; }
+.s-head .en { width: fit-content; font-family: var(--font-family-latin); font-size: 0.875rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-gold-text); display: block; margin-block-end: 6px; }
+.s-head p { margin: 0; color: var(--color-fg-muted); max-width: 62ch; font-size: 1rem; line-height: 1.6; }
+.note-en { direction: ltr; text-align: left; }
+
+/* ---------- 3. Palette ---------- */
+.pal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
+.pal li { display: grid; grid-template-rows: auto 1fr; }
+.pal .sw { aspect-ratio: 400 / 520; display: flex; align-items: flex-end; justify-content: flex-start; padding: 14px; font-family: var(--font-family-display); font-size: 1.75rem; line-height: 1.2; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 520' preserveAspectRatio='none'%3E%3Cpath d='M0 520V170C0 76 72 25 200 0C328 25 400 76 400 170V520Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 520' preserveAspectRatio='none'%3E%3Cpath d='M0 520V170C0 76 72 25 200 0C328 25 400 76 400 170V520Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.pal .sw.light { position: relative; background: #CDBBA9; }
+.pal .sw.light::before { content: ""; position: absolute; inset: 1.5px; background: #F7F1EC; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 520' preserveAspectRatio='none'%3E%3Cpath d='M0 520V170C0 76 72 25 200 0C328 25 400 76 400 170V520Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 520' preserveAspectRatio='none'%3E%3Cpath d='M0 520V170C0 76 72 25 200 0C328 25 400 76 400 170V520Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.pal .sw.light > span { position: relative; }
+.pal .info { padding-block-start: 12px; font-size: 0.8125rem; line-height: 1.55; font-variant-numeric: tabular-nums; }
+.pal .info b { display: block; font-size: 0.9375rem; }
+.pal .info .r { color: var(--color-fg-muted); }
+.pal-note { margin: var(--space-8) 0 0; font-size: 0.9375rem; color: var(--color-fg-muted); max-width: 100ch; }
+
+/* ---------- 4. Type ---------- */
+.type-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-12); }
+.spec { border-block-start: 1px solid var(--color-border-strong); padding-block-start: var(--space-3); margin-block-end: var(--space-10); }
+.spec .lbl { display: flex; justify-content: space-between; gap: var(--space-4); font-size: 0.8125rem; color: var(--color-fg-muted); margin-block-end: var(--space-5); }
+.s-disp { margin: 0; font-family: var(--font-family-display); font-weight: 400; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1.2; }
+.s-disp span { color: var(--color-accent-default); }
+.s-body { margin: 0; font-size: 1.1875rem; line-height: 1.9; max-width: 34em; }
+.s-cap { margin: 0; font-size: 0.9375rem; color: var(--color-fg-muted); }
+.s-latin { font-family: var(--font-family-latin); font-size: 2.25rem; letter-spacing: 0.32em; text-transform: uppercase; margin: 0; line-height: 1.2; }
+.dont { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-block-start: var(--space-5); }
+.dont div { padding: 14px 16px; background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); }
+.dont .x { font-family: var(--font-family-body); font-size: 1.5rem; color: var(--color-fg-muted); text-decoration: line-through; text-decoration-color: var(--color-danger-fg); }
+.dont .ok { font-family: var(--font-family-body); font-size: 1.5rem; }
+.dont small { display: block; font-size: 0.8125rem; color: var(--color-fg-muted); margin-block-start: 4px; }
+
+/* ---------- 5. Components ---------- */
+.comp { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-6); }
+.panel { background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); padding: var(--space-8); }
+.panel > .lbl { display: block; font-size: 0.8125rem; color: var(--color-fg-muted); margin-block-end: var(--space-6); padding-block-end: 8px; border-block-end: 1px solid var(--color-border-subtle); }
+.p-btn { grid-column: span 4; }
+.p-form { grid-column: span 4; }
+.p-card { grid-column: span 4; }
+.btns { display: grid; gap: var(--space-4); justify-items: start; }
+.btns p { margin: 0; font-size: 0.875rem; color: var(--color-fg-muted); }
+.field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; margin-block-end: var(--space-6); }
+.field label { font-weight: 600; font-size: 1rem; }
+.field .hint { font-size: 0.9375rem; color: var(--color-fg-muted); }
+.field .box { display: flex; align-items: stretch; border: 1px solid var(--color-border-default); background: #fff; min-height: 52px; }
+.field .box:focus-within { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; border-color: var(--color-border-strong); }
+.field .box .pre { display: grid; place-items: center; padding-inline: 12px; border-inline-end: 1px solid var(--color-border-subtle); color: var(--color-fg-muted); font-size: 1rem; direction: ltr; }
+.field input { flex: 1; min-width: 0; width: 100%; border: 0; background: transparent; font: inherit; font-size: 1.0625rem; padding: 0 14px; color: var(--color-fg-default); outline: none; }
+.field input[dir="ltr"] { text-align: right; }
+.field.err .box { border: 2px solid var(--color-danger-border); }
+.field .error { display: flex; gap: 8px; align-items: flex-start; color: var(--color-danger-fg); font-size: 0.9375rem; font-weight: 600; line-height: 1.6; }
+.field .error svg { flex: none; width: 18px; height: 18px; margin-block-start: 5px; }
+.sizes { display: flex; gap: 8px; flex-wrap: wrap; margin-block-start: var(--space-2); }
+.sizes button { min-width: 52px; min-height: 48px; border: 1px solid var(--color-border-default); background: #fff; font: inherit; font-size: 1rem; color: var(--color-fg-default); cursor: pointer; font-variant-numeric: tabular-nums; }
+.sizes button[aria-pressed="true"] { border: 2px solid var(--color-fg-default); font-weight: 600; }
+.sizes button[disabled] { color: #A39283; background: repeating-linear-gradient(-45deg, transparent 0 6px, var(--color-border-subtle) 6px 7px), #fff; cursor: not-allowed; text-decoration: line-through; }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin-block-start: var(--space-5); }
+.p-card .prod .img { padding: 14px 22px 0; }
+
+/* ---------- 6. Applications ---------- */
+.apps { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: center; }
+.phone { width: 360px; max-width: 100%; margin-inline: auto; padding: 11px; border-radius: 48px; background: #1A120E; box-shadow: var(--shadow-md); }
+.phone .scr { border-radius: 38px; overflow: hidden; background: var(--color-bg-canvas); height: 720px; position: relative; }
+.ph-top { display: flex; justify-content: space-between; align-items: center; padding: 16px 16px 8px; }
+.ph-top .ic { width: 44px; height: 44px; display: grid; place-items: center; }
+.ph-top .ic svg { width: 22px; height: 22px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.4; }
+.ph-top .wordmark .ar { font-size: 1.75rem; }
+.ph-top .wordmark .en { font-size: 0.5rem; color: var(--color-gold-text); }
+.ph-img { position: relative; background: var(--color-bg-sunken); height: 330px; display: grid; place-items: end center; padding-block-start: 14px; }
+.ph-img svg { height: 316px; width: auto; }
+.ph-img .dots { position: absolute; inset-block-end: 10px; inset-inline-start: 50%; transform: translateX(50%); display: flex; gap: 6px; }
+.ph-img .dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--color-border-default); }
+.ph-img .dots i:first-child { background: var(--color-fg-default); width: 18px; border-radius: 3px; }
+.ph-body { padding: 16px 18px; }
+.ph-body h4 { margin: 0; font-family: var(--font-family-display); font-weight: 700; font-size: 1.625rem; line-height: 1.35; }
+.ph-body .ln { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 0.9375rem; color: var(--color-fg-muted); }
+.ph-body .ln .price { font-size: 1.125rem; }
+.ph-body .sz { margin: 12px 0 4px; font-size: 0.875rem; font-weight: 600; display: flex; justify-content: space-between; }
+.ph-body .sz a { font-weight: 400; color: var(--color-fg-muted); display: inline-flex; align-items: center; min-height: 32px; }
+.ph-body .sizes button { min-width: 48px; min-height: 44px; font-size: 0.9375rem; }
+.ph-body .btn { width: 100%; margin-block-start: 14px; min-height: 52px; }
+.ph-body .del { margin: 10px 0 0; font-size: 0.8125rem; color: var(--color-fg-muted); display: flex; gap: 8px; align-items: center; }
+.ph-body .del svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--color-accent-default); stroke-width: 1.5; }
+.box3d { position: relative; max-width: 620px; margin-inline: auto; }
+.lid { position: relative; aspect-ratio: 5 / 3.4; background: var(--color-accent-default); display: grid; place-items: center; overflow: hidden; box-shadow: 0 40px 60px -40px rgb(36 26 20 / 0.6), inset 0 0 0 10px var(--color-accent-default), inset 0 0 0 11px rgb(201 168 106 / 0.7); }
+.lid::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgb(255 255 255 / 0.025) 0 2px, transparent 2px 5px); }
+.lid .mono { position: relative; display: grid; justify-items: center; color: var(--color-gold); }
+.lid .mono svg { width: 150px; height: 190px; }
+.lid .mono .ar { font-family: var(--font-family-display); font-size: 3rem; line-height: 1; margin-block-start: -118px; color: var(--color-gold); }
+.lid .mono .en { font-family: var(--font-family-latin); font-size: 0.75rem; letter-spacing: 0.42em; margin-block-start: 90px; text-transform: uppercase; }
+.ribbon { position: absolute; inset-block: 0; inset-inline-start: 22%; width: 26px; background: linear-gradient(90deg, #B89458, #D9BB80 45%, #A78342); box-shadow: 0 0 0 1px rgb(36 26 20 / 0.15); }
+.card-note { position: absolute; inset-block-end: -36px; inset-inline-end: -10px; width: 46%; background: #FFFFFF; padding: 18px 20px; transform: rotate(3deg); box-shadow: var(--shadow-md); border-block-start: 3px solid var(--color-gold); }
+.card-note p { margin: 0; font-family: var(--font-family-display); font-size: 1.375rem; line-height: 1.6; }
+.card-note small { display: block; font-size: 0.8125rem; color: var(--color-fg-muted); margin-block-start: 6px; }
+.cap { text-align: center; font-size: 0.8125rem; color: var(--color-fg-muted); margin: var(--space-4) 0 0; }
+
+/* ---------- 7. Imagery ---------- */
+.img-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-12); align-items: start; }
+.img-grid p { margin: 0 0 var(--space-5); max-width: 58ch; }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; margin: var(--space-8) 0 0; padding: 0; border-block: 1px solid var(--color-border-strong); }
+.icons li { display: grid; justify-items: center; gap: 8px; padding: var(--space-5) 4px; font-size: 0.875rem; }
+.icons svg { width: 36px; height: 36px; fill: none; stroke: var(--color-fg-default); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+.lattice { position: relative; aspect-ratio: 6 / 5; background: var(--color-bg-inverse); overflow: hidden; }
+.lattice svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lattice figcaption { position: absolute; inset-inline: 0; inset-block-end: 0; padding: 14px 18px; font-size: 0.8125rem; color: #E9DFD4; background: linear-gradient(transparent, rgb(36 26 20 / 0.9) 45%); }
+
+/* ---------- 8. Motion ---------- */
+.motion { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-12); align-items: start; }
+.mt-tab { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.mt-tab th, .mt-tab td { text-align: start; padding: 10px 0 10px 10px; border-block-end: 1px solid var(--color-border-subtle); vertical-align: top; }
+.mt-tab th { border-block-end: 1px solid var(--color-border-strong); font-size: 0.8125rem; color: var(--color-fg-muted); font-weight: 600; }
+.mt-tab code { font-family: var(--font-family-mono); font-size: 0.8125rem; direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.stage { position: relative; height: 360px; background: var(--color-bg-sunken); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: end; justify-items: center; padding-inline: 10%; }
+.stage svg { height: 330px; width: auto; }
+.veil { position: absolute; inset: 0; background: linear-gradient(90deg, var(--color-sand), #E9D6C4 40%, var(--color-sand)); transform-origin: left center; }
+.stage.play .veil { animation: unveil var(--duration-drape) var(--ease-silk) 200ms both; }
+.stage.play .reveal { animation: rise var(--duration-drape) var(--ease-silk) 380ms both; }
+@keyframes unveil { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .stage.play .veil { animation: none; transform: scaleX(0); } .stage.play .reveal { animation: none; } }
+.stage-ctl { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-block-start: var(--space-4); font-size: 0.875rem; color: var(--color-fg-muted); }
+.stage-ctl .btn { min-height: 44px; padding: 0 22px; }
+
+/* ---------- 9. Voice ---------- */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.voice figure { margin: 0; padding-block-start: var(--space-5); border-block-start: 1px solid var(--color-border-strong); display: flex; flex-direction: column; gap: var(--space-4); }
+.voice .lbl { font-size: 0.8125rem; color: var(--color-fg-muted); }
+.voice blockquote { margin: 0; font-family: var(--font-family-display); font-size: clamp(2.25rem, 3.6vw, 3.25rem); line-height: 1.35; }
+.voice blockquote.cta { font-family: var(--font-family-body); font-size: 1.5rem; font-weight: 600; line-height: 1.6; color: var(--color-accent-default); }
+.voice blockquote.err { font-family: var(--font-family-body); font-size: 1.25rem; line-height: 1.8; color: var(--color-danger-fg); }
+.voice .gloss { direction: ltr; text-align: left; font-size: 0.875rem; color: var(--color-fg-muted); line-height: 1.5; margin-block-start: auto; }
+.voice .gloss i { display: block; color: var(--color-fg-default); margin-block-end: 4px; }
+
+/* ---------- 10. Rationale (English, set LTR inside the RTL page) ---------- */
+#rationale { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+#rationale .s-head .en { color: var(--color-gold); }
+#rationale .s-head p { color: #D9CDC1; }
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-10); }
+.rat > div { direction: ltr; text-align: left; }
+.rat h3 { margin: 0 0 var(--space-4); font-family: var(--font-family-latin); font-weight: 400; font-size: 1.5rem; line-height: 1.2; color: var(--color-gold); }
+.rat p, .rat li { font-size: 1rem; line-height: 1.65; color: #EDE4DA; }
+.rat p { margin: 0 0 var(--space-4); }
+.rat ul { margin: 0; padding-left: 1.1em; }
+.rat li { margin-bottom: 8px; }
+.gl { margin-top: var(--space-12); width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.gl caption { text-align: start; font-family: var(--font-family-latin); color: var(--color-gold); font-size: 1.25rem; padding-block-end: 10px; }
+.gl th, .gl td { padding: 10px 12px; border-block-end: 1px solid rgb(201 168 106 / 0.3); text-align: start; vertical-align: top; }
+.gl th { font-family: var(--font-family-display); font-weight: 400; font-size: 1.25rem; width: 38%; }
+.gl td { direction: ltr; text-align: left; color: #EDE4DA; }
+.colophon { margin-top: var(--space-12); padding-top: var(--space-4); border-top: 1px solid rgb(201 168 106 / 0.4); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); font-size: 0.8125rem; color: #D9CDC1; direction: ltr; }
+#rationale a { color: var(--color-gold); }
+#rationale :focus-visible { outline-color: var(--color-gold); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .store-head nav { display: none; }
+  .store-head { grid-template-columns: 1fr auto 1fr; }
+  .menu-btn { display: inline-grid; place-items: center; width: 44px; height: 44px; background: none; border: 0; color: inherit; }
+  .menu-btn svg { width: 24px; height: 24px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); padding-block-start: var(--space-8); }
+  .rail .wrap { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .rail h3 { grid-column: 1 / -1; }
+  .pal { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .type-grid, .apps, .img-grid, .motion { grid-template-columns: minmax(0, 1fr); }
+  .p-btn, .p-form, .p-card { grid-column: span 6; }
+  .p-card { grid-column: span 12; max-width: 360px; }
+  .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  #direction .wrap { grid-template-columns: 1fr; }
+  .store-head .tools a:not(.bag) { display: none; }
+  .wordmark .ar { font-size: 2rem; }
+  .hero-copy h2 { font-size: clamp(3.75rem, 19vw, 5rem); }
+  .hero-copy .sub { font-size: 1.1875rem; }
+  .cta .btn { width: 100%; }
+  .hero-art { grid-template-columns: 1fr 0.5fr; gap: var(--space-3); }
+  .pin { inset-inline-start: 30%; min-width: 0; padding: 10px 12px; }
+  .pin b { font-size: 1.125rem; }
+  .rail .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
+  .rail .prod:nth-of-type(3) { display: none; }
+  .s-head { grid-template-columns: minmax(0, 1fr); }
+  .pal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .p-btn, .p-form, .p-card { grid-column: span 12; }
+  .panel { padding: var(--space-5); }
+  .dont { grid-template-columns: minmax(0, 1fr); }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stage { padding-inline: 4%; height: 300px; }
+  .stage svg { height: 270px; }
+  .card-note { position: relative; width: 86%; inset: auto; margin: -30px auto 0; }
+  .stage-ctl { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="13" cy="11" r="6"/><path d="M8.5 15.5L4 20"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></symbol>
+    <!-- RTL: the delivery van faces left, the direction of reading -->
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M22 7H9v10h13zM9 10H5l-3 3.5V17h7"/><circle cx="17.5" cy="17.5" r="1.8"/><circle cx="5.5" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-tape" viewBox="0 0 24 24"><circle cx="9" cy="10" r="6"/><circle cx="9" cy="10" r="1.6"/><path d="M15 10v6h7v-3M18 16v-1.5M21 16v-1.5"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 10h16v11H4zM3 7h18v3H3zM12 7v14M12 7c-1.5-3-5-3.5-5-1.5S10 7 12 7zm0 0c1.5-3 5-3.5 5-1.5S14 7 12 7z"/></symbol>
+    <symbol id="arrow-l" viewBox="0 0 20 12"><path d="M19 6H2M6 1L1 6l5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  </defs>
+</svg>
+
+<header id="direction" lang="en" dir="ltr">
+  <div class="wrap">
+    <span class="tag">Stylescape 11 / 12</span>
+    <h1><span class="ar" lang="ar" dir="rtl">نور أتيليه</span> &middot; <span class="en">Noor Atelier, Quiet Light</span></h1>
+    <a class="back" href="../index.html">All stylescapes</a>
+    <ul class="chips" aria-label="Atlas IDs">
+      <li>style.classic-luxury-serif</li><li>industry.fashion-apparel</li><li>market.middle-east-north-africa-arabic</li><li>tier.luxury</li><li>channel.ecommerce-store</li>
+    </ul>
+    <p class="brief">An Arabic-first modest-fashion house in the UAE selling abayas, kaftans and shaylas online. The page is right-to-left throughout. Classic luxury serif is translated into Arabic as Amiri&rsquo;s Naskh; light falling through an arch is the key visual. Studio notes are in English; customer copy is Arabic.</p>
+  </div>
+</header>
+
+<main>
+<!-- ================= 2. HERO: storefront ================= -->
+<section id="hero" class="on-dark" aria-labelledby="hero-t">
+  <p class="promo">توصيل مجاني داخل الإمارات للطلبات فوق <span class="num">500</span> د.إ</p>
+  <div class="wrap">
+    <div class="store-head">
+      <nav aria-label="الأقسام">
+        <ul>
+          <li><a href="#hero" aria-current="page">وصل حديثًا</a></li>
+          <li><a href="#hero">عبايات</a></li>
+          <li><a href="#hero">قفاطين</a></li>
+          <li><a href="#hero">شيلات</a></li>
+          <li><a href="#hero">مناسبات</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="القائمة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M9 17h12" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></button>
+      <a class="wordmark" href="#hero" aria-label="نور أتيليه"><span class="ar">نور</span><span class="en">Noor Atelier</span></a>
+      <div class="tools">
+        <a class="lang" href="#hero" lang="en" dir="ltr">English</a>
+        <a href="#hero" aria-label="بحث"><svg aria-hidden="true"><use href="#i-search"/></svg></a>
+        <a href="#hero" aria-label="حسابي"><svg aria-hidden="true"><use href="#i-user"/></svg></a>
+        <a class="bag" href="#hero" aria-label="الحقيبة"><svg aria-hidden="true"><use href="#i-bag"/></svg><span class="count num">2</span></a>
+      </div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">مجموعة العيد</p>
+        <h2 id="hero-t">أناقة <span>هادئة</span></h2>
+        <p class="sub">عبايات وقفاطين من الحرير والكريب، مصنوعة يدويًا في دبي.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#components">تسوّقي المجموعة <svg aria-hidden="true"><use href="#arrow-l"/></svg></a>
+          <a class="btn btn-secondary" href="#components">احجزي موعدًا للقياس</a>
+        </div>
+      </div>
+      <div class="hero-art" role="img" aria-label="عباية من الحرير الرملي داخل قوس، يسقط عليها الضوء من الأعلى">
+        <svg class="big" viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="hc"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="hf0" x1="0" x2="1"><stop offset="0" stop-color="#C9A991"/><stop offset=".45" stop-color="#E9D6C4"/><stop offset=".6" stop-color="#F3E5D7"/><stop offset="1" stop-color="#C9A991"/></linearGradient><linearGradient id="hf1" x1="0" x2="1"><stop offset="0" stop-color="#C9A991"/><stop offset=".38" stop-color="#A88670"/><stop offset=".72" stop-color="#E9D6C4"/><stop offset="1" stop-color="#C9A991"/></linearGradient><radialGradient id="hl" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#hc)"><rect width="400" height="640" fill="#D9BFA9"/><path d="M176 70C168 256 -22 422 -30 660L16 660C24 422 172 256 181 70Z" fill="url(#hf0)"/><path d="M181 70C182 256 15 422 16 660L62 660C61 422 187 256 186 70Z" fill="url(#hf1)"/><path d="M186 70C181 256 66 422 62 660L108 660C112 422 186 256 190 70Z" fill="url(#hf0)"/><path d="M190 70C194 256 105 422 108 660L154 660C151 422 199 256 195 70Z" fill="url(#hf1)"/><path d="M195 70C199 256 150 422 154 660L200 660C196 422 204 256 200 70Z" fill="url(#hf0)"/><path d="M200 70C186 256 214 422 200 660L246 660C260 422 191 256 205 70Z" fill="url(#hf1)"/><path d="M205 70C189 256 262 422 246 660L292 660C308 422 194 256 210 70Z" fill="url(#hf0)"/><path d="M210 70C220 256 281 422 292 660L338 660C327 422 225 256 214 70Z" fill="url(#hf1)"/><path d="M214 70C207 256 346 422 338 660L384 660C392 422 211 256 219 70Z" fill="url(#hf0)"/><path d="M219 70C211 256 393 422 384 660L430 660C439 422 215 256 224 70Z" fill="url(#hf1)"/><path d="M224 70C240 256 414 422 430 660L476 660C460 422 245 256 229 70Z" fill="url(#hf0)"/><rect width="400" height="640" fill="url(#hl)"/><rect width="400" height="640" fill="url(#hs)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+        <div class="side">
+          <svg viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="p2c"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p2f0" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".45" stop-color="#2E7A65"/><stop offset=".6" stop-color="#4C937D"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><linearGradient id="p2f1" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".38" stop-color="#0A3F32"/><stop offset=".72" stop-color="#2E7A65"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><radialGradient id="p2l" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p2s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p2c)"><rect width="400" height="640" fill="#0E5A47"/><path d="M176 70C167 256 -21 422 -30 660L28 660C36 422 173 256 182 70Z" fill="url(#p2f0)"/><path d="M182 70C197 256 13 422 28 660L85 660C70 422 203 256 188 70Z" fill="url(#p2f1)"/><path d="M188 70C176 256 97 422 85 660L142 660C154 422 182 256 194 70Z" fill="url(#p2f0)"/><path d="M194 70C201 256 136 422 142 660L200 660C193 422 207 256 200 70Z" fill="url(#p2f1)"/><path d="M200 70C187 256 213 422 200 660L258 660C271 422 193 256 206 70Z" fill="url(#p2f0)"/><path d="M206 70C198 256 266 422 258 660L315 660C323 422 204 256 212 70Z" fill="url(#p2f1)"/><path d="M212 70C228 256 299 422 315 660L372 660C357 422 234 256 218 70Z" fill="url(#p2f0)"/><path d="M218 70C209 256 382 422 372 660L430 660C439 422 215 256 224 70Z" fill="url(#p2f1)"/><path d="M224 70C229 256 425 422 430 660L488 660C483 422 235 256 230 70Z" fill="url(#p2f0)"/><rect width="400" height="640" fill="url(#p2l)"/><rect width="400" height="640" fill="url(#p2s)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+        </div>
+        <div class="pin"><b>عباية الفجر</b><span>كريب ياباني &middot; <span class="price num">1,250</span> د.إ</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="rail" aria-label="منتجات مختارة">
+    <div class="wrap">
+      <h3>وصل حديثًا<small>قطع محدودة، تُخاط حسب الطلب</small></h3>
+      <a class="prod" href="#hero"><span class="img"><span class="badge b-ltd">إصدار محدود</span><span class="wish" aria-hidden="true"><svg><use href="#i-heart"/></svg></span><svg viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="p1c"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p1f0" x1="0" x2="1"><stop offset="0" stop-color="#3A2C24"/><stop offset=".45" stop-color="#5A4537"/><stop offset=".6" stop-color="#6E5646"/><stop offset="1" stop-color="#3A2C24"/></linearGradient><linearGradient id="p1f1" x1="0" x2="1"><stop offset="0" stop-color="#3A2C24"/><stop offset=".38" stop-color="#1B1310"/><stop offset=".72" stop-color="#5A4537"/><stop offset="1" stop-color="#3A2C24"/></linearGradient><radialGradient id="p1l" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p1s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p1c)"><rect width="400" height="640" fill="#2B201A"/><path d="M176 70C180 256 -34 422 -30 660L28 660C24 422 186 256 182 70Z" fill="url(#p1f0)"/><path d="M182 70C190 256 20 422 28 660L85 660C77 422 196 256 188 70Z" fill="url(#p1f1)"/><path d="M188 70C197 256 76 422 85 660L142 660C133 422 203 256 194 70Z" fill="url(#p1f0)"/><path d="M194 70C208 256 128 422 142 660L200 660C186 422 214 256 200 70Z" fill="url(#p1f1)"/><path d="M200 70C208 256 192 422 200 660L258 660C250 422 214 256 206 70Z" fill="url(#p1f0)"/><path d="M206 70C220 256 244 422 258 660L315 660C301 422 226 256 212 70Z" fill="url(#p1f1)"/><path d="M212 70C197 256 330 422 315 660L372 660C388 422 203 256 218 70Z" fill="url(#p1f0)"/><path d="M218 70C217 256 374 422 372 660L430 660C431 422 223 256 224 70Z" fill="url(#p1f1)"/><path d="M224 70C238 256 416 422 430 660L488 660C473 422 244 256 230 70Z" fill="url(#p1f0)"/><rect width="400" height="640" fill="url(#p1l)"/><rect width="400" height="640" fill="url(#p1s)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></span><span class="nm">عباية الليل</span><span class="mt"><span>كريب أسود</span><span><span class="price num">1,480</span> د.إ</span></span></a>
+      <a class="prod" href="#hero"><span class="img"><span class="badge b-new">جديد</span><span class="wish" aria-hidden="true"><svg><use href="#i-heart"/></svg></span><svg viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="p2bc"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p2bf0" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".45" stop-color="#2E7A65"/><stop offset=".6" stop-color="#4C937D"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><linearGradient id="p2bf1" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".38" stop-color="#0A3F32"/><stop offset=".72" stop-color="#2E7A65"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><radialGradient id="p2bl" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p2bs" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p2bc)"><rect width="400" height="640" fill="#0E5A47"/><path d="M176 70C167 256 -21 422 -30 660L28 660C36 422 173 256 182 70Z" fill="url(#p2bf0)"/><path d="M182 70C197 256 13 422 28 660L85 660C70 422 203 256 188 70Z" fill="url(#p2bf1)"/><path d="M188 70C176 256 97 422 85 660L142 660C154 422 182 256 194 70Z" fill="url(#p2bf0)"/><path d="M194 70C201 256 136 422 142 660L200 660C193 422 207 256 200 70Z" fill="url(#p2bf1)"/><path d="M200 70C187 256 213 422 200 660L258 660C271 422 193 256 206 70Z" fill="url(#p2bf0)"/><path d="M206 70C198 256 266 422 258 660L315 660C323 422 204 256 212 70Z" fill="url(#p2bf1)"/><path d="M212 70C228 256 299 422 315 660L372 660C357 422 234 256 218 70Z" fill="url(#p2bf0)"/><path d="M218 70C209 256 382 422 372 660L430 660C439 422 215 256 224 70Z" fill="url(#p2bf1)"/><path d="M224 70C229 256 425 422 430 660L488 660C483 422 235 256 230 70Z" fill="url(#p2bf0)"/><rect width="400" height="640" fill="url(#p2bl)"/><rect width="400" height="640" fill="url(#p2bs)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></span><span class="nm">قفطان الزمرد</span><span class="mt"><span>حرير طبيعي</span><span><span class="price num">2,400</span> د.إ</span></span></a>
+      <a class="prod" href="#hero"><span class="img"><span class="badge b-last">آخر قطعة</span><span class="wish" aria-hidden="true"><svg><use href="#i-heart"/></svg></span><svg viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="p3c"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p3f0" x1="0" x2="1"><stop offset="0" stop-color="#CDB6A0"/><stop offset=".45" stop-color="#E8DACB"/><stop offset=".6" stop-color="#F4EADF"/><stop offset="1" stop-color="#CDB6A0"/></linearGradient><linearGradient id="p3f1" x1="0" x2="1"><stop offset="0" stop-color="#CDB6A0"/><stop offset=".38" stop-color="#B39A82"/><stop offset=".72" stop-color="#E8DACB"/><stop offset="1" stop-color="#CDB6A0"/></linearGradient><radialGradient id="p3l" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p3s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p3c)"><rect width="400" height="640" fill="#DCC7B3"/><path d="M176 70C174 256 -28 422 -30 660L28 660C29 422 180 256 182 70Z" fill="url(#p3f0)"/><path d="M182 70C184 256 26 422 28 660L85 660C83 422 190 256 188 70Z" fill="url(#p3f1)"/><path d="M188 70C202 256 71 422 85 660L142 660C129 422 208 256 194 70Z" fill="url(#p3f0)"/><path d="M194 70C193 256 144 422 142 660L200 660C201 422 199 256 200 70Z" fill="url(#p3f1)"/><path d="M200 70C200 256 200 422 200 660L258 660C257 422 206 256 206 70Z" fill="url(#p3f0)"/><path d="M206 70C209 256 255 422 258 660L315 660C312 422 215 256 212 70Z" fill="url(#p3f1)"/><path d="M212 70C202 256 325 422 315 660L372 660C383 422 208 256 218 70Z" fill="url(#p3f0)"/><path d="M218 70C218 256 372 422 372 660L430 660C430 422 224 256 224 70Z" fill="url(#p3f1)"/><path d="M224 70C228 256 426 422 430 660L488 660C483 422 234 256 230 70Z" fill="url(#p3f0)"/><rect width="400" height="640" fill="url(#p3l)"/><rect width="400" height="640" fill="url(#p3s)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></span><span class="nm">شيلة الرمل</span><span class="mt"><span>شيفون حرير</span><span><span class="price num">380</span> د.إ</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PALETTE ================= -->
+<section id="palette" class="section" aria-labelledby="pal-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="pal-t"><span class="en" lang="en" dir="ltr">03 Palette</span>الألوان</h2><p lang="en" dir="ltr" class="note-en">Evening in a Gulf courtyard: oud wood, pearl, sand rose and one emerald for every action. Gold is thread, not paint: hairlines only, and only on Oud.</p></div>
+    <ul class="pal" lang="en" dir="ltr">
+      <li><span class="sw" style="background:#241A14;color:#F7F1EC" lang="ar">عود</span><span class="info note-en"><b>Oud &middot; fg-default, bg-inverse</b>#241A14 &middot; oklch(0.23 0.020 52)<br><span class="r">Pearl on it 15.21:1</span></span></li>
+      <li><span class="sw light" style="color:#241A14" lang="ar"><span>لؤلؤ</span></span><span class="info note-en"><b>Pearl &middot; bg-canvas</b>#F7F1EC &middot; oklch(0.96 0.009 63)<br><span class="r">Oud on it 15.21:1</span></span></li>
+      <li><span class="sw" style="background:#0E5A47;color:#FCF9F6" lang="ar">زمرد</span><span class="info note-en"><b>Emerald &middot; accent-default</b>#0E5A47 &middot; oklch(0.42 0.077 171)<br><span class="r">Ivory on it 7.78:1 &middot; on Pearl 7.29:1</span></span></li>
+      <li><span class="sw" style="background:#D9BFA9;color:#241A14" lang="ar">رمل</span><span class="info note-en"><b>Sand rose &middot; fabric, CTA on Oud</b>#D9BFA9 &middot; oklch(0.82 0.042 62)<br><span class="r">Oud on it 9.71:1</span></span></li>
+      <li><span class="sw" style="background:#6B5B4E;color:#F7F1EC" lang="ar">بني</span><span class="info note-en"><b>Taupe &middot; fg-muted</b>#6B5B4E &middot; oklch(0.48 0.029 61)<br><span class="r">On Pearl 5.80:1 &middot; on Ivory 6.20:1</span></span></li>
+      <li><span class="sw" style="background:#EFE4DA;color:#241A14" lang="ar">كتان</span><span class="info note-en"><b>Linen &middot; bg-sunken</b>#EFE4DA &middot; oklch(0.92 0.018 65)<br><span class="r">Oud on it 13.61:1</span></span></li>
+      <li><span class="sw" style="background:#241A14;color:#C9A86A" lang="ar">ذهب</span><span class="info note-en"><b>Gold thread &middot; on Oud only</b>#C9A86A &middot; oklch(0.75 0.089 82)<br><span class="r">On Oud 7.54:1 &middot; text-safe on Pearl: #7A5C2E</span></span></li>
+    </ul>
+    <p class="pal-note note-en" lang="en" dir="ltr">Proportion: Pearl and Ivory 55%, Oud 25% (hero and footer), Sand rose 12% (fabric), Emerald 6% (actions, limited-edition tags), Gold thread 2% (hairlines, monogram). Product photography supplies the rest of the color; the interface stays quiet so the fabric is the loudest thing on the page.</p>
+  </div>
+</section>
+
+<!-- ================= 4. TYPE ================= -->
+<section id="type" class="section" aria-labelledby="type-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="type-t"><span class="en" lang="en" dir="ltr">04 Type</span>الخطوط</h2><p lang="en" dir="ltr" class="note-en">Amiri, a Naskh revival of the Bulaq press, carries the high-contrast luxury serif role. IBM Plex Sans Arabic handles interface and prices. Bodoni Moda appears only in the Latin wordmark.</p></div>
+    <div class="type-grid">
+      <div>
+        <div class="spec"><div class="lbl" lang="en" dir="ltr"><span>Display &middot; Amiri 400</span><span dir="ltr">clamp(56px, 8vw, 112px) / 1.2</span></div>
+          <p class="s-disp">صنعت <span>لتدوم</span></p>
+        </div>
+        <div class="spec"><div class="lbl" lang="en" dir="ltr"><span>Body &middot; IBM Plex Sans Arabic 400</span><span dir="ltr">19px / 1.9</span></div>
+          <p class="s-body">عبايات وقفاطين من الحرير والكريب، مصنوعة يدويًا في دبي بكميات محدودة. كل قطعة تُخاط حسب الطلب خلال سبعة أيام.</p>
+        </div>
+        <div class="spec"><div class="lbl" lang="en" dir="ltr"><span>Caption &middot; IBM Plex Sans Arabic 400</span><span dir="ltr">15px / 1.7, Taupe</span></div>
+          <p class="s-cap">شحن مجاني داخل الإمارات</p>
+        </div>
+      </div>
+      <div>
+        <div class="spec"><div class="lbl" lang="en" dir="ltr"><span>Latin wordmark &middot; Bodoni Moda 400</span><span dir="ltr">+0.32em caps</span></div>
+          <p class="s-latin" lang="en" dir="ltr">Noor Atelier</p>
+        </div>
+        <div class="spec"><div class="lbl" lang="en" dir="ltr"><span>Arabic setting rules</span><span></span></div>
+          <div class="dont">
+            <div><span class="x">أ&#8202;ن&#8202;ا&#8202;ق&#8202;ة</span><small lang="en" dir="ltr" class="note-en">Never letter-space Arabic: it breaks the joins.</small></div>
+            <div><span class="ok">أناقة</span><small lang="en" dir="ltr" class="note-en">Use size, weight and color; no italics, no all caps.</small></div>
+          </div>
+          <p class="s-cap note-en" lang="en" dir="ltr" style="margin-top:14px">Line-height 1.7&ndash;1.9 for Naskh body (Latin would use 1.5). Prices use Western digits (0&ndash;9), common in UAE retail; confirm with the client before switching to Eastern Arabic digits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. COMPONENTS ================= -->
+<section id="components" class="section" aria-labelledby="comp-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="comp-t"><span class="en" lang="en" dir="ltr">05 Components</span>المكوّنات</h2><p lang="en" dir="ltr" class="note-en">Hairline borders, 2px corners and generous padding. Everything mirrors: the label aligns right, arrows point left, the price sits at the end of the line.</p></div>
+    <div class="comp">
+      <div class="panel p-btn">
+        <span class="lbl">الأزرار</span>
+        <div class="btns">
+          <button class="btn btn-primary" type="button">أضيفي إلى الحقيبة</button>
+          <button class="btn btn-secondary" type="button">احجزي موعدًا للقياس</button>
+          <button class="btn btn-primary" type="button" disabled>غير متوفر</button>
+          <button class="btn btn-primary is-focus" type="button">تسوّقي الآن <svg aria-hidden="true"><use href="#arrow-l"/></svg></button>
+          <p lang="en" dir="ltr" class="note-en">Focus: 2px Emerald outline, 3px offset (Gold thread on Oud). Arrows point left in RTL.</p>
+        </div>
+      </div>
+      <form class="panel p-form" onsubmit="return false" novalidate>
+        <span class="lbl">حقول الإدخال</span>
+        <div class="field err">
+          <label for="na-email">البريد الإلكتروني</label>
+          <span class="hint" id="na-email-hint">سنرسل لكِ تأكيد الطلب</span>
+          <div class="box"><input id="na-email" type="email" dir="ltr" value="mariam@" aria-invalid="true" aria-describedby="na-email-hint na-email-err"></div>
+          <span class="error" id="na-email-err"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="currentColor"/><path d="M9 4.5v5.5M9 12.5v1" stroke="#fff" stroke-width="1.8"/></svg>يرجى إدخال بريد إلكتروني صحيح</span>
+        </div>
+        <div class="field" style="margin-block-end:0">
+          <label for="na-tel">رقم الجوال</label>
+          <div class="box"><span class="pre num">+971</span><input id="na-tel" type="tel" dir="ltr" value="50 123 4567" autocomplete="tel-national"></div>
+        </div>
+        <div class="field" style="margin:var(--space-6) 0 0">
+          <span style="font-weight:600">المقاس</span>
+          <div class="sizes" role="group" aria-label="المقاس">
+            <button type="button" aria-pressed="false">52</button><button type="button" aria-pressed="true">54</button><button type="button" aria-pressed="false">56</button><button type="button" disabled>58</button>
+          </div>
+        </div>
+      </form>
+      <div class="panel p-card">
+        <span class="lbl">بطاقة المنتج والوسوم</span>
+        <a class="prod" href="#components"><span class="img"><span class="badge b-ltd">إصدار محدود</span><span class="wish" aria-hidden="true"><svg><use href="#i-heart"/></svg></span><svg viewBox="0 0 400 640" aria-hidden="true"><defs><clipPath id="p2cc"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p2cf0" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".45" stop-color="#2E7A65"/><stop offset=".6" stop-color="#4C937D"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><linearGradient id="p2cf1" x1="0" x2="1"><stop offset="0" stop-color="#0E5A47"/><stop offset=".38" stop-color="#0A3F32"/><stop offset=".72" stop-color="#2E7A65"/><stop offset="1" stop-color="#0E5A47"/></linearGradient><radialGradient id="p2cl" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p2cs" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p2cc)"><rect width="400" height="640" fill="#0E5A47"/><path d="M176 70C167 256 -21 422 -30 660L28 660C36 422 173 256 182 70Z" fill="url(#p2cf0)"/><path d="M182 70C197 256 13 422 28 660L85 660C70 422 203 256 188 70Z" fill="url(#p2cf1)"/><path d="M188 70C176 256 97 422 85 660L142 660C154 422 182 256 194 70Z" fill="url(#p2cf0)"/><path d="M194 70C201 256 136 422 142 660L200 660C193 422 207 256 200 70Z" fill="url(#p2cf1)"/><path d="M200 70C187 256 213 422 200 660L258 660C271 422 193 256 206 70Z" fill="url(#p2cf0)"/><path d="M206 70C198 256 266 422 258 660L315 660C323 422 204 256 212 70Z" fill="url(#p2cf1)"/><path d="M212 70C228 256 299 422 315 660L372 660C357 422 234 256 218 70Z" fill="url(#p2cf0)"/><path d="M218 70C209 256 382 422 372 660L430 660C439 422 215 256 224 70Z" fill="url(#p2cf1)"/><path d="M224 70C229 256 425 422 430 660L488 660C483 422 235 256 230 70Z" fill="url(#p2cf0)"/><rect width="400" height="640" fill="url(#p2cl)"/><rect width="400" height="640" fill="url(#p2cs)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></span><span class="nm">قفطان الزمرد</span><span class="mt"><span>حرير طبيعي</span><span><span class="price num">2,400</span> د.إ</span></span></a>
+        <div class="badges"><span class="badge b-new" style="border:1px solid var(--color-border-subtle)">جديد</span><span class="badge b-ltd">إصدار محدود</span><span class="badge b-last">آخر قطعة</span><span class="badge b-out">نفدت الكمية</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. APPLICATIONS ================= -->
+<section id="applications" class="section" aria-labelledby="app-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="app-t"><span class="en" lang="en" dir="ltr">06 Applications</span>التطبيقات</h2><p lang="en" dir="ltr" class="note-en">The product page on a phone, where most UAE fashion orders are placed, and the gift box that arrives two days later.</p></div>
+    <div class="apps">
+      <div>
+        <div class="phone" role="img" aria-label="صفحة منتج على الجوال: عباية الفجر، كريب ياباني بتطريز يدوي، السعر 1,250 درهم، اختيار المقاس، زر أضيفي إلى الحقيبة">
+          <div class="scr">
+            <div class="ph-top"><span class="ic"><svg><use href="#i-heart"/></svg></span><span class="wordmark"><span class="ar">نور</span><span class="en">Noor Atelier</span></span><span class="ic"><svg><use href="#i-bag"/></svg></span></div>
+            <div class="ph-img"><svg viewBox="0 0 400 640"><defs><clipPath id="h2c"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="h2f0" x1="0" x2="1"><stop offset="0" stop-color="#C9A991"/><stop offset=".45" stop-color="#E9D6C4"/><stop offset=".6" stop-color="#F3E5D7"/><stop offset="1" stop-color="#C9A991"/></linearGradient><linearGradient id="h2f1" x1="0" x2="1"><stop offset="0" stop-color="#C9A991"/><stop offset=".38" stop-color="#A88670"/><stop offset=".72" stop-color="#E9D6C4"/><stop offset="1" stop-color="#C9A991"/></linearGradient><radialGradient id="h2l" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="h2s" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#h2c)"><rect width="400" height="640" fill="#D9BFA9"/><path d="M176 70C168 256 -22 422 -30 660L16 660C24 422 172 256 181 70Z" fill="url(#h2f0)"/><path d="M181 70C182 256 15 422 16 660L62 660C61 422 187 256 186 70Z" fill="url(#h2f1)"/><path d="M186 70C181 256 66 422 62 660L108 660C112 422 186 256 190 70Z" fill="url(#h2f0)"/><path d="M190 70C194 256 105 422 108 660L154 660C151 422 199 256 195 70Z" fill="url(#h2f1)"/><path d="M195 70C199 256 150 422 154 660L200 660C196 422 204 256 200 70Z" fill="url(#h2f0)"/><path d="M200 70C186 256 214 422 200 660L246 660C260 422 191 256 205 70Z" fill="url(#h2f1)"/><path d="M205 70C189 256 262 422 246 660L292 660C308 422 194 256 210 70Z" fill="url(#h2f0)"/><path d="M210 70C220 256 281 422 292 660L338 660C327 422 225 256 214 70Z" fill="url(#h2f1)"/><path d="M214 70C207 256 346 422 338 660L384 660C392 422 211 256 219 70Z" fill="url(#h2f0)"/><path d="M219 70C211 256 393 422 384 660L430 660C439 422 215 256 224 70Z" fill="url(#h2f1)"/><path d="M224 70C240 256 414 422 430 660L476 660C460 422 245 256 229 70Z" fill="url(#h2f0)"/><rect width="400" height="640" fill="url(#h2l)"/><rect width="400" height="640" fill="url(#h2s)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg><span class="dots"><i></i><i></i><i></i></span></div>
+            <div class="ph-body">
+              <h4>عباية الفجر</h4>
+              <div class="ln"><span>كريب ياباني، تطريز يدوي بخيط ذهبي</span><span><span class="price num">1,250</span> د.إ</span></div>
+              <p class="sz"><span>المقاس (الطول بالبوصة)</span><a href="#applications">دليل المقاسات</a></p>
+              <div class="sizes"><button type="button" tabindex="-1">52</button><button type="button" aria-pressed="true" tabindex="-1">54</button><button type="button" tabindex="-1">56</button><button type="button" disabled tabindex="-1">58</button></div>
+              <span class="btn btn-primary">أضيفي إلى الحقيبة</span>
+              <p class="del"><svg><use href="#i-truck"/></svg>توصيل مجاني خلال يومين داخل الإمارات</p>
+              <p class="del"><svg><use href="#i-gift"/></svg>الدفع عند الاستلام متاح</p>
+            </div>
+          </div>
+        </div>
+        <p class="cap" lang="en" dir="ltr">Product page, 390px. Size names are abaya lengths in inches.</p>
+      </div>
+      <div>
+        <div class="box3d" role="img" aria-label="علبة هدية خضراء بشريط ذهبي وشعار نور، مع بطاقة مكتوب عليها صُنعت لكِ">
+          <div class="lid">
+            <span class="ribbon"></span>
+            <div class="mono">
+              <svg viewBox="0 0 400 640" aria-hidden="true"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="currentColor" stroke-width="2" transform="translate(30 40) scale(0.85 0.875)"/></svg>
+              <span class="ar">نور</span>
+              <span class="en">Noor Atelier &middot; Dubai</span>
+            </div>
+          </div>
+          <div class="card-note"><p>صُنعت لكِ.</p><small>مريم، شكرًا لاختيارك نور.</small></div>
+        </div>
+        <p class="cap" lang="en" dir="ltr" style="margin-top:56px">Gift box lid: Emerald soft-touch board, gold-foil arch monogram, a hand-signed card in Amiri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. IMAGERY ================= -->
+<section id="imagery" class="section" aria-labelledby="img-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="img-t"><span class="en" lang="en" dir="ltr">07 Imagery &amp; icons</span>الصور والأيقونات</h2><p lang="en" dir="ltr" class="note-en">Fabric and light first. Faces are optional and always the model&rsquo;s choice.</p></div>
+    <div class="img-grid">
+      <div lang="en" dir="ltr" class="note-en">
+        <p>Photograph garments in warm late-afternoon light through arches and screens, on models or on forms, with the fabric moving. Crops favor drape, hand embroidery and texture; when a model appears, styling and coverage follow the collection, and faces are shown only with consent and by preference. No desert-and-camel clich&eacute;s, no gold-on-black arabesque wallpaper.</p>
+        <p>Icons are 1.25px hairlines with round ends on a 24px grid. Directional icons (arrows, the delivery van, progress) are mirrored for RTL; symmetrical ones (heart, bag) are not.</p>
+      </div>
+      <figure class="lattice" style="margin:0">
+        <svg viewBox="0 0 600 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="lat" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30 0L60 30 30 60 0 30Z M30 12L48 30 30 48 12 30Z" fill="none" stroke="#C9A86A" stroke-width="1"/><circle cx="30" cy="30" r="3" fill="#C9A86A"/><path d="M0 0L12 12M60 0L48 12M0 60L12 48M60 60L48 48" stroke="#C9A86A" stroke-width="1"/></pattern>
+            <radialGradient id="sun" cx=".72" cy=".2" r=".8"><stop offset="0" stop-color="#F3E5D7" stop-opacity=".95"/><stop offset=".5" stop-color="#D9BFA9" stop-opacity=".25"/><stop offset="1" stop-color="#241A14" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="600" height="500" fill="url(#lat)" opacity="0.55"/>
+          <rect width="600" height="500" fill="url(#sun)"/>
+        </svg>
+        <figcaption lang="en" dir="ltr">Texture: a mashrabiya-inspired lattice on a 60px module in Gold thread, with late light falling across it. Use behind editorial blocks at 30&ndash;55% opacity.</figcaption>
+      </figure>
+    </div>
+    <ul class="icons">
+      <li><svg aria-hidden="true"><use href="#i-bag"/></svg>الحقيبة</li>
+      <li><svg aria-hidden="true"><use href="#i-heart"/></svg>المفضلة</li>
+      <li><svg aria-hidden="true"><use href="#i-search"/></svg>بحث</li>
+      <li><svg aria-hidden="true"><use href="#i-truck"/></svg>التوصيل</li>
+      <li><svg aria-hidden="true"><use href="#i-tape"/></svg>المقاسات</li>
+      <li><svg aria-hidden="true"><use href="#i-gift"/></svg>تغليف هدية</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 8. MOTION ================= -->
+<section id="motion" class="section" aria-labelledby="mo-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="mo-t"><span class="en" lang="en" dir="ltr">08 Motion</span>الحركة</h2><p lang="en" dir="ltr" class="note-en">Silk, not spring: slow ease-out reveals that travel in the reading direction, right to left.</p></div>
+    <div class="motion">
+      <table class="mt-tab" lang="en" dir="ltr">
+        <thead><tr><th>Use</th><th>Duration</th><th>Easing</th></tr></thead>
+        <tbody>
+          <tr><td>Image unveil</td><td><code>--duration-drape</code> 900ms</td><td><code>cubic-bezier(0.22, 0.61, 0.36, 1)</code></td></tr>
+          <tr><td>Add to bag, toggles</td><td><code>--duration-slow</code> 320ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Hover, underline</td><td><code>--duration-moderate</code> 200ms</td><td><code>--ease-standard</code></td></tr>
+          <tr><td>Direction</td><td colspan="2">Carousels and reveals move right to left; swipe back is left to right</td></tr>
+          <tr><td>Reduced motion</td><td colspan="2">Images appear at once, no veil</td></tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="stage play" id="na-stage" aria-hidden="true">
+          <svg class="reveal" viewBox="0 0 400 640"><defs><clipPath id="p1bc"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p1bf0" x1="0" x2="1"><stop offset="0" stop-color="#3A2C24"/><stop offset=".45" stop-color="#5A4537"/><stop offset=".6" stop-color="#6E5646"/><stop offset="1" stop-color="#3A2C24"/></linearGradient><linearGradient id="p1bf1" x1="0" x2="1"><stop offset="0" stop-color="#3A2C24"/><stop offset=".38" stop-color="#1B1310"/><stop offset=".72" stop-color="#5A4537"/><stop offset="1" stop-color="#3A2C24"/></linearGradient><radialGradient id="p1bl" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p1bs" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p1bc)"><rect width="400" height="640" fill="#2B201A"/><path d="M176 70C180 256 -34 422 -30 660L28 660C24 422 186 256 182 70Z" fill="url(#p1bf0)"/><path d="M182 70C190 256 20 422 28 660L85 660C77 422 196 256 188 70Z" fill="url(#p1bf1)"/><path d="M188 70C197 256 76 422 85 660L142 660C133 422 203 256 194 70Z" fill="url(#p1bf0)"/><path d="M194 70C208 256 128 422 142 660L200 660C186 422 214 256 200 70Z" fill="url(#p1bf1)"/><path d="M200 70C208 256 192 422 200 660L258 660C250 422 214 256 206 70Z" fill="url(#p1bf0)"/><path d="M206 70C220 256 244 422 258 660L315 660C301 422 226 256 212 70Z" fill="url(#p1bf1)"/><path d="M212 70C197 256 330 422 315 660L372 660C388 422 203 256 218 70Z" fill="url(#p1bf0)"/><path d="M218 70C217 256 374 422 372 660L430 660C431 422 223 256 224 70Z" fill="url(#p1bf1)"/><path d="M224 70C238 256 416 422 430 660L488 660C473 422 244 256 230 70Z" fill="url(#p1bf0)"/><rect width="400" height="640" fill="url(#p1bl)"/><rect width="400" height="640" fill="url(#p1bs)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+          <svg class="reveal" viewBox="0 0 400 640"><defs><clipPath id="p3bc"><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z"/></clipPath><linearGradient id="p3bf0" x1="0" x2="1"><stop offset="0" stop-color="#CDB6A0"/><stop offset=".45" stop-color="#E8DACB"/><stop offset=".6" stop-color="#F4EADF"/><stop offset="1" stop-color="#CDB6A0"/></linearGradient><linearGradient id="p3bf1" x1="0" x2="1"><stop offset="0" stop-color="#CDB6A0"/><stop offset=".38" stop-color="#B39A82"/><stop offset=".72" stop-color="#E8DACB"/><stop offset="1" stop-color="#CDB6A0"/></linearGradient><radialGradient id="p3bl" cx=".5" cy="0" r=".95"><stop offset="0" stop-color="#FFF6EA" stop-opacity=".8"/><stop offset=".55" stop-color="#FFF6EA" stop-opacity="0"/></radialGradient><linearGradient id="p3bs" x1="0" y1="0" x2="0" y2="1"><stop offset=".5" stop-color="#241A14" stop-opacity="0"/><stop offset="1" stop-color="#241A14" stop-opacity=".4"/></linearGradient></defs><g clip-path="url(#p3bc)"><rect width="400" height="640" fill="#DCC7B3"/><path d="M176 70C174 256 -28 422 -30 660L28 660C29 422 180 256 182 70Z" fill="url(#p3bf0)"/><path d="M182 70C184 256 26 422 28 660L85 660C83 422 190 256 188 70Z" fill="url(#p3bf1)"/><path d="M188 70C202 256 71 422 85 660L142 660C129 422 208 256 194 70Z" fill="url(#p3bf0)"/><path d="M194 70C193 256 144 422 142 660L200 660C201 422 199 256 200 70Z" fill="url(#p3bf1)"/><path d="M200 70C200 256 200 422 200 660L258 660C257 422 206 256 206 70Z" fill="url(#p3bf0)"/><path d="M206 70C209 256 255 422 258 660L315 660C312 422 215 256 212 70Z" fill="url(#p3bf1)"/><path d="M212 70C202 256 325 422 315 660L372 660C383 422 208 256 218 70Z" fill="url(#p3bf0)"/><path d="M218 70C218 256 372 422 372 660L430 660C430 422 224 256 224 70Z" fill="url(#p3bf1)"/><path d="M224 70C228 256 426 422 430 660L488 660C483 422 234 256 230 70Z" fill="url(#p3bf0)"/><rect width="400" height="640" fill="url(#p3bl)"/><rect width="400" height="640" fill="url(#p3bs)"/></g><ellipse cx="200.0" cy="74" rx="30" ry="9" fill="none" stroke="#C9A86A" stroke-width="2"/><circle cx="200.0" cy="74" r="4" fill="#C9A86A"/><path d="M0 640V211C0 94.95 128.0 25.32 200.0 0C272.0 25.32 400 94.95 400 211V640Z" fill="none" stroke="#C9A86A" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+          <span class="veil"></span>
+        </div>
+        <div class="stage-ctl"><span lang="en" dir="ltr">The sand veil withdraws toward the left over 900ms; garments rise 14px.</span><button class="btn btn-secondary" type="button" id="na-replay">أعيدي العرض</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. VOICE ================= -->
+<section id="voice" class="section" aria-labelledby="vo-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="vo-t"><span class="en" lang="en" dir="ltr">09 Voice</span>النبرة</h2><p lang="en" dir="ltr" class="note-en">A trusted atelier speaking to a client by name: warm, formal Modern Standard Arabic, feminine address, never slang, never shouting discounts.</p></div>
+    <div class="voice">
+      <figure><span class="lbl">عنوان</span><blockquote>أناقة هادئة</blockquote><p class="gloss" lang="en" dir="ltr"><i>&ldquo;Quiet elegance.&rdquo;</i>Two words; the luxury is in what is left unsaid.</p></figure>
+      <figure><span class="lbl">دعوة إلى الإجراء</span><blockquote class="cta">احجزي موعدًا للقياس</blockquote><p class="gloss" lang="en" dir="ltr"><i>&ldquo;Book a fitting appointment.&rdquo;</i>Feminine imperative. Offers service, the real luxury, rather than urgency.</p></figure>
+      <figure><span class="lbl">رسالة خطأ</span><blockquote class="err">عذرًا، هذا المقاس غير متوفر حاليًا. اختاري مقاسًا آخر أو اطلبي تنبيهًا عند توفره.</blockquote><p class="gloss" lang="en" dir="ltr"><i>&ldquo;Sorry, this size is currently unavailable. Choose another size or ask for an alert when it is back.&rdquo;</i>Apology, fact, two ways forward.</p></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. RATIONALE ================= -->
+<section id="rationale" class="section" aria-labelledby="ra-t">
+  <div class="wrap">
+    <div class="s-head"><h2 class="ar" id="ra-t"><span class="en" lang="en" dir="ltr">10 Rationale</span>مبررات التصميم</h2><p lang="en" dir="ltr" class="note-en">Why light and arches, and not gold arabesque.</p></div>
+    <div class="rat" lang="en" dir="ltr">
+      <div>
+        <h3>Why it fits</h3>
+        <p>Gulf luxury customers shop in Arabic on their phones and expect the experience to be native, not translated. Building right-to-left first (logical CSS properties, mirrored layout and icons, Naskh typography with real Arabic line-height) is itself the luxury signal.</p>
+        <p>&ldquo;Noor&rdquo; means light. The pointed arch and the lattice borrow from Gulf architecture with restraint; the fabric, lit from above, carries the emotion.</p>
+      </div>
+      <div>
+        <h3>What it risks</h3>
+        <ul>
+          <li>Amiri is classical; younger clients may read it as formal. Test against a modern Naskh or Kufi display (Reem Kufi, Noto Kufi Arabic) with customers.</li>
+          <li>Numerals, gendered address and modesty in imagery are client and audience decisions; validate with native-speaking copywriters and the client.</li>
+          <li>Fonts are subset to this page&rsquo;s text. Production needs full Arabic coverage (and Persian/Urdu if those markets matter).</li>
+          <li>Confirm UAE e-commerce, VAT display and consumer-protection rules with counsel.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>The expected alternative</h3>
+        <p>Black and gold, an arabesque border on everything, a calligraphic logo in Thuluth and a falcon or a dune in the hero. It signals &ldquo;Gulf luxury&rdquo; generically and fights the garments for attention. The adjacent option is a Western minimal luxury site translated into Arabic; it is clean but feels imported.</p>
+      </div>
+    </div>
+    <table class="gl">
+      <caption lang="en" dir="ltr">Glossary of Arabic copy on this page</caption>
+      <tbody>
+        <tr><th>أناقة هادئة</th><td lang="en" dir="ltr">Quiet elegance (headline)</td></tr>
+        <tr><th>عبايات وقفاطين من الحرير والكريب، مصنوعة يدويًا في دبي</th><td lang="en" dir="ltr">Abayas and kaftans of silk and crepe, handmade in Dubai</td></tr>
+        <tr><th>تسوّقي المجموعة &middot; أضيفي إلى الحقيبة</th><td lang="en" dir="ltr">Shop the collection &middot; Add to bag (feminine address)</td></tr>
+        <tr><th>عباية الفجر &middot; قفطان الزمرد &middot; شيلة الرمل</th><td lang="en" dir="ltr">Dawn abaya &middot; Emerald kaftan &middot; Sand shayla (headscarf)</td></tr>
+        <tr><th>إصدار محدود &middot; آخر قطعة &middot; نفدت الكمية</th><td lang="en" dir="ltr">Limited edition &middot; Last piece &middot; Sold out</td></tr>
+        <tr><th>يرجى إدخال بريد إلكتروني صحيح</th><td lang="en" dir="ltr">Please enter a valid email address</td></tr>
+        <tr><th>صُنعت لكِ</th><td lang="en" dir="ltr">Made for you (gift card)</td></tr>
+      </tbody>
+    </table>
+    <div class="colophon" lang="en" dir="ltr"><span>Fictional brand for the Visual Design Kit stylescape set. Products and people are invented. Arabic copy should be reviewed by a native copywriter before reuse.</span><span>Type: Amiri, IBM Plex Sans Arabic, Bodoni Moda, SIL Open Font License (<a href="../fonts/amiri/OFL.txt">OFL</a>, <a href="../fonts/ibm-plex-sans-arabic/OFL.txt">OFL</a>, <a href="../fonts/bodoni-moda/OFL.txt">OFL</a>).</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var st = document.getElementById('na-stage');
+  document.getElementById('na-replay').addEventListener('click', function () { st.classList.remove('play'); void st.offsetWidth; st.classList.add('play'); });
+  document.querySelectorAll('.p-form .sizes button:not([disabled])').forEach(function (b, _, all) {
+    b.addEventListener('click', function () { all.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); });
+  });
+})();
+</script>
+</body>
+</html>

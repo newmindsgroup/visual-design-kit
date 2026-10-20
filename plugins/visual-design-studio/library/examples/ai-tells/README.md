@@ -54,11 +54,11 @@ node plugins/visual-design-studio/skills/design-critique/scripts/render_review.m
   --full-page --exclude '[data-variant="generic"]'
 ```
 
-Result on 2026-10-20 (Chromium 141): no horizontal overflow, no clipped text, 0 contrast failures among 418-424 measured text elements, 0 axe violations, no failed or external requests, no fallback glyphs in Better panels (the only fallback font is Noto Color Emoji inside Generic panels). Remaining review items, checked by eye:
+Result on 2026-10-20 (Chromium 141, `--strict` exit 0): no horizontal overflow, no clipped text, 0 contrast failures among 418-424 measured text elements (lowest 4.67:1, the 64px+ "Brace" masthead), 0 axe violations, no failed or external requests, no console errors, and no fallback glyphs in Better panels (the only fallback font is Noto Color Emoji inside Generic panels). Remaining review items, checked by eye:
 
-- Two single-word last lines are intentional: "River / loop" (a forced poster break) and "Le Carré / Nocturne" (a three-word product name).
-- Seven text elements sit over SVG or glass and are reported as unmeasured. Computed by hand: lodge nav white on the 72% tint over the sky is about 8.6:1; lodge headline #14232A on the lightest sky (#C6D5DC) is about 11:1 and stays above the mountains at every width; chart labels #10261D and #3D5A4C on the yellow band (#F0D884 after blending) are about 10.7:1 and 5.3:1.
-- axe lists color-contrast "needs review" for the same SVG-backed nodes.
+- Single-word last lines left on purpose: "River / loop" (a forced poster break) and, at 768 px and wider, "Le Carré / Nocturne" (a three-word product name set on two lines).
+- Six or seven text elements sit over SVG or glass and are reported as unmeasured. Computed by hand: lodge nav white on the 72% tint over the sky is about 8.6:1; lodge headline #14232A on the lightest sky (#C6D5DC) is about 11:1 and stays above the mountains at every width; chart labels #10261D and #3D5A4C on the yellow band (#F0D884 after blending) are about 10.7:1 and 5.3:1; the clay-course price line sits beside, not over, the mug drawing.
+- axe lists 12-13 color-contrast "needs review" nodes: the same SVG-backed text plus the floor-plan labels and the inverted "10K" chip, all checked by eye.
 
 Every screenshot was inspected at 390 and 1440 px, and the stacked layout at 768 px, before acceptance.
 

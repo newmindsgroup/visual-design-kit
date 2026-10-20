@@ -1,7 +1,7 @@
 ---
 name: color
 description: >-
-  Build color systems for brands, products and campaigns: palette roles and proportions, 12-step OKLCH ramps, semantic
+  Build color systems for brands, products and campaigns: palette roles and proportions, 11-13 step OKLCH ramps, semantic
   tokens, WCAG 2.2 contrast with APCA as an advisory check, dark and high-contrast modes, cultural meaning, and
   distinctive brand colors with Pantone, CMYK and RGB specs. Use when choosing or extending a palette, generating ramps
   or color tokens, checking contrast, designing dark mode, picking status or brand colors, or replacing a generic
@@ -20,17 +20,17 @@ Excellent color work is mostly neutrals and restraint: a tuned neutral ramp does
 
 | Decision | Default | Change when |
 | --- | --- | --- |
-| Palette structure | 1 neutral ramp + 1 accent ramp (12 steps each) + 4 status hues | Brand needs a secondary accent (max 2 more) or data visualization needs a categorical set |
+| Palette structure | 1 neutral ramp (13 steps) + 1 accent ramp (11 steps) + 4 status ramps | Brand needs a secondary accent (max 2 more) or data visualization needs a categorical set |
 | Proportion | 60-30-10 as a starting point: 60% neutral surfaces, 30% secondary surfaces and text, 10% accent | Product UI: accent under 10% of the surface; bold campaigns and neo-brutalist work flood with color |
 | Authoring space | OKLCH; ship sRGB hex with optional Display P3 values behind `@media (color-gamut: p3)` | Print: author in the target CMYK profile or spot colors |
-| Ramp lightness | Steps 1-12 from L 0.985 to L 0.27; chroma peaks around steps 7-9 | Yellows peak lighter (L 0.85-0.90); very dark brands extend below 0.27 |
-| Neutrals | Tinted toward the accent hue, chroma 0.005-0.015 | Pure gray for photography-led and Swiss work; warm neutrals for food, hospitality, luxury |
+| Ramps | 11 steps (50-950), lightness linear from L 0.975 to 0.165, chroma peaking at 500; neutrals add 850 and 975 | Yellows and oranges need a hue shift so dark steps do not turn olive |
+| Neutrals | Tinted toward the accent hue or a warm bias, chroma 0.01-0.02 | Pure gray for photography-led and Swiss work; warm neutrals for food, hospitality, luxury |
 | Text contrast | 4.5:1 body, 3:1 large text (24px, or 18.66px bold), 7:1 in high-contrast mode | Never lower; logos and decorative text are the only exemptions |
 | Non-text contrast | 3:1 for input borders, icons, focus rings, chart marks against adjacent colors | Decorative dividers may go lower (`--color-border-subtle`) |
 | APCA (advisory) | Body Lc 75+, preferred Lc 90; Lc 60 for large or UI text; Lc 45 for headlines | Use it to tune dark mode and thin type; WCAG 2.2 stays the pass/fail baseline |
 | Focus ring | 2px+ solid `--color-focus-ring`, 3:1 against the background and the component | High-contrast mode: thicker ring and system colors in forced-colors |
-| Status hues | Success about 150, warning about 70, danger about 27, info about 250 (OKLCH hue); fg/bg/border triplets | Brand accent sits on a status hue: shift the status hue 15-25 degrees or change lightness |
-| Dark mode | Canvas L 0.18-0.20, +0.03-0.04 L per elevation level, text L 0.93-0.95, accents raised to L 0.72-0.80 with chroma cut 10-30% | OLED-first media apps may use true black canvas |
+| Status hues | Success about 150, warning about 75, danger about 22-27, info about 255 (OKLCH hue); fg/bg/border from one ramp | Brand accent sits on a status hue: shift the status hue 15-25 degrees or change lightness |
+| Dark mode | Canvas L 0.15-0.20, about +0.045 L per elevation level, text L 0.92-0.95, accent moved to a light step (300) with dark text on it | OLED-first media apps may use a true black canvas |
 | Brand hue | Off the category default unless strategy says belong; avoid indigo/violet (hue 270-300) as an unexamined default | The brand already owns the hue; the brief rewards category fit |
 | Gradients | 2-3 stops, neighboring hues, `in oklch` interpolation, never behind body text without a solid backing | Gradient is the brand's core asset (`style.vibrant-gradient-saas`) |
 | Print specs | Pantone C and U, CMYK per named profile, RGB, hex | Digital-only brands may skip Pantone |
@@ -40,7 +40,7 @@ Excellent color work is mostly neutrals and restraint: a tuned neutral ramp does
 1. **Read locks and context.** Existing brand colors are fixed primitives; extend around them. Run `python3 ../../library/scripts/atlas.py query "<brief>"` for the style, industry and market entries and read their palette, category conventions and color symbolism.
 2. **Define roles before hues** with [palette architecture](references/palette-architecture.md): canvas, surfaces, text levels, borders, accent states, status, focus, overlay, data.
 3. **Choose the brand hue** with [brand color](references/brand-color.md): map competitors on a hue wheel, pick an ownable position, test it in a real composition.
-4. **Generate ramps** with [OKLCH ramps](references/oklch-ramps.md): `python3 ../../library/scripts/color_tools.py ramp --hue <H> --chroma <C> --name <name>`. Pin the brand color to its nearest step.
+4. **Generate ramps** with [OKLCH ramps](references/oklch-ramps.md): `python3 ../../library/scripts/color_tools.py ramp --hue <H> --chroma <C> --name <name>`. Match the brand color to its nearest step.
 5. **Map ramps to tokens.** Fill the semantic set (`--color-bg-*`, `--color-fg-*`, `--color-border-*`, `--color-accent-*`, `--color-{success,warning,danger,info}-{fg,bg,border}`, `--color-focus-ring`, `--color-overlay-scrim`) for light, dark and high-contrast.
 6. **Check contrast** for every pair that ships, per [contrast](references/contrast.md): `python3 ../../library/scripts/color_tools.py contrast <fg> <bg>`, then `apca` for advisory tuning. Fix failures by moving ramp steps, never by suppressing the check.
 7. **Build dark mode** per [dark mode](references/dark-mode.md), not by inverting.
@@ -69,7 +69,7 @@ Excellent color work is mostly neutrals and restraint: a tuned neutral ramp does
 
 ## References
 
-- [Palette architecture](references/palette-architecture.md): roles, 12-step neutral ramps, accent count, status colors, proportions, brand vs UI color.
+- [Palette architecture](references/palette-architecture.md): roles and the kit token mapping, 11-13 step ramps, accent count, status colors, proportions, brand vs UI color.
 - [OKLCH ramps](references/oklch-ramps.md): why OKLCH, the ramp algorithm, gamut mapping, and `../../library/scripts/color_tools.py` usage.
 - [Contrast](references/contrast.md): WCAG 2.2 math and thresholds, APCA as advisory, non-text and focus, testing.
 - [Dark mode](references/dark-mode.md): elevation by lightness, desaturation, off-black and off-white, borders, images.

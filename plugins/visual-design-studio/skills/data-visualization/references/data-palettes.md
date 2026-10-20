@@ -2,7 +2,7 @@
 
 Version-Timestamp: 2026-10-20 02:07:10 UTC
 
-Data color encodes something: a category, an order, or a direction from a center. Choose the palette type from the data, keep UI status colors out of data, and test every palette in light, dark, grayscale and simulated color-vision deficiency. All ratios below are WCAG 2.2, computed; the dark background is the kit's reference dark canvas `#0E1313` (see the `color` skill's dark mode reference).
+Data color encodes something: a category, an order, or a direction from a center. Choose the palette type from the data, keep UI status colors out of data, and test every palette in light, dark, grayscale and simulated color-vision deficiency. All ratios below are WCAG 2.2, computed; the dark background is the kit's Meridian dark canvas `#0B0F12` (`--color-bg-canvas` in dark mode; see the `color` skill's dark mode reference).
 
 ## Which palette
 
@@ -20,20 +20,20 @@ Masataka Okabe and Kei Ito's Color Universal Design palette stays distinguishabl
 
 | # | Name | Hex | OKLCH | On white | On dark canvas | Label text on white (4.5:1) |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Blue | #0072B2 | 0.53 0.131 244 | 5.19 | 3.61 | #0072B2 |
-| 2 | Orange | #E69F00 | 0.75 0.158 77 | 2.25 | 8.32 | #9F6D01 |
-| 3 | Bluish green | #009E73 | 0.62 0.130 165 | 3.42 | 5.47 | #068661 |
-| 4 | Vermillion | #D55E00 | 0.62 0.170 48 | 3.87 | 4.84 | #C25603 |
-| 5 | Sky blue | #56B4E9 | 0.73 0.117 236 | 2.31 | 8.12 | #0E7DB0 |
-| 6 | Reddish purple | #CC79A7 | 0.68 0.118 346 | 3.06 | 6.12 | #AB5B88 |
-| 7 | Yellow | #F0E442 | 0.90 0.172 105 | 1.32 | 14.16 | #807804 |
-| 8 | Black | #000000 | 0 0 0 | 21.00 | 1.12 | #000000 |
+| 1 | Blue | #0072B2 | 0.53 0.131 244 | 5.19 | 3.71 | #0072B2 |
+| 2 | Orange | #E69F00 | 0.75 0.158 77 | 2.25 | 8.54 | #9F6D01 |
+| 3 | Bluish green | #009E73 | 0.62 0.130 165 | 3.42 | 5.62 | #068661 |
+| 4 | Vermillion | #D55E00 | 0.62 0.170 48 | 3.87 | 4.98 | #C25603 |
+| 5 | Sky blue | #56B4E9 | 0.73 0.117 236 | 2.31 | 8.34 | #0E7DB0 |
+| 6 | Reddish purple | #CC79A7 | 0.68 0.118 346 | 3.06 | 6.29 | #AB5B88 |
+| 7 | Yellow | #F0E442 | 0.90 0.172 105 | 1.32 | 14.55 | #807804 |
+| 8 | Black | #000000 | 0 0 0 | 21.00 | 1.09 | #000000 |
 
 How to use it:
 
 - **On white,** orange, sky blue and yellow fall below 3:1. Give those marks a 1px outline in a darker shade, place them where they sit next to a direct label, or use them only for areas that are also labeled. Do not darken the fills to force 3:1: darkening all colors to the same lightness collapses the lightness differences that make the set colorblind-safe.
-- **On dark,** every color except black clears 3:1; replace black with a light neutral (`#E7ECEC`, 15.70:1).
-- **Direct labels in series color** use the darker "label text" variants so text passes 4.5:1 on white; on dark, the original hues already pass for large labels, and all but blue pass 4.5:1 for small ones (blue is 3.61:1, so use the light neutral for its label text).
+- **On dark,** every color except black clears 3:1 on the canvas (blue drops to 3.02:1 on the raised surface `#1E2429`, so keep charts on the canvas or surface); replace black with the light neutral `--color-fg-default` (`#E2E9EF`, 15.70:1).
+- **Direct labels in series color** use the darker "label text" variants so text passes 4.5:1 on white; on dark, the original hues already pass for large labels, and all but blue pass 4.5:1 for small ones (blue is 3.71:1, so use the light neutral for its label text).
 - **More than 8 categories:** group the tail into "Other", use small multiples, or label directly and drop color.
 
 ## Highlight plus gray
@@ -42,9 +42,9 @@ The strongest default for explanatory charts: one series in an accent, everythin
 
 | Role | Hex | On white | On dark canvas |
 | --- | --- | --- | --- |
-| Context gray (works in both modes) | #788382 | 3.91 | 4.79 |
-| Highlight (light mode) | Okabe-Ito vermillion #D55E00 or the brand accent fill | 3.87 | 4.84 |
-| Highlight (brand teal example) | #047879 (`--color-accent-default`) | 5.29 | use `#43C3C3` in dark (dark accent) |
+| Context gray (works in both modes): neutral 500 | #6F7982 | 4.44 | 4.34 |
+| Highlight: Okabe-Ito vermillion | #D55E00 | 3.87 | 4.98 |
+| Highlight: brand accent (Meridian) | `--color-accent-default`: #006C6C light, #4FC2C2 dark | 6.25 | 9.01 |
 
 Make the highlight 3px and the context lines 1.5px so the difference survives grayscale and color-vision deficiency.
 
@@ -67,7 +67,7 @@ Rules:
 
 - Even L steps (here about 0.08-0.10) read as even value steps. Use 5-7 classes for maps and heatmaps; continuous scales for smooth fields.
 - Light classes are under 3:1 on white. In heatmaps and choropleths this is acceptable when every value is also available through labels, a table or tooltips, and when adjacent cells are separated by a 1px white or canvas-colored border.
-- **Dark mode:** map high values to light classes (they stand out against a dark canvas) and drop classes that vanish; on `#0E1313` classes 1-6 clear 3:1 (16.87 down to 3.22) and classes 7-8 do not.
+- **Dark mode:** map high values to light classes (they stand out against a dark canvas) and drop classes that vanish; on `#0B0F12` classes 1-6 clear 3:1 (17.33 down to 3.31) and classes 7-8 do not.
 - Never use a rainbow (jet, hsv) for ordered data: it has false boundaries and is not lightness-ordered. Perceptually uniform options such as viridis (from #440154 to #FDE725) are a well-tested alternative.
 
 ## Diverging (OKLCH, two hues)

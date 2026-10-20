@@ -149,14 +149,16 @@ The kit ships a standard-library scale generator. Check the exact flags first:
 python3 ../../../library/scripts/type_scale.py --help
 ```
 
-Typical runs (static, then fluid):
+Typical runs (static, then fluid, then CSS ready to paste):
 
 ```sh
 python3 ../../../library/scripts/type_scale.py --base 16 --ratio 1.25
 python3 ../../../library/scripts/type_scale.py --fluid --min-base 16 --max-base 18 --min-ratio 1.2 --max-ratio 1.333 --min-vw 360 --max-vw 1280
+python3 ../../../library/scripts/type_scale.py --fluid --min-base 16 --max-base 18 --min-ratio 1.2 --max-ratio 1.333 --min-vw 360 --max-vw 1280 --format css
+python3 ../../../library/scripts/type_scale.py --list-ratios
 ```
 
-Its output should match the tables above for the same inputs. If the script is unavailable, apply the formula by hand; it is exact.
+The script's fluid default range is 360-1440px, so pass `--max-vw 1280` to match the token container. It names steps -2 to 6 as `--font-size-xs` to `--font-size-5xl` (change with `--down`, `--up` and `--prefix`). The fluid run above reproduces the marketing table in this file. For product UI keep the contract's fixed `xs` to `lg` values and take only the upper steps from the script. Without the script, apply the formula by hand; it is exact.
 
 ## Minimal CSS
 

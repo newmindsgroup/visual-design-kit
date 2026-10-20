@@ -98,8 +98,8 @@
         "$description": "Success alert and badge background."
       },
       "border": {
-        "$value": "{color.green.700}",
-        "$description": "Success alert and badge border (decorative)."
+        "$value": "{color.green.500}",
+        "$description": "Success boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
       }
     },
     "warning": {
@@ -112,8 +112,8 @@
         "$description": "Warning alert and badge background."
       },
       "border": {
-        "$value": "{color.amber.700}",
-        "$description": "Warning alert and badge border (decorative)."
+        "$value": "{color.amber.500}",
+        "$description": "Warning boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
       }
     },
     "danger": {
@@ -126,8 +126,8 @@
         "$description": "Danger alert and badge background."
       },
       "border": {
-        "$value": "{color.red.700}",
-        "$description": "Danger alert and badge border (decorative)."
+        "$value": "{color.red.500}",
+        "$description": "Danger boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
       }
     },
     "info": {
@@ -140,8 +140,8 @@
         "$description": "Info alert and badge background."
       },
       "border": {
-        "$value": "{color.blue.700}",
-        "$description": "Info alert and badge border (decorative)."
+        "$value": "{color.blue.500}",
+        "$description": "Info boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11)."
       }
     },
     "focus-ring": {
@@ -157,69 +157,16 @@
     "$type": "shadow",
     "$description": "Elevation. Pair with surface-raised; in dark mode lightness carries elevation and shadows only separate edges.",
     "sm": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-40}",
-          "offsetX": "0px",
-          "offsetY": "1px",
-          "blur": "2px",
-          "spread": "0px"
-        }
-      ]
+      "$value": "{elevation.deep.sm}"
     },
     "md": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-32}",
-          "offsetX": "0px",
-          "offsetY": "1px",
-          "blur": "2px",
-          "spread": "0px"
-        },
-        {
-          "color": "{color.alpha.black-40}",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "8px",
-          "spread": "-2px"
-        }
-      ]
+      "$value": "{elevation.deep.md}"
     },
     "lg": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-32}",
-          "offsetX": "0px",
-          "offsetY": "2px",
-          "blur": "4px",
-          "spread": "-1px"
-        },
-        {
-          "color": "{color.alpha.black-48}",
-          "offsetX": "0px",
-          "offsetY": "12px",
-          "blur": "24px",
-          "spread": "-6px"
-        }
-      ]
+      "$value": "{elevation.deep.lg}"
     },
     "xl": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-40}",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "8px",
-          "spread": "-2px"
-        },
-        {
-          "color": "{color.alpha.black-56}",
-          "offsetX": "0px",
-          "offsetY": "24px",
-          "blur": "48px",
-          "spread": "-12px"
-        }
-      ]
+      "$value": "{elevation.deep.xl}"
     }
   }
 }

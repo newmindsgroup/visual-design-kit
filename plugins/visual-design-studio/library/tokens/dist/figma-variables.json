@@ -13,23 +13,11 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-white)"
-          },
+          "codeSyntax": {"WEB": "var(--color-white)"},
           "description": "Pure white. Light surfaces and text on accent fills.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 1.0,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 1.0,
-              "b": 1.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0}
           }
         },
         {
@@ -37,23 +25,11 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-black)"
-          },
+          "codeSyntax": {"WEB": "var(--color-black)"},
           "description": "Pure black. Reserved for shadows and scrims; never a dark-mode canvas.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -61,22 +37,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.94902,
-              "g": 0.968627,
-              "b": 0.988235,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.94902,
-              "g": 0.968627,
-              "b": 0.988235,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.94902, "g": 0.968627, "b": 0.988235, "a": 1.0},
+            "Ember": {"r": 0.94902, "g": 0.968627, "b": 0.988235, "a": 1.0}
           }
         },
         {
@@ -84,22 +48,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.886275,
-              "g": 0.913725,
-              "b": 0.937255,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.886275,
-              "g": 0.913725,
-              "b": 0.937255,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.886275, "g": 0.913725, "b": 0.937255, "a": 1.0},
+            "Ember": {"r": 0.886275, "g": 0.913725, "b": 0.937255, "a": 1.0}
           }
         },
         {
@@ -107,22 +59,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.764706,
-              "g": 0.8,
-              "b": 0.827451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.764706,
-              "g": 0.8,
-              "b": 0.827451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.764706, "g": 0.8, "b": 0.827451, "a": 1.0},
+            "Ember": {"r": 0.764706, "g": 0.8, "b": 0.827451, "a": 1.0}
           }
         },
         {
@@ -130,22 +70,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.65098,
-              "g": 0.686275,
-              "b": 0.721569,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.65098,
-              "g": 0.686275,
-              "b": 0.721569,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.65098, "g": 0.686275, "b": 0.721569, "a": 1.0},
+            "Ember": {"r": 0.65098, "g": 0.686275, "b": 0.721569, "a": 1.0}
           }
         },
         {
@@ -153,22 +81,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.541176,
-              "g": 0.580392,
-              "b": 0.615686,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.541176,
-              "g": 0.580392,
-              "b": 0.615686,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.541176, "g": 0.580392, "b": 0.615686, "a": 1.0},
+            "Ember": {"r": 0.541176, "g": 0.580392, "b": 0.615686, "a": 1.0}
           }
         },
         {
@@ -176,22 +92,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.435294,
-              "g": 0.47451,
-              "b": 0.509804,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.435294,
-              "g": 0.47451,
-              "b": 0.509804,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.435294, "g": 0.47451, "b": 0.509804, "a": 1.0},
+            "Ember": {"r": 0.435294, "g": 0.47451, "b": 0.509804, "a": 1.0}
           }
         },
         {
@@ -199,22 +103,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.337255,
-              "g": 0.372549,
-              "b": 0.403922,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.337255,
-              "g": 0.372549,
-              "b": 0.403922,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.337255, "g": 0.372549, "b": 0.403922, "a": 1.0},
+            "Ember": {"r": 0.337255, "g": 0.372549, "b": 0.403922, "a": 1.0}
           }
         },
         {
@@ -222,22 +114,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.243137,
-              "g": 0.27451,
-              "b": 0.301961,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.243137,
-              "g": 0.27451,
-              "b": 0.301961,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.243137, "g": 0.27451, "b": 0.301961, "a": 1.0},
+            "Ember": {"r": 0.243137, "g": 0.27451, "b": 0.301961, "a": 1.0}
           }
         },
         {
@@ -245,22 +125,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.156863,
-              "g": 0.184314,
-              "b": 0.207843,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.156863,
-              "g": 0.184314,
-              "b": 0.207843,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.156863, "g": 0.184314, "b": 0.207843, "a": 1.0},
+            "Ember": {"r": 0.156863, "g": 0.184314, "b": 0.207843, "a": 1.0}
           }
         },
         {
@@ -268,22 +136,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-850)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-850)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.117647,
-              "g": 0.141176,
-              "b": 0.160784,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.117647,
-              "g": 0.141176,
-              "b": 0.160784,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.117647, "g": 0.141176, "b": 0.160784, "a": 1.0},
+            "Ember": {"r": 0.117647, "g": 0.141176, "b": 0.160784, "a": 1.0}
           }
         },
         {
@@ -291,22 +147,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.078431,
-              "g": 0.098039,
-              "b": 0.113725,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.078431,
-              "g": 0.098039,
-              "b": 0.113725,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.078431, "g": 0.098039, "b": 0.113725, "a": 1.0},
+            "Ember": {"r": 0.078431, "g": 0.098039, "b": 0.113725, "a": 1.0}
           }
         },
         {
@@ -314,22 +158,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.043137,
-              "g": 0.058824,
-              "b": 0.070588,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.043137,
-              "g": 0.058824,
-              "b": 0.070588,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.043137, "g": 0.058824, "b": 0.070588, "a": 1.0},
+            "Ember": {"r": 0.043137, "g": 0.058824, "b": 0.070588, "a": 1.0}
           }
         },
         {
@@ -337,22 +169,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-slate-975)"
-          },
+          "codeSyntax": {"WEB": "var(--color-slate-975)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.027451,
-              "g": 0.039216,
-              "b": 0.05098,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.027451,
-              "g": 0.039216,
-              "b": 0.05098,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.027451, "g": 0.039216, "b": 0.05098, "a": 1.0},
+            "Ember": {"r": 0.027451, "g": 0.039216, "b": 0.05098, "a": 1.0}
           }
         },
         {
@@ -360,22 +180,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.980392,
-              "g": 0.964706,
-              "b": 0.94902,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.980392,
-              "g": 0.964706,
-              "b": 0.94902,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.980392, "g": 0.964706, "b": 0.94902, "a": 1.0},
+            "Ember": {"r": 0.980392, "g": 0.964706, "b": 0.94902, "a": 1.0}
           }
         },
         {
@@ -383,22 +191,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.92549,
-              "g": 0.905882,
-              "b": 0.882353,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.92549,
-              "g": 0.905882,
-              "b": 0.882353,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.92549, "g": 0.905882, "b": 0.882353, "a": 1.0},
+            "Ember": {"r": 0.92549, "g": 0.905882, "b": 0.882353, "a": 1.0}
           }
         },
         {
@@ -406,22 +202,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.815686,
-              "g": 0.788235,
-              "b": 0.760784,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.815686,
-              "g": 0.788235,
-              "b": 0.760784,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.815686, "g": 0.788235, "b": 0.760784, "a": 1.0},
+            "Ember": {"r": 0.815686, "g": 0.788235, "b": 0.760784, "a": 1.0}
           }
         },
         {
@@ -429,22 +213,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.705882,
-              "g": 0.678431,
-              "b": 0.643137,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.705882,
-              "g": 0.678431,
-              "b": 0.643137,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.705882, "g": 0.678431, "b": 0.643137, "a": 1.0},
+            "Ember": {"r": 0.705882, "g": 0.678431, "b": 0.643137, "a": 1.0}
           }
         },
         {
@@ -452,22 +224,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.6,
-              "g": 0.568627,
-              "b": 0.533333,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.6,
-              "g": 0.568627,
-              "b": 0.533333,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.6, "g": 0.568627, "b": 0.533333, "a": 1.0},
+            "Ember": {"r": 0.6, "g": 0.568627, "b": 0.533333, "a": 1.0}
           }
         },
         {
@@ -475,22 +235,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.494118,
-              "g": 0.462745,
-              "b": 0.427451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.494118,
-              "g": 0.462745,
-              "b": 0.427451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.494118, "g": 0.462745, "b": 0.427451, "a": 1.0},
+            "Ember": {"r": 0.494118, "g": 0.462745, "b": 0.427451, "a": 1.0}
           }
         },
         {
@@ -498,22 +246,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.392157,
-              "g": 0.360784,
-              "b": 0.329412,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.392157,
-              "g": 0.360784,
-              "b": 0.329412,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.392157, "g": 0.360784, "b": 0.329412, "a": 1.0},
+            "Ember": {"r": 0.392157, "g": 0.360784, "b": 0.329412, "a": 1.0}
           }
         },
         {
@@ -521,22 +257,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.290196,
-              "g": 0.266667,
-              "b": 0.239216,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.290196,
-              "g": 0.266667,
-              "b": 0.239216,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.290196, "g": 0.266667, "b": 0.239216, "a": 1.0},
+            "Ember": {"r": 0.290196, "g": 0.266667, "b": 0.239216, "a": 1.0}
           }
         },
         {
@@ -544,22 +268,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.196078,
-              "g": 0.176471,
-              "b": 0.152941,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.196078,
-              "g": 0.176471,
-              "b": 0.152941,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.196078, "g": 0.176471, "b": 0.152941, "a": 1.0},
+            "Ember": {"r": 0.196078, "g": 0.176471, "b": 0.152941, "a": 1.0}
           }
         },
         {
@@ -567,22 +279,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-850)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-850)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.152941,
-              "g": 0.133333,
-              "b": 0.113725,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.152941,
-              "g": 0.133333,
-              "b": 0.113725,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.152941, "g": 0.133333, "b": 0.113725, "a": 1.0},
+            "Ember": {"r": 0.152941, "g": 0.133333, "b": 0.113725, "a": 1.0}
           }
         },
         {
@@ -590,22 +290,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.105882,
-              "g": 0.094118,
-              "b": 0.07451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.105882,
-              "g": 0.094118,
-              "b": 0.07451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.105882, "g": 0.094118, "b": 0.07451, "a": 1.0},
+            "Ember": {"r": 0.105882, "g": 0.094118, "b": 0.07451, "a": 1.0}
           }
         },
         {
@@ -613,22 +301,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.062745,
-              "g": 0.054902,
-              "b": 0.043137,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.062745,
-              "g": 0.054902,
-              "b": 0.043137,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.062745, "g": 0.054902, "b": 0.043137, "a": 1.0},
+            "Ember": {"r": 0.062745, "g": 0.054902, "b": 0.043137, "a": 1.0}
           }
         },
         {
@@ -636,22 +312,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-sand-975)"
-          },
+          "codeSyntax": {"WEB": "var(--color-sand-975)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.047059,
-              "g": 0.035294,
-              "b": 0.027451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.047059,
-              "g": 0.035294,
-              "b": 0.027451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.047059, "g": 0.035294, "b": 0.027451, "a": 1.0},
+            "Ember": {"r": 0.047059, "g": 0.035294, "b": 0.027451, "a": 1.0}
           }
         },
         {
@@ -659,22 +323,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.92549,
-              "g": 0.980392,
-              "b": 0.980392,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.92549,
-              "g": 0.980392,
-              "b": 0.980392,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.92549, "g": 0.980392, "b": 0.980392, "a": 1.0},
+            "Ember": {"r": 0.92549, "g": 0.980392, "b": 0.980392, "a": 1.0}
           }
         },
         {
@@ -682,22 +334,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.764706,
-              "g": 0.952941,
-              "b": 0.94902,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.764706,
-              "g": 0.952941,
-              "b": 0.94902,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.764706, "g": 0.952941, "b": 0.94902, "a": 1.0},
+            "Ember": {"r": 0.764706, "g": 0.952941, "b": 0.94902, "a": 1.0}
           }
         },
         {
@@ -705,22 +345,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.533333,
-              "g": 0.862745,
-              "b": 0.858824,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.533333,
-              "g": 0.862745,
-              "b": 0.858824,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.533333, "g": 0.862745, "b": 0.858824, "a": 1.0},
+            "Ember": {"r": 0.533333, "g": 0.862745, "b": 0.858824, "a": 1.0}
           }
         },
         {
@@ -728,22 +356,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.309804,
-              "g": 0.760784,
-              "b": 0.760784,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.309804,
-              "g": 0.760784,
-              "b": 0.760784,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.309804, "g": 0.760784, "b": 0.760784, "a": 1.0},
+            "Ember": {"r": 0.309804, "g": 0.760784, "b": 0.760784, "a": 1.0}
           }
         },
         {
@@ -751,22 +367,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.654902,
-              "b": 0.654902,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.654902,
-              "b": 0.654902,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.654902, "b": 0.654902, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.654902, "b": 0.654902, "a": 1.0}
           }
         },
         {
@@ -774,22 +378,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.537255,
-              "b": 0.537255,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.537255,
-              "b": 0.537255,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.537255, "b": 0.537255, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.537255, "b": 0.537255, "a": 1.0}
           }
         },
         {
@@ -797,22 +389,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.423529,
-              "b": 0.423529,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.423529,
-              "b": 0.423529,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.423529, "b": 0.423529, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.423529, "b": 0.423529, "a": 1.0}
           }
         },
         {
@@ -820,22 +400,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.313725,
-              "b": 0.313725,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.313725,
-              "b": 0.313725,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.313725, "b": 0.313725, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.313725, "b": 0.313725, "a": 1.0}
           }
         },
         {
@@ -843,22 +411,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.211765,
-              "b": 0.211765,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.211765,
-              "b": 0.211765,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.211765, "b": 0.211765, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.211765, "b": 0.211765, "a": 1.0}
           }
         },
         {
@@ -866,22 +422,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.113725,
-              "b": 0.113725,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.113725,
-              "b": 0.113725,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.113725, "b": 0.113725, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.113725, "b": 0.113725, "a": 1.0}
           }
         },
         {
@@ -889,22 +433,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-teal-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-teal-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.027451,
-              "g": 0.062745,
-              "b": 0.062745,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.027451,
-              "g": 0.062745,
-              "b": 0.062745,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.027451, "g": 0.062745, "b": 0.062745, "a": 1.0},
+            "Ember": {"r": 0.027451, "g": 0.062745, "b": 0.062745, "a": 1.0}
           }
         },
         {
@@ -912,22 +444,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.956863,
-              "b": 0.945098,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.956863,
-              "b": 0.945098,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.956863, "b": 0.945098, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.956863, "b": 0.945098, "a": 1.0}
           }
         },
         {
@@ -935,22 +455,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.878431,
-              "b": 0.847059,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.878431,
-              "b": 0.847059,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.878431, "b": 0.847059, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.878431, "b": 0.847059, "a": 1.0}
           }
         },
         {
@@ -958,22 +466,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.713725,
-              "b": 0.639216,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.713725,
-              "b": 0.639216,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.713725, "b": 0.639216, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.713725, "b": 0.639216, "a": 1.0}
           }
         },
         {
@@ -981,22 +477,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.529412,
-              "b": 0.411765,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.529412,
-              "b": 0.411765,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.529412, "b": 0.411765, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.529412, "b": 0.411765, "a": 1.0}
           }
         },
         {
@@ -1004,22 +488,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.92549,
-              "g": 0.368627,
-              "b": 0.231373,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.92549,
-              "g": 0.368627,
-              "b": 0.231373,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.92549, "g": 0.368627, "b": 0.231373, "a": 1.0},
+            "Ember": {"r": 0.92549, "g": 0.368627, "b": 0.231373, "a": 1.0}
           }
         },
         {
@@ -1027,22 +499,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.811765,
-              "g": 0.235294,
-              "b": 0.070588,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.811765,
-              "g": 0.235294,
-              "b": 0.070588,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.811765, "g": 0.235294, "b": 0.070588, "a": 1.0},
+            "Ember": {"r": 0.811765, "g": 0.235294, "b": 0.070588, "a": 1.0}
           }
         },
         {
@@ -1050,22 +510,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.654902,
-              "g": 0.156863,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.654902,
-              "g": 0.156863,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.654902, "g": 0.156863, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.654902, "g": 0.156863, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1073,22 +521,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.494118,
-              "g": 0.109804,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.494118,
-              "g": 0.109804,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.494118, "g": 0.109804, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.494118, "g": 0.109804, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1096,22 +532,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.341176,
-              "g": 0.062745,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.341176,
-              "g": 0.062745,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.341176, "g": 0.062745, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.341176, "g": 0.062745, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1119,22 +543,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.196078,
-              "g": 0.023529,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.196078,
-              "g": 0.023529,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.196078, "g": 0.023529, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.196078, "g": 0.023529, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1142,22 +554,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-vermilion-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-vermilion-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.090196,
-              "g": 0.043137,
-              "b": 0.031373,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.090196,
-              "g": 0.043137,
-              "b": 0.031373,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.090196, "g": 0.043137, "b": 0.031373, "a": 1.0},
+            "Ember": {"r": 0.090196, "g": 0.043137, "b": 0.031373, "a": 1.0}
           }
         },
         {
@@ -1165,22 +565,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.937255,
-              "g": 0.980392,
-              "b": 0.941176,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.937255,
-              "g": 0.980392,
-              "b": 0.941176,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.937255, "g": 0.980392, "b": 0.941176, "a": 1.0},
+            "Ember": {"r": 0.937255, "g": 0.980392, "b": 0.941176, "a": 1.0}
           }
         },
         {
@@ -1188,22 +576,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.8,
-              "g": 0.956863,
-              "b": 0.827451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.8,
-              "g": 0.956863,
-              "b": 0.827451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.8, "g": 0.956863, "b": 0.827451, "a": 1.0},
+            "Ember": {"r": 0.8, "g": 0.956863, "b": 0.827451, "a": 1.0}
           }
         },
         {
@@ -1211,22 +587,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.603922,
-              "g": 0.870588,
-              "b": 0.654902,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.603922,
-              "g": 0.870588,
-              "b": 0.654902,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.603922, "g": 0.870588, "b": 0.654902, "a": 1.0},
+            "Ember": {"r": 0.603922, "g": 0.870588, "b": 0.654902, "a": 1.0}
           }
         },
         {
@@ -1234,22 +598,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.427451,
-              "g": 0.772549,
-              "b": 0.509804,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.427451,
-              "g": 0.772549,
-              "b": 0.509804,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.427451, "g": 0.772549, "b": 0.509804, "a": 1.0},
+            "Ember": {"r": 0.427451, "g": 0.772549, "b": 0.509804, "a": 1.0}
           }
         },
         {
@@ -1257,22 +609,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.262745,
-              "g": 0.666667,
-              "b": 0.376471,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.262745,
-              "g": 0.666667,
-              "b": 0.376471,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.262745, "g": 0.666667, "b": 0.376471, "a": 1.0},
+            "Ember": {"r": 0.262745, "g": 0.666667, "b": 0.376471, "a": 1.0}
           }
         },
         {
@@ -1280,22 +620,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.082353,
-              "g": 0.560784,
-              "b": 0.266667,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.082353,
-              "g": 0.560784,
-              "b": 0.266667,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.082353, "g": 0.560784, "b": 0.266667, "a": 1.0},
+            "Ember": {"r": 0.082353, "g": 0.560784, "b": 0.266667, "a": 1.0}
           }
         },
         {
@@ -1303,22 +631,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.443137,
-              "b": 0.192157,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.443137,
-              "b": 0.192157,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.443137, "b": 0.192157, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.443137, "b": 0.192157, "a": 1.0}
           }
         },
         {
@@ -1326,22 +642,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.329412,
-              "b": 0.137255,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.329412,
-              "b": 0.137255,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.329412, "b": 0.137255, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.329412, "b": 0.137255, "a": 1.0}
           }
         },
         {
@@ -1349,22 +653,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.223529,
-              "b": 0.082353,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.223529,
-              "b": 0.082353,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.223529, "b": 0.082353, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.223529, "b": 0.082353, "a": 1.0}
           }
         },
         {
@@ -1372,22 +664,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.121569,
-              "b": 0.035294,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.121569,
-              "b": 0.035294,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.121569, "b": 0.035294, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.121569, "b": 0.035294, "a": 1.0}
           }
         },
         {
@@ -1395,22 +675,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-green-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-green-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.035294,
-              "g": 0.066667,
-              "b": 0.039216,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.035294,
-              "g": 0.066667,
-              "b": 0.039216,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.035294, "g": 0.066667, "b": 0.039216, "a": 1.0},
+            "Ember": {"r": 0.035294, "g": 0.066667, "b": 0.039216, "a": 1.0}
           }
         },
         {
@@ -1418,22 +686,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.992157,
-              "g": 0.964706,
-              "b": 0.913725,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.992157,
-              "g": 0.964706,
-              "b": 0.913725,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.992157, "g": 0.964706, "b": 0.913725, "a": 1.0},
+            "Ember": {"r": 0.992157, "g": 0.964706, "b": 0.913725, "a": 1.0}
           }
         },
         {
@@ -1441,22 +697,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.992157,
-              "g": 0.898039,
-              "b": 0.721569,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.992157,
-              "g": 0.898039,
-              "b": 0.721569,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.992157, "g": 0.898039, "b": 0.721569, "a": 1.0},
+            "Ember": {"r": 0.992157, "g": 0.898039, "b": 0.721569, "a": 1.0}
           }
         },
         {
@@ -1464,22 +708,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.941176,
-              "g": 0.764706,
-              "b": 0.458824,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.941176,
-              "g": 0.764706,
-              "b": 0.458824,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.941176, "g": 0.764706, "b": 0.458824, "a": 1.0},
+            "Ember": {"r": 0.941176, "g": 0.764706, "b": 0.458824, "a": 1.0}
           }
         },
         {
@@ -1487,22 +719,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.870588,
-              "g": 0.631373,
-              "b": 0.215686,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.870588,
-              "g": 0.631373,
-              "b": 0.215686,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.870588, "g": 0.631373, "b": 0.215686, "a": 1.0},
+            "Ember": {"r": 0.870588, "g": 0.631373, "b": 0.215686, "a": 1.0}
           }
         },
         {
@@ -1510,22 +730,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.764706,
-              "g": 0.513725,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.764706,
-              "g": 0.513725,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.764706, "g": 0.513725, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.764706, "g": 0.513725, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1533,22 +741,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.639216,
-              "g": 0.411765,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.639216,
-              "g": 0.411765,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.639216, "g": 0.411765, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.639216, "g": 0.411765, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1556,22 +752,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.513725,
-              "g": 0.317647,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.513725,
-              "g": 0.317647,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.513725, "g": 0.317647, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.513725, "g": 0.317647, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1579,22 +763,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.388235,
-              "g": 0.227451,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.388235,
-              "g": 0.227451,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.388235, "g": 0.227451, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.388235, "g": 0.227451, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1602,22 +774,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.270588,
-              "g": 0.145098,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.270588,
-              "g": 0.145098,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.270588, "g": 0.145098, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.270588, "g": 0.145098, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1625,22 +785,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.156863,
-              "g": 0.070588,
-              "b": 0.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.156863,
-              "g": 0.070588,
-              "b": 0.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.156863, "g": 0.070588, "b": 0.0, "a": 1.0},
+            "Ember": {"r": 0.156863, "g": 0.070588, "b": 0.0, "a": 1.0}
           }
         },
         {
@@ -1648,22 +796,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-amber-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-amber-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.082353,
-              "g": 0.047059,
-              "b": 0.023529,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.082353,
-              "g": 0.047059,
-              "b": 0.023529,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.082353, "g": 0.047059, "b": 0.023529, "a": 1.0},
+            "Ember": {"r": 0.082353, "g": 0.047059, "b": 0.023529, "a": 1.0}
           }
         },
         {
@@ -1671,22 +807,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.956863,
-              "b": 0.952941,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.956863,
-              "b": 0.952941,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.956863, "b": 0.952941, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.956863, "b": 0.952941, "a": 1.0}
           }
         },
         {
@@ -1694,22 +818,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.87451,
-              "b": 0.866667,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.87451,
-              "b": 0.866667,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.87451, "b": 0.866667, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.87451, "b": 0.866667, "a": 1.0}
           }
         },
         {
@@ -1717,22 +829,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.705882,
-              "b": 0.694118,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.705882,
-              "b": 0.694118,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.705882, "b": 0.694118, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.705882, "b": 0.694118, "a": 1.0}
           }
         },
         {
@@ -1740,22 +840,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 1.0,
-              "g": 0.513725,
-              "b": 0.509804,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 1.0,
-              "g": 0.513725,
-              "b": 0.509804,
-              "a": 1.0
-            }
+            "Meridian": {"r": 1.0, "g": 0.513725, "b": 0.509804, "a": 1.0},
+            "Ember": {"r": 1.0, "g": 0.513725, "b": 0.509804, "a": 1.0}
           }
         },
         {
@@ -1763,22 +851,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.945098,
-              "g": 0.329412,
-              "b": 0.352941,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.945098,
-              "g": 0.329412,
-              "b": 0.352941,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.945098, "g": 0.329412, "b": 0.352941, "a": 1.0},
+            "Ember": {"r": 0.945098, "g": 0.329412, "b": 0.352941, "a": 1.0}
           }
         },
         {
@@ -1786,22 +862,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.831373,
-              "g": 0.180392,
-              "b": 0.239216,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.831373,
-              "g": 0.180392,
-              "b": 0.239216,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.831373, "g": 0.180392, "b": 0.239216, "a": 1.0},
+            "Ember": {"r": 0.831373, "g": 0.180392, "b": 0.239216, "a": 1.0}
           }
         },
         {
@@ -1809,22 +873,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.694118,
-              "g": 0.003922,
-              "b": 0.14902,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.694118,
-              "g": 0.003922,
-              "b": 0.14902,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.694118, "g": 0.003922, "b": 0.14902, "a": 1.0},
+            "Ember": {"r": 0.694118, "g": 0.003922, "b": 0.14902, "a": 1.0}
           }
         },
         {
@@ -1832,22 +884,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.521569,
-              "g": 0.0,
-              "b": 0.101961,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.521569,
-              "g": 0.0,
-              "b": 0.101961,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.521569, "g": 0.0, "b": 0.101961, "a": 1.0},
+            "Ember": {"r": 0.521569, "g": 0.0, "b": 0.101961, "a": 1.0}
           }
         },
         {
@@ -1855,22 +895,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.360784,
-              "g": 0.0,
-              "b": 0.058824,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.360784,
-              "g": 0.0,
-              "b": 0.058824,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.360784, "g": 0.0, "b": 0.058824, "a": 1.0},
+            "Ember": {"r": 0.360784, "g": 0.0, "b": 0.058824, "a": 1.0}
           }
         },
         {
@@ -1878,22 +906,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.207843,
-              "g": 0.007843,
-              "b": 0.023529,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.207843,
-              "g": 0.007843,
-              "b": 0.023529,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.207843, "g": 0.007843, "b": 0.023529, "a": 1.0},
+            "Ember": {"r": 0.207843, "g": 0.007843, "b": 0.023529, "a": 1.0}
           }
         },
         {
@@ -1901,22 +917,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-red-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-red-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.094118,
-              "g": 0.039216,
-              "b": 0.039216,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.094118,
-              "g": 0.039216,
-              "b": 0.039216,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.094118, "g": 0.039216, "b": 0.039216, "a": 1.0},
+            "Ember": {"r": 0.094118, "g": 0.039216, "b": 0.039216, "a": 1.0}
           }
         },
         {
@@ -1924,22 +928,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-50)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.94902,
-              "g": 0.968627,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.94902,
-              "g": 0.968627,
-              "b": 1.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.94902, "g": 0.968627, "b": 1.0, "a": 1.0},
+            "Ember": {"r": 0.94902, "g": 0.968627, "b": 1.0, "a": 1.0}
           }
         },
         {
@@ -1947,22 +939,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-100)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.85098,
-              "g": 0.917647,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.85098,
-              "g": 0.917647,
-              "b": 1.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.85098, "g": 0.917647, "b": 1.0, "a": 1.0},
+            "Ember": {"r": 0.85098, "g": 0.917647, "b": 1.0, "a": 1.0}
           }
         },
         {
@@ -1970,22 +950,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-200)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.654902,
-              "g": 0.807843,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.654902,
-              "g": 0.807843,
-              "b": 1.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.654902, "g": 0.807843, "b": 1.0, "a": 1.0},
+            "Ember": {"r": 0.654902, "g": 0.807843, "b": 1.0, "a": 1.0}
           }
         },
         {
@@ -1993,22 +961,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-300)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.45098,
-              "g": 0.694118,
-              "b": 1.0,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.45098,
-              "g": 0.694118,
-              "b": 1.0,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.45098, "g": 0.694118, "b": 1.0, "a": 1.0},
+            "Ember": {"r": 0.45098, "g": 0.694118, "b": 1.0, "a": 1.0}
           }
         },
         {
@@ -2016,22 +972,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-400)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.290196,
-              "g": 0.576471,
-              "b": 0.933333,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.290196,
-              "g": 0.576471,
-              "b": 0.933333,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.290196, "g": 0.576471, "b": 0.933333, "a": 1.0},
+            "Ember": {"r": 0.290196, "g": 0.576471, "b": 0.933333, "a": 1.0}
           }
         },
         {
@@ -2039,22 +983,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-500)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.156863,
-              "g": 0.466667,
-              "b": 0.827451,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.156863,
-              "g": 0.466667,
-              "b": 0.827451,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.156863, "g": 0.466667, "b": 0.827451, "a": 1.0},
+            "Ember": {"r": 0.156863, "g": 0.466667, "b": 0.827451, "a": 1.0}
           }
         },
         {
@@ -2062,22 +994,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-600)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.023529,
-              "g": 0.360784,
-              "b": 0.698039,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.023529,
-              "g": 0.360784,
-              "b": 0.698039,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.023529, "g": 0.360784, "b": 0.698039, "a": 1.0},
+            "Ember": {"r": 0.023529, "g": 0.360784, "b": 0.698039, "a": 1.0}
           }
         },
         {
@@ -2085,22 +1005,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-700)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.262745,
-              "b": 0.529412,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.262745,
-              "b": 0.529412,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.262745, "b": 0.529412, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.262745, "b": 0.529412, "a": 1.0}
           }
         },
         {
@@ -2108,22 +1016,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-800)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.176471,
-              "b": 0.368627,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.176471,
-              "b": 0.368627,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.0, "g": 0.176471, "b": 0.368627, "a": 1.0},
+            "Ember": {"r": 0.0, "g": 0.176471, "b": 0.368627, "a": 1.0}
           }
         },
         {
@@ -2131,22 +1027,10 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-900)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.007843,
-              "g": 0.094118,
-              "b": 0.207843,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.007843,
-              "g": 0.094118,
-              "b": 0.207843,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.007843, "g": 0.094118, "b": 0.207843, "a": 1.0},
+            "Ember": {"r": 0.007843, "g": 0.094118, "b": 0.207843, "a": 1.0}
           }
         },
         {
@@ -2154,252 +1038,120 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-blue-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-blue-950)"},
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.035294,
-              "g": 0.058824,
-              "b": 0.090196,
-              "a": 1.0
-            },
-            "Ember": {
-              "r": 0.035294,
-              "g": 0.058824,
-              "b": 0.090196,
-              "a": 1.0
-            }
+            "Meridian": {"r": 0.035294, "g": 0.058824, "b": 0.090196, "a": 1.0},
+            "Ember": {"r": 0.035294, "g": 0.058824, "b": 0.090196, "a": 1.0}
           }
         },
         {
           "name": "color/alpha/black-4",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-4)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-4)"},
           "description": "Black at 4% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.039216
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.039216
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.039216},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.039216}
           }
         },
         {
           "name": "color/alpha/black-8",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-8)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-8)"},
           "description": "Black at 8% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.078431
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.078431
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.078431},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.078431}
           }
         },
         {
           "name": "color/alpha/black-12",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-12)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-12)"},
           "description": "Black at 12% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.121569
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.121569
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.121569},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.121569}
           }
         },
         {
           "name": "color/alpha/black-16",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-16)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-16)"},
           "description": "Black at 16% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.160784
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.160784
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.160784},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.160784}
           }
         },
         {
           "name": "color/alpha/black-24",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-24)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-24)"},
           "description": "Black at 24% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.239216
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.239216
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.239216},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.239216}
           }
         },
         {
           "name": "color/alpha/black-32",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-32)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-32)"},
           "description": "Black at 32% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.321569
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.321569
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.321569},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.321569}
           }
         },
         {
           "name": "color/alpha/black-40",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-40)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-40)"},
           "description": "Black at 40% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.4
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.4
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.4},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.4}
           }
         },
         {
           "name": "color/alpha/black-48",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-48)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-48)"},
           "description": "Black at 48% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.478431
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.478431
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.478431},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.478431}
           }
         },
         {
           "name": "color/alpha/black-56",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-56)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-56)"},
           "description": "Black at 56% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.560784
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.560784
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.560784},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.560784}
           }
         },
         {
           "name": "color/alpha/black-64",
           "type": "COLOR",
           "scopes": ["EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-alpha-black-64)"
-          },
+          "codeSyntax": {"WEB": "var(--color-alpha-black-64)"},
           "description": "Black at 64% opacity.",
           "valuesByMode": {
-            "Meridian": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.639216
-            },
-            "Ember": {
-              "r": 0.0,
-              "g": 0.0,
-              "b": 0.0,
-              "a": 0.639216
-            }
+            "Meridian": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.639216},
+            "Ember": {"r": 0.0, "g": 0.0, "b": 0.0, "a": 0.639216}
           }
         },
         {
@@ -2407,21 +1159,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-50)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/50"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/50"}
             }
           }
         },
@@ -2430,21 +1174,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-100)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/100"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/100"}
             }
           }
         },
@@ -2453,21 +1189,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-200)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/200"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/200"}
             }
           }
         },
@@ -2476,21 +1204,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-300)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/300"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/300"}
             }
           }
         },
@@ -2499,21 +1219,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-400)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/400"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/400"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/400"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/400"}
             }
           }
         },
@@ -2522,21 +1234,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-500)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/500"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/500"}
             }
           }
         },
@@ -2545,21 +1249,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-600)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/600"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/600"}
             }
           }
         },
@@ -2568,21 +1264,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-700)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/700"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/700"}
             }
           }
         },
@@ -2591,21 +1279,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-800)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/800"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/800"}
             }
           }
         },
@@ -2614,21 +1294,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-850)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-850)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/850"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/850"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/850"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/850"}
             }
           }
         },
@@ -2637,21 +1309,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-900)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/900"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/900"}
             }
           }
         },
@@ -2660,21 +1324,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-950)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/950"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/950"}
             }
           }
         },
@@ -2683,21 +1339,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-neutral-975)"
-          },
+          "codeSyntax": {"WEB": "var(--color-neutral-975)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/slate/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/slate/975"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/sand/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/sand/975"}
             }
           }
         },
@@ -2706,21 +1354,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-50)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-50)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/50"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/50"}
             }
           }
         },
@@ -2729,21 +1369,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-100)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-100)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/100"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/100"}
             }
           }
         },
@@ -2752,21 +1384,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-200)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-200)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/200"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/200"}
             }
           }
         },
@@ -2775,21 +1399,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-300)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-300)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/300"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/300"}
             }
           }
         },
@@ -2798,21 +1414,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-400)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-400)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/400"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/400"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/400"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/400"}
             }
           }
         },
@@ -2821,21 +1429,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-500)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-500)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/500"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/500"}
             }
           }
         },
@@ -2844,21 +1444,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-600)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-600)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/600"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/600"}
             }
           }
         },
@@ -2867,21 +1459,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-700)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-700)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/700"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/700"}
             }
           }
         },
@@ -2890,21 +1474,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-800)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-800)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/800"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/800"}
             }
           }
         },
@@ -2913,21 +1489,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-900)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-900)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/900"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/900"}
             }
           }
         },
@@ -2936,21 +1504,13 @@
           "type": "COLOR",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--color-accent-950)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-950)"},
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/teal/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/teal/950"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/vermilion/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/vermilion/950"}
             }
           }
         },
@@ -2959,105 +1519,67 @@
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-schibsted-grotesk)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-schibsted-grotesk)"},
           "description": "Schibsted Grotesk (OFL; Bakken & Baeck for Schibsted). Sturdy news grotesk with tight apertures; Meridian display.",
-          "valuesByMode": {
-            "Meridian": "Schibsted Grotesk",
-            "Ember": "Schibsted Grotesk"
-          }
+          "valuesByMode": {"Meridian": "Schibsted Grotesk", "Ember": "Schibsted Grotesk"}
         },
         {
           "name": "font/stack/source-sans-3",
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-source-sans-3)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-source-sans-3)"},
           "description": "Source Sans 3 (OFL; Paul D. Hunt, Adobe). Humanist sans with wide language coverage; Meridian body.",
-          "valuesByMode": {
-            "Meridian": "Source Sans 3",
-            "Ember": "Source Sans 3"
-          }
+          "valuesByMode": {"Meridian": "Source Sans 3", "Ember": "Source Sans 3"}
         },
         {
           "name": "font/stack/jetbrains-mono",
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-jetbrains-mono)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-jetbrains-mono)"},
           "description": "JetBrains Mono (OFL). Tall x-height code face; Meridian mono.",
-          "valuesByMode": {
-            "Meridian": "JetBrains Mono",
-            "Ember": "JetBrains Mono"
-          }
+          "valuesByMode": {"Meridian": "JetBrains Mono", "Ember": "JetBrains Mono"}
         },
         {
           "name": "font/stack/fraunces",
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-fraunces)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-fraunces)"},
           "description": "Fraunces (OFL; Undercase Type). Soft variable serif with optical size and SOFT/WONK axes; Ember display.",
-          "valuesByMode": {
-            "Meridian": "Fraunces",
-            "Ember": "Fraunces"
-          }
+          "valuesByMode": {"Meridian": "Fraunces", "Ember": "Fraunces"}
         },
         {
           "name": "font/stack/figtree",
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-figtree)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-figtree)"},
           "description": "Figtree (OFL; Erik Kennedy). Friendly geometric sans with open forms; Ember body.",
-          "valuesByMode": {
-            "Meridian": "Figtree",
-            "Ember": "Figtree"
-          }
+          "valuesByMode": {"Meridian": "Figtree", "Ember": "Figtree"}
         },
         {
           "name": "font/stack/ibm-plex-mono",
           "type": "STRING",
           "scopes": [],
           "hiddenFromPublishing": true,
-          "codeSyntax": {
-            "WEB": "var(--font-stack-ibm-plex-mono)"
-          },
+          "codeSyntax": {"WEB": "var(--font-stack-ibm-plex-mono)"},
           "description": "IBM Plex Mono (OFL; Mike Abbink, Bold Monday). Slab-influenced mono; Ember mono.",
-          "valuesByMode": {
-            "Meridian": "IBM Plex Mono",
-            "Ember": "IBM Plex Mono"
-          }
+          "valuesByMode": {"Meridian": "IBM Plex Mono", "Ember": "IBM Plex Mono"}
         },
         {
           "name": "font/family/display",
           "type": "STRING",
           "scopes": ["FONT_FAMILY"],
-          "codeSyntax": {
-            "WEB": "var(--font-family-display)"
-          },
+          "codeSyntax": {"WEB": "var(--font-family-display)"},
           "description": "Headings and display type.",
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/schibsted-grotesk"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/schibsted-grotesk"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/fraunces"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/fraunces"}
             }
           }
         },
@@ -3065,22 +1587,14 @@
           "name": "font/family/body",
           "type": "STRING",
           "scopes": ["FONT_FAMILY"],
-          "codeSyntax": {
-            "WEB": "var(--font-family-body)"
-          },
+          "codeSyntax": {"WEB": "var(--font-family-body)"},
           "description": "Running text, UI labels, inputs.",
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/source-sans-3"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/source-sans-3"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/figtree"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/figtree"}
             }
           }
         },
@@ -3088,22 +1602,14 @@
           "name": "font/family/mono",
           "type": "STRING",
           "scopes": ["FONT_FAMILY"],
-          "codeSyntax": {
-            "WEB": "var(--font-family-mono)"
-          },
+          "codeSyntax": {"WEB": "var(--font-family-mono)"},
           "description": "Code, keyboard keys, aligned numbers.",
           "valuesByMode": {
             "Meridian": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/jetbrains-mono"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/jetbrains-mono"}
             },
             "Ember": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "font/stack/ibm-plex-mono"
-              }
+              "alias": {"collection": "Primitives", "name": "font/stack/ibm-plex-mono"}
             }
           }
         },
@@ -3111,764 +1617,458 @@
           "name": "font/size/xs",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-xs)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-xs)"},
           "description": "12px. Badges, legal, axis labels; never body copy.",
-          "valuesByMode": {
-            "Meridian": 12.0,
-            "Ember": 12.0
-          }
+          "valuesByMode": {"Meridian": 12.0, "Ember": 12.0}
         },
         {
           "name": "font/size/sm",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-sm)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-sm)"},
           "description": "14px. Dense UI, table cells, captions.",
-          "valuesByMode": {
-            "Meridian": 14.0,
-            "Ember": 14.0
-          }
+          "valuesByMode": {"Meridian": 14.0, "Ember": 14.0}
         },
         {
           "name": "font/size/md",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-md)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-md)"},
           "description": "16px. Body text and inputs (16px stops iOS zoom on focus).",
-          "valuesByMode": {
-            "Meridian": 16.0,
-            "Ember": 16.0
-          }
+          "valuesByMode": {"Meridian": 16.0, "Ember": 16.0}
         },
         {
           "name": "font/size/lg",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-lg)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-lg)"},
           "description": "20px. Lead paragraphs, small headings.",
-          "valuesByMode": {
-            "Meridian": 20.0,
-            "Ember": 20.0
-          }
+          "valuesByMode": {"Meridian": 20.0, "Ember": 20.0}
         },
         {
           "name": "font/size/xl",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-xl)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-xl)"},
           "description": "24px. Section headings (h3).",
-          "valuesByMode": {
-            "Meridian": 24.0,
-            "Ember": 24.0
-          }
+          "valuesByMode": {"Meridian": 24.0, "Ember": 24.0}
         },
         {
           "name": "font/size/2xl",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-2xl)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-2xl)"},
           "description": "30px. h2.",
-          "valuesByMode": {
-            "Meridian": 30.0,
-            "Ember": 30.0
-          }
+          "valuesByMode": {"Meridian": 30.0, "Ember": 30.0}
         },
         {
           "name": "font/size/3xl",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-3xl)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-3xl)"},
           "description": "36px. h1 in product UI.",
-          "valuesByMode": {
-            "Meridian": 36.0,
-            "Ember": 36.0
-          }
+          "valuesByMode": {"Meridian": 36.0, "Ember": 36.0}
         },
         {
           "name": "font/size/4xl",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-4xl)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-4xl)"},
           "description": "48px. Marketing h1.",
-          "valuesByMode": {
-            "Meridian": 48.0,
-            "Ember": 48.0
-          }
+          "valuesByMode": {"Meridian": 48.0, "Ember": 48.0}
         },
         {
           "name": "font/size/5xl",
           "type": "FLOAT",
           "scopes": ["FONT_SIZE"],
-          "codeSyntax": {
-            "WEB": "var(--font-size-5xl)"
-          },
+          "codeSyntax": {"WEB": "var(--font-size-5xl)"},
           "description": "60px. Hero display.",
-          "valuesByMode": {
-            "Meridian": 60.0,
-            "Ember": 60.0
-          }
+          "valuesByMode": {"Meridian": 60.0, "Ember": 60.0}
         },
         {
           "name": "font/weight/regular",
           "type": "FLOAT",
           "scopes": ["FONT_WEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--font-weight-regular)"
-          },
-          "valuesByMode": {
-            "Meridian": 400,
-            "Ember": 400
-          }
+          "codeSyntax": {"WEB": "var(--font-weight-regular)"},
+          "valuesByMode": {"Meridian": 400, "Ember": 400}
         },
         {
           "name": "font/weight/medium",
           "type": "FLOAT",
           "scopes": ["FONT_WEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--font-weight-medium)"
-          },
-          "valuesByMode": {
-            "Meridian": 500,
-            "Ember": 500
-          }
+          "codeSyntax": {"WEB": "var(--font-weight-medium)"},
+          "valuesByMode": {"Meridian": 500, "Ember": 500}
         },
         {
           "name": "font/weight/semibold",
           "type": "FLOAT",
           "scopes": ["FONT_WEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--font-weight-semibold)"
-          },
-          "valuesByMode": {
-            "Meridian": 600,
-            "Ember": 600
-          }
+          "codeSyntax": {"WEB": "var(--font-weight-semibold)"},
+          "valuesByMode": {"Meridian": 600, "Ember": 600}
         },
         {
           "name": "font/weight/bold",
           "type": "FLOAT",
           "scopes": ["FONT_WEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--font-weight-bold)"
-          },
-          "valuesByMode": {
-            "Meridian": 700,
-            "Ember": 700
-          }
+          "codeSyntax": {"WEB": "var(--font-weight-bold)"},
+          "valuesByMode": {"Meridian": 700, "Ember": 700}
         },
         {
           "name": "space/0",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-0)"
-          },
+          "codeSyntax": {"WEB": "var(--space-0)"},
           "description": "0px.",
-          "valuesByMode": {
-            "Meridian": 0.0,
-            "Ember": 0.0
-          }
+          "valuesByMode": {"Meridian": 0.0, "Ember": 0.0}
         },
         {
           "name": "space/1",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-1)"
-          },
+          "codeSyntax": {"WEB": "var(--space-1)"},
           "description": "4px.",
-          "valuesByMode": {
-            "Meridian": 4.0,
-            "Ember": 4.0
-          }
+          "valuesByMode": {"Meridian": 4.0, "Ember": 4.0}
         },
         {
           "name": "space/2",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-2)"
-          },
+          "codeSyntax": {"WEB": "var(--space-2)"},
           "description": "8px.",
-          "valuesByMode": {
-            "Meridian": 8.0,
-            "Ember": 8.0
-          }
+          "valuesByMode": {"Meridian": 8.0, "Ember": 8.0}
         },
         {
           "name": "space/3",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-3)"
-          },
+          "codeSyntax": {"WEB": "var(--space-3)"},
           "description": "12px.",
-          "valuesByMode": {
-            "Meridian": 12.0,
-            "Ember": 12.0
-          }
+          "valuesByMode": {"Meridian": 12.0, "Ember": 12.0}
         },
         {
           "name": "space/4",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-4)"
-          },
+          "codeSyntax": {"WEB": "var(--space-4)"},
           "description": "16px.",
-          "valuesByMode": {
-            "Meridian": 16.0,
-            "Ember": 16.0
-          }
+          "valuesByMode": {"Meridian": 16.0, "Ember": 16.0}
         },
         {
           "name": "space/5",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-5)"
-          },
+          "codeSyntax": {"WEB": "var(--space-5)"},
           "description": "20px.",
-          "valuesByMode": {
-            "Meridian": 20.0,
-            "Ember": 20.0
-          }
+          "valuesByMode": {"Meridian": 20.0, "Ember": 20.0}
         },
         {
           "name": "space/6",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-6)"
-          },
+          "codeSyntax": {"WEB": "var(--space-6)"},
           "description": "24px.",
-          "valuesByMode": {
-            "Meridian": 24.0,
-            "Ember": 24.0
-          }
+          "valuesByMode": {"Meridian": 24.0, "Ember": 24.0}
         },
         {
           "name": "space/8",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-8)"
-          },
+          "codeSyntax": {"WEB": "var(--space-8)"},
           "description": "32px.",
-          "valuesByMode": {
-            "Meridian": 32.0,
-            "Ember": 32.0
-          }
+          "valuesByMode": {"Meridian": 32.0, "Ember": 32.0}
         },
         {
           "name": "space/10",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-10)"
-          },
+          "codeSyntax": {"WEB": "var(--space-10)"},
           "description": "40px.",
-          "valuesByMode": {
-            "Meridian": 40.0,
-            "Ember": 40.0
-          }
+          "valuesByMode": {"Meridian": 40.0, "Ember": 40.0}
         },
         {
           "name": "space/12",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-12)"
-          },
+          "codeSyntax": {"WEB": "var(--space-12)"},
           "description": "48px.",
-          "valuesByMode": {
-            "Meridian": 48.0,
-            "Ember": 48.0
-          }
+          "valuesByMode": {"Meridian": 48.0, "Ember": 48.0}
         },
         {
           "name": "space/16",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-16)"
-          },
+          "codeSyntax": {"WEB": "var(--space-16)"},
           "description": "64px.",
-          "valuesByMode": {
-            "Meridian": 64.0,
-            "Ember": 64.0
-          }
+          "valuesByMode": {"Meridian": 64.0, "Ember": 64.0}
         },
         {
           "name": "space/20",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-20)"
-          },
+          "codeSyntax": {"WEB": "var(--space-20)"},
           "description": "80px.",
-          "valuesByMode": {
-            "Meridian": 80.0,
-            "Ember": 80.0
-          }
+          "valuesByMode": {"Meridian": 80.0, "Ember": 80.0}
         },
         {
           "name": "space/24",
           "type": "FLOAT",
           "scopes": ["GAP"],
-          "codeSyntax": {
-            "WEB": "var(--space-24)"
-          },
+          "codeSyntax": {"WEB": "var(--space-24)"},
           "description": "96px.",
-          "valuesByMode": {
-            "Meridian": 96.0,
-            "Ember": 96.0
-          }
+          "valuesByMode": {"Meridian": 96.0, "Ember": 96.0}
         },
         {
           "name": "size/target/min",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--size-target-min)"
-          },
+          "codeSyntax": {"WEB": "var(--size-target-min)"},
           "description": "WCAG 2.2 SC 2.5.8 minimum target (AA).",
-          "valuesByMode": {
-            "Meridian": 24.0,
-            "Ember": 24.0
-          }
+          "valuesByMode": {"Meridian": 24.0, "Ember": 24.0}
         },
         {
           "name": "size/target/comfortable",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--size-target-comfortable)"
-          },
+          "codeSyntax": {"WEB": "var(--size-target-comfortable)"},
           "description": "Touch target; Apple HIG 44pt, Material 48dp.",
-          "valuesByMode": {
-            "Meridian": 44.0,
-            "Ember": 44.0
-          }
+          "valuesByMode": {"Meridian": 44.0, "Ember": 44.0}
         },
         {
           "name": "size/icon/sm",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--size-icon-sm)"
-          },
-          "valuesByMode": {
-            "Meridian": 16.0,
-            "Ember": 16.0
-          }
+          "codeSyntax": {"WEB": "var(--size-icon-sm)"},
+          "valuesByMode": {"Meridian": 16.0, "Ember": 16.0}
         },
         {
           "name": "size/icon/md",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--size-icon-md)"
-          },
-          "valuesByMode": {
-            "Meridian": 20.0,
-            "Ember": 20.0
-          }
+          "codeSyntax": {"WEB": "var(--size-icon-md)"},
+          "valuesByMode": {"Meridian": 20.0, "Ember": 20.0}
         },
         {
           "name": "size/icon/lg",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--size-icon-lg)"
-          },
-          "valuesByMode": {
-            "Meridian": 24.0,
-            "Ember": 24.0
-          }
+          "codeSyntax": {"WEB": "var(--size-icon-lg)"},
+          "valuesByMode": {"Meridian": 24.0, "Ember": 24.0}
         },
         {
           "name": "radius/none",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-none)"
-          },
-          "valuesByMode": {
-            "Meridian": 0.0,
-            "Ember": 0.0
-          }
+          "codeSyntax": {"WEB": "var(--radius-none)"},
+          "valuesByMode": {"Meridian": 0.0, "Ember": 0.0}
         },
         {
           "name": "radius/sm",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-sm)"
-          },
+          "codeSyntax": {"WEB": "var(--radius-sm)"},
           "description": "Badges, checkboxes, small chips.",
-          "valuesByMode": {
-            "Meridian": 4.0,
-            "Ember": 4.0
-          }
+          "valuesByMode": {"Meridian": 4.0, "Ember": 4.0}
         },
         {
           "name": "radius/md",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-md)"
-          },
+          "codeSyntax": {"WEB": "var(--radius-md)"},
           "description": "Buttons and inputs.",
-          "valuesByMode": {
-            "Meridian": 8.0,
-            "Ember": 8.0
-          }
+          "valuesByMode": {"Meridian": 8.0, "Ember": 8.0}
         },
         {
           "name": "radius/lg",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-lg)"
-          },
+          "codeSyntax": {"WEB": "var(--radius-lg)"},
           "description": "Cards and panels.",
-          "valuesByMode": {
-            "Meridian": 12.0,
-            "Ember": 12.0
-          }
+          "valuesByMode": {"Meridian": 12.0, "Ember": 12.0}
         },
         {
           "name": "radius/xl",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-xl)"
-          },
+          "codeSyntax": {"WEB": "var(--radius-xl)"},
           "description": "Dialogs and sheets.",
-          "valuesByMode": {
-            "Meridian": 16.0,
-            "Ember": 16.0
-          }
+          "valuesByMode": {"Meridian": 16.0, "Ember": 16.0}
         },
         {
           "name": "radius/full",
           "type": "FLOAT",
           "scopes": ["CORNER_RADIUS"],
-          "codeSyntax": {
-            "WEB": "var(--radius-full)"
-          },
+          "codeSyntax": {"WEB": "var(--radius-full)"},
           "description": "Pills and avatars.",
-          "valuesByMode": {
-            "Meridian": 9999.0,
-            "Ember": 9999.0
-          }
+          "valuesByMode": {"Meridian": 9999.0, "Ember": 9999.0}
         },
         {
           "name": "border-width/thin",
           "type": "FLOAT",
           "scopes": ["STROKE_FLOAT"],
-          "codeSyntax": {
-            "WEB": "var(--border-width-thin)"
-          },
+          "codeSyntax": {"WEB": "var(--border-width-thin)"},
           "description": "Default borders and dividers.",
-          "valuesByMode": {
-            "Meridian": 1.0,
-            "Ember": 1.0
-          }
+          "valuesByMode": {"Meridian": 1.0, "Ember": 1.0}
         },
         {
           "name": "border-width/thick",
           "type": "FLOAT",
           "scopes": ["STROKE_FLOAT"],
-          "codeSyntax": {
-            "WEB": "var(--border-width-thick)"
-          },
+          "codeSyntax": {"WEB": "var(--border-width-thick)"},
           "description": "Focus rings, selected states, emphasis.",
-          "valuesByMode": {
-            "Meridian": 2.0,
-            "Ember": 2.0
-          }
+          "valuesByMode": {"Meridian": 2.0, "Ember": 2.0}
         },
         {
           "name": "duration/instant",
           "type": "TIMING",
-          "codeSyntax": {
-            "WEB": "var(--duration-instant)"
-          },
+          "codeSyntax": {"WEB": "var(--duration-instant)"},
           "description": "No animation; state swaps.",
-          "valuesByMode": {
-            "Meridian": 0.0,
-            "Ember": 0.0
-          }
+          "valuesByMode": {"Meridian": 0.0, "Ember": 0.0}
         },
         {
           "name": "duration/fast",
           "type": "TIMING",
-          "codeSyntax": {
-            "WEB": "var(--duration-fast)"
-          },
+          "codeSyntax": {"WEB": "var(--duration-fast)"},
           "description": "Hover, press, toggles, small fades.",
-          "valuesByMode": {
-            "Meridian": 0.12,
-            "Ember": 0.12
-          }
+          "valuesByMode": {"Meridian": 0.12, "Ember": 0.12}
         },
         {
           "name": "duration/moderate",
           "type": "TIMING",
-          "codeSyntax": {
-            "WEB": "var(--duration-moderate)"
-          },
+          "codeSyntax": {"WEB": "var(--duration-moderate)"},
           "description": "Menus, tooltips, accordions.",
-          "valuesByMode": {
-            "Meridian": 0.2,
-            "Ember": 0.2
-          }
+          "valuesByMode": {"Meridian": 0.2, "Ember": 0.2}
         },
         {
           "name": "duration/slow",
           "type": "TIMING",
-          "codeSyntax": {
-            "WEB": "var(--duration-slow)"
-          },
+          "codeSyntax": {"WEB": "var(--duration-slow)"},
           "description": "Dialogs, sheets, page-level transitions.",
-          "valuesByMode": {
-            "Meridian": 0.32,
-            "Ember": 0.32
-          }
+          "valuesByMode": {"Meridian": 0.32, "Ember": 0.32}
         },
         {
           "name": "duration/slower",
           "type": "TIMING",
-          "codeSyntax": {
-            "WEB": "var(--duration-slower)"
-          },
+          "codeSyntax": {"WEB": "var(--duration-slower)"},
           "description": "Large emphasized moves; use sparingly.",
-          "valuesByMode": {
-            "Meridian": 0.48,
-            "Ember": 0.48
-          }
+          "valuesByMode": {"Meridian": 0.48, "Ember": 0.48}
         },
         {
           "name": "ease/standard",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-standard)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-standard)"},
           "description": "Default for elements moving within the screen.",
           "valuesByMode": {
             "Meridian": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.2,
-                "y1": 0,
-                "x2": 0,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.2, "y1": 0, "x2": 0, "y2": 1}
             },
             "Ember": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.2,
-                "y1": 0,
-                "x2": 0,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.2, "y1": 0, "x2": 0, "y2": 1}
             }
           }
         },
         {
           "name": "ease/decelerate",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-decelerate)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-decelerate)"},
           "description": "Entering elements.",
           "valuesByMode": {
             "Meridian": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0,
-                "y1": 0,
-                "x2": 0,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0, "y1": 0, "x2": 0, "y2": 1}
             },
             "Ember": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0,
-                "y1": 0,
-                "x2": 0,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0, "y1": 0, "x2": 0, "y2": 1}
             }
           }
         },
         {
           "name": "ease/accelerate",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-accelerate)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-accelerate)"},
           "description": "Exiting elements.",
           "valuesByMode": {
             "Meridian": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.3,
-                "y1": 0,
-                "x2": 1,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.3, "y1": 0, "x2": 1, "y2": 1}
             },
             "Ember": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.3,
-                "y1": 0,
-                "x2": 1,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.3, "y1": 0, "x2": 1, "y2": 1}
             }
           }
         },
         {
           "name": "ease/emphasized-decelerate",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-emphasized-decelerate)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-emphasized-decelerate)"},
           "description": "Hero entrances and large surfaces arriving.",
           "valuesByMode": {
             "Meridian": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.05,
-                "y1": 0.7,
-                "x2": 0.1,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.05, "y1": 0.7, "x2": 0.1, "y2": 1}
             },
             "Ember": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.05,
-                "y1": 0.7,
-                "x2": 0.1,
-                "y2": 1
-              }
+              "easingFunctionCubicBezier": {"x1": 0.05, "y1": 0.7, "x2": 0.1, "y2": 1}
             }
           }
         },
         {
           "name": "ease/emphasized-accelerate",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-emphasized-accelerate)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-emphasized-accelerate)"},
           "description": "Large surfaces leaving.",
           "valuesByMode": {
             "Meridian": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.3,
-                "y1": 0,
-                "x2": 0.8,
-                "y2": 0.15
-              }
+              "easingFunctionCubicBezier": {"x1": 0.3, "y1": 0, "x2": 0.8, "y2": 0.15}
             },
             "Ember": {
               "type": "CUSTOM_CUBIC_BEZIER",
-              "easingFunctionCubicBezier": {
-                "x1": 0.3,
-                "y1": 0,
-                "x2": 0.8,
-                "y2": 0.15
-              }
+              "easingFunctionCubicBezier": {"x1": 0.3, "y1": 0, "x2": 0.8, "y2": 0.15}
             }
           }
         },
         {
           "name": "ease/linear",
           "type": "EASING",
-          "codeSyntax": {
-            "WEB": "var(--ease-linear)"
-          },
+          "codeSyntax": {"WEB": "var(--ease-linear)"},
           "description": "Progress, spinners, color fades.",
           "valuesByMode": {
-            "Meridian": {
-              "type": "LINEAR"
-            },
-            "Ember": {
-              "type": "LINEAR"
-            }
+            "Meridian": {"type": "LINEAR"},
+            "Ember": {"type": "LINEAR"}
           }
         },
         {
           "name": "container/sm",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--container-sm)"
-          },
-          "valuesByMode": {
-            "Meridian": 640.0,
-            "Ember": 640.0
-          }
+          "codeSyntax": {"WEB": "var(--container-sm)"},
+          "valuesByMode": {"Meridian": 640.0, "Ember": 640.0}
         },
         {
           "name": "container/md",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--container-md)"
-          },
-          "valuesByMode": {
-            "Meridian": 768.0,
-            "Ember": 768.0
-          }
+          "codeSyntax": {"WEB": "var(--container-md)"},
+          "valuesByMode": {"Meridian": 768.0, "Ember": 768.0}
         },
         {
           "name": "container/lg",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--container-lg)"
-          },
-          "valuesByMode": {
-            "Meridian": 1024.0,
-            "Ember": 1024.0
-          }
+          "codeSyntax": {"WEB": "var(--container-lg)"},
+          "valuesByMode": {"Meridian": 1024.0, "Ember": 1024.0}
         },
         {
           "name": "container/xl",
           "type": "FLOAT",
           "scopes": ["WIDTH_HEIGHT"],
-          "codeSyntax": {
-            "WEB": "var(--container-xl)"
-          },
-          "valuesByMode": {
-            "Meridian": 1280.0,
-            "Ember": 1280.0
-          }
+          "codeSyntax": {"WEB": "var(--container-xl)"},
+          "valuesByMode": {"Meridian": 1280.0, "Ember": 1280.0}
         }
       ]
     },
@@ -3881,28 +2081,17 @@
           "name": "color/bg/canvas",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-bg-canvas)"
-          },
+          "codeSyntax": {"WEB": "var(--color-bg-canvas)"},
           "description": "Page background behind everything.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/50"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/950"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             }
           }
         },
@@ -3910,28 +2099,17 @@
           "name": "color/bg/surface",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-bg-surface)"
-          },
+          "codeSyntax": {"WEB": "var(--color-bg-surface)"},
           "description": "Default container: cards, panels, table rows, inputs.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             }
           }
         },
@@ -3939,28 +2117,17 @@
           "name": "color/bg/surface-raised",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-bg-surface-raised)"
-          },
+          "codeSyntax": {"WEB": "var(--color-bg-surface-raised)"},
           "description": "Floating layers: menus, popovers, dialogs, toasts. In dark mode it is lighter than surface (elevation reads as lightness).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/850"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/850"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             }
           }
         },
@@ -3968,28 +2135,17 @@
           "name": "color/bg/sunken",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-bg-sunken)"
-          },
+          "codeSyntax": {"WEB": "var(--color-bg-sunken)"},
           "description": "Recessed wells: code blocks, table headers, disabled inputs, progress tracks.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/975"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/50"}
             }
           }
         },
@@ -3997,28 +2153,17 @@
           "name": "color/bg/inverse",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-bg-inverse)"
-          },
+          "codeSyntax": {"WEB": "var(--color-bg-inverse)"},
           "description": "Inverted surfaces: tooltips, snackbars.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/900"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/100"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/975"}
             }
           }
         },
@@ -4026,28 +2171,17 @@
           "name": "color/fg/default",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-fg-default)"
-          },
+          "codeSyntax": {"WEB": "var(--color-fg-default)"},
           "description": "Body text, headings, icons with meaning.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/900"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/100"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/975"}
             }
           }
         },
@@ -4055,28 +2189,17 @@
           "name": "color/fg/muted",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-fg-muted)"
-          },
+          "codeSyntax": {"WEB": "var(--color-fg-muted)"},
           "description": "Secondary text: captions, metadata, helper text. Still 4.5:1 (7:1 in high contrast).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/600"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/700"}
             }
           }
         },
@@ -4084,28 +2207,17 @@
           "name": "color/fg/subtle",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-fg-subtle)"
-          },
+          "codeSyntax": {"WEB": "var(--color-fg-subtle)"},
           "description": "Placeholders and non-essential text only (3:1). Never for information the user needs.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/400"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/400"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/600"}
             }
           }
         },
@@ -4113,28 +2225,17 @@
           "name": "color/fg/inverse",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-fg-inverse)"
-          },
+          "codeSyntax": {"WEB": "var(--color-fg-inverse)"},
           "description": "Text on bg-inverse.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/50"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             }
           }
         },
@@ -4142,28 +2243,17 @@
           "name": "color/fg/on-accent",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-fg-on-accent)"
-          },
+          "codeSyntax": {"WEB": "var(--color-fg-on-accent)"},
           "description": "Text and icons on accent-default, accent-hover and accent-active fills.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/950"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/white"
-              }
+              "alias": {"collection": "Primitives", "name": "color/white"}
             }
           }
         },
@@ -4171,28 +2261,17 @@
           "name": "color/border/subtle",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-border-subtle)"
-          },
+          "codeSyntax": {"WEB": "var(--color-border-subtle)"},
           "description": "Decorative dividers and card outlines (no contrast requirement).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/800"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/500"}
             }
           }
         },
@@ -4200,28 +2279,17 @@
           "name": "color/border/default",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-border-default)"
-          },
+          "codeSyntax": {"WEB": "var(--color-border-default)"},
           "description": "Component borders where the border is not the only cue.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/200"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/700"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/700"}
             }
           }
         },
@@ -4229,28 +2297,17 @@
           "name": "color/border/strong",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-border-strong)"
-          },
+          "codeSyntax": {"WEB": "var(--color-border-strong)"},
           "description": "Borders that identify a control (inputs, checkboxes, radio rings): 3:1 on canvas, WCAG 1.4.11.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/500"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/500"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/neutral/975"
-              }
+              "alias": {"collection": "Primitives", "name": "color/neutral/975"}
             }
           }
         },
@@ -4258,28 +2315,17 @@
           "name": "color/accent/default",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-accent-default)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-default)"},
           "description": "Primary action fill, selected and checked states, brand moments. Scarce: one primary per view.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/600"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/800"}
             }
           }
         },
@@ -4287,28 +2333,17 @@
           "name": "color/accent/hover",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-accent-hover)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-hover)"},
           "description": "Hover on accent fills.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/200"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/200"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/900"}
             }
           }
         },
@@ -4316,28 +2351,17 @@
           "name": "color/accent/active",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-accent-active)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-active)"},
           "description": "Pressed accent fills.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/800"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/100"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/950"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/950"}
             }
           }
         },
@@ -4345,28 +2369,17 @@
           "name": "color/accent/subtle",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-accent-subtle)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-subtle)"},
           "description": "Tinted background: selected rows, accent badges, highlighted callouts.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/50"}
             }
           }
         },
@@ -4374,28 +2387,17 @@
           "name": "color/accent/fg",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-accent-fg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-accent-fg)"},
           "description": "Accent text and icons: links, active navigation. 4.5:1 on canvas, surface and accent-subtle.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/800"}
             }
           }
         },
@@ -4403,28 +2405,17 @@
           "name": "color/success/fg",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-success-fg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-success-fg)"},
           "description": "Success text and icons; 4.5:1 on Success-bg, canvas and surface.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/800"}
             }
           }
         },
@@ -4432,28 +2423,17 @@
           "name": "color/success/bg",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-success-bg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-success-bg)"},
           "description": "Success alert and badge background.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/50"}
             }
           }
         },
@@ -4461,28 +2441,17 @@
           "name": "color/success/border",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-success-border)"
-          },
-          "description": "Success alert and badge border (decorative).",
+          "codeSyntax": {"WEB": "var(--color-success-border)"},
+          "description": "Success boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/500"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/green/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/green/700"}
             }
           }
         },
@@ -4490,28 +2459,17 @@
           "name": "color/warning/fg",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-warning-fg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-warning-fg)"},
           "description": "Warning text and icons; 4.5:1 on Warning-bg, canvas and surface.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/800"}
             }
           }
         },
@@ -4519,28 +2477,17 @@
           "name": "color/warning/bg",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-warning-bg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-warning-bg)"},
           "description": "Warning alert and badge background.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/50"}
             }
           }
         },
@@ -4548,28 +2495,17 @@
           "name": "color/warning/border",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-warning-border)"
-          },
-          "description": "Warning alert and badge border (decorative).",
+          "codeSyntax": {"WEB": "var(--color-warning-border)"},
+          "description": "Warning boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/500"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/amber/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/amber/700"}
             }
           }
         },
@@ -4577,28 +2513,17 @@
           "name": "color/danger/fg",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-danger-fg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-danger-fg)"},
           "description": "Danger text and icons; 4.5:1 on Danger-bg, canvas and surface.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/800"}
             }
           }
         },
@@ -4606,28 +2531,17 @@
           "name": "color/danger/bg",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-danger-bg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-danger-bg)"},
           "description": "Danger alert and badge background.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/50"}
             }
           }
         },
@@ -4635,28 +2549,17 @@
           "name": "color/danger/border",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-danger-border)"
-          },
-          "description": "Danger alert and badge border (decorative).",
+          "codeSyntax": {"WEB": "var(--color-danger-border)"},
+          "description": "Danger boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/500"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/red/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/red/700"}
             }
           }
         },
@@ -4664,28 +2567,17 @@
           "name": "color/info/fg",
           "type": "COLOR",
           "scopes": ["TEXT_FILL", "SHAPE_FILL", "STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-info-fg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-info-fg)"},
           "description": "Info text and icons; 4.5:1 on Info-bg, canvas and surface.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/700"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/800"}
             }
           }
         },
@@ -4693,28 +2585,17 @@
           "name": "color/info/bg",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-info-bg)"
-          },
+          "codeSyntax": {"WEB": "var(--color-info-bg)"},
           "description": "Info alert and badge background.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/100"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/100"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/900"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/900"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/50"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/50"}
             }
           }
         },
@@ -4722,28 +2603,17 @@
           "name": "color/info/border",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-info-border)"
-          },
-          "description": "Info alert and badge border (decorative).",
+          "codeSyntax": {"WEB": "var(--color-info-border)"},
+          "description": "Info boundary for alerts, badges and invalid inputs; 3:1 or more on canvas and surface (WCAG 1.4.11).",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/500"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/500"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/blue/700"
-              }
+              "alias": {"collection": "Primitives", "name": "color/blue/700"}
             }
           }
         },
@@ -4751,28 +2621,17 @@
           "name": "color/focus-ring",
           "type": "COLOR",
           "scopes": ["STROKE_COLOR", "EFFECT_COLOR"],
-          "codeSyntax": {
-            "WEB": "var(--color-focus-ring)"
-          },
+          "codeSyntax": {"WEB": "var(--color-focus-ring)"},
           "description": "Focus outline (2px, offset 2px): 3:1 against canvas, surface and raised surfaces.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/600"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/600"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/300"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/300"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/accent/800"
-              }
+              "alias": {"collection": "Primitives", "name": "color/accent/800"}
             }
           }
         },
@@ -4780,28 +2639,17 @@
           "name": "color/overlay-scrim",
           "type": "COLOR",
           "scopes": ["FRAME_FILL", "SHAPE_FILL"],
-          "codeSyntax": {
-            "WEB": "var(--color-overlay-scrim)"
-          },
+          "codeSyntax": {"WEB": "var(--color-overlay-scrim)"},
           "description": "Modal backdrop.",
           "valuesByMode": {
             "Light": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/alpha/black-48"
-              }
+              "alias": {"collection": "Primitives", "name": "color/alpha/black-48"}
             },
             "Dark": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/alpha/black-64"
-              }
+              "alias": {"collection": "Primitives", "name": "color/alpha/black-64"}
             },
             "High contrast": {
-              "alias": {
-                "collection": "Primitives",
-                "name": "color/alpha/black-64"
-              }
+              "alias": {"collection": "Primitives", "name": "color/alpha/black-64"}
             }
           }
         }
@@ -4815,6 +2663,7 @@
     "gutter": "clamp() is CSS-only; use 16-32px layout grid gutters.",
     "z": "stacking order has no Figma variable.",
     "breakpoint": "media-query values; used for frame widths only.",
-    "shadow": "composite values; build Figma effect styles from tokens.resolved.json (values differ per mode)."
+    "shadow": "composite values; build Figma effect styles from tokens.resolved.json (values differ per mode).",
+    "elevation": "raw shadow sets behind shadow.*; same as above."
   }
 }

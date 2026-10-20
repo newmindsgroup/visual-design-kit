@@ -99,7 +99,8 @@ APCA (Accessible Perceptual Contrast Algorithm) models perceived contrast from t
 | 30 | Minimum for any text: placeholders, disabled text, fine print that is not essential |
 | 15 | Minimum for non-text that must be discernible: dividers, focus-adjacent outlines |
 
-- Where APCA helps most: dark mode (WCAG 2 tends to overrate dark-on-black pairs and underrate some light-on-saturated pairs) and thin or small type.
+- Where APCA helps most: dark mode (WCAG 2 tends to overrate contrast between two dark colors, such as dark gray text on near-black, and to underrate white text on some saturated mid-tones such as orange) and thin or small type.
+- Computed example: white on `#E8730C` is 3.05:1 (fails WCAG for body text) but Lc -62.0, while black on the same orange is 6.89:1 but only Lc 47.4; `#555555` on black is 2.82:1 yet only Lc -16.1. When the two disagree, meet WCAG 2.2 and use APCA to choose among passing options.
 - Compute it with `python3 ../../../library/scripts/color_tools.py apca '<text>' '<background>'` (text color first). Read the current guidance at the APCA project before relying on exact thresholds.
 
 ## Testing workflow

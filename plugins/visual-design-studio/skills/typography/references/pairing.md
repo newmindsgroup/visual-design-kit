@@ -21,7 +21,7 @@ Inter is excellent for dense product UI: large x-height, tabular figures, a slas
 
 ## Thirty vetted OFL pairings
 
-Heading face first, text and UI face second. Atlas IDs refer to `style.*` entries; read them with `python3 ../../../library/scripts/atlas.py show <id>`.
+Heading face first, text and UI face second. Atlas IDs refer to `style.*` entries; read them with `python3 ../../../library/scripts/atlas.py show <id>`. The kit's reference brands use two of these systems: Meridian sets Schibsted Grotesk, Source Sans 3 and JetBrains Mono; Ember sets Fraunces, Figtree and IBM Plex Mono (`--font-family-display`, `--font-family-body`, `--font-family-mono`).
 
 ### Serif with sans
 

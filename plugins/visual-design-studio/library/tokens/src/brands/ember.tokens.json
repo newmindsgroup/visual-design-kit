@@ -1,101 +1,45 @@
 {
   "$description": "Ember brand: warm vermilion accent, warm sand neutrals, Fraunces display with Figtree body. Applied with data-brand=\"ember\". Only brandable primitives may be overridden here.",
   "$extensions": {
-    "com.github.newmindsgroup.vdk": {
-      "name": "Ember"
-    }
+    "com.github.newmindsgroup.vdk": {"name": "Ember"}
   },
   "color": {
     "$type": "color",
     "neutral": {
-      "50": {
-        "$value": "{color.sand.50}"
-      },
-      "100": {
-        "$value": "{color.sand.100}"
-      },
-      "200": {
-        "$value": "{color.sand.200}"
-      },
-      "300": {
-        "$value": "{color.sand.300}"
-      },
-      "400": {
-        "$value": "{color.sand.400}"
-      },
-      "500": {
-        "$value": "{color.sand.500}"
-      },
-      "600": {
-        "$value": "{color.sand.600}"
-      },
-      "700": {
-        "$value": "{color.sand.700}"
-      },
-      "800": {
-        "$value": "{color.sand.800}"
-      },
-      "850": {
-        "$value": "{color.sand.850}"
-      },
-      "900": {
-        "$value": "{color.sand.900}"
-      },
-      "950": {
-        "$value": "{color.sand.950}"
-      },
-      "975": {
-        "$value": "{color.sand.975}"
-      }
+      "50": {"$value": "{color.sand.50}"},
+      "100": {"$value": "{color.sand.100}"},
+      "200": {"$value": "{color.sand.200}"},
+      "300": {"$value": "{color.sand.300}"},
+      "400": {"$value": "{color.sand.400}"},
+      "500": {"$value": "{color.sand.500}"},
+      "600": {"$value": "{color.sand.600}"},
+      "700": {"$value": "{color.sand.700}"},
+      "800": {"$value": "{color.sand.800}"},
+      "850": {"$value": "{color.sand.850}"},
+      "900": {"$value": "{color.sand.900}"},
+      "950": {"$value": "{color.sand.950}"},
+      "975": {"$value": "{color.sand.975}"}
     },
     "accent": {
-      "50": {
-        "$value": "{color.vermilion.50}"
-      },
-      "100": {
-        "$value": "{color.vermilion.100}"
-      },
-      "200": {
-        "$value": "{color.vermilion.200}"
-      },
-      "300": {
-        "$value": "{color.vermilion.300}"
-      },
-      "400": {
-        "$value": "{color.vermilion.400}"
-      },
-      "500": {
-        "$value": "{color.vermilion.500}"
-      },
-      "600": {
-        "$value": "{color.vermilion.600}"
-      },
-      "700": {
-        "$value": "{color.vermilion.700}"
-      },
-      "800": {
-        "$value": "{color.vermilion.800}"
-      },
-      "900": {
-        "$value": "{color.vermilion.900}"
-      },
-      "950": {
-        "$value": "{color.vermilion.950}"
-      }
+      "50": {"$value": "{color.vermilion.50}"},
+      "100": {"$value": "{color.vermilion.100}"},
+      "200": {"$value": "{color.vermilion.200}"},
+      "300": {"$value": "{color.vermilion.300}"},
+      "400": {"$value": "{color.vermilion.400}"},
+      "500": {"$value": "{color.vermilion.500}"},
+      "600": {"$value": "{color.vermilion.600}"},
+      "700": {"$value": "{color.vermilion.700}"},
+      "800": {"$value": "{color.vermilion.800}"},
+      "900": {"$value": "{color.vermilion.900}"},
+      "950": {"$value": "{color.vermilion.950}"}
     }
   },
   "font": {
     "family": {
       "$type": "fontFamily",
-      "display": {
-        "$value": "{font.stack.fraunces}"
-      },
-      "body": {
-        "$value": "{font.stack.figtree}"
-      },
-      "mono": {
-        "$value": "{font.stack.ibm-plex-mono}"
-      }
+      "display": {"$value": "{font.stack.fraunces}"},
+      "body": {"$value": "{font.stack.figtree}"},
+      "mono": {"$value": "{font.stack.ibm-plex-mono}"}
     }
   }
 }

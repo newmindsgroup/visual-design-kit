@@ -474,7 +474,7 @@ async function main() {
       'Contrast is measured only where every layer behind the text is a solid color; text over images, gradients, filters or overlapping media is counted as unmeasured. Check those by eye or with a pixel picker.',
       'Single-word last lines are whitespace-based review candidates (same method as library/scripts/wrap-diagnostics.js), not typographic verdicts; forcedBreak marks deliberate <br> breaks.',
       'Finite CSS/Web animations are finished before measuring; scroll-triggered states are captured after one scroll pass.',
-      'axe-core finds roughly a third to a half of WCAG issues; keyboard, screen reader and zoom checks stay manual.',
+      'axe-core catches only part of WCAG issues (published estimates about 30-57%); keyboard, screen reader and zoom checks stay manual.',
     ] };
 
   for (const size of opts.sizes) {

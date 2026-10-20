@@ -27,8 +27,11 @@ import sys
 from collections import OrderedDict
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import color_tools  # noqa: E402
+try:
+    from . import color_tools  # imported as scripts.tokens (tests)
+except ImportError:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import color_tools  # noqa: E402  run as a script
 
 NS = "com.github.newmindsgroup.vdk"
 LIBRARY = Path(__file__).resolve().parent.parent
@@ -152,6 +155,9 @@ GUARANTEES = [
      None),
 ] + [
     (f"color.{s}.fg", ("color.bg.canvas", "color.bg.surface"), 4.5, "kit", f"inline {s} text", None) for s in STATUS
+] + [
+    (f"color.{s}.border", ("color.bg.canvas", "color.bg.surface"), 3.0, "kit",
+     f"{s} boundaries and invalid-input borders (WCAG 1.4.11)", None) for s in STATUS
 ]
 
 # Tailwind v4 mapping: (comment, [(theme variable, token CSS variable or literal)]).
@@ -839,12 +845,17 @@ def _px(value):
 # ---------------------------------------------------------------------------
 
 def dump_json(data):
-    """Pretty JSON with short scalar arrays kept on one line. Deterministic."""
+    """Pretty JSON; short arrays and objects of scalars stay on one line. Deterministic."""
     def render(value, level):
         pad = "  " * level
         if isinstance(value, dict):
             if not value:
                 return "{}"
+            if all(not isinstance(v, (dict, list)) for v in value.values()):
+                inline = "{" + ", ".join(f"{json.dumps(k, ensure_ascii=False)}: {json.dumps(v, ensure_ascii=False)}"
+                                         for k, v in value.items()) + "}"
+                if len(inline) <= 110 and "$description" not in value:
+                    return inline
             items = [f'{pad}  {json.dumps(k, ensure_ascii=False)}: {render(v, level + 1)}' for k, v in value.items()]
             return "{\n" + ",\n".join(items) + f"\n{pad}}}"
         if isinstance(value, list):
@@ -931,6 +942,7 @@ FIGMA_SKIPPED = OrderedDict([
     ("z", "stacking order has no Figma variable."),
     ("breakpoint", "media-query values; used for frame widths only."),
     ("shadow", "composite values; build Figma effect styles from tokens.resolved.json (values differ per mode)."),
+    ("elevation", "raw shadow sets behind shadow.*; same as above."),
 ])
 
 

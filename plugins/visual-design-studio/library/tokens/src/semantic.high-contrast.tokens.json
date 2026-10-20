@@ -1,10 +1,7 @@
 {
   "$description": "High-contrast mode (light based) for prefers-contrast: more or data-theme=\"high-contrast\". White surfaces, near-black text, body and secondary text at 7:1 or more, strong borders, darkest accent steps.",
   "$extensions": {
-    "com.github.newmindsgroup.vdk": {
-      "name": "High contrast",
-      "colorScheme": "light"
-    }
+    "com.github.newmindsgroup.vdk": {"name": "High contrast", "colorScheme": "light"}
   },
   "color": {
     "$type": "color",
@@ -156,70 +153,9 @@
   "shadow": {
     "$type": "shadow",
     "$description": "Elevation. Pair with surface-raised; in dark mode lightness carries elevation and shadows only separate edges.",
-    "sm": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-16}",
-          "offsetX": "0px",
-          "offsetY": "1px",
-          "blur": "2px",
-          "spread": "0px"
-        }
-      ]
-    },
-    "md": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-12}",
-          "offsetX": "0px",
-          "offsetY": "1px",
-          "blur": "2px",
-          "spread": "0px"
-        },
-        {
-          "color": "{color.alpha.black-16}",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "8px",
-          "spread": "-2px"
-        }
-      ]
-    },
-    "lg": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-12}",
-          "offsetX": "0px",
-          "offsetY": "2px",
-          "blur": "4px",
-          "spread": "-1px"
-        },
-        {
-          "color": "{color.alpha.black-24}",
-          "offsetX": "0px",
-          "offsetY": "12px",
-          "blur": "24px",
-          "spread": "-6px"
-        }
-      ]
-    },
-    "xl": {
-      "$value": [
-        {
-          "color": "{color.alpha.black-16}",
-          "offsetX": "0px",
-          "offsetY": "4px",
-          "blur": "8px",
-          "spread": "-2px"
-        },
-        {
-          "color": "{color.alpha.black-32}",
-          "offsetX": "0px",
-          "offsetY": "24px",
-          "blur": "48px",
-          "spread": "-12px"
-        }
-      ]
-    }
+    "sm": {"$value": "{elevation.firm.sm}"},
+    "md": {"$value": "{elevation.firm.md}"},
+    "lg": {"$value": "{elevation.firm.lg}"},
+    "xl": {"$value": "{elevation.firm.xl}"}
   }
 }

@@ -92,11 +92,11 @@ Production notes:
 - Record every value in one table per color so suppliers never convert on their own:
 
 ```text
-Meridian Teal
-  Screen   HEX #047879   sRGB 4 120 121   OKLCH 0.52 0.088 195
+Meridian Teal (UI accent, teal 600)
+  Screen   HEX #006C6C   sRGB 0 108 108   OKLCH 0.481 0.082 195
   Print    Pantone ____ C / ____ U (approved on stock, date)   CMYK __ __ __ __ (profile: FOGRA51)
   Other    RAL ____   Vinyl ____   Thread ____
-  Usage    Logo, primary buttons, section fields. Text on it: white (5.29:1).
+  Usage    Primary buttons, links (teal 700), section fields. Text on it: white (6.25:1).
 ```
 
 Leave the Pantone and CMYK fields blank until they are matched and proofed; never guess them from hex.

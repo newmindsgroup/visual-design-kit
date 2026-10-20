@@ -8,52 +8,54 @@ Dark mode is a second palette designed for low light, not an inversion. Surfaces
 
 | Decision | Default | Change when |
 | --- | --- | --- |
-| Canvas | OKLCH L 0.18-0.20, tinted chroma 0.005-0.012 | OLED media and video apps may use true black #000000 for the canvas only |
-| Elevation | +0.03 L per level: canvas 0.18, surface 0.21, raised 0.24, overlay 0.27 | Dense tools can compress to +0.02 |
-| Primary text | L 0.93-0.95 (off-white), never pure #FFFFFF on large areas of text | High-contrast mode: pure white allowed |
-| Secondary text | L 0.74-0.78 | |
-| Accent | Raise L to 0.72-0.80, cut chroma 10-30% from the light-mode fill | Brand insists on its exact hue: keep the hue, adjust L and C |
-| Text on accent | Dark text (canvas color) on the light accent | |
+| Canvas | OKLCH L 0.15-0.20, tinted chroma 0.005-0.015 (Meridian: slate 950, L 0.165) | OLED media and video apps may use true black #000000 for the canvas only |
+| Elevation | About +0.045 L per level above the canvas: canvas 950 (0.165), surface 900 (0.210), raised 850 (0.256); sunken 975 (0.143) sits below | Dense tools can compress to +0.02-0.03 |
+| Primary text | L 0.92-0.95 (off-white), never pure #FFFFFF on large areas of text | High-contrast mode: pure white allowed |
+| Secondary text | L 0.72-0.78 | |
+| Accent | A light step (300 in the kit, L about 0.75) instead of the light-mode 600; avoid the most saturated midtones (400-500) for large fills | A fill still vibrates: lower its chroma 10-20% at the same L |
+| Text on accent | Dark text (the canvas color) on the light accent | |
 | Shadows | Replace with 1px borders (`--color-border-subtle`) plus a lighter surface; keep shadows only under overlays, darker and larger | |
 | Images | Dim bright photos 5-15%, swap illustrations with light backgrounds, provide dark logo variants | |
 
-## Worked dark token set (Meridian-style teal, hue 195)
+## Worked example: the kit's Meridian dark set
 
-All values computed; ratios are WCAG 2.2.
+Values from the shipped tokens (`semantic.dark.tokens.json` with Meridian's slate and teal); ratios are WCAG 2.2, computed.
 
-| Token | OKLCH | Hex |
-| --- | --- | --- |
-| `--color-bg-sunken` | 0.15 0.008 195 | #070C0C |
-| `--color-bg-canvas` | 0.18 0.008 195 | #0E1313 |
-| `--color-bg-surface` | 0.21 0.008 195 | #141919 |
-| `--color-bg-surface-raised` | 0.24 0.008 195 | #1B2020 |
-| `--color-bg-inverse` | 0.94 0.006 195 | #E7ECEC |
-| `--color-border-subtle` | 0.30 0.008 195 | #292F2F |
-| `--color-border-default` | 0.37 0.008 195 | #3B4141 |
-| `--color-border-strong` | 0.54 0.008 195 | #6A7070 |
-| `--color-fg-default` | 0.94 0.006 195 | #E7ECEC |
-| `--color-fg-muted` | 0.76 0.006 195 | #ADB2B2 |
-| `--color-fg-subtle` | 0.62 0.006 195 | #828787 |
-| `--color-fg-on-accent` | 0.18 0.008 195 | #0E1313 |
-| `--color-accent-default` | 0.75 0.11 195 | #43C3C3 |
-| `--color-accent-hover` | 0.80 0.10 195 | #65D2D2 |
-| `--color-accent-active` | 0.85 0.09 195 | #82E1E0 |
-| `--color-accent-subtle` | 0.29 0.045 195 | #073232 |
-| `--color-accent-fg` | 0.80 0.10 195 | #65D2D2 |
-| `--color-focus-ring` | 0.78 0.11 195 | #4FCDCD |
+| Token | Primitive | Hex | OKLCH |
+| --- | --- | --- | --- |
+| `--color-bg-sunken` | neutral 975 | #070A0D | 0.143 0.009 246 |
+| `--color-bg-canvas` | neutral 950 | #0B0F12 | 0.165 0.009 241 |
+| `--color-bg-surface` | neutral 900 | #14191D | 0.210 0.011 242 |
+| `--color-bg-surface-raised` | neutral 850 | #1E2429 | 0.256 0.013 243 |
+| `--color-bg-inverse` | neutral 100 | #E2E9EF | 0.930 0.011 244 |
+| `--color-border-subtle` | neutral 800 | #282F35 | 0.301 0.015 244 |
+| `--color-border-default` | neutral 700 | #3E464D | 0.390 0.016 245 |
+| `--color-border-strong` | neutral 500 | #6F7982 | 0.571 0.018 245 |
+| `--color-fg-default` | neutral 100 | #E2E9EF | 0.930 0.011 244 |
+| `--color-fg-muted` | neutral 300 | #A6AFB8 | 0.750 0.016 248 |
+| `--color-fg-subtle` | neutral 400 | #8A949D | 0.661 0.018 245 |
+| `--color-fg-on-accent` | neutral 950 | #0B0F12 | 0.165 0.009 241 |
+| `--color-accent-default` | accent 300 | #4FC2C2 | 0.749 0.103 195 |
+| `--color-accent-hover` | accent 200 | #88DCDB | 0.841 0.082 195 |
+| `--color-accent-active` | accent 100 | #C3F3F2 | 0.931 0.049 195 |
+| `--color-accent-subtle` | accent 900 | #001D1D | 0.209 0.036 195 |
+| `--color-accent-fg` | accent 300 | #4FC2C2 | 0.749 0.103 195 |
+| `--color-focus-ring` | accent 300 | #4FC2C2 | 0.749 0.103 195 |
 
-Pairs: fg-default on canvas 15.70:1 and on raised 13.82:1; fg-muted on canvas 8.73:1 and on raised 7.68:1; fg-subtle on raised 4.52:1; on-accent text on accent default, hover, active 8.77, 10.44, 12.30:1; accent-fg on accent-subtle 7.74:1; border-strong on canvas 3.71:1; focus ring on raised 8.59:1. Border-default on canvas is 1.80:1, fine for decoration, not for input outlines.
+Pairs: fg-default on canvas 15.70:1 and on raised 12.79:1; fg-muted on canvas 8.66:1 and on raised 7.05:1; fg-subtle on raised 5.08:1; on-accent text on accent default, hover, active 9.01, 12.19, 15.97:1; accent-fg on accent-subtle 8.23:1; border-strong on canvas 4.34:1; focus ring on raised 7.34:1. Border-default on canvas is 2.01:1: fine for card edges, not for input outlines.
 
-Why not reuse the light accent: `#047879` on the dark canvas is only 3.54:1, so it fails as link text and looks muddy as a fill.
+Why not reuse the light accent: teal 600 `#006C6C` on the dark canvas is only 3.08:1, so it fails as link text and looks muddy as a fill.
 
 ### Dark status colors
 
-| Status | fg | bg | border | fg on bg | border on canvas |
-| --- | --- | --- | --- | --- | --- |
-| Success | #7CD591 (0.80 0.13 150) | #152D1A (0.27 0.045 150) | #579766 (0.62 0.10 150) | 8.29:1 | 5.37:1 |
-| Warning | #EEB154 (0.80 0.13 75) | #33230A (0.27 0.045 75) | #A97D3A (0.62 0.10 75) | 7.98:1 | 5.07:1 |
-| Danger | #FFA098 (0.80 0.15 25) | #3A1D1B (0.27 0.045 25) | #BB6D67 (0.62 0.10 25) | 7.83:1 | 4.90:1 |
-| Info | #89C3FE (0.80 0.12 250) | #14283C (0.27 0.045 250) | #558AC0 (0.62 0.10 250) | 8.08:1 | 5.16:1 |
+| Status | fg (300) | bg (900) | fg on bg |
+| --- | --- | --- | --- |
+| Success | #6DC582 | #001F09 | 8.30:1 |
+| Warning | #DEA137 | #281200 | 7.87:1 |
+| Danger | #FF8382 | #350206 | 7.59:1 |
+| Info | #73B1FF | #021835 | 7.99:1 |
+
+The dark status `border` tokens (700 steps) are about 2:1 on the canvas: decorative edges only. An invalid field's border uses `--color-danger-fg` so it clears 3:1.
 
 ## Off-black and off-white reference values
 
@@ -63,7 +65,7 @@ Why not reuse the light accent: `#047879` on the dark canvas is only 3.54:1, so 
 | #09090B | 19.90:1 | 17.77:1 | 16.24:1 | Near-black, neutral |
 | #121212 | 18.73:1 | 16.73:1 | 15.29:1 | Material Design's dark-theme baseline surface |
 | #18181B | 17.72:1 | 15.83:1 | 14.46:1 | Common zinc near-black |
-| #1C1C1E | 17.01:1 | 15.20:1 | 13.89:1 | Apple's elevated dark background (system gray 6) |
+| #1C1C1E | 17.01:1 | 15.20:1 | 13.89:1 | Apple's secondary dark background (system gray 6) |
 | #2C2C2E | 13.94:1 | 12.45:1 | 11.37:1 | Apple's tertiary dark background |
 
 Pure white on pure black can cause halation (a glow around letters), especially for readers with astigmatism; off-white on off-black reads calmer while still exceeding 15:1.
