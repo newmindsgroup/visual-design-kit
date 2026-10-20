@@ -1,13 +1,13 @@
 ---
 name: ux-design
 description: >-
-  Plans and runs UX research, usability tests and heuristic reviews; builds personas, jobs to be done, journey maps,
-  service blueprints, user flows and information architecture; applies UX laws, measures with SUS, SEQ and HEART, and
-  writes content design. Use when planning interviews or surveys, testing a prototype, auditing usability, structuring a
-  sitemap or navigation, mapping a journey or flow, setting UX metrics, or writing microcopy and error messages.
+  Load before designing or reviewing any flow, form, onboarding, navigation or content for real users, especially
+  low-literacy, older, neurodivergent, child or other specific audiences. Covers research and usability tests,
+  heuristic reviews, personas and jobs to be done, journeys and service blueprints, information architecture, UX laws,
+  SUS, SEQ and HEART metrics, plain language and reading level, and microcopy and error messages.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
 ---
 

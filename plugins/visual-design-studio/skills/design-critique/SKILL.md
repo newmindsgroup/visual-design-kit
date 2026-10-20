@@ -1,10 +1,14 @@
 ---
 name: design-critique
 description: >-
-  Renders a design at real sizes, screenshots it, scores it against a 12-criterion rubric, lists up to five prioritized fixes, then revises and re-renders until the target is met. Includes a catalog of generic-AI design tells, the name-swap and squint tests, and a 15-minute accessibility audit. Use when reviewing, critiquing, QA-ing or polishing any page, screen, deck, social post, stylescape or brand asset; when asked "is this good", "make it better" or "does this look AI-made"; or before delivering work to a client.
+  Load before reviewing, critiquing, QA-ing or polishing any design, including one only described in words: page,
+  screen, pricing table, deck, social post, stylescape or brand asset. Renders at real sizes, scores a 12-criterion
+  rubric, names generic-AI tells, runs the name-swap and squint tests and a 15-minute accessibility audit, gives at
+  most five prioritized fixes, checks build fidelity against the approved design, and revises until the target is met.
+  Also for "is this good" or "does this look AI-made".
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:32:54 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:32:54 UTC"
 ---
 

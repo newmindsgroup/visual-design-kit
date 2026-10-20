@@ -1,14 +1,14 @@
 ---
 name: design-director
 description: >-
-  Turn any design brief into the best design solution. Extracts every variable (industry, market, audience, archetype,
-  price tier, channel, constraints), asks only the questions that change the answer, queries the Design Space Atlas,
-  generates 3-5 deliberately different directions, renders them as stylescapes, scores them with a weighted matrix and
-  recommends one with reasoning. Use at the start of any brand, website, app, campaign, packaging, motion or design-system
-  work, when choosing a visual direction or style, or when asked "what should this look like?"
+  Load first for any brand, website, app, campaign, packaging, motion or design-system brief, or when asked what
+  something should look like. Extracts every variable (industry, market, audience, archetype, price tier, channel,
+  constraints), asks at most 4 questions that change the answer, queries the Design Space Atlas, builds 3-5 distinct
+  directions with named fonts and hex colors, renders stylescapes, scores them with weights and a sensitivity check,
+  and recommends one with a runner-up.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:05:00 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:05:00 UTC"
 ---
 
@@ -32,7 +32,10 @@ Great design is the right answer to a specific brief, chosen from real alternati
 
 - **Reply in the user's language.** The market decides the language of sample brand copy (headlines, CTAs), not of your answer. Gloss foreign-language samples in the user's language.
 - **Every direction carries specifics, even in a short answer:** two named typefaces (display and text), 3-5 colors as hex with roles, one layout idea, one imagery idea and one line of sample copy. Cut prose before you cut specifics; an adjective-only direction is not a direction.
-- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). In a short answer, keep the table to the criteria and totals.
+- **Ask at most 4 qualifying questions**, each with options and a recommended answer, and only when two plausible answers lead to different designs. State every other assumption in one line. A long questionnaire is a failure even when every question is reasonable.
+- **Prove the directions differ:** one line or a small table naming, for each pair, at least 3 of the 6 axes (type, palette, layout logic, imagery, motion, voice) on which they differ.
+- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). State the weights. In a short answer, keep the table to the criteria and totals.
+- **Always include a one-line sensitivity check**: whether a plausible weight change flips the winner, naming the criterion ("B wins unless differentiation weighs less than 15%").
 
 ## Workflow
 

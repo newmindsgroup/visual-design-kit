@@ -36,7 +36,7 @@ Excellent identity work starts from a position a competitor could not sign, turn
 
 ## Workflow
 
-1. **Extract the variables.** Industry, markets and scripts, audience, archetype, price tier, channels, existing equity, media budget. Run the atlas query below and read the 3-5 entries it returns.
+1. **Extract the variables.** Industry, markets and scripts, audience, archetype, price tier, channels, existing equity, media budget. Run the atlas query below and read the 3-5 entries it returns. When the brief is thin ("design us a logo"), ask at most 4 questions, each with options and a recommendation (name and what you do, audience, personality versus competitors, main use), state the rest as assumptions, and offer to proceed on them.
 2. **Strategy.** Competitor audit (8-15 brands), perceptual map, positioning statement, platform and an attribute-to-design translation table. See [strategy and positioning](references/strategy-and-positioning.md).
 3. **Name**, if needed: territories, generation, linguistic and trademark knockout screens. See [naming](references/naming.md).
 4. **Explore.** 50-100 thumbnails, cluster them, pick 3 territories that differ in idea. See [concept exploration](references/logo-design.md#concept-exploration-to-three-territories).

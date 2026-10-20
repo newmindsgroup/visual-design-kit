@@ -1,14 +1,14 @@
 ---
 name: print-packaging-social
 description: >-
-  Produces print, packaging, social, out-of-home, presentation and email work to production spec: bleed, safe zones,
-  300ppi, CMYK profiles and ink limits, PDF/X preflight, dielines, barcodes and shelf tests, dated social formats with
-  9:16 safe areas, billboard letter heights and dwell times, 16:9 decks and bulletproof email. Use when making a flyer,
-  brochure, business card, poster, package, label, social post, carousel, story or reel cover, billboard, digital
-  signage loop, slide deck or email template.
+  Load before answering any print, packaging, label, barcode, social, out-of-home, slide-deck or email design
+  question, even a quick one. Gives production specs: bleed, safe zones, 300ppi, CMYK profiles and ink limits, PDF/X
+  preflight, dielines, barcode sizes and quiet zones, shelf tests, value versus premium pack cues, dated social
+  formats with 9:16 safe areas, billboard letter heights, 16:9 decks and bulletproof email including dark-mode
+  handling.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-10-20 11:40:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
 ---
 
