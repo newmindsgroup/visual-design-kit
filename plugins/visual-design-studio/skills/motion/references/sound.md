@@ -35,6 +35,18 @@ Sound is the most intrusive layer of motion design: it reaches people who are no
 - **Sync with motion:** start the sound on the visual contact frame (the check completes, the card lands), not when the animation starts. Keep it within one frame at 30fps. For audio-video sync in broadcast, ITU-R BT.1359 puts detectability at roughly 45ms of audio lead and 125ms of audio lag; verify against the recommendation if you are specifying tolerances.
 - **Haptics:** pair them on the same frame. iOS offers `UIImpactFeedbackGenerator`, `UISelectionFeedbackGenerator` and `UINotificationFeedbackGenerator`, plus Core Haptics for custom patterns. Android offers `HapticFeedbackConstants` (for example `CONFIRM` and `REJECT` on API 30+). Follow the platform's guidance (Apple HIG: Playing haptics; Material Design).
 
+## A starter UI sound set
+
+| Role | Event | Length | Character | Haptic pairing |
+| --- | --- | --- | --- | --- |
+| `ui.confirm` | Saved, sent, paid | 120-250ms | Two rising notes, soft attack | Success notification or light impact |
+| `ui.error` | Failed action, declined payment | 150-300ms | Two falling notes, muted, never harsh | Error notification |
+| `ui.toggle` | Switch on or off (only where sound is part of the product) | 30-80ms | A single tick, a higher pitch for on | Selection |
+| `notify.message` | Incoming message | 300-600ms | Distinct contour, recognizable at low volume | Per the platform's notification haptics |
+| `notify.critical` | Security alert, timer, alarm | 600-1200ms, may repeat | Clearly different in pitch and rhythm from everything else | Strong, repeating pattern |
+
+Start with no sound and add roles only when the brief justifies them. Most products need two or three at most.
+
 ## Loudness and levels for UI sounds
 
 - Match the set to itself: measure each sound with a momentary or short-term loudness meter and keep them within about 1-2 LU of each other, so no sound jumps out. Critical alerts may sit a little louder. This is common practice rather than a standard.

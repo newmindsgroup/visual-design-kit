@@ -7,7 +7,7 @@ summary: Hangul-script, hyper-connected mobile market where KakaoTalk, Naver and
 tags: [korea, south korea, korean, hangul, ko-kr, kakaotalk, naver, toss, pipa, pretendard]
 pairs_with: [industry.fintech-banking, industry.beauty-cosmetics, industry.ecommerce-dtc, industry.gaming-esports, industry.media-entertainment-streaming, industry.fashion-apparel, style.vibrant-gradient-saas, style.playful-bubbly, style.y2k-cyber, channel.native-app, channel.social-media]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # South Korea

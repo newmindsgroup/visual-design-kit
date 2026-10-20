@@ -7,7 +7,7 @@ summary: English-language British and Irish markets with distinct spelling, GBP 
 tags: [uk, ireland, britain, en-gb, gov.uk, uk gdpr, pecr, eircode, faster payments, open banking]
 pairs_with: [industry.fintech-banking, industry.government-civic, industry.legal-professional-services, industry.hotels-travel, style.civic-plain, style.editorial-magazine, style.swiss-international, channel.marketing-website, channel.web-app, audience.older-adults]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # United Kingdom and Ireland

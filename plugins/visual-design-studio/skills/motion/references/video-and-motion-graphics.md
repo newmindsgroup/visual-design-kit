@@ -29,7 +29,7 @@ wiggle(1.5, 12)
 ```
 
 ```js
-// Seamless looping wiggle over 4 seconds
+// Looping wiggle that joins cleanly every 4 seconds
 freq = 1; amp = 12; loopTime = 4;
 t = time % loopTime;
 w1 = wiggle(freq, amp, 1, 0.5, t);

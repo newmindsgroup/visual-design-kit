@@ -7,7 +7,7 @@ summary: English-language, high-income Pacific markets with relaxed tone, tap-to
 tags: [australia, new zealand, aotearoa, anz, en-au, en-nz, te reo maori, first nations, afterpay, gst]
 pairs_with: [industry.fintech-banking, industry.real-estate-proptech, industry.hotels-travel, industry.sports-fitness, industry.government-civic, industry.energy-climate, style.eco-natural-sustainable, style.civic-plain, style.handcrafted-organic, channel.marketing-website, channel.native-app]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Australia and New Zealand
@@ -98,7 +98,7 @@ version_timestamp: __TS__
 
 - Australian Government Style Manual (stylemanual.gov.au) and the GOLD Design System
 - NZ Government Web Standards and Web Toolkit (digital.govt.nz); Te Taura Whiri i te Reo Māori (Māori Language Commission) for te reo usage
-- Australia Council for the Arts, *Protocols for using First Nations Cultural and Intellectual Property in the Arts*; Terri Janke and Company (ICIP guidance)
+- Creative Australia (formerly the Australia Council), *Protocols for using First Nations Cultural and Intellectual Property in the Arts*; Terri Janke and Company (ICIP guidance)
 - OAIC (oaic.gov.au), NZ Office of the Privacy Commissioner (privacy.org.nz), ACCC and Commerce Commission guidance
 - eSafety Commissioner (esafety.gov.au) for age assurance and online safety
-- Air New Zealand, Tourism Australia and Canva (Sydney) as public brand references; Gordon Walters (koru), Michael Parekowhai and Aboriginal Art Centres (credited, community-owned) for cultural context
+- Air New Zealand, Tourism Australia and Canva (Sydney) as public brand references; the Indigenous Art Code (Australia) and the public debate around Gordon Walters's koru paintings for cultural-use context

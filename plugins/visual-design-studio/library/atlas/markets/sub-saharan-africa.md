@@ -7,7 +7,7 @@ summary: Young, mobile-money-led, multilingual region with low-end Android, cost
 tags: [africa, sub-saharan africa, nigeria, kenya, south africa, ghana, m-pesa, mobile money, ussd, low bandwidth]
 pairs_with: [industry.fintech-banking, industry.ecommerce-dtc, industry.marketplaces-platforms, industry.education-edtech, industry.nonprofit-ngo, industry.healthcare-provider, style.playful-bubbly, style.flat-material, channel.native-app, audience.low-bandwidth-entry-devices]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Sub-Saharan Africa

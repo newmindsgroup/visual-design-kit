@@ -7,7 +7,7 @@ summary: Large, diverse English-first market with Spanish as a major second lang
 tags: [united states, usa, american, en-us, us english, ccpa, ada, apple pay, venmo, state privacy]
 pairs_with: [industry.fintech-banking, industry.saas-b2b, industry.ecommerce-dtc, industry.healthcare-provider, style.corporate-modern, style.vintage-heritage-americana, channel.web-app, channel.ecommerce-store, audience.older-adults]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # United States

@@ -7,7 +7,7 @@ summary: Bilingual English/Spanish design for US Hispanic and Latino audiences, 
 tags: [hispanic, latino, puerto rico, caribbean, bilingual, spanish, spanglish, ath movil, zelle, remittances]
 pairs_with: [industry.fintech-banking, industry.food-beverage-cpg, industry.healthcare-provider, industry.media-entertainment-streaming, industry.ecommerce-dtc, style.playful-bubbly, style.illustrative-narrative, channel.social-media, channel.native-app, archetype.caregiver]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # US Hispanic, Puerto Rico and the Caribbean

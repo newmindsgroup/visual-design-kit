@@ -7,7 +7,7 @@ summary: Simplified-Chinese mobile super-app market where WeChat, Alipay and Dou
 tags: [china, mainland china, simplified chinese, wechat, alipay, mini program, icp, pipl, douyin, cjk]
 pairs_with: [industry.ecommerce-dtc, industry.beauty-cosmetics, industry.luxury-goods, industry.fashion-apparel, industry.gaming-esports, industry.media-entertainment-streaming, style.maximalist-eclectic, style.vibrant-gradient-saas, channel.native-app, channel.social-media]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Mainland China

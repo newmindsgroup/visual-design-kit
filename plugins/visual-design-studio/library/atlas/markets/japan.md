@@ -7,7 +7,7 @@ summary: Japanese-language market with three scripts, polite register, informati
 tags: [japan, japanese, ja-jp, kanji, kana, keigo, line, paypay, konbini, vertical text, appi]
 pairs_with: [industry.ecommerce-dtc, industry.food-beverage-cpg, industry.gaming-esports, industry.fashion-apparel, industry.automotive-mobility, industry.hotels-travel, style.quiet-minimal, style.playful-bubbly, style.illustrative-narrative, channel.native-app]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Japan

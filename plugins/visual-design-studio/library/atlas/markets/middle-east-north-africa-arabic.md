@@ -7,7 +7,7 @@ summary: Right-to-left Arabic-script markets from the Gulf to the Maghreb, mobil
 tags: [arabic, rtl, mena, gcc, saudi arabia, uae, egypt, ramadan, mada, right-to-left]
 pairs_with: [industry.ecommerce-dtc, industry.fintech-banking, industry.real-estate-proptech, industry.luxury-goods, industry.hotels-travel, industry.government-civic, style.classic-luxury-serif, style.art-deco, channel.native-app, channel.social-media]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Middle East and North Africa (Arabic)

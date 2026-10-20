@@ -7,7 +7,7 @@ summary: Officially bilingual (English and French) North American market where Q
 tags: [canada, quebec, bilingual, french canadian, interac, bill 96, law 25, aoda, canadian english]
 pairs_with: [industry.fintech-banking, industry.government-civic, industry.ecommerce-dtc, industry.healthcare-provider, industry.energy-climate, style.civic-plain, style.corporate-modern, channel.marketing-website, channel.web-app]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Canada

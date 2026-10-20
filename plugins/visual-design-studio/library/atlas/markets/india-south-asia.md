@@ -7,7 +7,7 @@ summary: Android-first, multilingual and multi-script region where UPI, WhatsApp
 tags: [india, south asia, hindi, devanagari, indic, upi, vernacular, rtl urdu, dpdp, bangladesh]
 pairs_with: [industry.fintech-banking, industry.ecommerce-dtc, industry.education-edtech, industry.media-entertainment-streaming, industry.food-beverage-cpg, style.maximalist-eclectic, style.vibrant-gradient-saas, style.playful-bubbly, channel.native-app, audience.low-bandwidth-entry-devices]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # India and South Asia

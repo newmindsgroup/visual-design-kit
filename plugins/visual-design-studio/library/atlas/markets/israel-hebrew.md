@@ -7,7 +7,7 @@ summary: Hebrew right-to-left market with a tech-savvy, direct, mobile-first aud
 tags: [israel, hebrew, rtl, he-il, shabbat, bit, installments, ils, amendment 13]
 pairs_with: [industry.saas-b2b, industry.fintech-banking, industry.developer-tools, industry.ecommerce-dtc, industry.healthcare-provider, industry.events-conferences, style.dark-tech-developer, style.corporate-modern, channel.web-app, channel.native-app]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Israel (Hebrew)

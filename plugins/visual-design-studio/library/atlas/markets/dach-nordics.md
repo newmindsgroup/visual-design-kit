@@ -7,7 +7,7 @@ summary: High-trust, high-income markets where precision, privacy, strict consum
 tags: [germany, austria, switzerland, nordics, scandinavia, sweden, norway, denmark, finland, gdpr, bankid, twint]
 pairs_with: [industry.fintech-banking, industry.automotive-mobility, industry.industrial-manufacturing-construction, industry.energy-climate, industry.saas-b2b, style.scandinavian-nordic, style.swiss-international, style.bauhaus-constructivist, style.quiet-minimal, channel.web-app]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # DACH and the Nordics

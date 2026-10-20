@@ -7,7 +7,7 @@ summary: Portuguese-speaking, mobile-first market where Pix, boleto and card ins
 tags: [brazil, brasil, portuguese, pt-br, pix, boleto, lgpd, whatsapp, cpf, installments]
 pairs_with: [industry.fintech-banking, industry.ecommerce-dtc, industry.marketplaces-platforms, industry.food-beverage-cpg, industry.beauty-cosmetics, style.playful-bubbly, style.vibrant-gradient-saas, channel.native-app, channel.social-media, audience.low-bandwidth-entry-devices]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Brazil

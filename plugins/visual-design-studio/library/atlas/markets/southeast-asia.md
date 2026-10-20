@@ -7,7 +7,7 @@ summary: Mobile-first, young and linguistically varied region (Latin, Thai, Khme
 tags: [southeast asia, asean, indonesia, thailand, vietnam, philippines, malaysia, singapore, super app, qr payments, thai]
 pairs_with: [industry.ecommerce-dtc, industry.fintech-banking, industry.marketplaces-platforms, industry.food-beverage-cpg, industry.gaming-esports, industry.hotels-travel, style.playful-bubbly, style.vibrant-gradient-saas, channel.native-app, audience.low-bandwidth-entry-devices]
 avoid_with: []
-version_timestamp: __TS__
+version_timestamp: 2026-10-20 02:17:13 UTC
 ---
 
 # Southeast Asia
