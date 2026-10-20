@@ -77,6 +77,6 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [Parallel exploration](references/parallel-exploration.md): one direction-explorer subagent per position in Claude Code and Cowork, the distinctness test on returns, single-context fallback for chat.
 - Atlas index and schema: `../../library/atlas/README.md`.
 - Calibration set of distinct directions: `../../library/examples/stylescapes/README.md`.
-- Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`.
+- Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`, `figma-workflow` (any task naming Figma, Dev Mode or Code Connect).
 
 Catalog IDs covered: research, reference-direction, brand-strategy, design-taste, web-discovery, display-discovery, display-art-direction, web-art-direction, media-art-direction

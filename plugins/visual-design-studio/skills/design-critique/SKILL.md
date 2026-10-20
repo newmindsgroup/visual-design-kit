@@ -91,6 +91,7 @@ Not tested: <screen reader on Windows, real devices, ...>
 - [AI tells](references/ai-tells.md): 26 named tells with what they look like, why they happen and the fix.
 - [Accessibility audit](references/accessibility-audit.md): the 15-minute pass (axe, keyboard, focus, zoom and reflow, contrast, targets, motion, VoiceOver and NVDA).
 - [Review panel](references/review-panel.md): art-director, accessibility-auditor, copy-editor, brand-guardian and frontend-engineer subagents, score merge into the rubric, conflict ladder, chat fallback.
+- [Build fidelity](references/build-fidelity.md) and [compare_build.mjs](scripts/compare_build.mjs): pixel and computed-style diff of approved design vs build, thresholds, masks, pairing with Core Web Vitals.
 - [Revision discipline](references/revision-discipline.md): scoped changes, invariants, before and after evidence, stop rules.
 - [render_review.mjs](scripts/render_review.mjs): Node 18+, no bundled dependencies. Install Playwright and axe-core in the working project (`npm i -D playwright axe-core && npx playwright install chromium`) or point `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_CHROMIUM` and `AXE_SCRIPT` at existing copies. `--exclude SELECTOR` skips deliberate controls or third-party embeds; `--strict` exits 2 on blocking findings for CI.
 - [AI-tells gallery](../../library/examples/ai-tells/index.html) and its [README](../../library/examples/ai-tells/README.md): 18 tells rendered generic versus better across 18 industries and styles.
