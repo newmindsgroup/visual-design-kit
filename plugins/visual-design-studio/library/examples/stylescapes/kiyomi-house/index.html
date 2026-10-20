@@ -128,7 +128,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .btn--primary:hover { background: var(--color-accent-hover); }
 .btn--secondary { background: transparent; color: var(--ky-sumi); }
 .btn--secondary:hover { background: var(--ky-sumi); color: var(--ky-washi); }
-.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #67655F; border-color: var(--color-border-default); cursor: not-allowed; }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #5F5D57; border-color: var(--color-border-default); cursor: not-allowed; }
 .btn.is-focus { outline: 2px solid var(--color-focus-ring); outline-offset: 4px; }
 .btn small { font-size: 0.75rem; letter-spacing: 0.2em; opacity: 0.85; }
 
@@ -137,10 +137,10 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .stage-copy .en { align-self: end; display: grid; gap: var(--space-6); max-width: 34ch; }
 .stage-copy .en h1 { font-family: var(--font-family-display); font-weight: 400; font-size: clamp(1.75rem, 2.5vw, 2.375rem); line-height: 1.35; letter-spacing: 0.01em; text-wrap: balance; }
 .stage-copy .en p { font-size: 1rem; line-height: 1.8; color: var(--color-fg-muted); }
-.ja-head { display: flex; gap: var(--space-5); align-self: start; padding-top: var(--space-6); }
-.ja-head .main { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.5rem, 3.8vw, 3.5rem); line-height: 1.6; letter-spacing: 0.16em; max-height: 9em; }
+.ja-head { display: flex; gap: var(--space-5); align-self: start; padding-top: var(--space-6); position: relative; z-index: 1; }
+.ja-head .main { font-family: var(--font-family-display); font-weight: 500; font-size: clamp(2.5rem, 3.8vw, 3.5rem); line-height: 1.6; letter-spacing: 0.16em; height: 8.4em; }
 /* Vertical text gets an explicit max inline size so its layout never depends on the viewport height */
-.ja-head .sub { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.5em; color: var(--color-fg-muted); padding-top: 0.6em; max-height: 16em; }
+.ja-head .sub { font-family: var(--font-family-display); font-size: 0.9375rem; letter-spacing: 0.5em; color: var(--color-fg-muted); padding-top: 0.6em; height: 14em; }
 .shoji {
   position: relative; overflow: hidden;
   background:
@@ -181,7 +181,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .strip { display: grid; grid-template-rows: 300px auto; border-right: 1px solid var(--color-border-subtle); }
 .strip:last-child { border-right: 0; }
 .strip .fill { position: relative; }
-.strip .fill .k { position: absolute; top: 18px; right: 14px; writing-mode: vertical-rl; max-height: 6em; font-family: var(--font-family-display); font-size: 1.375rem; letter-spacing: 0.3em; }
+.strip .fill .k { position: absolute; top: 18px; right: 14px; writing-mode: vertical-rl; max-height: 6em; font-family: var(--font-family-display); font-size: 1.5rem; letter-spacing: 0.3em; }
 .strip dl { padding: 16px 14px 0; display: grid; gap: 6px; font-size: 0.8125rem; line-height: 1.5; }
 .strip dt { font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-fg-muted); }
 .strip dd { font-variant-numeric: tabular-nums; }
@@ -253,7 +253,7 @@ a { color: inherit; text-underline-offset: 0.3em; text-decoration-thickness: 1px
 .p-body .head { display: flex; justify-content: space-between; align-items: end; }
 .p-body h3 { font-family: var(--font-family-display); font-weight: 500; font-size: 1.75rem; letter-spacing: 0.12em; line-height: 1.2; }
 .p-body h3 small { display: block; font-size: 0.5em; letter-spacing: 0.24em; color: var(--color-fg-muted); font-weight: 400; margin-top: 4px; }
-.p-body .no { font-family: var(--font-family-display); font-size: 2.5rem; line-height: 1; color: var(--color-border-default); }
+.p-body .no { font-family: var(--font-family-display); font-size: 2.5rem; line-height: 1; color: #8A867C; }
 .p-body p { font-size: 0.8125rem; line-height: 1.75; color: var(--color-fg-muted); }
 .plan { border: 1px solid var(--color-border-subtle); padding: 10px; background: #FBFAF7; }
 .plan svg { width: 100%; height: auto; }

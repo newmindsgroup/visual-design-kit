@@ -133,7 +133,7 @@ a { color: var(--color-accent-fg); }
 .btn--secondary { background: #fff; border-color: var(--color-accent-default); color: var(--color-accent-fg); }
 .btn--secondary:hover { background: var(--color-accent-subtle); }
 .btn--quiet { background: transparent; color: var(--lh-ink); padding: 0 14px; }
-.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #5C7083; box-shadow: none; cursor: not-allowed; border-color: transparent; }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: #4E6276; box-shadow: none; cursor: not-allowed; border-color: transparent; }
 .btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 4px; }
 
 .harbor {
@@ -207,7 +207,7 @@ a { color: var(--color-accent-fg); }
 /* Palette: pebbles */
 .pebbles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8) var(--space-6); }
 .pebble { display: grid; gap: 14px; }
-.pebble .shape { aspect-ratio: 1.25; border-radius: 58% 42% 52% 48% / 52% 46% 54% 48%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px 22px; font-family: var(--font-family-display); font-weight: 600; font-size: 1.375rem; box-shadow: inset 0 -10px 0 0 rgb(0 0 0 / 0.06); }
+.pebble .shape { aspect-ratio: 1.25; border-radius: 58% 42% 52% 48% / 52% 46% 54% 48%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 18px 22px; font-family: var(--font-family-display); font-weight: 600; font-size: 1.5rem; box-shadow: inset 0 -10px 0 0 rgb(0 0 0 / 0.06); }
 .pebble:nth-child(2n) .shape { border-radius: 46% 54% 40% 60% / 56% 44% 56% 44%; }
 .pebble:nth-child(3n) .shape { border-radius: 62% 38% 48% 52% / 44% 58% 42% 56%; }
 .pebble dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; font-size: 0.9375rem; }
@@ -397,7 +397,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 }
 @media (max-width: 480px) {
   .pebbles { gap: var(--space-6) var(--space-4); }
-  .pebble .shape { font-size: 1.125rem; padding: 14px 16px; }
+  .pebble .shape { font-size: 1.5rem; padding: 10px; line-height: 1.05; }
   .pebble dl { font-size: 0.8125rem; grid-template-columns: 1fr; }
   .harbor .ctas .btn { flex: 1 1 100%; }
   .treat > span { width: 100%; }
@@ -731,7 +731,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <li><b>Buttons, chips, toggles</b><span class="d">200ms</span><code>cubic-bezier(0.2, 0, 0, 1) · press: translateY(3px)</code></li>
         <li><b>Cards and sheets entering</b><span class="d">320ms</span><code>cubic-bezier(0, 0, 0, 1) · translateY(12px) and fade</code></li>
         <li><b>Waiting room breath</b><span class="d">4s loop</span><code>ease-in-out · scale 1 to 1.07, ripples every 1.33s</code></li>
-        <li><b>Lighthouse beam (hero)</b><span class="d">9s alternate</span><code>linear · rotate −14° to 10°</code></li>
+        <li><b>Lighthouse beam (hero)</b><span class="d">9s alternate</span><code>linear · rotate −10° to 8°</code></li>
         <li><b>Reduced motion</b><span class="d">0ms</span><code>All loops stop; rings render as static halos; content still appears.</code></li>
       </ul>
       <div class="breathe-stage" role="img" aria-label="Motion demo: a lamplight circle that breathes slowly with ripples, labeled You're next.">

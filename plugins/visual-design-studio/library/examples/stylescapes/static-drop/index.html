@@ -160,7 +160,7 @@ a { color: inherit; }
 .btn--primary:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--st-xerox); }
 .btn--secondary { background: transparent; color: var(--st-xerox); }
 .btn--secondary:hover { background: var(--st-xerox); color: #000; }
-.btn:disabled, .btn[aria-disabled="true"] { background: #262625; color: #8C8A84; border-color: #4A4844; box-shadow: none; cursor: not-allowed; text-decoration: line-through; }
+.btn:disabled, .btn[aria-disabled="true"] { background: #262625; color: #9A9892; border-color: #4A4844; box-shadow: none; cursor: not-allowed; text-decoration: line-through; }
 .btn.is-focus { outline: 3px solid var(--st-ice); outline-offset: 4px; }
 
 .product { position: relative; min-height: 600px; }
@@ -382,6 +382,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .story { width: 100%; max-width: 320px; }
   .hangtag { transform: rotate(-2deg); }
+  .mtable { table-layout: fixed; font-size: 0.8125rem; }
+  .mtable th, .mtable td { padding: 8px; overflow-wrap: anywhere; }
+  .mtable td:nth-child(2) { white-space: normal; }
 }
 </style>
 </head>

@@ -496,13 +496,16 @@ footer.foot a { font-weight: 700; color: var(--vibra-ink); }
   .apps { grid-template-columns: 1fr; }
   .apps > :last-child { grid-column: auto; }
   .btn-row { gap: var(--space-4); }
+  .mtable code { white-space: normal; }
+  .mtable th, .mtable td { padding: 10px; }
+  .mtable td:first-child { width: auto; }
   .sw-chip { height: 104px; }
 }
 @media (max-width: 480px) {
   .hero-ctas .btn { flex: 1 1 100%; }
   .swatches { grid-template-columns: 1fr 1fr; gap: 14px; }
   .sw-info { padding: 12px; font-size: 0.8125rem; }
-  .sw-chip { font-size: 1.25rem; }
+  .sw-chip { font-size: 1.25rem; flex-direction: column; gap: 8px; }
   .card-ex { grid-template-columns: auto 1fr; }
   .card-ex .amt { grid-column: 2; text-align: left; }
 }
@@ -658,7 +661,7 @@ footer.foot a { font-weight: 700; color: var(--vibra-ink); }
     </div>
     <div class="type-grid" lang="pt-BR">
       <div class="spec spec--display">
-        <div class="spec-label" lang="en"><span>Display</span><span>Bricolage Grotesque 800</span><span>wdth 78 · opsz 96</span><span>clamp(56px, 9.2vw, 148px) / 0.86</span><span>tracking −0.045em</span></div>
+        <div class="spec-label" lang="en"><span>Display</span><span>Bricolage Grotesque 800</span><span>wdth 84 · opsz 96</span><span>clamp(60px, 9.2vw, 148px) / 0.88</span><span>tracking −0.022em</span></div>
         <div>
           <p class="t-display">Sua grana, sem pedágio.</p>
           <p class="t-display-sub">Pix na hora, todo dia, de graça.</p>

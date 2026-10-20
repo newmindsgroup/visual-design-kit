@@ -1,0 +1,6 @@
+# Version-Timestamp: 2026-10-20 02:52:00 UTC
+node_modules/
+dist/
+qa-output/
+test-results/
+*.log

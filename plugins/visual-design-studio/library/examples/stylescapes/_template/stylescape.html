@@ -1,0 +1,556 @@
+<!doctype html>
+<!--
+  ============================================================================
+  STYLESCAPE TEMPLATE · Visual Design Kit
+  Version-Timestamp: 2026-10-20 02:03:12 UTC
+  Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:03:12 UTC
+
+  One page per candidate direction. The design-director skill copies this file
+  to <project>/stylescapes/<direction-slug>.html and fills it.
+
+  HOW TO FILL
+  1. Set <html lang>, <title> and the meta description. Arabic/Hebrew: add dir="rtl".
+  2. Replace the BRAND TOKENS block in :root (colors, font families, radius,
+     shadows, motion). Keep the variable NAMES: they are the kit's token
+     contract (library/tokens), so the page doubles as a token spec.
+  3. Self-host fonts: add @font-face rules pointing at OFL/Apache woff2 files
+     with the license next to them (see the commented example). No CDNs.
+  4. Every fillable element carries data-slot="...". Replace its content.
+     Search for data-slot to find them all. Text in [square brackets] is
+     always placeholder.
+  5. Delete every element with class="guide" once the section is real.
+  6. Section 2 (#hero) is the showpiece. Replace the whole .kv block with the
+     direction's key visual for its main channel: landing hero, poster, app
+     screen, packaging front or dashboard. Build it with CSS, inline SVG and
+     self-hosted fonts only. No stock photos, no external requests.
+  7. Palette: list 5-8 roles. Each .swatch has data-hex and data-on (the
+     background it is judged against). The script at the bottom computes
+     OKLCH and the WCAG 2 contrast ratio from those attributes; check the
+     results, or replace the script output with values from colorcheck.py.
+  8. Render at 1440 and 390 px wide, look at the screenshots, fix clipped
+     text, orphans and overflow, then compare directions side by side.
+
+  KEEP: the ten section ids, in this order:
+  direction, hero, palette, type, components, applications, imagery, motion, voice, rationale
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Brand]: [Direction name] | Stylescape</title>
+<meta name="description" content="[One sentence: brand, direction and what it is for.]">
+<style>
+/* ---------------------------------------------------------------------------
+   FONTS. Example (delete the comment markers and point at real files):
+   @font-face { font-family: "Display Family"; src: url("../fonts/display-family/display-family-latin-wght-normal.woff2") format("woff2-variations"); font-weight: 100 900; font-display: swap; }
+   Unfilled, the template uses system stacks so it renders anywhere.
+   --------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
+   BRAND TOKENS. Replace values; keep names (token contract).
+   Defaults are the kit's neutral "Meridian" reference theme (slate + teal).
+   --------------------------------------------------------------------------- */
+:root {
+  --color-bg-canvas: #F2F7FC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-raised: #FFFFFF;
+  --color-bg-sunken: #E2E9EF;
+  --color-bg-inverse: #14191D;
+  --color-fg-default: #14191D;
+  --color-fg-muted: #565F67;
+  --color-fg-subtle: #6F7982;
+  --color-fg-inverse: #F2F7FC;
+  --color-fg-on-accent: #FFFFFF;
+  --color-border-subtle: #E2E9EF;
+  --color-border-default: #C3CCD3;
+  --color-border-strong: #6F7982;
+  --color-accent-default: #006C6C;
+  --color-accent-hover: #005050;
+  --color-accent-active: #003636;
+  --color-accent-subtle: #C3F3F2;
+  --color-accent-fg: #005050;
+  --color-success-fg: #1E6B45; --color-success-bg: #E3F4EA; --color-success-border: #1E6B45;
+  --color-warning-fg: #7A4A00; --color-warning-bg: #FFF1CC; --color-warning-border: #7A4A00;
+  --color-danger-fg: #A3262A;  --color-danger-bg: #FBE9E9;  --color-danger-border: #A3262A;
+  --color-info-fg: #1F4F87;    --color-info-bg: #E0EDFB;    --color-info-border: #1F4F87;
+  --color-focus-ring: #006C6C;
+  --color-overlay-scrim: rgb(20 25 29 / 0.55);
+
+  --font-family-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-family-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-md: 1rem; --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem; --font-size-2xl: 1.875rem; --font-size-3xl: 2.25rem; --font-size-4xl: 3rem; --font-size-5xl: 3.75rem;
+  --line-height-tight: 1.1; --line-height-snug: 1.25; --line-height-normal: 1.5; --line-height-relaxed: 1.65;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600; --font-weight-bold: 700;
+  --letter-spacing-tight: -0.02em; --letter-spacing-normal: 0; --letter-spacing-wide: 0.01em; --letter-spacing-caps: 0.06em;
+  --measure-narrow: 45ch; --measure-body: 66ch; --measure-wide: 75ch;
+  --space-0: 0; --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --size-target-min: 24px; --size-target-comfortable: 44px;
+  --size-icon-sm: 16px; --size-icon-md: 20px; --size-icon-lg: 24px;
+  --radius-none: 0; --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 16px; --radius-full: 9999px;
+  --border-width-thin: 1px; --border-width-thick: 2px;
+  --shadow-sm: 0 1px 2px rgb(20 25 29 / 0.08);
+  --shadow-md: 0 4px 12px -4px rgb(20 25 29 / 0.16);
+  --shadow-lg: 0 12px 28px -12px rgb(20 25 29 / 0.24);
+  --shadow-xl: 0 24px 48px -20px rgb(20 25 29 / 0.32);
+  --duration-instant: 0ms; --duration-fast: 120ms; --duration-moderate: 200ms; --duration-slow: 320ms; --duration-slower: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0, 1);
+  --ease-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-linear: linear;
+  --container-sm: 640px; --container-md: 768px; --container-lg: 1024px; --container-xl: 1280px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0.01ms; --duration-moderate: 0.01ms; --duration-slow: 0.01ms; --duration-slower: 0.01ms; }
+}
+
+/* ---------------------------------------------------------------------------
+   PAGE SCAFFOLD. Restyle freely per direction; keep it accessible.
+   --------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-canvas); color: var(--color-fg-default); font-family: var(--font-family-body); font-size: 1.0625rem; line-height: var(--line-height-normal); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, figure, dl, dd { margin: 0; }
+svg { display: block; }
+a { color: var(--color-accent-fg); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+.wrap { max-width: calc(var(--container-xl) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 10; background: var(--color-bg-inverse); color: var(--color-fg-inverse); padding: 8px 12px; border-radius: var(--radius-sm); }
+.skip:focus { left: 8px; }
+.mono { font-family: var(--font-family-mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font-family: var(--font-family-mono); font-size: var(--font-size-xs); letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; color: var(--color-fg-muted); }
+
+/* Guidance notes: visible while the template is unfilled, deleted when done. */
+.guide { border: 1px dashed var(--color-border-strong); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); font-size: var(--font-size-sm); color: var(--color-fg-muted); background: color-mix(in srgb, var(--color-bg-surface) 70%, transparent); max-width: var(--measure-wide); }
+.guide b { color: var(--color-fg-default); font-weight: var(--font-weight-semibold); }
+.guide code { font-family: var(--font-family-mono); font-size: 0.9em; }
+
+/* 1. Direction strip */
+#direction { background: var(--color-bg-inverse); color: var(--color-fg-inverse); }
+#direction .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--space-3) var(--space-10); padding-block: var(--space-6); align-items: start; }
+.dir-id { display: grid; gap: var(--space-2); }
+.dir-id .eyebrow { color: color-mix(in srgb, var(--color-fg-inverse) 72%, transparent); }
+.dir-id h1 { font-family: var(--font-family-display); font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); line-height: var(--line-height-snug); letter-spacing: var(--letter-spacing-tight); }
+.dir-id h1 span { font-weight: var(--font-weight-regular); opacity: 0.8; }
+.dir-brief { font-size: var(--font-size-md); color: color-mix(in srgb, var(--color-fg-inverse) 86%, transparent); max-width: var(--measure-body); }
+.chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.chips li { font-family: var(--font-family-mono); font-size: var(--font-size-xs); padding: 4px 10px; border-radius: var(--radius-full); border: 1px solid color-mix(in srgb, var(--color-fg-inverse) 40%, transparent); }
+#direction a { color: inherit; }
+
+/* 2. Hero / key visual */
+#hero { padding-block: var(--space-12) var(--space-16); }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-10); align-items: center; }
+.kv-copy h2 { font-family: var(--font-family-display); font-size: clamp(2.5rem, 5.4vw, 4.5rem); line-height: 1.04; letter-spacing: var(--letter-spacing-tight); font-weight: var(--font-weight-bold); margin-top: var(--space-4); text-wrap: balance; }
+.kv-copy p.lede { margin-top: var(--space-5); font-size: var(--font-size-lg); color: var(--color-fg-muted); max-width: var(--measure-narrow); }
+.kv-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+.kv-frame { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius-xl); background: var(--color-bg-surface); border: 1px solid var(--color-border-default); overflow: hidden; box-shadow: var(--shadow-lg); }
+.kv-frame .grid { position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, color-mix(in srgb, var(--color-accent-default) 6%, transparent) 0 calc((100% - 11 * 12px) / 12), transparent calc((100% - 11 * 12px) / 12) calc((100% - 11 * 12px) / 12 + 12px)); margin: 0 24px; }
+.kv-frame .xhair { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kv-frame .label { position: absolute; left: 24px; right: 24px; bottom: 24px; background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); padding: var(--space-4); display: grid; gap: var(--space-2); }
+.kv-frame .label b { font-family: var(--font-family-display); font-size: var(--font-size-lg); }
+.kv-frame .label span { font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+.kv-frame .tag { position: absolute; top: 20px; left: 20px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: var(--size-target-comfortable); padding: 0 var(--space-5); border-radius: var(--radius-md); border: var(--border-width-thin) solid transparent; font: var(--font-weight-semibold) var(--font-size-md)/1 var(--font-family-body); text-decoration: none; cursor: pointer; transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard); }
+.btn--primary { background: var(--color-accent-default); color: var(--color-fg-on-accent); }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--primary:active { background: var(--color-accent-active); }
+.btn--secondary { background: var(--color-bg-surface); color: var(--color-fg-default); border-color: var(--color-border-strong); }
+.btn--secondary:hover { background: var(--color-bg-sunken); }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--color-bg-sunken); color: var(--color-fg-muted); border-color: var(--color-border-default); cursor: not-allowed; }
+.btn.is-focus { outline: 3px solid var(--color-focus-ring); outline-offset: 3px; }
+
+/* Section frame */
+.sec { padding-block: clamp(3.5rem, 7vw, 6rem); border-top: 1px solid var(--color-border-default); }
+.sec-head { display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: baseline; margin-bottom: var(--space-10); }
+.sec-head .n { font-family: var(--font-family-mono); font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+.sec-head h2 { font-family: var(--font-family-display); font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; letter-spacing: var(--letter-spacing-tight); font-weight: var(--font-weight-semibold); }
+.sec-head p { color: var(--color-fg-muted); max-width: var(--measure-body); }
+.sec .guide { margin-bottom: var(--space-8); }
+
+/* 3. Palette */
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+.swatch { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); overflow: hidden; }
+.swatch .chip { height: 112px; border-bottom: 1px solid var(--color-border-default); display: flex; align-items: flex-end; padding: var(--space-3); font-family: var(--font-family-display); font-weight: var(--font-weight-semibold); }
+.swatch dl { padding: var(--space-3); display: grid; gap: 2px; font-size: var(--font-size-sm); }
+.swatch dt { font-weight: var(--font-weight-semibold); }
+.swatch dd { font-family: var(--font-family-mono); font-size: var(--font-size-xs); color: var(--color-fg-muted); }
+.swatch dd[data-out="ratio"] { color: var(--color-fg-default); }
+
+/* 4. Type */
+.type-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--space-4); }
+.spec { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); padding: var(--space-6); }
+.spec + .spec { margin-top: var(--space-4); }
+.spec .meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+.spec .meta span { font-family: var(--font-family-mono); font-size: var(--font-size-xs); background: var(--color-bg-sunken); border-radius: var(--radius-sm); padding: 2px 8px; color: var(--color-fg-muted); }
+.t-display { font-family: var(--font-family-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; letter-spacing: var(--letter-spacing-tight); font-weight: var(--font-weight-bold); text-wrap: balance; }
+.t-body { font-size: var(--font-size-md); line-height: var(--line-height-relaxed); max-width: var(--measure-body); }
+.t-caption { font-size: var(--font-size-sm); line-height: var(--line-height-normal); color: var(--color-fg-muted); }
+
+/* 5. Components */
+.comp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.panel { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); padding: var(--space-6); }
+.panel h3 { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; color: var(--color-fg-muted); margin-bottom: var(--space-5); }
+.btn-grid { display: grid; grid-template-columns: repeat(2, max-content); gap: var(--space-5); }
+.btn-cap { display: grid; gap: var(--space-2); justify-items: start; font-size: var(--font-size-xs); color: var(--color-fg-muted); font-family: var(--font-family-mono); }
+.field { display: grid; gap: var(--space-1); }
+.field + .field { margin-top: var(--space-5); }
+.field label { font-weight: var(--font-weight-semibold); }
+.field .hint { font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+.input { min-height: var(--size-target-comfortable); border: var(--border-width-thin) solid var(--color-border-strong); border-radius: var(--radius-md); padding: 0 var(--space-3); font: inherit; color: var(--color-fg-default); background: var(--color-bg-surface); width: 100%; }
+.input:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 1px; }
+.field--error .input { border: var(--border-width-thick) solid var(--color-danger-border); }
+.err { display: flex; gap: var(--space-2); color: var(--color-danger-fg); font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); }
+.err svg { width: var(--size-icon-sm); height: var(--size-icon-sm); flex: none; margin-top: 3px; }
+.item { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--space-3); align-items: center; padding: var(--space-3); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); }
+.item + .item { margin-top: var(--space-2); }
+.item .ic { width: 40px; height: 40px; border-radius: var(--radius-md); background: var(--color-accent-subtle); color: var(--color-accent-fg); display: grid; place-items: center; }
+.item .ic svg { width: var(--size-icon-md); height: var(--size-icon-md); }
+.item b { display: block; }
+.item span { font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+.item .v { font-family: var(--font-family-mono); font-weight: var(--font-weight-semibold); }
+.badges { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.badge { display: inline-flex; align-items: center; min-height: 28px; padding: 0 var(--space-3); border-radius: var(--radius-full); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); }
+.badge--accent { background: var(--color-accent-subtle); color: var(--color-accent-fg); }
+.badge--success { background: var(--color-success-bg); color: var(--color-success-fg); }
+.badge--warning { background: var(--color-warning-bg); color: var(--color-warning-fg); }
+.badge--danger { background: var(--color-danger-bg); color: var(--color-danger-fg); }
+.badge--neutral { background: var(--color-bg-sunken); color: var(--color-fg-default); }
+
+/* 6. Applications */
+.apps { display: grid; grid-template-columns: auto minmax(0, 480px) minmax(0, 1fr); gap: var(--space-10); align-items: center; }
+.device { width: 300px; border-radius: 40px; background: var(--color-bg-inverse); padding: 10px; box-shadow: var(--shadow-xl); }
+.device .screen { border-radius: 30px; background: var(--color-bg-canvas); height: 600px; display: flex; flex-direction: column; overflow: hidden; }
+.screen .bar { height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 22px; font: var(--font-weight-semibold) var(--font-size-xs) var(--font-family-mono); }
+.screen .body { padding: var(--space-4) var(--space-5); display: grid; gap: var(--space-3); align-content: start; flex: 1; }
+.screen .h { font-family: var(--font-family-display); font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: 1.1; }
+.screen .blk { height: 120px; border-radius: var(--radius-lg); background: var(--color-accent-subtle); }
+.screen .line { height: 10px; border-radius: 5px; background: var(--color-bg-sunken); }
+.screen .cta { margin: auto var(--space-5) var(--space-5); }
+.screen .cta .btn { width: 100%; }
+.post { aspect-ratio: 4 / 5; max-width: 440px; width: 100%; border-radius: var(--radius-lg); background: var(--color-accent-default); color: var(--color-fg-on-accent); padding: var(--space-8); display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-lg); }
+.post .big { font-family: var(--font-family-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; font-weight: var(--font-weight-bold); text-wrap: balance; }
+.app-cap { font-size: var(--font-size-sm); color: var(--color-fg-muted); margin-top: var(--space-3); }
+
+/* 7. Imagery */
+.img-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-10); align-items: start; }
+.icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-6); }
+.icons figure { aspect-ratio: 1; display: grid; place-items: center; align-content: center; gap: var(--space-2); border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-surface); font-size: var(--font-size-xs); color: var(--color-fg-muted); }
+.icons svg { width: 28px; height: 28px; color: var(--color-fg-default); }
+.texture { aspect-ratio: 4 / 3; border-radius: var(--radius-lg); border: 1px solid var(--color-border-default); background-color: var(--color-bg-surface); background-image: radial-gradient(var(--color-border-strong) 1px, transparent 1.2px); background-size: 16px 16px; display: grid; place-items: center; }
+.texture span { background: var(--color-bg-surface); padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); font-size: var(--font-size-sm); color: var(--color-fg-muted); border: 1px solid var(--color-border-default); }
+
+/* 8. Motion */
+.motion-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-10); align-items: center; }
+.mtable { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); background: var(--color-bg-surface); border: 1px solid var(--color-border-default); }
+.mtable th, .mtable td { text-align: left; padding: var(--space-3); border-bottom: 1px solid var(--color-border-subtle); }
+.mtable th { font-size: var(--font-size-xs); letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; color: var(--color-fg-muted); }
+.mtable td.mono { font-size: var(--font-size-xs); }
+.demo { min-height: 280px; border-radius: var(--radius-lg); border: 1px solid var(--color-border-default); background: var(--color-bg-surface); display: grid; place-items: center; position: relative; overflow: hidden; }
+.demo .card { width: 220px; padding: var(--space-4); border-radius: var(--radius-lg); background: var(--color-bg-surface); border: 1px solid var(--color-border-default); box-shadow: var(--shadow-md); animation: enter var(--duration-slower) var(--ease-emphasized-decelerate) 400ms both; }
+.demo:hover .card, .demo:focus-within .card { animation-name: enter2; }
+.demo .card b { display: block; font-family: var(--font-family-display); }
+.demo .card span { font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+.demo p { position: absolute; left: var(--space-3); bottom: var(--space-2); font-size: var(--font-size-xs); color: var(--color-fg-muted); }
+@keyframes enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes enter2 { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .demo .card { animation: none !important; } .btn { transition: none; } }
+
+/* 9. Voice */
+.voice { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+.vl { background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+.vl q { quotes: none; font-family: var(--font-family-display); font-size: var(--font-size-2xl); line-height: 1.15; font-weight: var(--font-weight-semibold); }
+.vl--error q { font-family: var(--font-family-body); font-size: var(--font-size-lg); font-weight: var(--font-weight-medium); line-height: 1.4; }
+.vl--error .box { border-left: 3px solid var(--color-danger-border); background: var(--color-danger-bg); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); }
+.vl .why { font-size: var(--font-size-sm); color: var(--color-fg-muted); margin-top: auto; }
+
+/* 10. Rationale */
+.rat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.rat article { border-top: 2px solid var(--color-fg-default); padding-top: var(--space-4); }
+.rat h3 { font-family: var(--font-family-display); font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-3); }
+.rat ul { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-2); font-size: var(--font-size-md); }
+.score { margin-top: var(--space-10); background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-lg); overflow: hidden; }
+.score table { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); }
+.score th, .score td { text-align: left; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-border-subtle); }
+.score th { font-size: var(--font-size-xs); letter-spacing: var(--letter-spacing-caps); text-transform: uppercase; color: var(--color-fg-muted); background: var(--color-bg-sunken); }
+.score td.mono, .score th:last-child { text-align: right; }
+.score tfoot td { font-weight: var(--font-weight-bold); border-bottom: 0; }
+footer { border-top: 1px solid var(--color-border-default); padding-block: var(--space-8); font-size: var(--font-size-sm); color: var(--color-fg-muted); }
+
+/* Responsive: must read well at 390 and 1440 */
+@media (max-width: 1024px) {
+  .kv, .type-grid, .img-grid, .motion-grid, .apps { grid-template-columns: minmax(0, 1fr); }
+  .comp-grid, .voice, .rat { grid-template-columns: minmax(0, 1fr); }
+  .sec-head { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+  .device { margin-inline: auto; }
+}
+@media (max-width: 640px) {
+  #direction .wrap { grid-template-columns: minmax(0, 1fr); }
+  .kv-frame { aspect-ratio: 4 / 4.4; }
+  .btn-grid { grid-template-columns: minmax(0, 1fr); }
+  .icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .device { width: 100%; max-width: 300px; }
+  .score th:nth-child(2), .score td:nth-child(2) { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hero">Skip to the key visual</a>
+
+<!-- Neutral starter icons (24px grid, 1.75px stroke). Replace with icons drawn to the direction's rules. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M12 8v4l3 2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-2" viewBox="0 0 24 24"><path d="M4 7h16v12H4zM8 7V5h8v2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+    <symbol id="i-3" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+    <symbol id="i-4" viewBox="0 0 24 24"><path d="M4 18 10 12l4 4 6-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-5" viewBox="0 0 24 24"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
+    <symbol id="i-6" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v6M12 16v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. DIRECTION -->
+<header id="direction">
+  <div class="wrap">
+    <div class="dir-id">
+      <span class="eyebrow" data-slot="eyebrow">Direction [A] of [3] · <a href="#rationale">Rationale</a></span>
+      <h1><span data-slot="brand-name">[Brand]</span> · <span data-slot="direction-name">[Direction name]</span></h1>
+    </div>
+    <p class="dir-brief" data-slot="brief">[One line: who it is for, what it sells, and the idea of this direction in plain words.]</p>
+    <ul class="chips" aria-label="Atlas IDs" data-slot="atlas-ids">
+      <li>style.[id]</li><li>industry.[id]</li><li>market.[id]</li><li>audience.[id]</li><li>archetype.[id]</li><li>tier.[id]</li><li>channel.[id]</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- 2. HERO / KEY VISUAL: the showpiece. Replace the whole .kv block. -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="guide"><b>Key visual.</b> Build the most characteristic composition for the main channel: landing hero, poster, app screen, packaging front or dashboard. It must look like finished professional work in the direction's own type, color and imagery. Delete this note and the placeholder frame.</p>
+    <div class="kv" style="margin-top:var(--space-8)">
+      <div class="kv-copy">
+        <span class="eyebrow" data-slot="hero-kicker">[Kicker or category]</span>
+        <h2 id="hero-title" data-slot="hero-headline">[Headline that states the promise in the brand's voice]</h2>
+        <p class="lede" data-slot="hero-lede">[Supporting line: what it is, for whom, and the proof. Two sentences at most.]</p>
+        <div class="kv-actions">
+          <a class="btn btn--primary" href="#components" data-slot="hero-cta">[Primary action]</a>
+          <a class="btn btn--secondary" href="#applications" data-slot="hero-cta-2">[Secondary action]</a>
+        </div>
+      </div>
+      <div class="kv-frame" role="img" aria-label="Placeholder frame for the key visual" data-slot="hero-visual">
+        <div class="grid" aria-hidden="true"></div>
+        <svg class="xhair" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 400 500M400 0 0 500" stroke="var(--color-border-default)" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
+        <span class="badge badge--neutral tag">[Channel] · [format, e.g. 1440 × 900]</span>
+        <div class="label"><b>[Key visual]</b><span>[Landing hero, poster, app screen, packaging front or dashboard. CSS, inline SVG and self-hosted fonts only.]</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PALETTE: 5-8 roles. data-hex = the color, data-on = the background it is judged against. -->
+<section id="palette" class="sec" aria-labelledby="palette-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">03</span><h2 id="palette-title">Palette</h2><p data-slot="palette-intro">[How color is used: proportions, what the accent marks, what is never done.]</p></div>
+    <div class="swatches" data-slot="palette">
+      <figure class="swatch" data-hex="#F2F7FC" data-on="#14191D"><div class="chip" style="background:#F2F7FC;color:#14191D">Aa</div><dl><dt>[Canvas]</dt><dd>#F2F7FC</dd><dd data-out="oklch">oklch(0.97 0.009 248)</dd><dd data-out="ratio">16.42:1 vs text · AA</dd></dl></figure>
+      <figure class="swatch" data-hex="#FFFFFF" data-on="#14191D"><div class="chip" style="background:#FFFFFF;color:#14191D">Aa</div><dl><dt>[Surface]</dt><dd>#FFFFFF</dd><dd data-out="oklch">oklch(1.00 0.000 0)</dd><dd data-out="ratio">17.70:1 vs text · AA</dd></dl></figure>
+      <figure class="swatch" data-hex="#14191D" data-on="#F2F7FC"><div class="chip" style="background:#14191D;color:#F2F7FC">Aa</div><dl><dt>[Text]</dt><dd>#14191D</dd><dd data-out="oklch">oklch(0.21 0.011 242)</dd><dd data-out="ratio">16.42:1 on canvas · AA</dd></dl></figure>
+      <figure class="swatch" data-hex="#565F67" data-on="#F2F7FC"><div class="chip" style="background:#565F67;color:#FFFFFF">Aa</div><dl><dt>[Muted text]</dt><dd>#565F67</dd><dd data-out="oklch">oklch(0.48 0.017 245)</dd><dd data-out="ratio">6.04:1 on canvas · AA</dd></dl></figure>
+      <figure class="swatch" data-hex="#006C6C" data-on="#FFFFFF"><div class="chip" style="background:#006C6C;color:#FFFFFF">Aa</div><dl><dt>[Accent]</dt><dd>#006C6C</dd><dd data-out="oklch">oklch(0.48 0.082 195)</dd><dd data-out="ratio">6.25:1 vs white · AA</dd></dl></figure>
+      <figure class="swatch" data-hex="#C3F3F2" data-on="#005050"><div class="chip" style="background:#C3F3F2;color:#005050">Aa</div><dl><dt>[Accent tint]</dt><dd>#C3F3F2</dd><dd data-out="oklch">oklch(0.93 0.049 195)</dd><dd data-out="ratio">7.70:1 vs accent text · AA</dd></dl></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TYPE: display, body and caption, with real copy in the brand's language. -->
+<section id="type" class="sec" aria-labelledby="type-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">04</span><h2 id="type-title">Type</h2><p data-slot="type-intro">[Families and why: what the display does, what the body protects. Name the license.]</p></div>
+    <div class="type-grid">
+      <div class="spec"><div class="meta" data-slot="display-meta"><span>Display</span><span>[Family weight]</span><span>[size / line-height]</span><span>[tracking]</span></div><p class="t-display" data-slot="display-sample">[A real headline in the brand's language]</p></div>
+      <div>
+        <div class="spec"><div class="meta" data-slot="body-meta"><span>Body</span><span>[Family weight]</span><span>[16-18px / 1.5-1.65]</span></div><p class="t-body" data-slot="body-sample">[A real paragraph of product copy, 40-60 words, so rhythm, measure and numerals can be judged. Placeholder lorem ipsum hides problems; write the actual copy.]</p></div>
+        <div class="spec"><div class="meta" data-slot="caption-meta"><span>Caption</span><span>[Family weight]</span><span>[13-14px / 1.4-1.5]</span></div><p class="t-caption" data-slot="caption-sample">[Caption, legal line or metadata as it will really appear.]</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMPONENTS: buttons with visible focus, input with label/hint/error, card or list item, badges. -->
+<section id="components" class="sec" aria-labelledby="components-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">05</span><h2 id="components-title">Components</h2><p data-slot="components-intro">[Shape language: radius, borders, elevation, press and focus behavior.]</p></div>
+    <div class="comp-grid">
+      <div class="panel"><h3>Buttons</h3>
+        <div class="btn-grid">
+          <div class="btn-cap"><button class="btn btn--primary" type="button" data-slot="btn-primary">[Primary]</button>primary</div>
+          <div class="btn-cap"><button class="btn btn--secondary" type="button" data-slot="btn-secondary">[Secondary]</button>secondary</div>
+          <div class="btn-cap"><button class="btn" type="button" disabled data-slot="btn-disabled">[Disabled]</button>disabled</div>
+          <div class="btn-cap"><button class="btn btn--primary is-focus" type="button">[Primary]</button>focus visible</div>
+        </div>
+      </div>
+      <div class="panel"><h3>Text input</h3>
+        <div class="field"><label for="f1" data-slot="input-label">[Label]</label><input class="input" id="f1" type="text" placeholder="[Placeholder]" aria-describedby="f1h"><span class="hint" id="f1h" data-slot="input-hint">[Hint that prevents the error]</span></div>
+        <div class="field field--error"><label for="f2">[Label]</label><input class="input" id="f2" type="text" value="[Invalid value]" aria-invalid="true" aria-describedby="f2e"><p class="err" id="f2e"><svg aria-hidden="true"><use href="#i-alert"/></svg><span data-slot="input-error">[Error: what happened and how to fix it.]</span></p></div>
+      </div>
+      <div class="panel"><h3>Card / list item</h3>
+        <div class="item"><span class="ic"><svg aria-hidden="true"><use href="#i-1"/></svg></span><span><b data-slot="item-title">[Item title]</b><span data-slot="item-meta">[Secondary line · metadata]</span></span><span class="v" data-slot="item-value">[Value]</span></div>
+        <div class="item"><span class="ic"><svg aria-hidden="true"><use href="#i-2"/></svg></span><span><b>[Item title]</b><span>[Secondary line · metadata]</span></span><span class="v">[Value]</span></div>
+      </div>
+      <div class="panel"><h3>Badges / tags</h3>
+        <div class="badges" data-slot="badges"><span class="badge badge--accent">[Accent]</span><span class="badge badge--success">[Success]</span><span class="badge badge--warning">[Warning]</span><span class="badge badge--danger">[Danger]</span><span class="badge badge--neutral">[Neutral]</span></div>
+        <p class="t-caption" style="margin-top:var(--space-4)">Status always pairs color with a word or icon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. APPLICATIONS: 1-2 relevant to the channel (mobile screen, social post, packaging panel, signage, email header, business card). -->
+<section id="applications" class="sec" aria-labelledby="apps-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">06</span><h2 id="apps-title">Applications</h2><p data-slot="apps-intro">[Which touchpoints matter for this channel and why these two.]</p></div>
+    <div class="apps">
+      <figure>
+        <div class="device" role="img" aria-label="Placeholder mobile screen" data-slot="app-1">
+          <div class="screen" aria-hidden="true">
+            <div class="bar"><span>9:41</span><span>[Brand]</span></div>
+            <div class="body"><p class="h">[Screen title]</p><div class="blk"></div><div class="line" style="width:90%"></div><div class="line" style="width:70%"></div><div class="line" style="width:80%"></div></div>
+            <div class="cta"><span class="btn btn--primary">[Action]</span></div>
+          </div>
+        </div>
+        <figcaption class="app-cap" style="text-align:center">[Application 1 · size or format]</figcaption>
+      </figure>
+      <figure>
+        <div class="post" role="img" aria-label="Placeholder social post" data-slot="app-2"><span class="eyebrow" style="color:inherit;opacity:0.85" aria-hidden="true">[Brand]</span><p class="big" aria-hidden="true">[Application 2: social post, packaging panel, signage, email header or card]</p><span aria-hidden="true">[Call to action]</span></div>
+        <figcaption class="app-cap">[Application 2 · size or format, e.g. 1080 × 1350]</figcaption>
+      </figure>
+      <p class="guide"><b>Pick by channel.</b> Native app: two screens or a screen plus a push notification. Website: a mobile view plus an email header. Packaging: back panel plus shipper or shelf view. Social: a feed post plus a story. Print, signage, business card and deck slide work the same way: show the touchpoint the client will judge first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. IMAGERY: 2-3 sentences, a row of 4-6 inline SVG icons drawn to the direction's rules, and an illustration or texture sample. -->
+<section id="imagery" class="sec" aria-labelledby="imagery-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">07</span><h2 id="imagery-title">Imagery and icons</h2><p data-slot="imagery-intro">[Photography or illustration direction in one line.]</p></div>
+    <div class="img-grid">
+      <div>
+        <p data-slot="imagery-direction">[Imagery direction: subject, light, crop, color treatment, and what is never shown. Icon rules: grid, stroke, caps and joins, fill. Two to three sentences.]</p>
+        <div class="icons" role="list" aria-label="Icon set" data-slot="icons">
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-1"/></svg>[icon]</figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-2"/></svg>[icon]</figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-3"/></svg>[icon]</figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-4"/></svg>[icon]</figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-5"/></svg>[icon]</figure>
+          <figure role="listitem"><svg aria-hidden="true"><use href="#i-6"/></svg>[icon]</figure>
+        </div>
+      </div>
+      <figure class="texture" role="img" aria-label="Placeholder for an illustration or texture sample" data-slot="texture"><span>[Illustration or texture sample, CSS or SVG]</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. MOTION: personality, durations and easing, one small CSS demo that respects prefers-reduced-motion. -->
+<section id="motion" class="sec" aria-labelledby="motion-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">08</span><h2 id="motion-title">Motion</h2><p data-slot="motion-intro">[Motion personality in one line, e.g. "precise and quick", "slow and buoyant".]</p></div>
+    <div class="motion-grid">
+      <table class="mtable" data-slot="motion-table">
+        <thead><tr><th scope="col">Moment</th><th scope="col">Duration</th><th scope="col">Easing</th></tr></thead>
+        <tbody>
+          <tr><td>[Hover, press]</td><td class="mono">120ms</td><td class="mono">cubic-bezier(0.2, 0, 0, 1)</td></tr>
+          <tr><td>[Enter, reveal]</td><td class="mono">480ms</td><td class="mono">cubic-bezier(0.05, 0.7, 0.1, 1)</td></tr>
+          <tr><td>[Signature moment]</td><td class="mono">[ms]</td><td class="mono">[curve]</td></tr>
+          <tr><td>Reduced motion</td><td class="mono">0ms</td><td class="mono">[what changes instead]</td></tr>
+        </tbody>
+      </table>
+      <div class="demo" tabindex="0" role="img" aria-label="Motion demo placeholder: a card that rises into place. Hover or focus to replay." data-slot="motion-demo">
+        <div class="card" aria-hidden="true"><b>[Demo element]</b><span>Enters with --duration-slower and --ease-emphasized-decelerate.</span></div>
+        <p aria-hidden="true">Hover or focus to replay · static with reduced motion</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VOICE: headline, CTA, error message. -->
+<section id="voice" class="sec" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">09</span><h2 id="voice-title">Voice</h2><p data-slot="voice-intro">[Voice in one line: who is speaking, to whom, register.]</p></div>
+    <div class="voice">
+      <div class="vl"><span class="eyebrow">Headline</span><q data-slot="voice-headline">[Headline]</q><p class="why" data-slot="voice-headline-why">[Why it works]</p></div>
+      <div class="vl"><span class="eyebrow">CTA</span><q data-slot="voice-cta">[Call to action]</q><p class="why" data-slot="voice-cta-why">[Why this verb]</p></div>
+      <div class="vl vl--error"><span class="eyebrow">Error</span><div class="box"><q data-slot="voice-error">[What happened. What it means for the user. What to do next.]</q></div><p class="why" data-slot="voice-error-why">[Why this tone]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. RATIONALE: fit, risk, and the category-expected alternative. -->
+<section id="rationale" class="sec" aria-labelledby="rationale-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="n">10</span><h2 id="rationale-title">Rationale</h2><p>Why this direction fits the brief, what it risks, and what the category would have done by default.</p></div>
+    <div class="rat">
+      <article><h3>Why it fits</h3><ul data-slot="why-fits"><li>[Link a brief variable (audience, market, tier, channel) to a visual decision.]</li><li>[Second reason, specific.]</li><li>[Third reason, specific.]</li></ul></article>
+      <article><h3>What it risks</h3><ul data-slot="risks"><li>[Risk and its mitigation.]</li><li>[Risk and its mitigation.]</li></ul></article>
+      <article><h3>Category-expected alternative</h3><p data-slot="alternative">[The safe option, with atlas IDs, and why this direction beats it or loses to it.]</p></article>
+    </div>
+    <!-- Optional: the design-director weighted scorecard. Delete if scores live elsewhere. -->
+    <div class="score" data-slot="scorecard">
+      <table>
+        <thead><tr><th scope="col">Criterion</th><th scope="col">Weight</th><th scope="col">Score (1-5)</th></tr></thead>
+        <tbody>
+          <tr><td>[Fit to brief and audience]</td><td>[30%]</td><td class="mono">[–]</td></tr>
+          <tr><td>[Differentiation in category]</td><td>[25%]</td><td class="mono">[–]</td></tr>
+          <tr><td>[Accessibility and legibility]</td><td>[20%]</td><td class="mono">[–]</td></tr>
+          <tr><td>[Feasibility, cost, time]</td><td>[15%]</td><td class="mono">[–]</td></tr>
+          <tr><td>[Longevity]</td><td>[10%]</td><td class="mono">[–]</td></tr>
+        </tbody>
+        <tfoot><tr><td>Weighted total</td><td></td><td class="mono">[–]</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap" data-slot="footer">[Brand] · [Direction name] · fonts: [families and licenses] · rendered [date]</div></footer>
+
+<!--
+  Optional helper: computes OKLCH and WCAG 2 contrast for every .swatch from
+  data-hex and data-on, and writes them into [data-out] cells. Same math as
+  colorcheck.py (sRGB -> linear -> OKLab -> OKLCH; WCAG 2 relative luminance).
+  Delete it if you hardcode values.
+-->
+<script>
+(function () {
+  function rgb(h) { h = h.replace('#', ''); if (h.length === 3) h = h.replace(/./g, '$&$&'); return [0, 2, 4].map(function (i) { return parseInt(h.substr(i, 2), 16) / 255; }); }
+  function lin(c) { return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }
+  function lum(h) { var c = rgb(h).map(lin); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; }
+  function ratio(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+  function oklch(h) {
+    var c = rgb(h).map(lin), r = c[0], g = c[1], b = c[2];
+    var l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
+    var m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
+    var s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+    var L = 0.2104542553 * l + 0.7936177850 * m - 0.0040720468 * s;
+    var A = 1.9779984951 * l - 2.4285922050 * m + 0.4505937099 * s;
+    var B = 0.0259040371 * l + 0.7827717662 * m - 0.8086757660 * s;
+    var C = Math.hypot(A, B), H = (Math.atan2(B, A) * 180 / Math.PI + 360) % 360;
+    return 'oklch(' + L.toFixed(2) + ' ' + C.toFixed(3) + ' ' + (C > 0.002 ? H.toFixed(0) : '0') + ')';
+  }
+  document.querySelectorAll('.swatch[data-hex][data-on]').forEach(function (el) {
+    var hex = el.getAttribute('data-hex'), on = el.getAttribute('data-on'), r = ratio(hex, on);
+    var o = el.querySelector('[data-out="oklch"]'), q = el.querySelector('[data-out="ratio"]');
+    if (o) o.textContent = oklch(hex);
+    if (q) q.textContent = r.toFixed(2) + ':1 vs ' + on.toUpperCase() + ' · ' + (r >= 4.5 ? 'AA' : r >= 3 ? 'AA large/UI' : 'fails');
+  });
+})();
+</script>
+</body>
+</html>
