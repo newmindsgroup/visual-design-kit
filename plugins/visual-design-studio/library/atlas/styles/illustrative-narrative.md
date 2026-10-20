@@ -72,6 +72,8 @@ Quiet storytelling. Layers drift at different speeds as the page scrolls (foregr
 - **Fits:** education and children's content, publishers, nonprofits and campaigns (`industry.nonprofit-ngo`), travel and hospitality storytelling, food and drink packaging, wellness and parenting, B2B brands that want personality without stock photos. Aligns with `archetype.creator`, `archetype.innocent`, `archetype.explorer`.
 - **Risks:** high cost and slow production; inconsistency when many hands (or AI tools) contribute; dated quickly if it follows a trend; text embedded in images cannot be localized or read by assistive tech; illustration can obscure dense information.
 - **Wrong for:** logistics, compliance and expert-tool interfaces where dense, scannable data matters more than story.
+- **Why these pair:** `industry.education-edtech` and `industry.kids-family` benefit from story and characters; `industry.nonprofit-ngo` and `industry.hotels-travel` sell experiences better told than shown; `industry.food-beverage-cpg` and `channel.packaging` take illustration naturally; `channel.marketing-website` has room for scene-based storytelling.
+- **Why these clash:** `industry.logistics-supply-chain`, `audience.expert-power-users` and `channel.web-app` prioritize dense, repeated tasks where illustration slows scanning; `industry.legal-professional-services` loses gravity.
 
 ## Do and don't
 

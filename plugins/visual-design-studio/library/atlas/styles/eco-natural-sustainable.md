@@ -72,6 +72,8 @@ Slow, grounded and optional. Fade up elements 12-16px over 500-700ms, let botani
 - **Fits:** climate and clean energy (`industry.energy-climate`), nonprofits and conservation, organic food and refill brands, natural beauty, eco-hotels and travel, outdoor gear, B Corps, wellness. Matches `archetype.caregiver`, `archetype.explorer`, `archetype.innocent`.
 - **Risks:** greenwashing and vague claims. Regulators treat unsubstantiated environmental claims as misleading: US FTC Green Guides, the UK CMA Green Claims Code, and the EU's rules on environmental claims (Directive (EU) 2024/825 restricts generic claims such as "eco-friendly" without proof; verify application dates and national rules). Confirm claims and badges with counsel. The look is also common to every "natural" shelf brand; differentiate through specifics and a distinctive hue (indigo, ochre, rust) rather than more beige.
 - **Wrong for:** high-tech, hard-edged, nightlife and aggressive performance brands; low-price promotional retail where "premium natural" cues contradict the offer.
+- **Why these pair:** `industry.nonprofit-ngo`, `industry.food-beverage-cpg`, `industry.beauty-cosmetics` and `industry.hotels-travel` sell provenance and care; `tier.premium` can justify materials and process; `channel.packaging` is where uncoated stock and honest materials become real.
+- **Why these clash:** `archetype.outlaw` and `industry.gaming-esports` contradict calm, earth-bound tone; `industry.crypto-web3` carries an energy-use narrative that clashes with eco claims; `tier.value` rarely supports the cost of verified sustainable materials.
 
 ## Do and don't
 

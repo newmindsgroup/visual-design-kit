@@ -73,6 +73,8 @@ Imitate stop-motion. Elements snap into place in 120-200ms, hold, and occasional
 - **Fits:** music, festivals and events (`industry.events-conferences`), culture and media (`industry.media-entertainment-streaming`), creative studios, youth and streetwear, publishing, campaigns that need a human, subversive voice. Works for `archetype.creator`, `archetype.outlaw` and `archetype.jester` brands.
 - **Risks:** noise and weak hierarchy; heavy image weight; unclear CTAs; copyright and likeness issues in found imagery; a "Canva scrapbook" sameness when stock sticker packs are used. Accessibility suffers when text rides on busy layers.
 - **Wrong for:** regulated or trust-first sectors (banking, health, insurance, government), data-dense tools, and ultra-luxury brands needing serene polish.
+- **Why these pair:** `industry.creative-agencies-studios` and `industry.fashion-apparel` reward authored, surprising visuals; `audience.teens-gen-z` and `channel.social-media` respond to cut-out and sticker culture; `channel.print-collateral` is the native home of paper and halftone.
+- **Why these clash:** `industry.fintech-banking`, `industry.healthcare-provider`, `industry.government-civic` and `industry.insurance` need calm trust; `tier.ultra-luxury` needs serene polish; `audience.expert-power-users` need clear, dense interfaces.
 
 ## Do and don't
 

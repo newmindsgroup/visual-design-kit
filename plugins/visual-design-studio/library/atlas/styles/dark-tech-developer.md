@@ -71,6 +71,8 @@ Fast and informational. Hover states change border-color and background in 100ms
 - **Fits:** developer tools, APIs, infrastructure and observability, AI tooling, security products, crypto and web3 infrastructure, gaming launchers and esports tooling. Strong with `audience.expert-power-users` who value density, shortcuts and honest documentation.
 - **Risks:** it has become the default look for AI startups, so it signals "technical" but no longer signals "different". Dark UI also hides low contrast problems: gray-on-black text that looks fine on a calibrated studio display fails on a laptop outdoors.
 - **Wrong for:** older adults, children, healthcare, government and caregiving brands, where warmth, large type and light backgrounds are expected.
+- **Why these pair:** `industry.developer-tools`, `industry.ai-products` and `industry.crypto-web3` buyers read dark, code-forward UI as credible; `industry.gaming-esports` already works in dark, neon-accent environments; `archetype.magician` and `archetype.explorer` suit frontier and power themes; `channel.web-app` and `channel.marketing-website` can share one token set for product, docs and landing pages.
+- **Why these clash:** `audience.older-adults` and `audience.children-under-13` need larger type, light backgrounds and warmth; `industry.healthcare-provider` and `industry.government-civic` depend on plain, high-contrast, light interfaces; `archetype.caregiver` contradicts the cool technical tone; `tier.ultra-luxury` reads as software, not craft.
 
 ## Do and don't
 

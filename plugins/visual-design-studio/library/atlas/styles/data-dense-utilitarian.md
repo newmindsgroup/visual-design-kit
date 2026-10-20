@@ -73,6 +73,8 @@ Almost none. State changes are immediate (0-100ms). Value ticks flash the cell b
 - **Fits:** trading and market-data products, crypto exchanges, risk and treasury tools, observability, SOC/NOC and incident consoles, logistics and fleet control, industrial and energy monitoring, internal admin tools, analytics for expert users (`audience.expert-power-users`).
 - **Risks:** onboarding cost; unreadable on phones; legibility fatigue if type is small and contrast low; designers over-polish into generic "dashboards" with big cards. Color-only gain/loss coding excludes color-blind users (about 8% of men have red-green deficiency).
 - **Wrong for:** novices, older adults, low-literacy users, consumer mobile apps and luxury brands. A simplified summary view should front the dense workspace for occasional users.
+- **Why these pair:** `industry.fintech-banking` and `industry.crypto-web3` trade on live markets; `industry.logistics-supply-chain`, `industry.industrial-manufacturing-construction` and `industry.energy-climate` run control rooms and monitoring; `industry.saas-b2b` has admin and analytics surfaces; `channel.web-app` has the screen area; `archetype.sage` values precision; `tier.mid-market` fits pragmatic tools.
+- **Why these clash:** `audience.children-under-13`, `audience.older-adults` and `audience.low-literacy-plain-language` cannot use small, dense type; `tier.luxury` and `archetype.lover` promise indulgence, not instruments; `channel.native-app` phones cannot carry the density (use a summary companion).
 
 ## Do and don't
 

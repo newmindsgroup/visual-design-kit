@@ -73,6 +73,8 @@ Material that responds: glass lifts and brightens on press, merges with neighbor
 - **Risks:** legibility. Blur does not change average backdrop luminance, so contrast is decided by the brightest and darkest content that can sit behind the panel. Public criticism of Liquid Glass centered on notifications and text over busy backgrounds; Apple responded in iOS 26.1 with a Clear/Tinted setting under Settings > Display & Brightness > Liquid Glass (Tinted raises opacity and contrast).
 - **Also costly:** `backdrop-filter` drains low-end GPUs and batteries; web recreation of refraction (SVG displacement filters inside `backdrop-filter`) is reported to work mainly in Chromium, with plain frosted fallbacks elsewhere (verify against caniuse before shipping).
 - **Wrong for:** accessibility-first, older-adult, low-bandwidth, government and print/email contexts. Use `style.civic-plain` or `style.clinical-calm` instead.
+- **Why these pair:** `channel.native-app` gives access to system materials, Dynamic Type and optimized blur; `industry.ai-products`, `industry.media-entertainment-streaming` and `industry.automotive-mobility` have rich backdrops (album art, video, maps) for glass to sit on; `industry.digital-health-wellness` benefits from ambient, immersive calm; `channel.video-motion` uses glass overlays on footage.
+- **Why these clash:** `audience.low-bandwidth-entry-devices` pays a heavy GPU cost; `audience.older-adults` and `audience.disability-accessibility-first` are most harmed by low contrast and motion; `industry.government-civic` needs plain legibility over atmosphere; `channel.print-collateral` cannot reproduce blur, and `channel.email` clients generally do not support `backdrop-filter`.
 
 ## Do and don't
 

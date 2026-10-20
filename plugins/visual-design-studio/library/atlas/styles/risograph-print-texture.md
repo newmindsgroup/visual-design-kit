@@ -72,6 +72,8 @@ Keep it analog. Shapes slide into place in 150-250ms with a 1-2px overshoot, ink
 - **Fits:** event posters, zines and album art, indie food and drink, craft packaging (`channel.packaging`), cultural and educational nonprofits, youth-facing brands, creative studios, merchandise. Fits `archetype.creator` and `archetype.outlaw` voices.
 - **Risks:** fashionable but easily faked; the "riso filter" look on every asset becomes shallow. Fluorescent inks exceed sRGB, so screens understate them and prints differ run to run. Texture and blend effects are costly on low-end devices and ruin accessibility when text sits on halftone.
 - **Wrong for:** banking, insurance, pharma and any context where precision and sterility are the brand; high-luxury tiers; very low-bandwidth contexts.
+- **Why these pair:** `industry.creative-agencies-studios`, `industry.events-conferences`, `industry.food-beverage-cpg` and `industry.nonprofit-ngo` value handmade, affordable-feeling print; `audience.teens-gen-z` and `channel.social-media` respond to tactile, indie aesthetics; `channel.print-collateral` is the real medium.
+- **Why these clash:** `industry.fintech-banking`, `industry.insurance` and `industry.pharma-biotech` require precision and sterility; `tier.luxury` expects polish, not grain; `audience.low-bandwidth-entry-devices` suffer from texture weight.
 
 ## Do and don't
 

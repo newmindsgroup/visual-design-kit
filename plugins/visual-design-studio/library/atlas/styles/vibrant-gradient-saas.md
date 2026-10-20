@@ -75,6 +75,8 @@ Slow ambient drift (rotate a conic gradient or translate blurred blobs over 20-4
 - **Fits:** SaaS, AI and developer products that want energy and approachability, product launches, creator and marketplace platforms, social campaigns, pitch decks for startups. Pairs with `archetype.magician` (transformation) and the broader `style.dark-tech-developer` family.
 - **Risks:** sameness (the violet-pink-blue palette appears on thousands of sites), contrast failures where white text crosses mid-tone stops, gradient banding on 8-bit displays and compression, GPU and battery cost from animated blurs, and a "hype" tone that undermines enterprise credibility.
 - **Wrong for:** regulated, clinical, legal and public-sector contexts; older audiences; brands whose promise is stability or seriousness. Use `style.corporate-modern` or `style.clinical-calm` instead.
+- **Why these pair:** `industry.saas-b2b`, `industry.ai-products` and `industry.developer-tools` use it to add emotion to software; `industry.marketplaces-platforms` and `channel.social-media` need energy; `channel.marketing-website` carries the hero treatment; `tier.mid-market` and `audience.b2b-buying-committee` accept friendly modern polish if proof is present.
+- **Why these clash:** `industry.healthcare-provider`, `industry.government-civic`, `industry.legal-professional-services` and `industry.insurance` need calm authority; `audience.older-adults` need high-contrast plain interfaces; `archetype.sage` reads gradients as hype.
 
 ## Do and don't
 

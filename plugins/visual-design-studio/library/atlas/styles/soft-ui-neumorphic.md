@@ -71,6 +71,8 @@ Physical but short. A button depresses in 120-160ms: shadow flips from raised to
 - **Fits:** device-like controls in smart-home, thermostat, audio and music apps, meditation and sleep timers (`industry.digital-health-wellness`), vehicle comfort controls (`industry.automotive-mobility`), calculators, kids' sensory toys, small marketing hero objects. Calm brands (`archetype.caregiver`, `archetype.innocent`) benefit from its gentleness.
 - **Risks:** low contrast and weak affordance. The dark shadow #A3B1C6 against the base #E0E5EC is 1.72:1, the white highlight is 1.27:1, and the classic gray label #9BA7B8 is 1.93:1; none can carry meaning on their own. The popular violet accent #6D5DFC is 3.59:1 on the base, so it cannot be a text color. Focus rings, disabled states and error states are easy to omit.
 - **Wrong for:** data-dense web apps, finance and healthcare forms, older adults, low vision and keyboard users, low-literacy users. Shadows also cost paint time on long lists.
+- **Why these pair:** `channel.native-app` offers haptics and touch states that make extruded controls feel real; `industry.digital-health-wellness` and `industry.automotive-mobility` use dial-and-toggle panels; `archetype.caregiver` and `archetype.innocent` match its gentleness; `tier.mid-market` suits its accessible, friendly polish.
+- **Why these clash:** `audience.older-adults`, `audience.disability-accessibility-first` and `audience.low-literacy-plain-language` need explicit affordances and strong contrast; `industry.fintech-banking` and `industry.healthcare-provider` have high-stakes forms that need visible boundaries and errors; `channel.web-app` workloads (tables, dense forms) break the style.
 
 ## Do and don't
 

@@ -72,6 +72,8 @@ Almost none. Loading and progress are explained in text ("We're checking your de
 - **Fits:** government and civic services (`industry.government-civic`), benefits, tax, licensing, immigration and voting; nonprofits delivering services; utilities and insurers' claims journeys; any product for `audience.low-literacy-plain-language`, `audience.older-adults` and `audience.disability-accessibility-first`. Cultural anchors are the UK and US (`market.united-kingdom-ireland`, `market.united-states`); other countries run comparable systems (Canada, Australia, Singapore, Germany, Netherlands).
 - **Risks:** it can look austere or "official" in a way that feels cold for consumer brands. Private companies copying the visual skin without the research and content discipline get the aesthetic but not the outcomes. Copying government branding can mislead users.
 - **Wrong for:** luxury, fashion, entertainment and brands whose job is to seduce; use the underlying principles (plain language, contrast, focus, error handling) inside a different visual style.
+- **Why these pair:** `industry.nonprofit-ngo` often delivers services; `audience.low-bandwidth-entry-devices` benefits from server-rendered, light pages; `archetype.everyperson` suits unpretentious, universal design; `channel.web-app` is where transactional forms live.
+- **Why these clash:** `archetype.outlaw` and `archetype.jester` need attitude; `tier.luxury`, `tier.ultra-luxury`, `industry.luxury-goods` and `industry.fashion-apparel` sell desire and ornament.
 
 ## Do and don't
 

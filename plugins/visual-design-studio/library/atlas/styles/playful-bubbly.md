@@ -71,6 +71,8 @@ Springy and quick. Buttons compress 4px on press (80-120ms), then rebound; cards
 - **Fits:** kids' and family products (`industry.kids-family`), language and skill learning (`industry.education-edtech`), snacks, toys and cereal brands, habit and fitness apps, consumer fintech for teens, youth-facing social features, mascots for friendly utilities. `archetype.jester` and `archetype.innocent` map naturally.
 - **Risks:** seriousness. Adults can feel patronized, and sensitive flows (payments, health results, legal) lose credibility. Cute color combinations commonly fail contrast, especially white on pastel. Motion-heavy interfaces fatigue users and harm accessibility.
 - **Wrong for:** luxury tiers, legal, pharma, insurance claims and any moment of user anxiety; use calm patterns for errors and loss. For children under 13, privacy law (COPPA in the US, UK Children's Code) also constrains data collection and engagement mechanics; confirm with counsel.
+- **Why these pair:** `industry.kids-family` and `audience.children-under-13` respond to big targets, round shapes and mascots (check privacy law); `audience.teens-gen-z` and `channel.social-media` reward sticker-like shapes and shareable characters; `channel.native-app` supports haptics and progress mechanics; `industry.food-beverage-cpg` and `tier.value` benefit from approachable color.
+- **Why these clash:** `tier.luxury` and `tier.ultra-luxury` need restraint; `archetype.ruler`, `industry.legal-professional-services`, `industry.pharma-biotech` and `industry.insurance` need gravity and calm at moments of risk.
 
 ## Do and don't
 

@@ -147,7 +147,9 @@ a { color: inherit; }
 .give .secure { display: flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--color-fg-muted); margin: var(--space-3) 0 0; justify-content: center; }
 
 /* Cross-section */
-.section-art { position: relative; margin-top: calc(var(--space-12) * -1); z-index: 1; }
+.section-art { position: relative; margin: calc(var(--space-12) * -1) 0 0; z-index: 1; }
+.section-art .scroller { overflow-x: auto; }
+.swipe { display: none; }
 .section-art svg { width: 100%; height: auto; }
 .section-art .lbl { font-family: "Archivo", sans-serif; font-stretch: 85%; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
 .section-art .lbl-n { font-family: "Archivo", sans-serif; font-weight: 500; font-size: 12px; }
@@ -272,7 +274,7 @@ a { color: inherit; }
 .email-head .issue { display: flex; justify-content: space-between; border-top: 1px solid rgb(156 195 201 / 0.5); border-bottom: 1px solid rgb(156 195 201 / 0.5); padding: 6px 0; margin: 20px 0 22px; color: #DCE9E6; }
 .email-head h4 { margin: 0; font-family: var(--font-family-display); font-weight: 300; font-size: clamp(2.5rem, 6vw, 4.25rem); line-height: 0.9; letter-spacing: -0.04em; max-width: 9ch; }
 .email-head h4 em { color: var(--color-gold); font-weight: 400; }
-.email-head svg.wave { width: calc(100% + 72px); margin: 22px -36px 0; height: 70px; }
+.email-head svg.wave { max-width: none; width: calc(100% + 72px); margin: 22px -36px 0; height: 70px; }
 .email-body { padding: 26px 36px 32px; }
 .email-body p { margin: 0 0 16px; font-size: 1.0625rem; line-height: 1.55; max-width: 56ch; }
 .app-cap { font-family: var(--font-family-ui); font-size: 0.8125rem; color: var(--color-fg-muted); margin: var(--space-3) 0 0; text-align: center; }
@@ -305,14 +307,13 @@ a { color: inherit; }
 .mt th { font-stretch: 85%; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 2px solid var(--color-border-strong); }
 .mt code { font-family: var(--font-family-mono); font-size: 0.8125rem; }
 .gauge { position: relative; height: 340px; background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); overflow: hidden; font-family: var(--font-family-ui); }
-.gauge .water { position: absolute; inset-inline: 0; bottom: 0; height: 32%; background: linear-gradient(var(--color-shallows), #6FA3AC); transition: height var(--duration-tide) var(--ease-tide); }
-.gauge .water::before { content: ""; position: absolute; inset-inline: 0; top: -8px; height: 10px; background: radial-gradient(14px 9px at 50% 100%, var(--color-shallows) 98%, transparent) 0 0 / 28px 10px repeat-x; }
+.gauge .water { position: absolute; inset-inline: 0; bottom: 0; height: 32%; background: linear-gradient(rgb(156 195 201 / 0.88), rgb(79 135 144 / 0.92)); border-top: 2px solid #4F8790; transition: height var(--duration-tide) var(--ease-tide); }
 .gauge.high .water { height: 74%; }
 .gauge .marks { position: absolute; inset: 0; }
-.gauge .mark { position: absolute; inset-inline: 0; border-top: 1.5px dashed var(--color-fg-default); display: flex; justify-content: space-between; padding: 4px 16px 0; font-size: 0.8125rem; font-weight: 600; }
+.gauge .mark { position: absolute; inset-inline: 0; border-top: 1.5px dashed var(--color-fg-default); display: flex; justify-content: space-between; padding: 4px 16px 0; font-size: 0.8125rem; font-weight: 600; z-index: 2; }
 .gauge .mark span:last-child { font-weight: 400; color: var(--color-fg-muted); }
-.gauge .marsh { position: absolute; inset-inline-end: 0; bottom: 0; width: 46%; height: 44%; background: #8A9E73; clip-path: polygon(0 40%, 100% 22%, 100% 100%, 0 100%); }
-.gauge .count { position: absolute; inset-block-start: 16px; inset-inline-start: 16px; background: var(--color-bg-inverse); color: var(--color-fg-inverse); padding: 8px 12px; border-radius: var(--radius-md); }
+.gauge .marsh { position: absolute; inset-inline-end: 0; bottom: 0; width: 52%; height: 52%; background: linear-gradient(#7F9567 0 10%, #E3D6B8 10%); clip-path: polygon(0 38%, 40% 34%, 100% 4%, 100% 100%, 0 100%); }
+.gauge .count { position: absolute; inset-block-end: 14px; inset-inline-start: 16px; z-index: 3; background: var(--color-bg-inverse); color: var(--color-fg-inverse); padding: 8px 12px; border-radius: var(--radius-md); }
 .gauge .count b { font-family: var(--font-family-display); font-size: 1.75rem; font-weight: 400; font-variant-numeric: tabular-nums lining-nums; }
 .gauge-ctl { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-top: var(--space-4); font-family: var(--font-family-ui); font-size: 0.875rem; color: var(--color-fg-muted); }
 .gauge-ctl .btn { min-height: 44px; font-size: 0.9375rem; }
@@ -366,7 +367,9 @@ a { color: inherit; }
   .hero-title .l2 { padding-inline-start: 0.5em; }
   .hero-copy .deck-row { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
   .give { padding: var(--space-5); }
-  .section-art svg { width: 220%; margin-inline-start: -85%; }
+  .section-art { margin-top: var(--space-6); }
+  .section-art svg { width: 210%; max-width: none; }
+  .swipe { display: inline; }
   .art-caption { flex-direction: column; gap: 2px; }
   .stats ul { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); padding-block: var(--space-8); }
   .dept { grid-template-columns: minmax(0, 1fr); }
@@ -432,7 +435,7 @@ a { color: inherit; }
       <div class="hero-copy">
         <h2 class="hero-title" id="hero-title"><span class="l1">Hold</span><span class="l2">the <em>line.</em></span></h2>
         <div class="deck-row">
-          <p class="deck">Fourteen towns now sit behind living shorelines that volunteers built by hand. <b>This winter the water reaches three more.</b></p>
+          <p class="deck">Fourteen towns now sit behind living shorelines that volunteers built by hand. <b>This winter the water reaches three&nbsp;more.</b></p>
         </div>
         <p class="byline">Reported by <b>Ama Mensah</b> &middot; Cross-section by the Tidewater field team</p>
       </div>
@@ -451,12 +454,12 @@ a { color: inherit; }
           <div class="amt"><input type="radio" name="amt" id="a4"><label for="a4"><b>Other</b><span>Any amount helps</span></label></div>
         </fieldset>
         <button class="btn btn-primary" type="submit">Give $75 monthly <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h11M10 4.5L14.5 9 10 13.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <p class="fine">Tidewater Collective is a 501(c)(3) nonprofit (EIN XX-XXXXXXX). Gifts are tax-deductible to the extent allowed by law. Change or cancel a monthly gift in one click, any time.</p>
+        <p class="fine">Tidewater Collective is a 501(c)(3) nonprofit (<span style="white-space:nowrap">EIN XX-XXXXXXX</span>). Gifts are tax-deductible to the extent allowed by law. Change or cancel a monthly gift in one click, any time.</p>
       </form>
     </div>
   </div>
-  <figure class="section-art" style="margin-bottom:0" aria-labelledby="xs-cap">
-    <svg viewBox="0 0 1440 380" role="img" aria-label="Cross-section of Pell Island: open water on the left, an oyster-reef breakwater, a restored salt marsh and homes on higher ground. Dashed lines show mean high water today, plus 0.3 metres by 2050 and plus 1.0 metre by 2100.">
+  <figure class="section-art" aria-labelledby="xs-cap">
+    <div class="scroller" tabindex="0" aria-label="Cross-section, scrolls sideways on small screens"><svg viewBox="0 0 1440 380" role="img" aria-label="Cross-section of Pell Island: open water on the left, an oyster-reef breakwater, a restored salt marsh and homes on higher ground. Dashed lines show mean high water today, plus 0.3 metres by 2050 and plus 1.0 metre by 2100.">
       <defs>
         <pattern id="sand" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="0.8" fill="#C9B88F"/><circle cx="4.5" cy="4.5" r="0.6" fill="#BFAE85"/></pattern>
       </defs>
@@ -498,8 +501,8 @@ a { color: inherit; }
         <text class="lbl" x="888" y="262">Restored salt marsh</text><text class="lbl-n" x="888" y="278">Spartina alterniflora, 42 acres</text>
         <text class="lbl" x="1214" y="60">Homes on Pell Road</text>
       </g>
-    </svg>
-    <figcaption class="wrap art-caption" id="xs-cap"><span>Cross-section, Pell Island. Vertical scale exaggerated; sea-level lines after the NOAA 2022 Sea Level Rise Technical Report (US average).</span><span>Fig. 1</span></figcaption>
+    </svg></div>
+    <figcaption class="wrap art-caption" id="xs-cap"><span>Cross-section, Pell Island. Vertical scale exaggerated; sea-level lines after the NOAA 2022 Sea Level Rise Technical Report (US average).</span><span>Fig. 1<span class="swipe"> &middot; swipe to see Pell Road</span></span></figcaption>
   </figure>
   <div class="stats">
     <div class="wrap">
@@ -552,7 +555,7 @@ a { color: inherit; }
         </div>
         <div class="spec"><div class="kicker"><span>Interface &amp; caption</span><span>Archivo 400&ndash;700 &middot; wdth 85&ndash;125</span></div>
           <table class="meta-table">
-            <tr><th>Kicker</th><td><span class="kicker">Field report No. 14</span><br>13px, wdth 85, 700, +0.06em caps</td></tr>
+            <tr><th>Kicker</th><td><span class="kicker" style="display:block;margin-bottom:4px">Field report No. 14</span>13px, wdth 85, 700, +0.06em caps</td></tr>
             <tr><th>UI</th><td>16px / 1.4, 500&ndash;700. Buttons, forms, amounts.</td></tr>
             <tr><th>Caption</th><td>13px / 1.45, 400, Estuary. Sources and figure notes.</td></tr>
             <tr><th>Wordmark</th><td>Newsreader 600 italic over Archivo wdth 125, +0.32em caps</td></tr>
@@ -615,7 +618,7 @@ a { color: inherit; }
             <path d="M0 240c60-8 110 8 170 0s120-6 330 4v56H0z" fill="#4F8790"/>
             <path d="M210 182c30-30 80-34 140-28 60 6 110 20 150 22v26H190z" fill="#7F9567"/>
             <g stroke="#3F6B3A" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M240 170q-2-14 4-26M256 166q2-16-4-30M274 162q-3-12 2-24M292 160q1-14 7-26M312 158q-2-18-8-30M330 158q2-12 0-24M350 158q-3-16 3-28M370 160q2-12-4-24M392 162q-1-14 5-26M414 166q2-12-2-22M436 170q-2-14 4-24M460 172q1-12-3-22"/></g>
-            <g fill="#0B2E35"><rect x="120" y="150" width="9" height="34" rx="4"/><circle cx="124.5" cy="142" r="6"/><rect x="146" y="154" width="9" height="30" rx="4"/><circle cx="150.5" cy="146" r="5.5"/></g>
+            <g fill="#E3D6B8" stroke="#0B2E35" stroke-width="1.6"><ellipse cx="96" cy="198" rx="17" ry="9"/><ellipse cx="124" cy="194" rx="16" ry="9"/><ellipse cx="150" cy="196" rx="15" ry="8"/><ellipse cx="110" cy="184" rx="13" ry="7"/><ellipse cx="137" cy="182" rx="13" ry="7"/></g><g stroke="#0B2E35" stroke-width="2.5" fill="none"><path d="M70 214V96"/><path d="M70 110h10M70 130h7M70 150h10M70 170h7M70 190h10" stroke-width="2"/></g><path d="M58 150h40" stroke="#C73A24" stroke-width="2.5" stroke-dasharray="6 4"/>
           </svg>
         </div>
         <div class="body">
@@ -687,10 +690,10 @@ a { color: inherit; }
         <p>Illustrations are cross-sections and maps in the palette&rsquo;s naturals, always with a labelled sea-level line and a source. Icons use a 1.75px round stroke on a 24px grid with one Life-ring detail where it carries meaning.</p>
         <ul class="icons">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0" class="acc"/><path d="M3 14c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0M3 19c1.5-1.3 3-1.3 4.5 0s3 1.3 4.5 0 3-1.3 4.5 0 3 1.3 4.5 0"/></svg>Tide</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c0-5 4-9 9-9 4 0 7 3 7 6.5 0 4.5-4.5 8.5-10 8.5-3.5 0-6-2.5-6-6z"/><path d="M8 15c2-3 5-5.5 9-6.5M9 12c1-1.5 2.5-3 4.5-4"/></svg>Oyster</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c-4.5 0-8-3-8-7.5C4 8 7.5 3 12 3s8 5 8 10.5c0 4.5-3.5 7.5-8 7.5z"/><path d="M12 21V8M8 19.5C7 15 8.5 10 12 8M16 19.5c1-4.5-.5-9.5-4-11.5" /></svg>Oyster</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M8 20q-1-7 2-14M12 20q0-9 0-16M16 20q1-7-2-13M5 20q-1-4 0-8M19 20q1-4 0-7"/></svg>Marsh</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v18H8z"/><path d="M8 7h3M8 11h5M8 15h3M8 19h5"/><path d="M4 13h16" class="acc"/></svg>Gauge</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20l7-16M12 4l3 6M9 13l6 2"/><path d="M15 10l4 1-3 9-4-1z"/></svg>Dig</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10M9 3h6"/><path d="M8 13h8v3.5a4 4 0 0 1-8 0z"/><path d="M3 21h18" class="acc"/></svg>Dig</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" class="acc"/></svg>Site</li>
         </ul>
       </div>
@@ -732,9 +735,9 @@ a { color: inherit; }
           <div class="marsh"></div>
           <div class="water"></div>
           <div class="marks">
-            <div class="mark" style="bottom:32%"><span>Mean high water today</span><span>0.0 m</span></div>
-            <div class="mark" style="bottom:46%"><span>2050</span><span>+0.3 m</span></div>
-            <div class="mark" style="bottom:74%; border-top-color:#C73A24"><span style="color:#A9321D">2100, intermediate</span><span>+1.0 m</span></div>
+            <div class="mark" style="top:68%"><span>Mean high water today</span><span>0.0 m</span></div>
+            <div class="mark" style="top:54%"><span>2050</span><span>+0.3 m</span></div>
+            <div class="mark" style="top:26%; border-top-color:#C73A24"><span style="color:#A9321D">2100, intermediate</span><span>+1.0 m</span></div>
           </div>
           <div class="count">Year <b id="tw-year">2026</b></div>
         </div>
@@ -750,7 +753,7 @@ a { color: inherit; }
     <div class="dept"><div class="folio kicker"><span>09 &middot; Voice</span><span>Tidewater Collective</span></div><h2 id="vo-t">Voice</h2><p>A reporter with mud on their boots: specific, calm, brave. The donor is the reinforcement, the residents are the heroes.</p></div>
     <div class="voice">
       <figure><span class="kicker">Headline</span><blockquote>Hold the line.</blockquote><figcaption>Three words that are literally true (a tide line, a reef line) and ask for courage without panic.</figcaption></figure>
-      <figure><span class="kicker">Call to action</span><blockquote class="cta">Build a foot of shoreline &mdash; $75</blockquote><figcaption>A concrete unit, not &ldquo;make a difference&rdquo;. The price and the result sit in the same sentence.</figcaption></figure>
+      <figure><span class="kicker">Call to action</span><blockquote class="cta">Build a foot of shoreline</blockquote><figcaption>A concrete unit, not &ldquo;make a difference&rdquo;. The button then names the price: &ldquo;Give $75 monthly&rdquo;.</figcaption></figure>
       <figure><span class="kicker">Error message</span><blockquote class="err">Your card was declined. Nothing was charged. Try another card, or give by bank transfer.</blockquote><figcaption>Reassure first (no charge), then give two ways forward. Never blame the donor.</figcaption></figure>
     </div>
   </div>

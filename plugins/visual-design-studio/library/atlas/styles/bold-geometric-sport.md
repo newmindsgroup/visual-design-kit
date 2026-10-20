@@ -71,6 +71,8 @@ Quick, decisive, with momentum. Panels slide in along the brand's diagonal in 18
 - **Fits:** teams, leagues and events, gyms and fitness apps, athleisure, sports betting-adjacent information (with responsible-gambling rules), performance automotive and cycling, esports and gaming launches, energy drinks, youth-facing campaigns (`audience.teens-gen-z`). Aligns with `archetype.hero` (achievement) and `archetype.outlaw` (rule-breaking edge).
 - **Risks:** shouting. Sustained all-caps condensed type at huge size is tiring and weak for paragraphs; screen-reader and low-vision users suffer from italic, tight leading and overlapping text. Stat-heavy layouts can bury the main action. Many sport brands look identical (black, volt, diagonal).
 - **Wrong for:** caregiving, healthcare, legal and finance advice, older audiences and quiet luxury. For "wellness" fitness, soften to `style.quiet-minimal` or `style.clinical-calm` cues.
+- **Why these pair:** `industry.sports-fitness`, `industry.automotive-mobility`, `industry.gaming-esports` and `industry.events-conferences` share performance, competition and spectacle; `channel.social-media`, `channel.ooh-signage` and `channel.video-motion` reward big, quick-read type and hard cuts.
+- **Why these clash:** `archetype.caregiver` and `archetype.innocent` need softness; `industry.healthcare-provider` and `industry.legal-professional-services` need calm authority; `audience.older-adults` struggle with italic all-caps; `tier.ultra-luxury` needs quiet.
 
 ## Do and don't
 

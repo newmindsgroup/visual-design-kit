@@ -73,6 +73,8 @@ Reassuring, not performative. Transitions are 150-250ms fades and 8px slides; lo
 - **Fits:** hospitals and clinics, patient portals, telehealth, health insurers and benefits, pharmacy, digital health and therapy apps, pharma patient-support sites, caregiving tools. Strongest for `audience.older-adults` and `audience.disability-accessibility-first`, and for `archetype.caregiver` and `archetype.sage`.
 - **Risks:** blandness. The sea of identical pale blue and white makes providers indistinguishable. Over-softening can hide urgency; over-medicalizing can feel cold. Health content carries legal and safety obligations: HIPAA (US) governs protected health information, the EU MDR and FDA rules apply to software that acts as a medical device, and accessibility law applies broadly. Confirm requirements with counsel and clinical safety officers.
 - **Wrong for:** playful or rebellious brands (`archetype.outlaw`, `archetype.jester`), gaming and nightlife, ultra-luxury wellness that sells exclusivity over clarity.
+- **Why these pair:** `industry.healthcare-provider`, `industry.digital-health-wellness`, `industry.pharma-biotech` and `industry.insurance` need trust, clarity and error prevention; `channel.web-app` and `channel.native-app` host portals, telehealth and care tools.
+- **Why these clash:** `industry.gaming-esports` wants stimulation and speed; `tier.ultra-luxury` wants exclusivity over clarity.
 
 ## Do and don't
 

@@ -73,6 +73,8 @@ Mimic mass and friction. Knobs ease out over 300-600ms with slight inertia; swit
 - **Fits:** audio, music and creative tools (`archetype.creator`), camera and film apps, games and casino/board metaphors, whisky, coffee, leather and craft packaging, calendar and notes products with a paper metaphor. Familiar object metaphors can help `audience.older-adults` and `audience.low-literacy-plain-language`, because the control explains itself; confirm with user testing.
 - **Risks:** visual noise, asset weight, localization (engraved text in fixed-width plates), and dating quickly. Dense workflows (spreadsheets, admin tools) lose horizontal space to chrome. Texture layers behind text erode contrast.
 - **Wrong for:** `industry.saas-b2b`, finance and compliance products, expert power users who want density, low-end devices and bandwidth, email.
+- **Why these pair:** `industry.media-entertainment-streaming` (players, instruments, studio tools) and `industry.gaming-esports` (tabletop, arcade, card metaphors) have natural physical analogues; `industry.food-beverage-cpg` and `channel.packaging` share craft materials from shelf to screen; `archetype.everyperson` benefits from familiar objects; `channel.native-app` supports touch, haptics and sound.
+- **Why these clash:** `industry.fintech-banking` needs precision, not ornament; `audience.expert-power-users` lose density to chrome; `audience.low-bandwidth-entry-devices` and `channel.email` struggle with texture weight and CSS support.
 
 ## Do and don't
 

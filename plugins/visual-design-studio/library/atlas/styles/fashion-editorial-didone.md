@@ -72,6 +72,8 @@ Slow and deliberate. Images fade in and ease from 1.04 to 1.00 scale over 800-10
 - **Fits:** fashion houses and designers, beauty and fragrance, jewelry and watches (`industry.luxury-goods`), magazines, galleries, hospitality at the high end, e-commerce for `tier.luxury` and `tier.ultra-luxury`, `archetype.lover` and `archetype.creator` brands.
 - **Risks:** hairline strokes vanish on low-resolution screens and in small sizes; heavy imagery slows pages; minimal navigation can confuse shoppers; the look is widely copied, so cheap templates read as fake luxury. Conversion tests are essential for commerce: clarity of price, size and delivery must not be sacrificed.
 - **Wrong for:** value brands, utilities, public services, dense apps, low-bandwidth contexts.
+- **Why these pair:** `industry.fashion-apparel` and `industry.beauty-cosmetics` live on photography and typographic taste; `audience.affluent-hnwi` reads restraint as quality; `channel.print-collateral` suits Didone's printed lineage; `channel.ecommerce-store` can carry it if product clarity is protected.
+- **Why these clash:** `tier.value` and `archetype.everyperson` contradict the aspirational posture; `industry.government-civic`, `audience.low-literacy-plain-language` and `audience.low-bandwidth-entry-devices` need plain, light, readable interfaces; `channel.web-app` task density clashes with hairlines and sparse layouts.
 
 ## Do and don't
 

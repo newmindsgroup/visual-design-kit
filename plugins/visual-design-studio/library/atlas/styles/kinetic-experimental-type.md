@@ -71,6 +71,8 @@ The motion is the content, so budget it. Hero sequences run 600-2000ms with an e
 - **Fits:** creative studios and portfolios, festivals and conferences, film, music and fashion launches, art institutions, product reveal microsites, title sequences and social video. Matches `archetype.magician` and `archetype.creator`.
 - **Risks:** legibility, accessibility (vestibular and cognitive load), performance, SEO and screen-reader behavior when text is split into spans. Experiments can overpower the message, and similar scroll-reveal headlines are now everywhere, which erodes distinctiveness.
 - **Wrong for:** older adults, neurodivergent audiences prone to overload, accessibility-first products, low-bandwidth contexts, healthcare and government. For those contexts keep type static and use motion only for state change.
+- **Why these pair:** `industry.creative-agencies-studios`, `industry.events-conferences`, `industry.media-entertainment-streaming` and `industry.fashion-apparel` reward expressive launches; `archetype.outlaw` fits rule-breaking; `channel.video-motion`, `channel.marketing-website` and `channel.ooh-signage` are natural stages for motion type.
+- **Why these clash:** `audience.older-adults`, `audience.disability-accessibility-first` and `audience.neurodivergent` are most harmed by motion, scale extremes and unpredictability; `audience.low-bandwidth-entry-devices` cannot afford the runtime; `industry.healthcare-provider` and `industry.government-civic` require stable, plain reading.
 
 ## Do and don't
 

@@ -71,6 +71,8 @@ Quiet and functional. Fade and lift cards 8px on scroll entry (200ms, standard e
 - **Fits:** B2B software, fintech and insurance back offices, professional services, HR and payroll platforms, IT consultancies, logistics software, any buyer who needs consensus from many stakeholders (`audience.b2b-buying-committee`). Pairs with `archetype.ruler` and `archetype.sage` because order and expertise are the brand promise.
 - **Risks:** it is the most common category look; a competitor in the same space probably looks nearly identical. Differentiate with one owned device (a distinctive accent hue, a signature layout move, an unusual photography crop) and with sharper copy.
 - **Wrong for:** `archetype.outlaw` and `archetype.jester` brands, products for children, gaming, and `tier.ultra-luxury`, where polish without personality reads as discount. Consumer-warmth products (restaurants, hospitality) feel institutional in this style.
+- **Why these pair:** `industry.saas-b2b`, `industry.fintech-banking`, `industry.insurance` and `industry.legal-professional-services` expect order, proof and compliance cues; `tier.mid-market` gets credibility without luxury price signals; `channel.presentation` and `channel.marketing-website` reuse the same modular bands and card grids.
+- **Why these clash:** `audience.children-under-13` needs warmth and play this style does not offer; `industry.gaming-esports` finds it institutional.
 
 ## Do and don't
 

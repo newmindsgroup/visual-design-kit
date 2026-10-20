@@ -71,6 +71,8 @@ Material motion explains hierarchy: container transforms connect a card to its d
 - **Fits:** Android and cross-platform apps, admin consoles, marketplaces, utilities, education, anything shipped quickly by many engineers. Strong in India, Southeast Asia and Africa where Android and entry-level devices dominate (`audience.low-bandwidth-entry-devices`), and for `tier.value` brands that need clarity over polish.
 - **Risks:** it reads as "Google" and can look generic; default M3 baseline purple is the most common outcome. Flat design without signifiers makes buttons look like labels (a long-documented usability criticism). Expressive styling can feel childish in conservative sectors.
 - **Wrong for:** luxury, fashion and romance-led brands, where ornament, serif type and texture carry the promise.
+- **Why these pair:** `channel.native-app` and `channel.web-app` have mature component kits, tokens and motion specs; `industry.saas-b2b` and `industry.marketplaces-platforms` need fast, predictable UI; `market.india-south-asia`, `market.southeast-asia` and `market.sub-saharan-africa` have Android-heavy device bases (verify current share per country); `archetype.everyperson` favors familiar, unpretentious UI.
+- **Why these clash:** `tier.luxury`, `tier.ultra-luxury`, `industry.luxury-goods`, `industry.fashion-apparel` and `archetype.lover` promise material richness, ornament and desire, which flat tonal UI cannot supply.
 
 ## Do and don't
 
