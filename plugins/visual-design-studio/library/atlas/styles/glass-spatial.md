@@ -53,6 +53,7 @@ Make controls feel like physical, light-bending material floating above content.
 - Let content scroll under the toolbar and use a scroll-edge treatment: a soft blur fade for general screens and a harder edge where headers must stay legible. Apple names both effects in its Liquid Glass guidance.
 - Establish hierarchy with layout, grouping and size, not with tinted glass backgrounds. Reserve color tint for the one primary action.
 - On visionOS, keep windows glass (opaque windows feel heavy), place sidebars on a darker material than content, and avoid stacking light materials on light materials.
+- visionOS specifics (from Apple's WWDC23 guidance; verify against the current HIG): windows use system glass that adapts to room lighting, so there is no separate light or dark mode; text defaults to white with three vibrancy levels (primary, secondary, tertiary); controls can live in ornaments attached to a window edge; eye-and-pinch input needs targets of about 60pt with hover feedback and 4pt of space around hover areas.
 - Design the backdrop. Specify what can sit behind each glass element (image library, user wallpaper, map) and test the extremes: pure white, pure black, a saturated mid-tone, and a busy photo.
 
 ## Imagery and iconography

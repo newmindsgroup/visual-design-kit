@@ -80,6 +80,7 @@ Physical but short. A button depresses in 120-160ms: shadow flips from raised to
 - Don't shadow every card, list row and chip; reserve raised for actionable items.
 - Don't set labels in the shadow color or light gray; they are the signature failure of the style.
 - Don't build long forms or tables from extruded fields; inset wells with 1px edges are the most you can justify.
+- Do run a three-part gate before shipping: a squint test (blur the screenshot 50%: can you still find every button?), a grayscale test with 3:1 edges, and a keyboard-only pass. If any fails, add a border, a fill change or a label.
 
 ## Clichés and AI tells
 

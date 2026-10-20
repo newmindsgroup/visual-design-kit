@@ -3,7 +3,7 @@ id: style.web-brutalist
 axis: style
 name: Raw Web Brutalism
 aliases: [brutalist web design, brutalist websites, raw html, anti-design, default web aesthetic, unstyled web, raw brutalism]
-summary: Deliberately raw websites: default system fonts, browser-blue links, hard black-and-white blocks and visible structure; honesty and speed over polish. A niche, risky style that needs usability scaffolding.
+summary: Deliberately raw websites: system fonts, browser-blue links, hard black-and-white blocks and visible structure; honesty and speed over polish. Niche and risky; needs usability scaffolding.
 tags: [brutalist, raw, anti-design, html, monospace, default, stark, web]
 pairs_with: [industry.creative-agencies-studios, industry.media-entertainment-streaming, industry.nonprofit-ngo, industry.developer-tools, archetype.outlaw, archetype.creator, channel.marketing-website, audience.expert-power-users, audience.low-bandwidth-entry-devices]
 avoid_with: [industry.healthcare-provider, industry.fintech-banking, tier.luxury, audience.older-adults, audience.children-under-13, archetype.caregiver]

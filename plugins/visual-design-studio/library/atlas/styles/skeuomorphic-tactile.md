@@ -58,9 +58,11 @@ Borrow the physics of real objects so people understand what to do without instr
 ## Imagery and iconography
 
 - Icons: embossed or debossed single-color glyphs, or small enamel-style badges; avoid glossy multicolor 3D icons.
-- Textures: seamless tiles of 256-512px at 4-10% overlay, optimized under 20-40KB each; generate with SVG `feTurbulence` or CSS gradients where possible to avoid heavy bitmaps.
+- Textures: tileable textures of 256-512px at 4-10% overlay, optimized under 20-40KB each; generate with SVG `feTurbulence` or CSS gradients where possible to avoid heavy bitmaps.
 - Photography and renders: product shots on matching materials; for packaging, real photographed or rendered textures at print resolution (300ppi).
 - Avoid AI-rendered "photoreal" icon sets with inconsistent light; commission or build one coherent set.
+- Build materials in CSS so they stay themeable: leather = `linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(0 0 0 / 0.14)), #5B3A29` plus a noise tile; brushed metal = `repeating-linear-gradient(90deg, rgb(255 255 255 / 0.10) 0 1px, transparent 1px 3px)` over #C9CDD2; felt = #1F4D3A with 6-8% noise.
+- Dark variant: deepen the faceplate to walnut or black leather, lower highlights to about 15-20% white, and keep content plates paper-colored or LCD so reading contrast does not change.
 
 ## Motion
 

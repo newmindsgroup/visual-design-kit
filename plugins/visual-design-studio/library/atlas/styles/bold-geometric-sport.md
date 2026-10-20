@@ -83,7 +83,7 @@ Quick, decisive, with momentum. Panels slide in along the brand's diagonal in 18
 
 ## Clichés and AI tells
 
-- Lazy version: black background, neon lime accent, Bebas Neue, "UNLEASH YOUR POTENTIAL" over a glossy sweaty athlete, a diagonal slash, blurred speed streaks, a 3-column feature grid with flame emojis.
+- Lazy version: black background, neon lime accent, Bebas Neue, "BREAK YOUR LIMITS" over a glossy sweaty athlete, a diagonal slash, blurred speed streaks, a 3-column feature grid with flame emojis.
 - Fix: pick a color from the sport or team context, set a specific voice with numbers ("42.195 km. 3:04 pace."), use a real condensed family with a real width axis, shoot or license distinctive photography, create a diagonal system with a single angle, and build a stats module from real data.
 
 ## Accessibility notes

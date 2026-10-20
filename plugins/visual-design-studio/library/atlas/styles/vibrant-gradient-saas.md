@@ -55,6 +55,7 @@ Use light and color to say "new, fast, alive". Gradients entered mainstream prod
 - Keep text on stable surfaces: set headlines on the dark base or a 70%+ opaque scrim, not directly over saturated gradient regions.
 - Use the gradient as a system device: one gradient token (`--gradient-brand`) with defined stops and angle, applied only to the hero glow, the featured card border and one chart. Everything else is neutral.
 - Break the template: asymmetric hero (copy left, UI right bleeding off-canvas), a numbered process section, a comparison table, a real customer quote with a face and company. A centered headline above a bento grid is the default every AI generator produces.
+- Aurora recipe in CSS: `background: radial-gradient(60% 50% at 20% 0%, oklch(0.60 0.23 286 / 0.55), transparent 70%), radial-gradient(50% 50% at 85% 10%, oklch(0.65 0.219 347 / 0.45), transparent 70%), #0C0B1D;` then 3-5% noise on top. Swap the two hue values for the brand's own.
 - Offer a light theme. Many B2B buyers browse in light mode; use deep violet on soft lavender-white with a smaller, paler gradient.
 
 ## Imagery and iconography
