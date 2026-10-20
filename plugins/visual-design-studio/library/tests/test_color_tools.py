@@ -206,3 +206,16 @@ class PaletteTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StepValidationTests(unittest.TestCase):
+    def test_out_of_scale_steps_are_rejected(self):
+        import subprocess, sys
+        script = Path(__file__).resolve().parents[1] / "scripts" / "color_tools.py"
+        bad = subprocess.run([sys.executable, str(script), "ramp", "--hue", "195", "--chroma", "0.1", "--steps", "1,2,3"],
+                             capture_output=True, text=True)
+        self.assertNotEqual(bad.returncode, 0)
+        self.assertIn("50-950", bad.stderr)
+        good = subprocess.run([sys.executable, str(script), "ramp", "--hue", "195", "--chroma", "0.1", "--steps", "50,500,950"],
+                              capture_output=True, text=True)
+        self.assertEqual(good.returncode, 0, good.stderr)

@@ -493,6 +493,10 @@ def _parse_steps(text):
         steps = [int(part) for part in text.split(",") if part.strip()]
     except ValueError as exc:
         raise argparse.ArgumentTypeError("steps must be comma-separated integers") from exc
+    out_of_range = [step for step in steps if not 25 <= step <= 975]
+    if out_of_range:
+        raise argparse.ArgumentTypeError(
+            f"steps use the 50-950 scale (25-975 allowed for in-between steps); got {out_of_range}")
     if not steps:
         raise argparse.ArgumentTypeError("at least one step is required")
     return steps
