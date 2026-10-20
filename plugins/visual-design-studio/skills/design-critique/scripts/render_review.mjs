@@ -212,7 +212,7 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
   for (const el of all) {
     if (offenders.length >= limit) break;
     const r = el.getBoundingClientRect();
-    if (!(r.width > 0 && r.height > 0) || (r.right <= vw + 1 && r.left >= -1)) continue;
+    if (!(r.width > 0 && r.height > 0) || (r.right <= vw + 1 && r.left >= -1) || r.right <= 0) continue; // fully off to the left = visually hidden pattern
     const cs = getComputedStyle(el);
     if (cs.position === 'fixed' || !visible(el)) continue;
     let contained = false; let clippedByRoot = false;
@@ -227,9 +227,11 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
     offenders.push({ el, selector: cssPath(el), region: region(el), left: Math.round(r.left), right: Math.round(r.right), width: Math.round(r.width), clippedByRoot, text: snippet(el.textContent.replace(/\s+/g, ' ').trim()) });
   }
 
-  // 2. Single-word last lines. Same rule as library/scripts/wrap-diagnostics.js: split text into \S+ words,
-  //    bucket each word rect by Math.round(top / 2) * 2, flag when there are 2+ lines and the last holds one word.
-  //    Additions: only visible leaf text blocks, skip excluded subtrees and visually hidden spans.
+  // 2. Single-word last lines. Same method as library/scripts/wrap-diagnostics.js: split text into \S+ words,
+  //    take each word's client rects, group them into lines, flag 2+ lines whose last line holds one word.
+  //    Differences: a word joins a line when its vertical center falls inside that line's box (instead of
+  //    2px top buckets), so superscripts and mixed sizes on one baseline do not count as extra lines; only
+  //    visible leaf text blocks are checked; excluded subtrees and visually hidden spans are skipped.
   const runts = [];
   const clippedText = [];
   let wrapChecked = 0;
@@ -248,7 +250,7 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
     if (nested) continue;
     wrapChecked += 1;
     const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-    const lines = new Map();
+    const rects = [];
     let node;
     while ((node = walker.nextNode())) {
       const parentRect = node.parentElement.getBoundingClientRect();
@@ -257,18 +259,23 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
         const range = document.createRange();
         range.setStart(node, match.index); range.setEnd(node, match.index + match[0].length);
         for (const rect of range.getClientRects()) {
-          if (!rect.width || !rect.height) continue;
-          const key = Math.round(rect.top / 2) * 2;
-          if (!lines.has(key)) lines.set(key, []);
-          lines.get(key).push(match[0]);
+          if (rect.width && rect.height) rects.push({ top: rect.top, bottom: rect.bottom, word: match[0] });
         }
       }
     }
-    const ordered = [...lines.entries()].sort((a, b) => a[0] - b[0]);
-    if (ordered.length > 1 && ordered[ordered.length - 1][1].length === 1 && runts.length < limit) {
+    rects.sort((a, b) => (b.bottom - b.top) - (a.bottom - a.top));
+    const lines = [];
+    for (const r of rects) {
+      const mid = (r.top + r.bottom) / 2;
+      const line = lines.find((l) => mid >= l.top && mid <= l.bottom);
+      if (line) line.words.push(r.word); else lines.push({ top: r.top, bottom: r.bottom, words: [r.word] });
+    }
+    lines.sort((a, b) => a.top - b.top);
+    if (lines.length > 1 && lines[lines.length - 1].words.length === 1 && runts.length < limit) {
       const heading = /^h[1-6]$/.test(el.localName) || el.getAttribute('role') === 'heading';
-      runts.push({ selector: cssPath(el), region: region(el), kind: heading ? 'heading' : 'text', lines: ordered.length,
-        lastLine: ordered[ordered.length - 1][1][0], fontSize: elStyle.fontSize, text: snippet((el.innerText || el.textContent).replace(/\s+/g, ' ').trim()) });
+      runts.push({ selector: cssPath(el), region: region(el), kind: heading ? 'heading' : 'text', lines: lines.length,
+        lastLine: lines[lines.length - 1].words[0], forcedBreak: Boolean(el.querySelector('br')), fontSize: elStyle.fontSize,
+        text: snippet((el.innerText || el.textContent).replace(/\s+/g, ' ').trim()) });
     }
   }
 
@@ -285,7 +292,7 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
     }
   }
   const failures = new Map();
-  const contrast = { textElements: 0, measured: 0, passed: 0, unmeasured: { backgroundImage: 0, overlapsMedia: 0, filterOrBlend: 0 }, approximate: 0, minRatio: null };
+  const contrast = { textElements: 0, measured: 0, passed: 0, unmeasured: { backgroundImage: 0, overlapsMedia: 0, filterOrBlend: 0 }, unmeasuredExamples: [], approximate: 0, minRatio: null };
   for (const el of all) {
     const text = ownText(el);
     if (!text || /^(script|style|noscript|template|title|option)$/.test(el.localName) || !visible(el)) continue;
@@ -310,7 +317,11 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
         && r.left < box.right && r.right > box.left && r.top < box.bottom && r.bottom > box.top);
       if (hit) reason = 'overlapsMedia';
     }
-    if (reason) { contrast.unmeasured[reason] += 1; continue; }
+    if (reason) {
+      contrast.unmeasured[reason] += 1;
+      if (contrast.unmeasuredExamples.length < limit) contrast.unmeasuredExamples.push({ reason, selector: cssPath(el), region: region(el), color: cs.color, text: snippet(text) });
+      continue;
+    }
     let bg = { r: 255, g: 255, b: 255, a: 1 };
     for (let i = layers.length - 1; i >= 0; i -= 1) bg = blend(layers[i].color, bg);
     const fg = blend(parseColor(cs.color), bg);
@@ -452,7 +463,7 @@ async function main() {
     axe: axe.source ? { source: axe.path } : { source: null, note: axe.note }, results: [],
     limits: [
       'Contrast is measured only where every layer behind the text is a solid color; text over images, gradients, filters or overlapping media is counted as unmeasured. Check those by eye or with a pixel picker.',
-      'Single-word last lines are whitespace-based review candidates (same rule as library/scripts/wrap-diagnostics.js), not typographic verdicts.',
+      'Single-word last lines are whitespace-based review candidates (same method as library/scripts/wrap-diagnostics.js), not typographic verdicts; forcedBreak marks deliberate <br> breaks.',
       'Finite CSS/Web animations are finished before measuring; scroll-triggered states are captured after one scroll pass.',
       'axe-core finds roughly a third to a half of WCAG issues; keyboard, screen reader and zoom checks stay manual.',
     ] };
@@ -507,7 +518,8 @@ async function main() {
     const serious = r.axe && r.axe.violations ? r.axe.violations.filter((v) => ['serious', 'critical'].includes(v.impact)) : [];
     const rendered = r.fonts.rendered.families;
     const families = (rendered.length ? rendered : r.fonts.declaredPrimary).map((f) => f.family);
-    const fallback = rendered.some((f) => f.webFont) ? rendered.filter((f) => !f.webFont) : [];
+    const declaredNames = r.fonts.declaredPrimary.map((f) => f.family.toLowerCase());
+    const fallback = rendered.filter((f) => !f.webFont && !declaredNames.some((d) => f.family.toLowerCase().startsWith(d)));
     const boxOverflow = r.wrap.textOverflow;
     lines.push(`  ${r.size.padEnd(9)} overflow: ${r.horizontalOverflow ? `YES (${r.documentWidth}px > ${r.viewportWidth}px)` : r.overflowOffenders.some((o) => o.clippedByRoot) ? 'clipped by root' : 'none'}`
       + ` | text overflowing its box: ${boxOverflow.length}`
@@ -517,11 +529,11 @@ async function main() {
     lines.push(`  ${''.padEnd(9)} fonts: ${families.slice(0, 6).join(', ') || 'none'}${families.length > 6 ? ` (+${families.length - 6})` : ''}`
       + `${r.requests.failed.length ? ` | failed requests: ${r.requests.failed.length}` : ''}${r.requests.externalOrigins.length ? ` | external: ${r.requests.externalOrigins.join(', ')}` : ''}`
       + `${r.consoleErrors.length ? ` | console errors: ${r.consoleErrors.length}` : ''}`
-      + `${fallback.length ? ` | system fallback glyphs: ${fallback.map((f) => `${f.family} x${f.glyphs}`).join(', ')}` : ''}`);
+      + `${fallback.length ? ` | fallback glyphs (font not first in any stack): ${fallback.map((f) => `${f.family} x${f.glyphs}`).join(', ')}` : ''}`);
     lines.push(`  ${''.padEnd(9)} screenshot: ${r.screenshot}`);
     for (const o of boxOverflow.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   ${o.clipped ? 'clipped' : 'spills'} text (${o.scrollWidth}px in ${o.clientWidth}px): ${o.selector}`);
     for (const o of r.overflowOffenders.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   off-canvas ${o.left}..${o.right}px${o.clippedByRoot ? ' (hidden by root overflow)' : ''}: ${o.selector}`);
-    for (const runt of runts.filter((x) => x.kind === 'heading').slice(0, 3)) lines.push(`  ${''.padEnd(9)}   heading ends on "${runt.lastLine}": ${runt.selector}`);
+    for (const runt of runts.filter((x) => x.kind === 'heading').slice(0, 3)) lines.push(`  ${''.padEnd(9)}   heading ends on "${runt.lastLine}"${runt.forcedBreak ? ' (has <br>)' : ''}: ${runt.selector}`);
     for (const f of r.contrast.failures.filter((x) => !x.exemptCandidate).slice(0, 3)) lines.push(`  ${''.padEnd(9)}   contrast ${f.ratio}:1 < ${f.required}:1 ${f.fg} on ${f.bg} ${f.fontSize}/${f.fontWeight}: ${f.examples[0].selector}`);
     for (const v of serious.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   axe ${v.impact} ${v.id} x${v.nodes}: ${v.targets[0] || ''}`);
     if (r.horizontalOverflow || boxOverflow.some((o) => o.clipped) || contrastFails || serious.length || r.requests.failed.length) blocking += 1;

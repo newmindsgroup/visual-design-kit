@@ -789,9 +789,11 @@ def build_tailwind(source):
         "  &:where([data-theme=\"dark\"], [data-theme=\"dark\"] *) {",
         "    @slot;",
         "  }",
-        "  @media (prefers-color-scheme: dark) and (not (prefers-contrast: more)) {",
-        "    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {",
-        "      @slot;",
+        "  @media (prefers-color-scheme: dark) {",
+        "    @media not all and (prefers-contrast: more) {",
+        "      &:where(:root:not([data-theme]), :root:not([data-theme]) *) {",
+        "        @slot;",
+        "      }",
         "    }",
         "  }",
         "}",
@@ -935,9 +937,7 @@ def _figma_scopes(path):
 
 
 def _figma_kind(token):
-    if not css_enabled(token) and token.path[0] != "breakpoint":
-        return None
-    if token.path[0] in FIGMA_SKIPPED:
+    if not css_enabled(token) or token.path[0] in FIGMA_SKIPPED:
         return None
     return {"color": "COLOR", "dimension": "FLOAT", "fontWeight": "FLOAT", "fontFamily": "STRING",
             "duration": "TIMING", "cubicBezier": "EASING"}.get(token.type)
@@ -994,9 +994,12 @@ def build_figma(source):
 
     def variable(token, values):
         entry = OrderedDict([("name", "/".join(token.path)), ("type", _figma_kind(token))])
+        hidden = token.tier == "primitive" and (
+            (token.path[0] == "color" and token.path[1] != "alpha") or token.path[:2] == ("font", "stack"))
         if entry["type"] not in ("TIMING", "EASING"):
-            entry["scopes"] = _figma_scopes(token.path) if token.path in source.primitives.brandable or \
-                token.tier != "primitive" or token.path[0] != "color" or token.path[1] == "alpha" else []
+            entry["scopes"] = [] if hidden else _figma_scopes(token.path)
+        if hidden:
+            entry["hiddenFromPublishing"] = True
         if css_enabled(token):
             entry["codeSyntax"] = OrderedDict([("WEB", f"var({token.css_name})")])
         if token.description:
@@ -1064,7 +1067,6 @@ def lint(source):
     errors = list(source.errors)
     warnings = list(source.warnings)
     errors += validate_source(source)
-    broken = any(e.startswith(("[alias]", "[structure]")) for e in errors)
 
     # Contract: names and values.
     default_view = merged(source, None, DEFAULT_MODE)
@@ -1080,9 +1082,9 @@ def lint(source):
                     if close else "")
             errors.append(f"[contract] missing contract variable {name}{hint}")
             continue
-        if expected is not None and not broken:
-            actual = css_resolved(token, default_view)
-            if actual.replace(" ", "") != expected.replace(" ", ""):
+        if expected is not None:
+            actual = _safe_css(token, default_view)
+            if actual is not None and actual.replace(" ", "") != expected.replace(" ", ""):
                 errors.append(f"[contract] {name} is {actual}, contract says {expected}")
     for name, expected in CONTRACT_BREAKPOINTS.items():
         token = default_view.get(("breakpoint", name))
@@ -1091,8 +1093,8 @@ def lint(source):
         elif css_enabled(token):
             errors.append(f"[contract] breakpoint.{name} must not be emitted as a CSS variable "
                           f"(set $extensions.{NS}.css to false)")
-        elif not broken and css_resolved(token, default_view) != expected:
-            errors.append(f"[contract] breakpoint.{name} is {css_resolved(token, default_view)}, contract says {expected}")
+        elif _safe_css(token, default_view) not in (None, expected):
+            errors.append(f"[contract] breakpoint.{name} is {_safe_css(token, default_view)}, contract says {expected}")
     for mode in source.modes:
         for path in MODE_PATHS:
             if path not in mode.tokens:
@@ -1130,27 +1132,26 @@ def lint(source):
 
     # Contrast in every brand x mode.
     pairs_checked = 0
-    if not broken:
-        for brand, mode, view in _themes(source):
-            theme = f"{brand}/{mode}"
-            for fg, bgs, minimum, origin, purpose, hc_min in GUARANTEES:
-                if mode == "high-contrast" and hc_min:
-                    minimum = max(minimum, hc_min)
-                for bg in bgs:
-                    pairs_checked += 1
-                    problem = _check_pair(view, fg, bg, minimum)
-                    if problem:
-                        errors.append(f"[contrast] {theme}: {problem} ({origin}: {purpose})")
-            for token in view.values():
-                for rule in token.ext("contrast", []) or []:
-                    pairs_checked += 1
-                    bg = alias_target(rule.get("bg", ""))
-                    if bg is None:
-                        errors.append(f"[structure] {token.file}: {token.dotted}: contrast rule needs bg as an alias")
-                        continue
-                    problem = _check_pair(view, token.dotted, ".".join(bg), float(rule.get("min", 4.5)))
-                    if problem:
-                        errors.append(f"[contrast] {theme}: {problem} ({token.file} rule)")
+    for brand, mode, view in _themes(source):
+        theme = f"{brand}/{mode}"
+        for fg, bgs, minimum, origin, purpose, hc_min in GUARANTEES:
+            if mode == "high-contrast" and hc_min:
+                minimum = max(minimum, hc_min)
+            for bg in bgs:
+                pairs_checked += 1
+                problem = _check_pair(view, fg, bg, minimum)
+                if problem:
+                    errors.append(f"[contrast] {theme}: {problem} ({origin}: {purpose})")
+        for token in view.values():
+            for rule in token.ext("contrast", []) or []:
+                pairs_checked += 1
+                bg = alias_target(rule.get("bg", "")) if isinstance(rule, dict) else None
+                if bg is None:
+                    errors.append(f"[structure] {token.file}: {token.dotted}: contrast rule needs bg as an alias")
+                    continue
+                problem = _check_pair(view, token.dotted, ".".join(bg), float(rule.get("min", 4.5)))
+                if problem:
+                    errors.append(f"[contrast] {theme}: {problem} ({token.file} rule)")
     for token in default_view.values():
         if token.deprecated:
             warnings.append(f"[deprecated] {token.file}: {token.dotted}: {token.deprecated}")
@@ -1161,6 +1162,13 @@ def lint(source):
         ("contrast_pairs_checked", pairs_checked),
     ])
     return {"errors": errors, "warnings": warnings, "stats": stats}
+
+
+def _safe_css(token, view):
+    try:
+        return css_resolved(token, view)
+    except (AliasError, KeyError, TypeError, ValueError, AttributeError):
+        return None
 
 
 def _alias_targets(value):
@@ -1177,12 +1185,19 @@ def _alias_targets(value):
 def _check_pair(view, fg, bg, minimum):
     fg_path, bg_path = tuple(fg.split(".")), tuple(bg.split("."))
     if fg_path not in view or bg_path not in view:
-        missing = fg if fg_path not in view else bg
-        return f"{fg} on {bg}: {missing} is not defined"
-    fg_hex, bg_hex = resolve_token(view[fg_path], view), resolve_token(view[bg_path], view)
-    if len(fg_hex) != 7 or len(bg_hex) != 7:
+        return None  # missing roles are reported once as [contract] or [alias] errors
+    try:
+        fg_hex, bg_hex = resolve_token(view[fg_path], view), resolve_token(view[bg_path], view)
+    except AliasError:
+        return None  # reported once as an [alias] error
+    if not (isinstance(fg_hex, str) and isinstance(bg_hex, str)):
+        return f"{fg} on {bg}: both must be colors"
+    if len(fg_hex) == 9 or len(bg_hex) == 9:
         return f"{fg} on {bg}: contrast pairs must be opaque colors ({fg_hex} on {bg_hex})"
-    ratio = color_tools.contrast_ratio(fg_hex, bg_hex)
+    try:
+        ratio = color_tools.contrast_ratio(fg_hex, bg_hex)
+    except color_tools.ColorError:
+        return None  # invalid color, reported as a [structure] error
     if ratio + 1e-9 < minimum:
         return f"{fg} {fg_hex} on {bg} {bg_hex} is {ratio:.2f}:1, needs {format_number(minimum)}:1"
     return None

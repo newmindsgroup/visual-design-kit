@@ -23,7 +23,7 @@ Email client behavior changes quietly. Values are as of 2026; verify support at 
 | Body text | 16px (14px minimum), line-height 1.5; web-safe stack with brand font as progressive enhancement | iOS Mail enlarges text under about 13px unless text-size-adjust is set |
 | Buttons | 44-48px tall, 16px+ text, "bulletproof" HTML (padding on a table cell or link), VML fallback for classic Outlook | Never image-only buttons |
 | Images | 2x resolution (1200px wide for a 600px slot); JPG for photos, PNG for transparency and flat art; GIF for simple animation; avoid WebP and SVG for compatibility | Always set width, height, alt, and `display: block` |
-| Animated GIF | Under 1 MB (ideally 500 KB), 10-15 fps, first frame carries the message | Classic Outlook for Windows shows only the first frame |
+| Animated GIF | Under 1 MB (ideally 500 KB), 10-15 fps, first frame carries the message | Older desktop Outlook for Windows (2007-2016) shows only the first frame; newer versions vary, so test in the client mix you target |
 | Color | sRGB; hex colors; test dark mode | Apple Mail, Outlook and Gmail apps invert or re-map colors in different ways |
 | Subject and preheader | Subject about 30-50 characters (mobile shows roughly 30-40); preheader 40-100 characters | Control preheader text; pad it so body copy does not leak into previews |
 | Layout code | Nested tables, inline CSS, `role="presentation"`, `lang` attribute | Classic Outlook for Windows uses the Word rendering engine and Microsoft supports it to at least 2029 (verify); the new Outlook uses a web-based engine |

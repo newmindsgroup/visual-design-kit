@@ -49,7 +49,7 @@ Excellent identity work starts from a position a competitor could not sign, turn
 ## Decisions that change the answer
 
 - **Tier.** Value: larger marks, bold sans, high-contrast primaries, symbol-led for shelf impact. Premium and luxury: wordmark-led, 1.5-2x clear space, refined serif or sans, one color plus black, foil or blind emboss in print. Ultra-luxury: monogram plus wordmark, almost no color.
-- **Archetype.** Sets shape language and voice. Ruler and Sage lean on symmetry, rational type and restraint; Jester and Creator on irregular shapes and color; Outlaw on rough edges and hard contrast. Read the entry with `atlas.py show archetype.<slug>`.
+- **Archetype.** Sets shape language and voice. Ruler and Sage lean on symmetry, rational type and restraint; Jester and Creator on irregular shapes and color; Outlaw on rough edges and hard contrast. Read the entry, for example `python3 ../../library/scripts/atlas.py show archetype.ruler`.
 - **Industry code.** Decide which category codes are entry tickets (keep) and which are clichés (break). The industry entry's "Recommended directions" gives the expected, adjacent and breaking positions.
 - **Market and script.** Arabic, Hebrew, CJK, Devanagari or Thai lockups need native type design, not a font swap. Check color and gesture meanings and screen the name in every language.
 - **Channel mix.** App-first or social-first: a symbol or monogram is mandatory for icons and avatars. Retail: shelf legibility at 2-3m. Signage: counters and strokes at large scale and in fabricated materials.

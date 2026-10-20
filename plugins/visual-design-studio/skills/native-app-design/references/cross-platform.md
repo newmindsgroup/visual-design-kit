@@ -55,6 +55,21 @@ Choose the framework from the product's needs, then decide per element what must
 
 Brand can and should be shared: color tokens, illustration, photography, content layout, custom content components (cards, charts, hero modules), voice and motion character. Platform chrome is not where brand differentiation pays off.
 
+## Sharing the design system across stacks
+
+| Stack | Where kit tokens go | Theming mechanism | Native-feel hooks |
+| --- | --- | --- | --- |
+| SwiftUI + Compose | Generated asset catalog and Swift constants; generated Kotlin theme | Environment values; `MaterialTheme` plus `CompositionLocal` | Full platform components |
+| React Native + Expo | Generated TypeScript theme object (light, dark, high contrast) from `tokens.resolved.json` | Context provider reading `useColorScheme()`; `PlatformColor` for system colors on iOS | Expo UI SwiftUI and Compose components, native stack navigation |
+| Flutter | Generated `ThemeData` per mode plus a `ThemeExtension` for kit roles M3 lacks (success, warning, focus ring) | `MaterialApp` `theme`, `darkTheme`, `highContrastTheme` | Adaptive constructors, Cupertino where iOS feel matters |
+| Compose Multiplatform | Generated Kotlin theme shared in `commonMain` | `MaterialTheme` plus `CompositionLocal` | UIKit or SwiftUI interop views for iOS-critical controls |
+
+Generate all of these from the same DTCG build; a hand-maintained theme file per stack drifts within a release or two.
+
+## Prototype before committing
+
+Build one vertical slice in the candidate stack before signing off: a list with 1,000 rows, a form with validation and the keyboard, a modal sheet, a navigation push and back, dark mode, the largest text size, VoiceOver and TalkBack. Compare it on a mid-range Android phone (not only a flagship) and an older supported iPhone. The slice exposes most framework mismatches in a week.
+
 ## Decision checklist
 
 1. Which OS features are must-haves at launch (widgets, Live Activities, Wallet, HealthKit, CarPlay, Wear OS)? Each one tilts toward native or a framework with mature bridges.

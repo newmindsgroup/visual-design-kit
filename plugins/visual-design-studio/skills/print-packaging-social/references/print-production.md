@@ -33,7 +33,7 @@ Print is unforgiving: what leaves as a PDF is what comes back on paper, multipli
 | --- | --- | --- |
 | Europe, coated sheetfed | PSO Coated v3 (FOGRA51) | Current ISO 12647-2:2013 standard; total ink 300% |
 | Europe, coated (legacy) | ISO Coated v2 (FOGRA39) | Still widely requested; 330% version and a 300% variant |
-| Europe, uncoated | PSO Uncoated v3 (FOGRA52) | Expect duller, darker colors |
+| Europe, uncoated | PSO Uncoated v3 (FOGRA52) | Total ink 300% in the profile; expect duller, darker colors |
 | US, premium coated sheetfed | GRACoL 2013 (CRPC6) | Ask for the printer's ink limit |
 | US, publication web offset | SWOP 2013 (CRPC5) or the publication's spec | Magazines publish their own specs |
 | Japan | Japan Color 2011 Coated | |

@@ -68,6 +68,21 @@ Apple figures were read from App Store Connect Help ("Screenshot specifications"
 
 Generic failures: five near-identical screenshots of the same screen, lorem-like captions ("Unlock your potential"), marketing illustrations with no UI, phone frames tilted in 3D on every slide, text too small to read in search results, and US-only content in localized listings.
 
+## Localization
+
+- Localize screenshots, captions and previews for every market where the listing is localized; both stores fall back to another language otherwise, which reads as neglect.
+- Re-capture UI in each language rather than translating only captions; check RTL locales (Arabic, Hebrew) for mirrored layouts.
+- Use market-appropriate sample content: names, currencies, addresses and date formats from the market, with fictional data.
+- Check the atlas market entries (`python3 ../../../library/scripts/atlas.py query "<market>"` from this folder) for color and imagery conventions before reusing a US set.
+
+## Icon production checklist
+
+1. Design on the platform grids: Apple's icon template at 1024px, Android's 108dp adaptive canvas with the 66dp safe zone.
+2. Test at 29pt/40pt (iOS Settings and Spotlight) and 48dp (Android launcher) for silhouette recognition; one strong shape survives, fine detail does not.
+3. Check every appearance: iOS default, dark, clear and tinted; Android themed (monochrome) icon on light and dark wallpapers.
+4. Compare beside the top 20 icons in the category on a real home screen; distinctness matters more than detail.
+5. Export: Icon Composer `.icon` file for Apple; adaptive icon XML with foreground, background and monochrome layers for Android; a separate 512px Play store icon.
+
 ## Export checklist
 
 1. Build screenshots from the real app (simulator or device capture at native resolution), then compose in Figma or a script. Keep one master file per locale.

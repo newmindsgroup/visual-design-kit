@@ -40,9 +40,9 @@ Map the kit's DTCG tokens (names fixed by the token contract, built by `library/
 | `color.danger.fg` / `bg` | `danger/fg` / `danger/bg` | `error` / `errorContainer` (and `onErrorContainer`) |
 | `color.success.*`, `warning.*`, `info.*` | `success/fg` etc. | extended tokens (M3 has no success or warning roles) |
 | `color.focus-ring` | `focus-ring` | extended token |
-| `color.overlay.scrim` | `overlay/scrim` | `scrim` |
+| `color.overlay-scrim` | `overlay-scrim` | `scrim` |
 
-The JSON paths above follow the CSS names in the token contract (`--color-bg-canvas` and so on); confirm the exact group paths in `library/tokens/src/` once the token build lands. Secondary and tertiary M3 roles have no kit equivalent: generate them from the brand's secondary hue or alias them to neutral roles.
+The paths match `library/tokens/src/semantic.*.tokens.json` as built on 2026-10-20 (`color.bg.canvas` is `--color-bg-canvas`); `tokens.resolved.json` carries the resolved value per mode and brand. Secondary and tertiary M3 roles have no kit equivalent: generate them from the brand's secondary hue or alias them to neutral roles.
 
 On iOS, keep system chrome on system colors (`label`, `systemBackground`, Liquid Glass bars) and apply kit colors to the content layer and the accent. Replacing every system color with brand values breaks Increase Contrast and future OS changes.
 
@@ -84,8 +84,9 @@ enum KitSpace {               // --space-* on a 4pt base
 
 extension Font {
     // Custom fonts must scale with Dynamic Type: always pass relativeTo.
-    static let kitBody = Font.custom("BrandSans-Regular", size: 17, relativeTo: .body)
-    static let kitTitle = Font.custom("BrandDisplay-SemiBold", size: 28, relativeTo: .title)
+    // Meridian brand: body Source Sans 3, display Schibsted Grotesk (both OFL, bundled with their licenses).
+    static let kitBody = Font.custom("SourceSans3-Regular", size: 17, relativeTo: .body)
+    static let kitTitle = Font.custom("SchibstedGrotesk-SemiBold", size: 28, relativeTo: .title)
 }
 
 struct BalanceRow: View {
@@ -140,9 +141,9 @@ data class KitExtendedColors(
 )
 val LocalKitColors = staticCompositionLocalOf<KitExtendedColors> { error("KitTheme missing") }
 
-private val BrandSans = FontFamily(
-    Font(R.font.brand_sans_regular, FontWeight.Normal),
-    Font(R.font.brand_sans_semibold, FontWeight.SemiBold),
+private val BrandSans = FontFamily(          // Meridian body family: Source Sans 3 (OFL)
+    Font(R.font.source_sans_3_regular, FontWeight.Normal),
+    Font(R.font.source_sans_3_semibold, FontWeight.SemiBold),
 )
 private val KitTypography = Typography(
     bodyLarge = TextStyle(fontFamily = BrandSans, fontSize = 16.sp, lineHeight = 24.sp),

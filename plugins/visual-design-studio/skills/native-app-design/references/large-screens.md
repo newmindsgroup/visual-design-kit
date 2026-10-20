@@ -59,6 +59,21 @@ Compose: `ListDetailPaneScaffold`, `SupportingPaneScaffold`, `NavigationSuiteSca
 | 840-1199dp / iPad landscape | Rail or sidebar plus list-detail; dialogs instead of full-screen pages for short tasks |
 | 1200dp and up / large windows | Sidebar plus list plus detail, or main plus inspector; multi-column grids for feeds |
 
+## Pointer, keyboard and focus rules
+
+| Input | Rule |
+| --- | --- |
+| Hover | Every interactive element shows a hover state on iPad and Android with a pointer; never reveal essential actions only on hover |
+| Context menus | Right-click, long press and the More button open the same menu with the same items |
+| Focus | Tab and arrow keys move a visible focus indicator through every control in reading order; Esc closes the topmost layer |
+| Shortcuts | Show shortcuts in menus and tooltips; do not invent shortcuts that override system ones (Cmd-H, Cmd-Tab, Meta-Tab) |
+| Text selection | Selectable text where people expect to copy (addresses, codes, messages) |
+| Drag and drop | Offer it between panes and apps for content people move around; provide a menu equivalent |
+
+## Large-screen handoff spec
+
+For each screen, hand off: the layout at each width class with pane widths and the breakpoints where it changes, what happens to selection and scroll on resize, which elements move from bottom navigation to rail or sidebar, keyboard shortcuts and focus order, pointer states, and fold or hinge behavior where it applies.
+
 ## Common failures
 
 - Phone layout stretched to 1200dp with 900dp-wide text lines and giant buttons: cap measure, add panes.

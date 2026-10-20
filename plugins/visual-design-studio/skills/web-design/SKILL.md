@@ -23,7 +23,7 @@ An excellent website says what it offers and for whom within five seconds, prove
 | Containers | Page max `--container-xl` (1280px); text at `--measure-body` (66ch); side padding `--gutter` | Editorial or luxury: wider canvas with narrower text |
 | Body text | 16-18px, line-height 1.5-1.65 (`--line-height-normal` to `--line-height-relaxed`) | Long-form articles: 18-21px |
 | Fluid type | `clamp()` with rem + vw; max size no more than 2.5x min so 200% zoom still works | Fixed sizes for UI controls |
-| Section rhythm | Vertical padding `clamp(var(--space-12), 8vw, var(--space-24))` (48-96px) | Dense product pages: `--space-8` to `--space-16` |
+| Section rhythm | Vertical padding `clamp(var(--space-12), 2rem + 5vw, var(--space-24))` (48px at 320 to 96px at 1280) | Dense product pages: `--space-8` to `--space-16` |
 | Hero | Headline of 6-12 words naming the outcome, one supporting sentence, one primary CTA, real product or proof visual | Brand campaigns: image-led hero with a short line |
 | CTAs | One primary goal per page; verb + outcome labels ("Start free trial"); 44-48px tall | Content pages: soft secondary CTA (newsletter) only |
 | Core Web Vitals (p75, field) | LCP 2.5 s or less, INP 200 ms or less, CLS 0.1 or less; design for LCP 2.0 s to keep margin | Never relax |

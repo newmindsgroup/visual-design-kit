@@ -1,0 +1,478 @@
+{
+  "$description": "Component tier: per-component tokens that alias semantic roles or public scale tokens (space, radius, font, duration, ease, z). Never raw ramps. Contrast rules in $extensions are checked by tokens.py lint in every brand and mode.",
+  "button": {
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    },
+    "padding-y": {
+      "$type": "dimension",
+      "$value": "{space.2}",
+      "$description": "With 16px text at line-height 1.5 this gives a 40px button."
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.2}",
+      "$description": "Icon-to-label gap."
+    },
+    "target-min": {
+      "$type": "dimension",
+      "$value": "{size.target.min}",
+      "$description": "Minimum hit area; extend with padding or a pseudo-element."
+    },
+    "font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.md}"
+    },
+    "font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.semibold}"
+    },
+    "duration": {
+      "$type": "duration",
+      "$value": "{duration.fast}"
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "$value": "{ease.standard}"
+    },
+    "primary": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.accent.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.accent.hover}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.accent.active}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.fg.on-accent}"
+      }
+    },
+    "secondary": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.surface}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.bg.sunken}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.fg.default}",
+        "$extensions": {
+          "com.github.newmindsgroup.vdk": {
+            "contrast": [
+              {
+                "bg": "{button.secondary.bg}",
+                "min": 4.5
+              },
+              {
+                "bg": "{button.secondary.bg-hover}",
+                "min": 4.5
+              }
+            ]
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.strong}"
+      }
+    },
+    "ghost": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.accent.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.accent.fg}",
+        "$extensions": {
+          "com.github.newmindsgroup.vdk": {
+            "contrast": [
+              {
+                "bg": "{button.ghost.bg-hover}",
+                "min": 4.5
+              }
+            ]
+          }
+        }
+      }
+    },
+    "danger": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.danger.bg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.danger.border}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.danger.fg}",
+        "$extensions": {
+          "com.github.newmindsgroup.vdk": {
+            "contrast": [
+              {
+                "bg": "{button.danger.bg}",
+                "min": 4.5
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "input": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.bg.surface}"
+    },
+    "bg-disabled": {
+      "$type": "color",
+      "$value": "{color.bg.sunken}"
+    },
+    "fg": {
+      "$type": "color",
+      "$value": "{color.fg.default}",
+      "$extensions": {
+        "com.github.newmindsgroup.vdk": {
+          "contrast": [
+            {
+              "bg": "{input.bg}",
+              "min": 4.5
+            },
+            {
+              "bg": "{input.bg-disabled}",
+              "min": 4.5
+            }
+          ]
+        }
+      }
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "{color.fg.subtle}",
+      "$description": "Placeholder text; never the only label.",
+      "$extensions": {
+        "com.github.newmindsgroup.vdk": {
+          "contrast": [
+            {
+              "bg": "{input.bg}",
+              "min": 3.0
+            }
+          ]
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.strong}",
+      "$description": "3:1 so the field boundary is visible (WCAG 1.4.11)."
+    },
+    "border-focus": {
+      "$type": "color",
+      "$value": "{color.focus-ring}"
+    },
+    "border-invalid": {
+      "$type": "color",
+      "$value": "{color.danger.fg}",
+      "$description": "Pair with an error message and icon."
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.thin}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    },
+    "padding-y": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    },
+    "font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.md}",
+      "$description": "16px so iOS Safari does not zoom on focus."
+    }
+  },
+  "card": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.bg.surface}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.6}"
+    },
+    "shadow": {
+      "$type": "shadow",
+      "$value": "{shadow.sm}"
+    }
+  },
+  "dialog": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.bg.surface-raised}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "scrim": {
+      "$type": "color",
+      "$value": "{color.overlay-scrim}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.xl}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.6}"
+    },
+    "max-width": {
+      "$type": "dimension",
+      "$value": "{container.sm}"
+    },
+    "shadow": {
+      "$type": "shadow",
+      "$value": "{shadow.xl}"
+    },
+    "z": {
+      "$type": "number",
+      "$value": "{z.modal}"
+    },
+    "duration": {
+      "$type": "duration",
+      "$value": "{duration.slow}"
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "$value": "{ease.emphasized-decelerate}"
+    }
+  },
+  "badge": {
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    },
+    "font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.xs}"
+    },
+    "font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.medium}"
+    },
+    "neutral": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.sunken}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.fg.muted}",
+        "$extensions": {
+          "com.github.newmindsgroup.vdk": {
+            "contrast": [
+              {
+                "bg": "{badge.neutral.bg}",
+                "min": 4.5
+              }
+            ]
+          }
+        }
+      }
+    },
+    "accent": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.accent.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.accent.fg}"
+      }
+    },
+    "success": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.success.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.success.fg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.success.border}"
+      }
+    },
+    "warning": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.warning.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.warning.fg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.warning.border}"
+      }
+    },
+    "danger": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.danger.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.danger.fg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.danger.border}"
+      }
+    },
+    "info": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.info.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.info.fg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.info.border}"
+      }
+    }
+  },
+  "table": {
+    "header-bg": {
+      "$type": "color",
+      "$value": "{color.bg.sunken}"
+    },
+    "header-fg": {
+      "$type": "color",
+      "$value": "{color.fg.muted}",
+      "$extensions": {
+        "com.github.newmindsgroup.vdk": {
+          "contrast": [
+            {
+              "bg": "{table.header-bg}",
+              "min": 4.5
+            }
+          ]
+        }
+      }
+    },
+    "row-bg": {
+      "$type": "color",
+      "$value": "{color.bg.surface}"
+    },
+    "row-bg-alt": {
+      "$type": "color",
+      "$value": "{color.bg.canvas}",
+      "$description": "Zebra striping, optional."
+    },
+    "row-bg-hover": {
+      "$type": "color",
+      "$value": "{color.bg.sunken}"
+    },
+    "row-bg-selected": {
+      "$type": "color",
+      "$value": "{color.accent.subtle}"
+    },
+    "row-fg": {
+      "$type": "color",
+      "$value": "{color.fg.default}",
+      "$extensions": {
+        "com.github.newmindsgroup.vdk": {
+          "contrast": [
+            {
+              "bg": "{table.row-bg}",
+              "min": 4.5
+            },
+            {
+              "bg": "{table.row-bg-alt}",
+              "min": 4.5
+            },
+            {
+              "bg": "{table.row-bg-hover}",
+              "min": 4.5
+            },
+            {
+              "bg": "{table.row-bg-selected}",
+              "min": 4.5
+            }
+          ]
+        }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "cell-padding-x": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    },
+    "cell-padding-y": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    },
+    "font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.sm}"
+    }
+  },
+  "focus": {
+    "ring-color": {
+      "$type": "color",
+      "$value": "{color.focus-ring}"
+    },
+    "ring-width": {
+      "$type": "dimension",
+      "$value": "{border-width.thick}"
+    },
+    "ring-offset": {
+      "$type": "dimension",
+      "$value": "{border-width.thick}",
+      "$description": "Gap between the element and its ring."
+    }
+  }
+}

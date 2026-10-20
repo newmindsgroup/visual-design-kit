@@ -17,7 +17,7 @@ The DTCG published its first stable specification, version 2025.10, on 28 Octobe
 - Group inheritance (`$extends`), JSON Pointer references and the separate Resolver module for themes and modes are part of the 2025.10 release set; verify their exact syntax at designtokens.org before relying on them in a build.
 - File extension `.tokens.json` (or `.tokens`).
 
-Illustrative excerpt (values are examples; the real ones live in `src/`):
+The alias chain as the kit uses it (OKLCH numbers here are illustrative; the real values live in `src/`):
 
 ```json
 {
@@ -27,19 +27,24 @@ Illustrative excerpt (values are examples; the real ones live in `src/`):
       "600": { "$value": { "colorSpace": "oklch", "components": [0.52, 0.09, 195], "alpha": 1 } }
     },
     "accent": {
-      "default": { "$value": "{color.teal.600}", "$description": "Primary action background" }
+      "600": { "$value": "{color.teal.600}" }
     }
-  },
-  "space": {
-    "$type": "dimension",
-    "4": { "$value": { "value": 1, "unit": "rem" } }
-  },
-  "duration": {
-    "$type": "duration",
-    "moderate": { "$value": { "value": 200, "unit": "ms" } }
   }
 }
 ```
+
+```json
+{
+  "color": {
+    "$type": "color",
+    "accent": {
+      "default": { "$value": "{color.accent.600}", "$description": "Primary action background" }
+    }
+  }
+}
+```
+
+The first block is `primitives.tokens.json` (a raw `teal` ramp plus a brandable `accent` ramp that aliases it); the second is `semantic.light.tokens.json`. A brand file re-points `color.accent.*` at another ramp and every semantic and component token follows. Dimensions and durations use object values, for example `{"value": 1, "unit": "rem"}` and `{"value": 200, "unit": "ms"}`.
 
 ## Tiers
 
@@ -74,14 +79,14 @@ Product code and component styles use semantic (or component) tokens. A primitiv
 The kit stores one semantic file per mode with identical names. The build emits:
 
 - `:root` with primitives and the light set; `[data-theme="dark"]` and `[data-theme="high-contrast"]` overrides; `@media (prefers-color-scheme: dark)` when no theme is forced; `@media (prefers-contrast: more)` for high contrast; `@media (prefers-reduced-motion: reduce)` setting every non-instant duration to 0.01ms.
-- Figma: one variable collection per tier, with modes Light, Dark and High contrast on the semantic collection (see [Figma](figma.md)).
+- Figma (`dist/figma-variables.json`): a `Primitives` collection whose modes are the brands (Meridian, Ember) and a `Semantic` collection with modes Light, Dark and High contrast whose values alias primitives (see [Figma](figma.md)).
 
 Add a mode only when every semantic token has a deliberate value in it. Density, brand and platform are separate axes; do not multiply them into one giant mode list.
 
 ## Multi-brand
 
-- A brand file remaps the primitive references behind accent, neutral and font-family roles (the accent ramp, the neutral ramp's temperature, the display and body families). Semantic tokens keep their names and structure, so every component re-themes without code changes. The exact primitive paths are in `library/tokens/src/brands/`.
-- The kit ships Meridian (default, teal accent, OKLCH hue about 195, cool neutrals) and Ember (`data-brand="ember"`, vermilion accent, hue about 35, warm neutrals) to prove the mechanism.
+- A brand file overrides only primitives marked brandable (`$extensions` key `com.github.newmindsgroup.vdk` with `brandable: true`): the `color.accent.*` ramp, the `color.neutral.*` ramp and the `font.family` roles. Semantic tokens keep their names and aliases, so every component re-themes without code changes.
+- The kit ships two brands to prove the mechanism. **Meridian** (default): `color.accent.*` points at a teal ramp (OKLCH hue about 195), cool neutrals, Schibsted Grotesk display, Source Sans 3 body, JetBrains Mono. **Ember** (`data-brand="ember"`, `brands/ember.tokens.json`): accent re-pointed to a vermilion ramp (hue about 35), neutrals to a warm `sand` ramp, Fraunces display, Figtree body, IBM Plex Mono. All are OFL families.
 - Lint every brand in every mode: a brand that fails contrast does not ship. If a brand's accent cannot reach 4.5:1 for `fg-on-accent`, give that brand a darker `accent-default` step rather than weakening the rule.
 - Keep brand-specific components out of the shared system; a sub-brand that needs a new component contributes it through governance or keeps it local.
 
@@ -93,6 +98,8 @@ Run from the repository root:
 python3 plugins/visual-design-studio/library/scripts/tokens.py build   # src -> dist: tokens.css, tailwind.css, tokens.resolved.json, figma-variables.json (see the tokens README)
 python3 plugins/visual-design-studio/library/scripts/tokens.py lint    # schema, aliases, tier direction, contrast guarantees per mode and brand
 python3 plugins/visual-design-studio/library/scripts/tokens.py check   # dist is up to date with src (CI gate)
+python3 plugins/visual-design-studio/library/scripts/tokens.py ramps   # regenerate color ramps from their recipes
+python3 plugins/visual-design-studio/library/scripts/tokens.py figma-script   # print a use_figma script that imports figma-variables.json
 ```
 
 Lint enforces the contract's contrast guarantees: `fg-default` and `fg-muted` at 4.5:1 on canvas, surface and raised surface; `fg-subtle` at 3:1; `fg-on-accent` 4.5:1 on accent default, hover and active; status `fg` on status `bg` 4.5:1; `border-strong` and `focus-ring` 3:1 on canvas; high-contrast body text 7:1.

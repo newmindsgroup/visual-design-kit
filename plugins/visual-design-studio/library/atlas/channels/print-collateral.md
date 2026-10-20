@@ -22,7 +22,7 @@ Always get the printer's specification sheet and template first; it overrides th
 | Safe margin | 3-5 mm (0.125-0.2 in) inside trim for text and logos; 5-6 mm near folds and for perfect-bound spines | Stitched booklets: add inside margin for gutter |
 | Image resolution | 300 ppi at final size for photos; 600-1200 ppi for line art and bitmap logos; vector for logos and type | Large format viewed beyond 1 m: 100-150 ppi at final size |
 | Color mode | CMYK to the printer's profile (FOGRA39 or FOGRA51 coated in Europe, GRACoL 2013 coated or SWOP in the US, Japan Color in Japan); convert at the end, keep RGB masters | Spot colors (Pantone) for brand-critical colors, with CMYK build for digital |
-| Ink coverage | Total area coverage about 300% coated, 240-260% uncoated (verify with the printer) | Rich black for large areas: C60 M40 Y40 K100; text stays 100K only |
+| Ink coverage | Total area coverage typically 300-330% coated and 260-300% uncoated, set by the press condition's ICC profile (for example 300% in PSO Uncoated v3 / FOGRA52); confirm the exact limit with the printer | Rich black for large areas: C60 M40 Y40 K100; text stays 100K only |
 | File format | PDF/X-4 (or PDF/X-1a:2001 for older workflows) with fonts embedded or outlined, crop marks and bleed | Name separations, die lines and varnish layers clearly |
 | Minimum sizes | Type 6 pt (8-9 pt for body), reversed-out type 8 pt and sans, hairlines 0.25 pt (0.5 pt reversed) | Smaller on uncoated, textured stock |
 | Common sizes | A4 210x297 mm; A5 148x210; A3 297x420; DL 99x210; US Letter 8.5x11 in; Tabloid 11x17; business card 85x55 mm (EU) or 3.5x2 in (US) | Confirm trim size with the printer; A and B series vs US |
