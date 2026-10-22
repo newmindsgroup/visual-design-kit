@@ -50,3 +50,9 @@ The importer maps dictionary-shaped competitor perceptions into linked canonical
 Use the canonical persona validator for research-record structure and the workbench builder's additional renderer checks. The latter checks exact field/component sets, input shape, joins, weights and safe embedding. Neither validates facts, human preference, client rights or claimed outcomes. Do not report the fictional demo as a completed research persona.
 
 Inspect desktop and narrow mobile, six tabs with keyboard/focus, both locales,2/3 comparison and insufficient/maximum states, mapping with/without weights, unknown/empty/error states, approved portrait/fallback, text enlargement, print all tabs and PDF text. Test altered values and a new project to prove future regeneration rather than a hand-built screenshot.
+
+## Requested illustrative portraits and manual receiving
+
+Version-Timestamp: 2026-10-22 13:32:00 AST
+
+When the owner requests portraits for hypothetical personas, use original clearly labeled fictional composites, or permitted supplied images. Never represent them as participants, clients, testimonials or typical audience demographics. Preserve research unknowns. A receiving project's build may apply a documented presentation-only image overlay and portrait manifest; retain original record facts unchanged. Include portrait provenance, prompt, generator mode, source bytes/hash and disclosure. Verify every stable persona ID selects the correct image, circular cropping, all four profiles, mobile, full tabs and print. If a complete HTML/CSS brand manual is requested, integrate an actual rendered persona chapter and reciprocal navigation in the complete manual, not only a Markdown pointer. Preserve frozen prior editions and regenerate from canonical structured sources.
