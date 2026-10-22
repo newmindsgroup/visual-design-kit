@@ -165,6 +165,12 @@ visual-design-kit/
   tools/  tests/  docs/                Build, validation, spec radar, tests and edition records
 ```
 
+## Persona workbench
+
+Version-Timestamp: 2026-10-22 08:47:00 AST
+
+The [persona workbench](docs/PERSONA-WORKBENCH.md) extends the `design-persona-build` library skill with a complete reusable persona presentation (HTML, CSS and JS assets plus `scripts/persona_workbench.py`). Contributed from Codex local work; review status is recorded in that document.
+
 ## History
 
 0.6.0 added specialist agents for parallel exploration and review, the Figma round trip, design-to-build fidelity checks, 32 eval cases with a maintainer improvement loop, and the spec radar ([edition evidence](docs/RELEASE-060.md)). 0.5.0 rebuilt the kit around Claude-native skills, the Design Space Atlas, concrete defaults, tokens and the quality loop after an [audit](docs/RELEASE-050.md) found the library was mostly process text with little design knowledge. Earlier editions: [0.4 motion atlas](docs/MOTION-ATLAS-040.md), [0.3 standalone methods](docs/STANDALONE-030.md), [0.2 quality release](docs/QUALITY-020-RELEASE.md), [public release](docs/PUBLIC-RELEASE-021.md). The [backlog](BACKLOG.md) tracks remaining work.
