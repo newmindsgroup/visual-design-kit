@@ -313,3 +313,9 @@ The integrated local candidate is Visual Design Studio 0.4.1. It includes Astro/
 [Framework research](docs/research/astro-20261014/framework-assessment.md) and [agency, brand and creative-source research](docs/research/astro-20261014/adoption-and-creative-sources.md) retain dated evidence and scope distinctions. An [optional standalone Astro skill](extras/astro-website-studio/skills/astro/SKILL.md) is included for hosts without the full kit. Use the integrated kit or the standalone skill per environment to avoid duplicate loading. The standalone portable manifest is separate from the native Design Kit plugin.
 
 Source publication is not a production-readiness certification or a release tag. Native Safari and screen-reader acceptance remain incomplete; project-specific checks and existing project pins still apply.
+
+## Local persona presentation candidate
+
+Version-Timestamp: 2026-10-22 08:47:00 AST
+
+[Persona workbench](docs/PERSONA-WORKBENCH.md) extends the existing design-persona-build skill with a complete reusable presentation. Local review candidate, independent review and packaging pending.
