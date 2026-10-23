@@ -125,7 +125,7 @@ Lessons from projects come back through the [feedback contract](plugins/visual-d
 
 ## Develop and contribute
 
-Maintainers: start with [CLAUDE.md](CLAUDE.md) and the [authoring skill](.claude/skills/design-kit-authoring/SKILL.md) (writing rules, skill format, atlas schema, token contract). Run the checks:
+Maintainers (Claude Code or Codex): start with [AGENTS.md](AGENTS.md) and the [authoring skill](.agents/skills/design-kit-authoring/SKILL.md) (writing rules, skill format, atlas schema, token contract). Run the checks:
 
 ```sh
 python3 tools/validate_plugin.py
@@ -146,10 +146,12 @@ Original code, skills and documentation are [MIT](LICENSE). Bundled fonts are OF
 visual-design-kit/
   .claude-plugin/marketplace.json      Claude marketplace (Claude Code, claude.ai, Desktop)
   .agents/plugins/marketplace.json     Codex marketplace
-  .claude/skills/design-kit-authoring/ Maintainer authoring rules
-  .claude/skills/design-kit-eval-loop/ Maintainer eval-driven improvement loop
+  .agents/skills/design-kit-authoring/ Maintainer authoring rules (canonical; Codex)
+  .agents/skills/design-kit-eval-loop/ Maintainer eval-driven improvement loop
+  .claude/skills/                      Generated mirror of .agents/skills for Claude Code
+  AGENTS.md                            Maintainer instructions for Claude Code and Codex
   .github/workflows/ci.yml             Tests, validators and builds on every push
-  CLAUDE.md                            Maintainer instructions
+  CLAUDE.md                            Imports AGENTS.md for Claude Code
   INSTALLATION.md                      Install, pin and verify
   plugins/visual-design-studio/
     .claude-plugin/ .codex-plugin/     Plugin manifests (versions kept in sync)

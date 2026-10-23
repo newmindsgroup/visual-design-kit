@@ -1,0 +1,3 @@
+@AGENTS.md
+
+<!-- Claude Code reads CLAUDE.md; Codex reads AGENTS.md. Keep every project instruction, including the design-project-entry block, in AGENTS.md. -->
