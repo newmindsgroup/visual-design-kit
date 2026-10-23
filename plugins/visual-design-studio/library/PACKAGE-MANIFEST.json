@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-20 17:00:00 UTC",
-  "candidate": "0.6.1",
+  "Version-Timestamp": "2026-10-23 16:11:23 UTC",
+  "candidate": "0.6.2",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.6.1"
+    "version": "0.6.2"
   },
   "distribution_scope": "public",
   "files": [
@@ -196,7 +196,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "6dd2947ebf4ec87441454f2ff717112a7599aae40af4264f21ecd58db808b222",
+      "sha256": "654e6f3121a6c6274d0ae0da286df8bb069fdc355b2f4b91cd009fca97a0696d",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -282,6 +282,12 @@
       "destination": "TOOLCHAINS.md",
       "sha256": "d7e7dd3291062fbab31194a2d8aea21aff9c5a24b2a97127053f1b625d6854c0",
       "source": "curated-plugin-source/TOOLCHAINS.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "TYPOGRAPHY-SPACING-CHECKS.md",
+      "sha256": "54c84eb029fec28c1131b0b0fcd19b7dcffd40924338f31c2519bcb9591c596a",
+      "source": "curated-plugin-source/TYPOGRAPHY-SPACING-CHECKS.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -1474,13 +1480,37 @@
     },
     {
       "destination": "draft-skills/design-persona-build/SKILL.md",
-      "sha256": "2bca9c35f0a93cb3e7cf5af7e7495a18af31add8ee09f7f3b1f4e870d8b283e5",
+      "sha256": "143a84528e06b2d4951de4d12eb27574a49f2cff4bf017c432c14c6fcc024474",
       "source": "curated-plugin-source/draft-skills/design-persona-build/SKILL.md",
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "draft-skills/design-persona-build/assets/workbench.css",
+      "sha256": "fc8a1c72809e9174893eaad2f89eec3d94de1e756e47d6f8d67d980ecc4cd111",
+      "source": "curated-plugin-source/draft-skills/design-persona-build/assets/workbench.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-persona-build/assets/workbench.html",
+      "sha256": "7cf9906ef6877f487c026f24ea91421390f6b7805ed0ea3989528686182f11f4",
+      "source": "curated-plugin-source/draft-skills/design-persona-build/assets/workbench.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-persona-build/assets/workbench.js",
+      "sha256": "93f6d95491cc3b85172a0c488ce5c5a4bf18c8e561d07702e749964f31406091",
+      "source": "curated-plugin-source/draft-skills/design-persona-build/assets/workbench.js",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-persona-build/references/presentation.md",
+      "sha256": "dd77c30ae3cadeb83399679c40fc4ebee44eeb3dd640013d58d0d895c9357c0a",
+      "source": "curated-plugin-source/draft-skills/design-persona-build/references/presentation.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "draft-skills/design-production-interface/SKILL.md",
-      "sha256": "ebe48119d8cdb62d3126bec1171ee6a999ec849acf3463546a84f1c2466df396",
+      "sha256": "2df9d884a21e516673255ac2385fd0959158aa6bf52521ad5fb5662efa4bdba2",
       "source": "curated-plugin-source/draft-skills/design-production-interface/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1876,7 +1906,7 @@
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
-      "sha256": "79ed27a61c8ed1c5fe5c862a15250bdaad300c32c95b4c2ea7d1fbf767cf4612",
+      "sha256": "c0681f60a099a13b1c33faeaa153f7782ddece4dfbc52767a0daa344370c0bf3",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -4035,6 +4065,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "scripts/composition_checks.py",
+      "sha256": "25f04dddc2df586b52be14cea29a9cda96d60911db41582534c3e50ca83a8095",
+      "source": "curated-plugin-source/scripts/composition_checks.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "scripts/craft_tools.py",
       "sha256": "b1ad2c11d457459aeb19eaa194c7f35cba831155c689758c8dfa3d5408ee9665",
       "source": "curated-plugin-source/scripts/craft_tools.py",
@@ -4044,6 +4080,12 @@
       "destination": "scripts/import_reference_archive.py",
       "sha256": "18f60fc95ce41a24790fce30d8ccc35c9399a74b3fc80e3f11f547ba41654c79",
       "source": "tools/import_reference_archive.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/persona_workbench.py",
+      "sha256": "58a76e1b96a0c406d2bdb2b0522ae21111faa94d3a2983a80d5c41b92706f9bc",
+      "source": "curated-plugin-source/scripts/persona_workbench.py",
       "status": "versioned-evaluation-input"
     },
     {
@@ -4294,7 +4336,7 @@
     },
     {
       "destination": "templates/typography-decision.md",
-      "sha256": "2bbb205b82b4c1d059417de56cb8b5f67e37ffb8937a8e3133dd8e932a3fbbe2",
+      "sha256": "1a20ccd32a5474c3ca05e4d89cc06d7d55bd16b4be67b2d780314de575a861b4",
       "source": "curated-plugin-source/templates/typography-decision.md",
       "status": "versioned-evaluation-input"
     },
