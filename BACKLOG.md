@@ -2,6 +2,20 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Eval hardening, 0.6.2
+
+Version-Timestamp: 2026-10-23 11:31:41 UTC
+
+- [x] Split rubrics: eight cases now have 3-4 weighted `llm` graders each; nine cases measured at `--runs 3 --ablation with-without` ($4.05).
+- [x] Fix: `packaging-luxury-vs-value` gave no named faces or hex values because the tier recipes were reachable only through `atlas.py`; owner skill print-packaging-social. Before 0.00 (3 runs), after 1.00 (1 run).
+- [x] Fix: `director-distinct-scored` failed `matrix` (no accessibility criterion, no reasons); owner skill design-director. Before 0.80, after 1.00 (1 run).
+- [x] Fix: `critique-described-pricing` dropped scores and caps in conceptual critiques; owner skill design-critique. `scoring-gates` passes after the fix (1 run).
+- [ ] Fix: `low-literacy-benefits-form` fails `level-standard`, `structure` and `help-channels` because answers drop the atlas numbers (grade 5-6, step count, ISO 24495-1); owner skill ux-design. Direct atlas link added: 0.33 to 0.50. Next: make them non-negotiables.
+- [ ] Fix: `quebec-french-launch` fails `typography` and `fr-ca` (both arms) because web-design does not route to `atlas/markets/canada.md`; owner skill web-design.
+- [ ] Decide: `tokens-dark-mode-contrast/tokens` wants light values that the prompt does not ask for. Either name them in the prompt or add a light-and-dark token table to `color/references/dark-mode.md`.
+- [ ] Confirm the 0.6.2 single-run fixes with `--runs 3 --ablation with-without` before the next release.
+- [ ] Harden or label as guards the no-lift cases: `pharma-promo-fair-balance` (1.00/1.00) and `email-dark-mode` (1.00/0.83).
+
 ## Design ops, 0.6.0
 
 Version-Timestamp: 2026-10-20 11:00:00 UTC
@@ -12,8 +26,8 @@ Version-Timestamp: 2026-10-20 11:00:00 UTC
 - [x] Spec radar (`tools/spec_radar.py`, `docs/SPEC-RADAR.md`) and a monthly scheduled review.
 - [x] Private companion scaffold (taste profile, references, outcomes log) prepared outside this repository.
 - [x] Full eval run (one per arm) and a targeted re-run after fixes: skill loading rose from 8/21 to 14/15 tracked runs (see RELEASE-060).
-- [ ] Harden the eight all-of rubrics that still fail strong answers (critique-described-pricing, dataviz-nine-categories, director-distinct-scored, email-dark-mode, low-literacy-benefits-form, packaging-luxury-vs-value, quebec-french-launch, tokens-dark-mode-contrast) into weighted graders, then `--runs 3` with ablation; fix skills one at a time with the eval loop.
-- [ ] Make `pharma-promo-fair-balance` load a skill (it passes on Claude's own knowledge).
+- [x] Harden the eight all-of rubrics that still fail strong answers into weighted graders, then `--runs 3` with ablation; fix skills one at a time with the eval loop (done in 0.6.2; see the evals README).
+- [x] Make `pharma-promo-fair-balance` load a skill: web-design description change, fired 3/3 (0.6.2).
 - [ ] Exercise `figma-workflow` against a live Figma file through the Figma MCP server; confirm plan limits marked "verify".
 - [ ] Confirm the `visual-design-studio:<agent>` invocation name on each host; confirm Codex ignores agents cleanly.
 - [ ] Attach the repository and GitHub connector to the monthly spec radar scheduled task so it can open PRs.

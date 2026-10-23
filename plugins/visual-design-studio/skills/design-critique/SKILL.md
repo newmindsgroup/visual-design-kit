@@ -8,8 +8,8 @@ description: >-
   Also for "is this good" or "does this look AI-made".
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:32:54 UTC"
+  version-timestamp: "2026-10-23 11:25:07 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
 ---
 
 # Design critique
@@ -20,7 +20,7 @@ Good critique works from evidence. It judges rendered pixels at real sizes again
 
 | Setting | Default | Move off it when |
 | --- | --- | --- |
-| Evidence | Screenshots of the rendered artifact, never source code or a description | Only prose exists: label the critique "conceptual" and say what to render |
+| Evidence | Screenshots of the rendered artifact, never source code or a description | Only prose exists: label the critique "conceptual", say what to render, and still give provisional rubric scores with the caps that already apply (a stated AA failure caps Accessibility at 2; 4+ tells cap Distinctiveness at 2) |
 | Web and app widths | 390, 768, 1440 px, full page; add 320 for reflow | The brief names devices (kiosk 1080x1920, TV 1920x1080, a specific phone) |
 | Other formats | Native size: social 1080x1350 or 1080x1920, slides 1920x1080, print as a PDF raster at 150 dpi of the final trim, video as key frames | Distance media (OOH, signage): also view at about 10% scale to simulate viewing distance |
 | Rubric target | 4+ on every applicable criterion for client delivery; never average | Directions for selection: 4+ on Brief fit and Distinctiveness, 3+ elsewhere |

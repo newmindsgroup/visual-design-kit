@@ -7,8 +7,8 @@ description: >-
   SUS, SEQ and HEART metrics, plain language and reading level, and microcopy and error messages.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-23 11:25:07 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
 ---
 
 # UX design
@@ -51,7 +51,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 ## Decisions that change the answer
 
 - **Research stage.** Discovery (generative: interviews, field study, diary), design (evaluative: usability tests, tree tests), launch (summative: benchmarks, A/B tests). Do not run an A/B test to answer a "why" question.
-- **Audience.** Run `python3 ../../library/scripts/atlas.py query "<audience in plain words>"` and read the audience entry. Older adults: longer sessions, larger text in stimuli, more recruiting lead time. Children under 13: parental consent plus child assent, short sessions. Low literacy: oral tasks, reading age 9 or lower. Expert power users: realistic data volumes and keyboard paths.
+- **Audience.** Read the audience entry before designing (without a shell, open it directly): [low literacy](../../library/atlas/audiences/low-literacy-plain-language.md) (grade 5-6 target, one question per screen, icons with words, 18px body, plain-language translations, ISO 24495-1), [older adults](../../library/atlas/audiences/older-adults.md), [neurodivergent](../../library/atlas/audiences/neurodivergent.md), [children under 13](../../library/atlas/audiences/children-under-13.md); others via `python3 ../../library/scripts/atlas.py query "<audience in plain words>"`. Older adults: longer sessions, larger text in stimuli, more recruiting lead time. Children under 13: parental consent plus child assent, short sessions. Low literacy: oral tasks, reading age 9 or lower. Expert power users: realistic data volumes and keyboard paths.
 - **Industry.** Health, finance and government add consent, data handling and recruiting constraints (special-category data under GDPR, HIPAA in US healthcare). Query `industry.*` entries for trust signals and regulation.
 - **Market.** Moderate in the participant's language; scale responses vary by culture (some markets rate higher or lower overall), so compare within a market, not across. Localize stimuli before testing.
 - **Channel.** Websites: tree tests and first-click tests are cheap and decisive. Native apps: test on real devices. Public kiosks and touchscreens: field observation at the site. Multi-touchpoint services: service blueprint.

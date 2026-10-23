@@ -1,8 +1,8 @@
 # Package readiness
 
-Version-Timestamp: 2026-10-20 17:00:00 UTC
+Version-Timestamp: 2026-10-23 11:31:41 UTC
 
-Edition: 0.6.1, public supervised evaluation. 0.6.1 adds the prompt handoff to `prompt-engineering-expert` and scopes the spec radar to our markets. This page describes package scope, not the installation state of any computer.
+Edition: 0.6.2, public supervised evaluation. 0.6.2 splits eight eval rubrics into weighted graders and fixes skill routing found by them; 0.6.1 added the prompt handoff to `prompt-engineering-expert` and scoped the spec radar to our markets. This page describes package scope, not the installation state of any computer.
 
 ## What 0.6.0 adds
 
