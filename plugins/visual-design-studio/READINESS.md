@@ -1,8 +1,8 @@
 # Package readiness
 
-Version-Timestamp: 2026-10-20 11:00:00 UTC
+Version-Timestamp: 2026-10-20 17:00:00 UTC
 
-Edition: 0.6.0, public supervised evaluation. This page describes package scope, not the installation state of any computer.
+Edition: 0.6.1, public supervised evaluation. 0.6.1 adds the prompt handoff to `prompt-engineering-expert` and scopes the spec radar to our markets. This page describes package scope, not the installation state of any computer.
 
 ## What 0.6.0 adds
 

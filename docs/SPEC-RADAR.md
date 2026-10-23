@@ -1,6 +1,6 @@
 # Spec radar
 
-Version-Timestamp: 2026-10-20 05:15:00 UTC
+Version-Timestamp: 2026-10-20 13:10:00 UTC
 
 Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 05:15:00 UTC
 
@@ -14,13 +14,23 @@ python3 tools/spec_radar.py --topic regulation       # one topic
 python3 tools/spec_radar.py --older-than 90 --json   # files not re-dated in 90 days, machine-readable
 ```
 
-Topics: `regulation`, `payments`, `platform-specs`, `sources` (editions of guides and studies), `statistics`, `other`. The baseline on 2026-10-20 was 288 claims in 106 files: 110 regulation, 67 platform specs, 18 payments, 17 statistics, 15 sources and 61 other.
+## Scope: only what affects our work
+
+`tools/spec_radar_scope.json` limits the report, and the monthly review, to:
+
+- **Our markets:** the United States, the Dominican Republic and the Caribbean (including US Hispanic audiences), and Spanish-speaking Latin America.
+- **Platform specs every project depends on:** App Store and Google Play assets, iOS and Android conventions, social formats, email clients, browsers.
+- **Standards:** WCAG, ADA and Section 508.
+
+Regulation from other jurisdictions (EU, UK, Canada, Brazil, Asia, VAT and similar) is skipped, and so are atlas market entries outside the list. Those entries stay in the public kit for anyone who needs them. They are dated and marked "verify", so check them by hand before a project in that market. Change the scope by editing the JSON; `--all` reports everything.
+
+Topics: `regulation`, `payments`, `platform-specs`, `sources` (editions of guides and studies), `statistics`, `other`. In scope on 2026-10-20: 205 claims in 95 files (58 regulation, 60 platform specs, 11 payments, 11 statistics, 12 sources, 53 other), out of 299 in total.
 
 ## Monthly review
 
 A scheduled task starts a fresh Claude Code session at 08:56 UTC on the 2nd of each month. Until the tool reaches `main`, the run stops and says so. For each run:
 
-1. **Pick the claims.** Branch `chore/spec-radar-YYYY-MM` from `main`. Run the radar and take up to 25 claims, with regulation and platform specs first and the oldest files first.
+1. **Pick the claims.** Branch `chore/spec-radar-YYYY-MM` from `main`. Run the radar (scoped by default) and take up to 25 claims, with regulation and platform specs first and the oldest files first.
 2. **Check the primary source.** Go to the official regulator, the platform's own documentation, the central bank or the original study. Secondary blogs only count as leads.
 3. **Act on what you find:**
 

@@ -1,0 +1,7 @@
+{
+  "Version-Timestamp": "2026-10-20 13:10:00 UTC",
+  "why": "The monthly review checks only claims that affect our work: our markets (United States, the Dominican Republic and the Caribbean, US Hispanic audiences, Spanish-speaking Latin America), platform specs and accessibility standards. Atlas entries for other markets stay in the public kit but are not re-verified; verify them by hand before any project there.",
+  "markets": ["united-states", "us-hispanic-puerto-rico-caribbean", "latin-america-spanish"],
+  "include_pattern": "\\b(US|U\\.S\\.|United States|federal|FTC|FDA|HIPAA|COPPA|CCPA|CPRA|ADA\\b|Section 508|state law|California|New York|Florida|Texas|Puerto Ric|Dominican|Caribbean|Latin America|LATAM|Mexico|Colombia|WCAG|App Store|Google Play|Apple|Android|iOS)",
+  "exclude_pattern": "\\b(EU\\b|European|GDPR|EAA\\b|European Accessibility Act|DSA\\b|DMA\\b|AI Act|ePrivacy|UK\\b|United Kingdom|Ofcom|ICO\\b|ASA\\b|CAP Code|VAT|MwSt|moms\\b|GST|Canada|Canadian|Quebec|Bill 96|PIPEDA|Brazil|LGPD|ECA Digital|Pix\\b|China|PIPL|India|DPDP|Japan|APPI|Korea|PIPA|Australia|New Zealand|Saudi|PDPL|UAE|Israel|Africa|POPIA|NDPR|Singapore|PDPA|Germany|German|France|French law|Switzerland|Sweden|Norway|Denmark|Finland|Nordic|DACH|Ireland|WLTP|AFIR)"
+}

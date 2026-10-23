@@ -4,9 +4,9 @@
 
 **Make Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.6.0).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.6.1).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-10-20 11:00:00 UTC
+Version-Timestamp: 2026-10-20 17:00:00 UTC
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -23,6 +23,8 @@ or `/plugin marketplace add newmindsgroup/visual-design-kit`, then `/plugin inst
 **claude.ai and Claude Desktop:** Customize > Plugins > Add > Add marketplace > `newmindsgroup/visual-design-kit`.
 
 **Codex:** `codex plugin marketplace add .` from a clone, then `codex plugin add visual-design-studio@visual-design-team`.
+
+**Prompt engineering (recommended companion):** `/plugin install prompt-engineering-expert@visual-design-team`. It turns a chosen direction into prompts for image, video and UI-build tools.
 
 Details, version pinning and integrity checks: [INSTALLATION.md](INSTALLATION.md). No API keys or paid services are required.
 
@@ -99,7 +101,7 @@ Directions must differ on at least three of six axes (type, palette, layout logi
 - **Build fidelity:** `skills/design-critique/scripts/compare_build.mjs` diffs an approved design (PNG or HTML) against the build at real widths, pixel and computed style, and exits non-zero above threshold for CI.
 - **Render review:** `skills/design-critique/scripts/render_review.mjs` screenshots any page at real widths and reports overflow, orphaned words, fonts, contrast and axe accessibility findings.
 - **Evals:** 32 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus three controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
-- **Spec radar:** `tools/spec_radar.py` lists every volatile claim marked "verify" (regulation, platform specs, payments, statistics); a monthly review re-checks them against primary sources. See [spec radar](docs/SPEC-RADAR.md). See [evals](plugins/visual-design-studio/evals/README.md).
+- **Spec radar:** `tools/spec_radar.py` lists the volatile claims marked "verify" that matter for our markets (US, Dominican Republic and Caribbean, Spanish-speaking Latin America), platform specs and accessibility standards; a monthly review re-checks them against primary sources. See [spec radar](docs/SPEC-RADAR.md). See [evals](plugins/visual-design-studio/evals/README.md).
 - **Earlier calibration:** the FORM and TIDAL [quality benchmark](plugins/visual-design-studio/library/examples/quality-benchmark/README.md) with correct, generic and wrong variants.
 
 ## Client projects and continuity

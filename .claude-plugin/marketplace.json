@@ -6,16 +6,23 @@
   },
   "metadata": {
     "description": "New Minds Group design plugins for Claude Code, claude.ai and Claude Desktop.",
-    "version": "0.6.0"
+    "version": "0.6.1"
   },
   "plugins": [
     {
       "name": "visual-design-studio",
       "source": "./plugins/visual-design-studio",
       "description": "Brief-to-direction design director, Design Space Atlas, discipline skills with concrete defaults, DTCG tokens and a render-and-critique quality loop.",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "category": "design",
-      "keywords": ["design", "branding", "ux", "ui", "design systems", "motion"]
+      "keywords": [
+        "design",
+        "branding",
+        "ux",
+        "ui",
+        "design systems",
+        "motion"
+      ]
     },
     {
       "name": "astro-website-studio",
@@ -23,7 +30,33 @@
       "description": "Standalone Astro website delivery skill. Install it only on hosts that do not have visual-design-studio, which already includes Astro guidance.",
       "version": "0.1.0",
       "category": "development",
-      "keywords": ["astro", "website"]
+      "keywords": [
+        "astro",
+        "website"
+      ]
+    },
+    {
+      "name": "prompt-engineering-expert",
+      "source": {
+        "source": "github",
+        "repo": "newmindsgroup/prompt-engineering-expert"
+      },
+      "description": "New Minds Group prompt engineering: designs, improves, converts and debugs prompts, system prompts and agent instructions. Pairs with visual-design-studio to turn a chosen direction into prompts for image, video and build tools.",
+      "category": "productivity",
+      "keywords": [
+        "prompts",
+        "agents",
+        "prompt engineering"
+      ],
+      "skills": [
+        "./skills/prompt-engineering-expert"
+      ],
+      "agents": [
+        "./agents/prompt-engineering-expert.md"
+      ],
+      "commands": [
+        "./claude-code/commands"
+      ]
     }
   ]
 }

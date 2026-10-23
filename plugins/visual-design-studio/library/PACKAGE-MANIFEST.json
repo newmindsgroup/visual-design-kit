@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-20 12:10:00 UTC",
-  "candidate": "0.6.0",
+  "Version-Timestamp": "2026-10-20 17:00:00 UTC",
+  "candidate": "0.6.1",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.6.0"
+    "version": "0.6.1"
   },
   "distribution_scope": "public",
   "files": [
@@ -196,7 +196,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "104cd27dc495a8a76670cd5d82b59225fe765bef72f6e0e8ddd3675cc9753453",
+      "sha256": "6dd2947ebf4ec87441454f2ff717112a7599aae40af4264f21ecd58db808b222",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },

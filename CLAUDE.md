@@ -13,7 +13,7 @@ This repository is a public, MIT-licensed Claude plugin marketplace (`.claude-pl
 - `plugins/visual-design-studio/library/examples/`: calibration sets (stylescapes, ai-tells, quality-benchmark) and reference code (astro-motion, react-system).
 - `plugins/visual-design-studio/agents/`: specialist subagents (direction-explorer and the review panel). Claude Code and Cowork load them; every skill keeps a single-context fallback.
 - `plugins/visual-design-studio/evals/`: `claude plugin eval` cases. Improve skills with `.claude/skills/design-kit-eval-loop/`.
-- `tools/spec_radar.py`: lists volatile "verify" claims for the monthly review in `docs/SPEC-RADAR.md`.
+- `tools/spec_radar.py` and `tools/spec_radar_scope.json`: list the volatile "verify" claims in our markets and platforms for the monthly review in `docs/SPEC-RADAR.md`.
 - `tools/`: packaging build and validation. `tests/`: repository tests.
 
 ## Before every commit
