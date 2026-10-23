@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "New Minds Group design plugins for Claude Code, claude.ai and Claude Desktop.",
-    "version": "0.6.1"
+    "version": "0.6.2"
   },
   "plugins": [
     {
       "name": "visual-design-studio",
       "source": "./plugins/visual-design-studio",
       "description": "Brief-to-direction design director, Design Space Atlas, discipline skills with concrete defaults, DTCG tokens and a render-and-critique quality loop.",
-      "version": "0.6.1",
+      "version": "0.6.2",
       "category": "design",
       "keywords": [
         "design",
