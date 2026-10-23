@@ -51,3 +51,14 @@ Before contour edits, identify retained signature forms and connections using th
 Version-Timestamp: 2026-10-03T12:28:38.580424-04:00
 
 When faithful exploration explicitly requires a distinctive source asset, reuse that actual asset with its rights, version and crop boundary recorded. A generic replacement does not fulfill the request; if original bytes are missing, label the hold or authorized reconstruction rather than claiming fidelity. Compare optical upper/lower lettering consistency in rendered context even when anchors or shared construction are identical. Geometry equality supports construction evidence, not optical acceptance. Present preserved trials through the existing [progression-site contract](../../templates/design-progression-site.md) when a collaboration hub is requested.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Brainstorming-to-drawing handoff
+
+Carry the [evidence, concept and critique loop](../design-logo-concepts/references/evidence-concept-critique.md) from concept into drawing: track-specific authority, original drawing hypothesis, mechanism annotations, actual reference attachment receipts and exact typography source. Record concept author, drawing executor and renderer separately. A glyph defect does not unlock signature structure or a locked font. Verify what the assembler actually loaded and compare exports to the pinned specimen/master. Use equal clean preview conditions and finish self-critique before selection presentation; preserve failed trials instead of merely increasing their resolution.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+

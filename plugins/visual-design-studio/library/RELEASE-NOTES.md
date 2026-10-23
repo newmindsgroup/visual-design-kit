@@ -2,6 +2,20 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.7.0 Research workspace methods merged
+
+Version-Timestamp: 2026-10-23 16:19:27 UTC
+
+The kit is now the single source of truth. Method work that had stayed in the original local research workspace joins the library.
+
+- **Google Docs editorial design.** New `design-google-docs` draft skill and `google-docs-editorial` capability for native pageless document styling.
+- **Logo brainstorming pilot.** Evidence, concept and critique loop (`design-logo-concepts/references/evidence-concept-critique.md`), `templates/logo-generation-brief.md`, a worked pilot example, and matching gates in logo concepts, refinement, evaluation, the logo study and identity handoff.
+- **Photographic quality method.** `REALISM-REASSESSMENT.md`: a seven-step sequence for product and environment imagery (real product truth, photographic direction, one inspected hero still before adapting or animating). Linked from the media quality workflow.
+- **Website methods.** Owner editing guidance, buyer decision density for content audits, `scripts/website_fixture.py` and the `examples/website-practice` form example with tests.
+- **Research records.** `docs/research/` holds the sanitized decision register and knowledge gap audit.
+
+Existing project pins are unaffected; adopt 0.7.0 deliberately.
+
 ## 0.6.2 Codex local work reconciled
 
 Version-Timestamp: 2026-10-23 16:11:23 UTC

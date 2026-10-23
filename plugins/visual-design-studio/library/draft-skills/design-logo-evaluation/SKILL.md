@@ -71,3 +71,14 @@ Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; time
 Version-Timestamp: 2026-10-03T12:29:17.270145-04:00
 
 When presenting evaluation in a collaboration website, apply the [progression-site contract](../../templates/design-progression-site.md). Bind feedback and critique to the exact shown revision, retain rejected lineage, and show the four acceptance states separately. The site is an evidence presentation; it cannot supply missing user approval or native/production checks.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Brainstorming presentation gate
+
+Apply the [evidence, concept and critique loop](../design-logo-concepts/references/evidence-concept-critique.md) before presentation. Check concept-before-render order, reference viewing versus actual attachment, attributed preferences/exclusions, track authority, actual type-source match and clean full-name shallow horizontal/stacked plus standalone small single-color views under one frozen recipe. Bind completed self-critique findings to pixels/hash/location and disclose missing views. Self-critique is distinct from required independent review. Hold shortlist presentation for any required review unless explicit current-project/current-phase authority permits disclosed exploratory presentation while that review is pending; neither route grants completion/production acceptance. A justified indivisible-word stacked omission uses a separately labeled compact view, not a fabricated stack. Matched author/renderer trials support only their bounded comparison; mismatched inputs cannot establish model quality. Raster concept, editable vector, user acceptance and actual stitched-sample evidence remain distinct. Use the existing four acceptance states, not a new pilot score.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+

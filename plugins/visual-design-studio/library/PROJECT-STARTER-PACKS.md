@@ -182,3 +182,16 @@ Before a selected stage, apply [AI context readiness](AI-DESIGN-CONTEXT.md) with
 Version-Timestamp: 2026-09-16 18:05:00 AST
 
 Apply [the compact craft selection](CRAFT-SELECTION.md) before new composition or visible revision. Record selected, reused or not-applicable decisions in the current stage packet. This makes specialist depth explicit without redoing accepted foundations.
+
+## Display specialist extension
+
+Version-Timestamp: 2026-09-11T09:45:01-04:00
+
+For DISPLAY or TOUCH work, route through [the specialist workflow](DISPLAY-WORKFLOW.md). Seven new catalog entries extend existing foundations; use motion only when the placement permits it. RC4 is unchanged and does not yet include this extension.
+
+
+## Identity specialist extension
+
+Version-Timestamp: 2026-09-11T19:25:03-04:00
+
+For logo, identity, refresh or guidelines work use [the identity workflow](IDENTITY-WORKFLOW.md). [Design Taste](draft-skills/design-taste/SKILL.md) also serves non-identity visual critique. These new entries are outside RC4.

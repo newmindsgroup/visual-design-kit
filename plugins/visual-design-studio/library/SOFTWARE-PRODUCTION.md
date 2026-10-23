@@ -1,6 +1,12 @@
 # Choose and verify the production tool
 
-Version-Timestamp: 2026-09-10 19:58:10 AST
+Version-Timestamp: 2026-09-10 21:11:10 AST
+
+Agent-Attribution: computer=Mac.lan; tool=codex-cli; version=0.154.0; timestamp=2026-09-10 21:07:00 AST
+
+## Website owner editing
+
+When owner maintenance is part of a website handoff, identify the permitted text, image, link and page-metadata fields and their authoritative source. Use the site's existing CMS, editor or structured content where it fits; a custom CMS is optional. Preserve the original asset while reviewing replacements, preview long copy and changed imagery at relevant widths, then save and reopen to verify persistence and affected outputs. Check replacement-image alternative text, edited heading structure and link purpose, and relevant contrast. Check field validation and edit/publish access if an editor is included. Retain a recoverable prior version and explain the owner's supported edits. A browser preview alone does not establish permissions, persistence or a working publish path. Supporting source and inspection limits: editable website case (source-repository evidence, not bundled or inherited).
 
 Use this with the existing production skill, [medium contracts](TOOLCHAINS.md) and work record. Choose by required result, editable handoff and recipient workflow. Software names are candidates, not a quality ranking: a mature native app is preferred when it satisfies requirements better, while code or current chat tools are suitable when they meet the same acceptance needs. Do not build a replacement editor just because an existing app lacks an immediately available connector.
 

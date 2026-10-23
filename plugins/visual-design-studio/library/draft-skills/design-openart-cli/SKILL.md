@@ -42,6 +42,8 @@ Verify installed command syntax and parameter support before each selected mode;
 
 Version-Timestamp: 2026-09-11T23:21:42-04:00
 
+Installed command help and bounded read-only discovery checked 2026-09-09; submission, polling and download behavior remain untested. Video duration, aspect ratio and resolution were preserved in a text-only dry-run request. Image --resolution was rejected; custom image controls remain unverified. Dry-run construction does not prove server acceptance. For an approved setup, resolve the repository through the current OpenArt vendor page and compare the selected release archive against its published checksum before installation.
+
 ## Media quality extension
 
 Version-Timestamp: 2026-09-11T21:08:20-04:00
