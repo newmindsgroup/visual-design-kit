@@ -2,6 +2,17 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Single source of truth and physical environments, 0.7.x
+
+Version-Timestamp: 2026-10-23 13:50:00 AST
+
+- [x] Codex local work (persona workbench, typography checks) reconciled as 0.6.2.
+- [x] Unsaved research workspace methods merged as 0.7.0; this repository is the only working source.
+- [x] Claude Code and Codex parity: `AGENTS.md` canonical, `CLAUDE.md` imports it, `.agents/skills` mirrored to `.claude/skills` with a CI drift check. Verified in fresh sessions of both tools.
+- [ ] Review the [physical environment proposal](docs/proposals/PHYSICAL-ENVIRONMENTS.md) and decide its capability list.
+- [ ] Run its controlled test to resolve the lighting-first and high-resolution-baseline hypotheses (O1).
+- [ ] Build the accepted physical-environment draft skills and atlas entries.
+
 ## Design ops, 0.6.0
 
 Version-Timestamp: 2026-10-20 11:00:00 UTC
