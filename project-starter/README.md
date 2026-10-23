@@ -4,7 +4,7 @@ Version-Timestamp: 2026-09-27 14:19:56 AST
 
 Copy the instructions from AGENTS.md.template into the adopting project's AGENTS.md, replacing {{ABSOLUTE_PACKAGE_ROOT}} with the actual trusted package root. Preserve and reconcile any existing instructions; do not overwrite an existing AGENTS.md. The package root contains READINESS.md, library/ and skills/.
 
-For Claude Code, add the same entry to CLAUDE.md while preserving its existing instructions. Claude startup behavior remains to be verified separately. A file template alone does not establish execution.
+For Claude Code, make the first line of the project's CLAUDE.md `@AGENTS.md` (see [CLAUDE.md.template](CLAUDE.md.template)) so Claude and Codex read the same entry. If the project already has a CLAUDE.md, add that line at the top and move its rules into AGENTS.md; do not copy the entry into both files, because two copies drift. A file template alone does not establish execution.
 
 Use a pinned package checkout or release directory rather than a mutable install cache. Verify PAYLOAD.sha256 using an independently trusted source/digest before running packaged scripts. Record the chosen version and digest in the project. Each teammate sets their own local path; never commit another person's absolute home path to a shared starter.
 

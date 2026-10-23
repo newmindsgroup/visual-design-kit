@@ -50,8 +50,8 @@ claude plugin eval plugins/visual-design-studio --case <new-case> --runs 1 --abl
   --max-cost-usd 0.5 --no-publish --trust-plugin --json "$OUT"
 
 # Read the result
-python3 .claude/skills/design-kit-eval-loop/scripts/summarize_eval.py "$OUT" --failures
-python3 .claude/skills/design-kit-eval-loop/scripts/summarize_eval.py BEFORE.json AFTER.json
+python3 .agents/skills/design-kit-eval-loop/scripts/summarize_eval.py "$OUT" --failures
+python3 .agents/skills/design-kit-eval-loop/scripts/summarize_eval.py BEFORE.json AFTER.json
 
 # Clean up harness temp dirs (they are created read-only)
 for d in /tmp/claude-eval-*; do [ -e "$d" ] && chmod -R u+rwX "$d" && rm -rf "$d"; done
