@@ -61,6 +61,10 @@ Expected counts are five, six and eight tests respectively. These commands do no
 
 When recording selected, deferred, excluded or prerequisite capabilities, copy `id` exactly from capabilities.json. Store its `entry` path separately. A skill directory name or SKILL.md frontmatter name is not a catalog ID. Do not invent IDs by adding or removing a prefix.
 
+For native pageless document styling, use [Google Docs editorial design](draft-skills/design-google-docs/SKILL.md), capability `google-docs-editorial`, alongside the installed Google Docs connector skill. Scope and checks are in the document-design checkpoint (source-repository evidence, not bundled or inherited). This local addition does not update existing distributed plugin snapshots.
+
+Select `infographics` for a visual explanation; select `higgsfield-cli` or `openart-cli` only for an appropriate generative asset. Resolve their instruction dependencies through capabilities.json and read the chosen SKILL.md. Current access checks and authorization happen at execution. These are repo-local skills; existing portable package snapshots do not include them automatically.
+
 For example, catalog ID `ux` maps to `draft-skills/design-ux-architecture/SKILL.md`; `design-ux` is not a valid catalog ID. Catalog ID `research` maps to `draft-skills/design-evidence-research/SKILL.md`.
 
 Use `pattern` rather than `id` for an intentionally broad group such as `media-*`. Expand patterns in every category against the complete current catalog at validation time, before selection or execution. Before handoff, check every explicit ID in every category against the catalog, confirm its entry exists, and always record the exact catalog version/hash and selected entry hashes. A corrected record must retain repair provenance; do not label assisted repair as first-pass agent success.

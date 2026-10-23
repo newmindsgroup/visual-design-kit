@@ -5,7 +5,7 @@ description: Review design outputs, validate local records and prepare an honest
 
 # Delivery
 
-Version-Timestamp: 2026-09-10T20:53:18.553556-04:00
+Version-Timestamp: 2026-10-04 16:54:39 AST
 
 Project-local instruction draft. Manual selection does not install a tool or grant permissions.
 
@@ -18,6 +18,8 @@ Requirements, evidence and selected actor/persona references under the [shared r
 Follow [delivery preflight](../../DELIVERY-PREFLIGHT.md) for candidate identity, native reopen, export inspection, package reconciliation and correction/recheck. Keep results in the existing work record and manifest. Verify the actual destination route and applicable saved evidence before claiming an app-specific delivery. Historical host readiness does not transfer to another project or machine.
 
 Run the deterministic validators for applicable records and compare declared structured invariants. Review the rendered artifact against the brief, content accuracy, accessibility and medium requirements. Record each criterion, method, result and evidence. Keep structural pass, creative review, factual/legal review, usability and native/device acceptance separate. Investigate failed checks and document any exception with its owner; no exception implies approval. Verify editable source, exports, dependency/license notes and recovery instructions. Prepare delivery without sending or publishing unless authorized. Include refresh triggers and ownership so the next session can inspect current files before resuming.
+
+For an AI-mediated candidate, record the brief-derived point of view, user outcome, intended character and non-negotiable constraints before review. A named editor then reviews the complete journey for problem fit, coherence, differentiation and anticipated user needs. A first plausible output remains a candidate. A critic may produce findings, but it does not replace editor accountability or user validation. Promote a recurring diagnosis into a reusable rule only after it is reproduced and recorded.
 
 ## Output contract
 

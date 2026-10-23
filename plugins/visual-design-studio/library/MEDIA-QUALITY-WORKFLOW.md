@@ -46,3 +46,9 @@ Historical descriptions above describe source-library authoring only. On a recei
 ## General media and screen-specific context
 
 For website, identity, infographic or other non-display imagery, use media-art-direction with the relevant output dimensions, audience, brand baseline and asset role. Do not require a retail-display brief. Select display-discovery and screen-compositing only for physical-screen work. Mark screen-only packet fields not applicable with a reason; preserve shared rights, reference, budget and quality requirements.
+
+## Photographic quality correction
+
+Version-Timestamp: 2026-09-12T22:56:45-04:00
+
+[Photographic quality correction](REALISM-REASSESSMENT.md): user rejected the schematic product output. Photographic visual acceptance now precedes native export, animation and team visual acceptance. Earlier technical passes remain technical evidence only.

@@ -42,3 +42,12 @@ Version-Timestamp: 2026-09-11T19:32:14-04:00
 Version-Timestamp: 2026-09-11T23:23:36-04:00
 
 Historical descriptions above describe source-library authoring only. On a receiving computer, begin with tool and execution status unverified. Run the selected scenario and retain its actual artifacts before claiming local verification. Structural source checks do not establish provider, device or user acceptance. The candidate manifest identifies exact source and adapter hashes; earlier results do not transfer to changed bytes.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Logo brainstorming pilot
+
+Use the existing concept, refinement and evaluation owners with the [evidence, concept and critique loop](draft-skills/design-logo-concepts/references/evidence-concept-critique.md), [logo study](templates/logo-study.md) and [generation brief](templates/logo-generation-brief.md). This is a bounded agent-followed pilot for deficient concept/reference handoffs, not a new skill, installed runtime or global default. For a locked narrow revision, retain its scope and reuse accepted inputs. See the [synthetic walkthroughs](examples/logo-brainstorm-pilot.md) and pilot checks (source-repository evidence, not bundled or inherited). Client evidence belongs to client work; these instruction checks accept no client artwork.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST

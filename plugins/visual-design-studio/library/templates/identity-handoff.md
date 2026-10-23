@@ -30,3 +30,14 @@ For reference-led logo work or requested proportion studies, attach the [logo st
 Version-Timestamp: 2026-10-02 21:02:25 AST
 
 Carry the existing project's [immutable revision/activity record](design-work.md#immutable-revision-and-activity-record): revision/parent IDs, recoverable source/native/render bytes, drawing strategy/delta, actual actor/tool metadata, bound review versions and append-only feedback/outcome states. The project executor owns client VERSION-INDEX; reusable-kit maintenance stores only sanitized method evidence.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Brainstorming receipt
+
+For the bounded pilot, reference the [existing logo study](logo-study.md#brainstorming-pilot-fields) and [generation brief](logo-generation-brief.md) by version/hash. Carry the reference viewing/attachment receipts, preference ledger, concept-before-render record, actual type-source match, author/renderer split, comparable previews and pre-presentation self-critique into evaluation. Preserve the [existing revision record](design-work.md#immutable-revision-and-activity-record). A project-scoped brainstorming exception travels with its exact authority and cannot satisfy unmet production gates.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+

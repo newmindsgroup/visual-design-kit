@@ -949,6 +949,11 @@
         "motion",
         "web-frontend"
       ]
+    },
+    {
+      "id": "google-docs-editorial",
+      "entry": "draft-skills/design-google-docs/SKILL.md",
+      "depends_on": []
     }
   ]
 }

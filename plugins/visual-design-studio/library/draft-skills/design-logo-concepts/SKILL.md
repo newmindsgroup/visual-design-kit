@@ -49,3 +49,14 @@ Version-Timestamp: 2026-10-02 20:00:26 AST
 Record which treatment was rejected separately from the preferred source and its retained features. If the user rejects an enclosure or badge treatment and requests open original refinement plus alternatives, retire that treatment from active options rather than keep varying its border, weight or decoration. This is a project decision, not a universal ban on circles or enclosed marks. Preserve the preferred source in an open faithful track, and develop materially distinct directions only within redesign authority. An explicit request for materially distinct alternatives authorizes exploration of the named element or scope; it does not unlock other approved elements or authorize adoption/replacement. A treatment rejected without such exploration authority does not release other locks.
 
 Compare the requested tracks with the same complete approved name, clean artwork, real type specimens, target sizes and relevant context renders. State the different concept/lettering/composition hypothesis behind each alternative; cosmetic badge variants are not distinct directions. Carry actual reference coverage, retained morphology and accepted contour source forward. Measurements and construction overlays can explain geometry but cannot establish visual quality. If real renders or verified typography are missing, label that comparison provisional and name the missing evidence. Retain rejected drafts as history, not defaults for later work.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Bounded brainstorming pilot
+
+For reference-led brainstorming or reported concept/glyph failures, use the [evidence, concept and critique loop](references/evidence-concept-critique.md) and the existing [logo study](../../templates/logo-study.md). Freeze attributed preferences and structural exclusions, record each original concept/drawing hypothesis before rendering, and start with letterforms when those are the authorized problem. Keep exact source typography and complete-name comparisons. A declared reference is not an attached image. Complete self-critique before presenting a shortlist, with weak/rejected/superseded/unapproved lineage visible. This pilot changes no production or global provider gate.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+

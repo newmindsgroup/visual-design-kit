@@ -42,3 +42,14 @@ Before changing contours, identify the valued morphology (recognizable forms) an
 Start with moderate contour or stroke adjustments that preserve counters, negative space and the relationships between elements. Closing a counter, filling a meaningful gap, changing a leaf-to-letter connection or repositioning a signature loop so its relationship changes is structural, regardless of the numeric adjustment. Compare apparent mass and leaf clearance at actual small size; heavier geometry can crowd the botanical cue or merge into a blob. Record the before/after weight and gap observations rather than treating added mass as improvement. Keep matched-scale original/edited closeups and complete lockup comparisons so viewers can inspect the actual changes.
 
 Obtain explicit user authorization before changing signature structure. If a feature's value is unresolved, propose the structural change separately while retaining it in the faithful candidate. Explicit authorization for a different direction does not remove the faithful track's retained locks. Golden-ratio construction cannot override valued morphology or topology; reject or optically adjust a construction that compromises them.
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## From viewed evidence to a renderable idea
+
+Use [the evidence, concept and critique loop](../../design-logo-concepts/references/evidence-concept-critique.md) for concrete curve/proportion/spacing/shape annotations, attributed preference and exclusion records, attachment proof and fixed typography. Visual coverage alone cannot prove a renderer received the image. Keep the original-faithful protections above for their authorized track; an explicitly rejected/released source must not be imposed on a separately authorized restart. Record a meaningful concept or scoped drawing hypothesis before each render, then inspect actual output before selection presentation. Use [the generation brief](../../../templates/logo-generation-brief.md) as the renderer handoff.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+
