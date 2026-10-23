@@ -8,8 +8,8 @@ description: >-
   handling.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-10-23 11:25:07 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
 ---
 
 # Print, packaging, social and campaign formats
@@ -45,7 +45,7 @@ Excellent channel work is designed for the moment it is seen (held at 40cm, spot
 
 ## Decisions that change the answer
 
-- **Tier.** Value: coated stock, CMYK, bold color, large price and benefit. Premium and luxury: uncoated or textured heavy stock (350gsm+ cards), one or two spot colors, foil, emboss, letterpress, soft-touch, more empty space, smaller logo.
+- **Tier.** Value: coated stock, CMYK, bold color, large price and benefit. Premium and luxury: uncoated or textured heavy stock (350gsm+ cards), one or two spot colors, foil, emboss, letterpress, soft-touch, more empty space, smaller logo. When a brief names a price point or tier, read that tier's token recipe and use its named typefaces, hex palette and checked contrast pairs: [value](../../library/atlas/tiers/value.md), [mid-market](../../library/atlas/tiers/mid-market.md), [premium](../../library/atlas/tiers/premium.md), [luxury](../../library/atlas/tiers/luxury.md), [ultra-luxury](../../library/atlas/tiers/ultra-luxury.md).
 - **Market.** ISO A sizes vs US Letter; local packaging law and languages (bilingual Canada, EU multilingual packs); RTL markets flip reading order on packs, decks and social layouts; market-specific platforms (for example WeChat and Xiaohongshu in China, LINE in Japan, KakaoTalk in Korea) have their own formats.
 - **Industry.** Food, cosmetics, pharma, alcohol and cannabis packaging are regulated; claims and mandatory panels come from the client's regulatory team. Finance and health emails and ads carry required disclosures.
 - **Audience.** Older adults: print body 12pt+, matte stock to cut glare, high contrast. Children: sturdy formats, rounded die-cuts, safety rules on small parts.

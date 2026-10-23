@@ -8,8 +8,8 @@ description: >-
   and recommends one with a runner-up.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:05:00 UTC"
+  version-timestamp: "2026-10-23 11:25:07 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
 ---
 
 # Design director
@@ -34,7 +34,7 @@ Great design is the right answer to a specific brief, chosen from real alternati
 - **Every direction carries specifics, even in a short answer:** two named typefaces (display and text), 3-5 colors as hex with roles, one layout idea, one imagery idea and one line of sample copy. Cut prose before you cut specifics; an adjective-only direction is not a direction.
 - **Ask at most 4 qualifying questions**, each with options and a recommended answer, and only when two plausible answers lead to different designs. State every other assumption in one line. A long questionnaire is a failure even when every question is reasonable.
 - **Prove the directions differ:** one line or a small table naming, for each pair, at least 3 of the 6 axes (type, palette, layout logic, imagery, motion, voice) on which they differ.
-- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). State the weights. In a short answer, keep the table to the criteria and totals.
+- **Always show the score table and a recommendation** (winner, runner-up, what would flip it). State the weights. Take the criteria from [scoring](references/scoring.md), always including accessibility, and give a one-line reason per criterion. In a short answer, keep the table to the criteria, reasons and totals.
 - **Always include a one-line sensitivity check**: whether a plausible weight change flips the winner, naming the criterion ("B wins unless differentiation weighs less than 15%").
 
 ## Workflow

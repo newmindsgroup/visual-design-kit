@@ -1,14 +1,15 @@
 ---
 name: web-design
 description: >-
-  Load before planning, designing, auditing or launching any website, landing page or microsite, including regulated,
-  multilingual or market-specific launches. Covers page types (home, product, pricing, about, blog), conversion and
-  ethical persuasion, responsive and fluid layouts, images, Core Web Vitals, SEO and structured data, localization and
-  language-law requirements, stack and CMS choice (Astro, Next.js, WordPress, Webflow, Framer) and launch QA.
+  Load before planning, designing, auditing or launching any website, landing page, microsite or above-the-fold
+  layout, including regulated (prescription drug, health, finance), multilingual or market-specific launches. Covers
+  page types (home, product, pricing, about, blog), conversion and ethical persuasion, responsive and fluid layouts,
+  images, Core Web Vitals, SEO and structured data, localization and language-law requirements, stack and CMS choice
+  (Astro, Next.js, WordPress, Webflow, Framer) and launch QA.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-23 10:37:48 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 10:37:48 UTC"
 ---
 
 # Web design
@@ -53,7 +54,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 
 - **Site type.** Single-goal landing page: minimal navigation, one CTA repeated. Corporate multi-page: audience routing from the homepage. Content or editorial: reading comfort, search, related content. Commerce: product detail and checkout patterns from `ui-design` [flows](../ui-design/references/flows.md). Docs: search, versioning, code samples.
 - **Traffic source.** Paid traffic: message match between ad and page. Organic: depth of content and internal linking. Direct and returning: fast paths to sign-in and top tasks.
-- **Industry and market.** Atlas entries set trust signals, regulation and conventions. Market changes language and `hreflang`, legal pages (an Impressum in Germany and Austria), consent rules, payment methods and type support for the script.
+- **Industry and market.** Atlas entries set trust signals, regulation and conventions; for a regulated industry, read its entry before laying out the first view (for a prescription drug site, [pharma-biotech](../../library/atlas/industries/pharma-biotech.md): fair balance, ISI in the first view, indication and Prescribing Information links). Market changes language and `hreflang`, legal pages (an Impressum in Germany and Austria), consent rules, payment methods and type support for the script.
 - **Audience.** `audience.low-bandwidth-entry-devices`: halve the budgets and test on a low-end Android device. `audience.older-adults`: 18px+ body, high contrast, no hover-only content. `audience.b2b-buying-committee`: pages for each role, pricing transparency, security and procurement content.
 - **Price tier.** Luxury: slower pacing, larger imagery, fewer words, but the same LCP budget. Value: price and proof up front, dense comparison.
 - **Who edits after launch.** Developers only: Astro or Next.js with Markdown or a headless CMS. Marketers daily: a visual CMS or a no-code builder with locked design tokens.

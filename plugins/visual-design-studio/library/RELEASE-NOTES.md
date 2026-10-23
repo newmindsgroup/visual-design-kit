@@ -2,6 +2,16 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.7.1 Eval hardening and skill routing
+
+Version-Timestamp: 2026-10-23 11:31:41 UTC
+
+- **Weighted graders.** Eight eval cases that failed strong answers on one clause of an all-of rubric now have 3-4 weighted `llm` graders each, so partial credit is visible. Nine cases measured at three runs per arm: mean 0.67 with the plugin, 0.50 without (+0.17); a skill loaded in 27 of 27 with-plugin runs.
+- **Routing fixes found by the split graders.** `print-packaging-social` links the tier token recipes and `ux-design` links the audience entries directly, since `atlas.py` needs a shell. `design-director` always scores accessibility, with a reason per criterion. `design-critique` keeps provisional scores and caps in conceptual critiques. `web-design` loads for above-the-fold and regulated (prescription drug, health, finance) pages and links the pharma-biotech entry.
+- **Still open:** low-literacy numbers, Quebec French typography and a light-mode token question (see `BACKLOG.md`).
+
+Existing project pins are unaffected; adopt 0.7.1 deliberately.
+
 ## 0.7.0 Research workspace methods merged
 
 Version-Timestamp: 2026-10-23 16:19:27 UTC
