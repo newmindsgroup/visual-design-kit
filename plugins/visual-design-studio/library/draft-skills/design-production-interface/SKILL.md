@@ -80,3 +80,12 @@ For repeated family assets or channel adaptations, follow [creative continuity](
 ## Provider selection
 
 For a justified generated asset, use [media route selection](../design-media-route-selection/SKILL.md) before selecting [ChatGPT images](../design-chatgpt-images/SKILL.md), [Higgsfield](../design-higgsfield-cli/SKILL.md) or [OpenArt](../design-openart-cli/SKILL.md). Tool access and operation authorization remain separate.
+
+
+## Measured spacing and wrapping gate
+
+Version-Timestamp: 2026-10-17 08:36:43 AST
+
+For compact multi-column or fixed-size compositions, apply [measured composition checks](../../TYPOGRAPHY-SPACING-CHECKS.md). Declare physical or CSS units, text insets, minimum readable type, line-count targets and inter-section gaps for the actual format. Measure rendered text with the actual loaded font; compare baseline and revision. Reallocate width or reduce column count before shrinking type. Three columns are allowed when the real copy fits. Review isolated final words and clipped ancestors, including decorative masks; page overflow alone is insufficient. Record exceptions with a rationale and owner, never silently waive failed checks.
+
+Run the bundled measurement checker on a project-local receipt. It evaluates supplied measurements, not the source artwork: screenshots, font-load evidence, PDF inspection and physical proof remain distinct. No universal margin, column count, minimum point size or line count is prescribed.

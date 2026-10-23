@@ -52,3 +52,9 @@ Motion Atlas checkpoint: native 0.4.0 installed/enabled, 440 files byte-identica
 Version-Timestamp: 2026-10-14 14:06:55 AST
 
 Headless UI local 0.4.1 installed/enabled; 444 files match owner source. Final10 changed-path groups, regression40, typecheck/build/audit and Fable review findings disposition recorded in private/headless-ui-20261014. Preview retained for user review at localhost:17731. Public/client release pins unchanged.
+
+
+## Typography spacing maintenance
+Version-Timestamp: 2026-10-17 08:38:58 AST
+
+[0.4.2 evidence](docs/TYPOGRAPHY-SPACING-042.md) records measured typography and spacing checks, tests and local refresh status. Existing project pins and public release remain unchanged.

@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-14 15:15:59 AST",
-  "candidate": "0.4.1",
+  "Version-Timestamp": "2026-10-17 08:36:43 AST",
+  "candidate": "0.4.2",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.4.1"
+    "version": "0.4.2"
   },
   "distribution_scope": "public",
   "files": [
@@ -282,6 +282,12 @@
       "destination": "TOOLCHAINS.md",
       "sha256": "d7e7dd3291062fbab31194a2d8aea21aff9c5a24b2a97127053f1b625d6854c0",
       "source": "curated-plugin-source/TOOLCHAINS.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "TYPOGRAPHY-SPACING-CHECKS.md",
+      "sha256": "54c84eb029fec28c1131b0b0fcd19b7dcffd40924338f31c2519bcb9591c596a",
+      "source": "curated-plugin-source/TYPOGRAPHY-SPACING-CHECKS.md",
       "status": "versioned-evaluation-input"
     },
     {
@@ -712,7 +718,7 @@
     },
     {
       "destination": "draft-skills/design-production-interface/SKILL.md",
-      "sha256": "ebe48119d8cdb62d3126bec1171ee6a999ec849acf3463546a84f1c2466df396",
+      "sha256": "2df9d884a21e516673255ac2385fd0959158aa6bf52521ad5fb5662efa4bdba2",
       "source": "curated-plugin-source/draft-skills/design-production-interface/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1108,7 +1114,7 @@
     },
     {
       "destination": "draft-skills/design-typography/SKILL.md",
-      "sha256": "76fe69de74f583fdff99cb5dbfa0bd4071d6d907cdd30b414ec5268dd544cdcf",
+      "sha256": "42075fda9ce0feee1d9cb1f54ef0fd1d7d9689d5b69056b77402dea18227a4b9",
       "source": "curated-plugin-source/draft-skills/design-typography/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -2199,6 +2205,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "scripts/composition_checks.py",
+      "sha256": "25f04dddc2df586b52be14cea29a9cda96d60911db41582534c3e50ca83a8095",
+      "source": "curated-plugin-source/scripts/composition_checks.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "scripts/craft_tools.py",
       "sha256": "b1ad2c11d457459aeb19eaa194c7f35cba831155c689758c8dfa3d5408ee9665",
       "source": "curated-plugin-source/scripts/craft_tools.py",
@@ -2446,7 +2458,7 @@
     },
     {
       "destination": "templates/typography-decision.md",
-      "sha256": "2bbb205b82b4c1d059417de56cb8b5f67e37ffb8937a8e3133dd8e932a3fbbe2",
+      "sha256": "1a20ccd32a5474c3ca05e4d89cc06d7d55bd16b4be67b2d780314de575a861b4",
       "source": "curated-plugin-source/templates/typography-decision.md",
       "status": "versioned-evaluation-input"
     },
