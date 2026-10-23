@@ -41,3 +41,31 @@ Version-Timestamp: 2026-10-02 21:00:45 AST
 
 - Acceptance states per candidate/version: critique completed/failed/incomplete; criterion evidence pass/revise/not-tested; user visual accepted/rejected/pending with shown version/hash, scope and disposition evidence pointer; production ready/pending with required gates:
 - Finding-to-drawing test: defect location, hypothesis, permitted symbol/type/spacing change, expected visible effect, measured counter/channel/junction gaps with units/scale or pending status, retained-feature veto, executed before/after full-lockup evidence file paths and not-executed/executed-failed/executed-resolved result:
+
+
+Version-Timestamp: 2026-10-05 21:40:34 AST
+
+## Brainstorming pilot fields
+
+Read the [evidence, concept and critique loop](../draft-skills/design-logo-concepts/references/evidence-concept-critique.md). Fill the relevant rows in this existing work packet, not a competing history index. Complete the [generation brief](logo-generation-brief.md) once for each bounded experiment, or reuse an unchanged pinned brief for a mechanical render. Store actual client evidence in its project.
+
+| Record | Required fields |
+| --- | --- |
+| Book-source principle | Work/title, author/edition verified or unknown, catalog/source ID/hash and private local section/page locator, actual text/visual coverage, original adapted summary, specific drawing/critique action, applicability/limits; no raw pages/extracts in shared kit or unapproved provider |
+| Reference mechanism | Source/date and text-versus-visual coverage, source fact versus inferred exercise; reference ID/file/hash; inspected region and viewing receipt; proportion/curve/counter/spacing/join mechanism; measured units/evidence or estimated label; audience relevance; intended influence; copying exclusion; affected concept |
+| Renderer attachment | Call/brief ID, exact image hash, input slot/attachment ID and request/UI receipt; attached/not-attached/unknown; coverage gaps and dependent hold |
+| Preference/exclusion event | Event ID/time, speaker/source, exact shown revision/hash, faithful quote or summary, preference/requirement/inference, scope, structural veto, active/released/conflicting/superseded, superseding event |
+| Concept/drawing card | ID/parent, pre-render timestamp, author/session, faithful/exploration track and authority, wordmark-only/symbol/monogram/combination scope, whole-name exploration grant if applicable, intended meaning, original mechanism, evidence IDs, experiment, expected visible effect, retained locks, exclusions, failure condition |
+| Typography source | Exact full name/case/diacritics, family/style/version/axes/spacing, font or outline master hash, approved specimen/hash, actual source loaded/used, source-to-export match or hold |
+| Preview recipe | ID/version, horizontal/stacked canvases and shallow horizontal fit, small/stress sizes with units, visible-height or bounded-fit rule, background/profile/margins/placement/crop, three output files/hashes or justified single-word stacked not-applicable disposition and separate compact view, exact-string and uncropped full-name results |
+| Actor/render receipt | Concept author/session, drawing executor, renderer/provider/model/tool/version, actual verified runtime or unknown, card ID/hash bound to request, actual render request/response timestamps and ordered-event receipt, prompt/inputs/output hashes, dimensions/settings/seed support, attempts/repairs and output class |
+| Model trial, only if authorized | Author versus renderer comparison, matched brief/evidence/authority/output contract; same concept card/prompt for renderer trials; references/type/size/recipe/settings/attempts, mismatches, adherence/render defects versus concept findings, narrow conclusion |
+| Self-critique before presentation | Candidate/hash, actual inspected view/location, criterion, visible observation, pass/revise/not-tested, correction/retained-feature veto, completion time, applicable presentation-review rule/required review status or explicit scoped exception, weak/unapproved disposition, presentation held or permitted with limitations |
+| Scoped exception, only if granted | Speaker/source, project/revision, allowed phase, duration/pilot bound, actual changed gate, unaffected production requirements; no cross-project/data approval inferred |
+| History and acceptance | Existing revision/activity record links; rejected/weak/superseded/unapproved attribution and preserved lineage; separate four acceptance states; unresolved owner and first next action |
+
+Do not copy an inferred preference into the user column, an attached-image claim into a viewing receipt, or requested font metadata into an actual-load receipt. No table entry is a production approval. Use actual environment Version-Timestamp and Agent-Attribution on completed packets.
+
+Agent-Attribution: computer=Mac.lan; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-05 21:27:18 AST
+
+

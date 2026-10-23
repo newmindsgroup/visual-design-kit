@@ -36,3 +36,9 @@ Version-Timestamp: 2026-10-02 18:16:41 AST
 - Separate design selection, user/audience, native/export and rights acceptance; remaining owner/check:
 
 - Symbol-study/initial-reading record link when the brief requires it; observed reading, reviewer context, user/audience status and unresolved criterion, independent of type selection:
+
+
+## Composition measurement receipt
+Version-Timestamp: 2026-10-17 08:36:43 AST
+
+Record final dimensions and unit, trim safety separately from optical panel padding, actual font-load evidence, role-specific minimum type, available measure, line counts and final-line words, ancestor clipping, inter-section gaps, baseline/revision references, exceptions and reviewer. Link the receipt and actual-size render; use TYPOGRAPHY-SPACING-CHECKS.md.

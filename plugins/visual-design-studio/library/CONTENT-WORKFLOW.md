@@ -1,6 +1,8 @@
 # Content writing foundation
 
-Version-Timestamp: 2026-09-10 20:02:52 AST
+Version-Timestamp: 2026-09-10 21:51:11 AST
+
+Agent-Attribution: computer=Mac.lan; tool=codex-cli; version=0.154.0; timestamp=2026-09-10 21:51:11 AST
 
 Written, client-agnostic methods for Codex and Claude Code. Select the `content` capability and only the needed guide; this is not an installed plugin or evidence of tested writing performance.
 
@@ -51,6 +53,12 @@ Source inspection provenance belongs to the original source version recorded in 
 For content-only work, create or reuse the same design-work record with capability ID `content`; its name does not require a visual pack. The package catalog must retain the `content` selector; verify it resolves before selection. DISPLAY uses the campaign guide; TOUCH uses UX plus campaign for attract messages; APP/NATIVE store and launch copy uses campaign, with website guidance for a landing page.
 
 For overlapping surfaces, choose one owner by purpose: UX owns task-triggered onboarding and transactional messages; campaign owns persuasive sequences and promotional email; editorial owns reference/help and educational articles. Other guides contribute constraints to the same unit ID rather than create duplicate copy.
+
+## Buyer decision density
+
+For a website content audit, tie each section to an audience question, task, useful proof or applicable requirement. Consider the decision's stakes and uncertainty before shortening it. Keep decision-critical detail available through clear navigation or progressive disclosure; separate audience routes when their tasks differ. Remove duplication and unsupported promotion without a fixed word-cut target. Preserve necessary disclosures, accessibility, search intent and the information people need to compare options. Company history or leadership earns space when it answers a relevant question.
+
+Record the baseline, intended action and qualified outcome before judging a revision. A brief first-impression check can expose unclear purpose or next steps; also test actual task completion. Use comparable event definitions, traffic sources, devices, audiences and time windows when examining conversion changes, with sample size and uncertainty visible. A generic industry average, more clicks or an attractive screenshot cannot prove improved business performance or causation. Use the existing [content-work record](templates/content-work.md). Supporting source and limits: buyer-clarity video (source-repository evidence, not bundled or inherited).
 
 ## Presentations and collateral
 

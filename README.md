@@ -4,7 +4,7 @@
 
 **Make Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.6.2).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.7.1).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
 Version-Timestamp: 2026-10-20 17:00:00 UTC
 
@@ -125,7 +125,7 @@ Lessons from projects come back through the [feedback contract](plugins/visual-d
 
 ## Develop and contribute
 
-Maintainers: start with [CLAUDE.md](CLAUDE.md) and the [authoring skill](.claude/skills/design-kit-authoring/SKILL.md) (writing rules, skill format, atlas schema, token contract). Run the checks:
+Maintainers (Claude Code or Codex): start with [AGENTS.md](AGENTS.md) and the [authoring skill](.agents/skills/design-kit-authoring/SKILL.md) (writing rules, skill format, atlas schema, token contract). Run the checks:
 
 ```sh
 python3 tools/validate_plugin.py
@@ -146,10 +146,12 @@ Original code, skills and documentation are [MIT](LICENSE). Bundled fonts are OF
 visual-design-kit/
   .claude-plugin/marketplace.json      Claude marketplace (Claude Code, claude.ai, Desktop)
   .agents/plugins/marketplace.json     Codex marketplace
-  .claude/skills/design-kit-authoring/ Maintainer authoring rules
-  .claude/skills/design-kit-eval-loop/ Maintainer eval-driven improvement loop
+  .agents/skills/design-kit-authoring/ Maintainer authoring rules (canonical; Codex)
+  .agents/skills/design-kit-eval-loop/ Maintainer eval-driven improvement loop
+  .claude/skills/                      Generated mirror of .agents/skills for Claude Code
+  AGENTS.md                            Maintainer instructions for Claude Code and Codex
   .github/workflows/ci.yml             Tests, validators and builds on every push
-  CLAUDE.md                            Maintainer instructions
+  CLAUDE.md                            Imports AGENTS.md for Claude Code
   INSTALLATION.md                      Install, pin and verify
   plugins/visual-design-studio/
     .claude-plugin/ .codex-plugin/     Plugin manifests (versions kept in sync)
@@ -164,6 +166,12 @@ visual-design-kit/
   extras/astro-website-studio/         Standalone Astro skill plugin
   tools/  tests/  docs/                Build, validation, spec radar, tests and edition records
 ```
+
+## Persona workbench
+
+Version-Timestamp: 2026-10-22 08:47:00 AST
+
+The [persona workbench](docs/PERSONA-WORKBENCH.md) extends the `design-persona-build` library skill with a complete reusable persona presentation (HTML, CSS and JS assets plus `scripts/persona_workbench.py`). Contributed from Codex local work; review status is recorded in that document.
 
 ## History
 

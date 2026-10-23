@@ -82,7 +82,7 @@ Total spend for these runs: about $0.30. One run per arm is a smoke test; use `-
 Total eval spend for 0.6.0: about $5.70, under the $15 cap.
 
 
-## 0.6.2 hardening (2026-10-23, Claude Code 2.1.309, judge haiku)
+## 0.7.1 hardening (2026-10-23, Claude Code 2.1.309, judge haiku)
 
 **Grader changes.** The single all-of `llm` rubric in eight cases is now 3-4 weighted `llm` graders, one clause or a closely related pair each, so partial credit is visible. The clauses still require kit-specific content (computed ratios, named standards, atlas typefaces and hex values); regex and `tool_used` graders are unchanged. Wording changes beyond the split, with reasons:
 

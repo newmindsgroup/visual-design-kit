@@ -1,5 +1,5 @@
 # Visual Design Kit continuous integration
-# Version-Timestamp: 2026-10-20 03:55:00 UTC
+# Version-Timestamp: 2026-10-23 13:05:00 AST
 # Third-party actions are pinned to major versions from GitHub's official `actions/` org.
 # For stricter supply-chain control, pin them to full commit SHAs.
 name: ci
@@ -36,6 +36,8 @@ jobs:
         run: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
       - name: Packaging rules
         run: python tools/validate_plugin.py
+      - name: Claude skill mirror matches .agents/skills
+        run: python tools/sync_agent_skills.py
       - name: Atlas complete and index current
         run: |
           python plugins/visual-design-studio/library/scripts/atlas.py validate --complete
