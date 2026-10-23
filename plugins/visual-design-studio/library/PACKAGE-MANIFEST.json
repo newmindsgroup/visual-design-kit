@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-23 16:11:23 UTC",
-  "candidate": "0.6.2",
+  "Version-Timestamp": "2026-10-23 16:19:27 UTC",
+  "candidate": "0.7.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.6.2"
+    "version": "0.7.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -34,7 +34,7 @@
     },
     {
       "destination": "CONTENT-WORKFLOW.md",
-      "sha256": "5a79eaa4c44b44dccedc0f07a97f1bb5c4b618590eadc76123c67ccaa7df061a",
+      "sha256": "3d83cf12bbbf2b100857602e8d9ba4953ac476644b465332ea7998d02d3a5c30",
       "source": "curated-plugin-source/CONTENT-WORKFLOW.md",
       "status": "versioned-evaluation-input"
     },
@@ -118,7 +118,7 @@
     },
     {
       "destination": "IDENTITY-WORKFLOW.md",
-      "sha256": "5efb2a24bbcdfdbd6b07529c9bdf0ec23fb26927cd22f706c2be5cef74231063",
+      "sha256": "29ec39b5409b1bb515669a30ba4692766e6c2814a5cf243597ff956555b83e8a",
       "source": "curated-plugin-source/IDENTITY-WORKFLOW.md",
       "status": "versioned-evaluation-input"
     },
@@ -136,7 +136,7 @@
     },
     {
       "destination": "MEDIA-QUALITY-WORKFLOW.md",
-      "sha256": "59bfe2e76387a4d5d7f5225e4196d77ecdc9823e94b20390ac4595f35b5ea753",
+      "sha256": "e1b568f4e5327de8788c9193c178e68bb2aa9818a8ecf9e40b0cb404875b57c4",
       "source": "curated-plugin-source/MEDIA-QUALITY-WORKFLOW.md",
       "status": "versioned-evaluation-input"
     },
@@ -166,7 +166,7 @@
     },
     {
       "destination": "PROJECT-STARTER-PACKS.md",
-      "sha256": "fd8faae0efec396de85e35a2828a20e398595eb1b39d18bea4e95c7b799449de",
+      "sha256": "0d3d2fe6a135596e6a30233a9b82b8ebead4815fa7d32fe2a6a4f7006bb78ec9",
       "source": "curated-plugin-source/PROJECT-STARTER-PACKS.md",
       "status": "versioned-evaluation-input"
     },
@@ -183,6 +183,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "REALISM-REASSESSMENT.md",
+      "sha256": "4bcf02c4ac4e6040e98fb7a01eadbc4a6b056980b4bd3086d39efe681f9a1d0e",
+      "source": "curated-plugin-source/REALISM-REASSESSMENT.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "REFERENCE-CONTRACT.md",
       "sha256": "3697790b6c753c8491c61722b5e9acec1f1c634b5584421ca25becb036cefd7d",
       "source": "curated-plugin-source/REFERENCE-CONTRACT.md",
@@ -196,7 +202,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "654e6f3121a6c6274d0ae0da286df8bb069fdc355b2f4b91cd009fca97a0696d",
+      "sha256": "b617639aacf0dbd800ac21b756bdca4aaf4d4acd10b02a688cc75f0632ce1187",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -250,7 +256,7 @@
     },
     {
       "destination": "SOFTWARE-PRODUCTION.md",
-      "sha256": "98d92ededa2216114c2d0903f717f9d428654ca929ac7ff342e3a7ce284a2e47",
+      "sha256": "a92466f6a56a011429ab247c8fedcf78657ee7283733b7c23fca384c669a5d7e",
       "source": "curated-plugin-source/SOFTWARE-PRODUCTION.md",
       "status": "versioned-evaluation-input"
     },
@@ -292,7 +298,7 @@
     },
     {
       "destination": "USAGE.md",
-      "sha256": "fd9dae765e96b6548a44d8d40501cd08de4ffddcf2826863074dcd7b9adbad10",
+      "sha256": "e0b31b6c5b7b732ecf09437dedfc737c4334c06d7900747d5f8e1380c39991a8",
       "source": "curated-plugin-source/USAGE.md",
       "status": "versioned-evaluation-input"
     },
@@ -1108,7 +1114,7 @@
     },
     {
       "destination": "capabilities.json",
-      "sha256": "97f05cf624feb21b936335b580373fe59b8fdbe4d46ff7c89714d24ec21ed525",
+      "sha256": "999ae1b6992f190181eda98afc4867d17a010bdb7e572777fdc9bc9fc43ba509",
       "source": "curated-plugin-source/capabilities.json",
       "status": "versioned-evaluation-input"
     },
@@ -1317,6 +1323,18 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "draft-skills/design-google-docs/SKILL.md",
+      "sha256": "b785155c20d5f29dee017a06a30d0a79ee9bc7f20cd7a6e27b853c9b6a5caf32",
+      "source": "curated-plugin-source/draft-skills/design-google-docs/SKILL.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "draft-skills/design-google-docs/references/tokens.md",
+      "sha256": "cdb4c4c7ae8b8cbe8f14db8513fd2cac558b220982e468ff8052f9007750f895",
+      "source": "curated-plugin-source/draft-skills/design-google-docs/references/tokens.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "draft-skills/design-google-vids/SKILL.md",
       "sha256": "a71cdfbe0fcfeec2274c524c91a5d752fd0b2ab1213ef65470c0051b801fa2d7",
       "source": "curated-plugin-source/draft-skills/design-google-vids/SKILL.md",
@@ -1360,7 +1378,7 @@
     },
     {
       "destination": "draft-skills/design-infographics/SKILL.md",
-      "sha256": "d9c0f98dded2e0460e74996a3ed1c657d1c7d78edc229fe31ad3979f0a088607",
+      "sha256": "435cd939927a0f7243bf1a4aa01d1b8e89fd1f191fb1e274b0e74857608c6fd3",
       "source": "curated-plugin-source/draft-skills/design-infographics/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1378,13 +1396,19 @@
     },
     {
       "destination": "draft-skills/design-logo-concepts/SKILL.md",
-      "sha256": "bb2edb544cb0ef0e69689a70a3aaa3fe486078d2221a54e649e54baf7775e631",
+      "sha256": "8bad877256a3d7962331ca36b81b756322b7f2cb81eefabc6f315d7f9c2170cc",
       "source": "curated-plugin-source/draft-skills/design-logo-concepts/SKILL.md",
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "draft-skills/design-logo-concepts/references/evidence-concept-critique.md",
+      "sha256": "7eab8899d5932b5530c108bb36e05e2b3f8f3cf5a863cbfb2d1920fd0e1c74a0",
+      "source": "curated-plugin-source/draft-skills/design-logo-concepts/references/evidence-concept-critique.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "draft-skills/design-logo-evaluation/SKILL.md",
-      "sha256": "79efc386e8b09c0bff85a5f3767fefc69d17638d1207f992e589242948c408bd",
+      "sha256": "c35345bb2e7fc5c9024eeabbe82521ccd99c7d4460f4e60bd0591092b3bdff61",
       "source": "curated-plugin-source/draft-skills/design-logo-evaluation/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1402,7 +1426,7 @@
     },
     {
       "destination": "draft-skills/design-logo-refinement/SKILL.md",
-      "sha256": "08637f910573896dac19c1fa3917363068dd5c23a5e6457ba659aebd7387c129",
+      "sha256": "9deb608fe98e0eed6ef411a4fc08d718c84c5402b6cf372f8a62eb4fae6f49f0",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1414,7 +1438,7 @@
     },
     {
       "destination": "draft-skills/design-logo-refinement/references/reference-and-proportion.md",
-      "sha256": "b5129447db31762257504d1d5053107dd4e952a74423c9c95195c400801b18eb",
+      "sha256": "b2e6fbbe32749b849a27ce9b0500ea2accb40886f21fa889a7186767104b4532",
       "source": "curated-plugin-source/draft-skills/design-logo-refinement/references/reference-and-proportion.md",
       "status": "versioned-evaluation-input"
     },
@@ -1474,7 +1498,7 @@
     },
     {
       "destination": "draft-skills/design-openart-cli/SKILL.md",
-      "sha256": "670b51ad095487288a77ee16cc00a3c16e511cf354e35a0e0eb4da3b62372049",
+      "sha256": "0329eb1dcbdfa529419bff9b858f8de14f0789b5fb9c27ec47a08e949a10151a",
       "source": "curated-plugin-source/draft-skills/design-openart-cli/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -1528,7 +1552,7 @@
     },
     {
       "destination": "draft-skills/design-production-interface/references/figma.md",
-      "sha256": "447dd0f9baef3823d4bfd44bd3490d649b9e68af3ed7f91d03c42106119851ee",
+      "sha256": "77d9169649c0ac55278e060be380e49d8301197d257cd991f3efc5586a959e6a",
       "source": "curated-plugin-source/draft-skills/design-production-interface/references/figma.md",
       "status": "versioned-evaluation-input"
     },
@@ -1558,7 +1582,7 @@
     },
     {
       "destination": "draft-skills/design-quality-delivery/SKILL.md",
-      "sha256": "164a6a6804bd81edee70a7f82c753a28ed79f11afe1358ff7b476ca0f18b0a3e",
+      "sha256": "3b597a9758284c7e552e69e884be7d11b76848448d64e26f916cb4f39f4b9a30",
       "source": "curated-plugin-source/draft-skills/design-quality-delivery/SKILL.md",
       "status": "versioned-evaluation-input"
     },
@@ -2661,6 +2685,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/logo-brainstorm-pilot.md",
+      "sha256": "38bd5ded1500e70cfb333ae6f4d5fd978b627b55f5fdc42be522f632e801f519",
+      "source": "curated-plugin-source/examples/logo-brainstorm-pilot.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/media-quality-recipes/README.md",
       "sha256": "84c1d1a4559a0f1a187fa98eda6d545ee1b098d8bc5b31b007269bfc2abd01fd",
       "source": "curated-plugin-source/examples/media-quality-recipes/README.md",
@@ -3375,6 +3405,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/screen-production/render-v1/campaign.json",
+      "sha256": "24a0fa1ae2416fb9a4b86edb8565218c435636359c0c380d55b30de4c87e9e29",
+      "source": "curated-plugin-source/examples/screen-production/render-v1/campaign.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/screen-production/render-v1/manifest.json",
       "sha256": "c83b8cb46a3e6e443559c18eb264c82284f0cd414d9ff620893e8e7fad2829be",
       "source": "curated-plugin-source/examples/screen-production/render-v1/manifest.json",
@@ -3879,6 +3915,48 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/website-practice/README.md",
+      "sha256": "54284abd4a0bac7c7ce49d558c102e55116a1cb4b9f9c733ef198c9637a16146",
+      "source": "curated-plugin-source/examples/website-practice/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/browser-checks.mjs",
+      "sha256": "2b2f13b07a60b4f1e23a357ef8596a1e3782eb3d3b0fdec557a36671804309fa",
+      "source": "curated-plugin-source/examples/website-practice/browser-checks.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/form-model.mjs",
+      "sha256": "6cdaaeb68a92281ae0359fc0740af856ef5e068970d8be3b1796d56a2dbb2285",
+      "source": "curated-plugin-source/examples/website-practice/form-model.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/form-model.test.mjs",
+      "sha256": "cea8ae313d3c8bc30c0857b5702d584b8059be93b48e25cebd117019cd4790b6",
+      "source": "curated-plugin-source/examples/website-practice/form-model.test.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/form.mjs",
+      "sha256": "4685746efc91c46dbc6d4271b301e7eef00e18ecefe726dc0e410383edfbdc08",
+      "source": "curated-plugin-source/examples/website-practice/form.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/style.css",
+      "sha256": "f4efb9c5c1e458c023f33b0cc6acc7004051b4f1a9564d56023467bea28b9065",
+      "source": "curated-plugin-source/examples/website-practice/style.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/website-practice/template.html",
+      "sha256": "1dbada731bfa4f9fc9b0de7afafc518ac5721a04807885ee53c9fdb8f9f10f05",
+      "source": "curated-plugin-source/examples/website-practice/template.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/website-workflow/README.md",
       "sha256": "f40a19fb6c51d85caa0037d71492181662ded2b3413e4eee2e721c13ad59ac24",
       "source": "curated-plugin-source/examples/website-workflow/README.md",
@@ -4113,6 +4191,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "scripts/website_fixture.py",
+      "sha256": "929c14124b0269f337b81bc6786b7083648a3181bc98e479c53de9569c348dab",
+      "source": "curated-plugin-source/scripts/website_fixture.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "scripts/wrap-diagnostics.js",
       "sha256": "c9b092206628fda07c40f5449d1abf876ed3ec73dee720715ac1705aa03336eb",
       "source": "curated-plugin-source/scripts/wrap-diagnostics.js",
@@ -4192,7 +4276,7 @@
     },
     {
       "destination": "templates/identity-handoff.md",
-      "sha256": "2bd1100ec8839db7a6b01c5077020831494720407e164f1cb2ec5ee620ac9921",
+      "sha256": "5cc80d864e5dabc7c16d5e020a5b1bc0d5b1c6d65e7674e24b8ecb30dc2e349e",
       "source": "curated-plugin-source/templates/identity-handoff.md",
       "status": "versioned-evaluation-input"
     },
@@ -4203,8 +4287,14 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "templates/logo-generation-brief.md",
+      "sha256": "17b93b5ef75e5ec3cbd9103e44263e8d5e1caa7ff3483d809d1e0e1d54e5bd68",
+      "source": "curated-plugin-source/templates/logo-generation-brief.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "templates/logo-study.md",
-      "sha256": "9450672b3df7552a415327f3ea21ad3094ea0d615ae6991deeaf310235c2de39",
+      "sha256": "6ff0e2f0dfdbf04671423cc6f517de0693a2027b90909aef64febde39299da2b",
       "source": "curated-plugin-source/templates/logo-study.md",
       "status": "versioned-evaluation-input"
     },
@@ -4401,6 +4491,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "tests/test_craft_tools.py",
+      "sha256": "524f03d457e429ba1046f568e8d9035c2446289c5e26dec469642030db810684",
+      "source": "curated-plugin-source/tests/test_craft_tools.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "tests/test_general_media_scope.py",
       "sha256": "9152b8d1fde8e6ec809fe2b3ac4feacdd248dfddb3ba7b085020240da99e47a7",
       "source": "curated-plugin-source/tests/test_general_media_scope.py",
@@ -4410,6 +4506,12 @@
       "destination": "tests/test_handoff_current.py",
       "sha256": "7279436c0e1cc7ccbc123fc754c4d2fbbc5784f5970767e5accd85a6b90e4d4c",
       "source": "curated-plugin-source/tests/test_handoff_current.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_media_routing.py",
+      "sha256": "9b5484f09fcbbfe6ff5cfd7cd63730a792ad93b3cac9f559de581ebb92448809",
+      "source": "curated-plugin-source/tests/test_media_routing.py",
       "status": "versioned-evaluation-input"
     },
     {
@@ -4434,6 +4536,12 @@
       "destination": "tests/test_type_scale.py",
       "sha256": "87fb738345eb513332c3b3641aa787677816a2568573158d4fa2b372e19f55ee",
       "source": "curated-plugin-source/tests/test_type_scale.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_website_fixture.py",
+      "sha256": "9d6717750d53a424acd1eda40fc2357bf0067451437c01f35f0f6c9c434e7db5",
+      "source": "curated-plugin-source/tests/test_website_fixture.py",
       "status": "versioned-evaluation-input"
     },
     {
