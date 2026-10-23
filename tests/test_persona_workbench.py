@@ -115,4 +115,12 @@ class WorkbenchTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):module.build(self.collection(),p)
             self.assertEqual(p.read_text(),'existing')
 
+class ReviewRegressionTests(unittest.TestCase):
+    def test_empty_known_values_are_rejected(self):
+        for value in ['',[], '   ']:
+            data=module.demo_collection()
+            key='goals[]' if isinstance(value,list) else 'jtbd'
+            data['records'][0]['fields'][key]['value']=value
+            self.assertTrue(module.validate(data),repr(value))
+
 if __name__=='__main__':unittest.main()
