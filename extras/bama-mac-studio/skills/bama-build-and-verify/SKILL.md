@@ -3,7 +3,7 @@ name: bama-build-and-verify
 description: Build a SwiftUI macOS app from the command line, install it, and check light and dark window snapshots of every page before calling a change done. Use after any UI code change, when a build fails, or when the user asks to run, screenshot, or check the app.
 ---
 
-<!-- Version-Timestamp: 2026-10-27 07:36:32 AST -->
+<!-- Version-Timestamp: 2026-10-27 16:58:23 AST -->
 
 ## Adapted execution contract
 
@@ -119,7 +119,7 @@ the rules, the overlay, and a table of fixes.
 Open every PNG with the Read tool and check, in this order:
 
 - Nothing is blank, clipped, or overlapping. Text fits. Sidebars show their items.
-- Dark mode is readable. No fixed white or black surfaces.
+- Light and dark modes are readable, including native toolbar titles. No fixed white or black surfaces. Switch light to dark and back while changing pages; a readable content area does not prove the toolbar uses the same appearance.
 - The page matches the story or the reference screenshot (layout, labels, order).
 - The `bama-mac-design` rules hold: glass only on controls, one accent,
   SF Symbols, system text styles, empty states that invite the first action.
@@ -136,11 +136,17 @@ menu check from outside, and a debug bridge.
 
 ### Inactive windows
 
-Gray traffic lights mean the window was not key when it was captured:
-sidebar text, selection, and toggles look dimmer than in use. A snapshot of
-an inactive window does not count as reviewed. Run the snapshots again
-while nobody else uses the screen, and do not "fix" dim text you only see
-there.
+Gray traffic lights indicate inactive styling. A key-window flag alone is
+insufficient: also confirm the application is active and the foreground process
+matches the owned app. Record that state with the captured window identity.
+`NSApp.activate()` requests activation but does not guarantee it. A snapshot of
+an inactive application does not count as active-window acceptance.
+
+Use a normal bundled launch when checking foreground behavior. If its own
+capture subprocess lacks permission, an already authorized controller can capture
+only that app's identified window. Preserve the process/window binding and report
+that method separately from the template snapshot manifest. Do not change OS
+privacy settings to turn a failed capture into a pass.
 
 ### Debug output and private screens
 

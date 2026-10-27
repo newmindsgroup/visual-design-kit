@@ -1,6 +1,6 @@
 # BAMA Mac Studio
 
-Version-Timestamp: 2026-10-27 07:55:46 AST
+Version-Timestamp: 2026-10-27 16:58:23 AST
 
 Agent-Attribution: computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:55:46 AST
 
@@ -61,12 +61,13 @@ minimum OS and supported APIs rather than silently raising an existing baseline.
 The selected Apple toolchain must support the full SwiftUI/SwiftData macro build.
 Icon Composer compilation additionally needs actool and its ictool.
 
-On the authoring Mac, scaffold guards, image/layout helpers and isolated Foundation
-preferences checks passed. A full fresh template build failed because selected
-Command Line Tools lacked SwiftUI and SwiftData macro plugins. The helper preserved
-that failure. Full app UI, app CLI, Icon Composer output, signing, install/rollback
-and distribution remain separate acceptance. Installing these skills does not
-install Xcode or grant capture/accessibility permissions.
+The earlier Command Line Tools macro prerequisite is resolved on the authoring
+Mac with full Xcode. A fresh repaired starter passed a code build, core tests,
+nine isolated self-test checks and eight native snapshot contract checks.
+The 1.0.0-adapted.2 template explicitly aligns its native toolbar with the window's
+color scheme. Read the current follow-up in [ADAPTATION.md](ADAPTATION.md) for
+visual evidence and limits. Signing, install/rollback and distribution remain
+project acceptance. Installing skills does not install Xcode or grant OS permissions.
 
 The three standalone Swift image/layout tools compile on the authoring Mac.
 Use explicit capture scale for a region comparison; never assume2x from a filename.

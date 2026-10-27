@@ -1,13 +1,13 @@
 # Current candidate package pins
 
-Version-Timestamp: 2026-10-27 12:29:24 AST
+Version-Timestamp: 2026-10-27 17:02:30 AST
 
-Candidate branch: `feat/native-design-reconstruction`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition.
+Candidate branch: `fix/bama-toolbar-theme`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
 
 | Package | Version | SHA-256 of PAYLOAD.sha256 |
 | --- | --- | --- |
 | Visual Design Studio | 0.9.1 | `656d246ce56337b9e6579fc86698a3a2035f8aecf48950277621409b615cab88` |
-| BAMA Mac Studio | 1.0.0-adapted.1 | `71e5fb16ddf69c4fd7390634eb68547294d8a5a43eba0db419d857bb358d75c9` |
+| BAMA Mac Studio | 1.0.0-adapted.2 | `538a49ffe5c2f3c8be2dcb7cf3c6fa5d86a69ffd8b1087d7942d3f356b272bd5` |
 | REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
 
 Source, helper tests and local host activation have separate evidence. Full native application UI, persistence, capture and distribution acceptance remain project-specific. Read the actual native CI result from the PR before treating its build path as verified.
