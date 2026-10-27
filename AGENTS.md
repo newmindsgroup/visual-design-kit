@@ -1,6 +1,6 @@
 # Visual Design Kit: maintainer instructions
 
-Version-Timestamp: 2026-10-23 13:05:00 AST
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 This repository is a public, MIT-licensed design plugin marketplace for **Claude** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`). The main plugin is `plugins/visual-design-studio/`. These instructions are for working **on** the kit, in either tool. Projects that **use** the kit install the plugin; they never edit this repo.
 
@@ -16,7 +16,7 @@ The kit is brand-agnostic and business-agnostic. It must work for any company, i
 - `plugins/visual-design-studio/library/atlas/`: Design Space Atlas (125 entries, `registry.json`, generated `index.json`).
 - `plugins/visual-design-studio/library/tokens/`: DTCG token source (`src/`) and generated output (`dist/`).
 - `plugins/visual-design-studio/library/draft-skills/`, `templates/`, `knowledge/`: deep process library (unregistered; linked from skills). New capabilities go in `library/capabilities.json`.
-- `plugins/visual-design-studio/library/examples/`: calibration sets (stylescapes, ai-tells, quality-benchmark) and reference code (astro-motion, react-system).
+- `plugins/visual-design-studio/library/examples/`: calibration sets (stylescapes, ai-tells, quality-benchmark), reference code (astro-motion, react-system) and production templates (collateral, deck-pptx, motion-remotion). Remotion is source-available, not MIT: see `library/knowledge/ASSETS-LICENSES.md`.
 - `plugins/visual-design-studio/agents/`: specialist subagents (direction-explorer and the review panel). Claude Code and Cowork load them; every skill keeps a single-context fallback, which is how Codex runs them.
 - `plugins/visual-design-studio/evals/`: `claude plugin eval` cases. Improve skills with `.agents/skills/design-kit-eval-loop/`.
 - `.agents/skills/`: maintainer skills (authoring rules, eval loop). Canonical copy; Codex discovers it here. `.claude/skills/` is a generated mirror for Claude Code.
@@ -43,6 +43,7 @@ python3 plugins/visual-design-studio/library/scripts/atlas.py validate --complet
 python3 plugins/visual-design-studio/library/scripts/atlas.py build      # if any atlas entry changed
 (cd plugins/visual-design-studio/library && python3 scripts/tokens.py build && python3 scripts/tokens.py lint)
 python3 tools/sync_agent_skills.py --apply                                # if .agents/skills changed
+python3 tools/check_codex_parity.py                                       # Codex manifest, versions, skills, agent fallback, mirror
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests
 (cd plugins/visual-design-studio/library && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests)
 claude plugin validate . && claude plugin validate plugins/visual-design-studio   # needs the Claude Code CLI; CI also runs it

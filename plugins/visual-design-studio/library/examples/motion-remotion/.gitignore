@@ -1,0 +1,5 @@
+# Version-Timestamp: 2026-10-23 20:12:12 UTC
+node_modules/
+out/
+.remotion/
+*.log

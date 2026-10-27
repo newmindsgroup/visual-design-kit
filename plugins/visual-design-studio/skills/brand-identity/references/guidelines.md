@@ -1,6 +1,6 @@
 # Brand guidelines and brand portal
 
-Version-Timestamp: 2026-10-20 02:07:10 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 Guidelines exist so that someone who was not in the room can make on-brand work tomorrow. That means files and templates first, rules second, and explanations short. A rule without a downloadable asset or a template is a rule people will break.
 
@@ -22,7 +22,7 @@ Guidelines exist so that someone who was not in the room can make on-brand work 
 | 2. Brand foundation | Purpose, positioning, personality ("X, not Y"), archetype; one or two pages |
 | 3. Verbal identity | Voice principles with do/don't lines, tone by context, vocabulary and banned words, naming conventions, mechanics (capitalization, numbers, dates, punctuation) |
 | 4. Logo | Every version and lockup, clear space with the measuring element shown, minimum sizes in px and mm, color versions, approved backgrounds, placement per format, co-branding rules, 8-12 misuse examples drawn (stretched, recolored, rotated, outlined, effects, rearranged, crowded, low-contrast background, on a busy photo, tagline at illegible size) |
-| 5. Color | HEX, RGB, CMYK coated and uncoated, Pantone C and U, RAL or NCS; proportions; tints; approved text pairs with computed contrast ratios; dark-mode values; colors never to combine |
+| 5. Color | HEX and RGB from the DTCG tokens (the source of truth); CMYK coated and uncoated, Pantone C and U, RAL or NCS labeled as nearest matches until verified against a press proof, the physical guide or the sign maker's swatch; proportions; tints; approved text pairs with computed contrast ratios; dark-mode values; colors never to combine |
 | 6. Typography | Families and weights, where to license and download, web and app embedding rights, fallbacks for Office and email, hierarchy and scale, settings (tracking, line height, case), non-Latin scripts |
 | 7. Graphic elements | Device, patterns and textures with scale, crop and color rules |
 | 8. Imagery | Photography principles with 6-12 do and don't examples, illustration style, iconography grid and stroke, AI imagery policy and labeling |

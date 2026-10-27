@@ -38,6 +38,8 @@ jobs:
         run: python tools/validate_plugin.py
       - name: Claude skill mirror matches .agents/skills
         run: python tools/sync_agent_skills.py
+      - name: Codex parity (manifest, versions, skills, agent fallback, mirror)
+        run: python tools/check_codex_parity.py
       - name: Atlas complete and index current
         run: |
           python plugins/visual-design-studio/library/scripts/atlas.py validate --complete
@@ -92,6 +94,21 @@ jobs:
       - name: Touch session tests
         working-directory: plugins/visual-design-studio/library/examples/media-quality-recipes/touch-session
         run: node --test session.test.mjs
+      # Unit tests and type check only. No video renders in CI: Remotion is source-available
+      # (see the example README and library/knowledge/ASSETS-LICENSES.md).
+      - name: Remotion motion example (tests and type check, no renders)
+        working-directory: plugins/visual-design-studio/library/examples/motion-remotion
+        run: |
+          npm ci
+          npm test
+          npx tsc --noEmit
+      - name: Portable Lottie examples current
+        run: python3 plugins/visual-design-studio/library/scripts/lottie_build.py examples --check
+      - name: PPTX deck example
+        working-directory: plugins/visual-design-studio/library/examples/deck-pptx
+        run: |
+          npm ci
+          npm test
 
   react-system:
     name: React reference system

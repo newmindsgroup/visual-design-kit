@@ -1,6 +1,6 @@
 # Case map
 
-Version-Timestamp: 2026-10-20 10:31:13 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 Which eval cases to re-run after editing a skill, and where the knowledge each case's grader rewards lives in the kit. Paths are under `plugins/visual-design-studio/`. After any change to a skill `description`, also re-run every `no-fire-*` case.
 
@@ -36,5 +36,15 @@ Which eval cases to re-run after editing a skill, and where the knowledge each c
 | `tokens-dark-mode-contrast` | color, design-system | `skills/color/references/dark-mode.md` (canvas L, elevation, accent step) |
 | `tokens-light-dark` | color, design-system | `skills/color/references/dark-mode.md`, `library/tokens/` |
 | `typography-bilingual-annual-report` | typography | `skills/typography/references/multiscript.md` (Arabic size and line-height, numerals, no tracking) |
+| `sell-sheet-print-master-canva-twin` | print-packaging-social, design-director | `skills/print-packaging-social/references/print-production-pipeline.md`, `references/canva-handoff.md` |
+| `business-card-crop-marks-minimums` | print-packaging-social | `skills/print-packaging-social/references/print-production.md`, `references/print-production-pipeline.md` |
+| `brand-book-toc-color-systems` | brand-identity, color, design-system | `skills/brand-identity/references/brand-book-production.md`, `references/guidelines.md` |
+| `logo-small-size-one-color-tests` | brand-identity | `skills/brand-identity/references/logo-design.md` |
+| `social-spot-15s-vertical-spec` | motion, print-packaging-social | `skills/motion/references/production-pipeline.md`, `skills/print-packaging-social/references/social-formats.md` |
+| `logo-animation-portable-lottie` | motion, brand-identity | `skills/motion/references/production-pipeline.md`, `references/lottie-and-rive.md`, `library/scripts/lottie_build.py` |
+| `capabilities-deck-canva-safe-charts` | print-packaging-social, design-director | `skills/print-packaging-social/references/presentations.md` (Canva exception), `library/examples/deck-pptx/README.md` |
+| `canva-handoff-recurring-collateral` | print-packaging-social, brand-identity, design-director | `skills/print-packaging-social/references/canva-handoff.md` |
+| `client-video-asset-licensing` | motion, imagery, print-packaging-social | `library/knowledge/ASSETS-LICENSES.md` |
+| `no-fire-ffmpeg-extract-audio` | every skill's `description` | None: no skill may load |
 
 Atlas entries are shared: after editing one, re-run every case whose row names it.

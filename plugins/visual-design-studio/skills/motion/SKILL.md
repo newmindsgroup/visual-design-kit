@@ -1,11 +1,11 @@
 ---
 name: motion
 description: >-
-  Designs and specifies motion for interfaces, websites, brands, video and displays: purpose, the 12 animation principles, duration and easing tokens, springs, choreography, brand motion language, kinetic type, CSS, View Transitions, GSAP, Motion, Lottie, Rive, After Effects, Remotion, export specs, captions, loudness and UI sound, with reduced-motion and flash safety. Use when animating UI, choosing durations or easing, building a motion system, making an ident, social or explainer video, kinetic type, Lottie or Rive assets, or sound.
+  Designs and specifies motion for interfaces, websites, brands, video and displays: purpose, the 12 animation principles, duration and easing tokens, springs, choreography, brand motion language, kinetic type, CSS, View Transitions, GSAP, Motion, Lottie, Rive, After Effects, Remotion renders, token-built Lottie, export specs, captions, loudness and UI sound, with reduced-motion and flash safety. Use when animating UI, choosing durations or easing, building a motion system, making an ident, social or explainer video, kinetic type, Lottie or Rive assets, or sound.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 01:59:37 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 01:59:37 UTC"
+  version-timestamp: "2026-10-27 12:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:12:12 UTC"
 ---
 
 # Motion
@@ -29,6 +29,8 @@ Excellent motion is felt more than seen: every movement has a job (feedback, ori
 | Loops and flashes | Anything auto-moving for more than 5s gets pause, stop or hide (WCAG 2.2.2); no more than 3 flashes per second (2.3.1) | None |
 | On-screen text | Hold for 1s + words ÷ 3 seconds, at least 1.5-2s, once fully legible | Add 50% for numbers, legal text and second-language audiences |
 | Video delivery | Source frame rate; ProRes 422 HQ master; H.264 1080p at 8-12 Mbps; streaming and social loudness about -14 LUFS, EBU R128 -23 LUFS, ATSC A/85 -24 LKFS | The platform or broadcaster spec sheet |
+| Production engine | CSS or GSAP for UI; portable Lottie for icons, loaders and stings; Remotion for data-driven or many-variant video; After Effects for hand-animated spots | Remotion at 4+ people (contractors count) needs a Company License |
+| Deliverable stills | Every moving file ships a poster frame (the last or most meaningful frame), used as the reduced-motion fallback | None |
 | Sound | Off by default on the web; never the only carrier of information; UI sounds 50-300ms | Games, music products and kiosks with an agreed brief |
 
 ## Workflow
@@ -37,9 +39,9 @@ Excellent motion is felt more than seen: every movement has a job (feedback, ori
 2. **Set the personality:** place the brand on the calm-to-energetic spectrum and fix the token values ([motion system](references/motion-system.md)).
 3. **List the moments:** every state change, transition and brand moment, with its purpose ([principles](references/principles.md)). Cut anything without a purpose, and anything a user sees 100+ times a day that is not 150ms or less.
 4. **Specify each moment:** trigger, properties, duration token, easing token, choreography, interruption behavior and reduced-motion alternative ([timing and easing](references/timing-and-easing.md), [choreography](references/choreography.md)). Use the [motion specification template](../../library/templates/motion-spec.md) for client work.
-5. **Choose the medium and engine:** CSS, WAAPI, View Transitions, GSAP or Motion ([web implementation](references/web-implementation.md)); Lottie or Rive ([Lottie and Rive](references/lottie-and-rive.md)); After Effects or Remotion ([video and motion graphics](references/video-and-motion-graphics.md)).
+5. **Choose the medium and engine:** CSS, WAAPI, View Transitions, GSAP or Motion ([web implementation](references/web-implementation.md)); Lottie or Rive ([Lottie and Rive](references/lottie-and-rive.md)); After Effects or Remotion ([video and motion graphics](references/video-and-motion-graphics.md)). For finished files, follow the [production pipeline](references/production-pipeline.md): map tokens into the engine, build Lottie with `lottie_build.py` and check it with `validate`, start video from the [Remotion example](../../library/examples/motion-remotion/README.md), and check the Remotion license.
 6. **Build the riskiest moment first:** the page transition, the hero ident or the most-used interaction, wired to tokens.
-7. **Render and inspect:** play at 1x and at 0.25x, and screen-record at 60fps to step through frames. Check reduced motion, a phone, keyboard use and interruption (click twice quickly). For video, watch full playback on the target player, check loop seams three times, run a flash check, meter loudness and check caption timing and safe areas.
+7. **Render and inspect:** play at 1x and at 0.25x, and screen-record at 60fps to step through frames. Check reduced motion, a phone, keyboard use and interruption (click twice quickly). For video, watch full playback on the target player, check loop seams three times, run a flash check (3 per second at most), meter loudness, check caption timing and safe areas, and render poster stills. Without subagents or a renderer, do these checks yourself in one pass and list what was not rendered.
 8. **Measure:** frame timing in DevTools at 4x CPU throttle, INP and CLS, transferred bytes for Lottie, Rive and video.
 9. **Document and hand off:** the pattern table and token mapping ([motion system](references/motion-system.md)), the Lottie and Rive handoff checklists, and export specs. Compare against the [motion specimen](references/motion-specimen.html).
 
@@ -85,8 +87,11 @@ python3 ../../library/scripts/atlas.py combine style.playful-bubbly archetype.je
 - [Web implementation](references/web-implementation.md): CSS, WAAPI, View Transitions, scroll-driven animation, GSAP (license verified 2026), Motion, performance, reduced motion.
 - [Lottie and Rive](references/lottie-and-rive.md): export, feature support, dotLottie, players, state machines, data binding, choosing a medium, handoff checklists.
 - [Video and motion graphics](references/video-and-motion-graphics.md): After Effects rigs and expressions, MOGRT, Remotion, export specs, safe areas, loudness.
+- [Production pipeline](references/production-pipeline.md): Remotion vs Lottie vs CSS/GSAP vs After Effects, token mapping, portable Lottie, render and encode presets, accessibility gates, licenses and provenance.
+- [Asset licenses](../../library/knowledge/ASSETS-LICENSES.md): Freesound CC0-only and Pixabay rules, Content ID note, optional c2patool content credentials, provenance record per audio file.
 - [Sound](references/sound.md): UI sound, sonic branding, levels, accessibility.
 - [Motion specimen](references/motion-specimen.html): live comparison of every duration and easing token.
+- Production code: [Remotion and Lottie example](../../library/examples/motion-remotion/README.md) (six token-driven compositions, posters, encoding presets) and the stdlib [Lottie builder](../../library/scripts/lottie_build.py) (`build`, `validate`, `examples`).
 - Working code: [website motion library](../../library/MOTION-LIBRARY.md), [motion and media recipes](../../library/MOTION-RECIPES.md), [Astro motion playground](../../library/examples/astro-motion/README.md), [screen content and motion method card](../../library/knowledge/screen-content-and-motion.md).
 - Deep process for client projects: [motion effects](../../library/draft-skills/design-motion-effects/SKILL.md), [web motion library](../../library/draft-skills/design-web-motion-library/SKILL.md), [screen animation](../../library/draft-skills/design-screen-animation/SKILL.md), [kinetic type](../../library/draft-skills/design-screen-kinetic-type/SKILL.md), [screen video](../../library/draft-skills/design-screen-video/SKILL.md), [loops](../../library/draft-skills/design-screen-loops/SKILL.md), [audio and captions](../../library/draft-skills/design-screen-audio-captions/SKILL.md), [storyboards](../../library/draft-skills/design-screen-storyboard/SKILL.md), [still to motion](../../library/draft-skills/design-screen-still-motion/SKILL.md), [screen effects](../../library/draft-skills/design-screen-effects/SKILL.md).
 

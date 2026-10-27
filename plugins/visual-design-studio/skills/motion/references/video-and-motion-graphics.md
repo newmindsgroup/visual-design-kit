@@ -1,6 +1,6 @@
 # Video and motion graphics
 
-Version-Timestamp: 2026-10-20 01:59:37 UTC
+Version-Timestamp: 2026-10-23 20:12:12 UTC
 
 Rendered motion (ads, social, explainers, idents, display loops) is judged frame by frame and on the target player. Plan it in boards, build it in an editable timeline (After Effects or code with Remotion), deliver it to spec and check loudness, captions, safe areas and flashing before anyone calls it done. Platform specs change; confirm them against the platform's current help pages (as of 2026).
 
@@ -78,7 +78,7 @@ Translate easing tokens into the graph editor through keyframe influence: `--eas
 
 ## Remotion (programmatic video in React)
 
-Remotion renders each frame as a React component, so templates take props, data and code review like any other code. It suits data-driven and batch video (personalized clips, charts, changelog videos, localized variants). License: free for individuals, non-profits and companies with up to 3 employees; larger companies need a company license ([remotion.dev/license](https://www.remotion.dev/license)); the license is due to change with Remotion 5.0, so verify.
+Remotion renders each frame as a React component, so templates take props, data and code review like any other code. It suits data-driven and batch video (personalized clips, charts, changelog videos, localized variants). License: Remotion is source-available, not MIT. The Free License covers individuals, non-profits, evaluation and companies of up to 3 people, counting contractors on the project; 4 or more need a Company License, and the v5 terms meter CLI renders as Automators use. Details, sources and the token-driven example are in the [production pipeline](production-pipeline.md); verify the terms before client work.
 
 ```ts
 // src/index.ts

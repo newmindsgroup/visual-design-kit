@@ -1,6 +1,6 @@
 # From chosen direction to production
 
-Version-Timestamp: 2026-10-20 13:20:00 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 Once a direction is chosen, lock it into tokens and route each deliverable to the skill that owns it. Keep the decision traceable.
 
@@ -21,19 +21,20 @@ See the `design-system` skill for token architecture, theming and Figma.
 
 | Deliverable | Skill | First output |
 | --- | --- | --- |
-| Logo, identity, guidelines | `brand-identity` | Logo territories refined into a mark with construction and variants |
+| Logo, identity, guidelines | `brand-identity` | Logo territories refined into a mark with construction and variants; brand book per [brand book production](../../brand-identity/references/brand-book-production.md); file set per [identity deliverables](../../brand-identity/references/identity-deliverables.md) |
 | Type system | `typography` | Scale, pairings, specimens in the target media |
 | Color system | `color` | Ramps, semantic roles, dark mode, contrast table |
 | Grids and composition | `layout` | Grid specs per breakpoint or format |
 | Icons, illustration, photo, AI imagery | `imagery` | Icon grid and style sheet, shot list or illustration rules |
-| Motion language | `motion` | Motion tokens and 3-5 signature moments |
+| Motion language and video | `motion` | Motion tokens and 3-5 signature moments; finished video and Lottie per the [production pipeline](../../motion/references/production-pipeline.md) |
 | Research, IA, flows | `ux-design` | Flows and IA validated with users when possible |
 | Screens and components | `ui-design` | State-complete components and key screens |
 | Website | `web-design` | Page architecture, responsive layouts, performance budget |
 | iOS/Android app | `native-app-design` | Platform-correct screens and handoff |
 | Design system | `design-system` | Token build, component API, documentation |
 | Charts and infographics | `data-visualization` | Chart choices and data palette |
-| Print, packaging, social, decks, email | `print-packaging-social` | Production-ready files to spec |
+| Print, packaging, social, decks, email, sales and marketing collateral | `print-packaging-social` | Finished files: print master PDF plus a Canva editable twin ([pipeline](../../print-packaging-social/references/print-production-pipeline.md), [Canva handoff](../../print-packaging-social/references/canva-handoff.md)); decks from the [PPTX example](../../../library/examples/deck-pptx/README.md) |
+| Any third-party icon, font, music or sound | (all) | A provenance record per [asset licenses](../../../library/knowledge/ASSETS-LICENSES.md) |
 | Review | `design-critique` | Rubric scores and prioritized fixes |
 
 ## 4. Prompts for generators and build tools

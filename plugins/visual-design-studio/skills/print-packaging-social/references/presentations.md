@@ -1,6 +1,6 @@
 # Presentations and decks
 
-Version-Timestamp: 2026-10-20 02:07:10 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 A presented deck is a backdrop for a speaker: one idea per slide, a headline that states the point, evidence big enough to read from the back row, and the detail in the speaker notes. A reading deck, sent as a PDF, is a document in landscape and follows different rules. Decide which one you are making first. For the channel overview see the atlas entry [presentation](../../../library/atlas/channels/presentation.md).
 
@@ -78,6 +78,7 @@ Build them as real slide-master layouts with placeholders, theme colors and them
 - Source line on the slide (14-16pt), full methodology in the notes.
 - Build sequentially (one series, then the next) only when the narrative needs it.
 - See the data-visualization skill for chart choice and palettes.
+- **Canva exception:** native charts and SmartArt do not survive a PPTX import into Canva. When the deck's editable home is Canva, build a Canva-safe version with charts as images plus editable text labels (`library/examples/deck-pptx`, `--canva-safe`), and keep native charts for the PowerPoint version. Test both before promising fidelity.
 
 ## Images
 

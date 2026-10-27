@@ -25,7 +25,7 @@ DESCRIPTION_LIMIT = 1024
 DESCRIPTION_TARGET = 600
 LISTING_WARN = 9000
 BODY_LIMIT = 500
-SKIP_DIRS = {"node_modules", "dist", ".astro", "qa-output", "results", "test-results", "playwright-report"}
+SKIP_DIRS = {"node_modules", "dist", "out", ".astro", "qa-output", "results", "test-results", "playwright-report"}
 CONTINUITY_SKILL = "design-project-start"
 
 

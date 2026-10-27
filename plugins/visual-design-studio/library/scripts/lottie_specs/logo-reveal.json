@@ -1,0 +1,12 @@
+{
+  "preset": "logo-reveal",
+  "name": "logo-reveal",
+  "width": 512,
+  "height": 512,
+  "fps": 30,
+  "duration": "1600ms",
+  "tokens": {"brand": "meridian", "mode": "light"},
+  "colors": {"primary": "color.accent.default", "secondary": "color.fg.default"},
+  "easing": "ease.emphasized-decelerate",
+  "timing": {"ring": "duration.slower", "diamond": "duration.slow", "dot": "duration.moderate", "stagger": "160ms"}
+}

@@ -1,0 +1,12 @@
+{
+  "preset": "underline-sweep",
+  "name": "underline-sweep",
+  "width": 960,
+  "height": 120,
+  "fps": 30,
+  "tokens": {"brand": "meridian", "mode": "light"},
+  "colors": {"primary": "color.accent.default"},
+  "easing": "ease.emphasized-decelerate",
+  "exit_easing": "ease.accelerate",
+  "timing": {"enter": "duration.slower", "hold": "1000ms", "exit": "duration.slow"}
+}

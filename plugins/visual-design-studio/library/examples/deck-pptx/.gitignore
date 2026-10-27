@@ -1,0 +1,4 @@
+# Version-Timestamp: 2026-10-23 20:10:44 UTC
+# Generated decks and charts; rebuild with npm run build.
+out/
+node_modules/

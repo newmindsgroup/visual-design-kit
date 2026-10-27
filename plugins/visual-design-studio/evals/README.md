@@ -124,3 +124,42 @@ The `web-design` description changed, so the controls were re-run once: `no-fire
 **Still failing.** `low-literacy-benefits-form`: the answer cites the guidance but drops its numbers. Next step: make the grade 5-6 target and the step-count rule a ux-design non-negotiable. `quebec-french-launch`: French typography and fr-CA vocabulary are missing. `tokens-dark-mode-contrast`: decide whether light values belong in the prompt or in the color skill. The fix re-runs are one run each; confirm them with `--runs 3 --ablation with-without` before the next release.
 
 Spend: $4.05 for the measurement and $0.67 for the re-runs and controls, $4.72 in total (agent plus judge cost) against an $8.00 cap.
+
+## 0.8.0 production-layer cases (added 2026-10-23, not yet measured)
+
+Ten cases for the finished-file outputs added in 0.8.0: print masters, brand books, logo tests, motion deliverables, decks, the Canva handoff and asset licensing, plus one control. Each design case has 3-4 weighted `llm` graders (one clause each, with a fail condition), at most one `regex` check and a `tool_used: Skill` indicator with `arm: with-only`. All use `[Read, Glob, Grep, Skill]`, `timeout_seconds: 420` (controls 180). The suite is now 42 cases. Smoke-test each with `--runs 1 --ablation none` before the first `--runs 3 --ablation with-without` measurement.
+
+| Case | What it tests |
+| --- | --- |
+| `sell-sheet-print-master-canva-twin` | US Letter, 0.125in bleed, CMYK with the printer's ICC, 300ppi, PDF/X with output intent and preflight; print master outside Canva vs Canva editable twin (Canva API PDF has no CMYK, bleed or crop marks) |
+| `business-card-crop-marks-minimums` | Crop marks outside the bleed, trim and bleed boxes; fixes 5pt reversed type (8pt+), 0.1pt hairline (0.25pt), frame in the trim zone, 12mm QR (20mm), 400% black |
+| `brand-book-toc-color-systems` | Book contents with at least 10 of the 14 kit sections; each color in HEX, RGB, CMYK coated and uncoated, Pantone C/U and RAL/NCS as verified matches; computed pairs (white on #F97361 2.7:1 fails) |
+| `logo-small-size-one-color-tests` | 16/32px favicon and small-size master, minimums in px and mm, 1-color and reversed versions without the gradient, embroidery limits (1mm lines, 5mm caps) |
+| `social-spot-15s-vertical-spec` | 1080x1920 safe areas, burned-in plus sidecar captions, H.264 10-20 Mbps, -14 LUFS / -1 dBTP; web hero loop with pause control and reduced motion; Remotion license notice if proposed |
+| `logo-animation-portable-lottie` | Portable Lottie profile (no expressions, text to outlines, no blur, no 3D camera); `.json` plus `.lottie`; per-target players including `@remotion/lottie`; size budget |
+| `capabilities-deck-canva-safe-charts` | Assertion-headline story arc over 12 slides; Canva-safe build (charts as SVG/PNG, Canva PPTX import drops charts) vs PowerPoint-native build |
+| `canva-handoff-recurring-collateral` | Brand Templates with named autofill fields on Pro/Teams per the current Canva API spec (verify), usage-limit caveat and fallback, Canva as editable twin vs PDF/X print master |
+| `client-video-asset-licensing` | Rejects CC BY-NC for a client ad; CC0 limits (trademark, publicity); Pixabay license terms and Content ID records; per-asset license record; Lucide ISC/MIT and per-family font licenses |
+| `no-fire-ffmpeg-extract-audio` | Control: no skill loads for an ffmpeg audio-extraction command |
+
+Graders reward content the 0.8.0 skills must contain (print-packaging-social, motion, brand-identity and the Canva and asset references). Where a clause depends on a reference that is not yet merged, a low with-plugin score means the content is missing, not that the grader is wrong; check the owning reference before editing a grader.
+
+### 0.8.0 smoke run (2026-10-27, `--runs 1 --ablation none`, judge haiku, $1.12)
+
+Every case parses and runs. A skill loaded in 9 of 9 design cases, and the no-fire control loaded none. These are single runs with the plugin only, so they are a baseline for the eval loop, not a lift measurement.
+
+| Case | Score | Failing graders |
+| --- | --- | --- |
+| `logo-animation-portable-lottie` | 1.00 | none |
+| `social-spot-15s-vertical-spec` | 1.00 | none |
+| `no-fire-ffmpeg-extract-audio` | 1.00 | none |
+| `sell-sheet-print-master-canva-twin` | 0.55 | `pdfx`, `two-artifacts` |
+| `client-video-asset-licensing` | 0.50 | `fonts-icons`, `nc-rejected`; skill did not load |
+| `business-card-crop-marks-minimums` | 0.44 | `black`, `placement-qr`, `type-lines` |
+| `brand-book-toc-color-systems` | 0.40 | `four-systems`, `source-of-truth`, `toc` |
+| `canva-handoff-recurring-collateral` | 0.40 | `brand-template`, `guardrails`, `limits` |
+| `capabilities-deck-canva-safe-charts` | 0.38 | `build`, `canva-safe`, `evidence` |
+| `logo-small-size-one-color-tests` | 0.30 | `one-color`, `reproduction`, `small-size` |
+
+Next: triage each failing grader with the eval loop (kit gap or grader too strict), then `--runs 3 --ablation with-without`.
+

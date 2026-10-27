@@ -25,11 +25,13 @@ Observed on 2026-10-20 with Claude Code 2.1.304 in an isolated configuration: th
 
 ## claude.ai and Claude Desktop
 
-Open **Customize > Plugins > Add > Add marketplace** and enter `newmindsgroup/visual-design-kit`, then install **Visual Design Studio**. Chat surfaces load the plugin's skills; this plugin ships no agents, hooks or MCP servers, so nothing is lost there. Organization admins may need to allow the marketplace first. These steps follow Anthropic's plugin documentation as of October 2026; confirm the menu names in your workspace.
+Open **Customize > Plugins > Add > Add marketplace** and enter `newmindsgroup/visual-design-kit`, then install **Visual Design Studio**. Chat surfaces load the plugin's skills. The plugin's six specialist agents run only in Claude Code and Cowork; every skill has a single-context fallback, so chat loses parallelism, not capability. The plugin ships no hooks or MCP servers. Organization admins may need to allow the marketplace first. These steps follow Anthropic's plugin documentation as of October 2026; confirm the menu names in your workspace.
 
 The plugin needs no API keys, connectors or paid services. Optional tools it can use when you have them: the Figma connector (design-system and handoff work), Playwright and Chromium (rendering and screenshots in `design-critique`), and image or video generation providers you already pay for.
 
 ## Codex
+
+How the kit behaves in Codex (skills load, Claude agents do not, single-context fallback) and a verification checklist: [docs/CODEX.md](docs/CODEX.md).
 
 From a clone of the repository root:
 

@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Proposal cover, US Letter portrait. Sample content: client, people, dates and reference are invented. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1.5">
+  <title>Proposal cover (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 8.5in;
+      --page-h: 11in;
+      --page-margin: 0.75in;
+      --band: 2.1in;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: var(--band) 1fr;
+    }
+
+    .band {
+      background: var(--color-accent-default);
+      color: var(--color-fg-on-accent);
+      padding: var(--page-margin) 0.35in;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .band .ref {
+      align-self: end;
+    }
+
+    .band .mark {
+      justify-self: start;
+      align-self: start;
+      font-size: 64pt;
+      color: inherit;
+    }
+
+    .band .ref {
+      font-family: var(--font-family-mono);
+      font-size: var(--print-small);
+      line-height: 1.6;
+    }
+
+    /* Grid rows, not auto margins: WeasyPrint 70 ignores auto margins in flex columns. */
+    .main {
+      padding: var(--page-margin) var(--page-margin) var(--page-margin) 0.6in;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+    }
+
+    .main .lockup {
+      font-size: 16pt;
+    }
+
+    .title {
+      margin-top: 2.2in;
+    }
+
+    h1 {
+      font-size: 40pt;
+      line-height: var(--line-height-tight);
+      margin-top: 0.15in;
+    }
+
+    .title .lede {
+      margin-top: 0.25in;
+    }
+
+    .parties {
+      align-self: end;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3in;
+      padding-top: 0.2in;
+      border-top: var(--rule-strong);
+    }
+
+    .parties dt {
+      font-size: var(--print-small);
+      color: var(--color-fg-muted);
+    }
+
+    .parties dd {
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .legal .sample-flag {
+      white-space: nowrap;
+    }
+
+    .legal {
+      margin-top: 0.3in;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.3in;
+      font-size: var(--print-caption);
+      color: var(--color-fg-muted);
+    }
+  </style>
+</head>
+<body>
+  <section class="page" aria-label="Proposal cover">
+    <div class="band">
+      <span class="mark" aria-hidden="true"></span>
+      <p class="ref"><span data-field="reference">Ref. PR-2026-014</span><br><span data-field="date">2 November 2026</span><br><span data-field="version">Version 1.0</span></p>
+    </div>
+    <div class="main">
+      <p class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></p>
+      <div class="title">
+        <p class="eyebrow" data-field="eyebrow">Proposal</p>
+        <h1 data-field="title">Network planning program for three regional depots</h1>
+        <p class="lede" data-field="subtitle">Scope, approach, team, timeline and fees for twelve weeks of work.</p>
+      </div>
+      <dl class="parties">
+        <div><dt>Prepared for</dt><dd data-field="client_contact">Dana Okafor, Operations Director</dd><dd data-field="client">Alder &amp; Finch Freight (fictional)</dd></div>
+        <div><dt>Prepared by</dt><dd data-field="author">Rowan Avery, Partner</dd><dd data-field="author_email">rowan@example.com</dd></div>
+      </dl>
+      <div class="legal">
+        <p data-field="confidentiality">Confidential: prepared for the named recipient. Valid for 60 days from the date shown.</p>
+        <p class="sample-flag">SAMPLE: fictional parties</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

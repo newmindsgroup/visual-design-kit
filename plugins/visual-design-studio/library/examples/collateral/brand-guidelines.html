@@ -1,0 +1,723 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Brand guidelines book, 11 x 8.5in landscape, 9 pages. Sample content for a fictional brand: replace every
+     data-field and every slot before use. HEX and RGB values are copied from tokens.resolved.json and checked by
+     library/tests/test_collateral_templates.py; CMYK and Pantone are slots, filled only from a press proof. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1.5">
+  <title>Brand guidelines (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 11in 8.5in;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 11in;
+      --page-h: 8.5in;
+    }
+
+    .page {
+      padding: 0.95in var(--page-margin) 0.75in;
+      display: flex;
+      flex-direction: column;
+      gap: 0.22in;
+    }
+
+    .running {
+      position: absolute;
+      left: var(--page-margin);
+      right: var(--page-margin);
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--print-caption);
+      color: var(--color-fg-muted);
+    }
+
+    .running--head {
+      top: 0.4in;
+      padding-bottom: 0.08in;
+      border-bottom: var(--rule);
+    }
+
+    .running--foot {
+      bottom: 0.35in;
+    }
+
+    .running .lockup {
+      font-size: 9pt;
+      color: var(--color-fg-default);
+    }
+
+    h2 {
+      font-size: var(--print-h1);
+      line-height: var(--line-height-tight);
+    }
+
+    h3 {
+      font-size: var(--print-h3);
+      margin-bottom: 0.04in;
+    }
+
+    .section-no {
+      font-family: var(--font-family-mono);
+      font-size: var(--print-small);
+      color: var(--color-accent-fg);
+    }
+
+    .cols {
+      display: grid;
+      gap: 0.25in;
+    }
+
+    .cols-2 { grid-template-columns: 1fr 1fr; }
+    .cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+    .rules li + li {
+      margin-top: 0.05in;
+    }
+
+    /* Cover */
+    .cover {
+      justify-content: space-between;
+      padding: var(--page-margin);
+    }
+
+    .cover .lockup {
+      font-size: 40pt;
+    }
+
+    .cover h1 {
+      font-size: var(--print-hero);
+      line-height: var(--line-height-tight);
+      max-width: 7in;
+    }
+
+    .cover .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0.4in;
+      font-size: var(--print-small);
+    }
+
+    /* Contents */
+    .toc {
+      list-style: none;
+      padding: 0;
+      border-top: var(--rule-strong);
+      max-width: 6.4in;
+    }
+
+    .toc li {
+      display: grid;
+      grid-template-columns: 0.6in 1fr auto;
+      align-items: baseline;
+      padding: 0.08in 0;
+      border-bottom: var(--rule);
+      font-size: var(--print-lede);
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .toc .mono {
+      color: var(--color-accent-fg);
+    }
+
+    /* Logo tiles */
+    .tile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1in;
+    }
+
+    .tile .stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.1in;
+      border: var(--rule);
+      font-size: 26pt;
+    }
+
+    .stage--ink {
+      background: var(--color-bg-inverse);
+      color: var(--color-fg-inverse);
+      border-color: transparent !important;
+    }
+
+    .stage--ink .mark {
+      color: var(--color-accent-300);
+    }
+
+    .stage--accent {
+      background: var(--color-accent-default);
+      color: var(--color-fg-on-accent);
+      border-color: transparent !important;
+    }
+
+    .stage--accent .mark {
+      color: inherit;
+    }
+
+    .caption {
+      font-size: var(--print-small);
+      color: var(--color-fg-muted);
+    }
+
+    .caption strong {
+      color: var(--color-fg-default);
+    }
+
+    /* Clear space */
+    .clearspace {
+      position: relative;
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 0.55em;
+      font-size: 44pt;
+      outline: 1pt dashed var(--color-accent-default);
+      background: repeating-linear-gradient(135deg, var(--color-accent-subtle) 0 2px, transparent 2px 8px);
+    }
+
+    .clearspace .lockup {
+      background: var(--color-bg-surface);
+    }
+
+    .clearspace .x {
+      position: absolute;
+      font-family: var(--font-family-mono);
+      font-size: var(--print-small);
+      font-weight: var(--font-weight-regular);
+      letter-spacing: 0;
+      color: var(--color-accent-fg);
+    }
+
+    .x--top { top: 0.1em; left: 50%; }
+    .x--left { left: 0.22em; top: 50%; transform: translateY(-50%); }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: var(--print-small);
+    }
+
+    th, td {
+      text-align: start;
+      padding: 0.05in 0.08in 0.05in 0;
+      border-bottom: var(--rule);
+      vertical-align: top;
+    }
+
+    th {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-fg-muted);
+    }
+
+    td.num {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Color */
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      border: var(--rule);
+    }
+
+    .swatch .chip {
+      height: 1.25in;
+    }
+
+    .swatch dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.02in 0.08in;
+      padding: 0.08in;
+      font-size: var(--print-caption);
+    }
+
+    .swatch dt {
+      color: var(--color-fg-muted);
+    }
+
+    .swatch dd {
+      font-family: var(--font-family-mono);
+    }
+
+    .swatch .name {
+      padding: 0.08in 0.08in 0;
+      font-weight: var(--font-weight-semibold);
+      font-size: var(--print-small);
+    }
+
+    .slot {
+      color: var(--color-fg-muted);
+    }
+
+    .chip--primary { background: var(--color-accent-600); }
+    .chip--deep { background: var(--color-accent-800); }
+    .chip--ink { background: var(--color-neutral-900); }
+    .chip--paper { background: var(--color-neutral-50); border-bottom: var(--rule); }
+    .chip--tint { background: var(--color-accent-100); }
+
+    .ratio {
+      display: flex;
+      height: 0.3in;
+      border: var(--rule);
+    }
+
+    .ratio span {
+      display: flex;
+      align-items: center;
+      padding-inline-start: 0.06in;
+      font-size: var(--print-caption);
+    }
+
+    .pair {
+      display: inline-block;
+      padding: 0.02in 0.08in;
+      font-weight: var(--font-weight-semibold);
+    }
+
+    /* Type */
+    .specimen {
+      font-family: var(--font-family-display);
+      font-size: 110pt;
+      line-height: 0.9;
+      font-weight: var(--font-weight-bold);
+      letter-spacing: var(--letter-spacing-tight);
+    }
+
+    .family {
+      font-family: var(--font-family-display);
+      font-size: var(--print-h2);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .scale td:first-child {
+      white-space: nowrap;
+    }
+
+    /* Imagery */
+    .ph-image {
+      height: 2.5in;
+    }
+
+    /* Voice */
+    .say {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.08in;
+      font-size: var(--print-small);
+    }
+
+    .say p {
+      padding: 0.08in;
+      border-inline-start: var(--border-width-thick) solid var(--color-border-strong);
+      background: var(--color-bg-canvas);
+    }
+
+    .say .yes {
+      border-color: var(--color-accent-default);
+    }
+
+    .say b {
+      display: block;
+      font-size: var(--print-caption);
+      letter-spacing: var(--letter-spacing-caps);
+      text-transform: uppercase;
+    }
+
+    /* Do and don't */
+    .dd {
+      display: flex;
+      flex-direction: column;
+      gap: 0.06in;
+    }
+
+    .dd .stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.55in;
+      border: var(--rule);
+      font-size: 20pt;
+      overflow: hidden;
+    }
+
+    .verdict {
+      align-self: flex-start;
+      padding: 0.01in 0.08in;
+      border-radius: var(--radius-full);
+      font-size: var(--print-caption);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: var(--letter-spacing-caps);
+      text-transform: uppercase;
+    }
+
+    .verdict--do {
+      background: var(--color-success-bg);
+      color: var(--color-success-fg);
+    }
+
+    .verdict--dont {
+      border: var(--border-width-thin) solid var(--color-danger-fg);
+      color: var(--color-danger-fg);
+    }
+
+    .stretch { transform: scaleX(1.45); }
+    .recolor { color: var(--color-blue-500); }
+    .recolor .mark { color: var(--color-amber-400); }
+    .effects { text-shadow: 3px 3px 0 var(--color-accent-300); }
+    .rotate { transform: rotate(-12deg); }
+    .busy {
+      background: repeating-linear-gradient(45deg, var(--color-neutral-300) 0 6px, var(--color-neutral-100) 6px 12px, var(--color-accent-200) 12px 18px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Cover -->
+  <section class="page page--inverse cover" aria-label="Cover">
+    <p class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></p>
+    <div>
+      <p class="eyebrow" data-field="edition">Version 0.1, sample edition</p>
+      <h1 data-field="title">Brand guidelines</h1>
+    </div>
+    <div class="meta">
+      <p data-field="owner">Owner: Brand team, brand@example.com</p>
+      <p class="sample-flag">SAMPLE: fictional brand built from the Visual Design Kit tokens. Replace every field.</p>
+    </div>
+  </section>
+
+  <!-- 2. Contents -->
+  <section class="page" aria-label="Contents">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <h2>Contents</h2>
+    <div class="cols cols-2">
+      <ol class="toc">
+        <li><span class="mono">01</span>Logo<span class="mono">3</span></li>
+        <li><span class="mono">02</span>Clear space and size<span class="mono">4</span></li>
+        <li><span class="mono">03</span>Color<span class="mono">5</span></li>
+        <li><span class="mono">04</span>Typography<span class="mono">6</span></li>
+        <li><span class="mono">05</span>Imagery<span class="mono">7</span></li>
+        <li><span class="mono">06</span>Voice<span class="mono">8</span></li>
+        <li><span class="mono">07</span>Do and don't<span class="mono">9</span></li>
+      </ol>
+      <div>
+        <h3>How to use this book</h3>
+        <p class="muted">Start with the logo and color pages; most mistakes happen there. Every value in this book comes from the brand tokens, so the website, the slides and the print files stay the same color and type. When this book and a vendor spec disagree, the vendor spec wins for that job; tell the brand team.</p>
+      </div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>2</span></footer>
+  </section>
+
+  <!-- 3. Logo -->
+  <section class="page" aria-label="Logo">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">01</p>
+    <h2>Logo</h2>
+    <p class="lede">A single-color mark and a wordmark. Use the full lockup; use the mark alone only where the name already appears nearby, such as an app icon or a social avatar.</p>
+    <div class="cols cols-3">
+      <figure class="tile">
+        <div class="stage"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <figcaption class="caption"><strong>Primary.</strong> Mark in the primary color, name in ink. White and light neutral backgrounds.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="stage stage--ink"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <figcaption class="caption"><strong>Reversed.</strong> Name in paper white, mark in the light accent. Ink backgrounds and dark photos.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="stage stage--accent"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <figcaption class="caption"><strong>One color.</strong> All white on the primary color; all ink for one-ink jobs, foil, emboss and engraving.</figcaption>
+      </figure>
+    </div>
+    <p class="caption" data-field="logo_files">Files: logo-primary, logo-reversed and logo-one-color as SVG (screen), PDF (print, outlined) and PNG at 1x and 2x. Slot: supply the outlined artwork; the live-text wordmark in this sample is a stand-in.</p>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>3</span></footer>
+  </section>
+
+  <!-- 4. Clear space and size -->
+  <section class="page" aria-label="Clear space and minimum size">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">02</p>
+    <h2>Clear space and size</h2>
+    <div class="cols cols-2">
+      <div>
+        <p class="lede">Keep clear space of x on every side, where x is half the height of the mark. Nothing else enters that space: no text, no edges, no other logos.</p>
+        <p style="margin-top: 0.3in;" class="clearspace" aria-label="Lockup with clear space of x on every side">
+          <span class="x x--top" aria-hidden="true">x</span><span class="x x--left" aria-hidden="true">x</span>
+          <span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span>
+        </p>
+      </div>
+      <div>
+        <h3>Minimum size</h3>
+        <table>
+          <thead><tr><th scope="col">Use</th><th scope="col">Lockup width</th><th scope="col">Mark alone</th></tr></thead>
+          <tbody>
+            <tr><td>Print, offset or digital</td><td class="num">25mm (1in)</td><td class="num">8mm</td></tr>
+            <tr><td>Embroidery, emboss, foil</td><td class="num">40mm</td><td class="num">12mm</td></tr>
+            <tr><td>Screen</td><td class="num">120px</td><td class="num">24px</td></tr>
+            <tr><td>Favicon and app icon</td><td>Not used</td><td class="num">16px, simplified</td></tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top: 0.25in;">Placement</h3>
+        <ul class="rules caption">
+          <li>Top left or bottom left on most layouts; centered only on covers and signage.</li>
+          <li>Lockup width about one fifth of the page width on letter and A4 covers.</li>
+          <li>Keep it inside the safe zone: at least 5mm from any trimmed edge.</li>
+        </ul>
+      </div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>4</span></footer>
+  </section>
+
+  <!-- 5. Color -->
+  <section class="page" aria-label="Color">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">03</p>
+    <h2>Color</h2>
+    <div class="cols cols-5">
+      <div class="swatch">
+        <div class="chip chip--primary"></div>
+        <p class="name">Primary</p>
+        <dl>
+          <dt>HEX</dt><dd><span class="only-meridian" data-token="color.accent.600" data-format="hex">#006c6c</span><span class="only-ember" data-token="color.accent.600" data-format="hex">#a72800</span></dd>
+          <dt>RGB</dt><dd><span class="only-meridian" data-token="color.accent.600" data-format="rgb">0 108 108</span><span class="only-ember" data-token="color.accent.600" data-format="rgb">167 40 0</span></dd>
+          <dt>CMYK</dt><dd class="slot" data-field="primary_cmyk">from proof</dd>
+          <dt>Pantone</dt><dd class="slot" data-field="primary_pantone">from guide</dd>
+          <dt>Token</dt><dd>accent-600</dd>
+        </dl>
+      </div>
+      <div class="swatch">
+        <div class="chip chip--deep"></div>
+        <p class="name">Deep</p>
+        <dl>
+          <dt>HEX</dt><dd><span class="only-meridian" data-token="color.accent.800" data-format="hex">#003636</span><span class="only-ember" data-token="color.accent.800" data-format="hex">#571000</span></dd>
+          <dt>RGB</dt><dd><span class="only-meridian" data-token="color.accent.800" data-format="rgb">0 54 54</span><span class="only-ember" data-token="color.accent.800" data-format="rgb">87 16 0</span></dd>
+          <dt>CMYK</dt><dd class="slot" data-field="deep_cmyk">from proof</dd>
+          <dt>Pantone</dt><dd class="slot" data-field="deep_pantone">from guide</dd>
+          <dt>Token</dt><dd>accent-800</dd>
+        </dl>
+      </div>
+      <div class="swatch">
+        <div class="chip chip--ink"></div>
+        <p class="name">Ink</p>
+        <dl>
+          <dt>HEX</dt><dd><span class="only-meridian" data-token="color.neutral.900" data-format="hex">#14191d</span><span class="only-ember" data-token="color.neutral.900" data-format="hex">#1b1813</span></dd>
+          <dt>RGB</dt><dd><span class="only-meridian" data-token="color.neutral.900" data-format="rgb">20 25 29</span><span class="only-ember" data-token="color.neutral.900" data-format="rgb">27 24 19</span></dd>
+          <dt>CMYK</dt><dd class="slot" data-field="ink_cmyk">from proof</dd>
+          <dt>Pantone</dt><dd class="slot" data-field="ink_pantone">from guide</dd>
+          <dt>Token</dt><dd>neutral-900</dd>
+        </dl>
+      </div>
+      <div class="swatch">
+        <div class="chip chip--paper"></div>
+        <p class="name">Paper</p>
+        <dl>
+          <dt>HEX</dt><dd><span class="only-meridian" data-token="color.neutral.50" data-format="hex">#f2f7fc</span><span class="only-ember" data-token="color.neutral.50" data-format="hex">#faf6f2</span></dd>
+          <dt>RGB</dt><dd><span class="only-meridian" data-token="color.neutral.50" data-format="rgb">242 247 252</span><span class="only-ember" data-token="color.neutral.50" data-format="rgb">250 246 242</span></dd>
+          <dt>CMYK</dt><dd class="slot" data-field="paper_cmyk">from proof</dd>
+          <dt>Pantone</dt><dd class="slot" data-field="paper_pantone">from guide</dd>
+          <dt>Token</dt><dd>neutral-50</dd>
+        </dl>
+      </div>
+      <div class="swatch">
+        <div class="chip chip--tint"></div>
+        <p class="name">Tint</p>
+        <dl>
+          <dt>HEX</dt><dd><span class="only-meridian" data-token="color.accent.100" data-format="hex">#c3f3f2</span><span class="only-ember" data-token="color.accent.100" data-format="hex">#ffe0d8</span></dd>
+          <dt>RGB</dt><dd><span class="only-meridian" data-token="color.accent.100" data-format="rgb">195 243 242</span><span class="only-ember" data-token="color.accent.100" data-format="rgb">255 224 216</span></dd>
+          <dt>CMYK</dt><dd class="slot" data-field="tint_cmyk">from proof</dd>
+          <dt>Pantone</dt><dd class="slot" data-field="tint_pantone">from guide</dd>
+          <dt>Token</dt><dd>accent-100</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="cols cols-2">
+      <div>
+        <h3>Proportion</h3>
+        <div class="ratio" aria-label="Proportion: paper 60 percent, ink 25 percent, primary 10 percent, tint 5 percent">
+          <span style="flex: 60; background: var(--color-neutral-50); color: var(--color-fg-default);">Paper 60%</span>
+          <span style="flex: 25; background: var(--color-neutral-900); color: var(--color-fg-inverse);">Ink 25%</span>
+          <span style="flex: 10; background: var(--color-accent-600); color: var(--color-fg-on-accent);">10%</span>
+          <span style="flex: 5; background: var(--color-accent-100);"></span>
+        </div>
+        <p class="caption" style="margin-top: 0.08in;">CMYK and Pantone are slots on purpose. Fill them from a press proof or a Pantone bridge guide on the job's paper, never from a HEX conversion. Coated and uncoated builds differ.</p>
+      </div>
+      <div>
+        <h3>Text pairs (WCAG 2.2)</h3>
+        <table>
+          <thead><tr><th scope="col">Text on background</th><th scope="col">Contrast</th><th scope="col">Use</th></tr></thead>
+          <tbody>
+            <tr><td><span class="pair" style="color: var(--color-neutral-900); background: var(--color-neutral-50); outline: var(--rule);">Ink on paper</span></td><td class="num"><span class="only-meridian" data-contrast="color.neutral.900 on color.neutral.50">16.4:1</span><span class="only-ember" data-contrast="color.neutral.900 on color.neutral.50">16.4:1</span></td><td>Body text</td></tr>
+            <tr><td><span class="pair" style="color: var(--color-white); background: var(--color-accent-600); outline: var(--rule);">White on primary</span></td><td class="num"><span class="only-meridian" data-contrast="color.white on color.accent.600">6.2:1</span><span class="only-ember" data-contrast="color.white on color.accent.600">7.1:1</span></td><td>Buttons, bands</td></tr>
+            <tr><td><span class="pair" style="color: var(--color-accent-600); background: var(--color-neutral-50); outline: var(--rule);">Primary on paper</span></td><td class="num"><span class="only-meridian" data-contrast="color.accent.600 on color.neutral.50">5.7:1</span><span class="only-ember" data-contrast="color.accent.600 on color.neutral.50">6.6:1</span></td><td>Links, headings</td></tr>
+            <tr><td><span class="pair" style="color: var(--color-accent-800); background: var(--color-accent-100); outline: var(--rule);">Deep on tint</span></td><td class="num"><span class="only-meridian" data-contrast="color.accent.800 on color.accent.100">11.0:1</span><span class="only-ember" data-contrast="color.accent.800 on color.accent.100">11.4:1</span></td><td>Callouts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand; CMYK and Pantone left empty</span><span>5</span></footer>
+  </section>
+
+  <!-- 6. Typography -->
+  <section class="page" aria-label="Typography">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">04</p>
+    <h2>Typography</h2>
+    <div class="cols cols-2">
+      <div>
+        <p class="specimen" aria-hidden="true">Aa</p>
+        <p class="family"><span class="only-meridian">Schibsted Grotesk</span><span class="only-ember">Fraunces</span> <span class="muted">for display</span></p>
+        <p class="lede" style="font-family: var(--font-family-body); margin-top: 0.08in;"><span class="only-meridian">Source Sans 3</span><span class="only-ember">Figtree</span> for text, <span class="only-meridian">JetBrains Mono</span><span class="only-ember">IBM Plex Mono</span> for figures and codes.</p>
+        <p class="caption" style="margin-top: 0.15in;">All three families are SIL Open Font License 1.1: embed them in PDFs, bundle them in apps and sites, never sell the font files on their own.</p>
+      </div>
+      <div>
+        <table class="scale">
+          <thead><tr><th scope="col">Role</th><th scope="col">Print</th><th scope="col">Screen token</th><th scope="col">Setting</th></tr></thead>
+          <tbody>
+            <tr><td>Hero</td><td class="num">48pt / 1.1</td><td><code class="mono">--font-size-5xl</code></td><td>Display bold, tight tracking</td></tr>
+            <tr><td>Heading 1</td><td class="num">34pt / 1.1</td><td><code class="mono">--font-size-4xl</code></td><td>Display bold</td></tr>
+            <tr><td>Heading 2</td><td class="num">20pt / 1.25</td><td><code class="mono">--font-size-2xl</code></td><td>Display bold</td></tr>
+            <tr><td>Heading 3</td><td class="num">12pt / 1.25</td><td><code class="mono">--font-size-lg</code></td><td>Display bold</td></tr>
+            <tr><td>Lede</td><td class="num">13pt / 1.25</td><td><code class="mono">--font-size-xl</code></td><td>Text regular, muted</td></tr>
+            <tr><td>Body</td><td class="num">10pt / 1.5</td><td><code class="mono">--font-size-md</code></td><td>Text regular, 45-75 characters a line</td></tr>
+            <tr><td>Small</td><td class="num">8.5pt / 1.5</td><td><code class="mono">--font-size-sm</code></td><td>Captions, tables</td></tr>
+            <tr><td>Label</td><td class="num">8.5pt caps</td><td><code class="mono">--font-size-xs</code></td><td>Semibold, 0.06em tracking</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 0.2in;">Set body text ragged right, never justified in narrow columns. Use lining, tabular figures in tables and prices. Keep display type to two weights.</p>
+      </div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>6</span></footer>
+  </section>
+
+  <!-- 7. Imagery -->
+  <section class="page" aria-label="Imagery">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">05</p>
+    <h2>Imagery</h2>
+    <div class="cols cols-3">
+      <figure class="tile">
+        <div class="ph-image"><span>Image slot: people at work</span></div>
+        <figcaption class="caption"><strong>People at work.</strong> Real staff and customers in real places, with signed releases. Side light, eye level, natural color.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="ph-image"><span>Image slot: detail</span></div>
+        <figcaption class="caption"><strong>Detail.</strong> Hands, tools and materials in close crop. One subject, shallow depth of field, neutral background.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="ph-image"><span>Image slot: place</span></div>
+        <figcaption class="caption"><strong>Place.</strong> Wide shots of the environment with one person for scale. Leave calm space for a headline.</figcaption>
+      </figure>
+    </div>
+    <div class="cols cols-2">
+      <ul class="rules">
+        <li>Grade warm and clean: no heavy filters, no crushed blacks. Keep skin tones true.</li>
+        <li>Behind text, use a two-tone version (ink and primary) or a calm area of the photo, then check 4.5:1 for the text.</li>
+        <li>Print needs 300 ppi at the placed size; ask the photographer for CMYK conversions to the printer's profile.</li>
+      </ul>
+      <ul class="rules">
+        <li>Avoid stock handshakes, staged high fives and laptops on beaches.</li>
+        <li>Do not present AI-generated people as customers or staff.</li>
+        <li>Record the source, license and release for every image in the asset register.</li>
+      </ul>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand; image slots are empty on purpose</span><span>7</span></footer>
+  </section>
+
+  <!-- 8. Voice -->
+  <section class="page" aria-label="Voice">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">06</p>
+    <h2>Voice</h2>
+    <p class="lede">We sound like a senior colleague who has done the work before: plain, specific and calm.</p>
+    <div class="cols cols-3">
+      <div>
+        <h3>Plain</h3>
+        <p class="caption">Short sentences, common words, active verbs.</p>
+        <div class="say" style="margin-top: 0.08in;">
+          <p class="yes"><b>We say</b>We cut delivery time by a fifth.</p>
+          <p><b>Not</b>We leverage synergies to optimize delivery outcomes.</p>
+        </div>
+      </div>
+      <div>
+        <h3>Specific</h3>
+        <p class="caption">Numbers, names and dates instead of adjectives.</p>
+        <div class="say" style="margin-top: 0.08in;">
+          <p class="yes"><b>We say</b>Your plan is ready on 14 March.</p>
+          <p><b>Not</b>Your world-class plan is coming soon.</p>
+        </div>
+      </div>
+      <div>
+        <h3>Calm</h3>
+        <p class="caption">Confident without hype; no exclamation marks in headlines.</p>
+        <div class="say" style="margin-top: 0.08in;">
+          <p class="yes"><b>We say</b>Here is what changes, and what does not.</p>
+          <p><b>Not</b>Get ready for a total game-changer!</p>
+        </div>
+      </div>
+    </div>
+    <div class="cols cols-2">
+      <div>
+        <h3>Words we use</h3>
+        <p class="caption">plan, team, deliver, clear, measured, on time, together</p>
+      </div>
+      <div>
+        <h3>Words we avoid</h3>
+        <p class="caption">leverage, synergy, seamless, world-class, unlock, disrupt</p>
+      </div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>8</span></footer>
+  </section>
+
+  <!-- 9. Do and don't -->
+  <section class="page" aria-label="Do and don't">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Brand guidelines</span></header>
+    <p class="section-no">07</p>
+    <h2>Do and don't</h2>
+    <div class="cols cols-3">
+      <figure class="dd">
+        <div class="stage"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--do">Do</span>
+        <figcaption class="caption">Use the supplied lockup on a plain background.</figcaption>
+      </figure>
+      <figure class="dd">
+        <div class="stage stage--accent"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--do">Do</span>
+        <figcaption class="caption">Use the one-color version on the primary color.</figcaption>
+      </figure>
+      <figure class="dd">
+        <div class="stage" aria-hidden="true"><span class="lockup stretch"><span class="mark"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--dont">Don't</span>
+        <figcaption class="caption">Stretch, squash or redraw the logo.</figcaption>
+      </figure>
+      <figure class="dd">
+        <div class="stage" aria-hidden="true"><span class="lockup recolor"><span class="mark"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--dont">Don't</span>
+        <figcaption class="caption">Recolor it outside the palette.</figcaption>
+      </figure>
+      <figure class="dd">
+        <div class="stage" aria-hidden="true"><span class="lockup effects"><span class="mark"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--dont">Don't</span>
+        <figcaption class="caption">Add shadows, outlines, glows or gradients.</figcaption>
+      </figure>
+      <figure class="dd">
+        <div class="stage busy" aria-hidden="true"><span class="lockup rotate"><span class="mark"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span></div>
+        <span class="verdict verdict--dont">Don't</span>
+        <figcaption class="caption">Rotate it or place it on a busy background.</figcaption>
+      </figure>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional brand</span><span>9</span></footer>
+  </section>
+</body>
+</html>
