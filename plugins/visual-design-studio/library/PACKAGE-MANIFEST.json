@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-23 20:00:00 UTC",
-  "candidate": "0.7.1",
+  "Version-Timestamp": "2026-10-27 12:00:00 UTC",
+  "candidate": "0.8.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.7.1"
+    "version": "0.8.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -202,7 +202,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "e51fe956eea913a3c7c5ec09fca39cbd51b789cd8438af36f72f08377f1495ed",
+      "sha256": "311119f93bb4df07be22d09d19ff47df4229b8566fd065f99e27a869901cc1e6",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -2577,6 +2577,156 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/collateral/README.md",
+      "sha256": "0faf18b971c09da02485611c5d8335c4b43ca79de391d9ef0a2b0b597796c020",
+      "source": "curated-plugin-source/examples/collateral/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/assets/brand.js",
+      "sha256": "83540bb52ee25d16d8293dbdeb86846c801e73b911358e72c0e44b17762bbb87",
+      "source": "curated-plugin-source/examples/collateral/assets/brand.js",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/brand-guidelines.html",
+      "sha256": "62cd535577bb5376edf3dddca8d7e9456ade81a82aace5eba19a9adbc2d999a0",
+      "source": "curated-plugin-source/examples/collateral/brand-guidelines.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/business-card.html",
+      "sha256": "e94f0241b59db765b9447c51ab0835746675cfbef800dbf33b38b25ff3ad0e50",
+      "source": "curated-plugin-source/examples/collateral/business-card.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/capabilities-deck.html",
+      "sha256": "8d460d21f21472d0fdf23b1619208b1680b62d18b6b69d31cb1906d365b52bb3",
+      "source": "curated-plugin-source/examples/collateral/capabilities-deck.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/case-study.html",
+      "sha256": "224b4278e0304f9bb1966dfe6a49151bdeb458d1fb7fabbda58d63652fef686d",
+      "source": "curated-plugin-source/examples/collateral/case-study.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/figtree/OFL.txt",
+      "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+      "source": "curated-plugin-source/examples/collateral/fonts/figtree/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "source": "curated-plugin-source/examples/collateral/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/fraunces/OFL.txt",
+      "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e",
+      "source": "curated-plugin-source/examples/collateral/fonts/fraunces/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "source": "curated-plugin-source/examples/collateral/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/ibm-plex-mono/OFL.txt",
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f",
+      "source": "curated-plugin-source/examples/collateral/fonts/ibm-plex-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "source": "curated-plugin-source/examples/collateral/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "source": "curated-plugin-source/examples/collateral/fonts/ibm-plex-mono/ibm-plex-mono-latin-500-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/jetbrains-mono/OFL.txt",
+      "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+      "source": "curated-plugin-source/examples/collateral/fonts/jetbrains-mono/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+      "source": "curated-plugin-source/examples/collateral/fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/schibsted-grotesk/OFL.txt",
+      "sha256": "15222412a95d70042e66e79bfb3b985653e0693e4d41703bc131bee9c5aa1aa7",
+      "source": "curated-plugin-source/examples/collateral/fonts/schibsted-grotesk/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "sha256": "4c8b93f431d462c696e12b9d6a033feb3394d36e66e781357c496b95d8a75e05",
+      "source": "curated-plugin-source/examples/collateral/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/source-sans-3/OFL.txt",
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "source": "curated-plugin-source/examples/collateral/fonts/source-sans-3/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "sha256": "7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda",
+      "source": "curated-plugin-source/examples/collateral/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/one-pager.html",
+      "sha256": "d312d2632aed4cabc6655fe0927c5ecad0a5675abdd5a9a1c8e31ad9fff05dea",
+      "source": "curated-plugin-source/examples/collateral/one-pager.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/proposal-cover.html",
+      "sha256": "cb6ac12dd7c8337763f0964259810dd249c04d3657a6c5871479d368ce1c7ecb",
+      "source": "curated-plugin-source/examples/collateral/proposal-cover.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/social-carousel.html",
+      "sha256": "2bfe071e376faea83728fbaf5b1a4a0af54eeb7ba34fd6e78dc8183948d59050",
+      "source": "curated-plugin-source/examples/collateral/social-carousel.html",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/styles/collateral.css",
+      "sha256": "40f7f6ad2b29547f60143154de41aa6f67b440273725e72baefaa04a36f6e289",
+      "source": "curated-plugin-source/examples/collateral/styles/collateral.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/styles/fonts.css",
+      "sha256": "96d0481256f8f4e45a69ed71e32e01863947eb486a0e70ed532b9d24768a6d20",
+      "source": "curated-plugin-source/examples/collateral/styles/fonts.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/collateral/styles/tokens.css",
+      "sha256": "5378dc6874e73b913db8e4d8d14b05f238a7159e295ee54b97a0e728dcbd170a",
+      "source": "curated-plugin-source/examples/collateral/styles/tokens.css",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/component-specs/README.md",
       "sha256": "6e6e77540e37aaf5e75f7866129adc32534c3cd582a864b9eb8c874f4c5e002d",
       "source": "curated-plugin-source/examples/component-specs/README.md",
@@ -2661,6 +2811,66 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "examples/deck-pptx/.gitignore",
+      "sha256": "27fcdac74a7d9c6b015a5d281df2d7dacfbdb933e92dbeb202281de7cf382d4f",
+      "source": "curated-plugin-source/examples/deck-pptx/.gitignore",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/README.md",
+      "sha256": "0d6693335c4edaa0503816ef52cf1f9c235142a9fcf9599042fd509c6e3dcf25",
+      "source": "curated-plugin-source/examples/deck-pptx/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/package-lock.json",
+      "sha256": "e488b39bbcbb234b3fc6956b9619a79b92f7d16aa19b7703279cb5e4e88d7136",
+      "source": "curated-plugin-source/examples/deck-pptx/package-lock.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/package.json",
+      "sha256": "42aa8f217e49b201c2c32a2411e43228106eeb390af815ffd9be0d7b081e0b7e",
+      "source": "curated-plugin-source/examples/deck-pptx/package.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/src/build-deck.mjs",
+      "sha256": "e260a8d145278988bbcdd203ecbf5f1098a60a4f9d92d9c422d7b2013307c17b",
+      "source": "curated-plugin-source/examples/deck-pptx/src/build-deck.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/src/content.mjs",
+      "sha256": "3873a085e40aff21e866c31ad5242751920debd123084fed449773602a999471",
+      "source": "curated-plugin-source/examples/deck-pptx/src/content.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/src/png.mjs",
+      "sha256": "33ebe8b29baad612ad7442e793f0ec142b7e3bc0ff388c52f73d9c1ec507cb1a",
+      "source": "curated-plugin-source/examples/deck-pptx/src/png.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/src/tokens.mjs",
+      "sha256": "3222757f4456130e586b04ca667210eef8e14b981d40a7e6db7b381eb2386207",
+      "source": "curated-plugin-source/examples/deck-pptx/src/tokens.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/tests/deck.test.mjs",
+      "sha256": "ca039c0e84caf54138e11ba8c2d2287a773bfd6d3ad77e2b8ce6f7fa577fdd61",
+      "source": "curated-plugin-source/examples/deck-pptx/tests/deck.test.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/deck-pptx/tests/zip.mjs",
+      "sha256": "9003e8ebffbff77f2e9aea3fe9a6bf77768898a8242ee8d3f89f1bca26b3eb50",
+      "source": "curated-plugin-source/examples/deck-pptx/tests/zip.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "examples/infographic-story/README.md",
       "sha256": "88051473eab95bbe7a00ee8efff848ef853594d9a845e166e700269892444cd0",
       "source": "curated-plugin-source/examples/infographic-story/README.md",
@@ -2730,6 +2940,246 @@
       "destination": "examples/media-quality-recipes/touch-session/session.test.mjs",
       "sha256": "b1be22df47274bd451132481bc25b2bd41bdc102e2998d02ddef82eee775b8df",
       "source": "curated-plugin-source/examples/media-quality-recipes/touch-session/session.test.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/.gitignore",
+      "sha256": "11d515dc0651a7d95368d7a23dce5aa3a3f87a01373c631ae52557741388f3a0",
+      "source": "curated-plugin-source/examples/motion-remotion/.gitignore",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/README.md",
+      "sha256": "4ceb9165898883ca52d0d0268bf874c17f25fd86e7568afa17bb6ec189e763b5",
+      "source": "curated-plugin-source/examples/motion-remotion/README.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/package-lock.json",
+      "sha256": "94bdc7a115d96750ed8ba11002d2e46879448765bed5c31ce85a7c71f2236711",
+      "source": "curated-plugin-source/examples/motion-remotion/package-lock.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/package.json",
+      "sha256": "28731086e3c956fc11c1af37bb3c7e9aed6cfbaba996b7fc5d0b63b9636c9acd",
+      "source": "curated-plugin-source/examples/motion-remotion/package.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/props/lower-third-alpha.json",
+      "sha256": "b6b5d95e33c690cdb48fdb3f2bb60f67c064aa2618fb7bcb4ad2f9a66d43311c",
+      "source": "curated-plugin-source/examples/motion-remotion/props/lower-third-alpha.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/figtree/OFL.txt",
+      "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/figtree/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/figtree/figtree-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/fraunces/OFL.txt",
+      "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/fraunces/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/fraunces/fraunces-latin-opsz-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/schibsted-grotesk/OFL.txt",
+      "sha256": "15222412a95d70042e66e79bfb3b985653e0693e4d41703bc131bee9c5aa1aa7",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/schibsted-grotesk/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "sha256": "4c8b93f431d462c696e12b9d6a033feb3394d36e66e781357c496b95d8a75e05",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/schibsted-grotesk/schibsted-grotesk-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/source-sans-3/OFL.txt",
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/source-sans-3/OFL.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "sha256": "7a19a7027e125257d310c6dbd78ae3a30b5ea1e3794d60b12bb28227a003bfda",
+      "source": "curated-plugin-source/examples/motion-remotion/public/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/lottie/icon-morph.json",
+      "sha256": "2823a783c2cde3a07404a3ad9272b5a49eff17a089f248fcce74b6b808e38235",
+      "source": "curated-plugin-source/examples/motion-remotion/public/lottie/icon-morph.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/lottie/loader.json",
+      "sha256": "9d2884be462c85d7dcefe503b8c71580fd4c30472297a8f91a64d1d6dad08713",
+      "source": "curated-plugin-source/examples/motion-remotion/public/lottie/loader.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/lottie/logo-reveal.json",
+      "sha256": "f8f8fad4096f0e6eea6b31d7ec91a9759af8d719557a9c2cd9992e9c34cda561",
+      "source": "curated-plugin-source/examples/motion-remotion/public/lottie/logo-reveal.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/public/lottie/underline-sweep.json",
+      "sha256": "64bf6cd97afe8aab63aba2256541aaf7ecd255153a27b3231a8e69ea8aea227b",
+      "source": "curated-plugin-source/examples/motion-remotion/public/lottie/underline-sweep.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/remotion.config.ts",
+      "sha256": "3a7c67e8cb127b084e1dac0c6887d0aa034bd4592471b4a27ed038dd3ab76fe4",
+      "source": "curated-plugin-source/examples/motion-remotion/remotion.config.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/scripts/stills.mjs",
+      "sha256": "5bd16c9b964ca3224f73737836f350d3231013b15a0e39fb285072715c3372c5",
+      "source": "curated-plugin-source/examples/motion-remotion/scripts/stills.mjs",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/Root.tsx",
+      "sha256": "69baa6546dcdef89495f082eea212af8bcb1aac389a7e291c3fdae194cb02a6d",
+      "source": "curated-plugin-source/examples/motion-remotion/src/Root.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/components/CaptionBlock.tsx",
+      "sha256": "fad4cd3e2221388aca54d7d79b4e145442fde0497b2a0855748ed6d47d995cad",
+      "source": "curated-plugin-source/examples/motion-remotion/src/components/CaptionBlock.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/components/Mark.tsx",
+      "sha256": "d706cdb5b862ff4d8de790f1bcc12f870b133d5f005e2f2547f68e2cce3863e0",
+      "source": "curated-plugin-source/examples/motion-remotion/src/components/Mark.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/Captions.tsx",
+      "sha256": "2f5b337e15bc7abf64a66b80feaf03f25c6c8f80d6efa9f3d425bbf845dcbc2b",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/Captions.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/KineticType.tsx",
+      "sha256": "0653fa5fdeb33932eedd2683d7b87b7f8cf32dd87c167bf932e1244b1dd879dc",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/KineticType.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/LogoReveal.tsx",
+      "sha256": "7e8c874d3c5b2b89886a625a3e50d306655d92b6d122ffea4f67178664ca551a",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/LogoReveal.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/LottieInRemotion.tsx",
+      "sha256": "c6eb8839944b50c8404f3846154f9ef026adcb18923f1753858216b39c709da5",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/LottieInRemotion.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/LowerThird.tsx",
+      "sha256": "dc807bddbe69ae7d2941406e1ee3bf5acecb1211dfe4ceb610802c344a18ae97",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/LowerThird.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/compositions/SocialVertical.tsx",
+      "sha256": "f47bc84a9ac03a0198af57f5b068d4728d439526cf9a25f48e0d7aae58a35be8",
+      "source": "curated-plugin-source/examples/motion-remotion/src/compositions/SocialVertical.tsx",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/index.ts",
+      "sha256": "b46363720610a5a33262bc1edd3980293a9f9e11f03660540cdf1c746e512e12",
+      "source": "curated-plugin-source/examples/motion-remotion/src/index.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/motion.ts",
+      "sha256": "602ab9221e19c5eaf354ceba5daa0199c0d06ac8e6be15a4765d61896cae8684",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/motion.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/safe-areas.ts",
+      "sha256": "caef63fff3273a048ef233677d4c83cf0cb4112d8ccb405fccffe2dfa44dc1bf",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/safe-areas.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/schedules.ts",
+      "sha256": "5157ee1f0b2b2a7c748202c13b9d7b2bc48c10e23aba5f9875b987cb09e8e581",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/schedules.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/theme.ts",
+      "sha256": "d218532af5ac558eebfa54874d9437a645be0b29772aa12816da4a3614a1a3f6",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/theme.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/timing.ts",
+      "sha256": "5303ca2114fccec2ba4154985aac74780117c8757c709f28a214d11f511b3a2e",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/timing.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/src/lib/tokens-data.ts",
+      "sha256": "3bf93b650fb43850c22fb3f55ca8ca7ce6f073aa33928175e2b8276c699a9b23",
+      "source": "curated-plugin-source/examples/motion-remotion/src/lib/tokens-data.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/tests/lottie-assets.test.ts",
+      "sha256": "30a18163c68b897d142c4e031001b40684f140607f3d704c1fdd19782e5bb073",
+      "source": "curated-plugin-source/examples/motion-remotion/tests/lottie-assets.test.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/tests/safe-areas.test.ts",
+      "sha256": "8974e5b0b75cf91e0840fdd2aacf968498b91caa61f0f4786076a564df8690c2",
+      "source": "curated-plugin-source/examples/motion-remotion/tests/safe-areas.test.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/tests/theme.test.ts",
+      "sha256": "4b45cfe0641b9ef1a629be67cb4871d3b4a778cceff19e24dba62db941f9d84e",
+      "source": "curated-plugin-source/examples/motion-remotion/tests/theme.test.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/tests/timing.test.ts",
+      "sha256": "a2254e7d788a0ef5fe1bd67524931a4ddd87e1d6a8e74b995a6015b0f51214b7",
+      "source": "curated-plugin-source/examples/motion-remotion/tests/timing.test.ts",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "examples/motion-remotion/tsconfig.json",
+      "sha256": "b2c7acfcc15c142e3e772a7f729120dc3803d400c01f11cccb65ac1173a6ad7c",
+      "source": "curated-plugin-source/examples/motion-remotion/tsconfig.json",
       "status": "versioned-evaluation-input"
     },
     {
@@ -4071,8 +4521,14 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "knowledge/ASSETS-LICENSES.md",
+      "sha256": "627d3860c709c692e24690ab00ff99afd75bf7f0d44f346052f8e17481fc9078",
+      "source": "curated-plugin-source/knowledge/ASSETS-LICENSES.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "knowledge/README.md",
-      "sha256": "02b97212315ebd4839baeeff02cea2a3e33435550eb2f4be3175e139cc50dd44",
+      "sha256": "de38e71a33c9bf959a9b3bed06ce7afcda18d2a6e9a9f9cb66f20836705fe92b",
       "source": "curated-plugin-source/knowledge/README.md",
       "status": "versioned-evaluation-input"
     },
@@ -4158,6 +4614,36 @@
       "destination": "scripts/import_reference_archive.py",
       "sha256": "18f60fc95ce41a24790fce30d8ccc35c9399a74b3fc80e3f11f547ba41654c79",
       "source": "tools/import_reference_archive.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/lottie_build.py",
+      "sha256": "e0d26f51737fe9fb0d86695dc0575fafabffc221e0843866318a1ac25df69c29",
+      "source": "curated-plugin-source/scripts/lottie_build.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/lottie_specs/icon-morph.json",
+      "sha256": "8fe07320ae6c72f02ae80aef38ba35e1ca32401208c92aecf452d82de910620e",
+      "source": "curated-plugin-source/scripts/lottie_specs/icon-morph.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/lottie_specs/loader.json",
+      "sha256": "10654af330f4a4bfcb5432df30df8338e4f2bb912df5704c1e11c785e555ad4d",
+      "source": "curated-plugin-source/scripts/lottie_specs/loader.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/lottie_specs/logo-reveal.json",
+      "sha256": "7b14d765b3e202fcb0bed27256ac1ed748e1812aad21f460a890b2e3e3472308",
+      "source": "curated-plugin-source/scripts/lottie_specs/logo-reveal.json",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "scripts/lottie_specs/underline-sweep.json",
+      "sha256": "159cb2ea45aeb66337885b3a2d6db99dae1c719d4da1875cdaa6c40e63a37bd7",
+      "source": "curated-plugin-source/scripts/lottie_specs/underline-sweep.json",
       "status": "versioned-evaluation-input"
     },
     {
@@ -4485,6 +4971,18 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "tests/test_collateral_preflight.py",
+      "sha256": "63f876f0f775f492ebf2fda593cd1c8c8d709213255289a591ef8e0f155490ea",
+      "source": "curated-plugin-source/tests/test_collateral_preflight.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_collateral_templates.py",
+      "sha256": "d55e004ef7369660d63dd18359c0509daf6c258c2f9ac9863acaa16b84889472",
+      "source": "curated-plugin-source/tests/test_collateral_templates.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "tests/test_color_tools.py",
       "sha256": "801646b9d6f6ba837241afc4e6e376d1b278a9c7f08502e52fa7eac711623c3f",
       "source": "curated-plugin-source/tests/test_color_tools.py",
@@ -4506,6 +5004,12 @@
       "destination": "tests/test_handoff_current.py",
       "sha256": "7279436c0e1cc7ccbc123fc754c4d2fbbc5784f5970767e5accd85a6b90e4d4c",
       "source": "curated-plugin-source/tests/test_handoff_current.py",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "tests/test_lottie_build.py",
+      "sha256": "74806be4696926d506cbe11e4082cdd92e42694c0010b0011d5d21d5836dffc6",
+      "source": "curated-plugin-source/tests/test_lottie_build.py",
       "status": "versioned-evaluation-input"
     },
     {

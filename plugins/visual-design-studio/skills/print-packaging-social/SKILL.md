@@ -1,15 +1,14 @@
 ---
 name: print-packaging-social
 description: >-
-  Load before answering any print, packaging, label, barcode, social, out-of-home, slide-deck or email design
-  question, even a quick one. Gives production specs: bleed, safe zones, 300ppi, CMYK profiles and ink limits, PDF/X
-  preflight, dielines, barcode sizes and quiet zones, shelf tests, value versus premium pack cues, dated social
-  formats with 9:16 safe areas, billboard letter heights, 16:9 decks and bulletproof email including dark-mode
-  handling.
+  Load before any print, packaging, label, barcode, social, out-of-home, slide-deck or email design question, even a
+  quick one, and before making finished collateral files. Specs: bleed, safe zones, 300ppi, CMYK, PDF/X preflight,
+  dielines, barcodes, social formats with 9:16 safe areas, billboard letter heights, 16:9 decks, bulletproof email.
+  Renders token-driven brand books, sell sheets, cards, carousels and decks to PDF and PNG with a Canva editable twin.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-23 11:25:07 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
+  version-timestamp: "2026-10-27 12:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:38:00 UTC"
 ---
 
 # Print, packaging, social and campaign formats
@@ -28,6 +27,10 @@ Excellent channel work is designed for the moment it is seen (held at 40cm, spot
 | Black | Text and fine lines 100K, overprinting; large areas rich black C60 M40 Y40 K100 (240%) | Uncoated or newsprint: lighter build; ask the printer |
 | Total ink | Coated about 300-330%, uncoated about 260-300%, newsprint about 240% | The printer's number wins |
 | Print file | PDF/X-4, fonts embedded, bleed and trim boxes set, marks outside the bleed | Legacy workflow: PDF/X-1a |
+| Finished files | Start from a [collateral template](../../library/examples/collateral/README.md) wired to the kit tokens; screen PDF and PNGs from `scripts/render_collateral.mjs` | The client's InDesign or Figma masters exist: match them and use the templates only for screen versions |
+| Print master | WeasyPrint 70 (optional external CLI) `--pdf-variant pdf/x-4` with `device-cmyk()` token overrides and the printer's ICC profile; never the Chromium PDF | Printer asks for PDF/X-1a: `pdf/x-1a` and `marks: none` |
+| Preflight gate | `python3 scripts/preflight_pdf.py file.pdf` with no findings, then the printer's preflight and a hard proof | Screen-only files: `--intent screen` |
+| Editable twin | Canva brand template with fields named like the HTML `data-field`s; API PDF exports are never print files | One-off pieces: PDF or simple PPTX import, checked page by page |
 | Social canvas | 1080px wide: feed 1080x1350 (4:5), vertical 1080x1920 (9:16) with UI safe areas, link preview 1200x630 | Platform-specific placements: see [social formats](references/social-formats.md) |
 | OOH legibility | Cap height 25mm per 3m (1in per 10ft) of viewing distance for impact; 7 words or fewer roadside; 7:1 contrast | Pedestrian and dwell screens: longer copy, sequenced |
 | Presentation | 1920x1080 (16:9); presented body 24pt+ (48px), never below 18pt; one idea per slide | Reading decks sent as PDF: 12-16pt body, denser layouts |
@@ -40,8 +43,9 @@ Excellent channel work is designed for the moment it is seen (held at 40cm, spot
 3. **Set up the file** at final size with bleed, safe zone, grid, color profile and named layers (art, dieline, varnish, foil, white).
 4. **Design for the viewing moment:** distance, dwell time, motion, lighting, competing content. Set the hierarchy to the single thing the viewer must get first.
 5. **Render and inspect in context.** Print at 100% on an office printer and hold it at reading distance; mock packaging on a real shelf photo with competitors; preview social in the app (or an overlay template) on a phone; view OOH as a thumbnail at the equivalent distance; send test emails to real clients with images off and in dark mode. Fix and repeat.
-6. **Preflight and export** to the spec (PDF/X, MP4, PNG, HTML), then reopen the exported file and check it again.
-7. **Hand off** with a spec sheet: sizes, colors (CMYK, Pantone, HEX), finishes, file names, proof status and approvals.
+6. **Produce the finished files** when the brief asks for them, not just the direction: copy the closest collateral template, replace every `data-field` and sample line, render with `node scripts/render_collateral.mjs <file>.html --brand <brand>`, look at every PNG, fix and re-render. Make the print master with WeasyPrint as in the [print production pipeline](references/print-production-pipeline.md). Without Node or WeasyPrint, hand over the HTML with these commands and say which files were not produced.
+7. **Preflight and export** to the spec (PDF/X, MP4, PNG, HTML): `python3 scripts/preflight_pdf.py` on every PDF, then reopen the exported file and check it again.
+8. **Hand off** with a spec sheet: sizes, colors (CMYK, Pantone, HEX), finishes, file names, proof status and approvals. Set up the editable twin per [Canva handoff](references/canva-handoff.md) when the client's team will edit.
 
 ## Decisions that change the answer
 
@@ -62,6 +66,8 @@ Excellent channel work is designed for the moment it is seen (held at 40cm, spot
 - Billboards with a paragraph → one idea, 7 words or fewer, brand big.
 - Decks with 12pt bullet walls → one idea per slide, notes carry the detail.
 - Image-only emails → live text, alt text, bulletproof buttons.
+- Chromium screen PDF sent to press → no bleed, trim box or output intent and Type 3 fonts; make the master with WeasyPrint and preflight it.
+- Canva API PDF used as the print file → export PDF Print from the editor with bleed and marks, or send the kit's master.
 
 ## References
 
@@ -71,6 +77,12 @@ Excellent channel work is designed for the moment it is seen (held at 40cm, spot
 - [OOH and signage](references/ooh-and-signage.md): viewing distance and letter height, word counts, contrast, digital signage loops and dwell time.
 - [Presentations](references/presentations.md): 16:9 canvas, type minimums, slide grid, data slides, speaker notes.
 - [Email](references/email.md): width, live text, dark mode, bulletproof buttons, alt text, Gmail clipping, accessibility.
+- [Print production pipeline](references/print-production-pipeline.md): screen PDF vs print master vs editable twin, WeasyPrint PDF/X command lines, `device-cmyk()` overrides, preflight flags, honest limits.
+- [Canva handoff](references/canva-handoff.md): brand template autofill, import limits, export limits, connector gate, data handling.
+- [Collateral templates](../../library/examples/collateral/README.md): brand guidelines book, one-pager, case study, proposal cover, business card, social carousel, capabilities deck; both kit brands.
+- [PPTX deck example](../../library/examples/deck-pptx/README.md): token-driven editable deck; `--canva-safe` for Canva import, native mode for PowerPoint.
+- [Asset licenses](../../library/knowledge/ASSETS-LICENSES.md): licensed icon, font and audio stack, provenance record, never-use list.
+- Scripts: `scripts/render_collateral.mjs` (Node 18+, Playwright resolved at runtime) and `scripts/preflight_pdf.py` (standard library, `--help` for flags).
 - Atlas channel overviews: [print collateral](../../library/atlas/channels/print-collateral.md), [packaging](../../library/atlas/channels/packaging.md), [social media](../../library/atlas/channels/social-media.md), [OOH and signage](../../library/atlas/channels/ooh-signage.md), [environmental and wayfinding](../../library/atlas/channels/environmental-wayfinding.md), [presentation](../../library/atlas/channels/presentation.md), [email](../../library/atlas/channels/email.md), [video and motion](../../library/atlas/channels/video-motion.md).
 - Atlas query, when style, industry, market or tier matters:
   - `python3 ../../library/scripts/atlas.py query "craft beer can label premium"`

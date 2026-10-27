@@ -1,6 +1,6 @@
 # Applied design methods
 
-Version-Timestamp: 2026-09-27 14:20:29 AST
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 These original method cards teach decisions that can be made with the kit and the project's authorized inputs. They require no private reference collection. They are authored guidance, not a claim that a design has been produced, tested, or accepted. Every miniature is fictional teaching material. No example is a default style, real audience finding, or production baseline.
 
@@ -33,6 +33,7 @@ Capability IDs resolve in [the existing catalog](../capabilities.json). Cards su
 | Infographics | Choose encoding from the reader's comparison and preserve denominator/uncertainty through adaptation | Existing data element IDs, calculations, alternatives and export requirements |
 | Screen/motion | Choose message beats, image medium and choreography as one communication decision | Existing storyboard, product truth, motion fallback and target verification |
 | Critique/delivery | Turn a visible defect into a bounded repair and propagate only affected rechecks | Existing change boundary, approval, manifest and delivery process |
+| Which icons, fonts and audio can we use, and how do we record them? | [Asset licenses](ASSETS-LICENSES.md) | `identity`, `delivery` | provenance record in [asset licenses](ASSETS-LICENSES.md) |
 
 These methods are original synthesis of practical decision problems and the kit's existing public-facing contracts. They do not reproduce or summarize private books. Optional deeper references can expand a selected question when available and authorized; their absence does not prevent these methods from being used. Current legal, accessibility, platform and production requirements still need their applicable authoritative source and actual checks. Cards deliberately avoid inventing universal ratios, timings, palette meanings or acceptance scores.
 

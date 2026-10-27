@@ -36,13 +36,13 @@ def digest(content):
     return hashlib.sha256(content).hexdigest()
 
 
-BUILT_EXAMPLES = {"astro-motion", "react-system"}
+BUILT_EXAMPLES = {"astro-motion", "react-system", "motion-remotion", "deck-pptx"}
 
 
 def ignored(relative):
     parts = relative.parts
     if parts[:2] == ("library", "examples") and len(parts) > 3 and parts[2] in BUILT_EXAMPLES and any(
-            part in {"dist", "qa-output", "test-results", "playwright-report"} for part in parts[3:]):
+            part in {"dist", "out", "qa-output", "test-results", "playwright-report", ".remotion"} for part in parts[3:]):
         return True
     if parts[:1] == ("evals",) and "results" in parts[1:]:
         return True

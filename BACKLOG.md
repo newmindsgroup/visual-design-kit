@@ -2,6 +2,23 @@
 
 Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
 
+## Production layer, 0.8.0
+
+Version-Timestamp: 2026-10-27 12:00:00 UTC
+
+- [x] Collateral templates, render and preflight scripts, print pipeline and Canva handoff references.
+- [x] PPTX deck example (Canva-safe and native), brand book production and identity deliverables.
+- [x] Remotion example (tests and type check in CI, no renders) and portable Lottie builder and validator.
+- [x] Asset licenses, 10 production-layer eval cases, Codex parity check in CI and docs/CODEX.md.
+- [ ] CMYK and Pantone print tier for tokens (design proposed in the 0.8.0 integration notes; values must carry a press-proof source).
+- [ ] Open the decks in PowerPoint, Keynote and Canva; import a collateral PDF and a Canva-safe deck into Canva and record fidelity.
+- [ ] Full video renders with the vendor Chrome Headless Shell; test Lottie files in dotlottie-web, lottie-ios and lottie-android.
+- [ ] Confirm which Remotion terms (v4 or v5) apply and whether CLI renders for clients are Free or Automators use; buy a Company License before total headcount, contractors included, reaches 4.
+- [x] Smoke-run the 10 new cases ($1.12): all parse; skill loaded 9/9; baseline in evals/README.
+- [ ] Triage the 7 partial cases (0.30-0.55) with the eval loop, then `--runs 3 --ablation with-without`.
+- [ ] Verify on a real Codex install with the docs/CODEX.md checklist.
+- [ ] Canva connector live test once it connects (brand template autofill on the team's plan).
+
 ## Eval hardening, 0.7.1
 
 Version-Timestamp: 2026-10-23 11:31:41 UTC

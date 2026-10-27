@@ -4,9 +4,9 @@
 
 **Make Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.7.1).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.8.0).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-10-20 17:00:00 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -50,19 +50,19 @@ Ask in plain language; the right skill loads on its own.
 | Skill | Covers |
 | --- | --- |
 | `design-director` | Brief intake, qualifying questions, atlas query, category scan, divergent directions, stylescapes, weighted scoring, recommendation |
-| `brand-identity` | Strategy and positioning, naming, logo design and construction, identity systems, guidelines |
+| `brand-identity` | Strategy and positioning, naming, logo design and construction, identity systems, guidelines; brand book production and deliverables by tier |
 | `typography` | Selection, pairing, scales, setting, fluid type, licensing, multiscript |
 | `color` | Palette architecture, OKLCH ramps, WCAG and APCA contrast, dark mode, color meaning |
 | `layout` | Grids, spacing, composition, responsive recomposition, formats |
 | `imagery` | Iconography, illustration systems, photo art direction, AI image generation, 3D |
-| `motion` | Principles, timing and easing, choreography, kinetic type, CSS/GSAP/Lottie/Rive/Remotion/After Effects, sound |
+| `motion` | Principles, timing and easing, choreography, kinetic type, CSS/GSAP/Lottie/Rive/Remotion/After Effects, sound; token-driven Remotion compositions and portable Lottie builder |
 | `ux-design` | Research, heuristics, UX laws, measurement, IA, journeys, content design |
 | `ui-design` | Components and states, forms, navigation, data-dense UI, feedback, flows, AI and chat interfaces, accessibility |
 | `web-design` | Page architecture, conversion, responsive, Core Web Vitals, SEO, stack selection, launch |
 | `native-app-design` | iOS (HIG), Android (Material 3), cross-platform, large screens, app patterns, store assets, SwiftUI/Compose handoff |
 | `design-system` | DTCG token architecture, theming, Figma variables and Code Connect, component APIs, documentation, governance |
 | `data-visualization` | Chart choice, data palettes, labeling, dashboards, infographics, accessible charts |
-| `print-packaging-social` | Prepress, packaging, social formats, OOH, presentations, email |
+| `print-packaging-social` | Prepress, packaging, social formats, OOH, presentations, email; finished collateral from templates, print master PDF plus Canva editable twin, PDF preflight |
 | `design-critique` | Render-screenshot-score-revise loop, rubric, AI-tells catalog, accessibility audit |
 | `figma-workflow` | Token import to Figma variables, bound variant components, push and pull, Code Connect, Dev Mode handoff, no-connector fallback |
 | `design-project-start` | Client-project continuity: pinned version, selections, decisions, approvals, resume, handoff |
@@ -93,6 +93,14 @@ flowchart LR
 ```
 
 Directions must differ on at least three of six axes (type, palette, layout logic, imagery, motion, voice). Scores use weight presets for launches, regulated industries, rebrands and product UI, and the sensitivity check names the criterion that would flip the decision. See the [worked example](plugins/visual-design-studio/skills/design-director/references/worked-example.md).
+
+## Production layer (0.8.0)
+
+- **Collateral:** [templates](plugins/visual-design-studio/library/examples/collateral/README.md) for a brand book, sell sheet, case study, proposal cover, business card, social carousel and deck, rendered and preflighted by scripts in `print-packaging-social`.
+- **Print and Canva:** the kit makes the print master (PDF/X via WeasyPrint, optional) and Canva holds the editable twin. Canva's API export is not a print master.
+- **Decks:** [PPTX example](plugins/visual-design-studio/library/examples/deck-pptx/README.md) with Canva-safe and PowerPoint-native builds.
+- **Motion:** [Remotion example](plugins/visual-design-studio/library/examples/motion-remotion/README.md) and a portable Lottie builder. Remotion is source-available: free for teams of up to 3 people including contractors, a Company License beyond that.
+- **Licenses:** [asset licenses](plugins/visual-design-studio/library/knowledge/ASSETS-LICENSES.md).
 
 ## Quality loop
 

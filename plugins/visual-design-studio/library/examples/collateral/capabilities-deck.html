@@ -1,0 +1,241 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Capabilities deck: cover plus three slides, 1920 x 1080px (16:9). Presented type stays at 32px (24pt) or
+     larger. The PDF is the leave-behind; for an editable deck rebuild it in Canva or PowerPoint (see
+     references/canva-handoff.md). Sample content for a fictional company; figures are invented. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1">
+  <title>Capabilities deck (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 1920px 1080px;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 1920px;
+      --page-h: 1080px;
+      --pad-x: 128px;
+      --pad-y: 96px;
+    }
+
+    /* Grid rows, not auto margins: WeasyPrint 70 ignores auto margins in flex columns. */
+    .page {
+      padding: var(--pad-y) var(--pad-x);
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: minmax(0, 1fr);
+      font-size: 36px;
+      line-height: var(--line-height-snug);
+    }
+
+    .slide-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      color: var(--color-fg-muted);
+    }
+
+    .page--inverse .slide-foot {
+      color: var(--color-neutral-300);
+    }
+
+    .slide-foot .sample-flag {
+      font-size: 22px;
+    }
+
+    .slide-foot .lockup {
+      font-size: 32px;
+      color: var(--color-fg-default);
+    }
+
+    .page--inverse .slide-foot .lockup {
+      color: inherit;
+    }
+
+    .eyebrow {
+      font-size: 28px;
+    }
+
+    h1 {
+      font-size: 120px;
+      line-height: 1.02;
+      max-width: 1400px;
+    }
+
+    h2 {
+      font-size: 72px;
+      line-height: 1.08;
+      max-width: 1500px;
+      margin-top: 16px;
+    }
+
+    .cover .lockup {
+      font-size: 56px;
+    }
+
+    .cover {
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .cover .title {
+      align-self: end;
+      padding-bottom: 96px;
+    }
+
+    .cover .lede {
+      max-width: 1100px;
+      margin-top: 32px;
+      font-size: 40px;
+      color: var(--color-neutral-200);
+    }
+
+    .cards {
+      align-self: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+
+    .card {
+      padding: 40px;
+      background: var(--color-bg-canvas);
+      border-top: 8px solid var(--color-accent-default);
+    }
+
+    .card h3 {
+      font-size: 44px;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      font-size: 32px;
+      color: var(--color-fg-muted);
+    }
+
+    .proof {
+      align-self: center;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 96px;
+      align-items: start;
+    }
+
+    .big {
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-bold);
+      font-size: 220px;
+      line-height: 0.9;
+      letter-spacing: var(--letter-spacing-tight);
+      color: var(--color-accent-fg);
+    }
+
+    .proof ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 28px;
+      font-size: 34px;
+    }
+
+    .proof li {
+      padding-bottom: 28px;
+      border-bottom: var(--rule);
+    }
+
+    .next {
+      align-self: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+    }
+
+    .next ol {
+      padding-inline-start: 1.2em;
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact {
+      padding: 48px;
+      background: var(--color-accent-default);
+      color: var(--color-fg-on-accent);
+    }
+
+    .contact p + p {
+      margin-top: 12px;
+    }
+
+    .contact .name {
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-bold);
+      font-size: 48px;
+    }
+  </style>
+</head>
+<body>
+  <section class="page page--inverse cover" aria-label="Slide 1: cover">
+    <p class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></p>
+    <div class="title">
+      <p class="eyebrow" data-field="eyebrow">Capabilities 2026</p>
+      <h1 data-field="title">Delivery networks that run on Monday morning</h1>
+      <p class="lede" data-field="subtitle">Network planning for regional freight and field-service teams.</p>
+    </div>
+    <div class="slide-foot"><span class="sample-flag">SAMPLE: fictional company; figures invented</span><span data-field="date">November 2026</span></div>
+  </section>
+
+  <section class="page" aria-label="Slide 2: what we do">
+    <p class="eyebrow">What we do</p>
+    <h2 data-field="services_title">Three services, one plan your team owns</h2>
+    <div class="cards">
+      <div class="card"><h3 data-field="service_1">Network design</h3><p data-field="service_1_body">Depots, routes and service levels modeled on real stop data.</p></div>
+      <div class="card"><h3 data-field="service_2">Shift planning</h3><p data-field="service_2_body">Rotas matched to hourly volume, so overtime stops being the plan.</p></div>
+      <div class="card"><h3 data-field="service_3">Handover</h3><p data-field="service_3_body">Training, a playbook and a model your planners can update.</p></div>
+    </div>
+    <div class="slide-foot"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span><span class="sample-flag">SAMPLE: fictional company</span>&#8195;2</span></div>
+  </section>
+
+  <section class="page" aria-label="Slide 3: proof">
+    <p class="eyebrow">Proof</p>
+    <h2 data-field="proof_title">A regional freight firm cut late deliveries by a fifth</h2>
+    <div class="proof">
+      <div>
+        <p class="big" data-field="proof_stat">21%</p>
+        <p class="muted" data-field="proof_stat_label">fewer late deliveries after a 12-week program</p>
+      </div>
+      <ul>
+        <li data-field="proof_1">Overtime down by a third, no new headcount</li>
+        <li data-field="proof_2">Weekly planning from two days to half a day</li>
+        <li data-field="proof_3">Planners trained in nine days</li>
+      </ul>
+    </div>
+    <div class="slide-foot"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span><span class="sample-flag">SAMPLE: fictional client</span>&#8195;3</span></div>
+  </section>
+
+  <section class="page" aria-label="Slide 4: next step">
+    <p class="eyebrow">Next step</p>
+    <h2 data-field="next_title">Start with a two-week network scan</h2>
+    <div class="next">
+      <ol>
+        <li data-field="next_1">We collect four weeks of stop data</li>
+        <li data-field="next_2">You get a findings session with your team</li>
+        <li data-field="next_3">Fixed fee, credited to the full program</li>
+      </ol>
+      <div class="contact">
+        <p class="name" data-field="contact_name">Rowan Avery</p>
+        <p data-field="contact_email">rowan@example.com</p>
+        <p data-field="contact_phone">+1 555 0142</p>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span><span class="sample-flag">SAMPLE: fictional company</span>&#8195;4</span></div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Case study, two US Letter pages. Sample content: the client, the people, the quote and every figure are invented.
+     A real case study needs the client's written approval for the name, logo, quote and numbers. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1.5">
+  <title>Case study (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 8.5in;
+      --page-h: 11in;
+      --page-margin: 0.6in;
+    }
+
+    .page {
+      padding: 0.85in var(--page-margin) 0.7in;
+      display: flex;
+      flex-direction: column;
+      gap: 0.28in;
+    }
+
+    .running {
+      position: absolute;
+      left: var(--page-margin);
+      right: var(--page-margin);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--print-caption);
+      color: var(--color-fg-muted);
+    }
+
+    .running--head { top: 0.35in; }
+    .running--foot { bottom: 0.3in; }
+
+    .running .lockup {
+      font-size: 10pt;
+      color: var(--color-fg-default);
+    }
+
+    h1 {
+      font-size: var(--print-h1);
+      line-height: var(--line-height-tight);
+      max-width: 6.6in;
+    }
+
+    h2 {
+      font-size: var(--print-h2);
+      margin-bottom: 0.08in;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.2in;
+      padding: 0.14in 0;
+      border-top: var(--rule-strong);
+      border-bottom: var(--rule);
+      font-size: var(--print-small);
+    }
+
+    .facts dt {
+      color: var(--color-fg-muted);
+    }
+
+    .facts dd {
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .hero-image,
+    .fill-image {
+      flex: 1 1 2.4in;
+      min-height: 2.4in;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35in;
+    }
+
+    .two p + p {
+      margin-top: 0.08in;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.3in;
+      padding: 0.2in 0.25in;
+      background: var(--color-bg-canvas);
+    }
+
+    .stats p:last-child {
+      font-size: var(--print-small);
+      color: var(--color-fg-muted);
+    }
+
+    .phases {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.25in;
+    }
+
+    .phases li {
+      padding-top: 0.12in;
+      border-top: var(--border-width-thick) solid var(--color-accent-default);
+    }
+
+    .phases h3 {
+      font-size: var(--print-h3);
+      margin-bottom: 0.05in;
+    }
+
+    .phases .mono {
+      color: var(--color-accent-fg);
+    }
+
+    blockquote {
+      padding: 0.3in 0.4in;
+      background: var(--color-accent-subtle);
+      color: var(--color-accent-900);
+    }
+
+    blockquote p {
+      font-family: var(--font-family-display);
+      font-size: 17pt;
+      line-height: var(--line-height-snug);
+      letter-spacing: var(--letter-spacing-tight);
+      max-width: 6in;
+    }
+
+    blockquote footer {
+      margin-top: 0.15in;
+      font-size: var(--print-small);
+    }
+
+    .results {
+      display: grid;
+      gap: 0.06in;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.3in;
+      padding: 0.25in 0.3in;
+      background: var(--color-bg-inverse);
+      color: var(--color-fg-inverse);
+    }
+
+    .cta h2 {
+      margin: 0;
+    }
+
+    .cta p {
+      font-size: var(--print-small);
+      text-align: end;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <section class="page" aria-label="Case study, page 1">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Case study</span></header>
+    <div>
+      <p class="eyebrow">Case study</p>
+      <h1 data-field="headline">How a regional freight firm cut late deliveries by a fifth</h1>
+    </div>
+    <dl class="facts">
+      <div><dt>Client</dt><dd data-field="client">Alder &amp; Finch Freight (fictional)</dd></div>
+      <div><dt>Scope</dt><dd data-field="scope">Network planning, 3 depots</dd></div>
+      <div><dt>Timeline</dt><dd data-field="timeline">12 weeks, 2026</dd></div>
+    </dl>
+    <div class="ph-image hero-image"><span>Image slot: client depot at dawn, wide, one person for scale</span></div>
+    <div class="two">
+      <div>
+        <h2>The challenge</h2>
+        <p data-field="challenge">Volume had doubled in four years, but routes and shifts were still drawn by hand each week. One in six deliveries arrived late, and overtime had become the default way to catch up.</p>
+      </div>
+      <div>
+        <h2>What we did</h2>
+        <p data-field="approach_summary">We measured a month of real stops, rebuilt the routes around loading times and traffic, and matched shift starts to hourly volume. A four-week pilot in one region proved the plan before rollout.</p>
+      </div>
+    </div>
+    <div class="stats" aria-label="Results, sample figures">
+      <div><p class="stat" data-field="stat_1">21%</p><p>fewer late deliveries</p></div>
+      <div><p class="stat" data-field="stat_2">-34%</p><p>overtime hours per week</p></div>
+      <div><p class="stat" data-field="stat_3">9 days</p><p>to train every planner</p></div>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional client, people and figures</span><span>1 of 2</span></footer>
+  </section>
+
+  <section class="page" aria-label="Case study, page 2">
+    <header class="running running--head"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span>Case study</span></header>
+    <div>
+      <h2>Approach</h2>
+      <ol class="phases">
+        <li><p class="mono">Weeks 1-3</p><h3>Map</h3><p>Depot visits, ride-alongs and four weeks of telematics data cleaned into one model.</p></li>
+        <li><p class="mono">Weeks 4-7</p><h3>Model</h3><p>Three network options compared on cost, service level and risk with the operations team.</p></li>
+        <li><p class="mono">Weeks 8-12</p><h3>Pilot and hand over</h3><p>One region ran the new plan for four weeks; then training and a playbook for the planners.</p></li>
+      </ol>
+    </div>
+    <blockquote>
+      <p data-field="quote">The plan looks like something our own dispatchers would have drawn, if they had had a month without phones ringing.</p>
+      <footer data-field="quote_attribution">Dana Okafor, Operations Director, Alder &amp; Finch Freight (fictional person)</footer>
+    </blockquote>
+    <div class="two">
+      <div>
+        <h2>Results</h2>
+        <ul class="results">
+          <li data-field="result_1">Late deliveries down from 16% to 12.6% across all three depots.</li>
+          <li data-field="result_2">Overtime down by a third without adding headcount.</li>
+          <li data-field="result_3">Weekly planning time cut from two days to half a day.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>What comes next</h2>
+        <p data-field="next">The client's planners now update the model each quarter. A fourth depot opens in 2027 and will start on the same plan from day one.</p>
+      </div>
+    </div>
+    <div class="ph-image fill-image"><span>Image slot: planners at the new route board</span></div>
+    <div class="cta">
+      <h2 data-field="cta">Plan your network with us</h2>
+      <p><span data-field="email">hello@example.com</span><br><span data-field="phone">+1 555 0142</span></p>
+    </div>
+    <footer class="running running--foot"><span class="sample-flag">SAMPLE: fictional client, people and figures</span><span>2 of 2</span></footer>
+  </section>
+</body>
+</html>

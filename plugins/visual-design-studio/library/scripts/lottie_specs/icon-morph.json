@@ -1,0 +1,12 @@
+{
+  "preset": "icon-morph",
+  "name": "icon-morph",
+  "width": 96,
+  "height": 96,
+  "fps": 60,
+  "loop": true,
+  "tokens": {"brand": "meridian", "mode": "light"},
+  "colors": {"primary": "color.fg.default"},
+  "easing": "ease.standard",
+  "timing": {"morph": "duration.slow", "hold": "600ms"}
+}

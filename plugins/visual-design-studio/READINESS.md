@@ -1,8 +1,8 @@
 # Package readiness
 
-Version-Timestamp: 2026-10-23 20:00:00 UTC
+Version-Timestamp: 2026-10-27 12:00:00 UTC
 
-Edition: 0.7.1, public supervised evaluation. 0.7.1 splits eight eval rubrics into weighted graders and fixes skill routing found by them; 0.7.0 merged the research-workspace methods; 0.6.2 reconciled Codex local work (persona workbench, typography checks); 0.6.1 added the prompt handoff to `prompt-engineering-expert` and scoped the spec radar to our markets. This page describes package scope, not the installation state of any computer.
+Edition: 0.8.0, public supervised evaluation. 0.8.0 adds the production layer: collateral templates with render and preflight scripts, print master plus Canva twin, PPTX decks, Remotion and portable Lottie motion, and asset licenses (Remotion is source-available, not MIT). 0.7.1 split eight eval rubrics into weighted graders and fixes skill routing found by them; 0.7.0 merged the research-workspace methods; 0.6.2 reconciled Codex local work (persona workbench, typography checks); 0.6.1 added the prompt handoff to `prompt-engineering-expert` and scoped the spec radar to our markets. This page describes package scope, not the installation state of any computer.
 
 ## What 0.6.0 adds
 

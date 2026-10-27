@@ -1,0 +1,11 @@
+{
+  "preset": "loader",
+  "name": "loader",
+  "width": 96,
+  "height": 96,
+  "fps": 60,
+  "duration": "1200ms",
+  "tokens": {"brand": "meridian", "mode": "light"},
+  "colors": {"primary": "color.accent.default", "track": "color.border.subtle"},
+  "easing": "ease.standard"
+}

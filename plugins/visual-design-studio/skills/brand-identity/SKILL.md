@@ -5,11 +5,11 @@ description: >-
   territories, unit grids, optical corrections, 16px and one-color tests, clear space, minimum sizes, file sets, brand
   architecture and guidelines. Use when asked for a brand, rebrand or refresh, a logo, wordmark, monogram or symbol, a
   name or naming screen, a positioning statement or brand platform, an archetype, an identity system, a brand portal
-  or brand guidelines.
+  or a brand book and handoff file set.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:07:10 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-10-27 12:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:10:44 UTC"
 ---
 
 # Brand identity
@@ -30,7 +30,9 @@ Excellent identity work starts from a position a competitor could not sign, turn
 | Clear space | 1x a named element of the mark (cap height, or symbol width) on all sides | Tight UI headers: 0.5x, documented as the exception |
 | Minimum size | Wordmark 80px / 20mm wide; horizontal combination 100-120px / 25-30mm; symbol 16px / 6mm; drop the tagline below 150px / 35mm | Final values come from render and print tests of the actual mark |
 | Palette | 1-2 brand colors, 2 neutrals, 1 accent; each in HEX (sRGB), CMYK coated and uncoated, Pantone C and U, RAL or NCS for signage | Value tier and kids: up to 4 brights; luxury: 1 color plus black, white and a metallic |
-| File set | SVG, PDF, PNG @1x/2x/3x, favicon set, 1024px app-icon master, native source; EPS only on request | See [file set](references/logo-design.md#deliverable-file-set) |
+| File set | SVG, PDF, PNG @1x/2x/3x, favicon set, 1024px app-icon master, native source; EPS only on request | Scale the whole package by tier: [identity deliverables](references/identity-deliverables.md) |
+| Brand book | Screen PDF (16:9) plus PDF/X-4 print master rendered by the kit, Canva editable twin, 1-2 page quick reference; every value generated from tokens and a print spec file | No print run: skip the print master. See [brand book production](references/brand-book-production.md) |
+| Third-party assets | Default licensed stack (Lucide, Phosphor or Tabler icons, OFL fonts, CC0 or Pixabay audio) with a provenance record per asset; never NC licenses or scraped images | Client owns a paid library: use it and record the license tier |
 | Naming | 200-400 raw candidates over 4-6 typologies, 30 shortlisted, 10 screened, 3-5 presented in context | Naming a feature or sub-brand: architecture rules first, then 20-50 candidates |
 | Trademark | Knockout screen recorded with date, database, Nice classes and query; never called clearance | Always route adoption through a qualified trademark attorney |
 
@@ -43,7 +45,7 @@ Excellent identity work starts from a position a competitor could not sign, turn
 5. **Construct.** Vectorize the chosen territory on a unit grid, customize letterforms instead of typing a font, apply optical corrections.
 6. **Render and inspect.** Export PNGs at 16, 32, 64, 200 and 1000px; view at 100% on light and dark; blur test; line up against 8-12 competitor logos in grayscale at equal height. Fix, re-export, compare. Use `design-critique` for the scored loop.
 7. **System.** Color, type, graphic device, imagery, motion, voice and templates, stress-tested across 6 applications. See [identity system](references/identity-system.md).
-8. **Deliver.** File set, variant matrix, guidelines or portal. See [guidelines](references/guidelines.md).
+8. **Deliver.** Pick the tier's package from [identity deliverables](references/identity-deliverables.md), write the book with [guidelines](references/guidelines.md), then produce it with [brand book production](references/brand-book-production.md): print master from the kit's collateral templates, screen PDF, Canva twin, approvals per section. Decks come from the [PPTX deck example](../../library/examples/deck-pptx/README.md). Record every third-party asset in a [provenance record](../../library/knowledge/ASSETS-LICENSES.md#provenance-record).
 9. **Existing brand?** Run the equity audit before drawing and decide evolve or replace. See [refresh vs rebrand](references/refresh-vs-rebrand.md).
 
 ## Decisions that change the answer
@@ -67,6 +69,9 @@ Excellent identity work starts from a position a competitor could not sign, turn
 - Raster AI output presented as the logo → treat it as a sketch; redraw in vector, check distinctiveness, record provenance.
 - Gradient-only or color-dependent mark → a one-color version for stamps, embroidery, etching and partner lockups.
 - Guidelines PDF without assets or templates → ship a portal or package with files, templates and a one-page quick reference.
+- Canva design sent to the printer as the master → print from the kit's PDF/X master; Canva holds the editable twin.
+
+Single-context fallback: every step above runs in one context. Where review-panel subagents are not loaded (Codex, claude.ai chat), run the `design-critique` rubric yourself in steps 6 and 8, one lens at a time.
 
 ## References
 
@@ -75,6 +80,10 @@ Excellent identity work starts from a position a competitor could not sign, turn
 - [Logo design](references/logo-design.md): logo types, territories, construction grids, optical corrections, scalability tests, clear space, minimum sizes, file set, lockups.
 - [Identity system](references/identity-system.md): elements beyond the logo, flexible and dynamic identities, brand architecture.
 - [Guidelines](references/guidelines.md): brand book structure, must-have contents, digital brand portal, AI handoff.
+- [Brand book production](references/brand-book-production.md): page-by-page book, editions, sources of truth for HEX, CMYK and Pantone, print master and Canva twin, who approves.
+- [Identity deliverables](references/identity-deliverables.md): deliverable checklist for startup, mid-market and enterprise or rebrand, formats, file naming, handoff checks.
+- [Collateral templates](../../library/examples/collateral/README.md): token-driven brand guidelines book (logo, clear space, color with HEX/RGB/CMYK/Pantone slots, type, imagery, voice, do and don't), business card, one-pager; render with `../print-packaging-social/scripts/render_collateral.mjs`.
+- [Asset licenses](../../library/knowledge/ASSETS-LICENSES.md): licensed icon, font and audio stack, provenance record, never-use list.
 - [Refresh vs rebrand](references/refresh-vs-rebrand.md): equity audit, evolution vs revolution, migration plan.
 - Atlas, whenever style, industry, market, archetype or tier matters:
   - `python3 ../../library/scripts/atlas.py query "boutique hotel brand japan luxury"`

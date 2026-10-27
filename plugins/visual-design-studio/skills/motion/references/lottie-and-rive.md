@@ -1,6 +1,6 @@
 # Lottie and Rive
 
-Version-Timestamp: 2026-10-20 01:59:37 UTC
+Version-Timestamp: 2026-10-23 20:12:12 UTC
 
 Lottie plays designer-authored vector animation exported from After Effects (or authored in Lottie-native tools). Rive is its own editor and runtime for interactive, state-driven vector animation. Both beat video for UI-scale illustration and lose to code for anything that must behave like a real control. Feature support differs by player and version; test the exact runtime you will ship.
 
@@ -15,6 +15,8 @@ Lottie plays designer-authored vector animation exported from After Effects (or 
 | A designer must change it without a developer | Lottie (swap the file) or Rive (republish the `.riv`) | Keep a stable file name, artboard names and inputs |
 
 A Lottie or Rive file is not a control. Wrap it in a real `<button>` or other element with an accessible name; the animation only decorates the state.
+
+Without After Effects, build token-driven portable Lottie (logo reveal, loader, icon morph, underline sweep) with `lottie_build.py` and check any Lottie with its `validate` command; see the [production pipeline](production-pipeline.md).
 
 ## Lottie: authoring in After Effects
 

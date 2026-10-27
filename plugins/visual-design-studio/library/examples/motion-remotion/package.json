@@ -1,0 +1,43 @@
+{
+  "name": "design-kit-motion-remotion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Token-driven Remotion compositions for the Visual Design Kit. Our code is MIT; Remotion itself is source-available under the Remotion License (see README).",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "lottie": "python3 ../../scripts/lottie_build.py examples",
+    "browser": "remotion browser ensure",
+    "render:logo": "remotion render src/index.ts LogoReveal out/logo-reveal.mp4",
+    "render:kinetic": "remotion render src/index.ts KineticType out/kinetic-type.mp4",
+    "render:lower-third": "remotion render src/index.ts LowerThird out/lower-third.mov --codec=prores --prores-profile=4444 --image-format=png --pixel-format=yuva444p10le --props=./props/lower-third-alpha.json",
+    "render:social": "remotion render src/index.ts SocialVertical out/social-vertical.mp4",
+    "render:captions": "remotion render src/index.ts Captions out/captions.mp4",
+    "render:lottie": "remotion render src/index.ts LottieInRemotion out/lottie-in-remotion.mp4",
+    "stills": "node scripts/stills.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "@remotion/fonts": "4.0.538",
+    "@remotion/lottie": "4.0.538",
+    "lottie-web": "5.13.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  },
+  "designKitMetadata": {
+    "Version-Timestamp": "2026-10-23 20:12:12 UTC",
+    "Agent-Attribution": "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:12:12 UTC"
+  }
+}

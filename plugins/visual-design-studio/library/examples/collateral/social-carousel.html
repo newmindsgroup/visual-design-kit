@@ -1,0 +1,161 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Social carousel, five 1080 x 1350px (4:5) frames. Export the PNGs (render_collateral.mjs writes one per frame at
+     scale 1); the PDF is only a review copy. Key content stays inside a 96px margin; platform crops change, so check
+     the current spec (see references/social-formats.md). Sample content for a fictional company. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1">
+  <title>Social carousel (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 1080px 1350px;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 1080px;
+      --page-h: 1350px;
+      --safe: 96px;
+    }
+
+    /* Grid rows, not auto margins: WeasyPrint 70 ignores auto margins in flex columns. */
+    .page {
+      padding: var(--safe);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      font-size: 40px;
+      line-height: var(--line-height-snug);
+    }
+
+    .bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 30px;
+    }
+
+    .bar .lockup {
+      font-size: 40px;
+    }
+
+    .count {
+      font-family: var(--font-family-mono);
+      font-size: 30px;
+    }
+
+    .body {
+      align-self: center;
+    }
+
+    h1 {
+      font-size: 96px;
+      line-height: 1.02;
+      letter-spacing: var(--letter-spacing-tight);
+    }
+
+    h2 {
+      font-size: 80px;
+      line-height: 1.05;
+      margin-top: 24px;
+    }
+
+    .body .num {
+      font-family: var(--font-family-display);
+      font-weight: var(--font-weight-bold);
+      font-size: 220px;
+      line-height: 0.9;
+      color: var(--color-accent-default);
+    }
+
+    .body p {
+      margin-top: 40px;
+      max-width: 820px;
+      color: var(--color-fg-muted);
+    }
+
+    .page--accent .body p,
+    .page--inverse .body p {
+      color: inherit;
+    }
+
+    .swipe {
+      font-size: 30px;
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: var(--letter-spacing-caps);
+      text-transform: uppercase;
+    }
+
+    .body p.url {
+      display: inline-block;
+      margin-top: 48px;
+      padding: 20px 36px;
+      border-radius: var(--radius-full);
+      background: var(--color-accent-300);
+      color: var(--color-neutral-950);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .flag {
+      font-family: var(--font-family-mono);
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <section class="page page--accent" aria-label="Frame 1 of 5">
+    <div class="bar on-accent"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span class="count">1/5</span></div>
+    <div class="body">
+      <h1 data-field="hook">3 signs your delivery plan is out of date</h1>
+      <p data-field="hook_sub">And what to fix first.</p>
+    </div>
+    <div class="bar"><span class="swipe">Swipe</span><span class="flag">SAMPLE: fictional company</span></div>
+  </section>
+
+  <section class="page" aria-label="Frame 2 of 5">
+    <div class="bar"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span class="count">2/5</span></div>
+    <div class="body">
+      <p class="num" aria-hidden="true">1</p>
+      <h2 data-field="point_1">Overtime is the plan</h2>
+      <p data-field="point_1_body">If extra shifts cover every Monday peak, the rota no longer matches your volume.</p>
+    </div>
+    <p class="flag muted">SAMPLE: fictional company</p>
+  </section>
+
+  <section class="page" aria-label="Frame 3 of 5">
+    <div class="bar"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span class="count">3/5</span></div>
+    <div class="body">
+      <p class="num" aria-hidden="true">2</p>
+      <h2 data-field="point_2">Routes ignore loading time</h2>
+      <p data-field="point_2_body">A route that looks short on the map can lose an hour at one busy dock.</p>
+    </div>
+    <p class="flag muted">SAMPLE: fictional company</p>
+  </section>
+
+  <section class="page" aria-label="Frame 4 of 5">
+    <div class="bar"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span class="count">4/5</span></div>
+    <div class="body">
+      <p class="num" aria-hidden="true">3</p>
+      <h2 data-field="point_3">Only one person can change it</h2>
+      <p data-field="point_3_body">When the plan lives in one planner's head, every holiday becomes a risk.</p>
+    </div>
+    <p class="flag muted">SAMPLE: fictional company</p>
+  </section>
+
+  <section class="page page--inverse" aria-label="Frame 5 of 5">
+    <div class="bar"><span class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></span><span class="count">5/5</span></div>
+    <div class="body">
+      <h1 data-field="cta">Get the free planning checklist</h1>
+      <p data-field="cta_body">Twelve questions to ask before your next peak season.</p>
+      <p class="url" data-field="cta_url">example.com/checklist</p>
+    </div>
+    <p class="flag">SAMPLE: fictional company</p>
+  </section>
+</body>
+</html>

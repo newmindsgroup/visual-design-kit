@@ -2,6 +2,22 @@
 
 Version-Timestamp: 2026-09-27T13:51:25-04:00
 
+## 0.8.0 Production layer: finished collateral, print, decks and motion
+
+Version-Timestamp: 2026-10-27 12:00:00 UTC
+
+The kit now produces finished files, not only directions and specs.
+
+- **Collateral templates** (`library/examples/collateral/`): token-driven brand guidelines book, one-pager, case study, proposal cover, business card with bleed, social carousel and capabilities deck, in both kit brands. `print-packaging-social/scripts/render_collateral.mjs` renders screen PDFs and PNGs with layout and axe checks; `scripts/preflight_pdf.py` (standard library) reports boxes, bleed, fonts, image resolution, color spaces and output intent.
+- **Print master and Canva twin.** `references/print-production-pipeline.md`: WeasyPrint (optional external CLI) for PDF/X with `device-cmyk()` and the printer's ICC profile; Playwright for accessible screen PDFs; Ghostscript documented only (AGPL). `references/canva-handoff.md`: brand template autofill, import and export limits, connector gate.
+- **Decks** (`library/examples/deck-pptx/`): PptxGenJS, token-driven slide masters, a Canva-safe build and a PowerPoint-native build.
+- **Motion** (`library/examples/motion-remotion/`, `library/scripts/lottie_build.py`): six Remotion compositions driven by tokens (logo reveal, kinetic type, lower third, 9:16 social, captions, Lottie in video) and a stdlib builder and validator for portable Lottie. `motion/references/production-pipeline.md` chooses the engine and sets accessibility gates. Remotion is source-available, not MIT; see `library/knowledge/ASSETS-LICENSES.md`.
+- **Brand identity production:** `references/brand-book-production.md` and `references/identity-deliverables.md`; color specs beyond HEX/RGB are labeled nearest matches until proofed.
+- **Asset licenses:** `library/knowledge/ASSETS-LICENSES.md` (icons, OFL fonts, CC0 and Pixabay audio, C2PA, non-MIT tools, provenance record).
+- **Evals:** 10 production-layer cases (42 in total). **Codex:** `tools/check_codex_parity.py` (also in CI) and `docs/CODEX.md`.
+
+Existing project pins are unaffected; adopt 0.8.0 deliberately.
+
 ## 0.7.1 Eval hardening and skill routing
 
 Version-Timestamp: 2026-10-23 11:31:41 UTC

@@ -1,0 +1,285 @@
+/*
+ * Version-Timestamp: 2026-10-23 20:38:00 UTC
+ * Shared layer for the collateral templates. Every color, family, weight, line height and letter spacing comes from
+ * tokens.css (a byte-for-byte copy of library/tokens/dist/tokens.css). Print sizes are set in pt and in, derived
+ * from the token scale where a token exists. Brand switches with data-brand on <html>; theme stays light for print.
+ *
+ * Works in Chromium (Playwright page.pdf, screen PDF) and WeasyPrint 70 (print master). No JavaScript is needed to
+ * print; assets/brand.js only lets a browser preview switch brand with ?brand=ember.
+ */
+
+@page {
+  margin: 0;
+}
+
+:root {
+  /* Print type scale (pt). 12pt = 1rem = --font-size-md at 96 CSS px per inch. */
+  --print-caption: 7.5pt;
+  --print-small: 8.5pt;
+  --print-body: 10pt;
+  --print-lede: 13pt;
+  --print-h3: 12pt;
+  --print-h2: 20pt;
+  --print-h1: 34pt;
+  --print-hero: 48pt;
+  --page-margin: 0.6in;
+  --rule: var(--border-width-thin) solid var(--color-border-default);
+  --rule-strong: var(--border-width-thick) solid var(--color-fg-default);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-neutral-200);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--print-body);
+  line-height: var(--line-height-normal);
+  color: var(--color-fg-default);
+  font-kerning: normal;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+  text-wrap: balance;
+}
+
+/* Fraunces (Ember display) has long descenders and its optical size axis already tightens large sizes. */
+html[data-brand="ember"] h1,
+html[data-brand="ember"] h2 {
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-tight);
+}
+
+p, li, dd, blockquote {
+  text-wrap: pretty;
+}
+
+ul {
+  padding-inline-start: 1.1em;
+}
+
+/* ---------- pages ---------- */
+
+.page {
+  position: relative;
+  width: var(--page-w);
+  height: var(--page-h);
+  overflow: hidden;
+  background: var(--color-bg-surface);
+  break-after: page;
+  page-break-after: always;
+}
+
+.page:last-of-type {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.page--inverse {
+  background: var(--color-bg-inverse);
+  color: var(--color-fg-inverse);
+}
+
+.page--accent {
+  background: var(--color-accent-default);
+  color: var(--color-fg-on-accent);
+}
+
+.page--canvas {
+  background: var(--color-bg-canvas);
+}
+
+@media screen {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .page {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: none;
+  }
+}
+
+/* ---------- brand switching without JavaScript ---------- */
+
+html:not([data-brand="ember"]) .only-ember,
+html[data-brand="ember"] .only-meridian {
+  display: none !important;
+}
+
+/* ---------- type roles ---------- */
+
+.eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--print-small);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-accent-fg);
+}
+
+.page--inverse .eyebrow,
+.page--accent .eyebrow {
+  color: inherit;
+}
+
+.lede {
+  font-size: var(--print-lede);
+  line-height: var(--line-height-snug);
+  color: var(--color-fg-muted);
+  max-width: var(--measure-narrow);
+}
+
+.muted {
+  color: var(--color-fg-muted);
+}
+
+.mono {
+  font-family: var(--font-family-mono);
+  font-size: var(--print-small);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.stat {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--print-h1);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-accent-fg);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* ---------- logo: single-color mark plus live-text wordmark ----------
+ * The marks are drawn with CSS borders, not inline SVG, so currentColor follows the tokens in both Chromium and
+ * WeasyPrint (WeasyPrint 70 paints inline SVG currentColor as black). One element, switched by data-brand.
+ * Meridian: ring with a vertical meridian. Ember: heavier ring with an offset core. Knockouts stay transparent.
+ * A real identity ships outlined vector artwork; replace .mark and the wordmark text with the client's files. */
+
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.mark {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: 1.05em;
+  height: 1.05em;
+  border: 0.14em solid currentColor;
+  border-radius: 50%;
+  color: var(--color-accent-default);
+}
+
+.mark::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.12em; /* a hair inside the 0.14em ring so device-pixel border snapping never shows an overshoot */
+  bottom: -0.12em;
+  width: 0.13em;
+  margin-left: -0.065em;
+  background: currentColor;
+}
+
+html[data-brand="ember"] .mark {
+  border-width: 0.18em;
+}
+
+html[data-brand="ember"] .mark::after {
+  left: auto;
+  top: 0.12em;
+  right: 0.12em;
+  bottom: auto;
+  width: 0.3em;
+  height: 0.3em;
+  margin-left: 0;
+  border-radius: 50%;
+}
+
+.page--inverse .mark {
+  color: var(--color-accent-300);
+}
+
+.page--accent .mark,
+.on-accent .mark {
+  color: inherit;
+}
+
+/* Chromium cannot print bleed (the screen PDF is trim size), so art in the bleed is clipped at the trim there.
+   render_collateral.mjs sets data-render="screen-pdf" before printing. */
+html[data-render="screen-pdf"] .page {
+  overflow: hidden !important;
+}
+
+/* ---------- placeholders ---------- */
+
+.ph-image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-3);
+  background-color: var(--color-bg-sunken);
+  background-image: repeating-linear-gradient(135deg, var(--color-neutral-200) 0 1px, transparent 1px 12px);
+  color: var(--color-fg-muted);
+  font-size: var(--print-caption);
+  line-height: var(--line-height-snug);
+}
+
+.ph-image span {
+  background: var(--color-bg-surface);
+  color: var(--color-fg-muted);
+  padding: 0.2em 0.5em;
+  border-radius: var(--radius-sm);
+}
+
+.sample-flag {
+  font-family: var(--font-family-mono);
+  font-size: var(--print-caption);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-fg-muted);
+}
+
+.page--inverse .sample-flag,
+.page--accent .sample-flag {
+  color: inherit;
+  opacity: 1;
+}
+
+/* Editable fields carry data-field="name"; the same names become Canva brand template fields. */
+[data-field] {
+  overflow-wrap: break-word;
+}

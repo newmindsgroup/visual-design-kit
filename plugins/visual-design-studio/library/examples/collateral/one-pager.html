@@ -1,0 +1,241 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- One-pager / sell sheet, US Letter portrait (8.5 x 11in), no bleed: a white margin frames the page so office and
+     digital printers reproduce it as is. For a full-bleed press version, add 0.125in bleed as in business-card.html.
+     Sample content for a fictional company; every figure is invented. Replace each data-field. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="1.5">
+  <title>One-pager (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    :root {
+      --page-w: 8.5in;
+      --page-h: 11in;
+      --page-margin: 0.5in;
+    }
+
+    .page {
+      padding: var(--page-margin);
+      display: grid;
+      grid-template-rows: auto auto auto 1fr auto;
+      gap: 0.3in;
+    }
+
+    .hero {
+      margin: calc(-1 * var(--page-margin)) calc(-1 * var(--page-margin)) 0;
+      padding: 0.45in var(--page-margin) 0.4in;
+      background: var(--color-bg-inverse);
+      color: var(--color-fg-inverse);
+      display: grid;
+      gap: 0.16in;
+    }
+
+    .hero .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero .lockup {
+      font-size: 16pt;
+    }
+
+    .hero .mark {
+      color: var(--color-accent-300);
+    }
+
+    .hero .eyebrow {
+      color: var(--color-accent-200);
+    }
+
+    .hero h1 {
+      font-size: var(--print-h1);
+      line-height: var(--line-height-tight);
+      max-width: 6.2in;
+    }
+
+    .hero .lede {
+      color: var(--color-neutral-200);
+      max-width: 5.6in;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.3in;
+    }
+
+    .benefits h2 {
+      font-size: var(--print-h3);
+      margin-bottom: 0.05in;
+    }
+
+    .benefits h2::before {
+      content: "";
+      display: block;
+      width: 0.4in;
+      height: var(--border-width-thick);
+      margin-bottom: 0.1in;
+      background: var(--color-accent-default);
+    }
+
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.3in;
+      padding: 0.2in 0;
+      border-top: var(--rule);
+      border-bottom: var(--rule);
+    }
+
+    .proof p:last-child {
+      font-size: var(--print-small);
+      color: var(--color-fg-muted);
+    }
+
+    .how {
+      display: grid;
+      grid-template-columns: 3.1in 1fr;
+      gap: 0.3in;
+      align-items: stretch;
+    }
+
+    .how .ph-image {
+      min-height: 2.2in;
+    }
+
+    .how h2 {
+      font-size: var(--print-h2);
+      margin-bottom: 0.1in;
+    }
+
+    .steps {
+      list-style: none;
+      padding: 0;
+      counter-reset: step;
+      display: grid;
+      gap: 0.12in;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 0.32in 1fr;
+    }
+
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--font-family-mono);
+      font-size: var(--print-small);
+      color: var(--color-accent-fg);
+      padding-top: 0.02in;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.3in;
+      padding: 0.22in 0.25in;
+      background: var(--color-accent-subtle);
+      border-inline-start: 0.06in solid var(--color-accent-default);
+    }
+
+    .cta h2 {
+      font-size: var(--print-h2);
+    }
+
+    .cta dl {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 0.02in 0.12in;
+      font-size: var(--print-small);
+      white-space: nowrap;
+    }
+
+    .cta dt {
+      color: var(--color-accent-fg);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--print-caption);
+      color: var(--color-fg-muted);
+    }
+  </style>
+</head>
+<body>
+  <section class="page" aria-label="Sell sheet">
+    <header class="hero">
+      <div class="top">
+        <p class="lockup"><span class="mark" aria-hidden="true"></span><span class="only-meridian">Meridian</span><span class="only-ember">Ember</span></p>
+        <p class="eyebrow" data-field="eyebrow">Network planning</p>
+      </div>
+      <h1 data-field="headline">Delivery plans your team can run on Monday morning</h1>
+      <p class="lede" data-field="lede">We map your routes, depots and shifts, then hand over a plan your dispatchers already understand. Twelve weeks, one fixed fee.</p>
+    </header>
+
+    <div class="benefits">
+      <div>
+        <h2 data-field="benefit_1_title">Fewer late drops</h2>
+        <p data-field="benefit_1_body">Routes rebuilt around real traffic and loading times, not the map.</p>
+      </div>
+      <div>
+        <h2 data-field="benefit_2_title">Shifts that fit</h2>
+        <p data-field="benefit_2_body">Rotas matched to volume by hour, so overtime stops being the plan.</p>
+      </div>
+      <div>
+        <h2 data-field="benefit_3_title">A plan you own</h2>
+        <p data-field="benefit_3_body">Your team learns the model in week one and runs it without us after handover.</p>
+      </div>
+    </div>
+
+    <div class="proof" aria-label="Results, sample figures">
+      <div><p class="stat" data-field="stat_1">18%</p><p>fewer late deliveries in the first quarter</p></div>
+      <div><p class="stat" data-field="stat_2">12 wk</p><p>from first workshop to handover</p></div>
+      <div><p class="stat" data-field="stat_3">40+</p><p>regional networks planned since 2019</p></div>
+    </div>
+
+    <div class="how">
+      <div class="ph-image"><span>Image slot: dispatcher at a route board, side light</span></div>
+      <div>
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><p><strong>Map.</strong> Two weeks of data and depot visits; we measure what really happens.</p></li>
+          <li><p><strong>Model.</strong> Three network options with cost, service and risk side by side.</p></li>
+          <li><p><strong>Pilot.</strong> One region runs the chosen plan for four weeks while we watch the numbers.</p></li>
+          <li><p><strong>Hand over.</strong> Training, playbook and a model your planners can update.</p></li>
+        </ol>
+      </div>
+    </div>
+
+    <div>
+      <div class="cta">
+        <h2 data-field="cta">Book a 30-minute planning call</h2>
+        <dl>
+          <dt>Call</dt><dd data-field="phone">+1 555 0142</dd>
+          <dt>Email</dt><dd data-field="email">hello@example.com</dd>
+          <dt>Web</dt><dd data-field="website">example.com/planning</dd>
+        </dl>
+      </div>
+      <div class="foot" style="margin-top: 0.15in;">
+        <p data-field="address">100 Sample Street, Anytown</p>
+        <p class="sample-flag">SAMPLE: fictional company; all figures invented</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

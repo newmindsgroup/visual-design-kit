@@ -1,0 +1,189 @@
+<!doctype html>
+<!-- Version-Timestamp: 2026-10-23 20:38:00 UTC -->
+<!-- Business card, 3.5 x 2in trim, 0.125in bleed, crop marks. Front and back are pages 1 and 2.
+     Print master: WeasyPrint 70 reads the @page bleed and marks and writes TrimBox and BleedBox (see
+     skills/print-packaging-social/references/print-production-pipeline.md). Observed with 70.0: the crop marks sit
+     inside the bleed area, so full-bleed art covers them, and they are drawn in DeviceRGB black. For a PDF/X-1a
+     job or a printer that adds its own marks, set "marks: none".
+     Screen proof: Chromium ignores bleed and marks and prints the trim size. Sample content, fictional company. -->
+<html lang="en" data-brand="meridian" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="collateral:png-scale" content="4">
+  <title>Business card (sample)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/collateral.css">
+  <script src="assets/brand.js"></script>
+  <style>
+    @page {
+      size: 3.5in 2in;
+      margin: 0;
+      bleed: 0.125in;
+      marks: crop;
+    }
+
+    :root {
+      --page-w: 3.5in;
+      --page-h: 2in;
+      --bleed: 0.125in;
+      --safe: 0.1875in;
+    }
+
+    .page {
+      overflow: visible;
+    }
+
+    /* Art that must reach the cut edge extends into the bleed on every side. */
+    .bleed-art {
+      position: absolute;
+      inset: calc(-1 * var(--bleed));
+      background: var(--color-accent-default);
+    }
+
+    .front .lockup {
+      position: absolute;
+      left: var(--safe);
+      bottom: var(--safe);
+      font-size: 20pt;
+      color: var(--color-fg-on-accent);
+    }
+
+    .front .tagline {
+      position: absolute;
+      right: var(--safe);
+      top: var(--safe);
+      font-size: var(--print-caption);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: var(--letter-spacing-caps);
+      text-transform: uppercase;
+      color: var(--color-fg-on-accent);
+    }
+
+    .front .sample-flag {
+      position: absolute;
+      right: var(--safe);
+      bottom: var(--safe);
+      font-size: 5.5pt;
+      color: var(--color-fg-on-accent);
+    }
+
+    .back {
+      padding: var(--safe);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back .name {
+      font-family: var(--font-family-display);
+      font-size: 11pt;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-snug);
+    }
+
+    .back .role {
+      font-size: var(--print-small);
+      color: var(--color-fg-muted);
+    }
+
+    .back dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 0.6em;
+      font-size: var(--print-small);
+      line-height: 1.4;
+    }
+
+    .back dt {
+      color: var(--color-accent-fg);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .back dd {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .back .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .back .lockup {
+      font-size: 9pt;
+    }
+
+    .back .sample-flag {
+      font-size: 5.5pt;
+    }
+
+    /* Screen preview: show the bleed, the trim line and the safe zone. Never printed. */
+    @media screen {
+      body {
+        gap: 0.75in;
+        padding: 0.75in var(--space-4);
+      }
+
+      .page {
+        box-shadow: none;
+      }
+
+      /* Trim line (white and ink, readable on any background) and dashed safe zone, above the bleed art. */
+      .page::before,
+      .page::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .page::before {
+        inset: 0;
+        box-shadow: 0 0 0 0.75pt var(--color-white), 0 0 0 1.5pt var(--color-black);
+      }
+
+      .page::after {
+        inset: var(--safe);
+        border: 0.5pt dashed var(--color-info-border);
+      }
+
+      .back {
+        background: var(--color-bg-surface);
+        box-shadow: 0 0 0 var(--bleed) var(--color-bg-surface);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="page front" aria-label="Card front" data-bleed="0.125in">
+    <div class="bleed-art" aria-hidden="true"></div>
+    <p class="tagline" data-field="tagline">Clear plans, delivered</p>
+    <p class="lockup on-accent">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="only-meridian">Meridian</span><span class="only-ember">Ember</span>
+    </p>
+    <p class="sample-flag">SAMPLE</p>
+  </section>
+
+  <section class="page back" aria-label="Card back" data-bleed="0.125in">
+    <div>
+      <p class="name" data-field="person_name">Rowan Avery</p>
+      <p class="role" data-field="person_role">Partner, Strategy</p>
+    </div>
+    <dl>
+      <dt>T</dt><dd data-field="phone">+1 555 0142</dd>
+      <dt>E</dt><dd data-field="email">rowan@example.com</dd>
+      <dt>W</dt><dd data-field="website">example.com</dd>
+    </dl>
+    <div class="foot">
+      <p class="lockup">
+      <span class="mark" aria-hidden="true"></span>
+        <span class="only-meridian">Meridian</span><span class="only-ember">Ember</span>
+      </p>
+      <p class="sample-flag">SAMPLE: fictional person and company</p>
+    </div>
+  </section>
+</body>
+</html>
