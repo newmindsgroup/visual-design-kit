@@ -1,6 +1,6 @@
 # Native apps and reverse engineering toolkits
 
-Version-Timestamp: 2026-10-27 07:39:56 AST
+Version-Timestamp: 2026-10-27 09:40:02 AST
 
 Agent-Attribution: computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:39:56 AST
 
@@ -49,6 +49,15 @@ If the marketplace already points at this checkout, keep that registration.
 Use the host's supported update/reinstall command for an existing plugin, then
 verify its reported version and hashes. Open a fresh session to discover new skills.
 Installing a skill does not install REA, Xcode or native analysis utilities.
+
+## Generative interfaces from the first video
+
+The earlier OpenUI adoption lives in the shared `generative-ui` configuration skill.
+Assess it when an in-app assistant needs to select an interactive interface at runtime.
+Use project-owned components and response contracts, server authorization and a
+fixed fallback. Existing guidance is connected on this Mac; a real application
+pilot remains separate from this toolkit installation. Static pages and fixed forms
+continue through the normal design skills. Avoid adding a runtime to every project.
 
 ## BAMA capability coverage
 

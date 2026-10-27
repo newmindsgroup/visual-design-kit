@@ -1,6 +1,6 @@
 # 0.9.0 native design and reconstruction candidate
 
-Version-Timestamp: 2026-10-27 07:59:12 AST
+Version-Timestamp: 2026-10-27 09:42:25 AST
 
 Agent-Attribution: computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:59:12 AST
 
@@ -28,13 +28,13 @@ reported zero vulnerabilities. No bulk server copy or machine path is published.
 
 | Capability | Status | Evidence and limit |
 | --- | --- | --- |
-| All 21 BAMA skills and resources | Packaged; host activation pending final checks | Same files for both manifests; project behavior not yet demonstrated |
+| All 21 BAMA skills and resources | Installed and enabled in both hosts | Native CLI readback plus every installed payload file hash matches source; project behavior not yet demonstrated |
 | Native scaffold and isolated runners | Demonstrated | Seven scaffold/runner guard regressions; no automatic Git operation or installed-app replacement |
 | Image and layout helpers | Demonstrated | Twenty image/layout cases including 1x/2x regions, required scale, bounds and threshold failures |
 | Isolated preferences | Demonstrated | Foundation check preserves normal domain and cleans owned test suite |
-| Complete SwiftUI/SwiftData template | Blocked | Selected CLT lacks macro plugins; --no-icon build failed correctly |
-| Icon Composer output | Blocked | Full Xcode actool/ictool prerequisites not available |
-| App UI, app CLI/MCP, signing and install rollback | Installed source but untested | Requires a successful native build and selected project acceptance |
+| Complete SwiftUI/SwiftData template | Demonstrated in macOS26 CI | Fresh full-Xcode build, one Swift Testing core test and nine completed isolated self-test checks passed; authoring Mac CLT remains insufficient |
+| Icon Composer output | Generated in macOS26 CI | Full icon build and contact sheet passed; rendered appearances not visually inspected |
+| App UI, app CLI/MCP, signing and install rollback | Mixed acceptance | Optional adapter compiled in CI and native self-test passed; interactive UI, live adapter and signing/install rollback remain untested |
 | Full REA catalog | Demonstrated discovery | All 229 names and input schemas retained; not 229 execution tests |
 | REA static JavaScript analysis | Demonstrated | Owned two-file fixture, zero parse failures and complete syntax examination |
 | REA Codex/Claude registration | Demonstrated configuration/connection | Codex enabled; Claude native CLI Connected; Current Codex MCP analysis passed; Claude model-led invocation remains untested |
@@ -60,12 +60,16 @@ client data, application deployment or production acceptance is part of this cha
 
 ## Next validation
 
-1. Supply a working full Xcode toolchain and repeat the fresh native template build, isolated self-test, native screenshots and icon appearances.
-2. Reconnect the receiving hosts and run an owned reconstruction task through the installed skills and REA tools.
+1. Supply full Xcode on the authoring Mac, then inspect native screenshots and icon appearances for one owned pilot. CI already proves the fresh template, core/self-tests and optional adapter compile.
+2. Start fresh host sessions to load the new skills, then run an owned reconstruction task through the selected design method and REA tools.
 3. Add optional analysis engines only when a concrete target requires them, then verify that exact path.
 
 Setup, source pins and complete skill coverage: [TOOLKITS.md](TOOLKITS.md).
 
-The new macOS26 CI job uses the runner's full Xcode to compile a fresh template, run core tests and compile the optional app CLI/MCP adapter. Its result must be read back from the PR. It does not install Xcode on the authoring Mac or certify native screenshots. Runner image reference: [GitHub macOS26 image](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-Readme.md).
+The macOS26 CI job passed at source commit 299940e26170d7dff4e1a2125b90b3830256f7e3 using Apple Swift 6.3.3. It compiled a fresh template, passed one Swift Testing core test and nine isolated self-test checks, generated icons/contact sheet and compiled the optional app CLI/MCP adapter. [Native CI evidence](https://github.com/newmindsgroup/visual-design-kit/actions/runs/40513761050/job/122222167141). It does not install Xcode on the authoring Mac or certify native screenshots. Runner image reference: [GitHub macOS26 image](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-Readme.md).
 
 The follow-up repairs also close early self-test success, competing socket listeners, post-save oversized responses and display-scaled pixel crops. A real native isolation-path fixture uncovered and fixed `/var` versus `/private/var` normalization for a new store, while preserving escape rejection. Full local application compilation remains blocked on the selected CLT macro plugins.
+
+Both native hosts now register Visual Design Studio 0.9.0 (19 skills), BAMA Mac Studio 1.0.0-adapted.1 (21 skills) and REA Toolkit 0.1.0 (one skill). All 1,411 payload files per host match the source hashes. Older main-plugin caches were backed up privately before activation. Existing project-specific pins remain project-owned.
+
+Security scope: GitHub currently reports 16 open dependency alerts in the existing Astro, React, Remotion and PPTX example lockfiles. This candidate leaves those locks unchanged. Address them before reusing those examples in production. The isolated REA audit result does not clear unrelated example dependencies.
