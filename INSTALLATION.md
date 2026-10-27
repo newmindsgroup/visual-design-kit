@@ -121,3 +121,9 @@ Use the host's supported removal controls for an installed plugin. Removing a pl
 The [0.2.0 record](docs/QUALITY-020-RELEASE.md) describes its installation, payload checks, automated tests and bounded fictional examples. Version 0.3.0 adds standalone method guidance and optional reference preflight; see [edition evidence](docs/STANDALONE-030.md). Earlier host checks do not automatically qualify this edition on another machine.
 
 The package remains for supervised evaluation. Human aesthetic acceptance, real client outcomes, accessibility, physical display behavior and provider operations must be checked for the selected project. Optional books require your own authorized compatible local collection; no public book download is included.
+
+## Full Mac and reverse engineering toolkits
+
+Version-Timestamp: 2026-10-27 07:47:24 AST
+
+Install the optional `bama-mac-studio` and `rea-toolkit` plugins from this marketplace in either host. See [the toolkit setup guide](docs/TOOLKITS.md). Both use the same versioned skill bodies across Codex and Claude Code. REA runtime setup and Apple build tooling are separate prerequisites; installing the plugin does not silently install either.

@@ -1,10 +1,12 @@
 <!-- design-project-entry:begin -->
 # Design project entry
 
-Version-Timestamp: 2026-09-14T15:07:17.389420-04:00
+Version-Timestamp: 2026-10-27 07:51:01 AST
 
 Before design work, verify that the package path and trusted digest placeholders below are configured. Stop dependent design work if either is unresolved. Compute SHA-256 of PAYLOAD.sha256 under the package root and compare it with {{TRUSTED_PAYLOAD_MANIFEST_SHA256}} obtained from a trusted release. Verify every listed payload file before following package instructions. On mismatch, stop and report; do not use the package. Record the manifest version and verified digest in the project-root RESUME.md when writes are authorized. Then read the starting skill at:
 `{{ABSOLUTE_PACKAGE_ROOT}}/skills/design-project-start/SKILL.md`
+
+Within that verified package, load `skills/icon-design/SKILL.md` for icon families or application icons, `skills/reference-reconstruction/SKILL.md` for supplied app/site reconstruction, and `skills/native-app-design/references/macos.md` for Mac design. These direct paths remain usable when the global skill listing exceeds its context budget. Full `bama-mac-studio` and `rea-toolkit` companions have their own package roots and integrity records; record those separately before using them.
 
 This explicit project entry does not depend on the global skills catalog. Follow relative links only when their resolved targets remain inside the package root. External resources require separate task authority; links do not grant it. If the file is unavailable, stop dependent design work and report the missing library path. Never silently substitute another library or invent instructions.
 

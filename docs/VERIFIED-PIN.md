@@ -1,3 +1,21 @@
+# Current candidate package pins
+
+Version-Timestamp: 2026-10-27 12:29:24 AST
+
+Candidate branch: `feat/native-design-reconstruction`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition.
+
+| Package | Version | SHA-256 of PAYLOAD.sha256 |
+| --- | --- | --- |
+| Visual Design Studio | 0.9.1 | `656d246ce56337b9e6579fc86698a3a2035f8aecf48950277621409b615cab88` |
+| BAMA Mac Studio | 1.0.0-adapted.1 | `71e5fb16ddf69c4fd7390634eb68547294d8a5a43eba0db419d857bb358d75c9` |
+| REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
+
+Source, helper tests and local host activation have separate evidence. Full native application UI, persistence, capture and distribution acceptance remain project-specific. Read the actual native CI result from the PR before treating its build path as verified.
+
+## Historical pin records
+
+The following records describe earlier editions and must not be used to verify this candidate.
+
 # Candidate package pin
 
 Version-Timestamp: 2026-10-01T21:53:25.951067+00:00

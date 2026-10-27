@@ -1,0 +1,68 @@
+{
+  "Version-Timestamp": "2026-10-27 07:42:32 AST",
+  "upstream": "https://github.com/morluto/rea",
+  "npm_package": "rea-agents@6.8.0",
+  "release_commit": "160d821ac9a0310afcb8d1fc427862dd6508add5",
+  "main_audit_commit": "570abe95f2a35b5c580a5ec2fca90c33d4114bdc",
+  "shipped_skill_version": "49",
+  "shipped_tool_count": 229,
+  "npm_integrity": "sha512-9QDeRnGqEDzABZyr04eLnBXBv/c6I9/TWu/6M0MD4pEfkySI/BIgwTODIbAReX3C1x6hjw9+Jlx4A2yUSPZ9ww==",
+  "license": "MIT, Copyright (c) 2026 morluto",
+  "adaptations": [
+    "Namespaced skill rea and CLI launcher nmg-rea",
+    "Preserved all shipped skill files and capability instructions",
+    "Use existing isolated runtime and --skill=false registration repair",
+    "Pinned REA documentation links to shipped release commit",
+    "Added project authorization and confidential-data boundaries",
+    "Normalized em and en dash punctuation"
+  ],
+  "files": [
+    {
+      "path": "SKILL.md",
+      "upstream_sha256": "8818b645c9fd348399a50a8678b91cff20215690adad484e70282ff9f2ef91ee",
+      "adapted_sha256": "e2e30de1257564e380559fd896584d053bcf0ecea183ec430ff3415392be8369"
+    },
+    {
+      "path": "references/android-applications.md",
+      "upstream_sha256": "24ecaa1798eb4f28591884a7deb68df31e90313865515a23e3b466403f1abc39",
+      "adapted_sha256": "755b42c380261d783ba5c32b41db7260c6149912c59b0a095b257cd7ab6d14f1"
+    },
+    {
+      "path": "references/connection-and-recovery.md",
+      "upstream_sha256": "4754441e63e4252a0b230cf5aa12b78c0716463905305059bb7dea6713ba0bfc",
+      "adapted_sha256": "8739890327109f411596e7985e66f7141eec216f436394c536e62da83c38e135"
+    },
+    {
+      "path": "references/environments.md",
+      "upstream_sha256": "83e041f0a5243172af69eaadf62da0699617add3ff1d46b294e4bba7ece9d95f",
+      "adapted_sha256": "65700cf53d89e29337908c6a7f44e7ce1d8af8f6e72c7e337e5e33a54b9d4181"
+    },
+    {
+      "path": "references/evidence-workflows.md",
+      "upstream_sha256": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57",
+      "adapted_sha256": "b4787ac3da44a714fc28459d6267ec686d02a79250bd4e9f0ab2deb74c5955fa"
+    },
+    {
+      "path": "references/javascript-applications.md",
+      "upstream_sha256": "619cfd15ffdf466452cc32002ae357fefec59d5dcad4c9dfc27630138f0f719d",
+      "adapted_sha256": "ee262264c2c8ae48ae458f0f0d84da7e74091a4cbddc56d8ada0220ac72983b9"
+    },
+    {
+      "path": "references/native-and-artifacts.md",
+      "upstream_sha256": "cf394568ae91e9017d63056adb8872fb1df9e2f6bbe544a95d0fd9f064b06dd5",
+      "adapted_sha256": "ecca2dfceeae0b4c8e2714a5bf20d6ffc04d0e78f45a4e5004dcb993de949965"
+    },
+    {
+      "path": "references/runtime-observation.md",
+      "upstream_sha256": "852bd1e25e9f83f0e8c7d4f8441a043e2b2a7d5e39f729bf22ac77259a0207bd",
+      "adapted_sha256": "3e7fedcb40dc4eeb6dbf4e8ff45f41cb21743c0b1de7fd3892792ed73931d5c4"
+    }
+  ],
+  "runtime_overrides": {
+    "fast-uri": "3.1.9",
+    "zod": "4.6.6"
+  },
+  "runtime_package_sha256": "661038548462f9a33921bb8e3c64d3d2c8c7b3fa47a83ebbfa8f2ab54583e799",
+  "runtime_lock_sha256": "d3ce17cb5e7d477791f221fb767e7a07af2a42a08539616ce5cf142e5ce52c9e",
+  "license_notice_normalization": "Whitespace-only normalization in four imported runtime notice files; words unchanged, MIT LICENSE verbatim"
+}

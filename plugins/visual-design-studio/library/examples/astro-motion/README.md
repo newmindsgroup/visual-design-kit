@@ -1,12 +1,12 @@
 # Motion Atlas
 
-Version-Timestamp: 2026-10-14 14:03:25 AST
+Version-Timestamp: 2026-10-27 12:21:23 AST
 
 An original coded playground and component library for Astro, Tailwind and Vue, with everyday and experimental tiers. There are 42 catalog techniques: 22 working studies and 20 researched recipes. The latter are labeled Recipe in the UI and do not claim implemented runtime behavior. Source policy is in [DESIGN.md](DESIGN.md); technique data is in [catalog.mjs](src/lib/catalog.mjs). [Research](../../draft-skills/design-web-astro/references/research.md) and [motion lifecycle](../../draft-skills/design-web-motion-library/references/lifecycle.md) accompany the code.
 
 ## Run in a separate working directory
 
-Copy this example folder to a new project-owned folder outside the installed plugin. Do not install dependencies into the package. From that copy, with Node >=22.12.0 and npm 11:
+Copy this example folder to a new project-owned folder outside the installed plugin. Do not install dependencies into the package. From that copy, with Node 22.19+ or Node 24+ and npm 11:
 
 ```sh
 npm ci --ignore-scripts

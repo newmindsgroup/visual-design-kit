@@ -2,7 +2,7 @@
 
 Version-Timestamp: 2026-10-27 12:00:00 UTC
 
-Edition: 0.8.0, public supervised evaluation. 0.8.0 adds the production layer: collateral templates with render and preflight scripts, print master plus Canva twin, PPTX decks, Remotion and portable Lottie motion, and asset licenses (Remotion is source-available, not MIT). 0.7.1 split eight eval rubrics into weighted graders and fixes skill routing found by them; 0.7.0 merged the research-workspace methods; 0.6.2 reconciled Codex local work (persona workbench, typography checks); 0.6.1 added the prompt handoff to `prompt-engineering-expert` and scoped the spec radar to our markets. This page describes package scope, not the installation state of any computer.
+Edition: 0.9.0 candidate, public supervised evaluation. 0.8.0 adds the production layer: collateral templates with render and preflight scripts, print master plus Canva twin, PPTX decks, Remotion and portable Lottie motion, and asset licenses (Remotion is source-available, not MIT). 0.7.1 split eight eval rubrics into weighted graders and fixes skill routing found by them; 0.7.0 merged the research-workspace methods; 0.6.2 reconciled Codex local work (persona workbench, typography checks); 0.6.1 added the prompt handoff to `prompt-engineering-expert` and scoped the spec radar to our markets. This page describes package scope, not the installation state of any computer.
 
 ## What 0.6.0 adds
 
@@ -32,3 +32,9 @@ The 133-capability process library, templates, continuity contracts (selection, 
 - Earlier known holds remain: the local-model revision-fidelity and touchscreen-recovery cases are excluded from autonomous routing; PowerPoint and backup setup remain deferred.
 
 No hooks, MCP servers, credentials, provider access or paid jobs are bundled. `distribution_scope: public`, `publication_review_required: true` and `production_accepted: false` in the package manifest keep publication review and real-project acceptance separate from a build.
+
+## Native and reconstruction adoption
+
+Version-Timestamp: 2026-10-27 07:59:12 AST
+
+The main plugin adds two focused skills and design references; optional BAMA and REA companions retain full upstream workflow coverage. Package tests, tool availability and actual application acceptance are distinct. BAMA full native builds remain blocked by the authoring Mac's missing SwiftUI/SwiftData macro plugins and icon tooling. REA's catalog and a synthetic static analysis pass, while advanced providers and real target workflows remain unverified. No client outcome or model-lift claim follows from this edition.

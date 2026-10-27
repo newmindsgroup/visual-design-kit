@@ -1,15 +1,14 @@
 ---
 name: native-app-design
 description: >-
-  Design iOS, iPadOS and Android apps that feel native and still carry the brand: Apple HIG (Liquid Glass, size
-  classes, 44pt targets, Dynamic Type, SF Symbols), Material 3 and M3 Expressive (window size classes, 48dp targets,
-  dynamic color), tablets and foldables, cross-platform stacks, app patterns within App Store and Play rules, store
-  icons and screenshots, and SwiftUI or Jetpack Compose handoff. Use when designing app screens, flows, navigation,
-  app icons or store assets, or choosing native, React Native, Flutter or Compose Multiplatform.
+  Design macOS, iOS, iPadOS and Android interfaces: native windows and surfaces, navigation, keyboard and pointer,
+  accessibility, appearance modes, platform tokens, app icons and SwiftUI/Compose handoff. Use for native app
+  screens, flows, store assets, Mac utilities or cross-platform choices. Mac implementation uses the optional
+  BAMA workflow; preserve existing project OS targets and approved brand tokens.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:08:24 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:08:24 UTC"
+  version-timestamp: "2026-10-27 07:43:23 AST"
+  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
 ---
 
 # Native app design
@@ -36,16 +35,17 @@ Excellent app design feels like it belongs on the device: system navigation, typ
 
 ## Workflow
 
-1. **Pin the targets.** OS versions (iOS 26+ and Android 16 / API 36 are the baselines in late 2026), devices (iPhone, iPad, iPhone Duo, Android phones, foldables, tablets), and stack. If cross-platform, choose with [cross-platform](references/cross-platform.md) first.
-2. **Read the context.** Run `python3 ../../library/scripts/atlas.py query "native app <industry> <audience> <market>"` and read the `channel.native-app`, industry, audience and market entries it returns. Market decides the iOS/Android split and device classes; audience decides target and text sizes.
-3. **Structure per platform.** Define 3-5 top-level destinations, stacks and modals for each platform with the `ux-design` skill's flows. Write the iOS and Android navigation maps separately even when the content is shared.
-4. **Lay out compact first, then every width.** Phone portrait, phone landscape, iPad and foldable inner screen, split views. Use [large screens](references/large-screens.md) for panes and pointer/keyboard.
-5. **Apply platform specifics.** [iOS HIG](references/ios-hig.md) for bars, sheets, Dynamic Type, materials, haptics; [Android Material 3](references/android-material3.md) for components, type roles, color roles, shape and motion.
-6. **Map tokens.** Express every color, type, space and radius as a kit semantic token, then map to platform roles with [SwiftUI and Compose handoff](references/handoff-swiftui-compose.md). No raw hex in screen specs.
-7. **Design the hard states.** Empty, loading, offline, error, permission denied, paywall, account deletion, first run. Use [app patterns](references/app-patterns.md).
-8. **Render and inspect.** Build frames at real sizes (402x874pt and 440x956pt iPhone, 375x667pt small iPhone, 412x915dp and 360x800dp Android phones, 1024pt-wide iPad, foldable inner screen) in light, dark, high contrast, largest text, RTL and one translated locale. Screenshot and critique them with the `design-critique` skill before anyone sees them.
-9. **Ship the store presence.** Icons and screenshots per [app store assets](references/app-store-assets.md).
-10. **Hand off.** Specs name tokens, text roles, components and states per platform, with prototype links and the evidence of step 8.
+1. **Choose the platform route.** For macOS, read [macOS](references/macos.md) first and use desktop window, menu and keyboard conventions; the mobile defaults below do not apply. Preserve an existing minimum OS.
+2. **Pin the targets.** OS versions (iOS 26+ and Android 16 / API 36 are the baselines in late 2026), devices (iPhone, iPad, iPhone Duo, Android phones, foldables, tablets), and stack. If cross-platform, choose with [cross-platform](references/cross-platform.md) first.
+3. **Read the context.** Run `python3 ../../library/scripts/atlas.py query "native app <industry> <audience> <market>"` and read the `channel.native-app`, industry, audience and market entries it returns. Market decides the iOS/Android split and device classes; audience decides target and text sizes.
+4. **Structure per platform.** Define 3-5 top-level destinations, stacks and modals for each platform with the `ux-design` skill's flows. Write the iOS and Android navigation maps separately even when the content is shared.
+5. **Lay out compact first, then every width.** Phone portrait, phone landscape, iPad and foldable inner screen, split views. Use [large screens](references/large-screens.md) for panes and pointer/keyboard.
+6. **Apply platform specifics.** [iOS HIG](references/ios-hig.md) for bars, sheets, Dynamic Type, materials, haptics; [Android Material 3](references/android-material3.md) for components, type roles, color roles, shape and motion.
+7. **Map tokens.** Express every color, type, space and radius as a kit semantic token, then map to platform roles with [SwiftUI and Compose handoff](references/handoff-swiftui-compose.md). No raw hex in screen specs.
+8. **Design the hard states.** Empty, loading, offline, error, permission denied, paywall, account deletion, first run. Use [app patterns](references/app-patterns.md).
+9. **Render and inspect.** Build frames at real sizes (402x874pt and 440x956pt iPhone, 375x667pt small iPhone, 412x915dp and 360x800dp Android phones, 1024pt-wide iPad, foldable inner screen) in light, dark, high contrast, largest text, RTL and one translated locale. Screenshot and critique them with the `design-critique` skill before anyone sees them.
+10. **Ship the store presence.** Icons and screenshots per [app store assets](references/app-store-assets.md).
+11. **Hand off.** Specs name tokens, text roles, components and states per platform, with prototype links and the evidence of step 8.
 
 ## Decisions that change the answer
 
@@ -70,6 +70,7 @@ Excellent app design feels like it belongs on the device: system navigation, typ
 
 ## References
 
+- [macOS](references/macos.md): windows, inspectors, menus, pointer and keyboard, native state validation and toolchain prerequisites. Use the optional `bama-router` workflow for full native Mac implementation.
 - [iOS HIG](references/ios-hig.md): safe areas, size classes, bars, sheets, Dynamic Type table, SF Symbols, color, Liquid Glass, haptics, app icon, widgets and Live Activities.
 - [Android Material 3](references/android-material3.md): 48dp targets, window size classes, navigation, app bars, FAB, type scale, dynamic color, shape, elevation, motion, edge-to-edge, predictive back, adaptive icons.
 - [Cross-platform](references/cross-platform.md): React Native and Expo, Flutter, Compose Multiplatform, and what must stay native.
@@ -81,4 +82,4 @@ Excellent app design feels like it belongs on the device: system navigation, typ
 - Tokens and theming: the [design-system skill](../design-system/SKILL.md).
 - Deep process (client projects): [UI system](../../library/draft-skills/design-ui-system/SKILL.md) and its [system portability](../../library/draft-skills/design-ui-system/references/system-portability.md); [Figma production](../../library/draft-skills/design-production-interface/references/figma.md); the [dialog spec's native-sheet boundary](../../library/examples/component-specs/dialog.md); touch methods for [interaction patterns](../../library/draft-skills/design-touch-interaction-patterns/SKILL.md), [forms](../../library/draft-skills/design-touch-forms/SKILL.md), [offline](../../library/draft-skills/design-touch-offline/SKILL.md), [states and copy](../../library/draft-skills/design-touch-states-copy/SKILL.md), [device validation](../../library/draft-skills/design-touch-device-validation/SKILL.md) and [usability testing](../../library/draft-skills/design-touch-usability-testing/SKILL.md).
 
-Catalog IDs covered: ui, touch-interaction-patterns, touch-forms, touch-offline, touch-states-copy, touch-device-validation, touch-usability-testing
+Catalog IDs covered: macos-app, ui, touch-interaction-patterns, touch-forms, touch-offline, touch-states-copy, touch-device-validation, touch-usability-testing

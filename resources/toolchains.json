@@ -1,0 +1,72 @@
+{
+  "Version-Timestamp": "2026-10-27 12:38:31 AST",
+  "Agent-Attribution": "computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 12:38:31 AST",
+  "schema_version": "1.0",
+  "toolchains": [
+    {
+      "id": "bama",
+      "repository": "https://github.com/daveebbelaar/bama",
+      "commit": "15356bd8ebff408222ad21395aea09bd74b15310",
+      "license": "MIT",
+      "plugin": "bama-mac-studio",
+      "source": "extras/bama-mac-studio",
+      "status": "guarded-derivative-candidate",
+      "skills_expected": 21,
+      "runtime_prerequisites": [
+        "macOS 26 or later",
+        "Swift 6.2 or later",
+        "actool and Icon Composer ictool for full icon workflow"
+      ],
+      "runtime_policy": "Explicit project tasks; staged output before installation; project identity and tokens remain authoritative"
+    },
+    {
+      "id": "rea",
+      "repository": "https://github.com/morluto/rea",
+      "audited_main_commit": "570abe95f2a35b5c580a5ec2fca90c33d4114bdc",
+      "release_commit": "160d821ac9a0310afcb8d1fc427862dd6508add5",
+      "package": "rea-agents",
+      "package_version": "6.8.0",
+      "license": "MIT",
+      "plugin": "rea-toolkit",
+      "source": "extras/rea-toolkit",
+      "status": "pinned-runtime-and-skill-candidate",
+      "runtime_prerequisites": [
+        "Node ^22.23.4 or ^24.22.1 or >=26.12.1",
+        "OS tools and permissions for the selected tool family"
+      ],
+      "runtime_policy": "Full catalog available after scoped setup; host confirmation and project data authorization apply per invocation",
+      "optional_free_mac_baseline": [
+        {
+          "name": "Frida",
+          "version": "17.23.2",
+          "source": "https://github.com/frida/frida/releases/tag/17.23.2",
+          "note": "Matching arm64 Node binding; explicit owned-target instrumentation."
+        },
+        {
+          "name": "Ghidra",
+          "version": "12.1.4",
+          "source": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_12.1.4_build",
+          "note": "Isolated JDK21 and locally compiled arm64 decompiler."
+        },
+        {
+          "name": "Eclipse Temurin JDK",
+          "version": "21.0.13+9",
+          "source": "https://github.com/adoptium/temurin21-binaries/releases/tag/jdk-21.0.13%2B9"
+        },
+        {
+          "name": "WABT",
+          "version": "1.0.42",
+          "source": "https://github.com/WebAssembly/wabt/releases/tag/1.0.42",
+          "note": "Source build with USE_INTERNAL_SHA256=ON avoids the prebuilt Homebrew OpenSSL dependency."
+        },
+        {
+          "name": "CMake",
+          "version": "4.2.3",
+          "source": "https://github.com/Kitware/CMake/releases/tag/v4.2.3",
+          "note": "Isolated build tool, no global link."
+        }
+      ],
+      "receiving_machine_note": "This register records source versions, not installed state on another machine. Reverify hashes, native builds, host entries and selected fixtures there."
+    }
+  ]
+}

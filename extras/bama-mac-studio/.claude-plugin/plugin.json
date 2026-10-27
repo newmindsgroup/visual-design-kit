@@ -1,0 +1,12 @@
+{
+  "name": "bama-mac-studio",
+  "version": "1.0.0-adapted.1",
+  "description": "All 21 BAMA native Mac app skills, resources and templates, adapted with staged builds, isolated tests and project-owned design rules.",
+  "author": {
+    "name": "New Minds Group (adaptation); Dave Ebbelaar (upstream)"
+  },
+  "homepage": "https://github.com/newmindsgroup/visual-design-kit",
+  "repository": "https://github.com/newmindsgroup/visual-design-kit",
+  "license": "MIT",
+  "skills": "./skills/"
+}

@@ -1,15 +1,13 @@
 ---
 name: design-system
 description: >-
-  Build and run design systems: DTCG token architecture (primitive, semantic, component and brand tiers), light,
-  dark, high-contrast and multi-brand theming, Figma variables, libraries and Code Connect, component APIs with
-  accessibility contracts, documentation and Storybook, governance, semver and deprecation, and audits for
-  incremental adoption. Use when creating or changing tokens, theming a product or brand, building a component
-  library in code or Figma, writing component docs, or planning a design-system rollout.
+  Build design systems: DTCG tokens, light/dark/high-contrast and multi-brand themes, component APIs, state galleries,
+  semantic icon registries, Figma variables and Code Connect, documentation, semver and incremental adoption.
+  Use when creating tokens, theming products, building component libraries, writing docs or planning rollout.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:08:24 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:08:24 UTC"
+  version-timestamp: "2026-10-27 07:43:23 AST"
+  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
 ---
 
 # Design system
@@ -70,6 +68,7 @@ A good design system makes the brand's decisions once and compiles them everywhe
 
 ## References
 
+- [Component gallery](references/component-gallery.md): branded parts, semantic icon registry, forced states, grid probes and measured optical exceptions.
 - [Token architecture](references/token-architecture.md): DTCG format, tiers, naming, aliasing, modes, multi-brand, build and lint.
 - [Figma workflow](../figma-workflow/SKILL.md): hands-on token import, component build, push/pull and Code Connect through the Figma MCP server.
 - [Theming](references/theming.md): light, dark, high contrast, brands, density, platform outputs.

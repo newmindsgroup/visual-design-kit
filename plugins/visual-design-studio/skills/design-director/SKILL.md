@@ -8,8 +8,8 @@ description: >-
   and recommends one with a runner-up.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-23 11:25:07 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
+  version-timestamp: "2026-10-27 07:43:23 AST"
+  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
 ---
 
 # Design director
@@ -80,6 +80,8 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [Parallel exploration](references/parallel-exploration.md): one direction-explorer subagent per position in Claude Code and Cowork, the distinctness test on returns, single-context fallback for chat.
 - Atlas index and schema: `../../library/atlas/README.md`.
 - Calibration set of distinct directions: `../../library/examples/stylescapes/README.md`.
+- [Reference reconstruction](../reference-reconstruction/SKILL.md): reproduce supplied products before any requested adaptation.
+- [Icon design](../icon-design/SKILL.md): full icon families and application icon production.
 - Discipline skills: `brand-identity`, `typography`, `color`, `layout`, `imagery`, `motion`, `ux-design`, `ui-design`, `web-design`, `native-app-design`, `design-system`, `data-visualization`, `print-packaging-social`, `design-critique`, `figma-workflow` (any task naming Figma, Dev Mode or Code Connect).
 
 Catalog IDs covered: research, reference-direction, brand-strategy, design-taste, web-discovery, display-discovery, display-art-direction, web-art-direction, media-art-direction

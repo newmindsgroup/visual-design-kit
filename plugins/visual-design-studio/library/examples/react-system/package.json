@@ -40,11 +40,11 @@
     "@vitejs/plugin-react": "6.1.2",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vite": "8.3.2"
+    "vite": "8.3.4"
   },
   "license": "MIT",
   "designKitMetadata": {
-    "Version-Timestamp": "2026-10-20 02:52:00 UTC",
+    "Version-Timestamp": "2026-10-27 12:17:38 AST",
     "Agent-Attribution": "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:52:00 UTC"
   }
 }

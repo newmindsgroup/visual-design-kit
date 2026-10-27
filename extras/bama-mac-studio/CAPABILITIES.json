@@ -1,0 +1,133 @@
+{
+  "Version-Timestamp": "2026-10-27 07:48:17 AST",
+  "upstream_commit": "15356bd8ebff408222ad21395aea09bd74b15310",
+  "count": 21,
+  "skills": [
+    {
+      "name": "bama-agent-cli",
+      "stage": "code",
+      "path": "skills/bama-agent-cli",
+      "origin": "skills/code/agent-cli"
+    },
+    {
+      "name": "bama-app-brief",
+      "stage": "start",
+      "path": "skills/bama-app-brief",
+      "origin": "skills/start/app-brief"
+    },
+    {
+      "name": "bama-app-icon",
+      "stage": "design",
+      "path": "skills/bama-app-icon",
+      "origin": "skills/design/app-icon"
+    },
+    {
+      "name": "bama-build-and-verify",
+      "stage": "ship",
+      "path": "skills/bama-build-and-verify",
+      "origin": "skills/ship/build-and-verify"
+    },
+    {
+      "name": "bama-clone",
+      "stage": "plan",
+      "path": "skills/bama-clone",
+      "origin": "skills/plan/clone"
+    },
+    {
+      "name": "bama-design-from-app",
+      "stage": "design",
+      "path": "skills/bama-design-from-app",
+      "origin": "skills/design/design-from-app"
+    },
+    {
+      "name": "bama-design-kit",
+      "stage": "design",
+      "path": "skills/bama-design-kit",
+      "origin": "skills/design/design-kit"
+    },
+    {
+      "name": "bama-design-system",
+      "stage": "design",
+      "path": "skills/bama-design-system",
+      "origin": "skills/design/design-system"
+    },
+    {
+      "name": "bama-improve-architecture",
+      "stage": "code",
+      "path": "skills/bama-improve-architecture",
+      "origin": "skills/code/improve-architecture"
+    },
+    {
+      "name": "bama-improve-loop",
+      "stage": "ship",
+      "path": "skills/bama-improve-loop",
+      "origin": "skills/ship/improve-loop"
+    },
+    {
+      "name": "bama-layout-grid",
+      "stage": "design",
+      "path": "skills/bama-layout-grid",
+      "origin": "skills/design/layout-grid"
+    },
+    {
+      "name": "bama-mac-design",
+      "stage": "design",
+      "path": "skills/bama-mac-design",
+      "origin": "skills/design/mac-design"
+    },
+    {
+      "name": "bama-new-mac-app",
+      "stage": "start",
+      "path": "skills/bama-new-mac-app",
+      "origin": "skills/start/new-mac-app"
+    },
+    {
+      "name": "bama-os-integrations",
+      "stage": "code",
+      "path": "skills/bama-os-integrations",
+      "origin": "skills/code/os-integrations"
+    },
+    {
+      "name": "bama-performance",
+      "stage": "code",
+      "path": "skills/bama-performance",
+      "origin": "skills/code/performance"
+    },
+    {
+      "name": "bama-research",
+      "stage": "plan",
+      "path": "skills/bama-research",
+      "origin": "skills/plan/research"
+    },
+    {
+      "name": "bama-router",
+      "stage": "start",
+      "path": "skills/bama-router",
+      "origin": "skills/start/bama"
+    },
+    {
+      "name": "bama-swift-swiftui",
+      "stage": "code",
+      "path": "skills/bama-swift-swiftui",
+      "origin": "skills/code/swift-swiftui"
+    },
+    {
+      "name": "bama-test-mac-app",
+      "stage": "ship",
+      "path": "skills/bama-test-mac-app",
+      "origin": "skills/ship/test-mac-app"
+    },
+    {
+      "name": "bama-user-stories",
+      "stage": "plan",
+      "path": "skills/bama-user-stories",
+      "origin": "skills/plan/user-stories"
+    },
+    {
+      "name": "bama-ux-design",
+      "stage": "design",
+      "path": "skills/bama-ux-design",
+      "origin": "skills/design/ux-design"
+    }
+  ]
+}

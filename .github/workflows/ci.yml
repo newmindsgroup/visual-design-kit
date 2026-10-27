@@ -1,5 +1,5 @@
 # Visual Design Kit continuous integration
-# Version-Timestamp: 2026-10-23 13:05:00 AST
+# Version-Timestamp: 2026-10-27 12:21:23 AST
 # Third-party actions are pinned to major versions from GitHub's official `actions/` org.
 # For stricter supply-chain control, pin them to full commit SHAs.
 name: ci
@@ -36,6 +36,8 @@ jobs:
         run: PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
       - name: Packaging rules
         run: python tools/validate_plugin.py
+      - name: Optional toolkit integrity and host parity
+        run: python tools/build_toolkits.py --check
       - name: Claude skill mirror matches .agents/skills
         run: python tools/sync_agent_skills.py
       - name: Codex parity (manifest, versions, skills, agent fallback, mirror)
@@ -58,6 +60,33 @@ jobs:
           python tools/build_plugin.py --plugin-root plugins/visual-design-studio --source-root . --version "$VERSION" --timestamp "$STAMP" --check
           (cd plugins/visual-design-studio && sha256sum -c PAYLOAD.sha256 --quiet)
 
+  native-template:
+    name: BAMA native template build
+    runs-on: macos-26
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v5
+      - name: Toolchain and helper regressions
+        run: |
+          xcrun swift --version
+          PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s extras/bama-mac-studio/tests -v
+      - name: Fresh template build and core tests
+        run: |
+          python3 extras/bama-mac-studio/skills/bama-new-mac-app/scripts/scaffold.py ToolkitProbe com.example.toolkitprobe "$RUNNER_TEMP"
+          cd "$RUNNER_TEMP/ToolkitProbe"
+          ./build.sh | tee "$RUNNER_TEMP/bama-template-build.log"
+          swift test
+          tools/icon_review.sh "$RUNNER_TEMP/toolkit-icon-contact-sheet.png"
+          BAMA_BINARY=$(sed -n 's/^STAGED_BINARY=//p' "$RUNNER_TEMP/bama-template-build.log")
+          python3 tools/run_checks.py selftest "$BAMA_BINARY" --timeout 90
+      - name: Compile optional app CLI and MCP adapter
+        run: |
+          zsh extras/bama-mac-studio/skills/bama-agent-cli/scripts/add-agent-cli.sh "$RUNNER_TEMP/ToolkitProbe" toolkit-probe
+          cd "$RUNNER_TEMP/ToolkitProbe"
+          ./build.sh --no-icon
+
   claude-plugin:
     name: Claude plugin validation
     runs-on: ubuntu-latest
@@ -73,6 +102,8 @@ jobs:
           claude plugin validate .
           claude plugin validate plugins/visual-design-studio
           claude plugin validate extras/astro-website-studio
+          claude plugin validate extras/bama-mac-studio
+          claude plugin validate extras/rea-toolkit
 
   examples:
     name: Example builds and unit tests
@@ -86,6 +117,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/astro-motion
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
           npm run build
       - name: Screen production player tests
@@ -100,6 +132,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/motion-remotion
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
           npx tsc --noEmit
       - name: Portable Lottie examples current
@@ -108,6 +141,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/deck-pptx
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
 
   react-system:
@@ -123,6 +157,8 @@ jobs:
           node-version: "22"
       - name: Install (lockfile)
         run: npm ci
+      - name: Audit locked dependencies
+        run: npm audit --ignore-scripts
       - name: Token copies match library/tokens/dist
         run: node scripts/sync-tokens.mjs --check
       - name: Unit tests and type check

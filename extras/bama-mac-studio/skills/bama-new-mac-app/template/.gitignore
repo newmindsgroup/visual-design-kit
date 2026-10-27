@@ -1,0 +1,7 @@
+# Version-Timestamp: 2026-10-27 07:53:44 AST
+.build/
+.swiftpm/
+__pycache__/
+*.pyc
+docs/screens/*.png
+design/reference/*.png

@@ -1,6 +1,6 @@
 # From chosen direction to production
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-10-27 07:43:23 AST
 
 Once a direction is chosen, lock it into tokens and route each deliverable to the skill that owns it. Keep the decision traceable.
 
@@ -25,12 +25,14 @@ See the `design-system` skill for token architecture, theming and Figma.
 | Type system | `typography` | Scale, pairings, specimens in the target media |
 | Color system | `color` | Ramps, semantic roles, dark mode, contrast table |
 | Grids and composition | `layout` | Grid specs per breakpoint or format |
-| Icons, illustration, photo, AI imagery | `imagery` | Icon grid and style sheet, shot list or illustration rules |
+| UI icon family or app icon | `icon-design` | Semantic registry, optical variants, editable source and appearance contact sheet |
+| Illustration, photo, AI imagery | `imagery` | Shot list or illustration rules |
 | Motion language and video | `motion` | Motion tokens and 3-5 signature moments; finished video and Lottie per the [production pipeline](../../motion/references/production-pipeline.md) |
 | Research, IA, flows | `ux-design` | Flows and IA validated with users when possible |
 | Screens and components | `ui-design` | State-complete components and key screens |
 | Website | `web-design` | Page architecture, responsive layouts, performance budget |
-| iOS/Android app | `native-app-design` | Platform-correct screens and handoff |
+| macOS/iOS/Android app | `native-app-design` | Platform-correct screens and handoff |
+| Reference app or site reconstruction | `reference-reconstruction` | Observed screens, states, measurements and matched-condition comparisons |
 | Design system | `design-system` | Token build, component API, documentation |
 | Charts and infographics | `data-visualization` | Chart choices and data palette |
 | Print, packaging, social, decks, email, sales and marketing collateral | `print-packaging-social` | Finished files: print master PDF plus a Canva editable twin ([pipeline](../../print-packaging-social/references/print-production-pipeline.md), [Canva handoff](../../print-packaging-social/references/canva-handoff.md)); decks from the [PPTX example](../../../library/examples/deck-pptx/README.md) |

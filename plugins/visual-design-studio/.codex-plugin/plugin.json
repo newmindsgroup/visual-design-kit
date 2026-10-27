@@ -1,6 +1,6 @@
 {
   "name": "visual-design-studio",
-  "version": "0.8.0",
+  "version": "0.9.1",
   "description": "Design anything: a design director, a Design Space Atlas of styles, industries, markets, audiences, archetypes, price tiers and channels, discipline skills with concrete defaults, DTCG tokens and a render-and-critique loop, plus independent brand-project continuity.",
   "author": {
     "name": "New Minds Group"
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Visual Design Studio",
     "shortDescription": "Brand, product and motion design",
-    "longDescription": "A design director that turns a brief into scored, rendered directions; a 125-entry Design Space Atlas; 14 discipline skills with concrete defaults; DTCG tokens with contrast linting; a React reference system; and a render-and-critique quality loop. Supervised evaluation; client and device acceptance remain project-specific.",
+    "longDescription": "A design director that turns a brief into scored, rendered directions; a 125-entry Design Space Atlas; 16 discipline skills with concrete defaults; DTCG tokens with contrast linting; a React reference system; and a render-and-critique quality loop. Supervised evaluation; client and device acceptance remain project-specific.",
     "developerName": "New Minds Group",
     "category": "Productivity",
     "defaultPrompt": [
@@ -19,5 +19,5 @@
     ],
     "capabilities": []
   },
-  "Version-Timestamp": "2026-10-23 16:19:27 UTC"
+  "Version-Timestamp": "2026-10-27 07:47:24 AST"
 }
