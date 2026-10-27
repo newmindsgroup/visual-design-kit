@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-27 09:23:35 AST",
-  "candidate": "0.9.0",
+  "Version-Timestamp": "2026-10-27 12:25:37 AST",
+  "candidate": "0.9.1",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.9.0"
+    "version": "0.9.1"
   },
   "distribution_scope": "public",
   "files": [
@@ -2404,7 +2404,7 @@
     },
     {
       "destination": "examples/astro-motion/README.md",
-      "sha256": "0d8f682522b4e94b5e2f53b215d6dc36c827c9526f402b1bb19325951b914cf5",
+      "sha256": "8b45271aeab89f704f935c425b7ef63257a547fae73fc766dbf3f3f01c28e024",
       "source": "curated-plugin-source/examples/astro-motion/README.md",
       "status": "versioned-evaluation-input"
     },
@@ -2416,13 +2416,13 @@
     },
     {
       "destination": "examples/astro-motion/package-lock.json",
-      "sha256": "d37ca24f3a2821e23480c2aefb207cd812bacb84cc57f44b4caf093bda98f6c8",
+      "sha256": "83b6395b4603fac31cf4d8bd764fa052577657715988e621d983a6cdef996102",
       "source": "curated-plugin-source/examples/astro-motion/package-lock.json",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/astro-motion/package.json",
-      "sha256": "b93ac9a0266b1d2546fc1bd756c61d20999c45367ca0e97fe371dbdeb86237ec",
+      "sha256": "6f5161b5ec3610f00c69ff3cded58267c9cea8accc37c7a256916cc67e4bf72e",
       "source": "curated-plugin-source/examples/astro-motion/package.json",
       "status": "versioned-evaluation-input"
     },
@@ -2842,13 +2842,13 @@
     },
     {
       "destination": "examples/deck-pptx/package-lock.json",
-      "sha256": "e488b39bbcbb234b3fc6956b9619a79b92f7d16aa19b7703279cb5e4e88d7136",
+      "sha256": "a1f751d53715ee6963834012d28a84cefc93f32d48afeeeb89ab4f10e397fd83",
       "source": "curated-plugin-source/examples/deck-pptx/package-lock.json",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/deck-pptx/package.json",
-      "sha256": "42aa8f217e49b201c2c32a2411e43228106eeb390af815ffd9be0d7b081e0b7e",
+      "sha256": "ec68da51d17fd1a1fbe7cde5297be6be62597b7e51e720d3c6e0a6fcf950db82",
       "source": "curated-plugin-source/examples/deck-pptx/package.json",
       "status": "versioned-evaluation-input"
     },
@@ -2974,13 +2974,13 @@
     },
     {
       "destination": "examples/motion-remotion/package-lock.json",
-      "sha256": "94bdc7a115d96750ed8ba11002d2e46879448765bed5c31ce85a7c71f2236711",
+      "sha256": "10b0889736908b3dc866876a165b0a8ccf7f693d36912348d2c7be78d29cddcc",
       "source": "curated-plugin-source/examples/motion-remotion/package-lock.json",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/motion-remotion/package.json",
-      "sha256": "28731086e3c956fc11c1af37bb3c7e9aed6cfbaba996b7fc5d0b63b9636c9acd",
+      "sha256": "7abb7b757600812751704b30f13e5ede7a4e4dec9d43aaebcba0464f7ad4cf2b",
       "source": "curated-plugin-source/examples/motion-remotion/package.json",
       "status": "versioned-evaluation-input"
     },
@@ -3406,13 +3406,13 @@
     },
     {
       "destination": "examples/react-system/package-lock.json",
-      "sha256": "2224cc774b16d474d4caad6a5372cfe4ac9e81da7bb73ce18111c5a5d32903b6",
+      "sha256": "0f3192bd53863b15dd17e34140dbd74ae804f858658ea6911b6e67660c95d643",
       "source": "curated-plugin-source/examples/react-system/package-lock.json",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/react-system/package.json",
-      "sha256": "d5d44f107399e3be39b8953b6b96e8545821b937898749a30a981348ec1e8840",
+      "sha256": "4259517cd5d7c74800cd58fb3e4df74d344e1f1499cd8ab3d884a531861bcae9",
       "source": "curated-plugin-source/examples/react-system/package.json",
       "status": "versioned-evaluation-input"
     },

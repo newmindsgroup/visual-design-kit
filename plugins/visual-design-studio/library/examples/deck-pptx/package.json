@@ -18,7 +18,10 @@
   },
   "license": "MIT",
   "designKitMetadata": {
-    "Version-Timestamp": "2026-10-23 20:10:44 UTC",
+    "Version-Timestamp": "2026-10-27 12:17:38 AST",
     "Agent-Attribution": "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:10:44 UTC"
+  },
+  "overrides": {
+    "image-size": "2.0.3"
   }
 }

@@ -1,6 +1,6 @@
 # Native apps and reverse engineering toolkits
 
-Version-Timestamp: 2026-10-27 09:40:02 AST
+Version-Timestamp: 2026-10-27 12:38:31 AST
 
 Agent-Attribution: computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:39:56 AST
 
@@ -118,6 +118,43 @@ nmg-rea setup --client codex --client claude_code --skill=false --yes
 optional Hopper-install flag unless it is part of the selected setup. Preserve
 unrelated MCP entries. Record the exact launcher, package integrity, lockfile,
 audit, backup and readback on the receiving machine. Machine paths stay local.
+
+## Complete the free Mac provider baseline
+
+Use isolated official Frida, Ghidra, JDK21 and WABT releases from the
+[version register](../resources/toolchains.json). Verify their release hashes and
+licenses on the receiving machine. Native Node bindings must match OS, CPU and
+runtime ABI. Do not enable every npm lifecycle script to repair one missing binding.
+
+Ghidra12.1.4 needs JDK21 and a working decompiler for the host architecture. Its
+arm64 decompiler was compiled locally on the authoring Mac. WABT1.0.42's macOS
+prebuilt required a missing Homebrew OpenSSL library; building its required reader
+targets with `USE_INTERNAL_SHA256=ON` avoided a global library installation.
+Keep the source/build record and test actual reader output.
+
+Set only these variables in both selected REA MCP entries, using absolute paths
+on the receiving machine. Retain the exact Node/REA launch command, output profile,
+timeouts and unrelated settings. A CLI launcher may default to the same owned
+paths while honoring explicit environment overrides.
+
+```json
+{
+  "GHIDRA_INSTALL_DIR": "/absolute/ghidra-install-directory",
+  "JAVA_HOME": "/absolute/jdk/Contents/Home",
+  "REA_WABT_BIN_DIRECTORY": "/absolute/wabt-bin-directory"
+}
+```
+
+Start a fresh session or reconnect the REA server after changing launch variables.
+An existing server process keeps its previous environment. Verify a fresh process
+with an owned native binary, a small WASM artifact and explicit session closure.
+Browser work should use a declared temporary profile/loopback fixture. Instrument
+only an explicitly selected owned process during setup validation.
+
+This baseline supports Mac, browser, JavaScript, native and WASM investigations.
+Hopper, IDA, JEB and other paid alternatives remain separate selections. Mobile
+devices and Linux-only adapters are target/platform prerequisites. Tool discovery
+does not imply those environments or accounts exist.
 
 ## Verification and boundaries
 

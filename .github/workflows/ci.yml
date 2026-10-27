@@ -1,5 +1,5 @@
 # Visual Design Kit continuous integration
-# Version-Timestamp: 2026-10-27 07:51:01 AST
+# Version-Timestamp: 2026-10-27 12:21:23 AST
 # Third-party actions are pinned to major versions from GitHub's official `actions/` org.
 # For stricter supply-chain control, pin them to full commit SHAs.
 name: ci
@@ -117,6 +117,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/astro-motion
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
           npm run build
       - name: Screen production player tests
@@ -131,6 +132,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/motion-remotion
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
           npx tsc --noEmit
       - name: Portable Lottie examples current
@@ -139,6 +141,7 @@ jobs:
         working-directory: plugins/visual-design-studio/library/examples/deck-pptx
         run: |
           npm ci
+          npm audit --ignore-scripts
           npm test
 
   react-system:
@@ -154,6 +157,8 @@ jobs:
           node-version: "22"
       - name: Install (lockfile)
         run: npm ci
+      - name: Audit locked dependencies
+        run: npm audit --ignore-scripts
       - name: Token copies match library/tokens/dist
         run: node scripts/sync-tokens.mjs --check
       - name: Unit tests and type check

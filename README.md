@@ -4,9 +4,9 @@
 
 **Make Codex and Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.9.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.9.1 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-10-27 07:47:24 AST
+Version-Timestamp: 2026-10-27 12:21:23 AST
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -95,6 +95,8 @@ flowchart LR
 ```
 
 Directions must differ on at least three of six axes (type, palette, layout logic, imagery, motion, voice). Scores use weight presets for launches, regulated industries, rebrands and product UI, and the sensitivity check names the criterion that would flip the decision. See the [worked example](plugins/visual-design-studio/skills/design-director/references/worked-example.md).
+
+Dependency remediation and machine setup: [0.9.1 acceptance](docs/RELEASE-091.md).
 
 ## Native Mac and reverse engineering companions (0.9.0)
 
