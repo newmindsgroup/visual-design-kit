@@ -1,0 +1,14 @@
+{
+  "name": "nmg-rea-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated REA6.8.0 runtime for Codex and Claude Code",
+  "version_timestamp": "2026-10-27 07:37:41 AST",
+  "dependencies": {
+    "rea-agents": "6.8.0"
+  },
+  "overrides": {
+    "fast-uri": "3.1.9",
+    "zod": "4.6.6"
+  }
+}

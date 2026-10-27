@@ -27,3 +27,9 @@ The stylescape brands (Vibra, Little Harbor, Kiyomi House, Gridline, STATIC, Fin
 Links and bibliographic references identify external sources. No license to a linked website, standard, repository, trademark, book or provider service follows from this repository's MIT license. Upstream assets and substantial source excerpts are not included. Consult the source's own terms if you want to copy its material.
 
 Original books, private extraction bundles, filled client records, private source presentations, account credentials and licensed provider subscriptions are excluded. A separately obtained local reference library stays under its own access and reuse terms. Optional retrieval tools do not grant access or redistribute that library. Generic persona and component taxonomies abstract user-supplied examples; their source-specific layouts, brand data and imagery are excluded.
+
+## BAMA and REA adaptations
+
+Version-Timestamp: 2026-10-27 07:43:23 AST
+
+Native design, icon and reconstruction methods adapt MIT-licensed BAMA and REA. Complete notices and source pins are packaged in [design method provenance](plugins/visual-design-studio/library/knowledge/third-party/README.md). Optional full workflow companions live under `extras/bama-mac-studio` and `extras/rea-toolkit`; retain each companion's LICENSE and provenance records. No upstream trademark or asset rights follow from these code licenses.

@@ -48,3 +48,14 @@ Which eval cases to re-run after editing a skill, and where the knowledge each c
 | `no-fire-ffmpeg-extract-audio` | every skill's `description` | None: no skill may load |
 
 Atlas entries are shared: after editing one, re-run every case whose row names it.
+
+## Native and reconstruction cases
+
+Version-Timestamp: 2026-10-27 07:51:01 AST
+
+| Case | Owner | Concrete evidence contract |
+| --- | --- | --- |
+| reconstruct-unknown-scale | reference-reconstruction | observation-to-spec: unknown scale and interactions stay unknown |
+| reference-adapt-locked-brand | reference-reconstruction, design-system | project locks and state-complete gallery |
+| icon-family-optical-and-native | icon-design | optical variants, semantic registry and compiled icon prerequisites |
+| macos-project-locked-baseline | native-app-design | existing OS baseline, surfaces, keyboard and actual toolchain failures |

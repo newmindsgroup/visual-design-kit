@@ -1,5 +1,5 @@
 {
-  "Version-Timestamp": "2026-10-14 11:13:07 AST",
+  "Version-Timestamp": "2026-10-27 07:43:23 AST",
   "schema_version": "1.0-proposed",
   "mode": "instruction-dependencies-only",
   "capabilities": [
@@ -954,6 +954,27 @@
       "id": "google-docs-editorial",
       "entry": "draft-skills/design-google-docs/SKILL.md",
       "depends_on": []
+    },
+    {
+      "id": "icon-design",
+      "entry": "draft-skills/design-icon-design/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
+    },
+    {
+      "id": "reference-reconstruction",
+      "entry": "draft-skills/design-reference-reconstruction/SKILL.md",
+      "depends_on": [
+        "research"
+      ]
+    },
+    {
+      "id": "macos-app",
+      "entry": "draft-skills/design-macos-app/SKILL.md",
+      "depends_on": [
+        "ui"
+      ]
     }
   ]
 }

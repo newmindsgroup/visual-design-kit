@@ -163,3 +163,9 @@ Every case parses and runs. A skill loaded in 9 of 9 design cases, and the no-fi
 
 Next: triage each failing grader with the eval loop (kit gap or grader too strict), then `--runs 3 --ablation with-without`.
 
+
+## Native and reconstruction adoption cases
+
+Version-Timestamp: 2026-10-27 07:41:35 AST
+
+Added `reconstruct-unknown-scale`, `icon-family-optical-and-native`, `macos-project-locked-baseline` and `reference-adapt-locked-brand`. They test evidence limits, optical geometry, compiled-icon prerequisites, existing macOS support, project locks and state galleries. The cases are versioned regression specifications. They have not yet established measured model lift. The paid eval harness is not run by this adoption.

@@ -1,7 +1,7 @@
 {
   "name": "visual-design-studio",
-  "version": "0.8.0",
-  "description": "Design anything with Claude: a design director that turns a brief into scored directions, a Design Space Atlas of styles, industries, markets, audiences, archetypes, price tiers and channels, discipline skills with concrete defaults, DTCG design tokens and a render-and-critique quality loop.",
+  "version": "0.9.0",
+  "description": "Design anything with Codex and Claude: a design director that turns a brief into scored directions, a Design Space Atlas of styles, industries, markets, audiences, archetypes, price tiers and channels, discipline skills with concrete defaults, DTCG design tokens and a render-and-critique quality loop.",
   "author": {
     "name": "New Minds Group",
     "url": "https://github.com/newmindsgroup"
@@ -9,5 +9,18 @@
   "homepage": "https://github.com/newmindsgroup/visual-design-kit",
   "repository": "https://github.com/newmindsgroup/visual-design-kit",
   "license": "MIT",
-  "keywords": ["design", "brand identity", "typography", "color", "ux", "ui", "web design", "app design", "design systems", "design tokens", "motion design", "graphic design"]
+  "keywords": [
+    "design",
+    "brand identity",
+    "typography",
+    "color",
+    "ux",
+    "ui",
+    "web design",
+    "app design",
+    "design systems",
+    "design tokens",
+    "motion design",
+    "graphic design"
+  ]
 }

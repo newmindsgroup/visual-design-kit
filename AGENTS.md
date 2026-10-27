@@ -1,6 +1,6 @@
 # Visual Design Kit: maintainer instructions
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-10-27 07:51:01 AST
 
 This repository is a public, MIT-licensed design plugin marketplace for **Claude** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`). The main plugin is `plugins/visual-design-studio/`. These instructions are for working **on** the kit, in either tool. Projects that **use** the kit install the plugin; they never edit this repo.
 
@@ -39,6 +39,7 @@ Both tools work in the same local clone. Keep one source of truth and no drift:
 
 ```sh
 python3 tools/validate_plugin.py
+python3 tools/build_toolkits.py --check                                  # optional BAMA and REA integrity/host parity
 python3 plugins/visual-design-studio/library/scripts/atlas.py validate --complete
 python3 plugins/visual-design-studio/library/scripts/atlas.py build      # if any atlas entry changed
 (cd plugins/visual-design-studio/library && python3 scripts/tokens.py build && python3 scripts/tokens.py lint)

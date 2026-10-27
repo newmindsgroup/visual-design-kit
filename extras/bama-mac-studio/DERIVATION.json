@@ -1,0 +1,1227 @@
+{
+  "Version-Timestamp": "2026-10-27 09:23:35 AST",
+  "source": {
+    "repository": "https://github.com/daveebbelaar/bama",
+    "commit": "15356bd8ebff408222ad21395aea09bd74b15310",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2026 Dave Ebbelaar"
+  },
+  "adapter": {
+    "computer": "NMG-MBP-M5",
+    "tool": "Codex",
+    "version": "0.160.0"
+  },
+  "skills": {
+    "count": 21,
+    "names": [
+      "bama-agent-cli",
+      "bama-app-brief",
+      "bama-app-icon",
+      "bama-build-and-verify",
+      "bama-clone",
+      "bama-design-from-app",
+      "bama-design-kit",
+      "bama-design-system",
+      "bama-improve-architecture",
+      "bama-improve-loop",
+      "bama-layout-grid",
+      "bama-mac-design",
+      "bama-new-mac-app",
+      "bama-os-integrations",
+      "bama-performance",
+      "bama-research",
+      "bama-router",
+      "bama-swift-swiftui",
+      "bama-test-mac-app",
+      "bama-user-stories",
+      "bama-ux-design"
+    ]
+  },
+  "omitted_non_capability_assets": [
+    "docs/assets/banner-dark.png",
+    "docs/assets/banner-light.png"
+  ],
+  "validation": {
+    "scaffold_and_runner_cases": 6,
+    "standalone_swift_helpers_compiled": 3,
+    "synthetic_swift_cli_cases": 11,
+    "swift6_preference_isolation_cases": 1,
+    "full_native_app_build": "failed: missing SwiftUIMacros and SwiftDataMacros under selected CommandLineTools",
+    "native_app_selftest": "not_run_build_prerequisite",
+    "native_cli_mcp_runtime": "not_run_build_prerequisite",
+    "install_rollback": "source_inspected_not_executed",
+    "icon_composer": "toolchain_unavailable",
+    "preferences_isolation": "standalone Swift 6 adapter test passed: isolated suite, production domain unchanged, normal cleanup verified; full SwiftUI runtime pending",
+    "independent_source_repair_tests": 77
+  },
+  "files": [
+    {
+      "path": ".claude-plugin/icon.png",
+      "sha256": "2bd29dfc0eea0a4023f74b3852a0e84c700a02076ec8f4eed59b66cbd9d51c3d",
+      "origin_path": ".claude-plugin/icon.png",
+      "origin_sha256": "2bd29dfc0eea0a4023f74b3852a0e84c700a02076ec8f4eed59b66cbd9d51c3d",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "sha256": null,
+      "origin_path": ".claude-plugin/marketplace.json",
+      "origin_sha256": "69abe18ce1854f3f218b694956a0045b347796f732229c62d3dd8bccce7a9511",
+      "derivation": "omitted-parent-marketplace",
+      "Version-Timestamp": "2026-10-27 07:54:41 AST"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "701a119c487f8793d6f51528fdc14307680eb56d9ccd57b46ba3b29cf20be4b2",
+      "origin_path": ".claude-plugin/plugin.json",
+      "origin_sha256": "93009c5c9257383caf2cb997811a57cf20d79c878e1d0331700ee7b100247984",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": ".claude/CLAUDE.md",
+      "sha256": "5a55351b6821fc3816e4cd4738d7c7f4924196e6bc626e9ec7035b4c7fdb8988",
+      "origin_path": ".claude/CLAUDE.md",
+      "origin_sha256": "2ce5b685c4fd47d3dedde63ad11d1a8f2ec5ecab052651872ce9b71c3c126d50",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "fcf7f0702cc92433a136745ae5622ad80969949dcc0fceb5783d6eaba667a8ce",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "parent-host-manifest",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "9b8d3d4cc2a74c712a023ce92f04db60fc2057961f75861b1c3338da6a17690a",
+      "origin_path": ".gitignore",
+      "origin_sha256": "9b8d3d4cc2a74c712a023ce92f04db60fc2057961f75861b1c3338da6a17690a",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "ADAPTATION.md",
+      "sha256": "6fd9d81a9697e157712c852e877bd2b0313e222083611ba29a17d1c9ac59ed4d",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "5a55351b6821fc3816e4cd4738d7c7f4924196e6bc626e9ec7035b4c7fdb8988",
+      "origin_path": "AGENTS.md",
+      "origin_sha256": "2ce5b685c4fd47d3dedde63ad11d1a8f2ec5ecab052651872ce9b71c3c126d50",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "CAPABILITIES.json",
+      "sha256": "e89bcc49ad5ba506e3304bf51038891f43954209f5dea8dd9b966f064ccab3b3",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a7161a15136a8849f39038e9cb983f391ff86e2983b0ab51884ceee0cd1fce6b",
+      "origin_path": "LICENSE",
+      "origin_sha256": "a7161a15136a8849f39038e9cb983f391ff86e2983b0ab51884ceee0cd1fce6b",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6bd339987c3fe78878aba77fcfedf53bc249dde3f14d1524f0e4723d6364de67",
+      "origin_path": "README.md",
+      "origin_sha256": "92e3bc473d1d56be825e28809fc1925c08c4e5b4f3a93e39c1d9869553bfecc0",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "scripts/link-skills.sh",
+      "sha256": "aa8690bf4dcc794a0af36eed776c4e5d054176403fd72c16c5539f0817c64926",
+      "origin_path": "scripts/link-skills.sh",
+      "origin_sha256": "248efe7e855ebe8db543df0a85b5fa9c4af1055675c10f74e12790435db1e4a8",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/SKILL.md",
+      "sha256": "1c998a87a05c09abea131a5fd161cbe6362a161574acae6a340b88aebdabbfd1",
+      "origin_path": "skills/code/agent-cli/SKILL.md",
+      "origin_sha256": "e7ef0e6a94b2c6a280fd8bc465be6167ef9d5aebea12d9d9657234c5b0d0adb5",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/agents/openai.yaml",
+      "sha256": "375a45bd06e30454780e5b0dbf7fed8de7d60bdc7fbb465766a3a90de3082b94",
+      "origin_path": "skills/code/agent-cli/agents/openai.yaml",
+      "origin_sha256": "375a45bd06e30454780e5b0dbf7fed8de7d60bdc7fbb465766a3a90de3082b94",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/rules.md",
+      "sha256": "22c7e141b723c12b386171f9d5a252e36cda7c952d56175064f63b0d444c4748",
+      "origin_path": "skills/code/agent-cli/rules.md",
+      "origin_sha256": "22c7e141b723c12b386171f9d5a252e36cda7c952d56175064f63b0d444c4748",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/scripts/add-agent-cli.sh",
+      "sha256": "69c19be093317fe6a4e26a97a7d171c05d6f835a488af51d06b96d27b92d18fc",
+      "origin_path": "skills/code/agent-cli/scripts/add-agent-cli.sh",
+      "origin_sha256": "985db14044cfc8a45c46e6c13b92a3ba134175aa397a841fabc1ef61d98bdc38",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/scripts/add_cli.py",
+      "sha256": "c4bd9e61d16fa82e6f2c49da2a5ccce9ca2c82c0bd9a07b83600c2c80249c326",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/scripts/check-agent-cli.sh",
+      "sha256": "f8c46a929cb8f9945956e02af4a1ed07f0ee8d0640cd4a61086e0470f0fed71c",
+      "origin_path": "skills/code/agent-cli/scripts/check-agent-cli.sh",
+      "origin_sha256": "ec26eda319e1c31ab0237170fd1ea60fe0d7811bd5777598a0e21d9dbddc8bb3",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/scripts/check_cli.py",
+      "sha256": "3d8877d1151990f1088eedd2e9fa31e19850d06c7b1ae1901decb765ef8836b3",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/teach-agents.md",
+      "sha256": "228719fd03c7b0a0f4b51c6ee5ba99bc28cd373ab2de512672b817215c11157d",
+      "origin_path": "skills/code/agent-cli/teach-agents.md",
+      "origin_sha256": "d356465dd2cae538cab223c99dc335e4e6272d9baf47578c2c026893c73df448",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Agent/AgentCLI.swift",
+      "sha256": "09c82b124f510b3e2426f557f0146b27761a990e4f4b1f19b71d8f1d4ed42a81",
+      "origin_path": "skills/code/agent-cli/template/Agent/AgentCLI.swift",
+      "origin_sha256": "09c82b124f510b3e2426f557f0146b27761a990e4f4b1f19b71d8f1d4ed42a81",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Agent/AgentCommands.swift",
+      "sha256": "5c1f9bc5d3371f8fad01e5c2492be6141c3f17dba5df8f09a53dbbf8cdcaca25",
+      "origin_path": "skills/code/agent-cli/template/Agent/AgentCommands.swift",
+      "origin_sha256": "b7feee2e15fda1da45bda6157dad3f91a60e7b853fcea9b9a7d6b4cde7cddb37",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Agent/AgentCore.swift",
+      "sha256": "05ec771f68c93796746e9fb105187c4d39ebfe708c887cdac8baf2139ec80223",
+      "origin_path": "skills/code/agent-cli/template/Agent/AgentCore.swift",
+      "origin_sha256": "6b6821663ecc9903dbf34c7e7a900a5418e6613abcb88c705e857369e7dc9165",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Agent/AgentMCP.swift",
+      "sha256": "c26381f72f5ecb277c4deebc4b6b1531c96c44329ebf682733c28b125df44578",
+      "origin_path": "skills/code/agent-cli/template/Agent/AgentMCP.swift",
+      "origin_sha256": "b70ca86215f098334ab96e432cf7dd7b5870225d539caba616842dafc284ae28",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Agent/AgentSocket.swift",
+      "sha256": "474afacfb4b56f823cae242a6e2dab44dc2ae2091f08e3ca9cdd029825badce3",
+      "origin_path": "skills/code/agent-cli/template/Agent/AgentSocket.swift",
+      "origin_sha256": "7b33675ff4a4dd4abf8efbc4eb4c9303d8e285a2d0e938037537ff16a1a37f19",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-agent-cli/template/Main.swift",
+      "sha256": "8383f503513f61b0f840ae2c6f5a26389beb70b517ca3a1706f2de639f3449d9",
+      "origin_path": "skills/code/agent-cli/template/Main.swift",
+      "origin_sha256": "8383f503513f61b0f840ae2c6f5a26389beb70b517ca3a1706f2de639f3449d9",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-app-brief/SKILL.md",
+      "sha256": "f96e25defb1afc5a29700bcf0262452b9c5c4bafb267e0c7c4f51b04db0e62fe",
+      "origin_path": "skills/start/app-brief/SKILL.md",
+      "origin_sha256": "26e7a08946cc8a8b83a0ffdb1398d4ede23fde3afc303c33401a81c0e9cff719",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-app-brief/agents/openai.yaml",
+      "sha256": "94f098d49894cd197af706e214d9380c7b6081a93e3a75d860bfb112dd99869c",
+      "origin_path": "skills/start/app-brief/agents/openai.yaml",
+      "origin_sha256": "94f098d49894cd197af706e214d9380c7b6081a93e3a75d860bfb112dd99869c",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-app-icon/SKILL.md",
+      "sha256": "634647667062deb88b7f6a9a6afdc16f70391f01b486c455fe7f5b5b315fa433",
+      "origin_path": "skills/design/app-icon/SKILL.md",
+      "origin_sha256": "9077ecc21729e366a6f62d6bbf1514ac44372b10203e44fb5e9afa38e56ecc81",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-app-icon/agents/openai.yaml",
+      "sha256": "a959df15172b702c19436597ab69ce388387d14f23c87f9a1589fdc46b3709f1",
+      "origin_path": "skills/design/app-icon/agents/openai.yaml",
+      "origin_sha256": "a959df15172b702c19436597ab69ce388387d14f23c87f9a1589fdc46b3709f1",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-app-icon/more-cases.md",
+      "sha256": "52c1cb574e3efd81b971294d94de9a2e08ae8623be88e8067cf2718e786ce637",
+      "origin_path": "skills/design/app-icon/more-cases.md",
+      "origin_sha256": "52c1cb574e3efd81b971294d94de9a2e08ae8623be88e8067cf2718e786ce637",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-build-and-verify/SKILL.md",
+      "sha256": "80b296a38488b3d56dbc12babbcab092949596ddcef37aa2a56e66011953d867",
+      "origin_path": "skills/ship/build-and-verify/SKILL.md",
+      "origin_sha256": "0b5bcb4c27917b9b97aa049e35ed48a7b2a9c21028dd1573099c0c456b67d656",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-build-and-verify/agents/openai.yaml",
+      "sha256": "73f845097946ec38a4350653791f51641e28ee6587646ac6ca48cdae9edc8af7",
+      "origin_path": "skills/ship/build-and-verify/agents/openai.yaml",
+      "origin_sha256": "73f845097946ec38a4350653791f51641e28ee6587646ac6ca48cdae9edc8af7",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-build-and-verify/existing-app.md",
+      "sha256": "e1d0714e4e7640c6ba0133aa78fbcc7636f2eb5949cd16138cd9bfb87ccbfa08",
+      "origin_path": "skills/ship/build-and-verify/existing-app.md",
+      "origin_sha256": "80c29d5319db730c3f46f8037553ed282c65767b680f308950b3403c47c9f902",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-clone/SKILL.md",
+      "sha256": "e6615ee59af62a4aafb580026585b3c7339bd1e5e728bfff9c61f9ea50edae22",
+      "origin_path": "skills/plan/clone/SKILL.md",
+      "origin_sha256": "56855d7b2af2372f9c00a777c20b94ebf34bfc5c3d477e29eb3cd9bda5b1f1db",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-clone/agents/openai.yaml",
+      "sha256": "57605d7f63d2a3bb1aeeba0877eb08a6d5d69ccbf19b4a45f845e2c84e852dd9",
+      "origin_path": "skills/plan/clone/agents/openai.yaml",
+      "origin_sha256": "57605d7f63d2a3bb1aeeba0877eb08a6d5d69ccbf19b4a45f845e2c84e852dd9",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-clone/scripts/window-shot.sh",
+      "sha256": "80e85f02fb7637e8c086dec73aaee115efca7dfeedf42917bbc3ebda3e4db4ca",
+      "origin_path": "skills/plan/clone/scripts/window-shot.sh",
+      "origin_sha256": "80e85f02fb7637e8c086dec73aaee115efca7dfeedf42917bbc3ebda3e4db4ca",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-from-app/SKILL.md",
+      "sha256": "5b645f215d706ace1f6a3b1d0478c7a5348c4cf37766d39de99d89a387784414",
+      "origin_path": "skills/design/design-from-app/SKILL.md",
+      "origin_sha256": "d4482a8ae58827266288313a2acd5d06d944013c83456f824607a19947e02511",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-from-app/agents/openai.yaml",
+      "sha256": "825dd51530ada05adb1f2da39c09ef77d5bb0ba7be33a12f78336f4011e85c40",
+      "origin_path": "skills/design/design-from-app/agents/openai.yaml",
+      "origin_sha256": "825dd51530ada05adb1f2da39c09ef77d5bb0ba7be33a12f78336f4011e85c40",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-from-app/measuring.md",
+      "sha256": "3530fe9b130eedc375858241d57b7f5f22ed65ce251630e3a829b1d42563fd42",
+      "origin_path": "skills/design/design-from-app/measuring.md",
+      "origin_sha256": "d186e51e16a4381ca4332b79a6065cd67e7acca6282833d9bf7272c8f54e39d5",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-from-app/scripts/compare.swift",
+      "sha256": "c13cf1269c6100335cf25439d9ca5c8a68051fdf5ff1f235351e6ff4b2ab7ab5",
+      "origin_path": "skills/design/design-from-app/scripts/compare.swift",
+      "origin_sha256": "69e9d05a530118cd888cb5b9f45ad22e1449471471cc76bb616b04a5a4cd1314",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-from-app/scripts/measure.swift",
+      "sha256": "271d2c7bfcf74a2f285951a95ea22c1af974968ec2459fc97ac61e44a32e45de",
+      "origin_path": "skills/design/design-from-app/scripts/measure.swift",
+      "origin_sha256": "369d3f083ccf9e05141913e818970afe80734a55e3d05113833e2479f3d31936",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-kit/SKILL.md",
+      "sha256": "3f244a611ac87769ea2ccd4be9934858eeb72376ad2f563e603009ff21ddad4d",
+      "origin_path": "skills/design/design-kit/SKILL.md",
+      "origin_sha256": "4ca7728a7a557b7b88585b3858efb0ffb377df793ab7c4ee6a042b6b15de5e9c",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-kit/agents/openai.yaml",
+      "sha256": "67aac5d42f85d81cda2510eab9256797639ae5b25145f2a645c96c69713c9a07",
+      "origin_path": "skills/design/design-kit/agents/openai.yaml",
+      "origin_sha256": "67aac5d42f85d81cda2510eab9256797639ae5b25145f2a645c96c69713c9a07",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-kit/kit-spec.md",
+      "sha256": "c7bff5de49abd88d6fc3da15f6ec9820ee163d636dbfaaf4edd0ae522838a696",
+      "origin_path": "skills/design/design-kit/kit-spec.md",
+      "origin_sha256": "bab7e5d135f05f9f6464317b81eaa92495277718a5ce87aea7672c0b463da04a",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-kit/parts.md",
+      "sha256": "9bbfd20f1c6cac2cf35220c2ec78e0fef615b9c8e7d91e5c1212dfdec9fefb18",
+      "origin_path": "skills/design/design-kit/parts.md",
+      "origin_sha256": "047d71fac4413d93bcf3fcb7844912d345677e5362003081b858d16bc1d89d29",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-system/SKILL.md",
+      "sha256": "4caa4ff8ffbd2a0822540c8b15730179cb2610848ee68c62652f3092a22b9497",
+      "origin_path": "skills/design/design-system/SKILL.md",
+      "origin_sha256": "e91b97bb1e03e484817ac15c47aac8c776bf79ec580a89fd767ab43f02505e15",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-design-system/agents/openai.yaml",
+      "sha256": "c8d9fdc36a036667f9776975534f925b19e20f522daecc11a679db1ed6fdb7c5",
+      "origin_path": "skills/design/design-system/agents/openai.yaml",
+      "origin_sha256": "c8d9fdc36a036667f9776975534f925b19e20f522daecc11a679db1ed6fdb7c5",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-improve-architecture/SKILL.md",
+      "sha256": "6b2ff0dbd7ae6919a1ce5dc9d3b8a3f12852008a31f2d3e0a7539acd6344b495",
+      "origin_path": "skills/code/improve-architecture/SKILL.md",
+      "origin_sha256": "eab9f3e36f4db654b008dc794a080774eda2bb0bb3abd946c0b0a42cafd16c71",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-improve-architecture/agents/openai.yaml",
+      "sha256": "9496f59353b6ca5d2588dea9391643b3f809e3d6849d46f96a4aadabd5297fff",
+      "origin_path": "skills/code/improve-architecture/agents/openai.yaml",
+      "origin_sha256": "9496f59353b6ca5d2588dea9391643b3f809e3d6849d46f96a4aadabd5297fff",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-improve-architecture/architecture.md",
+      "sha256": "e3a0d0c4a77397af7b6b96b0b6e36a03587444071ca4c42ea39a98ea57dd9551",
+      "origin_path": "skills/code/improve-architecture/architecture.md",
+      "origin_sha256": "e3a0d0c4a77397af7b6b96b0b6e36a03587444071ca4c42ea39a98ea57dd9551",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-improve-loop/SKILL.md",
+      "sha256": "b2a487a676a0d9cdf8fe68d9b64e8e2b58b570daae7693a6aa8858c106f97ebd",
+      "origin_path": "skills/ship/improve-loop/SKILL.md",
+      "origin_sha256": "3edae75dafd3ed5157098b871f65ba2f9ca71dc82eb570540f23b8b89dbb7c52",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-improve-loop/agents/openai.yaml",
+      "sha256": "c99c5336bf5d4fa4a602a026c39dde322437fccc70314dc64cb615fc1edd905d",
+      "origin_path": "skills/ship/improve-loop/agents/openai.yaml",
+      "origin_sha256": "c99c5336bf5d4fa4a602a026c39dde322437fccc70314dc64cb615fc1edd905d",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-layout-grid/SKILL.md",
+      "sha256": "61d753c6499d09af62b2a34db98c7d24b626a8e0454b123da513cb86c2f57296",
+      "origin_path": "skills/design/layout-grid/SKILL.md",
+      "origin_sha256": "51d265f4f45d212e5ee064b86833f4483bef8efde42ab3e80fd1bd7ab5c517af",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-layout-grid/agents/openai.yaml",
+      "sha256": "4d49ebfd9b5bb679b45291e30d5e05ae9f059ac6216c9ce269001680ff5cfa6f",
+      "origin_path": "skills/design/layout-grid/agents/openai.yaml",
+      "origin_sha256": "4d49ebfd9b5bb679b45291e30d5e05ae9f059ac6216c9ce269001680ff5cfa6f",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/SKILL.md",
+      "sha256": "e2c96d88e9d1a3759d656e164fcb6771f54539651cb009bd37b7c0f29e9a4768",
+      "origin_path": "skills/design/mac-design/SKILL.md",
+      "origin_sha256": "cbda2e5283b3c65604d656344b21742956776a14b587d5190ba7954a1fcaac27",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/agents/openai.yaml",
+      "sha256": "fc02f92891f42563f9d78809eed1e01292e37f8122604f2e4e2839a579064c7c",
+      "origin_path": "skills/design/mac-design/agents/openai.yaml",
+      "origin_sha256": "fc02f92891f42563f9d78809eed1e01292e37f8122604f2e4e2839a579064c7c",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/design-rules.md",
+      "sha256": "f8594c43d00ba829bd58231390ee6fcc34968d33dd292276980e7fb3010aedaf",
+      "origin_path": "skills/design/mac-design/design-rules.md",
+      "origin_sha256": "f8594c43d00ba829bd58231390ee6fcc34968d33dd292276980e7fb3010aedaf",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/menus.md",
+      "sha256": "50b2a06b1362d67da35b4563e1baa28e6d40eefd47b58ada7e2666ea044fe218",
+      "origin_path": "skills/design/mac-design/menus.md",
+      "origin_sha256": "50b2a06b1362d67da35b4563e1baa28e6d40eefd47b58ada7e2666ea044fe218",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/patterns.md",
+      "sha256": "84ddba3a7e76898e7eb6a4d66a71081104c045a81e82e3587d4ccdc3fc094d9a",
+      "origin_path": "skills/design/mac-design/patterns.md",
+      "origin_sha256": "9ea71c9a74694268d767877be78bc23a0585f93552196bd3cb4a2a84899739c4",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/scripts/hig.sh",
+      "sha256": "70b7a3c9baa1e979b918d0e35301c71f882988dc8742c967e28dbe22625c699f",
+      "origin_path": "skills/design/mac-design/scripts/hig.sh",
+      "origin_sha256": "08588bfdd53bed2dae6c03edaed9e69d329495dbfdbe4a79e0e5620eeee33a45",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/settings.md",
+      "sha256": "4335be2a9c4259e41419195bc62b2d9be9e90a505e8818fcd431ef33835b8027",
+      "origin_path": "skills/design/mac-design/settings.md",
+      "origin_sha256": "4335be2a9c4259e41419195bc62b2d9be9e90a505e8818fcd431ef33835b8027",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-mac-design/toolbars.md",
+      "sha256": "be8b74d998d09a2dcdb8521dde0d9c97cddb345f69447e055dd87b9c657c5862",
+      "origin_path": "skills/design/mac-design/toolbars.md",
+      "origin_sha256": "be8b74d998d09a2dcdb8521dde0d9c97cddb345f69447e055dd87b9c657c5862",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/SKILL.md",
+      "sha256": "f02ae127d85e7c71096c1351f7329043e0735dbd118d1efdeda764de0264fba4",
+      "origin_path": "skills/start/new-mac-app/SKILL.md",
+      "origin_sha256": "f2c76bf9f4843d61d5c954794987eb54c25388debb4fe877495ed25b127484da",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/agents/openai.yaml",
+      "sha256": "4088a0951ea3a037abda974557c557c96af9b49e59d71be63de5d5fe43a73a96",
+      "origin_path": "skills/start/new-mac-app/agents/openai.yaml",
+      "origin_sha256": "4088a0951ea3a037abda974557c557c96af9b49e59d71be63de5d5fe43a73a96",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/scripts/new-app.sh",
+      "sha256": "e0a124d01c0ed4c16ff138e439ccf832c6256434212093bad3f749abb0749075",
+      "origin_path": "skills/start/new-mac-app/scripts/new-app.sh",
+      "origin_sha256": "cf74c75ebae9ac1b7538a1e1ef49182694a914ef367d9673f2d0a8334db8fa82",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/scripts/scaffold.py",
+      "sha256": "17cbfd5e0e80112cdb18e2a25f8ed6c97743354d0d8078c2317f4e48141aa420",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/.gitignore",
+      "sha256": "21d7c5b1fe47464805348ad102bc81b2aeb0f183b6f8db990870a8584ba36978",
+      "origin_path": "skills/start/new-mac-app/template/.gitignore",
+      "origin_sha256": "06e2a68fdaa0e729f11d7e4c8a3b286823961f98c1fbb6a236e1d90f969e5fe9",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/AGENTS.md",
+      "sha256": "397beef79b846212152fe69ccbb4bea27abdce3e6146164f2146ba2b57d72ecb",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/CLAUDE.md",
+      "sha256": "397beef79b846212152fe69ccbb4bea27abdce3e6146164f2146ba2b57d72ecb",
+      "origin_path": "skills/start/new-mac-app/template/CLAUDE.md",
+      "origin_sha256": "23890c7eae2c0734c5f5b21cc4abc4c747ac271c393df331c4077613d3c0079e",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Icon/AppIcon.icon/Assets/back.svg",
+      "sha256": "3a083fa16b816ef339cbade5bfc14d17f2a57f736bac06c6fd46e431cb61bb34",
+      "origin_path": "skills/start/new-mac-app/template/Icon/AppIcon.icon/Assets/back.svg",
+      "origin_sha256": "3a083fa16b816ef339cbade5bfc14d17f2a57f736bac06c6fd46e431cb61bb34",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Icon/AppIcon.icon/Assets/front.svg",
+      "sha256": "6122b447fed262cc192b93beadece714ee8ef460327f2d2218998ff821cf8147",
+      "origin_path": "skills/start/new-mac-app/template/Icon/AppIcon.icon/Assets/front.svg",
+      "origin_sha256": "6122b447fed262cc192b93beadece714ee8ef460327f2d2218998ff821cf8147",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Icon/AppIcon.icon/icon.json",
+      "sha256": "0dae728df5a5659584eca67c9149980895108668985b024615383b379ab5fad9",
+      "origin_path": "skills/start/new-mac-app/template/Icon/AppIcon.icon/icon.json",
+      "origin_sha256": "0dae728df5a5659584eca67c9149980895108668985b024615383b379ab5fad9",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Info.plist.in",
+      "sha256": "edc855b7b2aac21f82a7038990c84c06428de703158b53c170c8ef2c67f5761c",
+      "origin_path": "skills/start/new-mac-app/template/Info.plist.in",
+      "origin_sha256": "edc855b7b2aac21f82a7038990c84c06428de703158b53c170c8ef2c67f5761c",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Package.swift",
+      "sha256": "4720d5e7f312dc33334a75e19767ea895b6158f9b633b874dbe1d61c3b482197",
+      "origin_path": "skills/start/new-mac-app/template/Package.swift",
+      "origin_sha256": "4720d5e7f312dc33334a75e19767ea895b6158f9b633b874dbe1d61c3b482197",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/App.swift",
+      "sha256": "efd0e643ca06cd1a2d67f9e6f456b9b62dd73b5d388a25e0917d709600c6f534",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/App.swift",
+      "origin_sha256": "fa49e94d4f963dbd9a17f4573534ef61417bc9e08b6861ac3b8573eb19a7aee1",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/ContentView.swift",
+      "sha256": "7643ecbb072fcd4c527b960994626235c2e7bdb658f179daff1bd17cae7c49cb",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/ContentView.swift",
+      "origin_sha256": "36c76508b347821b7dff5816555b0ded7cc0b0edbe948200d3708deb95f61b75",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/Models.swift",
+      "sha256": "f7b37f961de3ccaa0a4b035f520d7ea0553cf301cf990f558bf7ef5a4af199e7",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/Models.swift",
+      "origin_sha256": "c5fc49a5f7362e2307365b188716a401d18acb7edd1ca3816e20fd5fa701b376",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/SeedData.swift",
+      "sha256": "649159cbc24c5bfba3499230d30ab6fb2409f584316c3e7433eedc24a7b127cb",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/SeedData.swift",
+      "origin_sha256": "649159cbc24c5bfba3499230d30ab6fb2409f584316c3e7433eedc24a7b127cb",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/SelfTest.swift",
+      "sha256": "8ab512f64b0814e664910d2da81b5ac322ec8a83cf56ca34e1d381da00749d96",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/SelfTest.swift",
+      "origin_sha256": "925dde8b6f5e245ac1a9b76b1a645e93e3abbdfc446b5bad0cdf3256d3408af2",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/SettingsView.swift",
+      "sha256": "87d477d565adef32ec3d82c0731c1e74afc0c7eeeee91ceab35d2fc67666648d",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/SettingsView.swift",
+      "origin_sha256": "87d477d565adef32ec3d82c0731c1e74afc0c7eeeee91ceab35d2fc67666648d",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/Snapshot.swift",
+      "sha256": "82f95265aea59ae50975870226770f45fea35930598827b3edb60480e09849fa",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/Snapshot.swift",
+      "origin_sha256": "ea94ee4d93970fc06bb8b84d0296be11ab0b676945bac8505e33d8442c3e2c84",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/TestState.swift",
+      "sha256": "9b01c33305d1d12239140cc0c9e2abeff2d7f47ebb182d8156c032c8f83eddfc",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/UI/AppearanceSettings.swift",
+      "sha256": "9f102de2d0890570bc7ec20203c371a2bb3d58729fc9e0743107434230eb2d1e",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/UI/AppearanceSettings.swift",
+      "origin_sha256": "9f102de2d0890570bc7ec20203c371a2bb3d58729fc9e0743107434230eb2d1e",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/UI/Grid.swift",
+      "sha256": "1cc55cd214ba3766dea0d2238ac63440a0575f384403d4ba8ffc2ab38605d229",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/UI/Grid.swift",
+      "origin_sha256": "1cc55cd214ba3766dea0d2238ac63440a0575f384403d4ba8ffc2ab38605d229",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/UI/Theme.swift",
+      "sha256": "a73e81bbf10ef5f4f97c3644c01ae2a5954d82f6a0c7ee7502c2f6dc981d16fa",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/UI/Theme.swift",
+      "origin_sha256": "3fd89e849e87e54f6300e351b51c021de189bfb4d36d283d0a662d9403852616",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/UI/WindowBehavior.swift",
+      "sha256": "2269241a898600c2e476cc85da5914475ab804491c5811bfa40ec51abfa741bf",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/UI/WindowBehavior.swift",
+      "origin_sha256": "2269241a898600c2e476cc85da5914475ab804491c5811bfa40ec51abfa741bf",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__Kit/AgentItemOutput.swift",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "07becdd4665cc95f44669e44eb8c3d87d9d07c9cf038035de9ba89a3a9fec559",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__Kit/ItemMutations.swift",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "bcdc46cdf6acdb41b14881c0116aba87410b125f23cffa6f5a01f08f1034c5e1",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__Kit/ItemTitle.swift",
+      "sha256": "43f8da4143c38e89b0a3f871dba922797b3d2dc01f0859d2c4c580a4237d87a4",
+      "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__Kit/ItemTitle.swift",
+      "origin_sha256": "43f8da4143c38e89b0a3f871dba922797b3d2dc01f0859d2c4c580a4237d87a4",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/Tests/__APP_NAME__KitTests/ItemTitleTests.swift",
+      "sha256": "03475c0c5c5b8200b8925c29ed9a154400597f55d773ea3461f40eb512d5e2a2",
+      "origin_path": "skills/start/new-mac-app/template/Tests/__APP_NAME__KitTests/ItemTitleTests.swift",
+      "origin_sha256": "03475c0c5c5b8200b8925c29ed9a154400597f55d773ea3461f40eb512d5e2a2",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/build.sh",
+      "sha256": "11a3ba59b75afcf8ae67726cdb180d2753b208c3d8a3ac0e657c30c009de6659",
+      "origin_path": "skills/start/new-mac-app/template/build.sh",
+      "origin_sha256": "6ebb35a3517a963f644fd4b88883a783fc5f793f4921917703502b8221e8b6bd",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/build_stage.py",
+      "sha256": "1b1c7ef2b055a1bc208a1d50c1679125314c56d6e5c4f1b03f33c7a9822c5d54",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/check-layout.swift",
+      "sha256": "2c46f94c67610faa045b9f8d1222c332b09622fd4441f5dc747ba14aacc2b3b8",
+      "origin_path": "skills/start/new-mac-app/template/tools/check-layout.swift",
+      "origin_sha256": "08014af59f7abc74fa8e8b4871bb0266ee502e8b91f764b2e3dd4d45d842fefe",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/grid-lint.sh",
+      "sha256": "438fa67a1c081a395862965e1771588b48229856f18e3083df0ea1a638dbb6c7",
+      "origin_path": "skills/start/new-mac-app/template/tools/grid-lint.sh",
+      "origin_sha256": "438fa67a1c081a395862965e1771588b48229856f18e3083df0ea1a638dbb6c7",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/icon_review.sh",
+      "sha256": "741275e1d282a0071d3043c02442bf667ed7bccc843bdb611be950dc964fe2fe",
+      "origin_path": "skills/start/new-mac-app/template/tools/icon_review.sh",
+      "origin_sha256": "741275e1d282a0071d3043c02442bf667ed7bccc843bdb611be950dc964fe2fe",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/icon_sheet.swift",
+      "sha256": "0b885a385085e54f97d52b706e3e2d5d2dc8629d13fd1bac2934a6349b2f8cbc",
+      "origin_path": "skills/start/new-mac-app/template/tools/icon_sheet.swift",
+      "origin_sha256": "0b885a385085e54f97d52b706e3e2d5d2dc8629d13fd1bac2934a6349b2f8cbc",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/make_icon.sh",
+      "sha256": "0b8f5b01b63cd2321d80e887e68ecc746758bbb757b8f47bb0f204341c5be5b0",
+      "origin_path": "skills/start/new-mac-app/template/tools/make_icon.sh",
+      "origin_sha256": "0b8f5b01b63cd2321d80e887e68ecc746758bbb757b8f47bb0f204341c5be5b0",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/run_checks.py",
+      "sha256": "36b008bd99114c833a100d4f27e07ad92dcbc01613b8a55c5fd3b73c018d6a26",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/selftest.sh",
+      "sha256": "50a9f9c50b2904041112a991c71ae194b20776eeea84415d442cdc88568f8c41",
+      "origin_path": "skills/start/new-mac-app/template/tools/selftest.sh",
+      "origin_sha256": "bf5b7f6d0d9198eb2b7f5b762a37756784afa7c743af7be1f8d071a8ace119af",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-new-mac-app/template/tools/snap.sh",
+      "sha256": "05ee0c5f5fae3f97ea6041ca50183e53476d2d78cc46fa3d4ea4443100cef1bf",
+      "origin_path": "skills/start/new-mac-app/template/tools/snap.sh",
+      "origin_sha256": "40ae0604581c1482ebe32229c022809beada3e1b284a6ee62cae481b65d36e94",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-os-integrations/SKILL.md",
+      "sha256": "b7f794a12091be437ceb15033640a2463d3fe7460840bb10548ef654c127977b",
+      "origin_path": "skills/code/os-integrations/SKILL.md",
+      "origin_sha256": "d71875735aabf538aeeaab4e0cc4a1a1bb799fb8d55d74e9eaff6d5cd8f8742b",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-os-integrations/agents/openai.yaml",
+      "sha256": "a6dd97b5c94c1721a74825687f50eda607e1f61e93b63a81111845651f60d037",
+      "origin_path": "skills/code/os-integrations/agents/openai.yaml",
+      "origin_sha256": "a6dd97b5c94c1721a74825687f50eda607e1f61e93b63a81111845651f60d037",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-os-integrations/recipes.md",
+      "sha256": "7c023fe25fe349d3642ffd451679a9e6fac698e128ec3062ffe964f45a9b1c30",
+      "origin_path": "skills/code/os-integrations/recipes.md",
+      "origin_sha256": "a974fa816ea1814cf8e89dd04ac6a19233d2fbb42a5fa170db2e02091ef9de19",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-performance/SKILL.md",
+      "sha256": "0cf8ab304f281e1b30eea97740a58fa9a1d7a3a19a884ac5efb94d1f0748bfb0",
+      "origin_path": "skills/code/performance/SKILL.md",
+      "origin_sha256": "62196ebe46a42028826cd679a6ae588bd368ad4965560976821241f2be34aa05",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-performance/agents/openai.yaml",
+      "sha256": "c9ea53e39d31c0ece57fcad328b4a0a2a90e4af86709aa69bf9c32e314dc8233",
+      "origin_path": "skills/code/performance/agents/openai.yaml",
+      "origin_sha256": "c9ea53e39d31c0ece57fcad328b4a0a2a90e4af86709aa69bf9c32e314dc8233",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-performance/gpu-media.md",
+      "sha256": "27e71ea012a3a9d14120509fdd496902ea6afbec75824d3885aa9a6429a5967c",
+      "origin_path": "skills/code/performance/gpu-media.md",
+      "origin_sha256": "6d551df632bb16ee47e2362d7b7401ffcaf6ad39131116627a0aa61ce25168db",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-performance/recipes.md",
+      "sha256": "0fe8e889dbc397b6024c414fd87bfdb555dc0ae021ff325272a80500d2f64ff0",
+      "origin_path": "skills/code/performance/recipes.md",
+      "origin_sha256": "4d6c98d8e7f8c7ab35b549ce577145c24664f760314e98ed5dc29566aa82acde",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-research/SKILL.md",
+      "sha256": "abbfdd7acb941de0cf4d002c35ce00f716fb37dcd27f5824af8c27c128890131",
+      "origin_path": "skills/plan/research/SKILL.md",
+      "origin_sha256": "bf44f027b1f3041623bcfa8384d7dd8b5da4562ad9c529c935e75ba54f7802bb",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-research/agents/openai.yaml",
+      "sha256": "906073e6b1b47a65856d7357677cc17587de3046f1c9244c6acf29f2ac6c5039",
+      "origin_path": "skills/plan/research/agents/openai.yaml",
+      "origin_sha256": "906073e6b1b47a65856d7357677cc17587de3046f1c9244c6acf29f2ac6c5039",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-router/SKILL.md",
+      "sha256": "68e49248791e309ad24d867ee4895fa7cc69039d82af035835f89f0e4b69cfc4",
+      "origin_path": "skills/start/bama/SKILL.md",
+      "origin_sha256": "7870db854a08fbc82637c3d16f6d8ea6e717a207b8183e10f47a962751c49622",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-router/agents/openai.yaml",
+      "sha256": "5b49d7df7809a7293818d2fe0305a7eb5102fa69e6915b2bef807fa1e851f363",
+      "origin_path": "skills/start/bama/agents/openai.yaml",
+      "origin_sha256": "5b49d7df7809a7293818d2fe0305a7eb5102fa69e6915b2bef807fa1e851f363",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-swift-swiftui/SKILL.md",
+      "sha256": "2f7e694c66d5d1a11cb61c9df6d74ef42924e368703c6fb766df61da8a7bf7f3",
+      "origin_path": "skills/code/swift-swiftui/SKILL.md",
+      "origin_sha256": "4e77525d38691e40a598c35ed03353edab94e600705d8139e5dd897035f9dded",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-swift-swiftui/agents/openai.yaml",
+      "sha256": "a6569a676d40fd096c9ea4207f434c7d83cb2a07c61289df1d37c225605dec13",
+      "origin_path": "skills/code/swift-swiftui/agents/openai.yaml",
+      "origin_sha256": "a6569a676d40fd096c9ea4207f434c7d83cb2a07c61289df1d37c225605dec13",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-test-mac-app/SKILL.md",
+      "sha256": "a774ebf8cbef7fdf766966b1d5fdf662d45fbc1872fd09cd4f4da576f14d561c",
+      "origin_path": "skills/ship/test-mac-app/SKILL.md",
+      "origin_sha256": "8b1abeff6fbef6089d5acd7aff44292dcf7501a52904e4faa30478e690d9bbab",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-test-mac-app/agents/openai.yaml",
+      "sha256": "6c9e426502d5d9757a14924851d573a061bd4fdf240768f72d79dde498a412f1",
+      "origin_path": "skills/ship/test-mac-app/agents/openai.yaml",
+      "origin_sha256": "6c9e426502d5d9757a14924851d573a061bd4fdf240768f72d79dde498a412f1",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-user-stories/SKILL.md",
+      "sha256": "67a83f10dd673f2bc536511e60608c89240d0909239afe0bef77d143888677aa",
+      "origin_path": "skills/plan/user-stories/SKILL.md",
+      "origin_sha256": "46b02307d2f47801ec25b8ff08ef2c690ccdcb53b061b492fb35a80b29bc8607",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-user-stories/agents/openai.yaml",
+      "sha256": "c4f3bb146c941fc97206812a198eeb710c683015900e1e5f27df8cc8c7a53a50",
+      "origin_path": "skills/plan/user-stories/agents/openai.yaml",
+      "origin_sha256": "c4f3bb146c941fc97206812a198eeb710c683015900e1e5f27df8cc8c7a53a50",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/SKILL.md",
+      "sha256": "bf2f502716bdf0864690ecc6326b5ab3b195fb2e592d5ef490f978e0b2d22cf3",
+      "origin_path": "skills/design/ux-design/SKILL.md",
+      "origin_sha256": "01c31aec1b244c0504e82745d2642e503eb7562a5ab859752b41dac277c1c3ca",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/accessibility.md",
+      "sha256": "077c2a509ecd1c6d1c66fdf5bbcccdc5019555db7c054b015ba29131344fd6ad",
+      "origin_path": "skills/design/ux-design/accessibility.md",
+      "origin_sha256": "49ee25f0532f7c6e14d439e749318ed3a3100d5f4a9d5b486547310f14cdf3f0",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/agents/openai.yaml",
+      "sha256": "165eda9a1d8c2e6c362673fdfcf5727fa546d126d7c91eae14a201ffdf87fe3c",
+      "origin_path": "skills/design/ux-design/agents/openai.yaml",
+      "origin_sha256": "165eda9a1d8c2e6c362673fdfcf5727fa546d126d7c91eae14a201ffdf87fe3c",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/ai-features.md",
+      "sha256": "87436bd4c5be9e0221f97f58ad2a745f7df0103652dd6561e1c207813b9d5c3d",
+      "origin_path": "skills/design/ux-design/ai-features.md",
+      "origin_sha256": "87436bd4c5be9e0221f97f58ad2a745f7df0103652dd6561e1c207813b9d5c3d",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/presentation.md",
+      "sha256": "556b130dc5b929132821283d4162c3f5567e254bc5bfc9dc6ce8647243d878d5",
+      "origin_path": "skills/design/ux-design/presentation.md",
+      "origin_sha256": "bc409ccce38acd68744dc9aa0d3ff8809b599ef7a117a1ded1ab7f8d65aaf694",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "skills/bama-ux-design/writing.md",
+      "sha256": "6e654e8eb2e7acad5c7e06c39b209b57bd278150fcb7b95c1fbd822e9e31059b",
+      "origin_path": "skills/design/ux-design/writing.md",
+      "origin_sha256": "6e654e8eb2e7acad5c7e06c39b209b57bd278150fcb7b95c1fbd822e9e31059b",
+      "derivation": "retained",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/README.md",
+      "sha256": "4c70df6f8fd6f7287a1a8c790f58fa5317962e4458172911918341f42014df43",
+      "origin_path": "specs/README.md",
+      "origin_sha256": "52af76e9adf536c17ebd529b35532f9ce8f4a366c17e7c33dbc823e5fc564a7b",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/clipboard-history.md",
+      "sha256": "5d5b0bc3f0d96eddf631dcb202eab27786d5883477d7ee25760d862ce8025bc6",
+      "origin_path": "specs/clipboard-history.md",
+      "origin_sha256": "c7fbb4a831a98171033eb32ba1d199fdfe5799c1d6c9b579639a0ad3dfae2d6a",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/color-picker.md",
+      "sha256": "9be627e82b6e69e0227ae145f3e15267f6e68040d521f087be75bd9a0f406dce",
+      "origin_path": "specs/color-picker.md",
+      "origin_sha256": "c8de60b6f14e7b4b751aa0c997468d47fcd3aebfa37dc3a7eaf9be1e4a0eb7e3",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/creator-tools.md",
+      "sha256": "81a0d176acf659167972986be4b933d9904d035f2948841101ed8a85be948e31",
+      "origin_path": "specs/creator-tools.md",
+      "origin_sha256": "231192eb23a9cc509e231013a75134b50498000cb42c83efbba0d45abfc42d33",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/dev-toolkit.md",
+      "sha256": "1cc1b062cbc42a22268cba2685c7e52f16eb56c456ad0f41940fe5e4b838d21f",
+      "origin_path": "specs/dev-toolkit.md",
+      "origin_sha256": "44c0e1b43fafc3da96f6aaa3f8317f318847d0f431e4d676ce1dc5b5df3e0af4",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/launcher.md",
+      "sha256": "d4c91edd1c7b3eda85e7cab80b48a267c2f912510ce4d929463288e6eb0f7e46",
+      "origin_path": "specs/launcher.md",
+      "origin_sha256": "adafc5bcd1fc80c2007d6ca68bd2d86ff702aba9d542f6f4e54175b5526d2304",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/menu-bar-stats.md",
+      "sha256": "28fd8f478708c697a34f5d201d8b196c4e20fe61dcce9a7951ea69ef83d0a4ac",
+      "origin_path": "specs/menu-bar-stats.md",
+      "origin_sha256": "7114d5a530b2669d12725977c760b3ebf3749f3604878602917f2aec3d14f06a",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/screen-recorder.md",
+      "sha256": "51fbffb878b0030c940c01fb4eea2f7ca527c1a219a2b9ac1171ad5d0af7cbef",
+      "origin_path": "specs/screen-recorder.md",
+      "origin_sha256": "4e81c814a04cf2be2ac6633ba571805385c9089dd18171fbf171849dd1f66e79",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/screenshots.md",
+      "sha256": "6c91c637c0b0948ac9ff42970903c758bb36e86e2c0e9034eaf96c06a34c5970",
+      "origin_path": "specs/screenshots.md",
+      "origin_sha256": "160074a7fe0a39eac9fd13c463d6597492d8ba1e5157bc90ce4d65296afcc93d",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/text-snippets.md",
+      "sha256": "d58abaf2f40ad7ea83eb7c42febe9009d1ad32abc35e76f6b5d9b98f296f5f3c",
+      "origin_path": "specs/text-snippets.md",
+      "origin_sha256": "75f055f203ee5aaf381366fc54a8ed40f6e74e1abe557062dcd9e834e7d8fd9a",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/toolbox.md",
+      "sha256": "a6c385a3234774d7bbf6c70cdf1523cb1fc60a92e949a106e610437f3194117d",
+      "origin_path": "specs/toolbox.md",
+      "origin_sha256": "9304a0b24bfa4f1401cab72de031e6388650b36782fb045cca95b8359a3047b5",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/window-snapper.md",
+      "sha256": "211f3640c57098041339f72a6d231ffc2dcb8f8c3a8768c74f3f57f998698809",
+      "origin_path": "specs/window-snapper.md",
+      "origin_sha256": "5504de5aea8ed95a3785e20cb2251a97d0bd84c9d44a0e354f47ff890753ae8e",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "specs/window-switcher.md",
+      "sha256": "218ab43014ee3f6b5b5ae45d8cfddad796af6cbd2a5185924b4d96b44e29ccf7",
+      "origin_path": "specs/window-switcher.md",
+      "origin_sha256": "603ec005c04ad9195438c15a4e2887c26c076a39a4779d3cdb3758fb768ac0ad",
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_agent_transport.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "ec424bdd6a8db8aaaa76179ac5b6511107dcef63fa53eec1f453733f0a8c4bf1",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_guards.py",
+      "sha256": "5ba5df04e481de6d52a7afbc967248727ba2885d7c1f248af2b1ddf7a4893f8b",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_image_tools.py",
+      "sha256": "0e192b1b7b20df6403a6fac3ddafc075c37315519e143f582af8d321b1d7e132",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_item_payloads.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "0d068b8f916a0082f6df7f9e11dacbe38a8e5c276fe6ed3ef65d8feb4f79b3e5",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_model_mutations.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "8c5530e449485fbd21d1008f72bd4c44fa149a75bd3e9d094713ab73afc88d48",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_preferences.py",
+      "sha256": "f14cb5c6e0184ec1e053c586c383a1d0b6c9394e8454b63cefb903c795fcd0b5",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "adapted",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_scaffold_race.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "0b3e6e156db34bc764a2d5fb698b8d7c41664c551e578a91008beff5c4885454",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_selftest_contract.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "edde10c76856fc4e615f0e0f64aa013787e736cc17c9f6aa17c92dce39303299",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    },
+    {
+      "path": "tests/test_snapshot_contract.py",
+      "origin_path": null,
+      "origin_sha256": null,
+      "derivation": "guarded-integration-addition",
+      "sha256": "43feaab53355655d91037973272b08c6a6a23640f22f2c9363a7557ca71e2f13",
+      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+    }
+  ]
+}

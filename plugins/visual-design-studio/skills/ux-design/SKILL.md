@@ -7,8 +7,8 @@ description: >-
   SUS, SEQ and HEART metrics, plain language and reading level, and microcopy and error messages.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-23 11:25:07 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
+  version-timestamp: "2026-10-27 07:43:23 AST"
+  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
 ---
 
 # UX design
@@ -72,6 +72,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 
 ## References
 
+- [Surface placement](references/surface-placement.md): choose inline, popover, sheet, inspector, window or menu from task and lifetime.
 - [Research methods](references/research-methods.md): method matrix, interview guide, usability testing, card sorting and tree testing, surveys, diary studies, analytics and A/B tests, recruiting, consent, synthesis.
 - [Heuristics and laws](references/heuristics-and-laws.md): Nielsen's 10 heuristics with checks, severity 0-4, UX laws with caveats, cognitive load.
 - [Measurement](references/measurement.md): SUS scoring and grades, SEQ, UMUX-Lite, task metrics, NPS caveats, Google HEART.

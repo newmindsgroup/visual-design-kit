@@ -1,0 +1,40 @@
+{
+  "Version-Timestamp": "2026-10-27 07:39:56 AST",
+  "Agent-Attribution": "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:39:56 AST",
+  "schema_version": "1.0",
+  "toolchains": [
+    {
+      "id": "bama",
+      "repository": "https://github.com/daveebbelaar/bama",
+      "commit": "15356bd8ebff408222ad21395aea09bd74b15310",
+      "license": "MIT",
+      "plugin": "bama-mac-studio",
+      "source": "extras/bama-mac-studio",
+      "status": "guarded-derivative-candidate",
+      "skills_expected": 21,
+      "runtime_prerequisites": [
+        "macOS 26 or later",
+        "Swift 6.2 or later",
+        "actool and Icon Composer ictool for full icon workflow"
+      ],
+      "runtime_policy": "Explicit project tasks; staged output before installation; project identity and tokens remain authoritative"
+    },
+    {
+      "id": "rea",
+      "repository": "https://github.com/morluto/rea",
+      "audited_main_commit": "570abe95f2a35b5c580a5ec2fca90c33d4114bdc",
+      "release_commit": "160d821ac9a0310afcb8d1fc427862dd6508add5",
+      "package": "rea-agents",
+      "package_version": "6.8.0",
+      "license": "MIT",
+      "plugin": "rea-toolkit",
+      "source": "extras/rea-toolkit",
+      "status": "pinned-runtime-and-skill-candidate",
+      "runtime_prerequisites": [
+        "Node ^22.23.4 or ^24.22.1 or >=26.12.1",
+        "OS tools and permissions for the selected tool family"
+      ],
+      "runtime_policy": "Full catalog available after scoped setup; host confirmation and project data authorization apply per invocation"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "rea-toolkit",
+  "version": "0.1.0",
+  "description": "REA 6.8.0 investigation skill and full reference set for the separately installed reverse engineering CLI/MCP runtime.",
+  "author": {
+    "name": "New Minds Group, with upstream attribution retained"
+  },
+  "repository": "https://github.com/newmindsgroup/visual-design-kit",
+  "license": "MIT"
+}

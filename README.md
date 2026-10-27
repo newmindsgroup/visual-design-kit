@@ -2,11 +2,11 @@
 
 ![Visual Design Kit: a brief goes through the design director, the Design Space Atlas and scored directions into discipline skills and a render-and-critique loop.](docs/images/kit-overview.svg)
 
-**Make Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
+**Make Codex and Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.8.0).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.9.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-10-27 07:47:24 AST
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -59,7 +59,9 @@ Ask in plain language; the right skill loads on its own.
 | `ux-design` | Research, heuristics, UX laws, measurement, IA, journeys, content design |
 | `ui-design` | Components and states, forms, navigation, data-dense UI, feedback, flows, AI and chat interfaces, accessibility |
 | `web-design` | Page architecture, conversion, responsive, Core Web Vitals, SEO, stack selection, launch |
-| `native-app-design` | iOS (HIG), Android (Material 3), cross-platform, large screens, app patterns, store assets, SwiftUI/Compose handoff |
+| `native-app-design` | macOS, iOS (HIG), Android (Material 3), cross-platform, large screens, app patterns, store assets, SwiftUI/Compose handoff |
+| `icon-design` | UI families, optical sizes, semantic registry, app and Dock icons, editable source and appearance checks |
+| `reference-reconstruction` | Screen/state index, measurements, observed behavior, reusable parts and matched-condition fidelity |
 | `design-system` | DTCG token architecture, theming, Figma variables and Code Connect, component APIs, documentation, governance |
 | `data-visualization` | Chart choice, data palettes, labeling, dashboards, infographics, accessible charts |
 | `print-packaging-social` | Prepress, packaging, social formats, OOH, presentations, email; finished collateral from templates, print master PDF plus Canva editable twin, PDF preflight |
@@ -93,6 +95,12 @@ flowchart LR
 ```
 
 Directions must differ on at least three of six axes (type, palette, layout logic, imagery, motion, voice). Scores use weight presets for launches, regulated industries, rebrands and product UI, and the sensitivity check names the criterion that would flip the decision. See the [worked example](plugins/visual-design-studio/skills/design-director/references/worked-example.md).
+
+## Native Mac and reverse engineering companions (0.9.0)
+
+Use the full `bama-router` workflow through **BAMA Mac Studio** to research, clone, design, scaffold, build, profile and test native Mac apps. **REA Toolkit** supplies the full pinned investigation skill and references for REA's CLI/MCP runtime. Both companions are optional, namespaced and available for Codex and Claude Code. The main kit also extracts their reusable design methods into UX, UI, macOS, component-gallery, icon and reconstruction skills.
+
+Read [toolkit setup and capability coverage](docs/TOOLKITS.md) for exact pins, installation, prerequisites and validation boundaries. Tool availability depends on the receiving computer and selected provider.
 
 ## Production layer (0.8.0)
 
@@ -163,7 +171,7 @@ visual-design-kit/
   INSTALLATION.md                      Install, pin and verify
   plugins/visual-design-studio/
     .claude-plugin/ .codex-plugin/     Plugin manifests (versions kept in sync)
-    skills/                            17 registered skills
+    skills/                            19 registered skills
     agents/                            6 specialist subagents
     evals/                             claude plugin eval cases
     library/atlas/                     Design Space Atlas (125 entries)

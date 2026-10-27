@@ -7,8 +7,8 @@ description: >-
   Gives component specs, state matrices, sizes, density and keyboard and accessibility behavior.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 11:40:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:04:32 UTC"
+  version-timestamp: "2026-10-27 07:43:23 AST"
+  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
 ---
 
 # UI design
@@ -74,6 +74,8 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 ## References
 
 - [Components](references/components.md): anatomy, state matrix, size scale, density modes, overlays, token mapping.
+- [Icon design](../icon-design/SKILL.md): semantic icon families, optical sizes, accessible controls and application icons.
+- [Reference reconstruction](../reference-reconstruction/SKILL.md): screen/state evidence, measured reference specs and matched comparisons.
 - [Forms](references/forms.md): layout, labels, input types and autocomplete, validation timing, multi-step forms.
 - [Navigation](references/navigation.md): patterns by destination count and platform, mega menus, command palette, shortcuts.
 - [Data-dense UI](references/data-dense-ui.md): tables, filtering, bulk actions, virtualization, dashboards.
