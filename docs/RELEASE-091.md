@@ -65,3 +65,11 @@ provider paths; unrelated settings were preserved. A fresh configured MCP proces
 discovered all229 tools, exercised native/WASM paths and closed cleanly. Claude
 CLI reports Connected; a Claude model-led invocation was not performed. Existing
 agent sessions must reconnect to load the new provider variables.
+
+## Later toolbar repair
+
+Version-Timestamp: 2026-10-27 17:02:30 AST
+
+The light-mode toolbar limitation above was reproduced and repaired in
+[BAMA 1.0.0-adapted.2](RELEASE-BAMA-ADAPTED2.md). That edition records the actual
+foreground evidence, both transition directions and the unchanged package scope.

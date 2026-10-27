@@ -1,4 +1,4 @@
-// Version-Timestamp: 2026-10-27 08:10:06 AST
+// Version-Timestamp: 2026-10-27T16:57:27.179246-04:00
 import SwiftData
 import SwiftUI
 import __APP_NAME__Kit
@@ -42,6 +42,7 @@ struct ContentView: View {
 }
 
 struct ItemList: View {
+    @Environment(\.colorScheme) private var toolbarScheme
     @Environment(AppModel.self) private var model
     @Query(sort: \Item.createdAt, order: .reverse) private var items: [Item]
     @AppStorage("confirmDelete") private var confirmDelete = true
@@ -82,6 +83,8 @@ struct ItemList: View {
             Text("This permanently removes the item. Cancel keeps it unchanged.")
         }
         .navigationTitle(page.title)
+        // Keep the native title appearance aligned with this window.
+        .toolbarColorScheme(toolbarScheme, for: .windowToolbar)
         .toolbar {
             ToolbarItem {
                 Button("New Item", systemImage: "plus") { model.addItem() }

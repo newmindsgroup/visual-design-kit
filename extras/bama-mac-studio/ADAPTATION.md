@@ -1,6 +1,6 @@
 # BAMA derivative execution and source record
 
-Version-Timestamp: 2026-10-27 07:44:20 AST
+Version-Timestamp: 2026-10-27 17:02:30 AST
 Agent-Attribution: computer=NMG-MBP-M5; tool=Codex; version=0.160.0; timestamp=2026-10-27 07:44:20 AST
 
 Source: [BAMA](https://github.com/daveebbelaar/bama/tree/15356bd8ebff408222ad21395aea09bd74b15310), copyright 2026 Dave Ebbelaar, MIT. [LICENSE](LICENSE) is retained verbatim. [DERIVATION.json](DERIVATION.json) maps each packaged source to its origin and both hashes. This derivative retains all 21 skills, all their references/templates/assets, and the 12 example specifications. Names use bama-* and host-neutral invocation. Capability preservation does not imply successful runtime acceptance.
@@ -77,3 +77,30 @@ and fixture contracts, not full SwiftData/UI acceptance. Native CI and actual
 rendered UI/capture inspection remain separate. The current Codex task did invoke
 REA 6.8 tools over its own two-file synthetic fixture and export Evidence, with
 complete selected syntax and explicit semantic/application unknowns.
+
+## Toolbar theme follow-up, 1.0.0-adapted.2
+
+Version-Timestamp: 2026-10-27 17:02:30 AST
+
+The historical macro prerequisite above is resolved on the authoring Mac with
+Xcode 27.1. A fresh repaired starter on macOS 26.6.2 passed a code-only build,
+four parameterized core cases, nine isolated self-test checks and eight native
+snapshot contract checks. No signing or app installation was performed.
+
+The native toolbar title could inherit a dark appearance in an active light
+window. The template now passes its window color scheme to `.toolbarColorScheme`
+for `.windowToolbar`, retaining native titles and semantic colors. Separate
+foreground verification covered both pages and both Settings tabs in light to
+dark and dark to light runs. Each capture recorded the owned process/window,
+active application, key window and matching foreground process. Command-N created
+and selected a new item. The controlled All Items title region changed from
+1.119:1 to 14.938:1 in light; dark measured 12.561:1. These pixel diagnostics are
+regression evidence, not a complete accessibility audit.
+
+Foreground captures used an already authorized external controller over only the
+owned window. Only a diagnostic snapshot driver added gates and native-view
+inspection; application, model and theme code remained the production version.
+Its incomplete in-app capture manifests remain distinct from the untouched
+production snapshot suite, which passed all eight captures. No OS privacy or
+global appearance settings were changed. Existing generated apps require the same
+focused patch and project-specific verification; plugin updates do not rewrite them.

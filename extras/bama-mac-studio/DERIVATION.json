@@ -1,5 +1,5 @@
 {
-  "Version-Timestamp": "2026-10-27 09:23:35 AST",
+  "Version-Timestamp": "2026-10-27 17:02:30 AST",
   "source": {
     "repository": "https://github.com/daveebbelaar/bama",
     "commit": "15356bd8ebff408222ad21395aea09bd74b15310",
@@ -52,7 +52,25 @@
     "install_rollback": "source_inspected_not_executed",
     "icon_composer": "toolchain_unavailable",
     "preferences_isolation": "standalone Swift 6 adapter test passed: isolated suite, production domain unchanged, normal cleanup verified; full SwiftUI runtime pending",
-    "independent_source_repair_tests": 77
+    "independent_source_repair_tests": 77,
+    "toolbar_theme_followup": {
+      "Version-Timestamp": "2026-10-27 17:02:30 AST",
+      "version": "1.0.0-adapted.2",
+      "os": "macOS 26.6.2",
+      "toolchain": "Xcode 27.1 (27A9275)",
+      "build": "fresh generated code-only production build passed",
+      "core_test_cases": 4,
+      "native_selftest_checks": 9,
+      "native_snapshot_contract_captures": 8,
+      "foreground_external_captures": 17,
+      "foreground_transitions": "light to dark and dark to light in separate owned launches",
+      "keyboard": "Command-N created and selected a new item",
+      "foreground_evidence_index_sha256": "4433cfd735aeb0f550c6c32212c3c4b75c7c980cf37ee27bbc400b132362113c",
+      "limits": "Only diagnostic Snapshot driver added gates and native-view inspection; production app/model/theme unchanged. External visual receipts are separate from production native snapshot acceptance. No signing, app installation, OS permission or global appearance change."
+    },
+    "initial_checks_timestamp": "2026-10-27 09:23:35 AST",
+    "initial_checks_are_historical": true,
+    "current_status_record": "toolbar_theme_followup"
   },
   "files": [
     {
@@ -73,11 +91,11 @@
     },
     {
       "path": ".claude-plugin/plugin.json",
-      "sha256": "701a119c487f8793d6f51528fdc14307680eb56d9ccd57b46ba3b29cf20be4b2",
+      "sha256": "66a629c3e55ea8f7a5c860fec5d4a42d789e3664e1cc447ef74a15be5f0f602a",
       "origin_path": ".claude-plugin/plugin.json",
       "origin_sha256": "93009c5c9257383caf2cb997811a57cf20d79c878e1d0331700ee7b100247984",
       "derivation": "adapted",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": ".claude/CLAUDE.md",
@@ -89,11 +107,11 @@
     },
     {
       "path": ".codex-plugin/plugin.json",
-      "sha256": "fcf7f0702cc92433a136745ae5622ad80969949dcc0fceb5783d6eaba667a8ce",
+      "sha256": "183083c8879af529eefe2cb5c920b97ae51c40db938b0814dd01342f6a87b4f3",
       "origin_path": null,
       "origin_sha256": null,
       "derivation": "parent-host-manifest",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": ".gitignore",
@@ -105,11 +123,11 @@
     },
     {
       "path": "ADAPTATION.md",
-      "sha256": "6fd9d81a9697e157712c852e877bd2b0313e222083611ba29a17d1c9ac59ed4d",
+      "sha256": "f93318d74ebfebac10c1a17f6e81ac3f6c604789ceb56baff5474847d8a9ef30",
       "origin_path": null,
       "origin_sha256": null,
       "derivation": "adapted",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": "AGENTS.md",
@@ -137,11 +155,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "6bd339987c3fe78878aba77fcfedf53bc249dde3f14d1524f0e4723d6364de67",
+      "sha256": "102010f505c8d65f72a9132d944ca812d673a76764a2b1580447a87f1b90b49d",
       "origin_path": "README.md",
       "origin_sha256": "92e3bc473d1d56be825e28809fc1925c08c4e5b4f3a93e39c1d9869553bfecc0",
       "derivation": "adapted",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": "scripts/link-skills.sh",
@@ -305,11 +323,11 @@
     },
     {
       "path": "skills/bama-build-and-verify/SKILL.md",
-      "sha256": "80b296a38488b3d56dbc12babbcab092949596ddcef37aa2a56e66011953d867",
+      "sha256": "2028983518dd70e6bffdc6185213678c3e3f90d89a7412a371371dad1f6276f7",
       "origin_path": "skills/ship/build-and-verify/SKILL.md",
       "origin_sha256": "0b5bcb4c27917b9b97aa049e35ed48a7b2a9c21028dd1573099c0c456b67d656",
       "derivation": "adapted",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": "skills/bama-build-and-verify/agents/openai.yaml",
@@ -665,11 +683,11 @@
     },
     {
       "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/ContentView.swift",
-      "sha256": "7643ecbb072fcd4c527b960994626235c2e7bdb658f179daff1bd17cae7c49cb",
+      "sha256": "24e583241d0d09bbc466661b532e45e08559b353b4a72f1a7eedbb50bd7b305e",
       "origin_path": "skills/start/new-mac-app/template/Sources/__APP_NAME__/ContentView.swift",
       "origin_sha256": "36c76508b347821b7dff5816555b0ded7cc0b0edbe948200d3708deb95f61b75",
       "derivation": "adapted",
-      "Version-Timestamp": "2026-10-27 09:23:35 AST"
+      "Version-Timestamp": "2026-10-27 17:02:30 AST"
     },
     {
       "path": "skills/bama-new-mac-app/template/Sources/__APP_NAME__/Models.swift",
