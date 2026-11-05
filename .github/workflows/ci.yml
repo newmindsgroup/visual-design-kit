@@ -19,11 +19,17 @@ concurrency:
 jobs:
   python:
     name: Python checks (${{ matrix.python }})
-    runs-on: ubuntu-latest
+    # ubuntu-latest moved to 26.04, which actions/setup-python has no 3.9 build for.
+    # Keep the 3.9 floor on 24.04 so the minimum supported version is still tested.
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python: ["3.9", "3.13"]
+        include:
+          - python: "3.9"
+            os: ubuntu-24.04
+          - python: "3.13"
+            os: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
