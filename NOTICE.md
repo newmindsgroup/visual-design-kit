@@ -33,3 +33,20 @@ Original books, private extraction bundles, filled client records, private sourc
 Version-Timestamp: 2026-10-27 07:43:23 AST
 
 Native design, icon and reconstruction methods adapt MIT-licensed BAMA and REA. Complete notices and source pins are packaged in [design method provenance](plugins/visual-design-studio/library/knowledge/third-party/README.md). Optional full workflow companions live under `extras/bama-mac-studio` and `extras/rea-toolkit`; retain each companion's LICENSE and provenance records. No upstream trademark or asset rights follow from these code licenses.
+
+## MotionSites cinematic web adaptations
+
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+Copyright (c) 2026 MotionSites. Released under the MIT License (part 1 of the upstream LICENSE); the complete notice is preserved in [MOTIONSITES-LICENSE.txt](plugins/visual-design-studio/library/knowledge/third-party/MOTIONSITES-LICENSE.txt).
+
+Source: [Motionsites-AI/claude-skill](https://github.com/Motionsites-AI/claude-skill/tree/faa30d512e3973e58675c72101a7ef42ed37ae83) at commit `faa30d512e3973e58675c72101a7ef42ed37ae83` (2026-10-26), skill folder `plugins/motionsites-web-builder/skills/motionsites-web-builder/`.
+
+Adapted in Visual Design Studio 0.10.0, each file marked "Adapted from MotionSites claude-skill (MIT), see NOTICE.md.":
+
+- `SKILL.md` workflow, `references/spec-template.md`, `references/craft.md`, `references/builders.md`, `references/review.md` and `references/assets.md`, rewritten into `skills/web-design/references/cinematic-landing.md`, `landing-spec-template.md`, `cinematic-craft.md` and `builder-prompts.md`, `skills/design-critique/references/cinematic-addendum.md` and `skills/imagery/references/media-for-web.md`.
+- `references/techniques/*.md`, adapted into `library/knowledge/web-techniques/` with kit token wiring, pinned library versions and added accessibility code.
+- The QA ideas in `scripts/shoot.py` (early first-paint frame, video readiness, broken images), reimplemented in Node inside `skills/design-critique/scripts/render_review.mjs`. No Python from the script is included.
+
+Excluded: the upstream `examples/` folder (example prompts), the `media/` folder (contact sheets and media URLs) and `preview-media.jpg`. Those are not MIT-licensed and may not be redistributed as a collection; nothing from them, and no link to that media, is in this repository. The upstream sponsorship and upgrade behavior was removed entirely. The MIT license covers the adapted text and code only; it grants no rights in the MotionSites name or marks.
+

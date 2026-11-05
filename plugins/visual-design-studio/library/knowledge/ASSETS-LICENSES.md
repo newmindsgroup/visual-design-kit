@@ -1,6 +1,6 @@
 # Licensed asset stack for client work
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 Use when a deliverable needs icons, fonts, sound effects, music or provenance metadata that the client does not already own. The default stack below is cleared for commercial client work under the conditions in each row. Anything outside it needs its license read and recorded before it enters a file.
 
@@ -23,6 +23,20 @@ Licenses and site terms change. Re-read the source when a project starts and rec
 | Sound effects | Freesound, **CC0 filter only** | CC0 1.0 | Yes, with the limits below | Saved CC0 deed, sound URL, uploader name | https://raw.githubusercontent.com/creativecommons/cc-legal-tools-data/main/docs/publicdomain/zero/1.0/legalcode.en.html | CC0 text verified; Freesound FAQ unverified |
 | Music and sound effects | Pixabay | Pixabay Content License | Yes, inside a new work, with the prohibited uses below | The track's license `.txt` or certificate download, track URL, retrieval date | https://pixabay.com/service/license/, https://pixabay.com/service/terms/ | search summary |
 | Content credentials | `c2patool` 0.28.2 (optional) | MIT OR Apache-2.0 | Yes | Nothing extra; record the manifest and signing certificate used | https://github.com/contentauth/c2pa-rs (crates.io registry entry) | verified (registry) |
+
+## Web runtime libraries (0.10.0)
+
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+Used by the [web technique recipes](web-techniques/INDEX.md). Versions and license fields read from the npm registry with `npm view` on 2026-11-05 (verified, registry); GSAP terms as recorded in `motion`'s [web implementation](../../skills/motion/references/web-implementation.md#gsap).
+
+| Library | Pinned | License | Commercial client use | Notes |
+| --- | --- | --- | --- | --- |
+| three | 0.170.0 | MIT | Yes | Keep the MIT notice when bundling |
+| Draco decoder (inside three's package) | three 0.170.0 | Apache-2.0 | Yes | Keep the Apache notice when bundling |
+| hls.js | 1.5.20 | Apache-2.0 | Yes | Keep the Apache notice when bundling |
+| gsap and plugins | 3.15.0 | GSAP Standard "No Charge" License | Yes, except in tools that compete with Webflow's animation builder | Not OSI open source; re-read the license before shipping a product that lets end users build animations |
+| motion (formerly framer-motion) | 14.4.0 | MIT | Yes | Keep the MIT notice when bundling |
 
 ## Tools that are not MIT
 

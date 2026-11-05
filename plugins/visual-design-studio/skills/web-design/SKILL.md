@@ -1,15 +1,15 @@
 ---
 name: web-design
 description: >-
-  Load before planning, designing, auditing or launching any website, landing page, microsite or above-the-fold
-  layout, including regulated (prescription drug, health, finance), multilingual or market-specific launches. Covers
+  Load before planning, designing, auditing or launching any website, landing page, cinematic hero, microsite or
+  above-the-fold layout, or a prompt for Lovable, Bolt or v0 to build one, including regulated (prescription drug, health, finance), multilingual or market-specific launches. Covers
   page types (home, product, pricing, about, blog), conversion and ethical persuasion, responsive and fluid layouts,
-  images, Core Web Vitals, SEO and structured data, localization and language-law requirements, stack and CMS choice
+  Core Web Vitals, SEO and structured data, localization and language-law requirements, stack and CMS choice
   (Astro, Next.js, WordPress, Webflow, Framer) and launch QA.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-23 10:37:48 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 10:37:48 UTC"
+  version-timestamp: "2026-11-05 19:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
 ---
 
 # Web design
@@ -46,8 +46,8 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 4. **Page architecture.** Wireframe each page type section by section with real copy using [page architecture](references/page-architecture.md) and [conversion](references/conversion.md).
 5. **Visual design.** Apply the direction's tokens; design at 375px and 1440px, then specify behavior at every breakpoint with [responsive and fluid](references/responsive-and-fluid.md). Components and states come from `ui-design`.
 6. **Choose the stack and CMS** with [stack selection](references/stack-selection.md), including hosting, consent and analytics.
-7. **Build** semantic HTML on the kit tokens (`../../library/tokens/dist/tokens.css`), the image pipeline, fluid type, and performance budgets per [performance](references/performance.md); SEO per [SEO](references/seo.md).
-8. **Render and inspect.** Screenshot every page type at 375, 768, 1280 and 1440px in light and dark; review with the `design-critique` skill; run Lighthouse on mobile and axe on every template; fix before showing anyone.
+7. **Build** semantic HTML on the kit tokens (`../../library/tokens/dist/tokens.css`), the image pipeline, fluid type, and performance budgets per [performance](references/performance.md); SEO per [SEO](references/seo.md). For a cinematic landing page, hero or single-file showpiece, follow the [cinematic landing workflow](references/cinematic-landing.md) (decide, calibrate, media, [spec](references/landing-spec-template.md), build from the [technique recipes](../../library/knowledge/web-techniques/INDEX.md), look and fix, deliver); for a prompt to Lovable, Bolt, v0 or another builder, use [builder prompts](references/builder-prompts.md).
+8. **Render and inspect.** Screenshot every page type at 375, 768, 1280 and 1440px in light and dark; review with the `design-critique` skill (add `--early 350` to `render_review.mjs` to catch a white first paint and broken media); run Lighthouse on mobile and axe on every template; fix before showing anyone.
 9. **Launch** with the [launch checklist](references/launch-checklist.md); recheck field Core Web Vitals and Search Console after 28 days.
 
 ## Decisions that change the answer
@@ -80,6 +80,11 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [SEO](references/seo.md): semantic HTML, titles, meta descriptions, headings, JSON-LD, sitemaps, canonicals, hreflang, Open Graph.
 - [Stack selection](references/stack-selection.md): Astro, Next.js, WordPress, Webflow, Framer, headless CMS criteria, hosting, consent and privacy.
 - [Launch checklist](references/launch-checklist.md): browsers, accessibility, performance, SEO, analytics, legal pages, redirects, 404, favicons, OG images, security headers.
+- [Cinematic landing](references/cinematic-landing.md): the seven-step workflow for media-led landing pages and heroes, with a look-and-fix loop.
+- [Landing spec template](references/landing-spec-template.md): the build spec wired to tokens and the atlas; also the body of a builder prompt.
+- [Cinematic craft](references/cinematic-craft.md): taste rules for media-led pages and a table of where they differ from kit defaults.
+- [Builder prompts](references/builder-prompts.md): adapting the spec for Lovable, Bolt, v0, Cursor, Manus, Google AI Studio and Kimi.
+- [Web technique recipes](../../library/knowledge/web-techniques/INDEX.md): 58 working recipes (video heroes, glass, type motion, scroll, 3D) with pinned libraries and licenses.
 - Atlas: `python3 ../../library/scripts/atlas.py query "boutique hotel website in Japan, luxury"`; `show channel.marketing-website` for channel specs.
 - Working code: [Astro motion example](../../library/examples/astro-motion/README.md) (Astro, Vue, Tailwind 4, GSAP, Headless UI) and the [Astro build skill](../../library/draft-skills/design-web-astro/SKILL.md).
 - Deep process for client projects, by lifecycle stage ([website workflow](../../library/WEBSITE-WORKFLOW.md)):

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-// Version-Timestamp: 2026-10-20 02:01:39 UTC
-// Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:01:39 UTC
+// Version-Timestamp: 2026-11-05 17:59:47 UTC
+// Agent-Attribution: computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 17:59:47 UTC
+// 0.6.0 adds the first-paint frame (--early), video readiness and broken-image reports, ported from the QA ideas in
+// scripts/shoot.py. Adapted from MotionSites claude-skill (MIT), see NOTICE.md.
 //
 // render_review.mjs: render an HTML/SVG artifact at real viewport sizes and collect review evidence.
 // Node 18+. No bundled dependencies: Playwright and axe-core are resolved at runtime.
@@ -16,7 +18,7 @@ import { basename, dirname, extname, join, relative, resolve, sep } from 'node:p
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import http from 'node:http';
 
-const VERSION = '0.5.0';
+const VERSION = '0.6.0';
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_WRAP_SELECTOR = 'h1,h2,h3,h4,h5,h6,p,li,blockquote,figcaption,dt,dd,[data-wrap]';
 
@@ -33,6 +35,9 @@ Options
   --serve              Serve a local file over http://127.0.0.1 (needed for fetch() and ES modules)
   --root DIR           Root folder for --serve (default: the file's folder)
   --wait MS            Settle time after fonts load (default 400)
+  --early MS           Also capture a first-paint frame MS after navigation starts (350 is a good value) to
+                       catch a white flash before CSS, fonts or media arrive. Saved as <name>-<size>-early.png
+  --video-wait MS      Wait up to MS for every <video> to have a frame or an error before measuring (default 3000)
   --exclude SELECTOR   Skip matching subtrees in contrast, wrap and axe checks (repeatable)
   --wrap-selector SEL  Elements checked for single-word last lines (default ${DEFAULT_WRAP_SELECTOR})
   --dpr N              Device pixel ratio for screenshots (default 1)
@@ -40,7 +45,7 @@ Options
   --reduced-motion     Emulate prefers-reduced-motion: reduce
   --no-axe             Skip axe-core even when it resolves
   --strict             Exit 2 on page overflow, clipped text, contrast failures, serious/critical axe
-                       violations or failed requests
+                       violations, failed requests, broken images or video errors (codec-unsupported excepted)
   --help               Show this help
 
 Environment
@@ -55,7 +60,7 @@ function fail(message, code = 1) {
 }
 
 function parseArgs(argv) {
-  const opts = { widths: '390,768,1440', height: 900, fullPage: false, serve: false, wait: 400, exclude: [],
+  const opts = { widths: '390,768,1440', height: 900, fullPage: false, serve: false, wait: 400, early: 0, videoWait: 3000, exclude: [],
     wrapSelector: DEFAULT_WRAP_SELECTOR, dpr: 1, colorScheme: 'light', reducedMotion: false, axe: true, strict: false };
   const positional = [];
   const needValue = (i, flag) => { if (i + 1 >= argv.length) fail(`${flag} needs a value`); return argv[i + 1]; };
@@ -70,6 +75,8 @@ function parseArgs(argv) {
       case '--serve': opts.serve = true; break;
       case '--root': opts.root = needValue(i, arg); i += 1; break;
       case '--wait': opts.wait = Number(needValue(i, arg)); i += 1; break;
+      case '--early': opts.early = Number(needValue(i, arg)); i += 1; break;
+      case '--video-wait': opts.videoWait = Number(needValue(i, arg)); i += 1; break;
       case '--exclude': opts.exclude.push(needValue(i, arg)); i += 1; break;
       case '--wrap-selector': opts.wrapSelector = needValue(i, arg); i += 1; break;
       case '--dpr': opts.dpr = Number(needValue(i, arg)); i += 1; break;
@@ -91,6 +98,8 @@ function parseArgs(argv) {
   });
   if (!opts.sizes.length) fail('no widths given');
   if (!['light', 'dark'].includes(opts.colorScheme)) fail('--color-scheme must be light or dark');
+  if (!Number.isFinite(opts.early) || opts.early < 0) fail('--early needs a number of milliseconds, for example 350');
+  if (!Number.isFinite(opts.videoWait) || opts.videoWait < 0) fail('--video-wait needs a number of milliseconds');
   return opts;
 }
 
@@ -354,6 +363,19 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
   if (contrast.minRatio !== null) contrast.minRatio = Math.round(contrast.minRatio * 100) / 100;
   contrast.failures = [...failures.values()].sort((a, b) => a.ratio - b.ratio).slice(0, limit * 2);
 
+  // 5. Media: video readiness and errors, images that failed to decode.
+  const MEDIA_ERRORS = { 1: 'MEDIA_ERR_ABORTED', 2: 'MEDIA_ERR_NETWORK', 3: 'MEDIA_ERR_DECODE', 4: 'MEDIA_ERR_SRC_NOT_SUPPORTED' };
+  const videos = [...document.querySelectorAll('video')].slice(0, limit).map((v) => ({
+    selector: cssPath(v), region: region(v), src: (v.currentSrc || v.src || (v.querySelector('source') || {}).src || '').slice(0, 200),
+    readyState: v.readyState, hasFrame: v.readyState >= 2, networkState: v.networkState, paused: v.paused, ended: v.ended,
+    currentTime: Math.round(v.currentTime * 100) / 100, duration: Number.isFinite(v.duration) ? Math.round(v.duration * 100) / 100 : null,
+    autoplay: v.autoplay, muted: v.muted, loop: v.loop, playsInline: v.playsInline, controls: v.controls, poster: v.poster || null,
+    videoSize: v.videoWidth ? `${v.videoWidth}x${v.videoHeight}` : null,
+    error: v.error ? { code: v.error.code, name: MEDIA_ERRORS[v.error.code] || 'unknown', message: (v.error.message || '').slice(0, 200) } : null,
+  }));
+  const brokenImages = [...document.images].filter((i) => i.complete && i.naturalWidth === 0 && (i.currentSrc || i.src))
+    .slice(0, limit).map((i) => ({ selector: cssPath(i), region: region(i), src: (i.currentSrc || i.src).slice(0, 200), alt: i.getAttribute('alt') }));
+
   const faces = new Map();
   if (document.fonts) for (const face of document.fonts) faces.set(`${face.family}|${face.weight}|${face.style}`, { family: face.family.replace(/["']/g, ''), weight: face.weight, style: face.style, status: face.status });
 
@@ -369,7 +391,23 @@ function pageDiagnostics({ wrapSelector, exclude, limit }) {
     wrap: { checked: wrapChecked, singleWordLastLines: runts, textOverflow: clippedText },
     fonts: { declaredPrimary: [...declared.entries()].sort((a, b) => b[1] - a[1]).map(([family, elements]) => ({ family, elements })), faces: [...faces.values()] },
     contrast,
+    media: { videos, brokenImages },
   };
+}
+
+// First-paint probe: what the browser paints behind the page before content arrives (serialized into the page).
+function firstPaintProbe() {
+  const bg = (el) => (el ? getComputedStyle(el).backgroundColor : null);
+  const html = bg(document.documentElement); const body = bg(document.body);
+  const transparent = (c) => !c || c === 'transparent' || /rgba\([^)]*,\s*0\)$/.test(c);
+  return { readyState: document.readyState, htmlBackground: html, bodyBackground: body,
+    paintedBackground: !transparent(html) ? html : !transparent(body) ? body : 'none set (browser default, usually white)' };
+}
+
+async function waitForVideos(page, timeoutMs) {
+  if (!timeoutMs) return;
+  await page.waitForFunction(() => [...document.querySelectorAll('video')].every((v) => v.readyState >= 2 || v.error || v.networkState === 3 || (!v.currentSrc && !v.src && !v.querySelector('source'))),
+    null, { timeout: timeoutMs, polling: 100 }).catch(() => {});
 }
 
 async function settle(page, waitMs) {
@@ -467,7 +505,7 @@ async function main() {
 
   const pageOrigin = url.startsWith('http') ? new URL(url).origin : 'file://';
   const report = { tool: 'render_review.mjs', version: VERSION, generatedAt: new Date().toISOString(), input: opts.target, url,
-    browser: `${browser.browserType().name()} ${browser.version()}`, options: { sizes: opts.sizes, fullPage: opts.fullPage, dpr: opts.dpr,
+    browser: `${browser.browserType().name()} ${browser.version()}`, options: { sizes: opts.sizes, fullPage: opts.fullPage, dpr: opts.dpr, early: opts.early, videoWait: opts.videoWait,
       colorScheme: opts.colorScheme, reducedMotion: opts.reducedMotion, exclude: opts.exclude, wrapSelector: opts.wrapSelector, served: Boolean(server) },
     axe: axe.source ? { source: axe.path } : { source: null, note: axe.note }, results: [],
     limits: [
@@ -475,6 +513,8 @@ async function main() {
       'Single-word last lines are whitespace-based review candidates (same method as library/scripts/wrap-diagnostics.js), not typographic verdicts; forcedBreak marks deliberate <br> breaks.',
       'Finite CSS/Web animations are finished before measuring; scroll-triggered states are captured after one scroll pass.',
       'axe-core catches only part of WCAG issues (published estimates about 30-57%); keyboard, screen reader and zoom checks stay manual.',
+      'Playwright\'s bundled Chromium has no H.264 or AAC decoder, so an MP4 hero can report MEDIA_ERR_SRC_NOT_SUPPORTED (code 4) here and still play in Chrome, Safari and Edge. Point PLAYWRIGHT_CHROMIUM at Google Chrome to test real playback, or judge that video from its poster.',
+      'The early frame is one moment; a white flash can also come from a late-loading stylesheet or a media element without a background. Check paintedBackground and look at the PNG.',
     ] };
 
   for (const size of opts.sizes) {
@@ -483,15 +523,31 @@ async function main() {
     const page = await context.newPage();
     const failedRequests = []; const external = new Set(); const consoleErrors = [];
     let listening = true; // stop recording once our own probes (axe) start
-    page.on('requestfailed', (r) => { if (listening) failedRequests.push({ url: r.url(), error: (r.failure() || {}).errorText || 'failed' }); });
-    page.on('response', (r) => { if (listening && r.status() >= 400) failedRequests.push({ url: r.url(), status: r.status() }); });
+    const aborted = [];
+    page.on('requestfailed', (r) => {
+      if (!listening) return;
+      const error = (r.failure() || {}).errorText || 'failed';
+      // Media range requests the browser cancels itself report net::ERR_ABORTED; they are not broken assets.
+      if (/ERR_ABORTED/.test(error)) aborted.push({ url: r.url(), resourceType: r.resourceType() }); else failedRequests.push({ url: r.url(), error, resourceType: r.resourceType() });
+    });
+    page.on('response', (r) => { if (listening && r.status() >= 400) failedRequests.push({ url: r.url(), status: r.status(), resourceType: r.request().resourceType() }); });
     page.on('request', (r) => { const u = r.url(); if (listening && /^https?:/.test(u) && !u.startsWith(pageOrigin)) external.add(new URL(u).origin); });
     page.on('console', (m) => { if (listening && m.type() === 'error' && consoleErrors.length < 20) consoleErrors.push(m.text().slice(0, 300)); });
     page.on('pageerror', (e) => { if (listening && consoleErrors.length < 20) consoleErrors.push(`pageerror: ${e.message.slice(0, 300)}`); });
     const entry = { size: size.label, width: size.width, height: size.height };
     try {
-      await page.goto(url, { waitUntil: 'load', timeout: 45000 });
+      if (opts.early) {
+        await page.goto(url, { waitUntil: 'commit', timeout: 45000 });
+        await page.waitForTimeout(opts.early);
+        const earlyShot = join(outDir, `${slug}-${size.label}-early.png`);
+        await page.screenshot({ path: earlyShot });
+        entry.early = { atMs: opts.early, screenshot: earlyShot, ...(await page.evaluate(firstPaintProbe).catch((error) => ({ error: error.message.split('\n')[0] }))) };
+        await page.waitForLoadState('load', { timeout: 45000 });
+      } else {
+        await page.goto(url, { waitUntil: 'load', timeout: 45000 });
+      }
       await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
+      await waitForVideos(page, opts.videoWait);
       await settle(page, opts.wait);
       Object.assign(entry, await page.evaluate(pageDiagnostics, { wrapSelector: opts.wrapSelector, exclude: opts.exclude, limit: 15 }));
       entry.fonts.rendered = await renderedFonts(context, page);
@@ -505,7 +561,17 @@ async function main() {
     } catch (error) {
       entry.error = error.message.split('\n')[0];
     }
-    entry.requests = { failed: failedRequests.slice(0, 20), externalOrigins: [...external] };
+    entry.requests = { failed: failedRequests.slice(0, 20), aborted: aborted.length, abortedExamples: aborted.slice(0, 5), externalOrigins: [...external] };
+    if (entry.media) {
+      // Chromium reports a missing file and an unsupported codec with the same code 4; the request log tells them apart.
+      for (const v of entry.media.videos) {
+        if (!v.error) continue;
+        const requestFailed = failedRequests.some((f) => f.url === v.src);
+        v.diagnosis = requestFailed ? 'source request failed (missing or blocked file)'
+          : v.error.code === 4 ? 'format or codec not supported by this browser' : 'playback error';
+        v.codecOnly = !requestFailed && v.error.code === 4;
+      }
+    }
     entry.consoleErrors = consoleErrors;
     report.results.push(entry);
     await context.close();
@@ -539,13 +605,26 @@ async function main() {
       + `${r.requests.failed.length ? ` | failed requests: ${r.requests.failed.length}` : ''}${r.requests.externalOrigins.length ? ` | external: ${r.requests.externalOrigins.join(', ')}` : ''}`
       + `${r.consoleErrors.length ? ` | console errors: ${r.consoleErrors.length}` : ''}`
       + `${fallback.length ? ` | fallback glyphs (font not first in any stack): ${fallback.map((f) => `${f.family} x${f.glyphs}`).join(', ')}` : ''}`);
+    const vids = r.media ? r.media.videos : [];
+    const vidErrors = vids.filter((v) => v.error);
+    const codecOnly = vidErrors.filter((v) => v.codecOnly);
+    const brokenImgs = r.media ? r.media.brokenImages : [];
+    if (vids.length || brokenImgs.length || r.early) {
+      lines.push(`  ${''.padEnd(9)} ${vids.length ? `videos: ${vids.length} (${vids.filter((v) => v.hasFrame).length} with a frame, ${vids.filter((v) => !v.paused).length} playing, ${vidErrors.length} errors${codecOnly.length ? `, ${codecOnly.length} codec-unsupported in this browser` : ''})` : 'videos: 0'}`
+        + ` | broken images: ${brokenImgs.length}`
+        + `${r.early ? ` | first paint @${r.early.atMs}ms: ${r.early.paintedBackground || r.early.error} (${r.early.screenshot})` : ''}`);
+      for (const v of vidErrors.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   video ${v.error.name}, ${v.diagnosis}: ${v.src || v.selector}`);
+      for (const v of vids.filter((x) => !x.error && !x.hasFrame).slice(0, 3)) lines.push(`  ${''.padEnd(9)}   video has no frame yet (readyState ${v.readyState}): ${v.src || v.selector}`);
+      for (const i of brokenImgs.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   broken image: ${i.src}`);
+    }
     lines.push(`  ${''.padEnd(9)} screenshot: ${r.screenshot}`);
     for (const o of boxOverflow.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   ${o.clipped ? 'clipped' : 'spills'} text (${o.scrollWidth}px in ${o.clientWidth}px): ${o.selector}`);
     for (const o of r.overflowOffenders.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   off-canvas ${o.left}..${o.right}px${o.clippedByRoot ? ' (hidden by root overflow)' : ''}: ${o.selector}`);
     for (const runt of runts.filter((x) => x.kind === 'heading').slice(0, 3)) lines.push(`  ${''.padEnd(9)}   heading ends on "${runt.lastLine}"${runt.forcedBreak ? ' (has <br>)' : ''}: ${runt.selector}`);
     for (const f of r.contrast.failures.filter((x) => !x.exemptCandidate).slice(0, 3)) lines.push(`  ${''.padEnd(9)}   contrast ${f.ratio}:1 < ${f.required}:1 ${f.fg} on ${f.bg} ${f.fontSize}/${f.fontWeight}: ${f.examples[0].selector}`);
     for (const v of serious.slice(0, 3)) lines.push(`  ${''.padEnd(9)}   axe ${v.impact} ${v.id} x${v.nodes}: ${v.targets[0] || ''}`);
-    if (r.horizontalOverflow || boxOverflow.some((o) => o.clipped) || contrastFails || serious.length || r.requests.failed.length) blocking += 1;
+    if (r.horizontalOverflow || boxOverflow.some((o) => o.clipped) || contrastFails || serious.length || r.requests.failed.length
+      || brokenImgs.length || vidErrors.length > codecOnly.length) blocking += 1;
   }
   lines.push(`  report: ${reportPath}`);
   process.stdout.write(`${lines.join('\n')}\n`);

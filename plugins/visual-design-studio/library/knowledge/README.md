@@ -1,6 +1,6 @@
 # Applied design methods
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 These original method cards teach decisions that can be made with the kit and the project's authorized inputs. They require no private reference collection. They are authored guidance, not a claim that a design has been produced, tested, or accepted. Every miniature is fictional teaching material. No example is a default style, real audience finding, or production baseline.
 
@@ -18,6 +18,7 @@ Start with the selected capability, then read one card matching the unresolved d
 | What visual form explains this information truthfully? | [Information and infographics](information-and-infographics.md) | `infographics` | [infographic specification](../templates/infographic-spec.md) |
 | What should appear and move on this screen? | [Screen content and motion](screen-content-and-motion.md) | `display-art-direction`, `screen-storyboard`, `motion`, `screen-product-fidelity` | [display brief](../templates/display-design-brief.md), [motion specification](../templates/motion-spec.md), [media packet](../templates/media-quality-packet.md) |
 | What is wrong, what should change, and what can we hand over? | [Critique, revision and delivery](critique-revision-and-delivery.md) | `delivery`, `foundations` | [design work](../templates/design-work.md), [stage execution](../templates/stage-execution.md), [delivery preflight](../DELIVERY-PREFLIGHT.md) |
+| Which cinematic web effect fits, and how is it built accessibly? | [Web technique recipes](web-techniques/INDEX.md) | `web-motion-library`, `web-art-direction` | the [landing spec](../../skills/web-design/references/landing-spec-template.md) |
 
 Capability IDs resolve in [the existing catalog](../capabilities.json). Cards supplement those contracts. They do not add capabilities, validators, approval routes or record types. Specialized instructions remain responsible for implementation and medium-specific checks.
 

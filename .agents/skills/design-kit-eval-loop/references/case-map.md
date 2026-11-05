@@ -1,6 +1,6 @@
 # Case map
 
-Version-Timestamp: 2026-10-27 12:00:00 UTC
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 Which eval cases to re-run after editing a skill, and where the knowledge each case's grader rewards lives in the kit. Paths are under `plugins/visual-design-studio/`. After any change to a skill `description`, also re-run every `no-fire-*` case.
 
@@ -59,3 +59,14 @@ Version-Timestamp: 2026-10-27 07:51:01 AST
 | reference-adapt-locked-brand | reference-reconstruction, design-system | project locks and state-complete gallery |
 | icon-family-optical-and-native | icon-design | optical variants, semantic registry and compiled icon prerequisites |
 | macos-project-locked-baseline | native-app-design | existing OS baseline, surfaces, keyboard and actual toolchain failures |
+
+## Cinematic web cases (0.10.0)
+
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+| Case | Owner skill (edit this to fix) | Kit content the grader rewards |
+| --- | --- | --- |
+| `cinematic-hero-spec-signature` | web-design | `skills/web-design/references/cinematic-landing.md` (one signature, first CSS rule), `references/landing-spec-template.md`, `references/cinematic-craft.md` (conflicts table: 12px labels, 1.2 s entrance, `preload="metadata"`), `skills/imagery/references/media-for-web.md` (poster budget), `library/knowledge/web-techniques/INDEX.md` (pause control, WCAG 2.2.2) |
+| `lovable-builder-prompt-from-direction` | web-design, design-director | `skills/web-design/references/builder-prompts.md` (Lovable stack line, tokens in `index.css`, constraints last, verify), `skills/design-director/references/handoff.md` section 4, `skills/color/references/contrast.md` (accent button pair) |
+| `scroll-video-hero-motion-budget` | web-design, motion | `library/knowledge/web-techniques/video-and-media.md` technique 7 (lerp 0.12, seek guard, frame cache, `-g` encode), `skills/imagery/references/media-for-web.md` (scrub clip budget), `skills/web-design/SKILL.md` and `references/performance.md` (Core Web Vitals, JS budget), `skills/motion/SKILL.md` (reduced motion) |
+

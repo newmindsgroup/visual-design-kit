@@ -8,8 +8,8 @@ description: >-
   Also for "is this good" or "does this look AI-made".
 license: MIT
 metadata:
-  version-timestamp: "2026-10-23 11:25:07 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-23 11:25:07 UTC"
+  version-timestamp: "2026-11-05 18:10:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
 ---
 
 # Design critique
@@ -33,7 +33,7 @@ Good critique works from evidence. It judges rendered pixels at real sizes again
 ## Workflow
 
 1. **Freeze the brief.** Audience, job, channel, mandatories, invariants and anything already approved. If something is missing, state the assumption in one line.
-2. **Render the real thing.** For HTML, SVG or a URL: `node scripts/render_review.mjs <file-or-url> --full-page` (path relative to this skill; add `--serve` when the page uses `fetch` or ES modules, `--widths 1080x1350` for fixed formats). It writes one PNG per width plus `report.json`. For other formats export PNGs at native size first (Figma export, `pdftoppm -r 150 -png`, `ffmpeg -ss 3 -frames:v 1`).
+2. **Render the real thing.** For HTML, SVG or a URL: `node scripts/render_review.mjs <file-or-url> --full-page` (path relative to this skill; add `--serve` when the page uses `fetch` or ES modules, `--widths 1080x1350` for fixed formats). It writes one PNG per width plus `report.json`; add `--early 350` for a first-paint frame per width (white-flash check) and video readiness. For other formats export PNGs at native size first (Figma export, `pdftoppm -r 150 -png`, `ffmpeg -ss 3 -frames:v 1`).
 3. **Look at every screenshot** before reading the report. Note the first thing you see, the second, and anything broken. Then read the report: horizontal overflow, clipped text, single-word last lines, contrast failures, unmeasured text over images, rendered fonts and fallbacks, axe violations, failed requests.
 4. **Run the squint test.** Blur the screenshot by 6-8px (or squint). There should be one clear entry point per view, then a second and third level. An even gray field means flat hierarchy; three equal blobs mean template cards.
 5. **Run the name-swap test.** Cover the logo and read a competitor's name into the design. If nothing else needs to change, it is not distinctive yet: find or create one ownable device (type, color pairing, graphic system, image approach, voice).
@@ -92,12 +92,13 @@ Not tested: <screen reader on Windows, real devices, ...>
 ## References
 
 - [Rubric](references/rubric.md): twelve criteria with 1-5 descriptors, caps and a score sheet. Read before scoring.
+- [Cinematic addendum](references/cinematic-addendum.md): blocking checks, signature, media integration and motion criteria, and the 8+ average, none-below-7 stop rule for cinematic landing pages and heroes.
 - [AI tells](references/ai-tells.md): 26 named tells with what they look like, why they happen and the fix.
 - [Accessibility audit](references/accessibility-audit.md): the 15-minute pass (axe, keyboard, focus, zoom and reflow, contrast, targets, motion, VoiceOver and NVDA).
 - [Review panel](references/review-panel.md): art-director, accessibility-auditor, copy-editor, brand-guardian and frontend-engineer subagents, score merge into the rubric, conflict ladder, chat fallback.
 - [Build fidelity](references/build-fidelity.md) and [compare_build.mjs](scripts/compare_build.mjs): pixel and computed-style diff of approved design vs build, thresholds, masks, pairing with Core Web Vitals.
 - [Revision discipline](references/revision-discipline.md): scoped changes, invariants, before and after evidence, stop rules.
-- [render_review.mjs](scripts/render_review.mjs): Node 18+, no bundled dependencies. Install Playwright and axe-core in the working project (`npm i -D playwright axe-core && npx playwright install chromium`) or point `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_CHROMIUM` and `AXE_SCRIPT` at existing copies. `--exclude SELECTOR` skips deliberate controls or third-party embeds; `--strict` exits 2 on blocking findings for CI.
+- [render_review.mjs](scripts/render_review.mjs): Node 18+, no bundled dependencies. Install Playwright and axe-core in the working project (`npm i -D playwright axe-core && npx playwright install chromium`) or point `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_CHROMIUM` and `AXE_SCRIPT` at existing copies. `--exclude SELECTOR` skips deliberate controls or third-party embeds; `--early MS` saves a first-paint frame and reports the painted background; `--video-wait MS` waits for videos before measuring; the report lists video readiness and errors, broken images, failed requests and console errors; `--strict` exits 2 on blocking findings for CI.
 - [AI-tells gallery](../../library/examples/ai-tells/index.html) and its [README](../../library/examples/ai-tells/README.md): 18 tells rendered generic versus better across 18 industries and styles.
 - [Quality benchmark](../../library/examples/quality-benchmark/README.md): FORM and TIDAL calibration briefs with generic and wrong controls. Compare before you score.
 - [Stylescapes](../../library/examples/stylescapes/README.md): twelve excellent, distinct directions to calibrate what a 5 looks like outside one aesthetic.
