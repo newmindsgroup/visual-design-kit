@@ -1,6 +1,20 @@
 # Completion backlog
 
-Version-Timestamp: 2026-09-16T18:27:08.062526-04:00
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+## Cinematic web, 0.10.0
+
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+- [x] Cinematic landing workflow, landing spec template, cinematic craft with a conflicts table, builder prompts, cinematic review addendum and media for the web.
+- [x] 58 web technique recipes adapted with token wiring, a focus and pause baseline, accessibility additions and npm-verified library pins; MIT notice in `NOTICE.md` and `library/knowledge/third-party/`.
+- [x] `render_review.mjs` 0.6.0: first-paint frame, video readiness and errors, broken images; tested on a local fixture.
+- [x] 3 eval cases written (49 in total).
+- [ ] Smoke-run the 3 new cases (`--runs 1 --ablation none`), then measure with `--runs 3 --ablation with-without`.
+- [ ] Build one cinematic hero per technique file end to end and keep the renders as calibration (only original or client-cleared media).
+- [ ] Re-test the recipes against current three.js (0.187.0 on 2026-11-05) and hls.js (1.7.4) before moving the pins.
+- [ ] Re-verify the builder conventions in `builder-prompts.md` (Lovable `index.css` HSL variables, v0 and Bolt stack lines) against each tool's current documentation.
+- [ ] Test `render_review.mjs --early` with Google Chrome (`PLAYWRIGHT_CHROMIUM`) for H.264 hero playback, and on a served URL with real network latency.
 
 ## Production layer, 0.8.0
 

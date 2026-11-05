@@ -1,6 +1,23 @@
 # Release notes
 
-Version-Timestamp: 2026-09-27T13:51:25-04:00
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+## 0.10.0 Cinematic web: landing workflow, technique recipes and first-paint QA
+
+Version-Timestamp: 2026-11-05 18:10:00 UTC
+
+Media-led landing pages and heroes now have a full workflow, adapted from the MIT-licensed part of MotionSites claude-skill (attribution in `NOTICE.md`; its example prompts and media are not included, and its sponsorship behavior was removed).
+
+- **Workflow** (`skills/web-design/references/cinematic-landing.md`): decide, study the kit's own stylescapes and atlas, source media honestly, write the [landing spec](../skills/web-design/references/landing-spec-template.md), build a single file with pinned libraries, then look and fix until the average is 8+ with nothing under 7, or 3 rounds. `design-director` routes cinematic landing and hero deliverables to it.
+- **Technique recipes** (`library/knowledge/web-techniques/`): 58 working recipes in 7 files (video heroes, glass, type motion, depth, scroll, layout, 3D) rewired to the token contract, with a kit baseline (focus ring, first-paint rule), a WCAG 2.2.2 motion pause control, accessibility additions where recipes lacked them, and versions checked on npm: three 0.170.0, gsap 3.15.0, hls.js 1.5.20, motion 14.4.0.
+- **Taste rules** (`cinematic-craft.md`): only what the kit lacked, plus a table of 16 places where the source differs from kit defaults and when each applies. Kit defaults stand.
+- **Review** (`design-critique/references/cinematic-addendum.md`): blocking checks, signature, media integration and motion criteria mapped onto the 12-criterion rubric, and the loop's stop rule.
+- **Builder prompts** (`web-design/references/builder-prompts.md`): Lovable, Bolt, v0, Cursor, Manus, Google AI Studio and Kimi, platform claims marked verify, linked from `design-director`'s prompt handoff.
+- **Media for the web** (`imagery/references/media-for-web.md`): hero loops, posters, cut-outs, generation formulas, budgets and ffmpeg commands run before publication.
+- **render_review.mjs 0.6.0:** `--early MS` first-paint frame with the painted background, `--video-wait MS`, per-video readiness and errors (a missing file told apart from a codec the test browser lacks), broken images, and media range cancellations kept out of failed requests. Existing flags are unchanged.
+- **Evals:** 3 cases (49 in total), not yet measured.
+
+Existing project pins are unaffected; adopt 0.10.0 deliberately.
 
 ## 0.8.0 Production layer: finished collateral, print, decks and motion
 

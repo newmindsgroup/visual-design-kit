@@ -1,6 +1,6 @@
 # Evals
 
-Version-Timestamp: 2026-10-23 11:31:41 UTC
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 Behavioral evals for the Visual Design Studio plugin, in the `claude plugin eval` format: each case is a folder with `prompt.md` (the user request and run limits) and `graders/*.md` (LLM rubric, file checks and skill-firing indicators).
 
@@ -169,3 +169,16 @@ Next: triage each failing grader with the eval loop (kit gap or grader too stric
 Version-Timestamp: 2026-10-27 07:41:35 AST
 
 Added `reconstruct-unknown-scale`, `icon-family-optical-and-native`, `macos-project-locked-baseline` and `reference-adapt-locked-brand`. They test evidence limits, optical geometry, compiled-icon prerequisites, existing macOS support, project locks and state galleries. The cases are versioned regression specifications. They have not yet established measured model lift. The paid eval harness is not run by this adoption.
+
+## Cinematic web cases (added 2026-11-05, not yet measured)
+
+Three cases for the 0.10.0 cinematic web workflow: `cinematic-hero-spec-signature` (a hero spec with one signature idea, real values and three inherited choices the kit corrects), `lovable-builder-prompt-from-direction` (a Lovable prompt from an approved direction with no media yet and an accent button pair under 4.5:1) and `scroll-video-hero-motion-budget` (scroll-scrubbed video with reduced-motion behavior and a numeric budget). Each has three weighted `llm` graders with fail conditions, one `regex` check and a `tool_used: Skill` indicator with `arm: with-only`. The suite is now 49 cases. Smoke-test each with `--runs 1 --ablation none` before the first `--runs 3 --ablation with-without` measurement; the paid harness was not run for this release.
+
+### 0.10.0 smoke run (2026-11-05, `--runs 1 --ablation none`, $0.56)
+
+| Case | Score | Failing graders |
+| --- | --- | --- |
+| `scroll-video-hero-motion-budget` | 1.00 | none |
+| `cinematic-hero-spec-signature` | 0.60 | `first-rule`, `signature-and-values` |
+| `lovable-builder-prompt-from-direction` | 0.00, then 0.22 | First run: no skill loaded, so `web-design`'s description now names builder prompts (Lovable, Bolt, v0). Rerun: skill loads, `index-css` passes; `structure`, `media-honesty` and `accessibility-and-verify` remain for the eval loop. |
+

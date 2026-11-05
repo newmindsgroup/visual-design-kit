@@ -1,12 +1,12 @@
 # Current candidate package pins
 
-Version-Timestamp: 2026-10-27 17:02:30 AST
+Version-Timestamp: 2026-11-05 18:15:55 UTC
 
-Candidate branch: `fix/bama-toolbar-theme`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
+Candidate branch: `feat/cinematic-web`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
 
 | Package | Version | SHA-256 of PAYLOAD.sha256 |
 | --- | --- | --- |
-| Visual Design Studio | 0.9.1 | `656d246ce56337b9e6579fc86698a3a2035f8aecf48950277621409b615cab88` |
+| Visual Design Studio | 0.10.0 | `f6136d67161bb3c61a851a078df48ae5a8c5b0b8d27f46aa949c2e5d3603a63a` (candidate; not yet verified on a receiving machine) |
 | BAMA Mac Studio | 1.0.0-adapted.2 | `538a49ffe5c2f3c8be2dcb7cf3c6fa5d86a69ffd8b1087d7942d3f356b272bd5` |
 | REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
 

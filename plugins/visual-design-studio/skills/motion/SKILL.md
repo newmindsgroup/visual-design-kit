@@ -4,8 +4,8 @@ description: >-
   Designs and specifies motion for interfaces, websites, brands, video and displays: purpose, the 12 animation principles, duration and easing tokens, springs, choreography, brand motion language, kinetic type, CSS, View Transitions, GSAP, Motion, Lottie, Rive, After Effects, Remotion renders, token-built Lottie, export specs, captions, loudness and UI sound, with reduced-motion and flash safety. Use when animating UI, choosing durations or easing, building a motion system, making an ident, social or explainer video, kinetic type, Lottie or Rive assets, or sound.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-27 12:00:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.309; timestamp=2026-10-23 20:12:12 UTC"
+  version-timestamp: "2026-11-05 18:10:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
 ---
 
 # Motion
@@ -92,6 +92,7 @@ python3 ../../library/scripts/atlas.py combine style.playful-bubbly archetype.je
 - [Sound](references/sound.md): UI sound, sonic branding, levels, accessibility.
 - [Motion specimen](references/motion-specimen.html): live comparison of every duration and easing token.
 - Production code: [Remotion and Lottie example](../../library/examples/motion-remotion/README.md) (six token-driven compositions, posters, encoding presets) and the stdlib [Lottie builder](../../library/scripts/lottie_build.py) (`build`, `validate`, `examples`).
+- [Web technique recipes](../../library/knowledge/web-techniques/INDEX.md): 58 cinematic web recipes (video loops, entrances, split text, scroll stages, 3D) with reduced-motion branches, a WCAG 2.2.2 pause control and pinned GSAP, three.js and motion versions.
 - Working code: [website motion library](../../library/MOTION-LIBRARY.md), [motion and media recipes](../../library/MOTION-RECIPES.md), [Astro motion playground](../../library/examples/astro-motion/README.md), [screen content and motion method card](../../library/knowledge/screen-content-and-motion.md).
 - Deep process for client projects: [motion effects](../../library/draft-skills/design-motion-effects/SKILL.md), [web motion library](../../library/draft-skills/design-web-motion-library/SKILL.md), [screen animation](../../library/draft-skills/design-screen-animation/SKILL.md), [kinetic type](../../library/draft-skills/design-screen-kinetic-type/SKILL.md), [screen video](../../library/draft-skills/design-screen-video/SKILL.md), [loops](../../library/draft-skills/design-screen-loops/SKILL.md), [audio and captions](../../library/draft-skills/design-screen-audio-captions/SKILL.md), [storyboards](../../library/draft-skills/design-screen-storyboard/SKILL.md), [still to motion](../../library/draft-skills/design-screen-still-motion/SKILL.md), [screen effects](../../library/draft-skills/design-screen-effects/SKILL.md).
 

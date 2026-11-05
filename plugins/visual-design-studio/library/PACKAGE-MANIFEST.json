@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-10-27 12:25:37 AST",
-  "candidate": "0.9.1",
+  "Version-Timestamp": "2026-11-05 18:24:25 UTC",
+  "candidate": "0.10.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.9.1"
+    "version": "0.10.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -202,7 +202,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "311119f93bb4df07be22d09d19ff47df4229b8566fd065f99e27a869901cc1e6",
+      "sha256": "a85f18373c925ad15e55a133bc436b41e192fc129e4e11211bd268d8a4299907",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -4540,13 +4540,13 @@
     },
     {
       "destination": "knowledge/ASSETS-LICENSES.md",
-      "sha256": "627d3860c709c692e24690ab00ff99afd75bf7f0d44f346052f8e17481fc9078",
+      "sha256": "3a1aac4d6d3ff4f97f401c0c2e83dea21fe8c82293977f91ecb05c96a7f7e783",
       "source": "curated-plugin-source/knowledge/ASSETS-LICENSES.md",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "knowledge/README.md",
-      "sha256": "de38e71a33c9bf959a9b3bed06ce7afcda18d2a6e9a9f9cb66f20836705fe92b",
+      "sha256": "b9192879b441c22d5dac25ac9419c91a6534e637834193ee2671843c957de594",
       "source": "curated-plugin-source/knowledge/README.md",
       "status": "versioned-evaluation-input"
     },
@@ -4593,6 +4593,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "knowledge/third-party/MOTIONSITES-LICENSE.txt",
+      "sha256": "918d52cb5c63a24a8a01f35ebc42041c11027aa5e924aeb7da3a1aa711777296",
+      "source": "curated-plugin-source/knowledge/third-party/MOTIONSITES-LICENSE.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "knowledge/third-party/REA-LICENSE.txt",
       "sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
       "source": "curated-plugin-source/knowledge/third-party/REA-LICENSE.txt",
@@ -4600,7 +4606,7 @@
     },
     {
       "destination": "knowledge/third-party/README.md",
-      "sha256": "41b3c33c7a24ed4f7cae07b905a61227fcde8cee0b5b281b8c930121ec5c76be",
+      "sha256": "1068192382c52889f80b942b9732d6de121d4e503ef608a26777a3931c5b915a",
       "source": "curated-plugin-source/knowledge/third-party/README.md",
       "status": "versioned-evaluation-input"
     },
@@ -4614,6 +4620,54 @@
       "destination": "knowledge/ux-and-content.md",
       "sha256": "cdb5167b3588927286e72fd68564de3fabbd0af5367ab3c2646a65dfff12b5a2",
       "source": "curated-plugin-source/knowledge/ux-and-content.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/3d-and-webgl.md",
+      "sha256": "6f0deee581f0c1aaffa03080f0415fe0cb639190e00f345046c742fc3871312b",
+      "source": "curated-plugin-source/knowledge/web-techniques/3d-and-webgl.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/INDEX.md",
+      "sha256": "9f8cb2a3adad22e1aa2ac6a656e6d7f2e35821a36b98f7fdde5d588e1f3c3d56",
+      "source": "curated-plugin-source/knowledge/web-techniques/INDEX.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/depth-and-interaction.md",
+      "sha256": "366504640fad5584d96a0930479421a456582ef802bdcf337805126da7d18fd3",
+      "source": "curated-plugin-source/knowledge/web-techniques/depth-and-interaction.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/layout-and-ui.md",
+      "sha256": "9d7787ee081bd2bcd883484200620a3ee44382e1d9542f9538a847ba8be9c981",
+      "source": "curated-plugin-source/knowledge/web-techniques/layout-and-ui.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/scroll.md",
+      "sha256": "224dbfbffd620333d0a48a19bd0b71a91b8529150230c6c4cad6775ab20e3268",
+      "source": "curated-plugin-source/knowledge/web-techniques/scroll.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/surfaces-and-buttons.md",
+      "sha256": "d8137102f79ec38aaf5030474002754d2b3b36cc1d6cb3cd12f349dc81b45f7e",
+      "source": "curated-plugin-source/knowledge/web-techniques/surfaces-and-buttons.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/type-and-text-motion.md",
+      "sha256": "8c8f8dbd50b7b8cc1cb96f36d9dd0bfc2c22c83a444549369e1d0d534dae92ef",
+      "source": "curated-plugin-source/knowledge/web-techniques/type-and-text-motion.md",
+      "status": "versioned-evaluation-input"
+    },
+    {
+      "destination": "knowledge/web-techniques/video-and-media.md",
+      "sha256": "3eb5017272f4e27536b0a58ad941e7f0813013fda9644569b2fec67321e5404c",
+      "source": "curated-plugin-source/knowledge/web-techniques/video-and-media.md",
       "status": "versioned-evaluation-input"
     },
     {

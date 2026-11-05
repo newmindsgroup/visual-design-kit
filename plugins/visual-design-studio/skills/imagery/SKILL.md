@@ -8,8 +8,8 @@ description: >-
   3D renders or interactive 3D.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-20 02:07:10 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.304; timestamp=2026-10-20 02:07:10 UTC"
+  version-timestamp: "2026-11-05 18:10:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
 ---
 
 # Imagery
@@ -68,6 +68,7 @@ Excellent imagery looks like it could only belong to this brand: one icon family
 - [Photography](references/photography.md): art direction brief, shot lists, stock selection, retouching, releases.
 - [AI image generation](references/ai-image-generation.md): prompt anatomy, consistency, text limits, appropriate use, provenance, rights, cleanup and upscaling.
 - [3D](references/3d.md): when 3D helps, tools, materials and lighting, web 3D budgets, accessibility.
+- [Media for the web](references/media-for-web.md): hero video loops, poster frames, cut-outs, generation formulas, size budgets and tested ffmpeg commands.
 - Atlas, when style, industry, market or audience matters:
   - `python3 ../../library/scripts/atlas.py query "editorial food photography warm"`
   - `python3 ../../library/scripts/atlas.py show style.illustrative-narrative`

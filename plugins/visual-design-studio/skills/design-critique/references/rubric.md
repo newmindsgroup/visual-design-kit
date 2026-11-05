@@ -1,6 +1,6 @@
 # Critique rubric
 
-Version-Timestamp: 2026-10-20 02:29:27 UTC
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 Twelve criteria, each scored 1-5 from rendered screenshots at real sizes, never from source code or a description. Calibrate before scoring by looking at the [FORM/TIDAL benchmark](../../../library/examples/quality-benchmark/README.md) (what 4-5 looks like for two very different briefs) and the [AI-tells gallery](../../../library/examples/ai-tells/index.html) (what 2-3 looks like and how it moves to 5).
 
@@ -12,6 +12,7 @@ Twelve criteria, each scored 1-5 from rendered screenshots at real sizes, never 
 - **Gates that cap a score regardless of how it looks:** a false or unsupported claim caps Brief fit at 1; any WCAG 2.2 AA failure on core content or a core task caps Accessibility at 2; horizontal overflow or clipped text at a target width caps Responsiveness at 2; placeholder copy (lorem, "Your headline here") caps Craft at 2.
 - **Every score below 4 names a defect**: what, where (width, section, selector or crop), evidence (screenshot path, measured value) and the fix.
 - **N/A is allowed** with a reason (Interaction states for a printed poster; Responsiveness becomes format adaptation for fixed-size work).
+- **Cinematic landing pages and heroes** add the [cinematic addendum](cinematic-addendum.md): its blocking checks, three extra criteria (signature, media integration, motion choreography) and the look-and-fix stop rule. These targets still govern client delivery.
 - **Tells lower Distinctiveness:** count catalog tells from [ai-tells.md](ai-tells.md) that the brief did not ask for. 0-1: no cap. 2-3: cap at 3. 4 or more: cap at 2.
 
 ## 1. Brief fit

@@ -4,9 +4,9 @@
 
 **Make Codex and Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.9.1 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.10.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-10-27 12:21:23 AST
+Version-Timestamp: 2026-11-05 18:10:00 UTC
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -98,6 +98,15 @@ Directions must differ on at least three of six axes (type, palette, layout logi
 
 Dependency remediation and machine setup: [0.9.1 acceptance](docs/RELEASE-091.md).
 
+## Cinematic web (0.10.0)
+
+- **Landing workflow:** `web-design`'s [cinematic landing](plugins/visual-design-studio/skills/web-design/references/cinematic-landing.md) reference takes a media-led landing page or hero from one signature idea through a [spec with real values](plugins/visual-design-studio/skills/web-design/references/landing-spec-template.md) to a single-file build, then renders, scores and fixes it until the average is 8+ with nothing under 7.
+- **Technique recipes:** [58 working recipes](plugins/visual-design-studio/library/knowledge/web-techniques/INDEX.md) for video heroes, glass, type motion, scroll and 3D, wired to the tokens, with a WCAG 2.2.2 pause control and pinned, license-checked libraries.
+- **Builder prompts and media:** [prompts for Lovable, Bolt, v0 and other builders](plugins/visual-design-studio/skills/web-design/references/builder-prompts.md) and [media for the web](plugins/visual-design-studio/skills/imagery/references/media-for-web.md) (hero loops, posters, cut-outs).
+- **QA:** `render_review.mjs --early 350` catches a white first paint, broken images and video errors.
+
+Adapted in part from MotionSites claude-skill (MIT); see [NOTICE.md](NOTICE.md).
+
 ## Native Mac and reverse engineering companions (0.9.0)
 
 Use the full `bama-router` workflow through **BAMA Mac Studio** to research, clone, design, scaffold, build, profile and test native Mac apps. **REA Toolkit** supplies the full pinned investigation skill and references for REA's CLI/MCP runtime. Both companions are optional, namespaced and available for Codex and Claude Code. The main kit also extracts their reusable design methods into UX, UI, macOS, component-gallery, icon and reconstruction skills.
@@ -118,7 +127,7 @@ Read [toolkit setup and capability coverage](docs/TOOLKITS.md) for exact pins, i
 - **AI-tells gallery:** named generic-AI design patterns, each shown next to a better version. See [ai-tells](plugins/visual-design-studio/library/examples/ai-tells/README.md).
 - **Build fidelity:** `skills/design-critique/scripts/compare_build.mjs` diffs an approved design (PNG or HTML) against the build at real widths, pixel and computed style, and exits non-zero above threshold for CI.
 - **Render review:** `skills/design-critique/scripts/render_review.mjs` screenshots any page at real widths and reports overflow, orphaned words, fonts, contrast and axe accessibility findings.
-- **Evals:** 32 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus three controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
+- **Evals:** 49 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, production files (print, decks, motion, cinematic web), regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus three controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
 - **Spec radar:** `tools/spec_radar.py` lists the volatile claims marked "verify" that matter for our markets (US, Dominican Republic and Caribbean, Spanish-speaking Latin America), platform specs and accessibility standards; a monthly review re-checks them against primary sources. See [spec radar](docs/SPEC-RADAR.md). See [evals](plugins/visual-design-studio/evals/README.md).
 - **Earlier calibration:** the FORM and TIDAL [quality benchmark](plugins/visual-design-studio/library/examples/quality-benchmark/README.md) with correct, generic and wrong variants.
 
