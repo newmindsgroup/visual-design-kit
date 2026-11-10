@@ -1,6 +1,6 @@
 # Licensed asset stack for client work
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Use when a deliverable needs icons, fonts, sound effects, music or provenance metadata that the client does not already own. The default stack below is cleared for commercial client work under the conditions in each row. Anything outside it needs its license read and recorded before it enters a file.
 
@@ -37,6 +37,31 @@ Used by the [web technique recipes](web-techniques/INDEX.md). Versions and licen
 | hls.js | 1.5.20 | Apache-2.0 | Yes | Keep the Apache notice when bundling |
 | gsap and plugins | 3.15.0 | GSAP Standard "No Charge" License | Yes, except in tools that compete with Webflow's animation builder | Not OSI open source; re-read the license before shipping a product that lets end users build animations |
 | motion (formerly framer-motion) | 14.4.0 | MIT | Yes | Keep the MIT notice when bundling |
+
+## UI component libraries and reference tools (0.11.0)
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+Recommended by `ui-design`'s [component libraries](../../skills/ui-design/references/component-libraries.md) and `design-director`'s [reference-first](../../skills/design-director/references/reference-first.md). Read on 2026-11-10: versions and license fields with `npm view`, license files from each GitHub repository's default branch. None is bundled in the kit; a project installs them and keeps their notices.
+
+| Library or tool | Version | License | Commercial client use | Notes | Status |
+| --- | --- | --- | --- | --- | --- |
+| shadcn (CLI) and shadcn/ui components | 4.23.0 | MIT | Yes | Copied code becomes project code; keep the MIT notice | verified (registry, LICENSE.md) |
+| Radix Primitives (`@radix-ui/react-*`, `radix-ui` 1.8.1) | react-dialog 1.3.1 | MIT | Yes | The kit's React reference system pins older versions; move pins only after its tests pass | verified (registry, LICENSE) |
+| Base UI (`@base-ui/react`) | 1.9.0 | MIT | Yes | | verified (registry, LICENSE) |
+| Sonner | 2.0.8 | MIT | Yes | | verified (registry, LICENSE.md) |
+| Vaul | 1.1.2 | MIT | Yes | README states the repository is unmaintained | verified (registry, LICENSE.md, README) |
+| cmdk | 1.1.1 | MIT | Yes | | verified (registry, LICENSE.md) |
+| NumberFlow (`@number-flow/react`) | 0.6.2 | MIT | Yes | | verified (registry, LICENSE.md) |
+| input-otp | 1.5.0 | MIT | Yes | | verified (registry, LICENSE) |
+| motion | 14.11.1 | MIT | Yes | Web technique recipes stay pinned at 14.4.0 | verified (registry) |
+| Magic UI (shadcn registry `@magicui`) | registry | MIT | Yes for the open-source components | Paid products, if any: verify on the site | verified (LICENSE.md); paid tiers unverified |
+| Aceternity UI (shadcn registry `@aceternity`) | registry | Unverified (no public source repository found; the old `aceternity-ui` CLI 0.2.2 is MIT) | Verify per component | Free and paid components: read the site's terms before use | unverified |
+| RareUI (`rareui` CLI) | 0.1.6 | MIT | Yes | | verified (registry, LICENSE) |
+| 21st.dev (`@21st-dev/cli`) | 1.18.0 | MIT for the CLI and marketplace code | Per component: each author sets the license | Record the license of every component you copy | verified (registry, LICENSE); per-component unverified |
+| Beautiful UI | n/a | Unverified | Unverified | Site unreachable from the verification machine; no source repository found | unverified |
+| Transitions.dev (`transitions-dev` CLI 0.3.0, transitions and skills) | 0.3.0 | Transitions.dev License (custom, not MIT); tooling MIT | Yes for free transitions inside your own products; no redistribution of the collection; Pro transitions need a paid plan, and company use of Pro needs a Business seat per person | Never bundle its transitions in this kit or a template sold as a motion pack | verified (LICENSE in Jakubantalik/transitions.dev) |
+| Mobbin, Refero | n/a | Service terms | Subscription services; plans and terms: verify | Reference screenshots stay in the project for internal analysis; never ship or republish them | unverified |
 
 ## Tools that are not MIT
 

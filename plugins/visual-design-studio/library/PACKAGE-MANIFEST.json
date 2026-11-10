@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-11-05 18:24:25 UTC",
-  "candidate": "0.10.0",
+  "Version-Timestamp": "2026-11-10 03:07:49 UTC",
+  "candidate": "0.11.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.10.0"
+    "version": "0.11.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -202,7 +202,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "a85f18373c925ad15e55a133bc436b41e192fc129e4e11211bd268d8a4299907",
+      "sha256": "d86cebba86ee2de250ceeb68ddf3073152a1695e74b65bf7c8b0fcb86b0ca9fc",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -4540,7 +4540,7 @@
     },
     {
       "destination": "knowledge/ASSETS-LICENSES.md",
-      "sha256": "3a1aac4d6d3ff4f97f401c0c2e83dea21fe8c82293977f91ecb05c96a7f7e783",
+      "sha256": "d2e6ee2d9e092c4d0dc47261bc302f7504ced85d2876a952b99b208af0c8706c",
       "source": "curated-plugin-source/knowledge/ASSETS-LICENSES.md",
       "status": "versioned-evaluation-input"
     },
@@ -4593,6 +4593,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "knowledge/third-party/EMIL-KOWALSKI-SKILLS-LICENSE.txt",
+      "sha256": "7da167f4962c821feefb5ffc22b8a2220c76b91ebbd370a5ec23c321dec6040b",
+      "source": "curated-plugin-source/knowledge/third-party/EMIL-KOWALSKI-SKILLS-LICENSE.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "knowledge/third-party/MOTIONSITES-LICENSE.txt",
       "sha256": "918d52cb5c63a24a8a01f35ebc42041c11027aa5e924aeb7da3a1aa711777296",
       "source": "curated-plugin-source/knowledge/third-party/MOTIONSITES-LICENSE.txt",
@@ -4606,7 +4612,7 @@
     },
     {
       "destination": "knowledge/third-party/README.md",
-      "sha256": "1068192382c52889f80b942b9732d6de121d4e503ef608a26777a3931c5b915a",
+      "sha256": "c87930b8a2e12aada04e5221327563ada92037a305ad517c3556e43916393702",
       "source": "curated-plugin-source/knowledge/third-party/README.md",
       "status": "versioned-evaluation-input"
     },

@@ -50,3 +50,25 @@ Adapted in Visual Design Studio 0.10.0, each file marked "Adapted from MotionSit
 
 Excluded: the upstream `examples/` folder (example prompts), the `media/` folder (contact sheets and media URLs) and `preview-media.jpg`. Those are not MIT-licensed and may not be redistributed as a collection; nothing from them, and no link to that media, is in this repository. The upstream sponsorship and upgrade behavior was removed entirely. The MIT license covers the adapted text and code only; it grants no rights in the MotionSites name or marks.
 
+## Methods and references credited (0.11.0)
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+The component-library, reference-first and prompting methods in Visual Design Studio 0.11.0 are restated in the kit's own words from three posts by Griffin Wooldridge, the written versions of his video "UI Libraries for Claude Code (Ban the AI Look)":
+
+- "The Best React UI Component Libraries in 2026, and How to Pick One", 2026-10-20, https://griffinwooldridge.com/blog/best-react-ui-component-libraries
+- "Stop Letting AI Design From Scratch: 5 UI Reference Sites", 2026-09-01, https://griffinwooldridge.com/blog/ai-ui-design-reference-sites
+- "How to Prompt AI for Better UI Design", 2026-08-17, https://griffinwooldridge.com/blog/ai-prompts-for-ui-design
+
+The posts are not open-licensed and no license is implied: no sentences, screenshots or images from them are included, only methods and facts restated and checked against primary sources where possible. The reference-sites post discloses a Mobbin sponsorship and affiliate links; the kit links each product's plain homepage only and carries no referral or affiliate URLs. Naming a product is not an endorsement.
+
+Restated in `skills/ui-design/references/component-libraries.md`, `skills/design-director/references/reference-first.md`, the build-agent checklist in `skills/design-director/references/handoff.md` section 4, `skills/web-design/references/builder-prompts.md` rule 10, and AI tells AT-27 to AT-29 in `skills/design-critique/references/ai-tells.md`.
+
+## Emil Kowalski skills adaptation
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+Copyright (c) 2026 Emil Kowalski. Released under the MIT License; the complete notice is preserved in [EMIL-KOWALSKI-SKILLS-LICENSE.txt](plugins/visual-design-studio/library/knowledge/third-party/EMIL-KOWALSKI-SKILLS-LICENSE.txt).
+
+Source: [emilkowalski/skills](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) at commit `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` (2026-11-09), file `skills/pick-ui-library/SKILL.md`. Adapted in 0.11.0: the "check package.json first, keep what is installed, recommend one library" method and four rows of its "Common mismatches to catch" list (hand-built toasts, `div`-based dropdowns and dialogs, numbers animated by re-rendering text, 1,000+ row lists), rewritten into the mismatch map of `skills/ui-design/references/component-libraries.md`, which marks them. No other file from that repository is included, and the skill itself is not bundled.
+

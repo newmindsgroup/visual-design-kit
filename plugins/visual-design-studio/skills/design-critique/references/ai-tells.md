@@ -1,6 +1,6 @@
 # Generic-AI design tells
 
-Version-Timestamp: 2026-10-20 02:29:27 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Patterns that make work look machine-made or template-made. Each has an ID for review notes, what it looks like, why it happens and the specific fix. A pattern is a tell when it appears by default. When the brief asks for it and the execution earns it (a fintech for teenagers that really is neon, a luxury brand that really is symmetric), it is a decision; write the reason down.
 
@@ -148,12 +148,29 @@ The [AI-tells gallery](../../../library/examples/ai-tells/index.html) renders 18
 - **Why:** a template slot filled with placeholders.
 - **Fix:** real customer logos with written permission, or one named case study, or nothing.
 
+## Components and libraries
+
+### AT-27 Unmodified default shadcn/ui look (`default-shadcn`)
+- **Looks like:** shadcn/ui's stock theme shipped as the product: neutral gray ramp, near-black primary buttons, the same 10px-derived radius on every card, input and button, one sans family, `muted-foreground` gray for all secondary text. Recognizable across unrelated AI-built apps.
+- **Why:** builders and coding agents start from the library's default theme, and nobody changes it.
+- **Fix:** keep the components, change the theme. Map shadcn's variables to the brand's semantic tokens and replace its radius scale with the kit's (recipe in `ui-design`'s [component libraries](../../ui-design/references/component-libraries.md#restyle-shadcn-defaults-with-the-kit-tokens)); set radius from the direction, one accent with one job, and a display face with a point of view. Map input borders to `--color-border-strong` (3:1). Run the name-swap test after.
+
+### AT-28 Hand-built specialist components (`hand-built-specialists`)
+- **Looks like:** toasts that pile on top of each other or vanish before they can be read; a bottom drawer that opens and closes but cannot be dragged; a Cmd+K menu that loses focus or ignores arrow keys; a price or count that jumps instead of ticking over; six one-time-code boxes that break on paste.
+- **Why:** asked for one of these, a model writes a new one from scratch with default styling and none of the edge cases.
+- **Fix:** read `package.json`, keep what is installed, and fill the gap from the [mismatch map](../../ui-design/references/component-libraries.md#mismatch-map): Sonner (or the installed primitive layer's toast), a drag-to-close drawer, cmdk, NumberFlow, input-otp. Restyle to the tokens and keep the kit's toast and focus rules.
+
 ## Motion
 
 ### AT-25 Motion on everything (`motion-everything`)
 - **Looks like:** every element fades up on scroll over 600-800ms with the same easing; cards lift on hover; parallax on decorative layers.
 - **Why:** animation libraries make a default reveal one attribute away.
 - **Fix:** give motion a job (feedback, continuity, attention to one thing). UI transitions 120-320ms, stagger 30-60ms, reveal once, and honor `prefers-reduced-motion` with opacity-only or no motion.
+
+### AT-29 Too many showpiece effects on one page (`showpiece-overload`)
+- **Looks like:** an animated beam hero, a spotlight card grid, a marquee, a 3D tilt section, a particle background and shimmer buttons on the same page, each copied from a different designed-component library. Everything glows and moves; nothing leads.
+- **Why:** designed-component libraries make each effect one command away, and each looks good alone.
+- **Fix:** one showpiece moment per page, placed where the main message is; every other section on plain, restyled foundations. Product screens get none. The one that stays gets the tokens, a reduced-motion state and a pause control for loops over 5 seconds (WCAG 2.2.2).
 
 ## Not tells on their own
 

@@ -1,6 +1,19 @@
 # Completion backlog
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+## UI libraries and reference-first, 0.11.0
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+- [x] Component libraries reference with npm- and LICENSE-verified versions, mismatch map, one-showpiece rule and a shadcn-to-token recipe tested with Tailwind CSS 4.3.5.
+- [x] Reference-first workflow, build-agent brief rules, AT-27 to AT-29, project-starter visual rules block, NOTICE and asset-license entries.
+- [x] 2 eval cases written (51 in total).
+- [ ] Smoke-run the 2 new cases (`--runs 1 --ablation none`), then measure with `--runs 3 --ablation with-without`.
+- [ ] Verify what could not be reached on 2026-11-10: Beautiful UI and Aceternity UI licenses, Magic UI and Aceternity paid tiers, Mobbin and Refero plans, the Mobbin MCP's setup and terms.
+- [ ] Build the restyle recipe end to end in a fresh `shadcn init --base radix` project (render light, dark and Ember brand; run axe) and keep it as an example.
+- [ ] Decide whether the React reference system adopts Sonner (shadcn deprecated its Radix Toast) or keeps Radix Toast; re-test before moving Radix pins (react-dialog 1.2.0 pinned, 1.3.1 current).
+- [ ] Watch Vaul (unmaintained per its README) and move the drawer default to Base UI Drawer if shadcn's Radix base does.
 
 ## Cinematic web, 0.10.0
 

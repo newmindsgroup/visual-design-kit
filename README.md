@@ -4,9 +4,9 @@
 
 **Make Codex and Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.10.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.11.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -49,7 +49,7 @@ Ask in plain language; the right skill loads on its own.
 
 | Skill | Covers |
 | --- | --- |
-| `design-director` | Brief intake, qualifying questions, atlas query, category scan, divergent directions, stylescapes, weighted scoring, recommendation |
+| `design-director` | Brief intake, qualifying questions, atlas query, category scan, reference-first evidence, divergent directions, stylescapes, weighted scoring, recommendation |
 | `brand-identity` | Strategy and positioning, naming, logo design and construction, identity systems, guidelines; brand book production and deliverables by tier |
 | `typography` | Selection, pairing, scales, setting, fluid type, licensing, multiscript |
 | `color` | Palette architecture, OKLCH ramps, WCAG and APCA contrast, dark mode, color meaning |
@@ -57,7 +57,7 @@ Ask in plain language; the right skill loads on its own.
 | `imagery` | Iconography, illustration systems, photo art direction, AI image generation, 3D |
 | `motion` | Principles, timing and easing, choreography, kinetic type, CSS/GSAP/Lottie/Rive/Remotion/After Effects, sound; token-driven Remotion compositions and portable Lottie builder |
 | `ux-design` | Research, heuristics, UX laws, measurement, IA, journeys, content design |
-| `ui-design` | Components and states, forms, navigation, data-dense UI, feedback, flows, AI and chat interfaces, accessibility |
+| `ui-design` | Components and states, React component library picks, forms, navigation, data-dense UI, feedback, flows, AI and chat interfaces, accessibility |
 | `web-design` | Page architecture, conversion, responsive, Core Web Vitals, SEO, stack selection, launch |
 | `native-app-design` | macOS, iOS (HIG), Android (Material 3), cross-platform, large screens, app patterns, store assets, SwiftUI/Compose handoff |
 | `icon-design` | UI families, optical sizes, semantic registry, app and Dock icons, editable source and appearance checks |
@@ -98,6 +98,14 @@ Directions must differ on at least three of six axes (type, palette, layout logi
 
 Dependency remediation and machine setup: [0.9.1 acceptance](docs/RELEASE-091.md).
 
+## UI libraries and reference-first (0.11.0)
+
+- **Component libraries:** `ui-design`'s [component libraries](plugins/visual-design-studio/skills/ui-design/references/component-libraries.md) sorts React libraries into foundations (shadcn/ui on Radix or Base UI), specialists (Sonner, Vaul, cmdk, NumberFlow, input-otp, motion) and designed components (Magic UI, Aceternity, RareUI, 21st.dev, Beautiful UI), with versions and licenses checked on 2026-11-10, a check-package.json-first rule, a mismatch map for hand-built components, one showpiece per page, and a tested recipe that maps shadcn's theme onto the kit tokens.
+- **Reference-first:** `design-director`'s [reference-first](plugins/visual-design-studio/skills/design-director/references/reference-first.md) workflow: evidence first, components second, motion last; what each reference tool is for; turning a reference spec into DTCG tokens; rights and MCP connector rules.
+- **Briefing agents and AI tells:** a build-agent checklist in the [prompt handoff](plugins/visual-design-studio/skills/design-director/references/handoff.md#4-prompts-for-generators-and-build-tools), three new tells (AT-27 default shadcn look, AT-28 hand-built specialist components, AT-29 showpiece overload) and an optional visual-rules block in the [project starter](project-starter/AGENTS.md.template).
+
+Methods restated from Griffin Wooldridge's posts; the mismatch map adapts Emil Kowalski's `pick-ui-library` (MIT). See [NOTICE.md](NOTICE.md).
+
 ## Cinematic web (0.10.0)
 
 - **Landing workflow:** `web-design`'s [cinematic landing](plugins/visual-design-studio/skills/web-design/references/cinematic-landing.md) reference takes a media-led landing page or hero from one signature idea through a [spec with real values](plugins/visual-design-studio/skills/web-design/references/landing-spec-template.md) to a single-file build, then renders, scores and fixes it until the average is 8+ with nothing under 7.
@@ -124,10 +132,10 @@ Read [toolkit setup and capability coverage](docs/TOOLKITS.md) for exact pins, i
 ## Quality loop
 
 - **Stylescape calibration set:** 12 fictional brands rendered as complete stylescapes across very different styles, industries, markets and audiences, including RTL Arabic, Japanese, Portuguese and Spanish. See [stylescapes](plugins/visual-design-studio/library/examples/stylescapes/README.md).
-- **AI-tells gallery:** named generic-AI design patterns, each shown next to a better version. See [ai-tells](plugins/visual-design-studio/library/examples/ai-tells/README.md).
+- **AI-tells gallery:** named generic-AI design patterns, each shown next to a better version (18 rendered; the critique catalog names 29). See [ai-tells](plugins/visual-design-studio/library/examples/ai-tells/README.md).
 - **Build fidelity:** `skills/design-critique/scripts/compare_build.mjs` diffs an approved design (PNG or HTML) against the build at real widths, pixel and computed style, and exits non-zero above threshold for CI.
 - **Render review:** `skills/design-critique/scripts/render_review.mjs` screenshots any page at real widths and reports overflow, orphaned words, fonts, contrast and axe accessibility findings.
-- **Evals:** 49 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, production files (print, decks, motion, cinematic web), regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus three controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
+- **Evals:** 51 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, production files (print, decks, motion, cinematic web), component libraries and restyling, regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus four controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
 - **Spec radar:** `tools/spec_radar.py` lists the volatile claims marked "verify" that matter for our markets (US, Dominican Republic and Caribbean, Spanish-speaking Latin America), platform specs and accessibility standards; a monthly review re-checks them against primary sources. See [spec radar](docs/SPEC-RADAR.md). See [evals](plugins/visual-design-studio/evals/README.md).
 - **Earlier calibration:** the FORM and TIDAL [quality benchmark](plugins/visual-design-studio/library/examples/quality-benchmark/README.md) with correct, generic and wrong variants.
 
@@ -146,7 +154,7 @@ Lessons from projects come back through the [feedback contract](plugins/visual-d
 | Atlas | 125/125 entries validated against the schema; index regenerated and checked in CI | Platform specs and regulation change; entries are dated and say where to verify |
 | Tokens | Lint enforces DTCG structure, alias resolution, contract names and WCAG contrast in every mode and brand | Brand-specific tokens still need human review |
 | Automated tests | Repository and library Python suites, Node example tests and builds; all run in CI on every push | See [edition evidence](docs/RELEASE-060.md) for counts |
-| Behavior | 32 eval cases ship with the plugin; see [edition evidence](docs/RELEASE-060.md) for what was run | Evals sample behavior; they do not certify every output |
+| Behavior | 51 eval cases ship with the plugin (0.11.0); see [edition evidence](docs/RELEASE-060.md) for what was run | Evals sample behavior; they do not certify every output |
 | Codex | Earlier editions installed on the authoring Mac | Re-verify 0.6.0 on your host |
 | Design quality | Calibration sets and the critique loop raise the floor | Human art direction and client approval remain required |
 

@@ -1,6 +1,6 @@
 # Component API design
 
-Version-Timestamp: 2026-10-20 02:08:24 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 A component's API is its real interface: the names designers see in Figma, developers type in code and screen-reader users experience as behavior. Design it once, name it the same everywhere, and document the accessibility contract as part of the API. The React reference implementation is [react-system](../../../library/examples/react-system/README.md) (16 components on Radix, wired to the tokens, axe-tested in every brand and mode); the component specs in `library/examples/component-specs/` (button, text field, dialog, data table) already define states and behavior.
 
@@ -92,7 +92,7 @@ Choose one primitive layer per system. Wrapping two libraries behind one API dou
 
 ## The shadcn/ui copy-in model
 
-shadcn/ui is a CLI and registry that copies component source (Tailwind classes on a primitive layer, Radix or Base UI as of 2026 per its docs; verify) into your repository. You own the code.
+shadcn/ui is a CLI and registry that copies component source (Tailwind classes on a primitive layer) into your repository. You own the code. The layer is chosen at init with `--base radix`, `--base base` (Base UI) or `--base aria` (React Aria); `--defaults` uses Base UI (CLI 4.23.0 source, read 2026-11-10). Library picks, versions and the restyle recipe: `ui-design`'s [component libraries](../../ui-design/references/component-libraries.md).
 
 | Benefit | Cost |
 | --- | --- |

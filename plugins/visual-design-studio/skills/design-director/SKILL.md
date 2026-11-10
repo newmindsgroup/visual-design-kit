@@ -8,8 +8,8 @@ description: >-
   and recommends one with a runner-up.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-27 07:43:23 AST"
-  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
+  version-timestamp: "2026-11-10 03:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
 ---
 
 # Design director
@@ -44,7 +44,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 1. **Intake.** Extract the variables in [intake](references/intake.md): objective, deliverable, channel, industry, market and language, audience, archetype, price tier, existing brand assets and locks, competitors, constraints (accessibility, regulation, budget, stack, timeline), success metric. Mark each as given, inferred or unknown.
 2. **Ask only what changes the answer.** For each unknown, ask yourself: would two plausible answers lead to different designs? If yes, ask (2-4 questions max, offer options, recommend one). If no, state your assumption and move on.
 3. **Query the atlas.** Run `python3 ../../library/scripts/atlas.py query "<brief in plain words>"` and read the top industry, market, audience, archetype, tier and channel entries. Read each industry entry's *Recommended directions* and *Category clichés* before inventing your own.
-4. **Scan the category.** Follow [category scan](references/category-scan.md): map 6-12 competitors on type, color, imagery, layout and voice; find the white space. Skip only if you have no web access, and say so.
+4. **Scan the category.** Follow [category scan](references/category-scan.md): map 6-12 competitors on type, color, imagery, layout and voice; find the white space. Skip only if you have no web access, and say so. For product UI, flows and any screen another agent will build, also collect task evidence with [reference-first](references/reference-first.md): references first, components second, motion last.
 5. **Diverge on purpose.** Build 3-5 direction recipes using [divergence](references/divergence.md). Each recipe = 1-2 style IDs + archetype + tier signals + channel constraints, then concrete tokens. Check combinations with `python3 ../../library/scripts/atlas.py combine <ids...>` and resolve every listed conflict deliberately.
 6. **Render, don't describe.** In Claude Code and Cowork, dispatch one `direction-explorer` subagent per direction in parallel ([parallel exploration](references/parallel-exploration.md)); in chat, build them in turn. Make a stylescape per direction ([stylescapes](references/stylescapes.md)). Then screenshot and inspect them with the `design-critique` skill's `scripts/render_review.mjs`. Fix generic-AI tells before anyone sees them.
 7. **Score.** Use the weighted matrix in [scoring](references/scoring.md) and compute it with `python3 scripts/score_directions.py scores.json` (presets: default, launch, regulated, rebrand, product-ui). It prints the table and the sensitivity check: if a plausible weight change flips the winner, say so.
@@ -72,6 +72,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 
 - [Intake and qualifying questions](references/intake.md): the variable checklist, question bank and brief template.
 - [Category scan](references/category-scan.md): competitor mapping and white space.
+- [Reference-first](references/reference-first.md): evidence, components, motion; reference tools, turning a reference spec into tokens, rights and MCP connector rules.
 - [Divergence](references/divergence.md): direction positions, recipes and the distinctness test.
 - [Stylescapes](references/stylescapes.md): rendering and presenting directions.
 - [Scoring](references/scoring.md): weighted matrix, weight presets by brief type, sensitivity check, recommendation format.

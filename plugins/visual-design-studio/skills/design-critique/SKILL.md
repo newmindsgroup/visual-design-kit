@@ -8,8 +8,8 @@ description: >-
   Also for "is this good" or "does this look AI-made".
 license: MIT
 metadata:
-  version-timestamp: "2026-11-05 18:10:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
+  version-timestamp: "2026-11-10 03:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
 ---
 
 # Design critique
@@ -37,7 +37,7 @@ Good critique works from evidence. It judges rendered pixels at real sizes again
 3. **Look at every screenshot** before reading the report. Note the first thing you see, the second, and anything broken. Then read the report: horizontal overflow, clipped text, single-word last lines, contrast failures, unmeasured text over images, rendered fonts and fallbacks, axe violations, failed requests.
 4. **Run the squint test.** Blur the screenshot by 6-8px (or squint). There should be one clear entry point per view, then a second and third level. An even gray field means flat hierarchy; three equal blobs mean template cards.
 5. **Run the name-swap test.** Cover the logo and read a competitor's name into the design. If nothing else needs to change, it is not distinctive yet: find or create one ownable device (type, color pairing, graphic system, image approach, voice).
-6. **Scan for tells** with [ai-tells.md](references/ai-tells.md) and log them by ID (AT-01 to AT-26). Compare against the matching pair in the [AI-tells gallery](../../library/examples/ai-tells/index.html).
+6. **Scan for tells** with [ai-tells.md](references/ai-tells.md) and log them by ID (AT-01 to AT-29). Compare against the matching pair in the [AI-tells gallery](../../library/examples/ai-tells/index.html).
 7. **Audit accessibility** for anything interactive with the [15-minute audit](references/accessibility-audit.md).
 8. **Score** all twelve criteria in the [rubric](references/rubric.md). Every score below 4 names a defect: what, where (width and region), evidence (screenshot, measured value) and fix. Apply the rubric's caps (false claim, AA failure, overflow, placeholder copy).
 9. **List up to five fixes**, most impactful first. Format: `[Defect|Preference] criterion: problem (evidence) -> change -> expected effect`.
@@ -93,7 +93,7 @@ Not tested: <screen reader on Windows, real devices, ...>
 
 - [Rubric](references/rubric.md): twelve criteria with 1-5 descriptors, caps and a score sheet. Read before scoring.
 - [Cinematic addendum](references/cinematic-addendum.md): blocking checks, signature, media integration and motion criteria, and the 8+ average, none-below-7 stop rule for cinematic landing pages and heroes.
-- [AI tells](references/ai-tells.md): 26 named tells with what they look like, why they happen and the fix.
+- [AI tells](references/ai-tells.md): 29 named tells with what they look like, why they happen and the fix.
 - [Accessibility audit](references/accessibility-audit.md): the 15-minute pass (axe, keyboard, focus, zoom and reflow, contrast, targets, motion, VoiceOver and NVDA).
 - [Review panel](references/review-panel.md): art-director, accessibility-auditor, copy-editor, brand-guardian and frontend-engineer subagents, score merge into the rubric, conflict ladder, chat fallback.
 - [Build fidelity](references/build-fidelity.md) and [compare_build.mjs](scripts/compare_build.mjs): pixel and computed-style diff of approved design vs build, thresholds, masks, pairing with Core Web Vitals.

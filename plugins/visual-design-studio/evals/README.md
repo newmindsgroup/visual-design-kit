@@ -1,6 +1,6 @@
 # Evals
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Behavioral evals for the Visual Design Studio plugin, in the `claude plugin eval` format: each case is a folder with `prompt.md` (the user request and run limits) and `graders/*.md` (LLM rubric, file checks and skill-firing indicators).
 
@@ -15,7 +15,7 @@ The default ablation runs each case with and without the plugin and reports the 
 
 Add a case whenever a real project exposes a failure: describe the request in `prompt.md`, write what a passing answer must contain in an `llm` grader, and keep at least one outcome grader per case.
 
-## Cases (32)
+## Cases (the original 32; the suite is now 51, with later additions in the sections below)
 
 | Case | What it tests |
 | --- | --- |
@@ -181,4 +181,17 @@ Three cases for the 0.10.0 cinematic web workflow: `cinematic-hero-spec-signatur
 | `scroll-video-hero-motion-budget` | 1.00 | none |
 | `cinematic-hero-spec-signature` | 0.60 | `first-rule`, `signature-and-values` |
 | `lovable-builder-prompt-from-direction` | 0.00, then 0.22 | First run: no skill loaded, so `web-design`'s description now names builder prompts (Lovable, Bolt, v0). Rerun: skill loads, `index-css` passes; `structure`, `media-honesty` and `accessibility-and-verify` remain for the eval loop. |
+
+## UI libraries and reference-first cases (added 2026-11-10, not yet measured)
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+Two cases for 0.11.0: `ui-library-picks-shadcn-app` (toasts, a mobile drawer, a command menu and an animated price in a shadcn/ui app on Radix, with a hand-rolled 2-second toast that also carries "Payment failed - Retry") and `restyle-default-shadcn-dashboard` (a default-shadcn analytics dashboard with four showpiece effects, restyled reference-first with a brief for Claude Code). Each has three weighted `llm` graders with fail conditions, one `regex` check and a `tool_used: Skill` indicator with `arm: with-only`. The suite is now 51 cases. Smoke-test each with `--runs 1 --ablation none` before the first `--runs 3 --ablation with-without` measurement; the paid harness was not run for this release.
+
+### 0.11.0 smoke run (2026-11-10, `--runs 1 --ablation none`, $0.33)
+
+| Case | Score | Failing graders |
+| --- | --- | --- |
+| `restyle-default-shadcn-dashboard` | 0.60 | `sequence`, `tell-ids` |
+| `ui-library-picks-shadcn-app` | 0.40, then 0.40 | First run: no skill loaded, so `ui-design`'s description now says it picks React UI libraries. Rerun: skill loads; `feedback-rules` and `picks` fail (single runs vary); left for the eval loop. |
 

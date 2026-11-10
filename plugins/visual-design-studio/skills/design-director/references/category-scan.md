@@ -1,8 +1,8 @@
 # Category scan
 
-Version-Timestamp: 2026-10-20 02:05:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
-A category scan shows what the audience already sees, so directions can either meet expectations on purpose or stand apart on purpose. It takes 20-40 minutes of agent time and replaces guesswork about "what competitors do".
+A category scan shows what the audience already sees, so directions can either meet expectations on purpose or stand apart on purpose. It takes 20-40 minutes of agent time and replaces guesswork about "what competitors do". For how products solve a specific task (flows, screens, components, motion), use [reference-first](reference-first.md).
 
 ## Steps
 
