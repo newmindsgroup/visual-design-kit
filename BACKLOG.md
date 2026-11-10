@@ -60,6 +60,17 @@ Version-Timestamp: 2026-10-23 11:31:41 UTC
 - [ ] Confirm the 0.7.1 single-run fixes with `--runs 3 --ablation with-without` before the next release.
 - [ ] Harden or label as guards the no-lift cases: `pharma-promo-fair-balance` (1.00/1.00) and `email-dark-mode` (1.00/0.83).
 
+## Single source of truth and physical environments, 0.7.x
+
+Version-Timestamp: 2026-10-23 13:50:00 AST
+
+- [x] Codex local work (persona workbench, typography checks) reconciled as 0.6.2.
+- [x] Unsaved research workspace methods merged as 0.7.0; this repository is the only working source.
+- [x] Claude Code and Codex parity: `AGENTS.md` canonical, `CLAUDE.md` imports it, `.agents/skills` mirrored to `.claude/skills` with a CI drift check. Verified in fresh sessions of both tools.
+- [ ] Review the [physical environment proposal](docs/proposals/PHYSICAL-ENVIRONMENTS.md) and decide its capability list.
+- [ ] Run its controlled test to resolve the lighting-first and high-resolution-baseline hypotheses (O1).
+- [ ] Build the accepted physical-environment draft skills and atlas entries.
+
 ## Design ops, 0.6.0
 
 Version-Timestamp: 2026-10-20 11:00:00 UTC
