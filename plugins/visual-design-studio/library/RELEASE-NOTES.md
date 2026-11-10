@@ -1,10 +1,25 @@
 # Release notes
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+## 0.11.0 UI libraries, reference-first workflow and agent briefs
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+Methods from Griffin Wooldridge's three posts behind "UI Libraries for Claude Code (Ban the AI Look)" (2026-08-17, 2026-09-01, 2026-10-20), restated in the kit's own words and checked against primary sources; the mismatch map adapts Emil Kowalski's MIT-licensed `pick-ui-library`. Attribution in `NOTICE.md`; no referral links.
+
+- **Component libraries** (`skills/ui-design/references/component-libraries.md`): foundations, specialists and designed components; versions and licenses read from npm and each repository on 2026-11-10 (unverifiable ones marked verify); check `package.json` first and keep one primitive layer; a mismatch map (hand-built toast to Sonner, `div` dropdown to the primitive layer, re-rendered number to NumberFlow, plus drawer, command menu and OTP rows); one showpiece per page; a shadcn-to-kit-token recipe tested with Tailwind CSS 4.3.5 (shadcn's `calc()` radius scale is replaced, input borders map to `--color-border-strong`, the destructive button text is fixed for dark mode); accessibility checks for designed components.
+- **Reference-first** (`skills/design-director/references/reference-first.md`): evidence, components, motion; Mobbin, Refero, 21st.dev, Transitions.dev and Beautiful UI by job, with license and cost status; a reference-to-DTCG mapping; rights rules; a vetting gate for third-party MCP connectors. Linked from `design-director` step 4, `ui-design`, `web-design` and the category scan.
+- **Agent briefs:** `handoff.md` section 4 adds the missing build-agent rules (references not adjectives, job and user, system constraints, named libraries, avoid list, AGENTS.md, small passes); `builder-prompts.md` adds a COMPONENTS block and rule 10. `handoff.md` section 2 now says radius and motion belong in the project's primitives, because brand files may only override color and font groups.
+- **AI tells:** AT-27 default shadcn look, AT-28 hand-built specialist components, AT-29 showpiece overload (29 in the catalog).
+- **Project starter:** an optional "Visual rules and avoid list" section after the entry block.
+- **Evals:** 2 cases (51 in total), not yet measured.
+
+Existing project pins are unaffected; adopt 0.11.0 deliberately.
 
 ## 0.10.0 Cinematic web: landing workflow, technique recipes and first-paint QA
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Media-led landing pages and heroes now have a full workflow, adapted from the MIT-licensed part of MotionSites claude-skill (attribution in `NOTICE.md`; its example prompts and media are not included, and its sponsorship behavior was removed).
 

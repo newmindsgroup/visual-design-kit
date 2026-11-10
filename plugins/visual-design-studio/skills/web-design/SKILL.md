@@ -8,8 +8,8 @@ description: >-
   (Astro, Next.js, WordPress, Webflow, Framer) and launch QA.
 license: MIT
 metadata:
-  version-timestamp: "2026-11-05 19:00:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.318; timestamp=2026-11-05 18:10:00 UTC"
+  version-timestamp: "2026-11-10 03:00:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
 ---
 
 # Web design
@@ -84,6 +84,7 @@ Paths in commands are relative to this skill's directory; resolve them to absolu
 - [Landing spec template](references/landing-spec-template.md): the build spec wired to tokens and the atlas; also the body of a builder prompt.
 - [Cinematic craft](references/cinematic-craft.md): taste rules for media-led pages and a table of where they differ from kit defaults.
 - [Builder prompts](references/builder-prompts.md): adapting the spec for Lovable, Bolt, v0, Cursor, Manus, Google AI Studio and Kimi.
+- [Reference-first](../design-director/references/reference-first.md) and [component libraries](../ui-design/references/component-libraries.md): evidence before layout, named React libraries instead of hand-built components, one showpiece per page.
 - [Web technique recipes](../../library/knowledge/web-techniques/INDEX.md): 58 working recipes (video heroes, glass, type motion, scroll, 3D) with pinned libraries and licenses.
 - Atlas: `python3 ../../library/scripts/atlas.py query "boutique hotel website in Japan, luxury"`; `show channel.marketing-website` for channel specs.
 - Working code: [Astro motion example](../../library/examples/astro-motion/README.md) (Astro, Vue, Tailwind 4, GSAP, Headless UI) and the [Astro build skill](../../library/draft-skills/design-web-astro/SKILL.md).

@@ -15,3 +15,17 @@ Keep this project's existing instructions and client approvals authoritative. If
 At session end, update the project's RESUME.md with actual outputs, checks, unresolved actions and the next dependency. Never mark proposals approved or failed actions completed.
 
 <!-- design-project-entry:end -->
+
+## Visual rules and avoid list (optional)
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+Fill in once the direction is approved, or delete this section. Agents apply it to every UI task in this project. Values come from the project's approved tokens.
+
+- Accent: <one color token> and its only job: <for example, the primary action>.
+- Type: display <family>, text <family>, scale <steps in px>.
+- Spacing unit: 4px. Radius: <none, sm, md or lg from the direction>. Modes: <light, dark or both>.
+- Components: <primitive layer, for example shadcn/ui on Radix> for base components; <toast, drawer, command menu and number libraries already in package.json>. Do not hand-build these.
+- Showpiece: at most one designed or animated moment per page, in <section>; none in product screens.
+- References: <links to the approved reference set>.
+- Avoid: default shadcn styling, decorative gradients, low-contrast gray text, oversized headings, color used for emphasis instead of size, <project-specific clichés>.

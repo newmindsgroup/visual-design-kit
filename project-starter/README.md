@@ -1,6 +1,6 @@
 # Add the startup entry to a separate project
 
-Version-Timestamp: 2026-09-27 14:19:56 AST
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Copy the instructions from AGENTS.md.template into the adopting project's AGENTS.md, replacing {{ABSOLUTE_PACKAGE_ROOT}} with the actual trusted package root. Preserve and reconcile any existing instructions; do not overwrite an existing AGENTS.md. The package root contains READINESS.md, library/ and skills/.
 
@@ -9,6 +9,8 @@ For Claude Code, make the first line of the project's CLAUDE.md `@AGENTS.md` (se
 Use a pinned package checkout or release directory rather than a mutable install cache. Verify PAYLOAD.sha256 using an independently trusted source/digest before running packaged scripts. Record the chosen version and digest in the project. Each teammate sets their own local path; never commit another person's absolute home path to a shared starter.
 
 This avoids relying on an oversized global skill catalog. It does not reduce that catalog or establish automatic skill discovery. The first independent project still supplies its brand brief and deliverable.
+
+The template ends with an optional "Visual rules and avoid list" section outside the marked block. Fill it after a direction is approved (accent and its job, type, spacing, radius, component libraries, one showpiece per page, avoid list) or delete it; it is project content, not part of the entry block.
 
 Replace the trusted-digest placeholder with the independently trusted SHA-256 of PAYLOAD.sha256. Use exactly one marked entry block. On updates, replace only that block after reviewing the new pin; never append duplicate blocks or change unrelated project instructions. Check unresolved placeholders before starting.
 

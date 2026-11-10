@@ -1,6 +1,6 @@
 # Case map
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Which eval cases to re-run after editing a skill, and where the knowledge each case's grader rewards lives in the kit. Paths are under `plugins/visual-design-studio/`. After any change to a skill `description`, also re-run every `no-fire-*` case.
 
@@ -70,3 +70,11 @@ Version-Timestamp: 2026-11-05 18:10:00 UTC
 | `lovable-builder-prompt-from-direction` | web-design, design-director | `skills/web-design/references/builder-prompts.md` (Lovable stack line, tokens in `index.css`, constraints last, verify), `skills/design-director/references/handoff.md` section 4, `skills/color/references/contrast.md` (accent button pair) |
 | `scroll-video-hero-motion-budget` | web-design, motion | `library/knowledge/web-techniques/video-and-media.md` technique 7 (lerp 0.12, seek guard, frame cache, `-g` encode), `skills/imagery/references/media-for-web.md` (scrub clip budget), `skills/web-design/SKILL.md` and `references/performance.md` (Core Web Vitals, JS budget), `skills/motion/SKILL.md` (reduced motion) |
 
+## UI libraries and reference-first cases (0.11.0)
+
+Version-Timestamp: 2026-11-10 03:00:00 UTC
+
+| Case | Owner skill (edit this to fix) | Kit content the grader rewards |
+| --- | --- | --- |
+| `ui-library-picks-shadcn-app` | ui-design | `skills/ui-design/references/component-libraries.md` (check package.json first, one primitive layer, mismatch map: Sonner, Vaul unmaintained, cmdk, NumberFlow `respectMotionPreference`), `references/states-and-feedback.md` (toast timing, no errors needing action in a toast, WCAG 2.2.1), `references/navigation.md` (visible command palette trigger) |
+| `restyle-default-shadcn-dashboard` | ui-design, design-director, design-critique | `skills/design-director/references/reference-first.md` (evidence, components, motion), `references/handoff.md` section 4 (brief checklist: job and user, constraints, libraries, avoid list, AGENTS.md, small passes), `skills/ui-design/references/component-libraries.md` (restyle recipe, radius scale trap, `--input` to border-strong), `skills/design-critique/references/ai-tells.md` (AT-27, AT-28, AT-29) |

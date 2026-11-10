@@ -1,6 +1,6 @@
 # Prompts for AI site builders
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Adapted from MotionSites claude-skill (MIT), see NOTICE.md.
 
@@ -29,7 +29,8 @@ Builders change their default stacks and conventions often. Every row is "verify
 7. **Constraints last:** finish with "Do not" lines, for example "No extra sections, no decorative blobs, no purple gradients, no placeholder images, no emoji icons, no invented statistics or testimonials." Builders weigh what comes last.
 8. **Length:** 3,000-15,000 characters is normal for a gallery-grade hero. Do not trim precision to save space.
 9. **When the result drifts:** send one focused fix per message ("make the H1 clamp(3.5rem, 2rem + 6vw, 7.5rem) with -0.04em tracking"), not a long list.
-10. **Check the output, not the prompt.** Render what comes back with `design-critique` (`render_review.mjs --early 350` on the preview URL) and score it against the same direction. When a defect repeats, fix the prompt.
+10. **Name the component libraries** the builder should install ("shadcn/ui for base components, Sonner for toasts, NumberFlow for the price") and say "do not hand-build toasts, drawers or command menus"; then restyle per `ui-design`'s [component libraries](../../ui-design/references/component-libraries.md). Reference screens and the job of the page come from `design-director`'s [prompt handoff](../../design-director/references/handoff.md#4-prompts-for-generators-and-build-tools).
+11. **Check the output, not the prompt.** Render what comes back with `design-critique` (`render_review.mjs --early 350` on the preview URL) and score it against the same direction. When a defect repeats, fix the prompt.
 
 ## Prompt skeleton
 
@@ -42,6 +43,9 @@ BRIEF
 
 TOKENS (use these names)
 <paste the semantic tokens and the font link>
+
+COMPONENTS
+<libraries by name, e.g. shadcn/ui, Sonner; which one section may carry a showpiece>
 
 LAYOUT AND CONTENT
 1. Navigation: ...

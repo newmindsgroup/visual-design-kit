@@ -4,11 +4,12 @@ description: >-
   Load before designing or specifying any interface screen or component, even a quick one: forms, tables, navigation,
   dashboards, onboarding, auth and passkeys, pricing, checkout, search and filters, settings, empty, loading and error
   states, notifications, consent and age-appropriate flows, and AI chat and agent interfaces, all to WCAG 2.2 AA.
-  Gives component specs, state matrices, sizes, density and keyboard and accessibility behavior.
+  Also picks React UI libraries (toasts, drawers, command menus). Gives component specs, state matrices, sizes,
+  density and keyboard and accessibility behavior.
 license: MIT
 metadata:
-  version-timestamp: "2026-10-27 07:43:23 AST"
-  agent-attribution: "computer=NMG-MBP-M5; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-27 07:43:23 AST"
+  version-timestamp: "2026-11-10 03:06:54 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
 ---
 
 # UI design
@@ -38,7 +39,7 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 ## Workflow
 
 1. **Collect the flow and states** from `ux-design` (flows with state IDs, content, requirements). If none exist, list the screens and their states first.
-2. **Inventory existing components** in the client's system or the kit tokens (`../../library/tokens/dist/tokens.css`). Extend before inventing; use the `design-system` skill for token and API decisions.
+2. **Inventory existing components** in the client's system or the kit tokens (`../../library/tokens/dist/tokens.css`). Extend before inventing; use the `design-system` skill for token and API decisions. In React, read `package.json` and pick libraries with [component libraries](references/component-libraries.md) instead of hand-building toasts, drawers, command menus or animated numbers; collect task references first per `design-director`'s [reference-first](../design-director/references/reference-first.md).
 3. **Pick patterns** from the references: [forms](references/forms.md), [navigation](references/navigation.md), [data-dense UI](references/data-dense-ui.md), [flows](references/flows.md), [AI interfaces](references/ai-interfaces.md).
 4. **Specify each component**: anatomy, variants, sizes, the full state matrix, content rules, keyboard and ARIA, responsive behavior ([components](references/components.md)). Map every visual value to a semantic token.
 5. **Design every state** with [states and feedback](references/states-and-feedback.md): empty, loading, partial, error, success, offline, permission.
@@ -70,10 +71,12 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 - Icon-only buttons without accessible names. Fix: `aria-label` and a tooltip.
 - Center-aligned numbers in tables. Fix: right-align with tabular figures.
 - Chat UIs that hide sources, cannot be stopped, or let an agent act without consent. Fix: [AI interfaces](references/ai-interfaces.md).
+- Default shadcn/ui styling shipped as the product, or hand-built toasts, drawers and command menus. Fix: [component libraries](references/component-libraries.md) (restyle radius, color and type; use the specialist).
 
 ## References
 
 - [Components](references/components.md): anatomy, state matrix, size scale, density modes, overlays, token mapping.
+- [Component libraries](references/component-libraries.md): foundations, specialists and designed components with verified versions and licenses, the mismatch map, one showpiece per page, restyling shadcn/ui with the kit tokens.
 - [Icon design](../icon-design/SKILL.md): semantic icon families, optical sizes, accessible controls and application icons.
 - [Reference reconstruction](../reference-reconstruction/SKILL.md): screen/state evidence, measured reference specs and matched comparisons.
 - [Forms](references/forms.md): layout, labels, input types and autocomplete, validation timing, multi-step forms.

@@ -1,6 +1,6 @@
 # From chosen direction to production
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:00:00 UTC
 
 Once a direction is chosen, lock it into tokens and route each deliverable to the skill that owns it. Keep the decision traceable.
 
@@ -11,7 +11,7 @@ Write a short decision note in the project: chosen direction, runner-up, scores 
 ## 2. Turn the direction into tokens
 
 1. Copy `../../../library/tokens/src/` into the project (for example `design/tokens/`).
-2. Create `brands/<brand>.tokens.json` with the direction's accent and neutral ramps (generate them with `python3 ../../../library/scripts/color_tools.py ramp --hue <H> --chroma <C> --name <name>`), font families, radius and motion personality.
+2. Create `brands/<brand>.tokens.json` with the direction's accent and neutral ramps (generate them with `python3 ../../../library/scripts/color_tools.py ramp --hue <H> --chroma <C> --name <name>`) and font families, the only brandable groups. Set radius and motion personality in the project copy of `primitives.tokens.json` (or `components.tokens.json`).
 3. Build and lint with the project copy of `tokens.py` (`build`, then `lint`). Lint enforces the contrast guarantees in every mode; fix failures by adjusting ramp steps, never by suppressing the check.
 4. Use `dist/tokens.css` (or `dist/tailwind.css`) in code and `dist/figma-variables.json` for Figma variables.
 
@@ -45,6 +45,14 @@ See the `design-system` skill for token architecture, theming and Figma.
 When a deliverable is produced by another AI tool (image generators, video generators, v0, Lovable, Figma Make, another agent), write its prompt from the chosen recipe, never from scratch:
 
 1. **Source of truth:** the recipe and tokens. Name the typefaces, hex palette with proportions, layout logic, imagery style, motion personality, voice and the clichés to avoid. Add the channel's specs (aspect ratio, safe areas, sizes).
+   For a build agent (Claude Code, Codex, Cursor or a site builder), also brief:
+   - **References, not adjectives:** the [reference-first](reference-first.md) table (product, pattern, why it works for this user). Delete "modern", "clean" and "premium" unless a reference shows what they mean.
+   - **The job and the user before the screen:** who opens it, when, and what must be obvious ("the first screen a warehouse lead sees at 6 a.m. to spot late orders"), not just "a dashboard".
+   - **The system constraints up front:** one accent and its single job, the type scale, the 4px spacing unit, light, dark or both.
+   - **The component libraries by name**, from `ui-design`'s [component libraries](../../ui-design/references/component-libraries.md) ("shadcn/ui on Radix for base components, Sonner for toasts; do not hand-build them"), and which one section may carry a showpiece.
+   - **An avoid list:** the clichés above plus the AI tells that apply (default shadcn look, decorative gradients, low-contrast gray text, oversized headings, color used for emphasis instead of size).
+   - **Persist repeated rules:** when the project will be built over many sessions, write the constraints, library picks and avoid list into the project's `AGENTS.md` instead of repeating them in every prompt.
+   - **Iterate in small passes:** after the first build, one specific fix per message ("the primary button is the only accent element", "H1 to 32px"); a broad rewrite changes what was already right.
 2. **Prompt craft:** if the `prompt-engineering-expert` plugin is installed (listed in this kit's marketplace), hand it the recipe and the target tool and ask for the prompt. It runs a gap scan, applies its blueprint and scores the result. Without it, use the prompt anatomy in `imagery`'s [AI image generation](../../imagery/references/ai-image-generation.md) reference. For website builders (Lovable, Bolt, v0, Cursor, Manus, Google AI Studio, Kimi), start from `web-design`'s [builder prompts](../../web-design/references/builder-prompts.md): the landing spec is the prompt body, with per-tool stack lines marked verify.
 3. **Check the output, not the prompt:** run what comes back through `design-critique` against the same recipe, and fix the prompt (not the image by hand) when a tell repeats.
 4. **Record** tool, model, version, prompt and approver, as the `imagery` provenance default requires.
