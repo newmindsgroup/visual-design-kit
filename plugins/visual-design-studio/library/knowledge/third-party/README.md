@@ -1,6 +1,6 @@
 # Design method provenance
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 BAMA design and native workflow adaptations derive from Dave Ebbelaar's MIT-licensed [BAMA](https://github.com/daveebbelaar/bama/tree/15356bd8ebff408222ad21395aea09bd74b15310). Preserve [its complete notice](BAMA-LICENSE.txt). REA evidence workflows and the optional companion skill derive from [REA](https://github.com/morluto/rea/tree/160d821ac9a0310afcb8d1fc427862dd6508add5), released as rea-agents 6.8.0. Preserve [its complete notice](REA-LICENSE.txt). Main-branch audit commit 570abe95f2a35b5c580a5ec2fca90c33d4114bdc is a separate snapshot.
 
@@ -10,3 +10,4 @@ Cinematic web workflow, taste rules, builder prompts, the review addendum, media
 
 The component-library mismatch map in `ui-design`'s [component libraries](../../../skills/ui-design/references/component-libraries.md#mismatch-map) adapts four rows and the package.json-first method of the MIT-licensed `pick-ui-library` skill in [Emil Kowalski's skills](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9). Preserve [its complete notice](EMIL-KOWALSKI-SKILLS-LICENSE.txt).
 
+The [gauntlet loop](../../../skills/design-critique/references/gauntlet-loop.md) in `design-critique` adapts the CC BY 4.0 [gauntlet-loop skill](https://github.com/robonuggets/gauntlet-loop/tree/9b1975a1b8f01981f3f1e6b667ad3aaf907178ea) by Jay E (RoboNuggets), which packages Matt Shumer's technique. Preserve [its complete notice](GAUNTLET-LOOP-LICENSE.txt) and the attribution line at the top of the adapted file. The upstream skill, README and banner image are not bundled.

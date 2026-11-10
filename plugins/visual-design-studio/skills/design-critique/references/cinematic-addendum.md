@@ -1,6 +1,6 @@
 # Cinematic landing addendum
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Adapted from MotionSites claude-skill (MIT), see NOTICE.md.
 
@@ -82,6 +82,7 @@ For this loop only, convert to a 10-point scale by doubling each 1-5 score (half
 - **Look-and-fix stop rule:** stop iterating when the average is 8 or more and nothing is below 7, or after 3 rounds. Most first drafts land at 6-7; the fixes are what make it good.
 - **Client delivery still follows the rubric:** 4 or more (8 here) on every applicable criterion, no averaging. A page that clears the loop with a 7 somewhere has met the loop's stop rule but still carries that criterion as an open defect; list it in "Fixes this round" or "Preferences offered".
 - Blocking findings above cap the related criterion at 2 (4 on the 10-point scale) until fixed.
+- **Going further (optional):** once the stop rule is met, the [gauntlet loop](gauntlet-loop.md) pushes the hero and signature against a named live page, judged blind, within a cost ceiling.
 
 ## Fix loop
 

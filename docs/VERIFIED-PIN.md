@@ -1,12 +1,12 @@
 # Current candidate package pins
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
-Candidate branch: `feat/ui-libraries-reference-first`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
+Candidate branch: `feat/gauntlet-loop`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
 
 | Package | Version | SHA-256 of PAYLOAD.sha256 |
 | --- | --- | --- |
-| Visual Design Studio | 0.11.0 | `19715e8f2834bd52a131186a42ee59afd9c65d0fcc0f9873863a561843092a29` (candidate; not yet verified on a receiving machine) |
+| Visual Design Studio | 0.12.0 | `f556b37a134111d5760c7ee32adaec87634d41dadf6e2b10e6e47e12edec467b` (candidate; not yet verified on a receiving machine) |
 | BAMA Mac Studio | 1.0.0-adapted.2 | `538a49ffe5c2f3c8be2dcb7cf3c6fa5d86a69ffd8b1087d7942d3f356b272bd5` |
 | REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
 

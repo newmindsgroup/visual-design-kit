@@ -1,6 +1,6 @@
 # Evals
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Behavioral evals for the Visual Design Studio plugin, in the `claude plugin eval` format: each case is a folder with `prompt.md` (the user request and run limits) and `graders/*.md` (LLM rubric, file checks and skill-firing indicators).
 
@@ -11,11 +11,11 @@ claude plugin eval plugins/visual-design-studio --runs 3 --ablation with-without
 claude plugin eval plugins/visual-design-studio --case direction-genz-neobank-brazil --runs 1 --ablation none --no-publish
 ```
 
-The default ablation runs each case with and without the plugin and reports the score delta, which is the real measure of whether the kit improves Claude's design output. Three `no-fire-*` controls check that design skills stay out of unrelated work. The maintainer loop for measuring, fixing and re-measuring is `.claude/skills/design-kit-eval-loop/` at the repository root. Results are written to `evals/results/` (ignored by the payload build).
+The default ablation runs each case with and without the plugin and reports the score delta, which is the real measure of whether the kit improves Claude's design output. Four `no-fire-*` controls check that design skills stay out of unrelated work. The maintainer loop for measuring, fixing and re-measuring is `.claude/skills/design-kit-eval-loop/` at the repository root. Results are written to `evals/results/` (ignored by the payload build).
 
 Add a case whenever a real project exposes a failure: describe the request in `prompt.md`, write what a passing answer must contain in an `llm` grader, and keep at least one outcome grader per case.
 
-## Cases (the original 32; the suite is now 51, with later additions in the sections below)
+## Cases (the original 32; the suite is now 52, with later additions in the sections below)
 
 | Case | What it tests |
 | --- | --- |
@@ -194,4 +194,20 @@ Two cases for 0.11.0: `ui-library-picks-shadcn-app` (toasts, a mobile drawer, a 
 | --- | --- | --- |
 | `restyle-default-shadcn-dashboard` | 0.60 | `sequence`, `tell-ids` |
 | `ui-library-picks-shadcn-app` | 0.40, then 0.40 | First run: no skill loaded, so `ui-design`'s description now says it picks React UI libraries. Rerun: skill loads; `feedback-rules` and `picks` fail (single runs vary); left for the eval loop. |
+
+## Gauntlet loop case (added 2026-11-10, not yet measured)
+
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+One case for 0.12.0. The suite is now 52 cases.
+
+| Case | What it tests |
+| --- | --- |
+| `gauntlet-beat-linear-homepage` | An agency asks to "keep iterating until our landing page beats Linear's homepage", invites copying Linear's look and says not to stop and ask; the client's locked orange fails as body-link text (about 2.0:1). Graders: a named, fetchable bar captured at the same viewports (`bar-capture`), hard gates before any comparison (`gates-first`), a blind binary critic separate from the builder (`blind-critic`), the copy guard (`copy-guard`) and a win-or-ceiling exit with stop-and-report (`exit-ceiling`), plus a `regex` check and a `tool_used: Skill` indicator for `design-critique`. |
+
+Smoke-test with `--runs 1 --ablation none` before the first `--runs 3 --ablation with-without` measurement; the paid harness was not run for this release.
+
+### 0.12.0 smoke run (2026-11-10, `--runs 1 --ablation none`, $0.31)
+
+`gauntlet-beat-linear-homepage`: 0.07 (no skill loaded) → 0.20 after `design-critique`'s description named "keep going until it beats X" (skill loads, but the model searched the empty workspace and asked for files) → 0.80 after the prompt said the page is not in the workspace. Remaining failure: `blind-critic`; left for the eval loop.
 

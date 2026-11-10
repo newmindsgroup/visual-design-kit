@@ -1,6 +1,18 @@
 # Release notes
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+## 0.12.0 Gauntlet loop
+
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+Adapted from RoboNuggets' gauntlet-loop skill (Jay E, CC BY 4.0, commit 9b1975a), which packages Matt Shumer's technique. Attribution and the list of changes are in `NOTICE.md`; the license is preserved in `library/knowledge/third-party/GAUNTLET-LOOP-LICENSE.txt`.
+
+- **Gauntlet loop** (`skills/design-critique/references/gauntlet-loop.md`): the optional step after the rubric target (or the cinematic 8+/7 stop rule) is met, for "keep going until it beats X". A named, fetchable, comparable bar captured at the same widths with `render_review.mjs`, or a kit calibration piece when no external bar is allowed; the work split into judgeable pieces; `art-director` as a fresh blind critic each round giving "A or B and the single biggest gap"; `accessibility-auditor`, `brand-guardian` and, for web, `frontend-engineer` as hard gates before every comparison; blinding mechanics; a copy guard with the name-swap test; exit on a blind win or a time or spend ceiling (asked once for client work, 60 minutes by default), never a round count; a round log; a single-context fallback that admits it is weaker; and the hand-back to the rubric, where a win never overrides a failed gate.
+- **Links:** `design-critique` workflow step 13, defaults and references; the review panel's convening table; the cinematic addendum and `web-design`'s cinematic landing loop; `design-director`'s handoff section 4, which points to the `prompt-engineering-expert` gauntlet-loop template (1.4.0) for a paste-ready prompt.
+- **Evals:** 1 case, `gauntlet-beat-linear-homepage` (52 in total), not yet measured.
+
+Existing project pins are unaffected; adopt 0.12.0 deliberately.
 
 ## 0.11.0 UI libraries, reference-first workflow and agent briefs
 

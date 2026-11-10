@@ -1,6 +1,6 @@
 # Case map
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Which eval cases to re-run after editing a skill, and where the knowledge each case's grader rewards lives in the kit. Paths are under `plugins/visual-design-studio/`. After any change to a skill `description`, also re-run every `no-fire-*` case.
 
@@ -78,3 +78,11 @@ Version-Timestamp: 2026-11-10 03:00:00 UTC
 | --- | --- | --- |
 | `ui-library-picks-shadcn-app` | ui-design | `skills/ui-design/references/component-libraries.md` (check package.json first, one primitive layer, mismatch map: Sonner, Vaul unmaintained, cmdk, NumberFlow `respectMotionPreference`), `references/states-and-feedback.md` (toast timing, no errors needing action in a toast, WCAG 2.2.1), `references/navigation.md` (visible command palette trigger) |
 | `restyle-default-shadcn-dashboard` | ui-design, design-director, design-critique | `skills/design-director/references/reference-first.md` (evidence, components, motion), `references/handoff.md` section 4 (brief checklist: job and user, constraints, libraries, avoid list, AGENTS.md, small passes), `skills/ui-design/references/component-libraries.md` (restyle recipe, radius scale trap, `--input` to border-strong), `skills/design-critique/references/ai-tells.md` (AT-27, AT-28, AT-29) |
+
+## Gauntlet loop case (0.12.0)
+
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+| Case | Owner skill (edit this to fix) | Kit content the grader rewards |
+| --- | --- | --- |
+| `gauntlet-beat-linear-homepage` | design-critique | `skills/design-critique/references/gauntlet-loop.md` (named, fetchable bar captured at the same widths with `render_review.mjs`; pieces; hard gates before every comparison; blind binary `art-director` critic, fresh each round, single-context fallback; copy guard and name-swap; win-or-ceiling exit with stop-and-report; round log; hand-back to the rubric), `references/review-panel.md` (gauntlet row; conflict ladder: a locked color that fails as text is used as non-text), `references/accessibility-audit.md` and `skills/color/references/contrast.md` (#FCA311 on white about 2.0:1) |

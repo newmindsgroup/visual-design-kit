@@ -1,6 +1,6 @@
 # Cinematic landing pages and heroes
 
-Version-Timestamp: 2026-11-05 18:10:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Adapted from MotionSites claude-skill (MIT), see NOTICE.md.
 
@@ -82,6 +82,7 @@ Then score with the `design-critique` rubric plus the [cinematic addendum](../..
 2. Write down the three weakest scores and a concrete change for each, in values: "H1 from 64px to clamp(3.5rem, 2rem + 6vw, 7.5rem), tracking -0.04em".
 3. Make the changes, re-render with identical settings into `render-review/round-N`, look again.
 4. Stop when the average is 8 or more with nothing below 7, or after 3 rounds. Then say plainly what would still lift it (usually better media).
+5. Optional, when the client wants it to beat a named page: run `design-critique`'s [gauntlet loop](../../design-critique/references/gauntlet-loop.md) after the stop rule is met.
 
 No renderer available: say so, review the code line by line against the addendum, and tell the client the page was not visually checked.
 
