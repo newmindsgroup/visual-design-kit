@@ -1,6 +1,17 @@
 # Completion backlog
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+## Gauntlet loop, 0.12.0
+
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+- [x] `design-critique` gauntlet loop reference (bar capture, pieces, gates, blind binary critic, copy guard, ceiling, round log, single-context fallback, hand-back to the rubric), adapted from RoboNuggets' gauntlet-loop (CC BY 4.0) with NOTICE and license file.
+- [x] Links from the critique workflow, review panel, cinematic addendum, cinematic landing loop and the handoff prompt section.
+- [x] 1 eval case written (52 in total).
+- [ ] Smoke-run `gauntlet-beat-linear-homepage` (`--runs 1 --ablation none`), then measure with `--runs 3 --ablation with-without`.
+- [ ] Run one real gauntlet on a kit example (a stylescape hero against another stylescape) and record the round log as a worked example.
+- [ ] Consider a blinding helper (mask regions and randomize order) in `render_review.mjs` or a sibling script if manual masking proves error-prone.
 
 ## UI libraries and reference-first, 0.11.0
 

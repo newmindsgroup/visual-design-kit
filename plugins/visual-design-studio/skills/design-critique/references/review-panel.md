@@ -1,6 +1,6 @@
 # Review panel
 
-Version-Timestamp: 2026-10-20 10:28:22 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 One reviewer reading for everything misses things: the eye that judges hierarchy skims the error messages, the eye that checks contrast ignores the logo's clear space. In Claude Code and Cowork, convene a panel of read-only specialist subagents, each with one mandate and its own checklist, then merge their scores into the [rubric](rubric.md) yourself. In claude.ai chat, and in any host that does not load plugin agents, run the same five lenses in sequence with the fallback below. You still own the critique: the panel supplies evidence, you look at the screenshots and decide.
 
@@ -26,6 +26,7 @@ Subagent types carry the plugin prefix, for example `visual-design-studio:art-di
 | Component library or design-system release | `frontend-engineer`, `accessibility-auditor`, `brand-guardian` | Marketing docs site included: add `art-director` |
 | Two rounds without score movement | Full panel once, to find what a single reviewer keeps missing | Scores move: return to single-reviewer rounds |
 | Quick internal check, work in progress | No panel; run the skill's workflow yourself | Never convene for a one-line fix |
+| Gauntlet against a named bar, after the rubric target is met | `art-director` as the blind critic, fresh each round; `accessibility-auditor` and `brand-guardian` as hard gates before each comparison | See the [gauntlet loop](gauntlet-loop.md) for roles, blinding and the cost ceiling |
 
 Each panel member costs a full context. Convene for delivery gates and stalls, not every round.
 

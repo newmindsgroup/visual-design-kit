@@ -1,10 +1,10 @@
 {
-  "Version-Timestamp": "2026-11-10 03:07:49 UTC",
-  "candidate": "0.11.0",
+  "Version-Timestamp": "2026-11-10 03:26:47 UTC",
+  "candidate": "0.12.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
     "path": "curated-plugin-source",
-    "version": "0.11.0"
+    "version": "0.12.0"
   },
   "distribution_scope": "public",
   "files": [
@@ -202,7 +202,7 @@
     },
     {
       "destination": "RELEASE-NOTES.md",
-      "sha256": "d86cebba86ee2de250ceeb68ddf3073152a1695e74b65bf7c8b0fcb86b0ca9fc",
+      "sha256": "5bfd59ee99b3d599a9e6219502d05f8049628b189d6520d2f4c9e2a69dc82677",
       "source": "curated-plugin-source/RELEASE-NOTES.md",
       "status": "versioned-evaluation-input"
     },
@@ -4599,6 +4599,12 @@
       "status": "versioned-evaluation-input"
     },
     {
+      "destination": "knowledge/third-party/GAUNTLET-LOOP-LICENSE.txt",
+      "sha256": "8f60d6e6b40bb0d00a316523048a2c761f74697e60be2e34839c8981df31c6b7",
+      "source": "curated-plugin-source/knowledge/third-party/GAUNTLET-LOOP-LICENSE.txt",
+      "status": "versioned-evaluation-input"
+    },
+    {
       "destination": "knowledge/third-party/MOTIONSITES-LICENSE.txt",
       "sha256": "918d52cb5c63a24a8a01f35ebc42041c11027aa5e924aeb7da3a1aa711777296",
       "source": "curated-plugin-source/knowledge/third-party/MOTIONSITES-LICENSE.txt",
@@ -4612,7 +4618,7 @@
     },
     {
       "destination": "knowledge/third-party/README.md",
-      "sha256": "c87930b8a2e12aada04e5221327563ada92037a305ad517c3556e43916393702",
+      "sha256": "28fa9497dce97dc0eaa963cebf5c21a0ff1d5fbedbecd0c6feae62621812c8d7",
       "source": "curated-plugin-source/knowledge/third-party/README.md",
       "status": "versioned-evaluation-input"
     },

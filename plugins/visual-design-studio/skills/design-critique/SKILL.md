@@ -1,15 +1,15 @@
 ---
 name: design-critique
 description: >-
-  Load before reviewing, critiquing, QA-ing or polishing any design, including one only described in words: page,
-  screen, pricing table, deck, social post, stylescape or brand asset. Renders at real sizes, scores a 12-criterion
-  rubric, names generic-AI tells, runs the name-swap and squint tests and a 15-minute accessibility audit, gives at
-  most five prioritized fixes, checks build fidelity against the approved design, and revises until the target is met.
-  Also for "is this good" or "does this look AI-made".
+  Load before reviewing, critiquing, QA-ing, polishing or iterating on any design, even one described in words: page,
+  screen, deck, social post, stylescape or brand asset. Renders at real sizes, scores a 12-criterion rubric, names
+  generic-AI tells, runs name-swap and squint tests and an accessibility audit, gives at most five fixes, checks build
+  fidelity, and revises until the target is met. Also for "is this good", "does this look AI-made" or "keep going
+  until it beats X" (gauntlet loop).
 license: MIT
 metadata:
-  version-timestamp: "2026-11-10 03:00:00 UTC"
-  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
+  version-timestamp: "2026-11-10 03:20:00 UTC"
+  agent-attribution: "computer=vm; tool=Claude Code; version=2.1.322; timestamp=2026-11-10 03:20:00 UTC"
 ---
 
 # Design critique
@@ -25,7 +25,7 @@ Good critique works from evidence. It judges rendered pixels at real sizes again
 | Other formats | Native size: social 1080x1350 or 1080x1920, slides 1920x1080, print as a PDF raster at 150 dpi of the final trim, video as key frames | Distance media (OOH, signage): also view at about 10% scale to simulate viewing distance |
 | Rubric target | 4+ on every applicable criterion for client delivery; never average | Directions for selection: 4+ on Brief fit and Distinctiveness, 3+ elsewhere |
 | Fixes per round | 5 at most, most impactful first, defects before preferences | Never more |
-| Rounds | Up to 3 before showing a person | The user asked for autonomous iteration |
+| Rounds | Up to 3 before showing a person | The user asked for autonomous iteration; against a named real bar ("until it beats X"), run the [gauntlet loop](references/gauntlet-loop.md) with a cost ceiling |
 | Contrast | 4.5:1 body, 3:1 large text (24px+, or 18.66px+ bold) and UI | Older or low-vision audiences: aim for 7:1 body |
 | AI tells | 0-1 unrequested tells | The brief asks for the style; record why |
 | Stop | Target met, or only preferences remain | Two rounds without score movement: rethink the direction, do not keep polishing |
@@ -44,6 +44,7 @@ Good critique works from evidence. It judges rendered pixels at real sizes again
 10. **Revise** under [revision discipline](references/revision-discipline.md): scoped edits, invariants frozen, tokens and components rather than one-offs, no "while I'm here" changes.
 11. **Re-render with identical settings** into a new folder (`--out review/round-N`), compare before and after at every width, confirm invariants are untouched and no other score dropped, then re-score.
 12. **Stop** when the target is met or only preferences remain. Report the final scores, before and after screenshot paths, open preferences as options with their trade-off, and anything you could not test.
+13. **Optional gauntlet.** When the user wants it to beat a named, fetchable bar, run the [gauntlet loop](references/gauntlet-loop.md) after the target is met: hard gates first, a blind binary critic separate from the builder, exit on a blind win or the ceiling, then re-score here. A win never overrides a failed gate.
 
 ## Critique output
 
@@ -95,6 +96,7 @@ Not tested: <screen reader on Windows, real devices, ...>
 - [Cinematic addendum](references/cinematic-addendum.md): blocking checks, signature, media integration and motion criteria, and the 8+ average, none-below-7 stop rule for cinematic landing pages and heroes.
 - [AI tells](references/ai-tells.md): 29 named tells with what they look like, why they happen and the fix.
 - [Accessibility audit](references/accessibility-audit.md): the 15-minute pass (axe, keyboard, focus, zoom and reflow, contrast, targets, motion, VoiceOver and NVDA).
+- [Gauntlet loop](references/gauntlet-loop.md): after the rubric target is met, builder and blind binary critic per piece against a named, fetchable bar captured at the same widths; gates first, copy guard, cost ceiling, round log, single-context fallback. Adapted from RoboNuggets' gauntlet-loop (CC BY 4.0).
 - [Review panel](references/review-panel.md): art-director, accessibility-auditor, copy-editor, brand-guardian and frontend-engineer subagents, score merge into the rubric, conflict ladder, chat fallback.
 - [Build fidelity](references/build-fidelity.md) and [compare_build.mjs](scripts/compare_build.mjs): pixel and computed-style diff of approved design vs build, thresholds, masks, pairing with Core Web Vitals.
 - [Revision discipline](references/revision-discipline.md): scoped changes, invariants, before and after evidence, stop rules.

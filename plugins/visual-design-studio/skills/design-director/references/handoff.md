@@ -1,6 +1,6 @@
 # From chosen direction to production
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Once a direction is chosen, lock it into tokens and route each deliverable to the skill that owns it. Keep the decision traceable.
 
@@ -55,6 +55,7 @@ When a deliverable is produced by another AI tool (image generators, video gener
    - **Iterate in small passes:** after the first build, one specific fix per message ("the primary button is the only accent element", "H1 to 32px"); a broad rewrite changes what was already right.
 2. **Prompt craft:** if the `prompt-engineering-expert` plugin is installed (listed in this kit's marketplace), hand it the recipe and the target tool and ask for the prompt. It runs a gap scan, applies its blueprint and scores the result. Without it, use the prompt anatomy in `imagery`'s [AI image generation](../../imagery/references/ai-image-generation.md) reference. For website builders (Lovable, Bolt, v0, Cursor, Manus, Google AI Studio, Kimi), start from `web-design`'s [builder prompts](../../web-design/references/builder-prompts.md): the landing spec is the prompt body, with per-tool stack lines marked verify.
 3. **Check the output, not the prompt:** run what comes back through `design-critique` against the same recipe, and fix the prompt (not the image by hand) when a tell repeats.
+   To have another agent iterate until it beats a named real bar, generate the prompt from `prompt-engineering-expert`'s gauntlet-loop template (1.4.0 and later) and follow `design-critique`'s [gauntlet loop](../../design-critique/references/gauntlet-loop.md) for the bar capture, hard gates, blind critic and cost ceiling.
 4. **Record** tool, model, version, prompt and approver, as the `imagery` provenance default requires.
 
 ## 5. Keep the idea intact

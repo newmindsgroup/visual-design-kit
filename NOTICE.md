@@ -1,6 +1,6 @@
 # Licensing and provenance
 
-Version-Timestamp: 2026-09-27T13:47:24-04:00
+Version-Timestamp: 2026-11-10 03:20:00 UTC
 
 Original code, skills, schemas, instructions and documentation are available under the accompanying MIT license. This grant covers New Minds Group's rights in this work. It does not relicense third-party material or grant rights in referenced brands.
 
@@ -72,3 +72,14 @@ Copyright (c) 2026 Emil Kowalski. Released under the MIT License; the complete n
 
 Source: [emilkowalski/skills](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) at commit `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` (2026-11-09), file `skills/pick-ui-library/SKILL.md`. Adapted in 0.11.0: the "check package.json first, keep what is installed, recommend one library" method and four rows of its "Common mismatches to catch" list (hand-built toasts, `div`-based dropdowns and dialogs, numbers animated by re-rendering text, 1,000+ row lists), rewritten into the mismatch map of `skills/ui-design/references/component-libraries.md`, which marks them. No other file from that repository is included, and the skill itself is not bundled.
 
+## Gauntlet loop adaptation (CC BY 4.0)
+
+Version-Timestamp: 2026-11-10 03:20:00 UTC
+
+- **Title:** gauntlet-loop (Claude Code skill, `.claude/skills/gauntlet-loop/SKILL.md`, and its `README.md`)
+- **Author:** Jay E, RoboNuggets (https://robonuggets.com). The gauntlet loop technique is Matt Shumer's, from his Claude of Duty project and its original prompt (https://github.com/mshumer/Claude-of-Duty).
+- **Source:** https://github.com/robonuggets/gauntlet-loop at commit `9b1975a1b8f01981f3f1e6b667ad3aaf907178ea` (2026-08-06)
+- **License:** Creative Commons Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/. The complete license text is preserved in [GAUNTLET-LOOP-LICENSE.txt](plugins/visual-design-studio/library/knowledge/third-party/GAUNTLET-LOOP-LICENSE.txt).
+- **Adapted in Visual Design Studio 0.12.0** into `plugins/visual-design-studio/skills/design-critique/references/gauntlet-loop.md`, which carries the attribution line and marks each section *(adapted)* or *(kit)*.
+
+**Changes made:** the upstream skill writes a paste-ready prompt; the kit turns its method into a review procedure run inside `design-critique`. Restated in the kit's own words: the named, fetchable and comparable bar; small judgeable pieces; a builder and a separate fresh-context critic; blind, binary comparison with labels stripped; a harsh critic; no round-count exit. Added by the kit: design-specific bars and same-viewport capture with `render_review.mjs`, kit calibration bars when no external bar is allowed, the mapping onto the kit's subagents with a single-context fallback, blinding mechanics (masking, randomized order, same crop), hard gates before every comparison (WCAG 2.2 AA, brand and tokens, licensing, accuracy, budgets), the copy guard (craft not resemblance, name-swap test), a cost or time ceiling with stop-and-report, a stall rule, the round log and the hand-back to the rubric. The upstream prompt template and its two filled examples are not reproduced; prompt generation is delegated to the `prompt-engineering-expert` plugin's own adapted template. No upstream file, banner image or product name is bundled. CC BY 4.0 grants no trademark rights, and naming RoboNuggets or Matt Shumer is credit, not endorsement of this kit.
