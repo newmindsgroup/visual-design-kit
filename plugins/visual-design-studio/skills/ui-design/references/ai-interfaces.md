@@ -1,6 +1,6 @@
 # AI interfaces: chat, assistants and agents
 
-Version-Timestamp: 2026-10-20 02:04:32 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 A good AI interface makes three things obvious at all times: what the system is doing, what it based its answer on, and what it will do next with the user's permission. Speed, control and honesty about uncertainty matter more than a clever persona.
 
@@ -68,6 +68,8 @@ Classify every action the agent can take:
 | Sensitive data use | Share personal data with a third-party tool | Ask, naming the data and the recipient |
 
 **Approval card anatomy:** what will happen in plain words ("Send this email to 14 recipients"), the exact target and parameters (recipients, amount, file paths), a preview or diff of the change, the cost if any, and buttons: **Approve**, **Edit**, **Deny** (with optional feedback). "Always allow this kind of action" is an explicit, separate choice, never pre-selected, and revocable in settings.
+
+When agents operate the product's own screens (browser agents, WebMCP, an in-app assistant), apply these classes in the interface with [agent-ready interfaces](agent-ready-ui.md): gate the committing control, keep secrets unreadable, and name every control uniquely.
 
 Keep an activity log of everything the agent did, with timestamps, inputs and outcomes, and undo or rollback where the system allows it. Dry-run previews beat after-the-fact apologies.
 

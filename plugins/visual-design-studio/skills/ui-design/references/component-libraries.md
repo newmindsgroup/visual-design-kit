@@ -1,28 +1,29 @@
 # Component libraries
 
-Version-Timestamp: 2026-11-10 03:00:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
-Use when an interface will be built in React (directly, or by another agent or a site builder) and you must decide which components to install instead of writing them by hand. Hand-built components are where AI-made UI shows: toasts that pile up, drawers that will not drag, command menus that break under the keyboard, numbers that jump. Libraries supply tested behavior; the brand's tokens supply the look.
+Use when an interface will be built in React, or in Vue, Svelte, Solid or web components (directly, or by another agent or a site builder), and you must decide which components to install instead of writing them by hand. Hand-built components are where AI-made UI shows: toasts that pile up, drawers that will not drag, command menus that break under the keyboard, numbers that jump. Libraries supply tested behavior; the brand's tokens supply the look.
 
-Methods restated from Griffin Wooldridge's posts (credited in `NOTICE.md`); the mismatch list adapts Emil Kowalski's MIT-licensed `pick-ui-library` skill. Versions and licenses below were read on 2026-11-10.
+Methods restated from Griffin Wooldridge's posts (credited in `NOTICE.md`); the mismatch list adapts Emil Kowalski's MIT-licensed `pick-ui-library` skill. Versions and licenses below were read on 2026-11-10; the UI SDK section was added from the vercel-labs/ui repository on 2026-11-19.
 
 ## Defaults
 
 | Decision | Default | Change when |
 | --- | --- | --- |
 | First step | Read `package.json` (and `components.json` for shadcn) and keep every UI library already installed | The installed library is unmaintained or fails the accessibility checks below: propose the change, do not churn it silently |
-| Primitive layer | One per product: Radix Primitives (matches the kit's [React reference system](../../../library/examples/react-system/README.md)) or Base UI | Project already uses Base UI, React Aria or Headless UI: stay on it. Never wrap two primitive layers behind one API (`design-system` [component API](../../design-system/references/component-api.md)) |
+| Primitive layer | One per product: Radix Primitives (matches the kit's [React reference system](../../../library/examples/react-system/README.md)) or Base UI | Project already uses Base UI, React Aria or Headless UI: stay on it. Vue, Svelte, Solid or a mix of frameworks: see [UI SDK](#ui-sdk-behaviors-for-five-frameworks). Never wrap two primitive layers behind one API (`design-system` [component API](../../design-system/references/component-api.md)) |
 | Most app components | shadcn/ui copied into the repo, on the chosen primitive layer | Multi-product design system: publish the components as a versioned package or a private shadcn-compatible registry |
 | Specialists | Sonner for toasts, a drag-to-close drawer, cmdk for command menus, NumberFlow for changing numbers, input-otp for verification codes, `motion` only for springs, layout and exit animation | Plain hover and fade: CSS transitions with the kit duration and easing tokens |
 | Designed components | At most one showpiece moment per page (one animated hero, one interactive background, one signature section) | A campaign microsite whose brief is the effect: still one primary effect per view |
 | Styling | Restyle before anything ships: radius, color and type from the brand tokens (recipe below) | Never ship the library's default theme as the brand |
 | Accessibility | Primitives own focus, keyboard and ARIA; designed components are audited before use | No exceptions for showpieces |
+| Agents | Screens that agents will operate follow [agent-ready interfaces](agent-ready-ui.md): unique names, gated destructive actions, state through change events | Static marketing pages: the accessibility pass covers it |
 
 ## The three kinds
 
 | Kind | What it gives you | Use it for | Examples |
 | --- | --- | --- | --- |
-| Foundations | Behavior: focus management, keyboard support, ARIA, dismissal; little or no styling | Buttons, inputs, selects, dialogs, menus, tabs, popovers, tooltips: most of an app | shadcn/ui, Radix Primitives, Base UI |
+| Foundations | Behavior: focus management, keyboard support, ARIA, dismissal; little or no styling | Buttons, inputs, selects, dialogs, menus, tabs, popovers, tooltips: most of an app | shadcn/ui, Radix Primitives, Base UI; UI SDK across frameworks |
 | Specialists | One hard component done well | The details that make a product feel finished and that AI gets wrong by hand | Sonner, Vaul, cmdk, NumberFlow, input-otp, motion |
 | Designed components | Finished, styled, usually animated pieces you copy into the repo | A moment you want people to notice | Beautiful UI (AI-native states), Magic UI, Aceternity UI, RareUI, the 21st.dev marketplace |
 
@@ -45,9 +46,83 @@ The kinds stack: foundations for the bulk, a specialist where one fits, and one 
 | Aceternity UI | Designed | none (shadcn registry `@aceternity`) | registry | verify (no public source repo found; old `aceternity-ui` CLI is MIT) | `npx shadcn@latest add @aceternity/<component>` | `@aceternity` in shadcn's registry directory. Free and paid components: verify on the site |
 | RareUI | Designed | `rareui` (CLI) | 0.1.6 | MIT | `npx rareui add <component>` | npm; LICENSE in Codewithswappy/rareui |
 | 21st.dev | Marketplace | `@21st-dev/cli` | 1.18.0 | CLI and marketplace code MIT; each component has its own author and license: verify per component | Copy the component or its agent prompt; the CLI also configures the 21st MCP | npm; LICENSE in serafimcloud/21st |
+| UI SDK | Foundation (behaviors, 5 frameworks, agent bridge) | `@ui-sdk/core` plus `@ui-sdk/react`, `/vue`, `/svelte`, `/solid` or `/web` | 0.1.0-beta.12 (2026-11-19; first beta 2026-11-12; verify) | Apache-2.0 | `npm i @ui-sdk/react @ui-sdk/core` | npm; LICENSE in vercel-labs/ui |
 | Beautiful UI | Designed (AI-native) | none found | n/a | verify (site unreachable from the verification machine; no source repo found) | Copy code from the site | beautifului.dev |
 
 The shadcn CLI options above were read from its source (`packages/shadcn/src/commands/init.ts`, commit 8ab2771, 2026-11-08); `--defaults` uses the Base UI base. Re-run `npm view <package> version license` before pinning in a client project.
+
+## UI SDK: behaviors for five frameworks
+
+Vercel's UI SDK (`@ui-sdk/*`, [vercel-labs/ui](https://github.com/vercel-labs/ui), Apache-2.0) is a headless foundation built for agents to write and to operate. Its core is a set of behaviors (keyboard navigation, focus, selection, dismissal, popups, drag and drop and their ARIA) with adapters for React, Vue, Svelte, Solid and web components. It ships about 60 unstyled components, from Select, Dialog, Combobox and Toast to Date Picker, Color Picker, Tree, Image Cropper and Resizable, with the same parts in every framework. A missing component is built from the same behaviors with `definePrimitive`, so it gets the same keyboard, focus, server rendering and right-to-left support. Its agent bridge is covered in [agent-ready interfaces](agent-ready-ui.md#with-ui-sdk).
+
+**Pick it when:**
+
+- The product spans frameworks (a React app, a Svelte marketing site, a web-components widget) and should share one behavior layer.
+- The product is Vue, Svelte or Solid and has no primitive layer yet. Established alternatives there are Reka UI (Vue), Bits UI (Svelte) and Ark UI (several frameworks).
+- Agents will operate the interface, in-app or through WebMCP.
+- A component the usual libraries lack (stepper, splitter, transfer list) must behave like the rest.
+
+**Stay on what is installed when** the project already has Radix, Base UI, React Aria or another primitive layer: one layer per product still applies.
+
+**Maturity gate.** It is in beta: 12 betas shipped between 2026-11-12 and 2026-11-19 (verify the current version with `npm view @ui-sdk/core version time`).
+
+- Prototypes and internal tools: fine, with the exact version pinned.
+- Client production work: wait for 1.0, or pin a version at least 14 days old, record the choice in the project's `AGENTS.md`, and re-test on every upgrade.
+- If the project's package manager enforces a minimum release age, keep the policy. UI SDK's own setup prompt says the same.
+
+**Pages with no build step** (an Artifact, a single HTML file) can load `web.js` and `web.css` instead of installing.
+
+- UI SDK's docs point to `https://ui-sdk.dev/web.js`.
+- The npm package also ships `browser/web.js` and `browser/web.css`, for example from `https://cdn.jsdelivr.net/npm/@ui-sdk/web@<version>/browser/web.js`.
+- Claude's Artifact rules load scripts only from a few CDNs (cdnjs, jsdelivr and unpkg among them, not ui-sdk.dev) and ask for an exact version at least two weeks old (verify in the current Artifact rules). Until a UI SDK version is that old, Artifacts use plain HTML with the kit tokens.
+
+**Setup:**
+
+1. Install `@ui-sdk/core` and the framework package.
+2. Add a line to the project's `AGENTS.md`: read `node_modules/@ui-sdk/<framework>/docs/llms.txt` before using it. The docs ship with each package and match the installed version.
+3. Optionally install its skill: `npx skills@latest add vercel-labs/ui --skill ui-sdk`. It is instructions only, Apache-2.0, and read on 2026-11-19. It is third-party, so re-read it before each update.
+4. Import each component from its own entry (`@ui-sdk/react/select`). Change a part's element with `render`, not an `as` prop.
+
+**Restyle it with the kit tokens.** Components render no styles of their own. The optional `@ui-sdk/core/web.css` gives every component a default look, and that look is a template like any other: monochrome, square corners (`--ui-radius: 0`) and 13px control text (`--ui-font-size: 0.8125rem`, below the kit's 14px dense default). Theme it through its `--ui-*` tokens, never with `!important`. The kit's `tokens.css` already sets `color-scheme` for each theme, which `web.css`'s own `light-dark()` colors follow:
+
+```css
+@layer ui-sdk;                      /* first line of the global stylesheet, above @import "tailwindcss" */
+@import "tailwindcss";
+@import "./tokens.css";
+@import "@ui-sdk/core/web.css" layer(components);   /* with Tailwind: after it, never from a script */
+
+:root, [data-theme], [data-brand] {
+  --ui-background: var(--color-bg-canvas);
+  --ui-foreground: var(--color-fg-default);
+  --ui-muted: var(--color-bg-sunken);
+  --ui-muted-foreground: var(--color-fg-muted);
+  --ui-border: var(--color-border-subtle);
+  --ui-input: var(--color-border-strong);
+  --ui-primary: var(--color-accent-default);
+  --ui-primary-foreground: var(--color-fg-on-accent);
+  --ui-destructive: var(--color-danger-fg);
+  --ui-ring: var(--color-focus-ring);
+  --ui-ring-border: var(--color-focus-ring);
+  --ui-overlay: var(--color-overlay-scrim);
+  --ui-shadow: var(--shadow-md);
+  --ui-radius: var(--radius-md);
+  --ui-spacing: var(--space-1);
+  --ui-font-size: var(--font-size-sm);
+  --ui-line-height: var(--line-height-normal);
+  --ui-font-sans: var(--font-family-body);
+  --ui-font-mono: var(--font-family-mono);
+}
+```
+
+Then:
+
+- Check the contrast pairs UI SDK lists, with `color_tools.py contrast`:
+  - 4.5:1: `--ui-foreground` on `--ui-background`, and `--ui-muted-foreground` on both `--ui-background` and `--ui-muted`;
+  - `--ui-primary-foreground` on `--ui-primary`;
+  - 3:1: `--ui-input`, `--ui-ring` and `--ui-ring-border` on `--ui-background`.
+- `--ui-input` maps to the strong border for the same reason as shadcn's `--input` above.
+- Style state from `data-slot` and state attributes (`data-open`, `data-checked`, `data-highlighted`) at 3:1, never from generated ids or inline styles.
+- `web.css` draws chevrons, checks and other icons in `::before` and `::after`. Swap them through the `--ui-icon-*` tokens or render your own `<svg>`, so the product's icon family (`icon-design`) is the only one on the page.
 
 ## Check package.json first
 

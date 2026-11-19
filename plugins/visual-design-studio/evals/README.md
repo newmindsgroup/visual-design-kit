@@ -1,6 +1,6 @@
 # Evals
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 Behavioral evals for the Visual Design Studio plugin, in the `claude plugin eval` format: each case is a folder with `prompt.md` (the user request and run limits) and `graders/*.md` (LLM rubric, file checks and skill-firing indicators).
 
@@ -15,7 +15,7 @@ The default ablation runs each case with and without the plugin and reports the 
 
 Add a case whenever a real project exposes a failure: describe the request in `prompt.md`, write what a passing answer must contain in an `llm` grader, and keep at least one outcome grader per case.
 
-## Cases (the original 32; the suite is now 52, with later additions in the sections below)
+## Cases (the original 32; the suite is now 53, with later additions in the sections below)
 
 | Case | What it tests |
 | --- | --- |
@@ -211,3 +211,17 @@ Smoke-test with `--runs 1 --ablation none` before the first `--runs 3 --ablation
 
 `gauntlet-beat-linear-homepage`: 0.07 (no skill loaded) → 0.20 after `design-critique`'s description named "keep going until it beats X" (skill loads, but the model searched the empty workspace and asked for files) → 0.80 after the prompt said the page is not in the workspace. Remaining failure: `blind-critic`; left for the eval loop.
 
+## Agent-ready UI case (added 2026-11-19)
+
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+One case for 0.13.0. The suite is now 53 cases.
+
+| Case | What it tests |
+| --- | --- |
+| `agent-ready-settings-svelte` | A SvelteKit team with no component library wants a project settings screen (name field, visibility select, 30 member rows with a role menu and Remove, notification switches, an API key shown once) that their assistant and browser agents can operate. Graders: one headless layer for Svelte with the trade-off and UI SDK's beta pin (`library`), agent-ready rules (unique row names, confirm on the committing control, hidden key, change-event state, works without WebMCP: `agent-rules`), a way to prove it (`test`), a `regex` check and a `tool_used: Skill` indicator for `ui-design`. |
+
+### 0.13.0 smoke runs (2026-11-19, $0.35 total)
+
+- `--runs 1 --ablation none`: 1.00.
+- `--runs 1 --ablation with-without`: with the plugin 0.86 (`test` failed), without 0.14 (only the regex passed). Single runs vary; measure with `--runs 3` in the eval loop.

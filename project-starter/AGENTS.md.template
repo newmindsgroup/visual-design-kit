@@ -1,7 +1,7 @@
 <!-- design-project-entry:begin -->
 # Design project entry
 
-Version-Timestamp: 2026-10-27 07:51:01 AST
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 Before design work, verify that the package path and trusted digest placeholders below are configured. Stop dependent design work if either is unresolved. Compute SHA-256 of PAYLOAD.sha256 under the package root and compare it with {{TRUSTED_PAYLOAD_MANIFEST_SHA256}} obtained from a trusted release. Verify every listed payload file before following package instructions. On mismatch, stop and report; do not use the package. Record the manifest version and verified digest in the project-root RESUME.md when writes are authorized. Then read the starting skill at:
 `{{ABSOLUTE_PACKAGE_ROOT}}/skills/design-project-start/SKILL.md`
@@ -26,6 +26,7 @@ Fill in once the direction is approved, or delete this section. Agents apply it 
 - Type: display <family>, text <family>, scale <steps in px>.
 - Spacing unit: 4px. Radius: <none, sm, md or lg from the direction>. Modes: <light, dark or both>.
 - Components: <primitive layer, for example shadcn/ui on Radix> for base components; <toast, drawer, command menu and number libraries already in package.json>. Do not hand-build these.
+- Agents (delete if no agent operates the UI): every control has a unique name; <delete, pay, send> need a person's confirmation on the committing control; <secret fields> can be filled, never read; state follows change events. <UI SDK: read node_modules/@ui-sdk/<framework>/docs/llms.txt first.>
 - Showpiece: at most one designed or animated moment per page, in <section>; none in product screens.
 - References: <links to the approved reference set>.
 - Avoid: default shadcn styling, decorative gradients, low-contrast gray text, oversized headings, color used for emphasis instead of size, <project-specific clichés>.

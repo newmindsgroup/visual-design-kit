@@ -1,6 +1,17 @@
 # Completion backlog
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+## Agent-ready UI and UI SDK, 0.13.0
+
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+- [x] `ui-design` agent-ready interfaces reference (names, confirm, secret and hidden gates, change-event state, WebMCP, UI SDK mapping, checklist).
+- [x] UI SDK section in component libraries: when to pick, beta maturity gate, no-build and Artifact rule, setup, `--ui-*` token map.
+- [x] 1 eval case written (53 in total) and smoke-run (with 0.86, without 0.14).
+- [ ] Re-check UI SDK at 1.0, or once a version is 14 or more days old: re-read the changelog, confirm the token names and entry points, then decide whether to add a UI SDK variant of the React reference system (`library/examples/react-system/`).
+- [ ] After that, test a no-build Artifact page with UI SDK from jsdelivr against the Artifact rules, and add a recipe if it works.
+- [ ] Re-run UI SDK's `benchmarks/agent` before quoting its numbers to a client.
 
 ## Gauntlet loop, 0.12.0
 
