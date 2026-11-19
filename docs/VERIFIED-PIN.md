@@ -1,12 +1,12 @@
 # Current candidate package pins
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
-Candidate branch: `feat/gauntlet-loop`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
+Candidate branch: `feat/ui-sdk-agent-ready`. No tag or production acceptance is implied. Verify each payload file and the exact manifest digest below. Existing project pins retain their own edition. BAMA theme evidence: [edition record](RELEASE-BAMA-ADAPTED2.md).
 
 | Package | Version | SHA-256 of PAYLOAD.sha256 |
 | --- | --- | --- |
-| Visual Design Studio | 0.12.0 | `f556b37a134111d5760c7ee32adaec87634d41dadf6e2b10e6e47e12edec467b` (candidate; not yet verified on a receiving machine) |
+| Visual Design Studio | 0.13.0 | `0c3959cf5996a79b87fbb24795650843a6e7a3b4cdc03b9c10614623c70dc7ad` (candidate; not yet verified on a receiving machine) |
 | BAMA Mac Studio | 1.0.0-adapted.2 | `538a49ffe5c2f3c8be2dcb7cf3c6fa5d86a69ffd8b1087d7942d3f356b272bd5` |
 | REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
 

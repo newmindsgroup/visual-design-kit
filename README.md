@@ -4,9 +4,9 @@
 
 **Make Codex and Claude a design director for any style, industry, market and channel.** Visual Design Studio turns a brief into deliberately different design directions, renders them, scores them against the brief and recommends one. Then it carries the chosen direction through brand identity, UX, UI, web, native apps, motion, print and design systems, with concrete defaults instead of vague advice.
 
-> **Status: supervised evaluation (0.12.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
+> **Status: supervised evaluation (0.13.0 candidate).** Installs natively in Claude Code, claude.ai and Claude Desktop, and in Codex. Every client deliverable still needs human review of the actual output. Regulatory notes are design guidance, not legal advice.
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 [Install](#install) · [Use it](#use-it) · [What's inside](#whats-inside) · [How it finds the best solution](#how-it-finds-the-best-solution) · [Quality loop](#quality-loop) · [Client projects](#client-projects-and-continuity) · [What is verified](#what-is-verified) · [Develop](#develop-and-contribute)
 
@@ -42,6 +42,7 @@ Ask in plain language; the right skill loads on its own.
 | "Print specs for a tri-fold brochure" | `print-packaging-social` gives trim, bleed, color, paper and preflight |
 | "Put our tokens and components into Figma" (with a file link) | `figma-workflow` imports tokens as variables, builds bound components, maps Code Connect and proves each hop with screenshots |
 | "Does the build match the approved design?" | `design-critique` runs `compare_build.mjs`: pixel and computed-style diff at real widths, with thresholds |
+| "Our assistant and ChatGPT's browser agent should be able to change these settings" | `ui-design` makes the screen agent-ready: unique control names, a person confirms delete, pay and send, secrets stay unreadable, UI SDK's agent bridge and WebMCP |
 | "Keep iterating until our landing page beats Linear's homepage" | `design-critique` runs the gauntlet loop: same-width captures of the bar, gates first, a blind A-or-B critic per piece, a time or spend ceiling |
 
 ## What's inside
@@ -99,6 +100,11 @@ Directions must differ on at least three of six axes (type, palette, layout logi
 
 Dependency remediation and machine setup: [0.9.1 acceptance](docs/RELEASE-091.md).
 
+## Agent-ready UI and UI SDK (0.13.0)
+
+- **Agent-ready interfaces:** `ui-design`'s [agent-ready interfaces](plugins/visual-design-studio/skills/ui-design/references/agent-ready-ui.md) covers screens that AI agents operate as well as people: unique accessible names (a verb plus the row's text on repeated rows), a person's confirmation on the control that commits a delete, payment or send, secret fields an agent can fill but not read, hidden regions, state through change events, WebMCP, and an agent test. It applies to any library.
+- **UI SDK:** [component libraries](plugins/visual-design-studio/skills/ui-design/references/component-libraries.md#ui-sdk-behaviors-for-five-frameworks) adds Vercel's UI SDK (Apache-2.0, beta): headless behaviors and about 60 components for React, Vue, Svelte, Solid and web components, with an agent bridge (`createAgent`, WebMCP `registerTools`). The page says when to pick it, gives a beta maturity gate, and maps its `--ui-*` tokens to the kit tokens. Its own benchmark reports about 3 times fewer tokens for agents using its tools. See [NOTICE.md](NOTICE.md).
+
 ## Gauntlet loop (0.12.0)
 
 - **Beat a real bar, not a self-score:** `design-critique`'s [gauntlet loop](plugins/visual-design-studio/skills/design-critique/references/gauntlet-loop.md) is the optional step after the rubric target is met, for requests like "keep iterating until it beats Linear's homepage". It captures a named, fetchable bar at the same widths as ours, splits the work into pieces, and has a fresh `art-director` critic pick A or B blind each round and name the single biggest gap.
@@ -143,7 +149,7 @@ Read [toolkit setup and capability coverage](docs/TOOLKITS.md) for exact pins, i
 - **AI-tells gallery:** named generic-AI design patterns, each shown next to a better version (18 rendered; the critique catalog names 29). See [ai-tells](plugins/visual-design-studio/library/examples/ai-tells/README.md).
 - **Build fidelity:** `skills/design-critique/scripts/compare_build.mjs` diffs an approved design (PNG or HTML) against the build at real widths, pixel and computed style, and exits non-zero above threshold for CI.
 - **Render review:** `skills/design-critique/scripts/render_review.mjs` screenshots any page at real widths and reports overflow, orphaned words, fonts, contrast and axe accessibility findings.
-- **Evals:** 52 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, production files (print, decks, motion, cinematic web), component libraries and restyling, gauntlet iteration against a named bar, regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus four controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
+- **Evals:** 53 `claude plugin eval` cases compare Claude with and without the plugin on direction-finding, production files (print, decks, motion, cinematic web), component libraries and restyling, agent-ready screens, gauntlet iteration against a named bar, regulated industries, markets (Japan, Brazil, Quebec, Saudi Arabia), audiences, tokens, motion, native apps, packaging, data viz, email and critique, plus four controls that design skills stay out of unrelated work. Maintainers improve the kit with the [eval loop skill](.claude/skills/design-kit-eval-loop/SKILL.md).
 - **Spec radar:** `tools/spec_radar.py` lists the volatile claims marked "verify" that matter for our markets (US, Dominican Republic and Caribbean, Spanish-speaking Latin America), platform specs and accessibility standards; a monthly review re-checks them against primary sources. See [spec radar](docs/SPEC-RADAR.md). See [evals](plugins/visual-design-studio/evals/README.md).
 - **Earlier calibration:** the FORM and TIDAL [quality benchmark](plugins/visual-design-studio/library/examples/quality-benchmark/README.md) with correct, generic and wrong variants.
 
@@ -162,7 +168,7 @@ Lessons from projects come back through the [feedback contract](plugins/visual-d
 | Atlas | 125/125 entries validated against the schema; index regenerated and checked in CI | Platform specs and regulation change; entries are dated and say where to verify |
 | Tokens | Lint enforces DTCG structure, alias resolution, contract names and WCAG contrast in every mode and brand | Brand-specific tokens still need human review |
 | Automated tests | Repository and library Python suites, Node example tests and builds; all run in CI on every push | See [edition evidence](docs/RELEASE-060.md) for counts |
-| Behavior | 52 eval cases ship with the plugin (0.12.0); see [edition evidence](docs/RELEASE-060.md) for what was run | Evals sample behavior; they do not certify every output |
+| Behavior | 53 eval cases ship with the plugin (0.13.0); see [edition evidence](docs/RELEASE-060.md) for what was run | Evals sample behavior; they do not certify every output |
 | Codex | Earlier editions installed on the authoring Mac | Re-verify 0.6.0 on your host |
 | Design quality | Calibration sets and the critique loop raise the floor | Human art direction and client approval remain required |
 

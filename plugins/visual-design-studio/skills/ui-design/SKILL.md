@@ -4,11 +4,11 @@ description: >-
   Load before designing or specifying any interface screen or component, even a quick one: forms, tables, navigation,
   dashboards, onboarding, auth and passkeys, pricing, checkout, search and filters, settings, empty, loading and error
   states, notifications, consent and age-appropriate flows, and AI chat and agent interfaces, all to WCAG 2.2 AA.
-  Also picks React UI libraries (toasts, drawers, command menus). Gives component specs, state matrices, sizes,
-  density and keyboard and accessibility behavior.
+  Also picks UI libraries (toasts, drawers, command menus) and makes screens agent-ready. Gives component specs,
+  state matrices, sizes, density and keyboard and accessibility behavior.
 license: MIT
 metadata:
-  version-timestamp: "2026-11-10 03:06:54 UTC"
+  version-timestamp: "2026-11-19 11:45:00 UTC"
   agent-attribution: "computer=vm; tool=Claude Code; version=2.1.321; timestamp=2026-11-10 03:00:00 UTC"
 ---
 
@@ -35,17 +35,18 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 | Forms | Single column, labels above, validate on blur, inline errors plus summary on submit | Very short inline forms (search, subscribe): one row |
 | Tables | Text left, numbers right with tabular figures; rows 32/40/48px by density; sticky header | Under 640px: priority columns or card list |
 | AI and agents | Stream output; Stop replaces Send; show sources; ask before any irreversible or external action | Fully read-only agents: no approval step |
+| Agent-operable UI | Unique accessible names, gated delete/pay/send, secrets fillable but unreadable, state through change events ([agent-ready interfaces](references/agent-ready-ui.md)) | Static marketing pages: the accessibility pass covers it |
 
 ## Workflow
 
 1. **Collect the flow and states** from `ux-design` (flows with state IDs, content, requirements). If none exist, list the screens and their states first.
-2. **Inventory existing components** in the client's system or the kit tokens (`../../library/tokens/dist/tokens.css`). Extend before inventing; use the `design-system` skill for token and API decisions. In React, read `package.json` and pick libraries with [component libraries](references/component-libraries.md) instead of hand-building toasts, drawers, command menus or animated numbers; collect task references first per `design-director`'s [reference-first](../design-director/references/reference-first.md).
+2. **Inventory existing components** in the client's system or the kit tokens (`../../library/tokens/dist/tokens.css`). Extend before inventing; use the `design-system` skill for token and API decisions. Read `package.json` and pick libraries with [component libraries](references/component-libraries.md) (React, or UI SDK for Vue, Svelte, Solid and web components) instead of hand-building toasts, drawers, command menus or animated numbers; collect task references first per `design-director`'s [reference-first](../design-director/references/reference-first.md).
 3. **Pick patterns** from the references: [forms](references/forms.md), [navigation](references/navigation.md), [data-dense UI](references/data-dense-ui.md), [flows](references/flows.md), [AI interfaces](references/ai-interfaces.md).
 4. **Specify each component**: anatomy, variants, sizes, the full state matrix, content rules, keyboard and ARIA, responsive behavior ([components](references/components.md)). Map every visual value to a semantic token.
 5. **Design every state** with [states and feedback](references/states-and-feedback.md): empty, loading, partial, error, success, offline, permission.
 6. **Use realistic content**: long names, 30-40% text expansion, large numbers, missing images, zero and one items, and 10,000 items.
 7. **Render and inspect.** Build or mock the screen, screenshot at 375, 768 and 1280px in light and dark, and with keyboard focus visible; review with the `design-critique` skill and fix the generic-AI tells it lists.
-8. **Accessibility pass** with the [WCAG 2.2 AA checklist](references/accessibility.md): keyboard walkthrough, screen reader spot check, zoom to 200% and reflow at 320px.
+8. **Accessibility pass** with the [WCAG 2.2 AA checklist](references/accessibility.md): keyboard walkthrough, screen reader spot check, zoom to 200% and reflow at 320px. If agents will operate the screen, also run the [agent-ready checklist](references/agent-ready-ui.md#review-checklist).
 9. **Hand off** the spec, state matrix and token map; compare against the filled examples in `../../library/examples/component-specs/`.
 
 ## Decisions that change the answer
@@ -71,12 +72,13 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 - Icon-only buttons without accessible names. Fix: `aria-label` and a tooltip.
 - Center-aligned numbers in tables. Fix: right-align with tabular figures.
 - Chat UIs that hide sources, cannot be stopped, or let an agent act without consent. Fix: [AI interfaces](references/ai-interfaces.md).
+- Screens an agent cannot operate safely: duplicate "Delete" or "Name" labels, one menu shared by every row, a delete with no confirmation gate. Fix: [agent-ready interfaces](references/agent-ready-ui.md).
 - Default shadcn/ui styling shipped as the product, or hand-built toasts, drawers and command menus. Fix: [component libraries](references/component-libraries.md) (restyle radius, color and type; use the specialist).
 
 ## References
 
 - [Components](references/components.md): anatomy, state matrix, size scale, density modes, overlays, token mapping.
-- [Component libraries](references/component-libraries.md): foundations, specialists and designed components with verified versions and licenses, the mismatch map, one showpiece per page, restyling shadcn/ui with the kit tokens.
+- [Component libraries](references/component-libraries.md): foundations, specialists and designed components with verified versions and licenses, UI SDK across five frameworks, the mismatch map, one showpiece per page, restyling shadcn/ui and UI SDK with the kit tokens.
 - [Icon design](../icon-design/SKILL.md): semantic icon families, optical sizes, accessible controls and application icons.
 - [Reference reconstruction](../reference-reconstruction/SKILL.md): screen/state evidence, measured reference specs and matched comparisons.
 - [Forms](references/forms.md): layout, labels, input types and autocomplete, validation timing, multi-step forms.
@@ -85,6 +87,7 @@ Excellent UI is predictable, fast and calm: every control looks like what it doe
 - [States and feedback](references/states-and-feedback.md): response-time limits, skeletons, empty states, errors, toasts versus banners versus dialogs, notifications.
 - [Flows](references/flows.md): onboarding, authentication with passkeys and MFA, pricing, checkout, search and filter, settings, account deletion.
 - [AI interfaces](references/ai-interfaces.md): chat and agent UI, streaming, citations, tool calls, approvals, artifacts, memory and handoff.
+- [Agent-ready interfaces](references/agent-ready-ui.md): screens agents operate: names, confirm, secret and hidden gates, change-event state, WebMCP, UI SDK's agent bridge, agent tests.
 - [Accessibility](references/accessibility.md): WCAG 2.2 AA checklist with numbers and ARIA keyboard patterns.
 - Atlas: `python3 ../../library/scripts/atlas.py query "expert dashboard for logistics, dense"`; `combine <style> <industry> <audience>` before choosing density and tone.
 - Filled component specs with full state logic: [button](../../library/examples/component-specs/button.md), [text field](../../library/examples/component-specs/text-field.md), [dialog](../../library/examples/component-specs/dialog.md), [data table](../../library/examples/component-specs/data-table.md), and the [selection guide](../../library/examples/component-specs/selection-guide.md).

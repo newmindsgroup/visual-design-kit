@@ -1,6 +1,6 @@
 # Case map
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 Which eval cases to re-run after editing a skill, and where the knowledge each case's grader rewards lives in the kit. Paths are under `plugins/visual-design-studio/`. After any change to a skill `description`, also re-run every `no-fire-*` case.
 
@@ -86,3 +86,11 @@ Version-Timestamp: 2026-11-10 03:20:00 UTC
 | Case | Owner skill (edit this to fix) | Kit content the grader rewards |
 | --- | --- | --- |
 | `gauntlet-beat-linear-homepage` | design-critique | `skills/design-critique/references/gauntlet-loop.md` (named, fetchable bar captured at the same widths with `render_review.mjs`; pieces; hard gates before every comparison; blind binary `art-director` critic, fresh each round, single-context fallback; copy guard and name-swap; win-or-ceiling exit with stop-and-report; round log; hand-back to the rubric), `references/review-panel.md` (gauntlet row; conflict ladder: a locked color that fails as text is used as non-text), `references/accessibility-audit.md` and `skills/color/references/contrast.md` (#FCA311 on white about 2.0:1) |
+
+## Agent-ready UI case (0.13.0)
+
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+| Case | Owner skill (edit this to fix) | Kit content the grader rewards |
+| --- | --- | --- |
+| `agent-ready-settings-svelte` | ui-design | `skills/ui-design/references/agent-ready-ui.md` (unique names with verb plus row text, one menu per row, confirm on the committing control with an app-state sentence, secret and hidden marks, change-event state, WebMCP optional and untrusted page text, agent test), `references/component-libraries.md` (UI SDK section: Svelte adapter, beta pin and maturity gate, restyle with `--ui-*` tokens; Bits UI as the established Svelte alternative) |

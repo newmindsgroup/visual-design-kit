@@ -1,6 +1,6 @@
 # Licensing and provenance
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
 
 Original code, skills, schemas, instructions and documentation are available under the accompanying MIT license. This grant covers New Minds Group's rights in this work. It does not relicense third-party material or grant rights in referenced brands.
 
@@ -83,3 +83,15 @@ Version-Timestamp: 2026-11-10 03:20:00 UTC
 - **Adapted in Visual Design Studio 0.12.0** into `plugins/visual-design-studio/skills/design-critique/references/gauntlet-loop.md`, which carries the attribution line and marks each section *(adapted)* or *(kit)*.
 
 **Changes made:** the upstream skill writes a paste-ready prompt; the kit turns its method into a review procedure run inside `design-critique`. Restated in the kit's own words: the named, fetchable and comparable bar; small judgeable pieces; a builder and a separate fresh-context critic; blind, binary comparison with labels stripped; a harsh critic; no round-count exit. Added by the kit: design-specific bars and same-viewport capture with `render_review.mjs`, kit calibration bars when no external bar is allowed, the mapping onto the kit's subagents with a single-context fallback, blinding mechanics (masking, randomized order, same crop), hard gates before every comparison (WCAG 2.2 AA, brand and tokens, licensing, accuracy, budgets), the copy guard (craft not resemblance, name-swap test), a cost or time ceiling with stop-and-report, a stall rule, the round log and the hand-back to the rubric. The upstream prompt template and its two filled examples are not reproduced; prompt generation is delegated to the `prompt-engineering-expert` plugin's own adapted template. No upstream file, banner image or product name is bundled. CC BY 4.0 grants no trademark rights, and naming RoboNuggets or Matt Shumer is credit, not endorsement of this kit.
+
+## UI SDK (Apache-2.0)
+
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+- **Title:** UI SDK (`@ui-sdk/core`, `@ui-sdk/react`, `/vue`, `/svelte`, `/solid`, `/web`), its `ui-sdk` agent skill, its documentation and its agent benchmark
+- **Author:** Vercel Labs
+- **Source:** https://github.com/vercel-labs/ui at commit `e741e64da3d01b501a948de618956abf08371020` (2026-11-19), and the npm packages at 0.1.0-beta.12
+- **License:** Apache License 2.0, https://www.apache.org/licenses/LICENSE-2.0
+- **Used in Visual Design Studio 0.13.0** by `plugins/visual-design-studio/skills/ui-design/references/agent-ready-ui.md` and the UI SDK section of `references/component-libraries.md`.
+
+**What was used:** facts and methods restated in the kit's own words. The library's scope, packages and setup; its agent-ready rules (names, `data-agent-confirm`, `data-agent-secret`, `data-agent-hidden`, change-event state, `definePrimitive` agent keys); its WebMCP registration and tool hints; its `web.css` token names and defaults; and the published results of its agent benchmark, quoted as vendor-reported. The kit's token mapping and maturity gate are the kit's own. No UI SDK source code, skill file or documentation page is copied or bundled, so no Apache-2.0 NOTICE file applies. Naming Vercel is credit, not endorsement of this kit, and grants no trademark rights.

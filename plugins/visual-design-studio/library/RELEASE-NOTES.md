@@ -1,6 +1,19 @@
 # Release notes
 
-Version-Timestamp: 2026-11-10 03:20:00 UTC
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+## 0.13.0 Agent-ready UI and UI SDK
+
+Version-Timestamp: 2026-11-19 11:45:00 UTC
+
+Restated from Vercel's UI SDK repository (vercel-labs/ui, Apache-2.0, commit e741e64, read 2026-11-19); no UI SDK code is bundled. Attribution is in `NOTICE.md`.
+
+- **Agent-ready interfaces** (`skills/ui-design/references/agent-ready-ui.md`): defaults for screens agents operate. Covers unique accessible names with a verb plus row text, one menu per row, a person's confirmation on the committing control with a sentence built from app state, secret and hidden marks, state and validation through change events, WebMCP status and tool hints, double-prompt avoidance, a UI SDK mapping table, rules for libraries without a bridge, and a review checklist.
+- **UI SDK** (`skills/ui-design/references/component-libraries.md`): a section on when to pick it (several frameworks, Vue, Svelte or Solid without a primitive layer, agent-operated products, components the usual libraries lack), a beta maturity gate (pin an exact version; wait for 1.0 or a version at least 14 days old for client production), no-build pages and the Artifact CDN rule, setup with the docs that ship in each package and its optional skill, and a `--ui-*` to kit token map with the contrast pairs to check. Also a versions table row, a primitive-layer default for non-React stacks and an agents default.
+- **Links:** `ui-design` defaults, workflow steps 2 and 8, common failures and references; `ai-interfaces.md` approvals. `ui-design`'s description now says it makes screens agent-ready (listing 8,990 characters).
+- **Evals:** 1 case, `agent-ready-settings-svelte` (53 in total). Smoke run: 1.00 with the plugin; 0.86 with the plugin against 0.14 without.
+
+Existing project pins are unaffected; adopt 0.13.0 deliberately.
 
 ## 0.12.0 Gauntlet loop
 
