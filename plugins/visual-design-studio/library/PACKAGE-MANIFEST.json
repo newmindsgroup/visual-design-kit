@@ -1,5 +1,5 @@
 {
-  "Version-Timestamp": "2026-11-19 11:45:00 UTC",
+  "Version-Timestamp": "2026-11-19 11:50:00 UTC",
   "candidate": "0.13.0",
   "canonical_source": {
     "meaning": "Logical identity of the current plugin library bytes; not a second filesystem directory. Reference helper and optional archive importer are copied from tools/.",
@@ -2026,7 +2026,7 @@
     },
     {
       "destination": "draft-skills/design-web-astro/references/architecture.md",
-      "sha256": "371d83fcdff60088edfe0ee7345ec423b54ec56a2bd690a68d5a42e041461d43",
+      "sha256": "6f0f8e342018f5b11d36b6b31cd76be7ab14f3091b73b5433c84bd692944401a",
       "source": "curated-plugin-source/draft-skills/design-web-astro/references/architecture.md",
       "status": "versioned-evaluation-input"
     },
@@ -2416,13 +2416,13 @@
     },
     {
       "destination": "examples/astro-motion/package-lock.json",
-      "sha256": "83b6395b4603fac31cf4d8bd764fa052577657715988e621d983a6cdef996102",
+      "sha256": "bf3e8d30bf998f5d304c31fe722f75fdef4b0805713dfc8c06e43ea88d87e3bb",
       "source": "curated-plugin-source/examples/astro-motion/package-lock.json",
       "status": "versioned-evaluation-input"
     },
     {
       "destination": "examples/astro-motion/package.json",
-      "sha256": "6f5161b5ec3610f00c69ff3cded58267c9cea8accc37c7a256916cc67e4bf72e",
+      "sha256": "ddc67e6de3cba4679dbebfc706724dfc9291f3de4d96ef487f7199e5d502261b",
       "source": "curated-plugin-source/examples/astro-motion/package.json",
       "status": "versioned-evaluation-input"
     },

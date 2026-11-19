@@ -6,7 +6,7 @@ Candidate branch: `feat/ui-sdk-agent-ready`. No tag or production acceptance is 
 
 | Package | Version | SHA-256 of PAYLOAD.sha256 |
 | --- | --- | --- |
-| Visual Design Studio | 0.13.0 | `0c3959cf5996a79b87fbb24795650843a6e7a3b4cdc03b9c10614623c70dc7ad` (candidate; not yet verified on a receiving machine) |
+| Visual Design Studio | 0.13.0 | `9523be7b5d08e32aa9e9bf58235ac2f155ee99aef1257247e0867d6d53c8dafe` (candidate; not yet verified on a receiving machine) |
 | BAMA Mac Studio | 1.0.0-adapted.2 | `538a49ffe5c2f3c8be2dcb7cf3c6fa5d86a69ffd8b1087d7942d3f356b272bd5` |
 | REA Toolkit | 0.1.0 | `0e9115c63aae767c17bd12d404e016370de3c943a5cd48b456333c660e4544f7` |
 

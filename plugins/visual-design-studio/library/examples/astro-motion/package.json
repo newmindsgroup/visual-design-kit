@@ -15,7 +15,7 @@
     "check:vue": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "astro": "7.3.8",
+    "astro": "7.4.12",
     "@astrojs/vue": "7.0.3",
     "vue": "3.5.44",
     "tailwindcss": "4.3.3",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "designKitMetadata": {
-    "Version-Timestamp": "2026-10-27 12:17:38 AST",
+    "Version-Timestamp": "2026-11-19 11:50:00 UTC",
     "Agent-Attribution": "computer=NMG-MBP-M5.local; tool=Codex; version=codex-cli 0.160.0; timestamp=2026-10-14 11:06:44 AST"
   },
   "packageManager": "npm@11.12.1",
